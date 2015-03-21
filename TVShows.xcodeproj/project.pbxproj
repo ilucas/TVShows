@@ -30,8 +30,8 @@
 		344A205A11F5485900026735 /* Toggle-Knob.png in Resources */ = {isa = PBXBuildFile; fileRef = 344A205811F5485900026735 /* Toggle-Knob.png */; };
 		344A205B11F5485900026735 /* Toggle-Slider.png in Resources */ = {isa = PBXBuildFile; fileRef = 344A205911F5485900026735 /* Toggle-Slider.png */; };
 		3452AB2911DADEFB000C3AA7 /* Growl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3452AB2711DADEFB000C3AA7 /* Growl.framework */; };
-		3452ABE111DADF0F000C3AA7 /* Growl.framework in Copy Linked Libraries */ = {isa = PBXBuildFile; fileRef = 3452AB2711DADEFB000C3AA7 /* Growl.framework */; };
-		3452ABE211DADF22000C3AA7 /* Growl.framework in Copy Linked Libraries */ = {isa = PBXBuildFile; fileRef = 3452AB2711DADEFB000C3AA7 /* Growl.framework */; };
+		3452ABE111DADF0F000C3AA7 /* Growl.framework in Copy Linked Libraries */ = {isa = PBXBuildFile; fileRef = 3452AB2711DADEFB000C3AA7 /* Growl.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		3452ABE211DADF22000C3AA7 /* Growl.framework in Copy Linked Libraries */ = {isa = PBXBuildFile; fileRef = 3452AB2711DADEFB000C3AA7 /* Growl.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		345BE414119344E10016EA2D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 345BE411119344E10016EA2D /* InfoPlist.strings */; };
 		345CE34F11D9712200C03A9F /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 345CE34E11D9712200C03A9F /* WebKit.framework */; };
 		345EC8DA13235DA400F36BFF /* Subscriptions.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 345EC8D913235DA400F36BFF /* Subscriptions.xcdatamodel */; };
@@ -39,7 +39,7 @@
 		345EC8EE13235E4800F36BFF /* ValueTransformers.m in Sources */ = {isa = PBXBuildFile; fileRef = 345EC8ED13235E4800F36BFF /* ValueTransformers.m */; };
 		3471BB8911ACDF8700A65728 /* TSUserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = 3471BB8711ACDF8700A65728 /* TSUserDefaults.m */; };
 		3473849E11907678003DFFA0 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3473845E119074C8003DFFA0 /* Sparkle.framework */; };
-		3473849F1190767A003DFFA0 /* Sparkle.framework in Copy Linked Libraries */ = {isa = PBXBuildFile; fileRef = 3473845E119074C8003DFFA0 /* Sparkle.framework */; };
+		3473849F1190767A003DFFA0 /* Sparkle.framework in Copy Linked Libraries */ = {isa = PBXBuildFile; fileRef = 3473845E119074C8003DFFA0 /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		34785D07119B9CE200A28449 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 34785D04119B9CE200A28449 /* Credits.rtf */; };
 		347AFBD51191206700393565 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 347AFBD41191206700393565 /* AddressBook.framework */; };
 		347AFBD91191207300393565 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 347AFBD81191207300393565 /* SystemConfiguration.framework */; };
@@ -103,7 +103,7 @@
 		34FBC61111C0B4EF005D290B /* WebsiteFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3419982711A07913003768D5 /* WebsiteFunctions.m */; };
 		34FBC61F11C0B526005D290B /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 34A91883119E2C85004B339D /* libicucore.dylib */; };
 		34FBC62E11C0B567005D290B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 34FBC62D11C0B567005D290B /* main.m */; };
-		34FBC64211C0B601005D290B /* Sparkle.framework in Copy Linked Libraries */ = {isa = PBXBuildFile; fileRef = 3473845E119074C8003DFFA0 /* Sparkle.framework */; };
+		34FBC64211C0B601005D290B /* Sparkle.framework in Copy Linked Libraries */ = {isa = PBXBuildFile; fileRef = 3473845E119074C8003DFFA0 /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		34FBC69511C0B7CE005D290B /* SUUpdaterSubclass.m in Sources */ = {isa = PBXBuildFile; fileRef = 340F15F9118FEBDE00A1BD00 /* SUUpdaterSubclass.m */; };
 		34FBC69B11C0B804005D290B /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3473845E119074C8003DFFA0 /* Sparkle.framework */; };
 		571C60E3139905320072D921 /* ribbon.png in Resources */ = {isa = PBXBuildFile; fileRef = 571C60E2139905320072D921 /* ribbon.png */; };
@@ -1068,8 +1068,13 @@
 		089C1669FE841209C02AAC07 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0410;
+				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = "Víctor Pimentel";
+				TargetAttributes = {
+					34FBC5E011C0B3C2005D290B = {
+						DevelopmentTeam = 842K77RHSG;
+					};
+				};
 			};
 			buildConfigurationList = 1DBD214C08BA80EA00186707 /* Build configuration list for PBXProject "TVShows" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -1456,6 +1461,8 @@
 		1DBD214908BA80EA00186707 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1463,8 +1470,6 @@
 				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
-				GCC_ENABLE_OBJC_GC = supported;
-				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = TVShows_Prefix.pch;
@@ -1472,29 +1477,30 @@
 					PREFPANE,
 					DEBUG,
 				);
+				GCC_VERSION = "";
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/PreferencePanes";
 				OTHER_CFLAGS = "";
 				PRODUCT_NAME = TVShows;
 				WRAPPER_EXTENSION = prefPane;
-				ZERO_LINK = YES;
 			};
 			name = Debug;
 		};
 		1DBD214A08BA80EA00186707 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
 					"\"$(SRCROOT)/Frameworks\"",
 				);
-				GCC_ENABLE_OBJC_GC = supported;
-				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = TVShows_Prefix.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = PREFPANE;
+				GCC_VERSION = "";
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/PreferencePanes";
 				OTHER_CFLAGS = "";
@@ -1507,11 +1513,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = (
-					"$(ARCHS_STANDARD_32_64_BIT)",
-					ppc,
-				);
-				CODE_SIGN_IDENTITY = "Developer ID Application: V�ctor Pimentel Rodr�guez";
+				CODE_SIGN_IDENTITY = "";
 				DEPLOYMENT_LOCATION = YES;
 				DSTROOT = /;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1521,17 +1523,18 @@
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
-				GCC_VERSION = 4.0;
+				GCC_VERSION = "";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = /usr/include/libxml2;
 				INSTALL_PATH = $HOME/Library/PreferencePanes;
+				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-lstdc++";
 				PREBINDING = NO;
 				PRODUCT_NAME = "";
 				PROVISIONING_PROFILE = "";
-				SDKROOT = macosx10.5;
-				VALID_ARCHS = "i386 ppc x86_64";
+				SDKROOT = macosx10.9;
+				VALID_ARCHS = "i386 x86_64";
 				ZERO_LINK = NO;
 			};
 			name = Debug;
@@ -1540,18 +1543,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = (
-					"$(ARCHS_STANDARD_32_64_BIT)",
-					ppc,
-				);
-				CODE_SIGN_IDENTITY = "Developer ID Application: V�ctor Pimentel Rodr�guez";
+				CODE_SIGN_IDENTITY = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Frameworks\"",
 				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_VERSION = 4.0;
+				GCC_VERSION = "";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = /usr/include/libxml2;
@@ -1559,8 +1558,8 @@
 				PREBINDING = NO;
 				PRODUCT_NAME = "";
 				PROVISIONING_PROFILE = "";
-				SDKROOT = macosx10.5;
-				VALID_ARCHS = "i386 ppc x86_64";
+				SDKROOT = macosx10.9;
+				VALID_ARCHS = "i386 x86_64";
 				ZERO_LINK = NO;
 			};
 			name = Release;
@@ -1569,6 +1568,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "";
 				COPY_PHASE_STRIP = NO;
 				DEPLOYMENT_LOCATION = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -1577,6 +1577,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INSTALL_PATH = /usr/local/bin;
 				OTHER_LDFLAGS = (
 					"-framework",
@@ -1593,6 +1594,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "";
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEPLOYMENT_LOCATION = NO;
@@ -1600,6 +1602,7 @@
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INSTALL_PATH = /usr/local/bin;
 				OTHER_LDFLAGS = (
 					"-framework",
@@ -1617,6 +1620,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "";
+				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DEPLOYMENT_LOCATION = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1633,8 +1638,10 @@
 					HELPER_APP,
 					DEBUG,
 				);
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "TVShowsHelper-Info.plist";
 				INSTALL_PATH = "$(BUILD_DIR)/$(CONFIGURATION)";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = (
 					"-lstdc++",
@@ -1652,6 +1659,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "";
+				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1664,8 +1673,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = TVShows_Prefix.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = HELPER_APP;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "TVShowsHelper-Info.plist";
 				INSTALL_PATH = "$(BUILD_DIR)/$(CONFIGURATION)";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = (
 					"-lstdc++",
