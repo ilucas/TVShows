@@ -1199,7 +1199,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "BUILD_VERSION=`/usr/bin/env git log --pretty=format:'' | wc -l | egrep '[0-9]{1,}' -o`\nBUILD_DATE=`git log -1 --pretty=format:'%cD' | awk '{print $3 \" \" $2 \", \" $4}'`\nRELEASE_VERSION=`cat \"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/VERSION\"`\n\n/usr/libexec/PListBuddy -c \"Set CFBundleVersion $BUILD_VERSION\" ${TARGET_BUILD_DIR}/${INFOPLIST_PATH}\n/usr/libexec/PListBuddy -c \"Set TSBundleBuildDate $BUILD_DATE\" ${TARGET_BUILD_DIR}/${INFOPLIST_PATH}\n/usr/libexec/PListBuddy -c \"Set CFBundleShortVersionString $RELEASE_VERSION\" ${TARGET_BUILD_DIR}/${INFOPLIST_PATH}";
+			shellScript = "BUILD_VERSION=`/usr/bin/env git log --pretty=format:'' | wc -l | egrep '[0-9]{1,}' -o`\nBUILD_DATE=`git log -1 --pretty=format:'%cD' | awk '{print $3 \" \" $2 \", \" $4}'`\nRELEASE_VERSION=`cat \"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/VERSION\"`\n\n/usr/libexec/PListBuddy -c \"Set CFBundleVersion $BUILD_VERSION\" \"${TARGET_BUILD_DIR}/${INFOPLIST_PATH}\"\n/usr/libexec/PListBuddy -c \"Set TSBundleBuildDate $BUILD_DATE\" \"${TARGET_BUILD_DIR}/${INFOPLIST_PATH}\"\n/usr/libexec/PListBuddy -c \"Set CFBundleShortVersionString $RELEASE_VERSION\" \"${TARGET_BUILD_DIR}/${INFOPLIST_PATH}\"";
 		};
 		575C0D5C136A4F26005DE73D /* Generate Version */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1213,7 +1213,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "BUILD_VERSION=`/usr/bin/env git log --pretty=format:'' | wc -l | egrep '[0-9]{1,}' -o`\nBUILD_DATE=`git log -1 --pretty=format:'%cD' | awk '{print $3 \" \" $2 \", \" $4}'`\nRELEASE_VERSION=`cat ${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/VERSION`\n\n/usr/libexec/PListBuddy -c \"Set CFBundleVersion $BUILD_VERSION\" ${TARGET_BUILD_DIR}/${INFOPLIST_PATH}\n/usr/libexec/PListBuddy -c \"Set TSBundleBuildDate $BUILD_DATE\" ${TARGET_BUILD_DIR}/${INFOPLIST_PATH}\n/usr/libexec/PListBuddy -c \"Set CFBundleShortVersionString $RELEASE_VERSION\" ${TARGET_BUILD_DIR}/${INFOPLIST_PATH}";
+			shellScript = "BUILD_VERSION=`/usr/bin/env git log --pretty=format:'' | wc -l | egrep '[0-9]{1,}' -o`\nBUILD_DATE=`git log -1 --pretty=format:'%cD' | awk '{print $3 \" \" $2 \", \" $4}'`\nRELEASE_VERSION=`cat \"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/VERSION\"`\n\n/usr/libexec/PListBuddy -c \"Set CFBundleVersion $BUILD_VERSION\" \"${TARGET_BUILD_DIR}/${INFOPLIST_PATH}\"\n/usr/libexec/PListBuddy -c \"Set TSBundleBuildDate $BUILD_DATE\" \"${TARGET_BUILD_DIR}/${INFOPLIST_PATH}\"\n/usr/libexec/PListBuddy -c \"Set CFBundleShortVersionString $RELEASE_VERSION\" \"${TARGET_BUILD_DIR}/${INFOPLIST_PATH}\"";
 		};
 /* End PBXShellScriptBuildPhase section */
 
