@@ -26,7 +26,7 @@
 {
     if((self = [super init])) {
         // Initialize any transformers we need to use in Interface Builder.
-        ShowPosterValueTransformer *trOne = [[[ShowPosterValueTransformer alloc] init] autorelease];
+        ShowPosterValueTransformer *trOne = [[ShowPosterValueTransformer alloc] init];
         [NSValueTransformer setValueTransformer:trOne
                                         forName:@"ShowPosterValueTransformer"];
     }
@@ -177,10 +177,10 @@
     
     if (![[NSFileManager defaultManager] fileExistsAtPath:[NSString stringWithFormat:link, aLang]]) {
         LogInfo(@"Fixing the %@ localization for System Preferences.app", aLang);
-        [[[[NSAppleScript alloc] initWithSource:[NSString stringWithFormat:@"display dialog \"%@\"\ndo shell script \"sudo /usr/bin/env ln -s \\\"%@\\\" \\\"%@\\\"\" with administrator privileges",
+        [[[NSAppleScript alloc] initWithSource:[NSString stringWithFormat:@"display dialog \"%@\"\ndo shell script \"sudo /usr/bin/env ln -s \\\"%@\\\" \\\"%@\\\"\" with administrator privileges",
                                                  aMessage,
                                                  [NSString stringWithFormat:link, anotherLang],
-                                                 [NSString stringWithFormat:link, aLang]]] autorelease]
+                                                 [NSString stringWithFormat:link, aLang]]]
          executeAndReturnError:nil];
         return YES;
     }
@@ -243,13 +243,6 @@
     [aTask setArguments:[NSArray arrayWithObjects:@"unload",@"-w",aPath,nil]];
     [aTask launch];
     [aTask waitUntilExit];
-    [aTask release];
-}
-
-- (void) dealloc
-{
-    [releaseNotesURL release];
-    [super dealloc];
 }
 
 @end

@@ -218,14 +218,14 @@
     NSString    *userPreferredDownloadFolder;
     NSImage     *iconForDownloadFolder;
     
-    menu = [[[NSMenu allocWithZone:[NSMenu menuZone]] init] autorelease];
+    menu = [[NSMenu allocWithZone:[NSMenu menuZone]] init];
     [menu setAutoenablesItems:NO];
     
     // Create the menu item for the current download folder
     userPreferredDownloadFolder = [TSUserDefaults getStringFromKey:@"downloadFolder"];
-    menuItem = [[[NSMenuItem allocWithZone:[NSMenu menuZone]] initWithTitle:[[NSFileManager defaultManager] displayNameAtPath:userPreferredDownloadFolder]
+    menuItem = [[NSMenuItem allocWithZone:[NSMenu menuZone]] initWithTitle:[[NSFileManager defaultManager] displayNameAtPath:userPreferredDownloadFolder]
                                                                      action:nil
-                                                              keyEquivalent:@""] autorelease];
+                                                              keyEquivalent:@""];
     
     // Get the download folder's icon and resize it
     iconForDownloadFolder = [[NSWorkspace sharedWorkspace] iconForFile:userPreferredDownloadFolder];
@@ -238,9 +238,9 @@
     [menu addItem:[NSMenuItem separatorItem]];
     
     // Create the menu item for changing the current download folder
-    menuItem = [[[NSMenuItem allocWithZone:[NSMenu menuZone]] initWithTitle:TSLocalizeString(@"Other...")
+    menuItem = [[NSMenuItem allocWithZone:[NSMenu menuZone]] initWithTitle:TSLocalizeString(@"Other...")
                                                                      action:@selector(selectOtherDownloadFolder:)
-                                                              keyEquivalent:@""] autorelease];
+                                                              keyEquivalent:@""];
     [menuItem setTarget:self];
     [menuItem setRepresentedObject:userPreferredDownloadFolder];
     [menu addItem:menuItem];
@@ -381,7 +381,6 @@
         #if PREFPANE
         [aTask waitUntilExit];
         #endif
-        [aTask release];
     }
 }
 
@@ -400,7 +399,6 @@
     #if PREFPANE
     [aTask waitUntilExit];
     #endif
-    [aTask release];
 }
 
 - (void) updateLaunchAgent

@@ -188,7 +188,7 @@ extern NSString * const MPOAuthCredentialSessionHandleKey;
 	NSString *consumerSecret = [[self consumerSecret] stringByAddingURIPercentEscapesUsingEncoding:NSUTF8StringEncoding];
 	NSString *tokenSecret = [[self tokenSecret] stringByAddingURIPercentEscapesUsingEncoding:NSUTF8StringEncoding];
 	
-	return [NSString stringWithFormat:@"%@%&%@", consumerSecret, tokenSecret];
+	return [NSString stringWithFormat:@"%@ & %@", consumerSecret, tokenSecret];
 }
 
 #pragma mark -
@@ -283,7 +283,6 @@ extern NSString * const MPOAuthCredentialSessionHandleKey;
 		versionParameter = [[MPURLRequestParameter alloc] init];
 		versionParameter.name = @"oauth_version";
 		versionParameter.value = @"1.0";
-		[versionParameter autorelease];
 	}
 	
 	return versionParameter;

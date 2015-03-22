@@ -96,10 +96,7 @@
     MPOAuthAPIRequestLoader *loader = [[MPOAuthAPIRequestLoader alloc] initWithRequest:aRequest];
     [loader setCredentials:[oauthAPI credentials]];
     [loader loadSynchronously:YES];
-
-    [loader autorelease];
-    [aRequest release];
-
+    
     return [self jsonValue:[loader data]];
 }
 
@@ -114,9 +111,6 @@
     MPOAuthAPIRequestLoader *loader = [[MPOAuthAPIRequestLoader alloc] initWithRequest:aRequest];
     [loader setCredentials:[oauthAPI credentials]];
     [loader loadSynchronously:YES];
-    
-    [loader autorelease];
-    [aRequest release];
     
     return [self jsonValue:[loader data]];
 }
@@ -141,9 +135,6 @@
     [loader setCredentials:[oauthAPI credentials]];
     [loader loadSynchronously:YES];
     
-    [loader autorelease];
-    [aRequest release];
-    
     return [self jsonValue:[loader data]];
 }
 
@@ -155,19 +146,12 @@
 - (NSDictionary *)jsonValue:(NSData *)data
 {
     if (data) {
-        NSString *string = [[[NSString alloc] initWithData:data
-                                                  encoding:NSUTF8StringEncoding] autorelease];
+        NSString *string = [[NSString alloc] initWithData:data
+                                                  encoding:NSUTF8StringEncoding];
         return [string JSONValue];
     } else {
         return nil;
     }
-}
-
-- (void)dealloc
-{
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
-    [oauthAPI release];
-    [super dealloc];
 }
 
 @end

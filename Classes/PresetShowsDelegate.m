@@ -36,9 +36,9 @@
 
     if (managedObjectModel) return managedObjectModel;
     
-    managedObjectModel = [[NSManagedObjectModel mergedModelFromBundles:
+    managedObjectModel = [NSManagedObjectModel mergedModelFromBundles:
                            [NSArray arrayWithObject:
-                            [NSBundle bundleWithIdentifier: CurrentBundleDomain]] ] retain];    
+                            [NSBundle bundleWithIdentifier: CurrentBundleDomain]]];
     return managedObjectModel;
 }
 
@@ -77,7 +77,6 @@
                                                         options:nil
                                                           error:&error]){
         [[NSApplication sharedApplication] presentError:error];
-        [persistentStoreCoordinator release], persistentStoreCoordinator = nil;
         return nil;
     }   
 
@@ -120,8 +119,8 @@
     [[NSFileManager defaultManager] removeItemAtPath:[applicationSupportDirectory stringByAppendingPathComponent: @"Preset Shows"]
                                                error:nil];
     
-    [persistentStoreCoordinator release], persistentStoreCoordinator = nil;
-    [managedObjectContext release], managedObjectContext = nil;
+    persistentStoreCoordinator = nil;
+    managedObjectContext = nil;
     [self managedObjectContext];
 }
 
@@ -138,18 +137,6 @@
     if (![[self managedObjectContext] save:&error]) {
         [[NSApplication sharedApplication] presentError:error];
     }
-}
-
-// Implementation of dealloc, to release the retained variables.
-- (void) dealloc
-{
-
-    [window release];
-    [managedObjectContext release];
-    [persistentStoreCoordinator release];
-    [managedObjectModel release];
-    
-    [super dealloc];
 }
 
 @end

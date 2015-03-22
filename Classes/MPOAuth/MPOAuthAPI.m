@@ -217,7 +217,6 @@ NSString * const MPOAuthAuthenticationURLKey		= @"MPOAuthAuthenticationURL";
 	loader.credentials = self.credentials;
 	[loader loadSynchronously:YES];
 	
-	[loader autorelease];
 	[aRequest release];
 	
 	return loader.data;

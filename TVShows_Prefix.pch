@@ -46,14 +46,14 @@
 }
 
 // Define easy to remember logging macros
-#define LogCritical(...) _ts_logger(1, __VA_ARGS__)
-#define LogError(...) _ts_logger(2, __VA_ARGS__)
-#define LogWarning(...) _ts_logger(3, __VA_ARGS__)
-#define LogInfo(...) _ts_logger(4, __VA_ARGS__)
+#define LogCritical(...) //_ts_logger(1, __VA_ARGS__)
+#define LogError(...) //_ts_logger(2, __VA_ARGS__)
+#define LogWarning(...) //_ts_logger(3, __VA_ARGS__)
+#define LogInfo(...) //_ts_logger(4, __VA_ARGS__)
 
 #ifdef DEBUG
-    #define LogDebug(...) _ts_logger(5, __VA_ARGS__)
-    #define LogTrace(...) _ts_logger(6, __VA_ARGS__)
+    #define LogDebug(...) //_ts_logger(5, __VA_ARGS__)
+    #define LogTrace(...) //_ts_logger(6, __VA_ARGS__)
 #else
     #define LogDebug(...) do { } while (0)
     #define LogTrace(...) do { } while (0)

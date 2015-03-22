@@ -102,7 +102,7 @@
         key = [NSString stringWithFormat:@"<%@>(.|\n|\r)*?</%@>",key,key];
         NSArray *tempValues = [seriesInfo componentsMatchedByRegex:key];
         if ( [tempValues count] >= 1 ) {
-            NSMutableArray *values = [[[NSMutableArray alloc] initWithCapacity:[tempValues count]] autorelease];
+            NSMutableArray *values = [[NSMutableArray alloc] initWithCapacity:[tempValues count]];
             
             for (NSString *value in tempValues) {
                 [values addObject:[value stringByReplacingOccurrencesOfRegex:@"<(.+?)>" withString:@""]];
@@ -134,7 +134,7 @@
 + (NSDate *) getShowNextEpisode:(NSString *)showName withShowID:(NSString *)seriesID
 {
     // Preset date formatter
-    NSDateFormatter *dateFormatter = [[[NSDateFormatter alloc] init] autorelease];
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:@"yyyy-MM-dd"];
     
     NSDate *now = [NSDate date];
@@ -173,8 +173,8 @@
     NSString *imagePath = [[[self applicationCacheDirectory] stringByAppendingPathComponent:showName] stringByAppendingFormat:@".jpg"];
     
     if ([fileManager fileExistsAtPath:imagePath]) {
-        NSImage *sourceImage = [[[NSImage alloc] initWithContentsOfFile:imagePath] autorelease];
-        NSImage *finalImage = [[[NSImage alloc] initWithSize: NSMakeSize(width, height)] autorelease];
+        NSImage *sourceImage = [[NSImage alloc] initWithContentsOfFile:imagePath];
+        NSImage *finalImage = [[NSImage alloc] initWithSize: NSMakeSize(width, height)];
         
         NSSize originalSize = [sourceImage size];
         
@@ -194,18 +194,18 @@
         
         // If a poster URL was returned, download the image.
         if (posterURL != NULL) {
-            sourceImage = [[[NSImage alloc] initWithData:
+            sourceImage = [[NSImage alloc] initWithData:
                             [WebsiteFunctions downloadDataFrom:
-                             [NSString stringWithFormat:@"http://thetvdb.com/banners/_cache/%@", posterURL]]] autorelease];
+                             [NSString stringWithFormat:@"http://thetvdb.com/banners/_cache/%@", posterURL]]];
         } else {
-            sourceImage = [[[NSImage alloc] initWithContentsOfFile:
+            sourceImage = [[NSImage alloc] initWithContentsOfFile:
                             [[NSBundle bundleWithIdentifier: TVShowsAppDomain] pathForResource: @"posterArtPlaceholder"
-                                                                                        ofType: @"jpg"]] autorelease];
+                                                                                        ofType: @"jpg"]];
         }
         
         // Resize the show poster so that it scales smoothly and still fits the box.
-        NSImage *resizedImage = [[[NSImage alloc] initWithSize: NSMakeSize(129, 187)] autorelease];
-        NSImage *finalImage = [[[NSImage alloc] initWithSize: NSMakeSize(width, height)] autorelease];
+        NSImage *resizedImage = [[NSImage alloc] initWithSize: NSMakeSize(129, 187)];
+        NSImage *finalImage = [[NSImage alloc] initWithSize: NSMakeSize(width, height)];
         
         NSSize originalSize = [sourceImage size];
         

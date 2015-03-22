@@ -39,7 +39,7 @@
 
 		// Create Button Arrays
 		buttonsDictionary = [[NSMutableArray alloc] init];
-		[buttonsDictionary addObject:[ [[NSMutableArray alloc] init] autorelease ] ];
+		[buttonsDictionary addObject:[[NSMutableArray alloc] init]];
 
 		// Create Overflow Button
 		overflowButton = [[LROverflowButton alloc] init];
@@ -60,16 +60,6 @@
 	return self;
 }
 
-- (void)dealloc
-{
-	[ buttonsDictionary release ];
-	[ topColor release ];
-	[ bottomColor release ];
-	[ overflowMenu release ];
-
-	[ super dealloc ];
-}
-
 - (void)drawRect:(NSRect)rect
 {
 	NSColor *topColorCopy = [self createColor:topColor];
@@ -77,8 +67,8 @@
 	
 	// Draw Background Gradient
 	if( topColorCopy && bottomColorCopy ) {
-        NSGradient *aGradient = [[[NSGradient alloc] initWithStartingColor:topColorCopy
-                                                               endingColor:bottomColorCopy] autorelease];
+        NSGradient *aGradient = [[NSGradient alloc] initWithStartingColor:topColorCopy
+                                                               endingColor:bottomColorCopy];
         [aGradient drawInRect:rect angle:90];
 	}
 	
@@ -125,7 +115,7 @@
 	}
 	
 	[buttonsDictionary removeAllObjects];
-	[buttonsDictionary addObject:[ [[NSMutableArray alloc] init] autorelease ]];
+	[buttonsDictionary addObject:[[NSMutableArray alloc] init]];
 	
 	// Add New Buttons
 	if(originalArray != nil) // Kevin O. of CoolMacSoftware
@@ -152,8 +142,6 @@
 		
 		i++;
 	}
-
-	[ selectedTitleArray release ];
 }
 
 
@@ -235,7 +223,6 @@
 		
 		id tempArray = [buttonsDictionary objectAtIndex:[buttonsDictionary count]-1];
 		[tempArray addObject:newMenuItem];
-		[ newMenuItem release ];
 	}
 }
 
@@ -246,7 +233,7 @@
 	[newButton setTitle:title];
 	[newButton sizeToFit];
 	
-	return [ newButton autorelease ];
+	return newButton;
 }
 
 - (void) addDivider
@@ -255,10 +242,10 @@
 		
 		buttonX += 3;
 		
-		NSButton *newButton = [ [[NSButton alloc] init] autorelease ];
-		[newButton setImage:[[[NSImage alloc] initByReferencingFile:
+		NSButton *newButton = [[NSButton alloc] init];
+		[newButton setImage:[[NSImage alloc] initByReferencingFile:
                                    [[NSBundle bundleForClass:[self class]] pathForResource:@"OverflowDivider"
-                                                                                    ofType:@"png"]] autorelease]];
+                                                                                    ofType:@"png"]]];
 		[newButton setBordered:NO];
 		[newButton sizeToFit];
 		
@@ -293,7 +280,7 @@
 		
 	}
 	
-	[buttonsDictionary addObject:[ [[NSMutableArray alloc] init] autorelease ] ];
+	[buttonsDictionary addObject:[[NSMutableArray alloc] init]];
 }
 
 
@@ -326,8 +313,7 @@
 	}
 	
 	[buttonsDictionary removeAllObjects];
-	[buttonsDictionary addObject:[ [[NSMutableArray alloc] init] autorelease ]];
-	[originalArray release];
+	[buttonsDictionary addObject:[[NSMutableArray alloc] init]];
 	originalArray = nil;
 	originalSelector = nil;
 	originalSender = nil;
@@ -503,22 +489,16 @@
 
 - (void)setBlueBackground
 {
-	[topColor release];
-	[bottomColor release];
-	
-	topColor = [[[NSColor colorWithCalibratedRed:(182.0/255.0) green:(192.0/255.0) blue:(207.0/255.0) alpha:1.0] description] retain ];
-	bottomColor = [[[NSColor colorWithCalibratedRed:(203.0/255.0) green:(210.0/255.0) blue:(221.0/255.0) alpha:1.0] description] retain ];
+	topColor = [[NSColor colorWithCalibratedRed:(182.0/255.0) green:(192.0/255.0) blue:(207.0/255.0) alpha:1.0] description];
+	bottomColor = [[NSColor colorWithCalibratedRed:(203.0/255.0) green:(210.0/255.0) blue:(221.0/255.0) alpha:1.0] description];
 	
 	[self setNeedsDisplay:YES];
 }
 
 - (void)setGrayBackground
 {
-	[topColor release];
-	[bottomColor release];
-	
-	topColor = [[[NSColor colorWithCalibratedRed:(181.0/255.0) green:(181.0/255.0) blue:(181.0/255.0) alpha:1.0] description] retain];
-	bottomColor = [[[NSColor colorWithCalibratedRed:(216.0/255.0) green:(216.0/255.0) blue:(216.0/255.0) alpha:1.0] description] retain];
+	topColor = [[NSColor colorWithCalibratedRed:(181.0/255.0) green:(181.0/255.0) blue:(181.0/255.0) alpha:1.0] description];
+	bottomColor = [[NSColor colorWithCalibratedRed:(216.0/255.0) green:(216.0/255.0) blue:(216.0/255.0) alpha:1.0] description];
 	
 	[self setNeedsDisplay:YES];
 }
@@ -529,18 +509,14 @@
 
 - (void)setRegularFontWeight
 {
-	[fontWeight release];
-	
-	fontWeight = [[NSFont systemFontOfSize:11] retain];
+	fontWeight = [NSFont systemFontOfSize:11];
 	
 	[self resizeSubviewsWithOldSize:[self frame].size];
 }
 
 - (void)setBoldFontWeight
 {
-	[fontWeight release];
-	
-	fontWeight = [[NSFont boldSystemFontOfSize:11] retain];
+	fontWeight = [NSFont boldSystemFontOfSize:11];
 	
 	[self resizeSubviewsWithOldSize:[self frame].size];
 }

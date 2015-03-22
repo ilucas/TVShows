@@ -41,8 +41,6 @@
                                  endingColor:endingColor];
         
         [aGradient drawInRect:[self bounds] angle:angle];
-        
-        [aGradient release];
     }
 }
 

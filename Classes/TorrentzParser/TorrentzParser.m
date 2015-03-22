@@ -84,7 +84,7 @@
     NSMutableArray *torrents = [NSMutableArray arrayWithCapacity:10];
     
     // And process one by one
-    for (NSString *tracker in tempValues) {
+    for (__strong NSString *tracker in tempValues) {
         tracker = [tracker stringByReplacingOccurrencesOfRegex:@"<a href=\"" withString:@""];
         NSString *torrent = nil;
         
@@ -139,11 +139,6 @@
     NSString *magnetHash = [theURL stringByReplacingOccurrencesOfRegex:@".*torrentz.eu/" withString:@""];
     
     return magnetHash;
-}
-
-- (void)dealloc
-{
-    [super dealloc];
 }
 
 @end

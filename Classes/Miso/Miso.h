@@ -20,7 +20,6 @@
 @interface Miso : NSObject
 {
     MPOAuthAPI *oauthAPI;
-    id<MisoDelegate> delegate;
 }
 
 @property (nonatomic, assign) id<MisoDelegate> delegate;

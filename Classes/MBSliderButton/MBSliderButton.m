@@ -28,22 +28,23 @@
     id delegate;
 }
 @end
+
 @implementation MBKnobAnimation
--(id)initWithStart:(int)begin end:(int)end
-{
-    [super init];
+
+-(id)initWithStart:(int)begin end:(int)end {
+    self = [super init];
     start = begin;
     range = end - begin;
     return self;
 }
--(void)setCurrentProgress:(NSAnimationProgress)progress
-{
+
+-(void)setCurrentProgress:(NSAnimationProgress)progress {
     int x = start+progress*range;
     [super setCurrentProgress:progress];
     [delegate performSelector:@selector(setPosition:) withObject:[NSNumber numberWithInteger:x]];
 }
--(void)setDelegate:(id)d
-{
+
+-(void)setDelegate:(id)d {
     delegate = d;
 }
 @end
@@ -54,16 +55,15 @@
 
 @implementation MBSliderButton
 
--(void)awakeFromNib
-{
+-(void)awakeFromNib {
+
     surround = [[NSImage alloc] initByReferencingFile:[[NSBundle bundleForClass:[self class]] pathForResource:@"Toggle-Slider" ofType:@"png"]];
     knob = [[NSImage alloc] initByReferencingFile:[[NSBundle bundleForClass:[self class]] pathForResource:@"Toggle-Knob" ofType:@"png"]];
     
     state = false;
 }
 
--(void)drawRect:(NSRect)rect
-{      
+-(void)drawRect:(NSRect)rect {
     NSColor* darkGreen = [NSColor colorWithDeviceRed:0.431 green:0.639 blue:0.118 alpha:1.0];
     NSColor* lightGreen = [NSColor colorWithDeviceRed:0.647 green:0.835 blue:0.247 alpha:1.0];    
     NSColor* darkGray = [NSColor colorWithDeviceRed:0.5 green:0.5 blue:0.5 alpha:1.0];
@@ -101,23 +101,17 @@
     pt = location;
     pt.x -= 2;
     [knob drawAtPoint:pt fromRect:NSZeroRect operation:NSCompositeSourceOver fraction:1.0];
-    
-    [green_gradient release];
-    [gray_gradient release];
 }
 
--(BOOL)isOpaque
-{
+-(BOOL)isOpaque {
     return YES;
 }
 
--(NSInteger)state
-{
+-(NSInteger)state {
     return state ? NSOnState : NSOffState;
 }
 
--(void)animateTo:(int)x
-{
+-(void)animateTo:(int)x {
     MBKnobAnimation* a = [[MBKnobAnimation alloc] initWithStart:location.x end:x];
     [a setDelegate:self];
     if (location.x == 0 || location.x == KNOB_MAX_X){
@@ -130,7 +124,6 @@
     
     [a setAnimationBlockingMode:NSAnimationBlocking];
     [a startAnimation];
-    [a release];
 }
 
 -(void)setPosition:(NSNumber*)x
@@ -234,7 +227,6 @@
                         // even though I set them up in IB! :(
 						id prefController = [PreferencesController alloc];
                         [prefController enabledControlDidChange:state];
-						[prefController release];
                     }
                     
                     // the rectangle has moved, we need to reset our cursor

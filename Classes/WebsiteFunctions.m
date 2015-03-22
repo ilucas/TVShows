@@ -50,8 +50,7 @@
     }
     
     // Set a restrictive timeout
-    NSMutableURLRequest* request = [[[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:url]]
-                                    autorelease];
+    NSMutableURLRequest* request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:url]];
     [request setTimeoutInterval:5.0];
     
     // Come on! In some places user agents with CFNetwork are banned :(
@@ -66,8 +65,8 @@
 + (NSString *) downloadStringFrom:(NSString *)url
 {
     // Get the data
-    NSString *content = [[[NSString alloc] initWithData:[WebsiteFunctions downloadDataFrom:url]
-                                               encoding:NSUTF8StringEncoding] autorelease];
+    NSString *content = [[NSString alloc] initWithData:[WebsiteFunctions downloadDataFrom:url]
+                                               encoding:NSUTF8StringEncoding];
     
     return content;
 }

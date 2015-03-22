@@ -194,8 +194,6 @@
                                                                      ascending:YES 
                                                                       selector:@selector(caseInsensitiveCompare:)];
     [PTArrayController setSortDescriptors:[NSArray arrayWithObject:PTSortDescriptor]];
-    
-    [PTSortDescriptor release];
 }
 
 - (IBAction) reloadShowList:(id)sender {
@@ -335,9 +333,9 @@
         showListContents = [WebsiteFunctions downloadStringFrom:ShowListMirror];
     }
     
-    NSXMLDocument *doc = [[[NSXMLDocument alloc] initWithXMLString:showListContents
+    NSXMLDocument *doc = [[NSXMLDocument alloc] initWithXMLString:showListContents
                                                            options:NSXMLDocumentTidyXML
-                                                             error:nil] autorelease];
+                                                             error:nil];
     NSXMLNode *rootNode = nil;
     
     if (doc != nil) {
@@ -474,9 +472,9 @@
 }
 
 - (void) setDefaultPoster {
-    NSImage *defaultPoster = [[[NSImage alloc] initByReferencingFile:
+    NSImage *defaultPoster = [[NSImage alloc] initByReferencingFile:
                                [[NSBundle bundleForClass:[self class]] pathForResource:@"posterArtPlaceholder"
-                                                                                ofType:@"jpg"]] autorelease];
+                                                                                ofType:@"jpg"]];
     [defaultPoster setSize:NSMakeSize(129, 187)];
     [showPoster setImage:defaultPoster];
 }
@@ -523,62 +521,55 @@
 #pragma mark Background workers
 - (void) setEpisodesForShow:(NSString *)showFeeds
 {
-    NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
-    
-    NSMutableArray *feeds = [NSMutableArray arrayWithArray:[showFeeds componentsSeparatedByString:@"#"]];
-    
-    // Generate the full feeds for this suscription
-    for (int i = 0; i < [feeds count]; i++) {
-        NSString *feed = [TSRegexFun obtainFullFeed:[feeds objectAtIndex:i]];
-        [feeds replaceObjectAtIndex:i
-                         withObject:feed];
+    @autoreleasepool {
+        NSMutableArray *feeds = [NSMutableArray arrayWithArray:[showFeeds componentsSeparatedByString:@"#"]];
+        
+        // Generate the full feeds for this suscription
+        for (int i = 0; i < [feeds count]; i++) {
+            NSString *feed = [TSRegexFun obtainFullFeed:[feeds objectAtIndex:i]];
+            [feeds replaceObjectAtIndex:i
+                             withObject:feed];
+        }
+        
+        // Now we can trigger the time-expensive task
+        NSArray *results = [NSArray arrayWithObjects:showFeeds,
+                            [TSParseXMLFeeds parseEpisodesFromFeeds:feeds
+                                                    beingCustomShow:NO], nil];
+        
+        if ([results count] < 2) {
+            LogError(@"Could not download/parse feed(s) <%@>", showFeeds);
+            return;
+        }
+        
+        [self performSelectorOnMainThread:@selector(updateEpisodes:) withObject:results waitUntilDone:NO];
     }
-    
-    // Now we can trigger the time-expensive task
-    NSArray *results = [NSArray arrayWithObjects:showFeeds,
-                        [TSParseXMLFeeds parseEpisodesFromFeeds:feeds
-                                                beingCustomShow:NO], nil];
-    
-    if ([results count] < 2) {
-        LogError(@"Could not download/parse feed(s) <%@>", showFeeds);
-        [pool drain];
-        return;
-    }
-    
-    [self performSelectorOnMainThread:@selector(updateEpisodes:) withObject:results waitUntilDone:NO];
-    
-    [pool drain];
 }
 
 - (void) setPosterForShow:(NSArray *)arguments
 {
-    NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
-    
-    // Now we can trigger the time-expensive task
-    NSArray *results = [NSArray arrayWithObjects:[arguments objectAtIndex:0],
-                        [[[TheTVDB getPosterForShow:[arguments objectAtIndex:0]
-                                         withShowID:[arguments objectAtIndex:1]
-                                         withHeight:187
-                                          withWidth:129] copy] autorelease], nil];
-    
-    [self performSelectorOnMainThread:@selector(updatePoster:) withObject:results waitUntilDone:NO];
-    
-    [pool drain];
+    @autoreleasepool {
+        // Now we can trigger the time-expensive task
+        NSArray *results = [NSArray arrayWithObjects:[arguments objectAtIndex:0],
+                            [[TheTVDB getPosterForShow:[arguments objectAtIndex:0]
+                                            withShowID:[arguments objectAtIndex:1]
+                                            withHeight:187
+                                             withWidth:129] copy], nil];
+        
+        [self performSelectorOnMainThread:@selector(updatePoster:) withObject:results waitUntilDone:NO];
+    }
 }
 
 - (void) setDescriptionForShow:(NSArray *)arguments
 {
-    NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
-    
-    // Now we can trigger the time-expensive task
-    NSArray *results = [NSArray arrayWithObjects:[arguments objectAtIndex:0],
-                        [TheTVDB getValueForKey:@"Overview"
-                                     withShowID:[arguments objectAtIndex:1]
-                                    andShowName:[arguments objectAtIndex:0]], nil];
-    
-    [self performSelectorOnMainThread:@selector(updateDescription:) withObject:results waitUntilDone:NO];
-    
-    [pool drain];
+    @autoreleasepool {
+        // Now we can trigger the time-expensive task
+        NSArray *results = [NSArray arrayWithObjects:[arguments objectAtIndex:0],
+                            [TheTVDB getValueForKey:@"Overview"
+                                         withShowID:[arguments objectAtIndex:1]
+                                        andShowName:[arguments objectAtIndex:0]], nil];
+        
+        [self performSelectorOnMainThread:@selector(updateDescription:) withObject:results waitUntilDone:NO];
+    }
 }
 
 - (void) updateEpisodes:(NSArray *)data
@@ -770,22 +761,20 @@
 
 - (void) downloadEpisodes:(NSArray *)arguments
 {
-    NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
-    
-    for (int i = 1; i < [arguments count]; i++) {
-        if (![TSTorrentFunctions downloadEpisode:[arguments objectAtIndex:i]
-                                          ofShow:[arguments objectAtIndex:0]]) {
-            // Display the error
-            NSRunCriticalAlertPanel([NSString stringWithFormat:TSLocalizeString(@"Unable to download %@"),
-                                     [[arguments objectAtIndex:i] valueForKey:@"episodeName"]],
-                                    TSLocalizeString(@"Cannot connect. Please try again later or check your internet connection"),
-                                    TSLocalizeString(@"Ok"),
-                                    nil,
-                                    nil);
+    @autoreleasepool {
+        for (int i = 1; i < [arguments count]; i++) {
+            if (![TSTorrentFunctions downloadEpisode:[arguments objectAtIndex:i]
+                                              ofShow:[arguments objectAtIndex:0]]) {
+                // Display the error
+                NSRunCriticalAlertPanel([NSString stringWithFormat:TSLocalizeString(@"Unable to download %@"),
+                                         [[arguments objectAtIndex:i] valueForKey:@"episodeName"]],
+                                        TSLocalizeString(@"Cannot connect. Please try again later or check your internet connection"),
+                                        TSLocalizeString(@"Ok"),
+                                        nil,
+                                        nil);
+            }
         }
     }
-    
-    [pool drain];
 }
 
 - (BOOL) userIsSubscribedToShow:(NSString*)showName
@@ -797,11 +786,6 @@
     }
     
     return NO;
-}
-
-- (void) dealloc
-{
-    [super dealloc];
 }
 
 @end

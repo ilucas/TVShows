@@ -27,14 +27,14 @@ CFStringRef prefAppDomain = (CFStringRef)TVShowsAppDomain;
 {
     Boolean ret, exists = FALSE;
     
-    ret = CFPreferencesGetAppBooleanValue((CFStringRef)key, prefAppDomain, &exists);
+    ret = CFPreferencesGetAppBooleanValue((__bridge CFStringRef)key, prefAppDomain, &exists);
     
     return exists ? ret : defaultValue;
 }
 
 + (void) setKey:(NSString *)key fromBool:(BOOL)value
 {
-    CFPreferencesSetAppValue((CFStringRef)key, value ? kCFBooleanTrue : kCFBooleanFalse, prefAppDomain);
+    CFPreferencesSetAppValue((__bridge CFStringRef)key, value ? kCFBooleanTrue : kCFBooleanFalse, prefAppDomain);
     CFPreferencesSynchronize(prefAppDomain, kCFPreferencesCurrentUser, kCFPreferencesAnyHost);
 }
 
@@ -43,7 +43,7 @@ CFStringRef prefAppDomain = (CFStringRef)TVShowsAppDomain;
     CFPropertyListRef value;
     float ret = defaultValue;
     
-    value = CFPreferencesCopyAppValue((CFStringRef)key, prefAppDomain);
+    value = CFPreferencesCopyAppValue((__bridge CFStringRef)key, prefAppDomain);
     if(value && CFGetTypeID(value) == CFNumberGetTypeID())
         CFNumberGetValue(value, kCFNumberFloatType, &ret);
     
@@ -56,7 +56,7 @@ CFStringRef prefAppDomain = (CFStringRef)TVShowsAppDomain;
 + (void) setKey:(NSString *)key fromFloat:(float)value
 {
     CFNumberRef numRef = CFNumberCreate(NULL, kCFNumberFloatType, &value);
-    CFPreferencesSetAppValue((CFStringRef)key, numRef, prefAppDomain);
+    CFPreferencesSetAppValue((__bridge CFStringRef)key, numRef, prefAppDomain);
     CFRelease(numRef);
     
     CFPreferencesSynchronize(prefAppDomain, kCFPreferencesCurrentUser, kCFPreferencesAnyHost);
@@ -66,7 +66,7 @@ CFStringRef prefAppDomain = (CFStringRef)TVShowsAppDomain;
 {
     int ret; Boolean exists = FALSE;
     
-    ret = CFPreferencesGetAppIntegerValue((CFStringRef)key, prefAppDomain, &exists);
+    ret = CFPreferencesGetAppIntegerValue((__bridge CFStringRef)key, prefAppDomain, &exists);
     
     return exists ? ret : defaultValue;
 }
@@ -74,7 +74,7 @@ CFStringRef prefAppDomain = (CFStringRef)TVShowsAppDomain;
 + (void) setKey:(NSString *)key fromInt:(int)value
 {
     CFNumberRef numRef = CFNumberCreate(NULL, kCFNumberIntType, &value);
-    CFPreferencesSetAppValue((CFStringRef)key, numRef, prefAppDomain);
+    CFPreferencesSetAppValue((__bridge CFStringRef)key, numRef, prefAppDomain);
     CFRelease(numRef);
     
     CFPreferencesSynchronize(prefAppDomain, kCFPreferencesCurrentUser, kCFPreferencesAnyHost);
@@ -84,22 +84,19 @@ CFStringRef prefAppDomain = (CFStringRef)TVShowsAppDomain;
 {
     CFPropertyListRef value;
     
-    value = CFPreferencesCopyAppValue((CFStringRef)key, prefAppDomain);
+    value = CFPreferencesCopyAppValue((__bridge CFStringRef)key, prefAppDomain);
     
     if(value) {
-        CFMakeCollectable(value);
-        [(id)value autorelease];
-        
         if (CFGetTypeID(value) != CFStringGetTypeID())
             return nil;
     }
     
-    return (NSString*)value;
+    return (__bridge NSString*)value;
 }
 
 + (void) setKey:(NSString *)key fromString:(NSString *)value
 {
-    CFPreferencesSetAppValue((CFStringRef)key, value, prefAppDomain);
+    CFPreferencesSetAppValue((__bridge CFStringRef)key, CFBridgingRetain(value), prefAppDomain);
     CFPreferencesSynchronize(prefAppDomain, kCFPreferencesCurrentUser, kCFPreferencesAnyHost);
 }
 
@@ -108,9 +105,9 @@ CFStringRef prefAppDomain = (CFStringRef)TVShowsAppDomain;
     CFPropertyListRef value;
     NSDate *ret = nil;
     
-    value = CFPreferencesCopyAppValue((CFStringRef)key, prefAppDomain);
+    value = CFPreferencesCopyAppValue((__bridge CFStringRef)key, prefAppDomain);
     if(value && CFGetTypeID(value) == CFDateGetTypeID())
-        ret = [[(NSDate *)value retain] autorelease];
+        ret = (__bridge NSDate *)value;
     
     if(value)
         CFRelease(value);
@@ -120,7 +117,7 @@ CFStringRef prefAppDomain = (CFStringRef)TVShowsAppDomain;
 
 + (void) setKey:(NSString *)key fromDate:(NSDate *)value
 {
-    CFPreferencesSetAppValue((CFStringRef)key, value, prefAppDomain);
+    CFPreferencesSetAppValue((__bridge CFStringRef)key, CFBridgingRetain(value), prefAppDomain);
     CFPreferencesSynchronize(prefAppDomain, kCFPreferencesCurrentUser, kCFPreferencesAnyHost);
 }
 

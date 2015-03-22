@@ -145,11 +145,9 @@
             lastEpisodeQuality = episodeQuality;
         }
         
-        [Episode release];
     }
     
     return episodeArray;
-    [episodeArray release];
 }
 
 + (NSInteger) getEpisode:(NSMutableDictionary *)episode fromArray:(NSArray *)episodes
@@ -208,18 +206,17 @@
                 [fakeEpisodes addObject:fakeEpisode];
             }
             
-            [fakeEpisode autorelease];
         }
         
         [fakeEpisodes addObject:realEpisode];
     }
     
-    return [fakeEpisodes autorelease];
+    return fakeEpisodes;
 }
 
 + (NSArray *) parseEpisodesFromFeeds:(NSArray *)urls beingCustomShow:(BOOL)isCustomShow
 {
-    NSMutableArray *episodes = [[[NSMutableArray alloc] init] autorelease];
+    NSMutableArray *episodes = [[NSMutableArray alloc] init];
     
     // Parse and store all results
     for (NSString *url in urls) {
@@ -254,7 +251,6 @@
     // Sort results by date
     NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"pubDate" ascending:NO];
     [episodes sortUsingDescriptors:[NSArray arrayWithObject:sortDescriptor]];
-    [sortDescriptor release];
     
     return episodes;
 }

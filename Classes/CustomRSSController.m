@@ -222,15 +222,13 @@
 
 - (void) setEpisodesFromRSS:(NSArray *)feeds
 {
-    NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
-    
-    // Now we can trigger the time-expensive task
-    NSArray *results = [NSArray arrayWithObjects:feeds,
-                        [TSParseXMLFeeds parseEpisodesFromFeeds:feeds beingCustomShow:YES], nil];
-    
-    [self performSelectorOnMainThread:@selector(updateEpisodes:) withObject:results waitUntilDone:NO];
-    
-    [pool drain];
+    @autoreleasepool {
+        // Now we can trigger the time-expensive task
+        NSArray *results = [NSArray arrayWithObjects:feeds,
+                            [TSParseXMLFeeds parseEpisodesFromFeeds:feeds beingCustomShow:YES], nil];
+        
+        [self performSelectorOnMainThread:@selector(updateEpisodes:) withObject:results waitUntilDone:NO];
+    }
 }
 
 - (void) updateEpisodes:(NSArray *)data
@@ -296,7 +294,7 @@
     // Remove the previous data
     [nameValue removeAllItems];
     
-    NSMutableSet *shows = [[[NSMutableSet alloc] init] autorelease];
+    NSMutableSet *shows = [[NSMutableSet alloc] init];
     
     // Add every show name to a set (to avoid repetitions)
     for (NSDictionary *episode in [episodeArrayController content]) {
@@ -389,12 +387,6 @@
     [[NSNotificationCenter defaultCenter] postNotificationName:@"TSUpdatedShows"
                                                         object:nil
                                                       userInfo:(NSDictionary *)subscription];
-}
-
-- (void)dealloc
-{
-    [filterRules release];
-    [super dealloc];
 }
 
 @end

@@ -36,9 +36,9 @@
 
     if (managedObjectModel) return managedObjectModel;
     
-    managedObjectModel = [[NSManagedObjectModel mergedModelFromBundles:
+    managedObjectModel = [NSManagedObjectModel mergedModelFromBundles:
                            [NSArray arrayWithObject:
-                            [NSBundle bundleWithIdentifier: CurrentBundleDomain]] ] retain];
+                            [NSBundle bundleWithIdentifier: CurrentBundleDomain]]];
     
     return managedObjectModel;
 }
@@ -78,7 +78,7 @@
                                                         options:nil
                                                           error:&error]){
         [[NSApplication sharedApplication] presentError:error];
-        [persistentStoreCoordinator release], persistentStoreCoordinator = nil;
+        persistentStoreCoordinator = nil;
         return nil;
     }   
 
@@ -133,25 +133,12 @@
 {
     // Delete the data
     if (persistentStoreCoordinator) {
-        [persistentStoreCoordinator release];
         persistentStoreCoordinator = nil;
     }
     
     if (managedObjectContext) {
-        [managedObjectContext release];
         managedObjectContext = nil;
     }
-}
-
-// Implementation of dealloc, to release the retained variables.
-- (void) dealloc
-{
-    [window release];
-    [managedObjectContext release];
-    [persistentStoreCoordinator release];
-    [managedObjectModel release];
-    
-    [super dealloc];
 }
 
 @end

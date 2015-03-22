@@ -47,8 +47,7 @@
 
 @synthesize selectedShow;
 
-- (void) awakeFromNib
-{
+- (void) awakeFromNib {
     // Avoid this on Leopard
     if (floor(NSAppKitVersionNumber) > NSAppKitVersionNumber10_5) {
         // Register the app for this notification
@@ -96,11 +95,11 @@
     NSDate *date = [TSUserDefaults getDateFromKey:@"lastCheckedForEpisodes"];
     if (date) {
         // Set the last date/time episodes were checked for.
-        NSDateFormatter *dateFormatter = [[[NSDateFormatter alloc] init] autorelease];
+        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
         [dateFormatter setDateStyle:NSDateFormatterLongStyle];
         [dateFormatter setTimeStyle:NSDateFormatterNoStyle];
         
-        NSDateFormatter *timeFormatter = [[[NSDateFormatter alloc] init] autorelease];
+        NSDateFormatter *timeFormatter = [[NSDateFormatter alloc] init];
         [timeFormatter setDateStyle:NSDateFormatterNoStyle];
         [timeFormatter setTimeStyle:NSDateFormatterShortStyle];
         
@@ -164,8 +163,7 @@
     [self performSelector:@selector(showArrowIfNeeded:) withObject:nil afterDelay:1];
 }
 
-- (void)fixEndedRibbonText
-{
+- (void)fixEndedRibbonText {
     // Avoid this fix on Lion and before
     if (floor(NSAppKitVersionNumber) < NSAppKitVersionNumber10_8) {
         return;
@@ -181,15 +179,13 @@
     [endedRibbonText setContentFilters:[NSArray arrayWithObjects:affineTransform, nil]];
 }
 
-- (void) showArrowIfNeeded:(id)sender
-{
+- (void) showArrowIfNeeded:(id)sender {
     if ([[SBArrayController content] count] == 0) {
         [noSubscriptionsArrow setHidden:NO];
     }
 }
 
-- (IBAction) filterSubscriptions:(id)sender
-{
+- (IBAction) filterSubscriptions:(id)sender {
     NSMutableArray *filters = [[NSMutableArray alloc] initWithCapacity:3];
     
     switch ([filterBar getSelectedIndexInSegment:0]) {
@@ -216,18 +212,15 @@
         [filters addObject:[NSPredicate predicateWithFormat:@"name contains[cd] %@", [filterField stringValue]]];
     }
     [SBArrayController setFilterPredicate:[NSCompoundPredicate andPredicateWithSubpredicates:filters]];
-    [filters autorelease];
 }
 
-- (void) resetFilters
-{
+- (void) resetFilters {
     [filterBar selectIndex:0 inSegment:0];
     [filterBar selectIndex:0 inSegment:1];
     [filterField setStringValue:@""];
 }
 
-- (void) refreshShowList:(NSNotification *)inNotification
-{
+- (void) refreshShowList:(NSNotification *)inNotification {
     [subscriptionsDelegate refresh];
     [SBArrayController setManagedObjectContext:[subscriptionsDelegate managedObjectContext]];
     [SBArrayController fetch:nil];
@@ -235,8 +228,7 @@
     [self resetFilters];
 }
 
-- (void) colorDonateButton
-{
+- (void) colorDonateButton {
     // Get the content filters for the button (there are two, one to add color and another one to change the hue)
     CIFilter *colorAdjust = [[donateButton contentFilters] objectAtIndex:0];
     
@@ -250,8 +242,7 @@
     [donateButton setContentFilters:[NSArray arrayWithObjects:colorAdjust, hueAdjust, nil]];
 }
 
-- (void) tabView:(NSTabView *)tabView didSelectTabViewItem:(NSTabViewItem *)tabViewItem
-{
+- (void) tabView:(NSTabView *)tabView didSelectTabViewItem:(NSTabViewItem *)tabViewItem {
     NSRect tabFrame;
     int newWinHeight;
     
@@ -275,30 +266,25 @@
     [[tabView window] setFrame:tabFrame display:YES animate:YES];
 }
 
-- (IBAction) showFeedbackWindow:(id)sender
-{
+- (IBAction) showFeedbackWindow:(id)sender {
     [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString: TVShowsSupport]];
 }
 
 #pragma mark -
 #pragma mark About Tab
-- (IBAction) openWebsite:(id)sender
-{
+- (IBAction) openWebsite:(id)sender {
     [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString: TVShowsWebsite]];
 }
 
-- (IBAction) openBlog:(id)sender
-{
+- (IBAction) openBlog:(id)sender {
     [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString: TVShowsBlog]];
 }
 
-- (IBAction) openTwitter:(id)sender
-{
+- (IBAction) openTwitter:(id)sender {
     [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString: TVShowsTwitter]];
 }
 
-- (IBAction) openPaypal:(id)sender
-{
+- (IBAction) openPaypal:(id)sender {
     // This is a list of accepted currencies for Paypal transfers and donations
     NSArray *acceptedCurrencies = [NSArray arrayWithObjects:@"AUD", @"BRL", @"CAD", @"CZK", @"DKK", @"EUR",
                                    @"HKD", @"HUF", @"ILS", @"JPY", @"MXN", @"NOK", @"NZD", @"PHP", @"PLN",
@@ -342,12 +328,9 @@
     [alert setInformativeText: TSLocalizeString(@"Your preferences about warnings were restored. If needed, next time TVShows will ask for your confirmation to complete a sensitive operation.")];
     [alert setAlertStyle:NSInformationalAlertStyle];
     [alert runModal];
-    
-    [alert release];
 }
 
-- (IBAction) openUninstaller:(id)sender
-{
+- (IBAction) openUninstaller:(id)sender {
     // Create an alert box.
     NSAlert *alert = [[NSAlert alloc] init];
     [alert addButtonWithTitle: TSLocalizeString(@"Yes")];
@@ -368,22 +351,17 @@
         NSTask *uninstaller = [[NSTask alloc] init];
         [uninstaller setLaunchPath:launchPath];
         [uninstaller launch];
-        
-        [uninstaller release];
     }
-    
-    [alert release];
 }
 
-- (void) drawAboutBox
-{
+- (void) drawAboutBox {
     NSString *pathToAboutBoxText = [[NSBundle bundleWithIdentifier: TVShowsAppDomain] 
                                     pathForResource: @"Credits" 
                                     ofType: @"rtf"];
     
-    NSAttributedString *aboutBoxText = [[[NSAttributedString alloc]
+    NSAttributedString *aboutBoxText = [[NSAttributedString alloc]
                                          initWithPath: pathToAboutBoxText
-                                         documentAttributes: nil] autorelease];
+                                         documentAttributes: nil];
     
     [[textView_aboutBox textStorage] setAttributedString:aboutBoxText];
 }
@@ -391,8 +369,7 @@
 #pragma mark -
 #pragma mark Log Viewer
 
-- (IBAction) showLogViewerWindow:(id)sender
-{
+- (IBAction) showLogViewerWindow:(id)sender {
     NSString *loggedItems;
     
     [NSApp beginSheet: logViewerWindow
@@ -417,23 +394,21 @@
     [NSApp runModalForWindow: logViewerWindow];
 }
 
-- (IBAction) closeLogViewerWindow:(id)sender
-{
+- (IBAction) closeLogViewerWindow:(id)sender {
     [NSApp stopModal];
     [logViewerWindow orderOut: self];
 }
 
 #pragma mark -
 #pragma mark Subscriptions Tab
-- (IBAction) displayShowInfoWindow:(id)sender
-{
+- (IBAction) displayShowInfoWindow:(id)sender {
     selectedShow = [[[sender cell] representedObject] representedObject];
     
     // Link that info to the edit button
     [[editButton cell] setRepresentedObject:self];
     
     // Set up the date formatter
-    NSDateFormatter *dateFormatter = [[[NSDateFormatter alloc] init] autorelease];
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateStyle:NSDateFormatterLongStyle];
     [dateFormatter setTimeStyle:NSDateFormatterNoStyle];
     
@@ -445,7 +420,7 @@
     [showQuality setState: [[selectedShow valueForKey:@"quality"] intValue]];
     [showIsEnabled setState: [[selectedShow valueForKey:@"isEnabled"] boolValue]];
     
-    NSImage *defaultPoster = [[[NSImage alloc] initByReferencingFile:[[NSBundle bundleForClass:[self class]] pathForResource:@"posterArtPlaceholder" ofType:@"jpg"]] autorelease];
+    NSImage *defaultPoster = [[NSImage alloc] initByReferencingFile:[[NSBundle bundleForClass:[self class]] pathForResource:@"posterArtPlaceholder" ofType:@"jpg"]];
     [defaultPoster setSize: NSMakeSize(127, 184)];
     [showPoster setImage: defaultPoster];
     
@@ -485,80 +460,68 @@
 
 #pragma mark -
 #pragma mark Background workers
-- (void) setEpisodesForShow:(NSString *)showFeeds
-{
-    NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
-    
-    NSMutableArray *feeds = [NSMutableArray arrayWithArray:[showFeeds componentsSeparatedByString:@"#"]];
-    
-    // Generate the full feeds for this suscription
-    for (int i = 0; i < [feeds count]; i++) {
-        NSString *feed = [TSRegexFun obtainFullFeed:[feeds objectAtIndex:i]];
-        [feeds replaceObjectAtIndex:i
-                         withObject:feed];
+- (void) setEpisodesForShow:(NSString *)showFeeds {
+    @autoreleasepool {
+        NSMutableArray *feeds = [NSMutableArray arrayWithArray:[showFeeds componentsSeparatedByString:@"#"]];
+        
+        // Generate the full feeds for this suscription
+        for (int i = 0; i < [feeds count]; i++) {
+            NSString *feed = [TSRegexFun obtainFullFeed:[feeds objectAtIndex:i]];
+            [feeds replaceObjectAtIndex:i
+                             withObject:feed];
+        }
+        
+        // Now we can trigger the time-expensive task
+        NSArray *results = [NSArray arrayWithObjects:showFeeds,
+                            [TSParseXMLFeeds parseEpisodesFromFeeds:feeds
+                                                    beingCustomShow:([selectedShow valueForKey:@"filters"] != nil)], nil];
+        
+        if ([results count] < 2) {
+            LogError(@"Could not download/parse feed(s) <%@>", showFeeds);
+            return;
+        }
+        
+        [self performSelectorOnMainThread:@selector(updateEpisodes:) withObject:results waitUntilDone:NO];
     }
-    
-    // Now we can trigger the time-expensive task
-    NSArray *results = [NSArray arrayWithObjects:showFeeds,
-                        [TSParseXMLFeeds parseEpisodesFromFeeds:feeds
-                                                beingCustomShow:([selectedShow valueForKey:@"filters"] != nil)], nil];
-    
-    if ([results count] < 2) {
-        LogError(@"Could not download/parse feed(s) <%@>", showFeeds);
-        return;
-    }
-    
-    [self performSelectorOnMainThread:@selector(updateEpisodes:) withObject:results waitUntilDone:NO];
-    
-    [pool drain];
 }
 
-- (void) setStatusForShow:(NSArray *)arguments
-{
-    NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
-    
-    // Now we can trigger the time-expensive task
-    NSArray *results = [NSArray arrayWithObjects:[arguments objectAtIndex:0],
+- (void) setStatusForShow:(NSArray *)arguments {
+    @autoreleasepool {
+        // Now we can trigger the time-expensive task
+        NSArray *results = [NSArray arrayWithObjects:[arguments objectAtIndex:0],
                             [TheTVDB getShowStatus:[arguments objectAtIndex:0]
                                         withShowID:[arguments objectAtIndex:1]], nil];
-    
-    [self performSelectorOnMainThread:@selector(updateStatus:) withObject:results waitUntilDone:NO];
-    
-    [pool drain];
+        
+        [self performSelectorOnMainThread:@selector(updateStatus:) withObject:results waitUntilDone:NO];
+    }
 }
 
-- (void) setNextEpisodeForShow:(NSArray *)arguments
-{
-    NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
-    
-    // Now we can trigger the time-expensive task
-    NSArray *results = [NSArray arrayWithObjects:[arguments objectAtIndex:0],
-                        [TheTVDB getShowNextEpisode:[arguments objectAtIndex:0]
-                                         withShowID:[arguments objectAtIndex:1]], nil];
-    
-    [self performSelectorOnMainThread:@selector(updateNextEpisode:) withObject:results waitUntilDone:NO];
-    
-    [pool drain];
+- (void) setNextEpisodeForShow:(NSArray *)arguments {
+    @autoreleasepool {
+        // Now we can trigger the time-expensive task
+        NSArray *results = [NSArray arrayWithObjects:[arguments objectAtIndex:0],
+                            [TheTVDB getShowNextEpisode:[arguments objectAtIndex:0]
+                                             withShowID:[arguments objectAtIndex:1]], nil];
+        
+        [self performSelectorOnMainThread:@selector(updateNextEpisode:) withObject:results waitUntilDone:NO];
+    }
 }
 
 - (void) setPosterForShow:(NSArray *)arguments
 {
-    NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
-    
-    // Now we can trigger the time-expensive task
-    NSArray *results = [NSArray arrayWithObjects:[arguments objectAtIndex:0],
-                        [[[TheTVDB getPosterForShow:[arguments objectAtIndex:0]
-                                         withShowID:[arguments objectAtIndex:1]
-                                         withHeight:187
-                                          withWidth:129] copy] autorelease], nil];
-    
-    [self performSelectorOnMainThread:@selector(updatePoster:) withObject:results waitUntilDone:NO];
-    
-    [pool drain];
+    @autoreleasepool {
+        // Now we can trigger the time-expensive task
+        NSArray *results = [NSArray arrayWithObjects:[arguments objectAtIndex:0],
+                            [[TheTVDB getPosterForShow:[arguments objectAtIndex:0]
+                                             withShowID:[arguments objectAtIndex:1]
+                                             withHeight:187
+                                              withWidth:129] copy], nil];
+        
+        [self performSelectorOnMainThread:@selector(updatePoster:) withObject:results waitUntilDone:NO];
+    }
 }
 
-- (void) updateEpisodes:(NSArray *)data
-{
+- (void) updateEpisodes:(NSArray *)data {
     // We are back after probably a lot of time, so check carefully if the user has changed the selection
     if (!selectedShow) {
         return;
@@ -587,8 +550,7 @@
     }
 }
 
-- (void) updateStatus:(NSArray *)data
-{
+- (void) updateStatus:(NSArray *)data {
     // We are back after probably a lot of time, so check carefully if the user has changed the selection
     if (!selectedShow) {
         return;
@@ -612,8 +574,7 @@
     }
 }
 
-- (void) updateNextEpisode:(NSArray *)data
-{
+- (void) updateNextEpisode:(NSArray *)data {
     // We are back after probably a lot of time, so check carefully if the user has changed the selection
     if (!selectedShow) {
         return;
@@ -630,7 +591,7 @@
     // Continue only if the selected show is the same as before
     if ([name isEqualToString:copy] && nextEpisode != nil) {
         // Set up the date formatter
-        NSDateFormatter *dateFormatter = [[[NSDateFormatter alloc] init] autorelease];
+        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
         [dateFormatter setDateStyle:NSDateFormatterLongStyle];
         [dateFormatter setTimeStyle:NSDateFormatterNoStyle];
         
@@ -638,8 +599,7 @@
     }
 }
 
-- (void) updatePoster:(NSArray *)data
-{
+- (void) updatePoster:(NSArray *)data {
     // We are back after probably a lot of time, so check carefully if the user has changed the selection
     if (!selectedShow) {
         return;
@@ -657,8 +617,7 @@
     }
 }
 
-- (IBAction) refreshPoster:(id)sender
-{
+- (IBAction) refreshPoster:(id)sender {
     // Remove poster from the cache to force the download
     [TheTVDB removePosterForShow:[selectedShow valueForKey:@"name"]];
     
@@ -669,8 +628,7 @@
     [self performSelectorInBackground:@selector(setPosterForShow:) withObject:arguments];
 }
 
-- (IBAction) closeShowInfoWindow:(id)sender
-{
+- (IBAction) closeShowInfoWindow:(id)sender {
     // Close the window first
     [NSApp stopModal];
     [showInfoWindow orderOut: self];
@@ -715,8 +673,7 @@
     }
 }
 
-- (IBAction) showQualityDidChange:(id)sender
-{
+- (IBAction) showQualityDidChange:(id)sender {
     if ([showQuality state]) {
         [episodeArrayController setFilterPredicate:
          [NSCompoundPredicate andPredicateWithSubpredicates:
@@ -730,8 +687,7 @@
     }
 }
 
-- (BOOL) tableView:(NSTableView *)aTableView shouldSelectRow:(NSInteger)rowIndex
-{
+- (BOOL) tableView:(NSTableView *)aTableView shouldSelectRow:(NSInteger)rowIndex {
     // Check to see whether or not this is the GET button or not.
     
     // Which column and row was clicked?
@@ -774,8 +730,7 @@
     return NO;
 }
 
-- (void) sortSubscriptionList
-{
+- (void) sortSubscriptionList {
     // Arguably, I don't really know how this works, and I only reached this method
     // after hours and hours of debugging and trying to make the NSArrayController not
     // send all its elements to the NSControllerView in every sorting step.
@@ -788,12 +743,9 @@
                                                                      ascending: YES
                                                                       selector: @selector(caseInsensitiveCompare:)];
     [SBArrayController setSortDescriptors:[NSArray arrayWithObject:SBSortDescriptor]];
-    
-    [SBSortDescriptor release];
 }
 
-- (IBAction) unsubscribeFromShow:(id)sender
-{
+- (IBAction) unsubscribeFromShow:(id)sender {
     // Ask for confirmation to the user
     if (![self shouldUnsubscribeFromShow]) {
         return;
@@ -828,8 +780,7 @@
     [self closeShowInfoWindow:(id)sender];
 }
 
-- (BOOL) shouldUnsubscribeFromShow
-{
+- (BOOL) shouldUnsubscribeFromShow {
     // Get the user default. If there is no preference, use a "third" value
     BOOL shouldDownloadSD = [TSUserDefaults getFloatFromKey:@"AutoDeleteSubscription" withDefault:ShowWarning];
     
@@ -853,14 +804,12 @@
         if ([[alert suppressionButton] state]) {
             [TSUserDefaults setKey:@"AutoDeleteSubscription" fromInt:YES];
         }
-        [alert release];
     }
     
     return shouldDownloadSD;
 }
 
-- (NSArray *)feedParametersForUpdater:(SUUpdater *)updater sendingSystemProfile:(BOOL)sendingProfile
-{
+- (NSArray *)feedParametersForUpdater:(SUUpdater *)updater sendingSystemProfile:(BOOL)sendingProfile {
     
     NSDictionary *iconDict = [NSDictionary dictionaryWithObjectsAndKeys:
                               @"menubar", @"key",
@@ -907,7 +856,7 @@
     // Fetch subscriptions
     NSEntityDescription *entity = [NSEntityDescription entityForName:@"Subscription"
                                               inManagedObjectContext:[subscriptionsDelegate managedObjectContext]];
-    NSFetchRequest *request = [[[NSFetchRequest alloc] init] autorelease];
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
     [request setEntity:entity];
     
     NSError *error = nil;
@@ -924,14 +873,6 @@
     
     NSArray *feedParams = [NSArray arrayWithObjects:iconDict, hdDict, additionalDict, magnetsDict, misoDict, delayDict, subsDict, nil];
     return feedParams;
-}
-
-- (void) dealloc
-{
-    [[NSDistributedNotificationCenter defaultCenter] removeObserver:self];
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
-    [selectedShow release];
-    [super dealloc];
 }
 
 @end

@@ -258,35 +258,33 @@
 
 - (void)followShow:(NSDictionary *)show
 {
-    NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
-    
-    // Search for it on Miso
-    NSDictionary *results = [misoBackend showWithQuery:[show valueForKey:@"name"]];
-    
-    // Filter those results by TVDB id
-    NSObject *newShow = [self getShow:[[show valueForKey:@"tvdbID"] description] fromDictionary:results];
-    
-    // Some shows do not have TVDB ids yet; try to map them together
-    if (!newShow) {
-        // Just pick the first show (too late, I cannot even think anymore)
-        for (NSObject *result in results) {
-            newShow = result;
-            break;
-        }
-        // If the name is not equal... go back
-        if (newShow && ![[[newShow valueForKey:@"media"] valueForKey:@"title"] isEqualToString:[show valueForKey:@"name"]]) {
-            newShow = nil;
-        }
-    }
-    
-    // At this point, it should be a valid show, but maybe it is not on the Miso database yet
-    if (newShow && ![[[newShow valueForKey:@"media"] valueForKey:@"currently_favorited"] boolValue]) {
-        LogInfo(@"Adding show %@ on Miso.", [show valueForKey:@"name"]);
+    @autoreleasepool {
+        // Search for it on Miso
+        NSDictionary *results = [misoBackend showWithQuery:[show valueForKey:@"name"]];
         
-        [misoBackend favoriteShow:[[[newShow valueForKey:@"media"] valueForKey:@"id"] description]];
+        // Filter those results by TVDB id
+        NSObject *newShow = [self getShow:[[show valueForKey:@"tvdbID"] description] fromDictionary:results];
+        
+        // Some shows do not have TVDB ids yet; try to map them together
+        if (!newShow) {
+            // Just pick the first show (too late, I cannot even think anymore)
+            for (NSObject *result in results) {
+                newShow = result;
+                break;
+            }
+            // If the name is not equal... go back
+            if (newShow && ![[[newShow valueForKey:@"media"] valueForKey:@"title"] isEqualToString:[show valueForKey:@"name"]]) {
+                newShow = nil;
+            }
+        }
+        
+        // At this point, it should be a valid show, but maybe it is not on the Miso database yet
+        if (newShow && ![[[newShow valueForKey:@"media"] valueForKey:@"currently_favorited"] boolValue]) {
+            LogInfo(@"Adding show %@ on Miso.", [show valueForKey:@"name"]);
+            
+            [misoBackend favoriteShow:[[[newShow valueForKey:@"media"] valueForKey:@"id"] description]];
+        }
     }
-    
-    [pool drain];
 }
 
 - (void)followSubscriptions:(NSDictionary *)followedShows
@@ -306,35 +304,33 @@
 
 - (void)unfollowShow:(NSDictionary *)show
 {
-    NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
-    
-    // Search for it on Miso
-    NSDictionary *results = [misoBackend showWithQuery:[show valueForKey:@"name"]];
-    
-    // Filter those results by TVDB id
-    NSObject *newShow = [self getShow:[[show valueForKey:@"tvdbID"] description] fromDictionary:results];
-    
-    // Some shows do not have TVDB ids yet; try to map them together
-    if (!newShow) {
-        // Just pick the first show (too late, I cannot even think anymore)
-        for (NSObject *result in results) {
-            newShow = result;
-            break;
-        }
-        // If the name is not equal... go back
-        if (newShow && ![[[newShow valueForKey:@"media"] valueForKey:@"title"] isEqualToString:[show valueForKey:@"name"]]) {
-            newShow = nil;
-        }
-    }
-    
-    // At this point, it should be a valid show, but maybe it is not on the Miso database yet
-    if (newShow && [[[newShow valueForKey:@"media"] valueForKey:@"currently_favorited"] boolValue]) {
-        LogInfo(@"Removing show %@ from Miso.", [show valueForKey:@"name"]);
+    @autoreleasepool {
+        // Search for it on Miso
+        NSDictionary *results = [misoBackend showWithQuery:[show valueForKey:@"name"]];
         
-        [misoBackend unfavoriteShow:[[[newShow valueForKey:@"media"] valueForKey:@"id"] description]];
+        // Filter those results by TVDB id
+        NSObject *newShow = [self getShow:[[show valueForKey:@"tvdbID"] description] fromDictionary:results];
+        
+        // Some shows do not have TVDB ids yet; try to map them together
+        if (!newShow) {
+            // Just pick the first show (too late, I cannot even think anymore)
+            for (NSObject *result in results) {
+                newShow = result;
+                break;
+            }
+            // If the name is not equal... go back
+            if (newShow && ![[[newShow valueForKey:@"media"] valueForKey:@"title"] isEqualToString:[show valueForKey:@"name"]]) {
+                newShow = nil;
+            }
+        }
+        
+        // At this point, it should be a valid show, but maybe it is not on the Miso database yet
+        if (newShow && [[[newShow valueForKey:@"media"] valueForKey:@"currently_favorited"] boolValue]) {
+            LogInfo(@"Removing show %@ from Miso.", [show valueForKey:@"name"]);
+            
+            [misoBackend unfavoriteShow:[[[newShow valueForKey:@"media"] valueForKey:@"id"] description]];
+        }
     }
-    
-    [pool drain];
 }
 
 - (void)syncShows
@@ -409,14 +405,6 @@
             }
         }
     }
-}
-
-- (void)dealloc
-{
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
-    [[NSDistributedNotificationCenter defaultCenter] removeObserver:self];
-    [misoBackend release];
-    [super dealloc];
 }
 
 @end

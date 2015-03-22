@@ -28,7 +28,7 @@
 	return self;
 }
 
-- (id)iniWithString:(NSString *)inString {
+- (id)initWithString:(NSString *)inString {
 	if (self = [super init]) {
 		[self _parseStringForContent:inString];
 	}

@@ -35,10 +35,8 @@
     // Convert to a .torrent file and check if the header is correct
     NSString *string = [[NSString alloc] initWithData:data encoding:NSASCIIStringEncoding];
     if ([[string substringToIndex:11] isEqualToString:@"d8:announce"]) {
-        [string release];
         return YES;
     } else {
-        [string release];
         return NO;
     }
 }
@@ -93,7 +91,7 @@
     LogInfo(@"Attempting to download new episode: %@", episodeName);
     
     // Process all urls until the torrent is properly downloaded
-    for (NSString *url in urls) {
+    for (__strong NSString *url in urls) {
         
         // First try magnets
         if ([url rangeOfString:@"magnet:"].location != NSNotFound) {
@@ -116,7 +114,6 @@
                                                priority:0
                                                isSticky:0
                                            clickContext:nil];
-                [cover autorelease];
             }
 #endif
             
@@ -169,7 +166,6 @@
                                                priority:0
                                                isSticky:0
                                            clickContext:nil];
-                [cover autorelease];
             }
 #endif
             
@@ -206,7 +202,6 @@
         if ([[alert suppressionButton] state]) {
             [TSUserDefaults setKey:@"AutoDownloadFallbackSD" fromInt:shouldDownloadSD];
         }
-        [alert release];
     }
     
     return shouldDownloadSD;

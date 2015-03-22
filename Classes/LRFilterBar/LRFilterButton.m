@@ -31,7 +31,7 @@
 	self = [super init];
 	if (self != nil) {
 		
-        [self setCell:[[[NSClassFromString(@"LRFilterButtonCell") alloc] init] autorelease]];
+        [self setCell:[[NSClassFromString(@"LRFilterButtonCell") alloc] init]];
         
         [self setBezelStyle:NSRecessedBezelStyle];
         
