@@ -1,0 +1,345 @@
+"1 day" = "1 nap";
+
+/* This string is used between a date and a time, e.g, 1/1/1 at 01:01am. */
+" at " = " ekkor ";
+
+"1 hour" = "1 óra";
+
+"12 hours" = "12 óra";
+
+"15 minutes" = "15 perc";
+
+"3 hours" = "3 óra";
+
+"30 minutes" = "30 perc";
+
+"6 hours" = "6 óra";
+
+/* This refers to "All shows" */
+"All" = "Minden";
+
+"A message is logged each time new episodes are checked for. Unless noted otherwise, no new episodes were found." = "Egy üzenet elraktározódik minden új sorozat rész keresésnél. Amennyiben máshogy nem értesült, új sorozatrész nem lett találva.";
+
+/* The %@ will be replaced by the name of the show. */
+"A new episode of %@ is being downloaded." = "A(z) %@ új sorozat része töltődik.";
+
+"A new version of TVShows is available for download." = "Elérhető a TVShows újabb verziója.";
+
+"A new version of TVShows is being downloaded and installed." = "A TVShows újabb verziója töltődik majd települ.";
+
+"A newer show list cannot be found. Using an old show list temporarily." = "Nem található újabb sorozat lista. Átmenetileg egy régebbi sorozat lista lesz használva.";
+
+"A show list cannot be found. Please try again later or check your internet connection." = "A sorozat lista nem található. Próbálja meg később vagy ellenőrizze internetkapcsolatát.";
+
+"About" = "Névjegy";
+
+"Add a custom RSS source" = "Egyesi RSS forrás megadása";
+
+/* This string is on a button. */
+"Add Custom RSS" = "Egyedi RSS Hozzáadása";
+
+/* This string is on a button. */
+"Add Show" = "Sorozat hozzáadása";
+
+/* Title of an error message or Growl notification. */
+"An Error Has Occurred" = "Hiba történt";
+
+"An unknown error has occurred. Please try again later." = "Ismeretlen hiba történt. Próbálja meg később.";
+
+"An update for TVShows has been installed automatically. To disable this feature go to the Preferences tab and uncheck 'Automatically install new updates.'" = "Egy TVShows frissítés automatikusan installálva lett. Az automatikus frissítések leállításához tölölje a 'Automatikus frissítések' beállítást a Tulajdonságok fülön.";
+
+"Application Update Preferences" = "Alkalmazás Frissítési Beállítások";
+
+"Automatic check-in when an episode is downloaded" = "Automatikus ellenőrzés egy sorozat rész letöltésekor";
+
+"Automatically check for updates" = "Frissítések automatikus keresése";
+
+"Automatically install new updates" = "Frissítések automatikus telepítése";
+
+"Automatically open each file after download" = "Torrent fájlok automatikus megnyitása letöltés után";
+
+"Are you sure you want to uninstall TVShows? This will also remove all preferences and subscriptions." = "Biztosan el akarja távolítani a TVShows-t? Ezzel eltávolítja az összes beállítást és feliratkozást is.";
+
+/* The %@ will be replaced by the name of the show. */
+"Are you sure you want to unsubscribe from %@?" = "Biztos le akar iratkozni a következőről: %@?";
+
+/* This string is on a button. */
+"Cancel" = "Mégse";
+
+"Cannot connect. Please try again later or check your internet connection" = "A csatlakozás nem sikerült. Próbálja meg később vagy ellenőrizze internetkapcsolatát.";
+
+"Cannot connect. Using an old show list temporarily." = "A csatlakozás nem sikerült. Átmenetileg egy régebbi sorozat lista lesz használva.";
+
+"Check for episodes every:" = "Új sorozat részek keresése a következő időközönként:";
+
+/* This string is on a button. */
+"Check for new episodes now" = "Új Sorozat részek Keresése";
+
+/* This string is on a button. */
+"Check Now" = "Ellenőrzés Most";
+
+"Checking for new episodes..." = "Új sorozat részek keresése folyamatban";
+
+"Checking now, please wait..." = "Ellenőrzés most, kérem várjon...";
+
+"Choose this to download torrent files from a list of preset shows." = "Válassza ezt egy listából kiválasztott sorozat torrentjének letöltéséhez.";
+
+/* This string is on a button. */
+"Close" = "Bezár";
+
+/* This string is on a button. */
+"Create New Account" = "Új Felhasználói Fiók";
+
+"Create season subfolders" = "Évad almappák létrehozása";
+
+"Disable TVShows" = "TVShows leállítása";
+
+"Download beta versions when available" = "Elérhető béta verziók letöltése";
+
+"Download in HD" = "Letöltés HD minőségben";
+
+"Choose this to input your own RSS feed." = "Válassza ezt saját RSS link megadásához.";
+
+"Enable downloading new episodes" = "Új sorozat részek letöltésése";
+
+/* This refers to "Enabled shows" */
+"Enabled" = "Aktív";
+
+/* Status of the current show when it is airing. It is shown in a label as "Status: Continuing" */
+"Continuing" = "Folytatás";
+
+/* This refers to "Custom shows" */
+"Custom" = "Egyedi";
+
+/* Title of a column in a table. */
+"Episode" = "Sorozat Rész";
+
+"Default video quality:" = "Alapértelmezett videó minőség:";
+
+/* This refers to "Disabled shows" */
+"Disabled" = "Inaktív";
+
+"Donate" = "Adományozás";
+
+"Download Preferences" = "Letöltés Beállítások";
+
+/* This string is on a button. */
+"Edit" = "Szerkesztés";
+
+/* Title of a column in a table. */
+"Episode Name" = "Sorozat Rész Címe:";
+
+"Episode naming convention:" = "Sorozat rész név formátum:";
+
+"Episode save location:" = "Sorozat rész mentési helye:";
+
+"Feed" = "Hírfolyam";
+
+"Feed URLs" = "Hírfolyam URL címek";
+
+"Download HD versions by default" = "Letöltés HD minőségben";
+
+"General Settings" = "Általános Beállítások";
+
+"Growl Settings" = "Growl értesítési beállítások";
+
+"I am already a Miso user" = "Rendelkezek Miso fiókkal";
+
+"Include anonymous system information" = "Névtelen rendszerinformáció küldése";
+
+"Info" = "Információ";
+
+"Ended" = "Véget ért";
+
+"Last Aired" = "Legutóbbi Megjelenés";
+
+"Last Downloaded" = "Legutóbbi Letöltés";
+
+"Miso is a social network made for people that love watching TV shows." = "A Miso egy közösségi hálózat olyan embereknek, akik imádnak TV sorozatokat nézni.";
+
+/* This string is on a button. */
+"More Info" = "További információk";
+
+/* This string is on a button. */
+"More Shows" = "Több Sorozat";
+
+"Getting Started" = "Első Lépések";
+
+"Name" = "Név";
+
+/* This string is on a very narrow button, max 3 charaters (use a dot after that like "Des." in Spanish instead of "Desactivado") */
+"Off" = "Ki";
+
+/* This string refers to the default episode quality to download (Standard/High Definition). */
+"High Definition" = "Nagy Felbontású";
+
+/* This string is on a button. */
+"Ok" = "OK";
+
+/* This string is on a very narrow button, max 3 charaters (use a dot after that like "Act." in Spanish instead of "Activado") */
+"On" = "Be";
+
+"Only download items matching the following rules:" = "A következő szabályoknak megfelelő részek letöltése:";
+
+/* To select a custom folder not listed. */
+"Other..." = "Egyéb...";
+
+"Please Select a Show:" = "Válasszon egy sorozatot:";
+
+"Last Checked:" = "Legutóbb Ellenőrizve:";
+
+"Prioritize Magnet links (select this if The Pirate Bay is blocked)" = "Magnet linkek előnyben részesítése (válassza ezt amennyiben a Pirate Bay blokkolva van)";
+
+"Preferences" = "Beálltások";
+
+/* This refers to "Preset shows" */
+"Preset" = "Minta";
+
+/* Title of a column in a table. */
+"Published Date" = "Megjelenés Dátuma";
+
+"Logs are stored in ~/Library/Logs/TVShows/" = "Naplófájlok: ~/Library/Logs/TVShows/";
+
+"RSS Feed Information:" = "RSS Hírfolyam információ:";
+
+"Rating:" = "Értékelés:";
+
+/* This string is on a small button, it stands for "Reset Warnings" */
+"Reset Warn." = "Figyelmeztetések Törlése";
+
+"Save each show in its own folder" = "Sorozatok mentése saját mappába";
+
+/* This string is on a button. */
+"Save" = "Mentés";
+
+"Search" = "Keresés";
+
+/* This string is on a button. */
+"Sign In" = "Bejelentkezés";
+
+/* This string is on a button. */
+"Sign Out" = "Kijelentkezés";
+
+"Never" = "Soha";
+
+"Next Episode" = "Következő Rész";
+
+/* This string is split, the full version is "Start subscription with: Next aired episode" */
+"Next aired episode" = "Legközelebbi sorozat rész";
+
+/* Title of a column in a table. */
+"Season" = "Évad";
+
+"No" = "Nem";
+
+"Select a preset show from showRSS" = "Minta sorozat kiválasztása sorozat RSS-ből";
+
+"No activity has been logged yet. Have you recently installed TVShows?" = "nem található aktivitás. Mostanában telepítette a TVShows-t?";
+
+"Password:" = "Jelszó:";
+
+"Please choose one of the following actions:" = "Válasszon a következő lehetőségek közül:";
+
+"Send Growl notifications when…" = "Growl értesítések küldése amikor...";
+
+"No actual videos are downloaded by TVShows, only torrents which will require other programs to use. It is up to you, the user, to decide the legality of using any of the files downloaded by this application, in accordance with applicable copyright laws of you country." = "A TVShow nem tölt le videó fájlokat, csak más programok által kezelt torrent fájlokat. A felhasználó felelőssége ellenőrizni az alkalmazás által letöltött fájlok felhasználásának jogi hátterét, melyet az adott ország szerzői jogi törvényei szabályoznak.";
+
+"Status" = "Állapot";
+
+"No description was found for this show." = "A sorozat nem rendelkezik leírással.";
+
+/* This string is on a button. */
+"Submit Feedback" = "Visszajelzés küldése";
+
+/* This string is on a button. */
+"Subscribe" = "Feliratkozás";
+
+"Subscribed" = "Feliratkozva";
+
+"Subscriptions" = "Feliratkozások";
+
+/* This string is split, the full version is "Start subscription with: Next aired episode" or "Start subscription with: This episode: My Show S01E01" */
+"Start subscription with:" = "Feliratkozás kezdése:";
+
+"Sync" = "Szinkronizálás";
+
+"Sync shows between Miso and TVShows" = "Sorozat részek szinkronizálása a Miso és a TVShows között.";
+
+"The check-in will be made when the download starts. This is not advisable, but it could allow you to sync episode downloads across several computers." = "Bejelentkezés letöltés indításakor. Ez nem ajánlott, de lehetővé teszi a letöltések szinkronizációját több számítógép között.";
+
+"The file may not be released yet. Please try again later or check your internet connection. Alternatively you can download the SD version." = "A HD minőség nem elérhető. Próbálja meg később vagy ellenőrizze internetkapcsolatát. Esetleg töltse le az SD verziót.";
+
+/* Disclaimer for a destructive action */
+"This action cannot be undone." = "Ez a parancs nem vonható vissza.";
+
+/* This string is split, the full version is "Start subscription with: This episode: My Show S01E01" */
+"This episode:" = "Ezzel a résszel:";
+
+"TVDB id" = "TVDB id (sorozatszám)";
+
+/* Title of an error message or Growl notification. */
+"TVShows Update Available" = "Új TVShows Frissítés";
+
+/* Title of an error message or Growl notification. */
+"TVShows Update Downloading" = "TVShows Frissítés Letöltés";
+
+/* The %@ will be replaced by the name of the torrent file. */
+"Unable to download %@" = "A következőt nem sikerült letölteni: %@";
+
+/* The %@ will be replaced by the name of the torrent file. */
+"Unable to find an HD torrent for %@" = "A következő HD minőségű torrent fájlja nem található: %@";
+
+/* Title of an error message or Growl notification. */
+"Unable to Update the Show List" = "A sorozat listát nem sikerült frissíteni";
+
+/* This string is on a button. */
+"Unsubscribe" = "Leiratkozás";
+
+/* Title of an error message or Growl notification. */
+"Update Installed Automatically" = "Frissítés Automatikusan Telepítve";
+
+"User Name:" = "Felhasználónév:";
+
+"Show TVShows status in the menu bar" = "TVShows információ megjelenítése a menü lécen";
+
+/* This string refers to the default episode quality to download (Standard/High Definition). */
+"Standard" = "Alap";
+
+/* This string is on a button. */
+"View on TV.com" = "Megtekintés a TV.com-on";
+
+"… a new episode is downloaded." = "... egy új sorozat rész letöltődött.";
+
+"Recently Logged Activity" = "Legutóbb Naplózott Esemény";
+
+"… a new version of TVShows is released." = "... egy új sorozat rész megjelent.";
+
+/* This string is on a button. */
+"Uninstall" = "Eltávolítás";
+
+"Uninstall TVShows" = "A TVShows Eltávolítása";
+
+"Unknown" = "Ismeretlen";
+
+"Updating Show Information…" = "Sorozat Információ frissítése...";
+
+"Use additional sources for HD (may contain rars)" = "Egyébb HD források használata (rar fájlokat tartalmazhat)";
+
+"View Logs" = "Naplófájlok megtekintése";
+
+"Visit Miso" = "Miso meglátogatása";
+
+"Warnings restored" = "Figyelmeztetések visszaállítva";
+
+"Website" = "Honlap";
+
+"Why try it?" = "Miért próbálja ki?";
+
+"Yes" = "Igen";
+
+"Your preferences about warnings were restored. If needed, next time TVShows will ask for your confirmation to complete a sensitive operation." = "Az összes figyemeztetések visszaállítva. A TVShows ezentúl figyelmeztetni fog minden érzékeny lépésnél.";
+
+"Your subscriptions will be backed up in the cloud and they can be synced between different computers." = "A feliratkozások szinkronizáhatóak lesznek más számítógépekkel is a szerveren keresztül.";
+
+"Your TVShows subscriptions will be automatically synced with your followed shows on Miso. Only airings shows known by TVShows will be synced." = "A TVShows feliratkozások szinkronizálva lesznek a Miso követési litával. Csak a TVShows által ismert sorozatok lesznek szinkronizálva.";
+

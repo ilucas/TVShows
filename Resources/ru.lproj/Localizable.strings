@@ -1,0 +1,345 @@
+"1 day" = "1 день";
+
+/* This string is used between a date and a time, e.g, 1/1/1 at 01:01am. */
+" at " = " в ";
+
+"1 hour" = "1 час";
+
+"12 hours" = "12 часов";
+
+"15 minutes" = "15 минут";
+
+"3 hours" = "3 часа";
+
+"30 minutes" = "30 минут";
+
+"6 hours" = "6 часов";
+
+/* This refers to "All shows" */
+"All" = "Все";
+
+"A message is logged each time new episodes are checked for. Unless noted otherwise, no new episodes were found." = "Сообщения регистрируются каждый раз, когда происходит поиск новых эпизодов. Если не указано иное, то новые эпизоды не были найдены.";
+
+/* The %@ will be replaced by the name of the show. */
+"A new episode of %@ is being downloaded." = "Новая серия %@ была скачана.";
+
+"A new version of TVShows is available for download." = "Новая версия TVShows доступна для загрузки.";
+
+"A new version of TVShows is being downloaded and installed." = "Новая версия TVShows загружена и установлена.";
+
+"A newer show list cannot be found. Using an old show list temporarily." = "Новый список телешоу не найден. Временно будет использован старый список телешоу.";
+
+"A show list cannot be found. Please try again later or check your internet connection." = "Список телешоу не найден. Пожалуйста, попробуйте позже или проверьте свое интернет-соединение.";
+
+"About" = "О программе";
+
+"Add a custom RSS source" = "Добавить пользовательский источник RSS";
+
+/* This string is on a button. */
+"Add Custom RSS" = "Добавить RSS";
+
+/* This string is on a button. */
+"Add Show" = "Добавить шоу";
+
+/* Title of an error message or Growl notification. */
+"An Error Has Occurred" = "Произошла ошибка.";
+
+"An unknown error has occurred. Please try again later." = "Произошла неизвестная ошибка. Пожалуйста, повторите позже.";
+
+"An update for TVShows has been installed automatically. To disable this feature go to the Preferences tab and uncheck 'Automatically install new updates.'" = "Обновление для TVShows было установлено автоматически. Чтобы отключить автоматическое обновление, зайдите на вкладку Настройки и снимите отметку с \"Устанавливать обновления автоматически.\"";
+
+"Application Update Preferences" = "Настройки обновлений";
+
+"Automatic check-in when an episode is downloaded" = "Автоматически отметиться когда эпизод скачан";
+
+"Automatically check for updates" = "Автоматически проверять обновления";
+
+"Automatically install new updates" = "Устанавливать обновления автоматически";
+
+"Automatically open each file after download" = "Автоматически открывать файл после окончания загрузки";
+
+"Are you sure you want to uninstall TVShows? This will also remove all preferences and subscriptions." = "Вы уверены, что хотите удалить TVShows? Это также удалит все настройки и подписки";
+
+/* The %@ will be replaced by the name of the show. */
+"Are you sure you want to unsubscribe from %@?" = "Вы уверены, что хотите отписаться от %@?";
+
+/* This string is on a button. */
+"Cancel" = "Отмена";
+
+"Cannot connect. Please try again later or check your internet connection" = "Невозможно подсоединиться. Пожалуйста, попробуйте позже или проверьте свое интернет-соединение.";
+
+"Cannot connect. Using an old show list temporarily." = "Невозможно подсоедениться. Временно будет использован старый список телешоу.";
+
+"Check for episodes every:" = "Искать новые серии раз в:";
+
+/* This string is on a button. */
+"Check for new episodes now" = "Проверить наличие новых эпизодов сейчас";
+
+/* This string is on a button. */
+"Check Now" = "Проверить";
+
+"Checking for new episodes..." = "Проверка на наличие новых эпизодов ...";
+
+"Checking now, please wait..." = "Идет проверка, пожалуйста, подождите...";
+
+"Choose this to download torrent files from a list of preset shows." = "Выберите этот пункт, чтобы скачать torrent-файлы из списка телешоу.";
+
+/* This string is on a button. */
+"Close" = "Закрыть";
+
+/* This string is on a button. */
+"Create New Account" = "Создать новый аккаунт";
+
+"Create season subfolders" = "Создавать подпапки для сезонов";
+
+"Disable TVShows" = "Отключить TVShows";
+
+"Download beta versions when available" = "Обновляться до бета-версий, если доступно";
+
+"Download in HD" = "Скачать в HD";
+
+"Choose this to input your own RSS feed." = "Выберите этот пункт, чтобы ввести свой собственный RSS-канал.";
+
+"Enable downloading new episodes" = "Разрешить закачку новых серий";
+
+/* This refers to "Enabled shows" */
+"Enabled" = "Включенные";
+
+/* Status of the current show when it is airing. It is shown in a label as "Status: Continuing" */
+"Continuing" = "Продолжается";
+
+/* This refers to "Custom shows" */
+"Custom" = "Пользовательские";
+
+/* Title of a column in a table. */
+"Episode" = "Серия";
+
+"Default video quality:" = "Качество видео по умолчанию:";
+
+/* This refers to "Disabled shows" */
+"Disabled" = "Выключенные";
+
+"Donate" = "Помочь";
+
+"Download Preferences" = "Настройки закачки";
+
+/* This string is on a button. */
+"Edit" = "Изменить";
+
+/* Title of a column in a table. */
+"Episode Name" = "Название серии";
+
+"Episode naming convention:" = "Конвертация имен эпизодов:";
+
+"Episode save location:" = "Сохранять серии в папке:";
+
+"Feed" = "Лента";
+
+"Feed URLs" = "Адреса подписки";
+
+"Download HD versions by default" = "Скачивать в HD по умолчанию";
+
+"General Settings" = "Общие настройки";
+
+"Growl Settings" = "Настройки Growl";
+
+"I am already a Miso user" = "Я уже пользователь Miso";
+
+"Include anonymous system information" = "Включать анонимную информацию о системе";
+
+"Info" = "Информация";
+
+"Ended" = "Завершено";
+
+"Last Aired" = "Последний эфир";
+
+"Last Downloaded" = "Последнее скачанное";
+
+"Miso is a social network made for people that love watching TV shows." = "Miso – это социальная сеть для людей, которые любят смотреть телешоу.";
+
+/* This string is on a button. */
+"More Info" = "Подробнее";
+
+/* This string is on a button. */
+"More Shows" = "Другие шоу";
+
+"Getting Started" = "Приступая к работе";
+
+"Name" = "Имя";
+
+/* This string is on a very narrow button, max 3 charaters (use a dot after that like "Des." in Spanish instead of "Desactivado") */
+"Off" = "Выкл.";
+
+/* This string refers to the default episode quality to download (Standard/High Definition). */
+"High Definition" = "High Definition";
+
+/* This string is on a button. */
+"Ok" = "Ок";
+
+/* This string is on a very narrow button, max 3 charaters (use a dot after that like "Act." in Spanish instead of "Activado") */
+"On" = "Вкл.";
+
+"Only download items matching the following rules:" = "Скачивать только объекты соответствующие условиям:";
+
+/* To select a custom folder not listed. */
+"Other..." = "Другая...";
+
+"Please Select a Show:" = "Пожалуйста, выберите телешоу:";
+
+"Last Checked:" = "Последняя проверка:";
+
+"Prioritize Magnet links (select this if The Pirate Bay is blocked)" = "Предпочитать Magnet-ссылки";
+
+"Preferences" = "Настройки";
+
+/* This refers to "Preset shows" */
+"Preset" = "Стандартные";
+
+/* Title of a column in a table. */
+"Published Date" = "Дата публикации";
+
+"Logs are stored in ~/Library/Logs/TVShows/" = "Логи хранятся в ~/Library/Logs/TVShows/";
+
+"RSS Feed Information:" = "Информация о RSS-ленте:";
+
+"Rating:" = "Рейтинг:";
+
+/* This string is on a small button, it stands for "Reset Warnings" */
+"Reset Warn." = "Сброс пред.";
+
+"Save each show in its own folder" = "Сохранять шоу в отдельных папках";
+
+/* This string is on a button. */
+"Save" = "Сохранить";
+
+"Search" = "Поиск";
+
+/* This string is on a button. */
+"Sign In" = "Войти";
+
+/* This string is on a button. */
+"Sign Out" = "Выйти";
+
+"Never" = "Никогда";
+
+"Next Episode" = "Следующий эпизод";
+
+/* This string is split, the full version is "Start subscription with: Next aired episode" */
+"Next aired episode" = "Следующий вышедший эпизод";
+
+/* Title of a column in a table. */
+"Season" = "Сезон";
+
+"No" = "Нет";
+
+"Select a preset show from showRSS" = "Выберите заданное шоу из showRSS";
+
+"No activity has been logged yet. Have you recently installed TVShows?" = "Не зарегестрировано никакой активности. Возможно, вы установили TVShows недавно?";
+
+"Password:" = "Пароль:";
+
+"Please choose one of the following actions:" = "Пожалуйста, выберите одно из следующих действий:";
+
+"Send Growl notifications when…" = "Показывать сообщения Growl когда…";
+
+"No actual videos are downloaded by TVShows, only torrents which will require other programs to use. It is up to you, the user, to decide the legality of using any of the files downloaded by this application, in accordance with applicable copyright laws of you country." = "TVShows скачивает только торрент-файлы, для использования которых требуются другие приложения. Вы, как конечный пользователь, решаете самостоятельно о законности использования файлов, скачаных этим приложением, в соответствии с действующим законодательством в вашей стране.";
+
+"Status" = "Статус";
+
+"No description was found for this show." = "Не найдено описания телешоу.";
+
+/* This string is on a button. */
+"Submit Feedback" = "Отправить отчет";
+
+/* This string is on a button. */
+"Subscribe" = "Подписаться";
+
+"Subscribed" = "Подписка осуществлена";
+
+"Subscriptions" = "Подписки";
+
+/* This string is split, the full version is "Start subscription with: Next aired episode" or "Start subscription with: This episode: My Show S01E01" */
+"Start subscription with:" = "Начать подписку с:";
+
+"Sync" = "Синхронизация";
+
+"Sync shows between Miso and TVShows" = "Синхронизация Miso и TVShows";
+
+"The check-in will be made when the download starts. This is not advisable, but it could allow you to sync episode downloads across several computers." = "Отметка будет сделана, когда начнется загрузка. Это не рекомендуется, но это может позволить вам синхронизировать загружаемый эпизод между несколькими компьютерами.";
+
+"The file may not be released yet. Please try again later or check your internet connection. Alternatively you can download the SD version." = "Файл не доступен. Пожалуйста, повторите попытку позже или проверить подключение к Интернету. Или же вы можете скачать версию в стандартном разрешении.";
+
+/* Disclaimer for a destructive action */
+"This action cannot be undone." = "Это действие не может быть отменено.";
+
+/* This string is split, the full version is "Start subscription with: This episode: My Show S01E01" */
+"This episode:" = "Этот эпизод:";
+
+"TVDB id" = "TVDB ID";
+
+/* Title of an error message or Growl notification. */
+"TVShows Update Available" = "Доступно обновление TVShows";
+
+/* Title of an error message or Growl notification. */
+"TVShows Update Downloading" = "Скачивается обновление TVShows";
+
+/* The %@ will be replaced by the name of the torrent file. */
+"Unable to download %@" = "Не удается загрузить %@";
+
+/* The %@ will be replaced by the name of the torrent file. */
+"Unable to find an HD torrent for %@" = "Не удалось найти торрент HD для %@";
+
+/* Title of an error message or Growl notification. */
+"Unable to Update the Show List" = "Невозможно обновить список телешоу.";
+
+/* This string is on a button. */
+"Unsubscribe" = "Отписаться";
+
+/* Title of an error message or Growl notification. */
+"Update Installed Automatically" = "Обновление установлено автоматически";
+
+"User Name:" = "Имя пользователя:";
+
+"Show TVShows status in the menu bar" = "Показывать TVShows в панели меню";
+
+/* This string refers to the default episode quality to download (Standard/High Definition). */
+"Standard" = "Стандартное разрешение";
+
+/* This string is on a button. */
+"View on TV.com" = "Посмотреть на TV.com";
+
+"… a new episode is downloaded." = "… скачана новая серия.";
+
+"Recently Logged Activity" = "Свежая активность";
+
+"… a new version of TVShows is released." = "… вышла новая версия TVShows.";
+
+/* This string is on a button. */
+"Uninstall" = "Удалить";
+
+"Uninstall TVShows" = "Удалить TVShows";
+
+"Unknown" = "Неизвестно";
+
+"Updating Show Information…" = "Обновление информации о телешоу...";
+
+"Use additional sources for HD (may contain rars)" = "Качать HD из доп. источников (может содержать архивы)";
+
+"View Logs" = "Активность";
+
+"Visit Miso" = "Посетить Miso";
+
+"Warnings restored" = "Предупреждения сброшены";
+
+"Website" = "Сайт";
+
+"Why try it?" = "Почему попробовать?";
+
+"Yes" = "Да";
+
+"Your preferences about warnings were restored. If needed, next time TVShows will ask for your confirmation to complete a sensitive operation." = "Ваши настройки предупреждения были восстановлены. При необходимости, в следующий раз TVShows запросит ваше подтверждение на выполнение этой операции.";
+
+"Your subscriptions will be backed up in the cloud and they can be synced between different computers." = "Ваши подписки будут сохранены в облаке, и они могут быть синхронизированы между различными компьютерами.";
+
+"Your TVShows subscriptions will be automatically synced with your followed shows on Miso. Only airings shows known by TVShows will be synced." = "Ваши подписки в TVShows будут автоматически синхронизироваться с вашими шоу на Miso. Только известные для TVShows шоу будут синхронизированы.";
+

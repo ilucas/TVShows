@@ -1,0 +1,345 @@
+"1 day" = "1 dan";
+
+/* This string is used between a date and a time, e.g, 1/1/1 at 01:01am. */
+" at " = "ob";
+
+"1 hour" = "1 ura/o";
+
+"12 hours" = "12 ur";
+
+"15 minutes" = "15 minut";
+
+"3 hours" = "3 ure";
+
+"30 minutes" = "30 minut";
+
+"6 hours" = "6 ur";
+
+/* This refers to "All shows" */
+"All" = "Vse";
+
+"A message is logged each time new episodes are checked for. Unless noted otherwise, no new episodes were found." = "Sporočilo je zabeleženo vsakič, ko se preverja za nove epizode. Če ni navedeno drugače, ni nobenih novih epizod.";
+
+/* The %@ will be replaced by the name of the show. */
+"A new episode of %@ is being downloaded." = "Nova epizoda serije @% se je začela prenašati.";
+
+"A new version of TVShows is available for download." = "Nova različica TVShows je na voljo za prenos.";
+
+"A new version of TVShows is being downloaded and installed." = "Nova različica TVShows se prenaša in namešča.";
+
+"A newer show list cannot be found. Using an old show list temporarily." = "Novejšega seznama serij ni mogoče najti. Začasno boste uporabljali stari seznam.";
+
+"A show list cannot be found. Please try again later or check your internet connection." = "Seznama serij ni mogoče najti. Poskusite znova pozneje ali pa preverite internetno povezavo.";
+
+"About" = "O programu";
+
+"Add a custom RSS source" = "Dodajte RSS vir po meri";
+
+/* This string is on a button. */
+"Add Custom RSS" = "Dodajte RSS po meri";
+
+/* This string is on a button. */
+"Add Show" = "Dodaj serijo";
+
+/* Title of an error message or Growl notification. */
+"An Error Has Occurred" = "Prišlo je do napake";
+
+"An unknown error has occurred. Please try again later." = "Prišlo je do neznane napake. Prosimo, poskusite znova pozneje.";
+
+"An update for TVShows has been installed automatically. To disable this feature go to the Preferences tab and uncheck 'Automatically install new updates.'" = "Posodobitev za TVShows je bila samodejno nameščena. Če želite onemogočiti to funkcijo, pojdite na jeziček Nastavitve in odzančite \"Samodejno namesti nove posodobitve.\"";
+
+"Application Update Preferences" = "Nastavitve za posodobitev aplikacije";
+
+"Automatic check-in when an episode is downloaded" = "Samodejno sporoči, ko je prenešena nova epizoda";
+
+"Automatically check for updates" = "Samodejno preveri za posodobitve";
+
+"Automatically install new updates" = "Samodejno namesti nove posodobitve";
+
+"Automatically open each file after download" = "Samodejno odpri vsako Torrent datoteko po prenosu";
+
+"Are you sure you want to uninstall TVShows? This will also remove all preferences and subscriptions." = "Ali ste prepričani, da želite odstraniti TVShows? To bo odstranilo tudi vse nastavitve in naročnine.";
+
+/* The %@ will be replaced by the name of the show. */
+"Are you sure you want to unsubscribe from %@?" = "Ali ste prepričani, da želite odjaviti s @%?";
+
+/* This string is on a button. */
+"Cancel" = "Prekliči";
+
+"Cannot connect. Please try again later or check your internet connection" = "Ni mogoče vzpostaviti povezave. Poskusite znova pozneje ali pa preverite internetno povezavo.";
+
+"Cannot connect. Using an old show list temporarily." = "Ni mogoče vzpostaviti povezave. Začasna uporaba starega seznama serij.";
+
+"Check for episodes every:" = "Preveri za nove epizode vsake:";
+
+/* This string is on a button. */
+"Check for new episodes now" = "Preverite za nove epizode zdaj";
+
+/* This string is on a button. */
+"Check Now" = "Preveri zdaj";
+
+"Checking for new episodes..." = "Preverjam za nove epizode ...";
+
+"Checking now, please wait..." = "Preverjam, prosimo počakajte ...";
+
+"Choose this to download torrent files from a list of preset shows." = "Izberite to, da prenesete torrent datotek iz seznama prednastavljenih serij.";
+
+/* This string is on a button. */
+"Close" = "Zapri";
+
+/* This string is on a button. */
+"Create New Account" = "Ustvari nov račun";
+
+"Create season subfolders" = "Ustvari podmapo za sezono";
+
+"Disable TVShows" = "Onemogoči TVShows";
+
+"Download beta versions when available" = "Prenesi beta različice, ko so na voljo";
+
+"Download in HD" = "Prenesi v HD različici";
+
+"Choose this to input your own RSS feed." = "Izberite to, da vnesete lasten RSS tok.";
+
+"Enable downloading new episodes" = "Omogoči prenos novih epizod";
+
+/* This refers to "Enabled shows" */
+"Enabled" = "Omogočene";
+
+/* Status of the current show when it is airing. It is shown in a label as "Status: Continuing" */
+"Continuing" = "Predvajan";
+
+/* This refers to "Custom shows" */
+"Custom" = "Lastne";
+
+/* Title of a column in a table. */
+"Episode" = "Epizoda";
+
+"Default video quality:" = "Privzeta video kakovost:";
+
+/* This refers to "Disabled shows" */
+"Disabled" = "Onemogočene";
+
+"Donate" = "Donirajte";
+
+"Download Preferences" = "Prenesi nastavitve";
+
+/* This string is on a button. */
+"Edit" = "Urejanje";
+
+/* Title of a column in a table. */
+"Episode Name" = "Ime epizode";
+
+"Episode naming convention:" = "Preimenovanje epizod";
+
+"Episode save location:" = "Lokacija za shranjevanje epizod:";
+
+"Feed" = "Tok";
+
+"Feed URLs" = "URL tok";
+
+"Download HD versions by default" = "Privzeto prenesite HD različico";
+
+"General Settings" = "Splošne nastavitve";
+
+"Growl Settings" = "Growl nastavitve";
+
+"I am already a Miso user" = "Že sem Miso uporabnik";
+
+"Include anonymous system information" = "Vključi anonimne sistemske informacije";
+
+"Info" = "Informacije";
+
+"Ended" = "Končan";
+
+"Last Aired" = "Zadnja epizoda na sporedu";
+
+"Last Downloaded" = "Zadnja prenešena epizoda";
+
+"Miso is a social network made for people that love watching TV shows." = "Miso je socialna mreža, narejena za ljudi, ki radi gledajo TV serije.";
+
+/* This string is on a button. */
+"More Info" = "Več informacij";
+
+/* This string is on a button. */
+"More Shows" = "Več serij";
+
+"Getting Started" = "Kako začeti";
+
+"Name" = "Ime";
+
+/* This string is on a very narrow button, max 3 charaters (use a dot after that like "Des." in Spanish instead of "Desactivado") */
+"Off" = "Off";
+
+/* This string refers to the default episode quality to download (Standard/High Definition). */
+"High Definition" = "Visoka kvaliteta (HD)";
+
+/* This string is on a button. */
+"Ok" = "O.K.";
+
+/* This string is on a very narrow button, max 3 charaters (use a dot after that like "Act." in Spanish instead of "Activado") */
+"On" = "On";
+
+"Only download items matching the following rules:" = "Prenesite samo datoteke, ki ustrezajo naslednjim pravilom:";
+
+/* To select a custom folder not listed. */
+"Other..." = "Druga ...";
+
+"Please Select a Show:" = "Prosimo izberite serijo:";
+
+"Last Checked:" = "Zanje preverjanje:";
+
+"Prioritize Magnet links (select this if The Pirate Bay is blocked)" = "Prednost Magnet povezave (izberite to, če je blokiran Pirate Bay)";
+
+"Preferences" = "Nastavitve";
+
+/* This refers to "Preset shows" */
+"Preset" = "Prednastavljeno";
+
+/* Title of a column in a table. */
+"Published Date" = "Datum objave";
+
+"Logs are stored in ~/Library/Logs/TVShows/" = "Dnevniki so shranjene v ~ / Library / Dnevniki / TVShows /";
+
+"RSS Feed Information:" = "Informacije o RSS toku:";
+
+"Rating:" = "Ocena:";
+
+/* This string is on a small button, it stands for "Reset Warnings" */
+"Reset Warn." = "Odstrani opozorila";
+
+"Save each show in its own folder" = "Shrani vsako serijo v lastno mapo";
+
+/* This string is on a button. */
+"Save" = "Shrani";
+
+"Search" = "Iskanje";
+
+/* This string is on a button. */
+"Sign In" = "Prijava";
+
+/* This string is on a button. */
+"Sign Out" = "Odjava";
+
+"Never" = "Nikoli";
+
+"Next Episode" = "Naslednja epizoda";
+
+/* This string is split, the full version is "Start subscription with: Next aired episode" */
+"Next aired episode" = "Naslednjo predvajano epizodo";
+
+/* Title of a column in a table. */
+"Season" = "Sezona";
+
+"No" = "Ne";
+
+"Select a preset show from showRSS" = "Izberite prednastavljeno serijo iz showRSS";
+
+"No activity has been logged yet. Have you recently installed TVShows?" = "Ni bilo zabeležene aktivnosti. Ali ste pred kratkim namestili TVShows?";
+
+"Password:" = "Geslo:";
+
+"Please choose one of the following actions:" = "Prosimo izberite eno od naslednjih možnosti:";
+
+"Send Growl notifications when…" = "Pošlji Growl obvestila, ko ...";
+
+"No actual videos are downloaded by TVShows, only torrents which will require other programs to use. It is up to you, the user, to decide the legality of using any of the files downloaded by this application, in accordance with applicable copyright laws of you country." = "TVShows ne prenaša videoposnetkov, ampak Torrent datoteke, za katere boste potrebovali programe za prenos Torrent datotek. Od vas je odvisno, da se odločite o zakonitosti uporabe katere koli od prenesenih datotek, v skladu z veljavnimi zakoni o avtorskih pravicah v vaši državi.";
+
+"Status" = "Stanje";
+
+"No description was found for this show." = "Opis ni bil najden za to serijo.";
+
+/* This string is on a button. */
+"Submit Feedback" = "Pošljite mnenje";
+
+/* This string is on a button. */
+"Subscribe" = "Naročite se";
+
+"Subscribed" = "Naročen";
+
+"Subscriptions" = "Naročnine";
+
+/* This string is split, the full version is "Start subscription with: Next aired episode" or "Start subscription with: This episode: My Show S01E01" */
+"Start subscription with:" = "Začni naročnino z:";
+
+"Sync" = "Sinhronizacija";
+
+"Sync shows between Miso and TVShows" = "Sinhroniziraj serije med Miso in TVShows";
+
+"The check-in will be made when the download starts. This is not advisable, but it could allow you to sync episode downloads across several computers." = "Obveščeni boste o začetku prenosa. To ni priporočljivo, lahko pa vam omogoča, da sinhronizirate prenose epizodo med več računalniki.";
+
+"The file may not be released yet. Please try again later or check your internet connection. Alternatively you can download the SD version." = "HD različica mogoče še ni bila naložena. Poskusite znova pozneje ali pa preverite internetno povezavo. Lahko pa prenesete SD različico.";
+
+/* Disclaimer for a destructive action */
+"This action cannot be undone." = "Tega dejanja ni mogoče razveljaviti.";
+
+/* This string is split, the full version is "Start subscription with: This episode: My Show S01E01" */
+"This episode:" = "Ta epizoda:";
+
+"TVDB id" = "TVDB id";
+
+/* Title of an error message or Growl notification. */
+"TVShows Update Available" = "Na voljo je posodobitev za TVShows aplikacijo";
+
+/* Title of an error message or Growl notification. */
+"TVShows Update Downloading" = "Prenaša se posodobitev aplikacije TVShows";
+
+/* The %@ will be replaced by the name of the torrent file. */
+"Unable to download %@" = "Ne morem prenesti %@";
+
+/* The %@ will be replaced by the name of the torrent file. */
+"Unable to find an HD torrent for %@" = "Ni mogoče najti torrent HD kvalitete za %@";
+
+/* Title of an error message or Growl notification. */
+"Unable to Update the Show List" = "Ni mogoče posodobiti seznama serij";
+
+/* This string is on a button. */
+"Unsubscribe" = "Odjavite se";
+
+/* Title of an error message or Growl notification. */
+"Update Installed Automatically" = "Samodejno namesti posodobitve";
+
+"User Name:" = "Uporabniško ime:";
+
+"Show TVShows status in the menu bar" = "Prikaži TVShows stanje v menijski vrstici";
+
+/* This string refers to the default episode quality to download (Standard/High Definition). */
+"Standard" = "Standardna";
+
+/* This string is on a button. */
+"View on TV.com" = "Pogled na TV.com";
+
+"… a new episode is downloaded." = "... je prenešena nova epizoda.";
+
+"Recently Logged Activity" = "Nedavno zabeležene aktivnosti";
+
+"… a new version of TVShows is released." = "... je izdana nova različica TVShows.";
+
+/* This string is on a button. */
+"Uninstall" = "Odstrani";
+
+"Uninstall TVShows" = "Odstrani TVShows";
+
+"Unknown" = "Neznano";
+
+"Updating Show Information…" = "Posodabljanje informacij o seriji...";
+
+"Use additional sources for HD (may contain rars)" = "Uporaba dodatnih virov za HD (lahko vsebuje RAR)";
+
+"View Logs" = "Poglej Dnevnike";
+
+"Visit Miso" = "Obiščite Miso";
+
+"Warnings restored" = "Opozorila obnovljena";
+
+"Website" = "Spletna stran";
+
+"Why try it?" = "Zakaj poizkušate to?";
+
+"Yes" = "Da";
+
+"Your preferences about warnings were restored. If needed, next time TVShows will ask for your confirmation to complete a sensitive operation." = "Vaše nastavitve o opozorilih so bile obnovljene. Če je potrebno, bo naslednjič TVShows vprašal za vašo potrditev za dokončanje občutljivih operacijij.";
+
+"Your subscriptions will be backed up in the cloud and they can be synced between different computers." = "Vaš naročnine bodo shranjene v oblaku in jih je mogoče sinhronizirati med različnimi računalniki.";
+
+"Your TVShows subscriptions will be automatically synced with your followed shows on Miso. Only airings shows known by TVShows will be synced." = "Vaše TVShows naročnine bodo samodejno sinhronizirane z serijami ki jih sledite na Miso omrežju. Samo predvajane serije bodo sinhronizirane z TVShows.";
+

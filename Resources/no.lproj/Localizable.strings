@@ -1,0 +1,345 @@
+"1 day" = "Daglig";
+
+/* This string is used between a date and a time, e.g, 1/1/1 at 01:01am. */
+" at " = " kl ";
+
+"1 hour" = "Hver time";
+
+"12 hours" = "Hver 12. time";
+
+"15 minutes" = "Hvert 15. minutt";
+
+"3 hours" = "Hver 3. time";
+
+"30 minutes" = "Hver halvtime";
+
+"6 hours" = "Hver 6. time";
+
+/* This refers to "All shows" */
+"All" = "Alle";
+
+"A message is logged each time new episodes are checked for. Unless noted otherwise, no new episodes were found." = "Det logges hver gang det sjekkes etter nye episoder. Om ikke annen beskjed kommer opp, ble det ikke funnet noen nye episoder.";
+
+/* The %@ will be replaced by the name of the show. */
+"A new episode of %@ is being downloaded." = "En ny episode av %@ lastes ned.";
+
+"A new version of TVShows is available for download." = "En ny versjon av TVShows er tilgjengelig for nedlasting.";
+
+"A new version of TVShows is being downloaded and installed." = "En ny versjon av TVShows lastes ned og installeres.";
+
+"A newer show list cannot be found. Using an old show list temporarily." = "FInner ikke oppdatert programliste. Bruker midlertidig liste inntil videre.";
+
+"A show list cannot be found. Please try again later or check your internet connection." = "Kan ikke finne en programliste. Vennligst prøv igjen senere eller kontroller internettforbindelsen din.";
+
+"About" = "Om";
+
+"Add a custom RSS source" = "Legg til RSS-kilde";
+
+/* This string is on a button. */
+"Add Custom RSS" = "Legg til RSS-kilde";
+
+/* This string is on a button. */
+"Add Show" = "Legg til serie";
+
+/* Title of an error message or Growl notification. */
+"An Error Has Occurred" = "En feil har oppstått.";
+
+"An unknown error has occurred. Please try again later." = "En ukjent feil har oppstått. Vennligst prøv igjen senere.";
+
+"An update for TVShows has been installed automatically. To disable this feature go to the Preferences tab and uncheck 'Automatically install new updates.'" = "En ny versjon av TVShows har blitt installert. For å skru av denne funksjonen, gå til Innstillinger og fjern avkrysningen for 'Installer nye versjoner automatisk'.";
+
+"Application Update Preferences" = "Innstillinger for automatisk programvareoppdatering";
+
+"Automatic check-in when an episode is downloaded" = "Sjekk-inn automatisk når en episode er lastet ned";
+
+"Automatically check for updates" = "Søk automatisk etter nye versjoner";
+
+"Automatically install new updates" = "Installer nye versjoner automatisk";
+
+"Automatically open each file after download" = "Åpne nedlastede filer automatisk";
+
+"Are you sure you want to uninstall TVShows? This will also remove all preferences and subscriptions." = "Er du sikker på at du vil avinstallere TVShows? Alle innstillinger og abonnementer blir også fjernet.";
+
+/* The %@ will be replaced by the name of the show. */
+"Are you sure you want to unsubscribe from %@?" = "Sikker på at du vil slutte abonnementet på %@?";
+
+/* This string is on a button. */
+"Cancel" = "Avbryt";
+
+"Cannot connect. Please try again later or check your internet connection" = "Får ingen forbindelse. Vennligst prøv igjen senere eller kontroller internettforbindelsen din.";
+
+"Cannot connect. Using an old show list temporarily." = "Får ingen forbindelse. Bruker midlertidig programliste inntil videre.";
+
+"Check for episodes every:" = "Søk etter nye episoder:";
+
+/* This string is on a button. */
+"Check for new episodes now" = "Se etter nye episoder nå";
+
+/* This string is on a button. */
+"Check Now" = "Søk nå";
+
+"Checking for new episodes..." = "Ser etter nye episoder...";
+
+"Checking now, please wait..." = "Sjekker nå, vennligst vent...";
+
+"Choose this to download torrent files from a list of preset shows." = "Velg denne for å laste ned torrent-filer fra utvalgte TV-serier.";
+
+/* This string is on a button. */
+"Close" = "Lukk";
+
+/* This string is on a button. */
+"Create New Account" = "Opprett ny konto";
+
+"Create season subfolders" = "Lag undermapper for sesonger";
+
+"Disable TVShows" = "Deaktiver TVShows";
+
+"Download beta versions when available" = "Last ned betaversjoner når tilgjengelige";
+
+"Download in HD" = "Last ned i HD-kvalitet";
+
+"Choose this to input your own RSS feed." = "Velg denne for å legge til din egen RSS-kilde.";
+
+"Enable downloading new episodes" = "Nye episoder lastes ned når tilgjengelige";
+
+/* This refers to "Enabled shows" */
+"Enabled" = "Aktive";
+
+/* Status of the current show when it is airing. It is shown in a label as "Status: Continuing" */
+"Continuing" = "Fortsetter";
+
+/* This refers to "Custom shows" */
+"Custom" = "Tilpassede";
+
+/* Title of a column in a table. */
+"Episode" = "Episode";
+
+"Default video quality:" = "Foretrukket videokvalitet:";
+
+/* This refers to "Disabled shows" */
+"Disabled" = "Passive";
+
+"Donate" = "Donér";
+
+"Download Preferences" = "Innstillinger for nedlasting";
+
+/* This string is on a button. */
+"Edit" = "Rediger";
+
+/* Title of a column in a table. */
+"Episode Name" = "Episodetittel";
+
+"Episode naming convention:" = "Navneformat for episoder:";
+
+"Episode save location:" = "Velg sted for lagring av episoder :";
+
+"Feed" = "Kilde";
+
+"Feed URLs" = "Kildeadresser";
+
+"Download HD versions by default" = "Last ned HD-versjon";
+
+"General Settings" = "Generelle innstillinger";
+
+"Growl Settings" = "Innstillinger for Growl";
+
+"I am already a Miso user" = "Jeg bruker allerede Miso";
+
+"Include anonymous system information" = "Send anonymisert systeminformasjon";
+
+"Info" = "Info";
+
+"Ended" = "Avsluttet";
+
+"Last Aired" = "Vist på TV";
+
+"Last Downloaded" = "Sist nedlastet";
+
+"Miso is a social network made for people that love watching TV shows." = "Miso er et sosialt nettverk for alle som elsker TV serier.";
+
+/* This string is on a button. */
+"More Info" = "Mer informasjon";
+
+/* This string is on a button. */
+"More Shows" = "Flere serier";
+
+"Getting Started" = "Komme i gang";
+
+"Name" = "Navn";
+
+/* This string is on a very narrow button, max 3 charaters (use a dot after that like "Des." in Spanish instead of "Desactivado") */
+"Off" = "Av";
+
+/* This string refers to the default episode quality to download (Standard/High Definition). */
+"High Definition" = "HD";
+
+/* This string is on a button. */
+"Ok" = "OK";
+
+/* This string is on a very narrow button, max 3 charaters (use a dot after that like "Act." in Spanish instead of "Activado") */
+"On" = "På";
+
+"Only download items matching the following rules:" = "Last kun ned episoder som følger disse reglene:";
+
+/* To select a custom folder not listed. */
+"Other..." = "Annen...";
+
+"Please Select a Show:" = "Vennligst velg serie:";
+
+"Last Checked:" = "Sist sjekket:";
+
+"Prioritize Magnet links (select this if The Pirate Bay is blocked)" = "Prioriter Magnet-lenker (velg dette hvis The Pirate Bay er blokkert)";
+
+"Preferences" = "Innstillinger";
+
+/* This refers to "Preset shows" */
+"Preset" = "Utvalgte";
+
+/* Title of a column in a table. */
+"Published Date" = "Publisert dato";
+
+"Logs are stored in ~/Library/Logs/TVShows/" = "Loggen finnes under ~/Library/Logs/TVShows/";
+
+"RSS Feed Information:" = "Informasjon om RSS-feed:";
+
+"Rating:" = "Vurdering:";
+
+/* This string is on a small button, it stands for "Reset Warnings" */
+"Reset Warn." = "Nullst. varsler";
+
+"Save each show in its own folder" = "Lagre hvert show i en egen mappe";
+
+/* This string is on a button. */
+"Save" = "Lagre";
+
+"Search" = "Søk etter";
+
+/* This string is on a button. */
+"Sign In" = "Logg inn";
+
+/* This string is on a button. */
+"Sign Out" = "Logg ut";
+
+"Never" = "Aldri";
+
+"Next Episode" = "Neste Episode";
+
+/* This string is split, the full version is "Start subscription with: Next aired episode" */
+"Next aired episode" = "Neste nye episode";
+
+/* Title of a column in a table. */
+"Season" = "Sesong";
+
+"No" = "Nei";
+
+"Select a preset show from showRSS" = "Velg serie fra showRSS";
+
+"No activity has been logged yet. Have you recently installed TVShows?" = "Ingen aktivitet har blitt logget ennå. Har du nettopp installert TVShows?";
+
+"Password:" = "Passord:";
+
+"Please choose one of the following actions:" = "Vennligst velg en av følgende handlinger:";
+
+"Send Growl notifications when…" = "La Growl varsle når…";
+
+"No actual videos are downloaded by TVShows, only torrents which will require other programs to use. It is up to you, the user, to decide the legality of using any of the files downloaded by this application, in accordance with applicable copyright laws of you country." = "Ingen videoer lastes ned med TVShows, kun torrent-filer som man kan bruke videre gjennom andre programmer. Det er opp til brukeren å avgjøre lovligheten i det å bruke torrent-filene som lastes ned via dette programmet videre ift. gjeldende lover og bestemmelser med kopibeskyttet materiale.";
+
+"Status" = "Status";
+
+"No description was found for this show." = "Det finnes ingen beskrivelse for denne serien.";
+
+/* This string is on a button. */
+"Submit Feedback" = "Send tilbakemelding";
+
+/* This string is on a button. */
+"Subscribe" = "Abonner";
+
+"Subscribed" = "Abonnerer";
+
+"Subscriptions" = "Abonnementer";
+
+/* This string is split, the full version is "Start subscription with: Next aired episode" or "Start subscription with: This episode: My Show S01E01" */
+"Start subscription with:" = "Start abonnement med:";
+
+"Sync" = "Synkroniser";
+
+"Sync shows between Miso and TVShows" = "Synkroniser serier mellom Miso og TVShows";
+
+"The check-in will be made when the download starts. This is not advisable, but it could allow you to sync episode downloads across several computers." = "Sjekk-inn vil bli utført når en nedlastning starter. Dette er ikke anbefalt, men dette kan gjøre slik at du kan synkronisere nedlastingen av episoder mellom flere maskiner.";
+
+"The file may not be released yet. Please try again later or check your internet connection. Alternatively you can download the SD version." = "Filen er kanskje ikke utgitt ennå. Vennligst prøv igjen senere eller sjekk din Internettforbindelse. Alternativt kan du laste ned SD versjonen.";
+
+/* Disclaimer for a destructive action */
+"This action cannot be undone." = "Denne handlingen kan ikke angres.";
+
+/* This string is split, the full version is "Start subscription with: This episode: My Show S01E01" */
+"This episode:" = "Denne episoden:";
+
+"TVDB id" = "TVDB id";
+
+/* Title of an error message or Growl notification. */
+"TVShows Update Available" = "En ny versjon av TVShows er tilgjengelig";
+
+/* Title of an error message or Growl notification. */
+"TVShows Update Downloading" = "En ny versjon av TVShows lastes ned";
+
+/* The %@ will be replaced by the name of the torrent file. */
+"Unable to download %@" = "Kan ikke laste ned %@";
+
+/* The %@ will be replaced by the name of the torrent file. */
+"Unable to find an HD torrent for %@" = "Fant ingen HD-torrent for %@";
+
+/* Title of an error message or Growl notification. */
+"Unable to Update the Show List" = "Kunne ikke oppdatere programlisten";
+
+/* This string is on a button. */
+"Unsubscribe" = "Stopp abonnement";
+
+/* Title of an error message or Growl notification. */
+"Update Installed Automatically" = "En ny versjon har blitt installert";
+
+"User Name:" = "Brukernavn:";
+
+"Show TVShows status in the menu bar" = "Vis status for TVShows i menylinjen";
+
+/* This string refers to the default episode quality to download (Standard/High Definition). */
+"Standard" = "Standard";
+
+/* This string is on a button. */
+"View on TV.com" = "Slå opp på TV.com";
+
+"… a new episode is downloaded." = "…en ny episode er lastet ned.";
+
+"Recently Logged Activity" = "Nylig logget aktivitet";
+
+"… a new version of TVShows is released." = "…en ny versjon av TVShows er tilgjengelig.";
+
+/* This string is on a button. */
+"Uninstall" = "Avinstaller";
+
+"Uninstall TVShows" = "Avinstaller TVShows";
+
+"Unknown" = "Ukjent";
+
+"Updating Show Information…" = "Oppdaterer informasjon om serien...";
+
+"Use additional sources for HD (may contain rars)" = "Benytt andre kilder for HD (kan inneholde .rar arkiverte filer)";
+
+"View Logs" = "Vis logger";
+
+"Visit Miso" = "Besøk Miso";
+
+"Warnings restored" = "Varsler er tilbakestilt";
+
+"Website" = "Nettsted";
+
+"Why try it?" = "Hvorfor prøve det?";
+
+"Yes" = "Ja";
+
+"Your preferences about warnings were restored. If needed, next time TVShows will ask for your confirmation to complete a sensitive operation." = "Dine valg om advarsler er gjenopprettet. Hvis det trengs, vil TVShows senere be om bekreftelse for å utføre enkelte oppgaver.";
+
+"Your subscriptions will be backed up in the cloud and they can be synced between different computers." = "Dine abonnementer vil bli lagret i skyen, slik at de kan bli synkronisert mellom andre maskiner.";
+
+"Your TVShows subscriptions will be automatically synced with your followed shows on Miso. Only airings shows known by TVShows will be synced." = "Dine TVShows-abonnementer vil automatisk bli synkronisert med serier du følger på Miso. Kun pågående serier som TVShows kjenner til vil bli synkronisert.";
+

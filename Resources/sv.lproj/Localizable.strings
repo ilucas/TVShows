@@ -1,0 +1,345 @@
+"1 day" = "1 dag";
+
+/* This string is used between a date and a time, e.g, 1/1/1 at 01:01am. */
+" at " = "klockan";
+
+"1 hour" = "1 timme";
+
+"12 hours" = "12:e timme";
+
+"15 minutes" = "15:e minut";
+
+"3 hours" = "3:e timme";
+
+"30 minutes" = "30:e minut";
+
+"6 hours" = "6:e timme";
+
+/* This refers to "All shows" */
+"All" = "Alla";
+
+"A message is logged each time new episodes are checked for. Unless noted otherwise, no new episodes were found." = "Ett meddelande blir loggat varje gång nya avsnitt söks. Om inget annat meddelas så hittades inga nya avsnitt";
+
+/* The %@ will be replaced by the name of the show. */
+"A new episode of %@ is being downloaded." = "Ett nytt avsnitt av %@ laddas ned.";
+
+"A new version of TVShows is available for download." = "En ny version av TVShows finns tillgänglig för nedladdning.";
+
+"A new version of TVShows is being downloaded and installed." = "En ny version av TVShows laddas ned och installeras.";
+
+"A newer show list cannot be found. Using an old show list temporarily." = "En nyare TV-programlista kan inte hittas. Använder temporärt en äldre programlista.";
+
+"A show list cannot be found. Please try again later or check your internet connection." = "En TV-programlista kan inte hittas. Var vänlig försök senare eller kontrollera din internetanslutning.";
+
+"About" = "Om";
+
+"Add a custom RSS source" = "Lägg till en egen RSS-källa";
+
+/* This string is on a button. */
+"Add Custom RSS" = "Lägg till en egen RSS-källa";
+
+/* This string is on a button. */
+"Add Show" = "Lägg till avsnitt";
+
+/* Title of an error message or Growl notification. */
+"An Error Has Occurred" = "Ett fel har inträffat";
+
+"An unknown error has occurred. Please try again later." = "Ett okänt fel har inträffat. Var vänlig försök igen senare.";
+
+"An update for TVShows has been installed automatically. To disable this feature go to the Preferences tab and uncheck 'Automatically install new updates.'" = "En uppdatering av TVShows har installerats automatiskt. För att stänga av denna funktion, gå till inställningar och bocka ur 'Installera nya uppdateringar automatiskt'.";
+
+"Application Update Preferences" = "Programuppdateringsinställningar";
+
+"Automatic check-in when an episode is downloaded" = "Automatisk kontroll när ett avsnitt hämtas";
+
+"Automatically check for updates" = "Sök efter uppdateringar automatiskt";
+
+"Automatically install new updates" = "Installera nya uppdateringar automatiskt";
+
+"Automatically open each file after download" = "Öppna varje fil automatiskt efter nedladdning";
+
+"Are you sure you want to uninstall TVShows? This will also remove all preferences and subscriptions." = "Är du säker på att du vill avinstallerara TVShows? Detta kommer även att ta bort alla inställningar och prenumerationer.";
+
+/* The %@ will be replaced by the name of the show. */
+"Are you sure you want to unsubscribe from %@?" = "Är du säker på att du vill avsluta prenumerationen från %@?";
+
+/* This string is on a button. */
+"Cancel" = "Avbryt";
+
+"Cannot connect. Please try again later or check your internet connection" = "Kan inte ansluta. Var vänlig försök senare eller kontrollera din internetanslutning.";
+
+"Cannot connect. Using an old show list temporarily." = "Kan inte ansluta. Använder temporärt den äldre TV-programlistan.";
+
+"Check for episodes every:" = "Sök efter TV-program varje:";
+
+/* This string is on a button. */
+"Check for new episodes now" = "Sök efter nya avsnitt nu";
+
+/* This string is on a button. */
+"Check Now" = "Kontrollera nu";
+
+"Checking for new episodes..." = "Söker efter nya avsnitt ...";
+
+"Checking now, please wait..." = "Kontrollerar nu, vänta ...";
+
+"Choose this to download torrent files from a list of preset shows." = "Välj detta för att ladda ned torrentfiler från en lista av förvalda TV-program.";
+
+/* This string is on a button. */
+"Close" = "Stäng";
+
+/* This string is on a button. */
+"Create New Account" = "Skapa nytt konto";
+
+"Create season subfolders" = "Skapa undermappar för varje säsong";
+
+"Disable TVShows" = "Inaktivera TVShows";
+
+"Download beta versions when available" = "Ladda ned betaversioner då de är tillgängliga";
+
+"Download in HD" = "Ladda ned i HD-kvalitét";
+
+"Choose this to input your own RSS feed." = "Välj detta för att lägga in ett eget RSS-flöde.";
+
+"Enable downloading new episodes" = "Aktivera nedladdning av nya avsnitt";
+
+/* This refers to "Enabled shows" */
+"Enabled" = "Aktiverade";
+
+/* Status of the current show when it is airing. It is shown in a label as "Status: Continuing" */
+"Continuing" = "Fortsätter";
+
+/* This refers to "Custom shows" */
+"Custom" = "Anpassad";
+
+/* Title of a column in a table. */
+"Episode" = "Avsnitt";
+
+"Default video quality:" = "Standard videokvalitét:";
+
+/* This refers to "Disabled shows" */
+"Disabled" = "Inaktiverade";
+
+"Donate" = "Donera";
+
+"Download Preferences" = "Ladda ned inställningar";
+
+/* This string is on a button. */
+"Edit" = "Redigera";
+
+/* Title of a column in a table. */
+"Episode Name" = "Avsnittsnamn";
+
+"Episode naming convention:" = "Döp avsnitt så här:";
+
+"Episode save location:" = "Plats att spara avsnitt:";
+
+"Feed" = "Flöde";
+
+"Feed URLs" = "RSS adress";
+
+"Download HD versions by default" = "Ladda ned avsnitt i HD som standard";
+
+"General Settings" = "Allmänna inställningar";
+
+"Growl Settings" = "Growl-inställningar";
+
+"I am already a Miso user" = "Jag är redan en Miso användare";
+
+"Include anonymous system information" = "Inkludera anonym systeminformation";
+
+"Info" = "Information";
+
+"Ended" = "Avslutad";
+
+"Last Aired" = "Senast sänt";
+
+"Last Downloaded" = "Senast nedladdad";
+
+"Miso is a social network made for people that love watching TV shows." = "Miso är ett socialt nätverk skapat för människor som älskar att titta på TV serier.";
+
+/* This string is on a button. */
+"More Info" = "Mer information";
+
+/* This string is on a button. */
+"More Shows" = "Fler avsnitt";
+
+"Getting Started" = "Komma Igång";
+
+"Name" = "Namn";
+
+/* This string is on a very narrow button, max 3 charaters (use a dot after that like "Des." in Spanish instead of "Desactivado") */
+"Off" = "Av";
+
+/* This string refers to the default episode quality to download (Standard/High Definition). */
+"High Definition" = "Högupplöst (HD)";
+
+/* This string is on a button. */
+"Ok" = "Ok";
+
+/* This string is on a very narrow button, max 3 charaters (use a dot after that like "Act." in Spanish instead of "Activado") */
+"On" = "På";
+
+"Only download items matching the following rules:" = "Ladda bara ned objekt som stämmer överens med följande regler:";
+
+/* To select a custom folder not listed. */
+"Other..." = "Annan...";
+
+"Please Select a Show:" = "Var vänlig välj ett TV-program:";
+
+"Last Checked:" = "Senast kontrollerad:";
+
+"Prioritize Magnet links (select this if The Pirate Bay is blocked)" = "Prioritera magnetlänkar (välj detta om The Pirate Bay är blockerad)";
+
+"Preferences" = "Inställningar";
+
+/* This refers to "Preset shows" */
+"Preset" = "Förval";
+
+/* Title of a column in a table. */
+"Published Date" = "Publicerades den";
+
+"Logs are stored in ~/Library/Logs/TVShows/" = "Loggfiler sparas i ~/Bibliotek/Logs/TVShows/";
+
+"RSS Feed Information:" = "RSS-flödesinformation";
+
+"Rating:" = "Betyg:";
+
+/* This string is on a small button, it stands for "Reset Warnings" */
+"Reset Warn." = "Nollställ varn.";
+
+"Save each show in its own folder" = "Spara varje avsnitt i en egen mapp";
+
+/* This string is on a button. */
+"Save" = "Spara";
+
+"Search" = "Sök";
+
+/* This string is on a button. */
+"Sign In" = "Logga in";
+
+/* This string is on a button. */
+"Sign Out" = "Logga ut";
+
+"Never" = "Aldrig";
+
+"Next Episode" = "Nästa avsnitt";
+
+/* This string is split, the full version is "Start subscription with: Next aired episode" */
+"Next aired episode" = "Nästa sända avsnitt";
+
+/* Title of a column in a table. */
+"Season" = "Säsong";
+
+"No" = "Nej";
+
+"Select a preset show from showRSS" = "Välj ett förinställt TV-program från showRSS";
+
+"No activity has been logged yet. Have you recently installed TVShows?" = "Ingen aktivitet har registrerats ännu. Har du nyligen installerat TVShows?";
+
+"Password:" = "Lösenord:";
+
+"Please choose one of the following actions:" = "Vänligen välj en av följande åtgärder:";
+
+"Send Growl notifications when…" = "Skicka Growl-meddelanden när…";
+
+"No actual videos are downloaded by TVShows, only torrents which will require other programs to use. It is up to you, the user, to decide the legality of using any of the files downloaded by this application, in accordance with applicable copyright laws of you country." = "TVShows laddar inte ned videofiler utan endast torrentfiler som kräver andra program för att kunna användas. Det är upp till dig, användaren, att avgöra det lagliga användandet av filerna som laddas ned med det här programmet i relation med ditt lands upphovsrättslagar.";
+
+"Status" = "Status";
+
+"No description was found for this show." = "Ingen beskrivning kunde hittas för detta avsnitt.";
+
+/* This string is on a button. */
+"Submit Feedback" = "Ge synpunkter";
+
+/* This string is on a button. */
+"Subscribe" = "Prenumerera";
+
+"Subscribed" = "Prenumererad";
+
+"Subscriptions" = "Prenumerationer";
+
+/* This string is split, the full version is "Start subscription with: Next aired episode" or "Start subscription with: This episode: My Show S01E01" */
+"Start subscription with:" = "Börja prenumerationen med:";
+
+"Sync" = "Synkronisera";
+
+"Sync shows between Miso and TVShows" = "Synkronisera avsnitt mellan Miso och TVShows";
+
+"The check-in will be made when the download starts. This is not advisable, but it could allow you to sync episode downloads across several computers." = "Kontroll kommer att göras när nedladdningen startar. Detta är inte rekommenderat, men det kan tillåta dig att synkronisera avsnittsnedladdningar mellan flera datorer.";
+
+"The file may not be released yet. Please try again later or check your internet connection. Alternatively you can download the SD version." = "Den här filen kanske inte är släppt ännu. Vänligen försök senare eller kontrollera din internetanslutning. Alternativt kan du ladda ned SD versionen.";
+
+/* Disclaimer for a destructive action */
+"This action cannot be undone." = "Denna åtgärd kan inte ångras.";
+
+/* This string is split, the full version is "Start subscription with: This episode: My Show S01E01" */
+"This episode:" = "Detta avsnitt:";
+
+"TVDB id" = "TVDB id";
+
+/* Title of an error message or Growl notification. */
+"TVShows Update Available" = "TVShows-uppdatering tillgänglig";
+
+/* Title of an error message or Growl notification. */
+"TVShows Update Downloading" = "TVShows-uppdateringen laddas ned";
+
+/* The %@ will be replaced by the name of the torrent file. */
+"Unable to download %@" = "Det går inte att ladda ner% @";
+
+/* The %@ will be replaced by the name of the torrent file. */
+"Unable to find an HD torrent for %@" = "Kunde inte hitta en HD-torrent för %@";
+
+/* Title of an error message or Growl notification. */
+"Unable to Update the Show List" = "Kunde inte uppdatera TV-programlistan";
+
+/* This string is on a button. */
+"Unsubscribe" = "Avbryt prenumeration";
+
+/* Title of an error message or Growl notification. */
+"Update Installed Automatically" = "Installerade uppdatering automatiskt";
+
+"User Name:" = "Användarnamn:";
+
+"Show TVShows status in the menu bar" = "Visa TVShows status i menyraden";
+
+/* This string refers to the default episode quality to download (Standard/High Definition). */
+"Standard" = "Standard";
+
+/* This string is on a button. */
+"View on TV.com" = "Se det på TV.com";
+
+"… a new episode is downloaded." = "… ett nytt avsnitt är nedladdat.";
+
+"Recently Logged Activity" = "Nyligen registrerad aktivitet";
+
+"… a new version of TVShows is released." = "...en ny version av TVShows är släppt.";
+
+/* This string is on a button. */
+"Uninstall" = "Avinstallera";
+
+"Uninstall TVShows" = "Avinstallera TVShows";
+
+"Unknown" = "Okänd";
+
+"Updating Show Information…" = "Uppdaterar avsnittsinformation";
+
+"Use additional sources for HD (may contain rars)" = "Använd ytterligare källor för HD (kan innehålla rarfiler)";
+
+"View Logs" = "Se loggfil";
+
+"Visit Miso" = "Besök Miso";
+
+"Warnings restored" = "Varningar återställda";
+
+"Website" = "Hemsida";
+
+"Why try it?" = "Varför testa det?";
+
+"Yes" = "Ja";
+
+"Your preferences about warnings were restored. If needed, next time TVShows will ask for your confirmation to complete a sensitive operation." = "Dina inställningar för varningar återställdes. Nästa gång kommer TVShows att, vid behov, be om din tillåtelse för att slutföra en känslig åtgärd.";
+
+"Your subscriptions will be backed up in the cloud and they can be synced between different computers." = "Dina prenumerationer kommer att sparas i molnet och kan synkroniseras mellan olika datorer.";
+
+"Your TVShows subscriptions will be automatically synced with your followed shows on Miso. Only airings shows known by TVShows will be synced." = "Dina TVShows-prenumerationer kommer automatiskt att synkroniseras med de avsnitt du följer på Miso. TVShows kommer enbart att synkronisera de avsnitt som finns listade.";
+

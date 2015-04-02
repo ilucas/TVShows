@@ -1,0 +1,345 @@
+"1 day" = "Een dag";
+
+/* This string is used between a date and a time, e.g, 1/1/1 at 01:01am. */
+" at " = "op";
+
+"1 hour" = "Een uur";
+
+"12 hours" = "Twaalf uur";
+
+"15 minutes" = "15 minute";
+
+"3 hours" = "Drie uur";
+
+"30 minutes" = "30 minute";
+
+"6 hours" = "Ses ure";
+
+/* This refers to "All shows" */
+"All" = "Alle";
+
+"A message is logged each time new episodes are checked for. Unless noted otherwise, no new episodes were found." = "n Boodskap is aangeteken elke keer nuwe episodes vir nagegaan word. Tensy anders vermeld, is geen nuwe episodes gevind nie.";
+
+/* The %@ will be replaced by the name of the show. */
+"A new episode of %@ is being downloaded." = "n Nuwe episode van $@ is word afgelaai.";
+
+"A new version of TVShows is available for download." = "n Nuwe weergawe van TVShows is beskikbaar vir aflaai.";
+
+"A new version of TVShows is being downloaded and installed." = "n Nuwe weergawe van TVShows word afgelaai en geïnstalleer.";
+
+"A newer show list cannot be found. Using an old show list temporarily." = "'n Nuwer show lys kan nie gevind word nie. 'n Ou show lys tydelik.";
+
+"A show list cannot be found. Please try again later or check your internet connection." = "n Show lys kan nie gevind word nie. Probeer asseblief later weer of gaan jou internet-verbinding.";
+
+"About" = "Oor";
+
+"Add a custom RSS source" = "Voeg 'n pasgemaakte RSS bron";
+
+/* This string is on a button. */
+"Add Custom RSS" = "Voeg Custom RSS";
+
+/* This string is on a button. */
+"Add Show" = "Voeg Show";
+
+/* Title of an error message or Growl notification. */
+"An Error Has Occurred" = "n Fout het voorgekom";
+
+"An unknown error has occurred. Please try again later." = "n Onbekende fout voorgekom het nie. Probeer asseblief weer later.";
+
+"An update for TVShows has been installed automatically. To disable this feature go to the Preferences tab and uncheck 'Automatically install new updates.'" = "'n Update vir TVShows is outomaties geïnstalleer. Om hierdie funksie te gaan na die blad Voorkeure en skakel 'outomaties installeer nuwe updates. \"";
+
+"Application Update Preferences" = "Aansoek Update Voorkeure";
+
+"Automatic check-in when an episode is downloaded" = "Outomatiese check-in wanneer 'n episode is afgelaai";
+
+"Automatically check for updates" = "Outomaties te monitor vir updates";
+
+"Automatically install new updates" = "Outomaties installeer nuwe updates";
+
+"Automatically open each file after download" = "Outomaties oop elke lêer na aflaai";
+
+"Are you sure you want to uninstall TVShows? This will also remove all preferences and subscriptions." = "Is jy seker jy wil TVShows te verwyder? Dit sal ook al voorkeure en ledegelde.";
+
+/* The %@ will be replaced by the name of the show. */
+"Are you sure you want to unsubscribe from %@?" = "Is jy seker jy wil inteken% @?";
+
+/* This string is on a button. */
+"Cancel" = "Kanselleer";
+
+"Cannot connect. Please try again later or check your internet connection" = "Kan nie verbind nie. Probeer asseblief later weer of gaan jou internet-verbinding.";
+
+"Cannot connect. Using an old show list temporarily." = "Kan nie verbind nie. 'n Ou show lys tydelik.";
+
+"Check for episodes every:" = "Check vir die episodes elke:";
+
+/* This string is on a button. */
+"Check for new episodes now" = "Nagaan vir nuwe episodes nou";
+
+/* This string is on a button. */
+"Check Now" = "Check nou";
+
+"Checking for new episodes..." = "Kontrole vir nuwe episodes ...";
+
+"Checking now, please wait..." = "Kontrole nou, wag asseblief ...";
+
+"Choose this to download torrent files from a list of preset shows." = "Kies hierdie torrent-lêers te laai vanaf 'n lys van voorkeur toon.";
+
+/* This string is on a button. */
+"Close" = "Naby";
+
+/* This string is on a button. */
+"Create New Account" = "Skep nuwe rekening";
+
+"Create season subfolders" = "Skep seisoen subgidse";
+
+"Disable TVShows" = "Skakel TVShows";
+
+"Download beta versions when available" = "Alfaai beta weergawes wanneer dit beskikbaar is";
+
+"Download in HD" = "Alfaai in HD";
+
+"Choose this to input your own RSS feed." = "Kies om dit te voer jou eie RSS feed.";
+
+"Enable downloading new episodes" = "In staat stel om die aflaai van nuwe episodes";
+
+/* This refers to "Enabled shows" */
+"Enabled" = "Aangeskakel";
+
+/* Status of the current show when it is airing. It is shown in a label as "Status: Continuing" */
+"Continuing" = "Voortgesette";
+
+/* This refers to "Custom shows" */
+"Custom" = "Custom";
+
+/* Title of a column in a table. */
+"Episode" = "Episode";
+
+"Default video quality:" = "Standaard video kwaliteit:";
+
+/* This refers to "Disabled shows" */
+"Disabled" = "Gestremdes";
+
+"Donate" = "Skenk";
+
+"Download Preferences" = "Voorkeure vir Downloads";
+
+/* This string is on a button. */
+"Edit" = "Bearbeiten";
+
+/* Title of a column in a table. */
+"Episode Name" = "Naam van die episode";
+
+"Episode naming convention:" = "Episode naamkonvensie:";
+
+"Episode save location:" = "Episode stoor plek:";
+
+"Feed" = "Feed";
+
+"Feed URLs" = "Feed URLs";
+
+"Download HD versions by default" = "Alfaai op HD weergawes by verstek";
+
+"General Settings" = "Instellings vir Algemene";
+
+"Growl Settings" = "Stellings vir Growl";
+
+"I am already a Miso user" = "Ek is reeds 'n Miso gebruiker";
+
+"Include anonymous system information" = "Sluit anonieme stelsel inligting";
+
+"Info" = "Besonderhede";
+
+"Ended" = "Geëindig";
+
+"Last Aired" = "Laaste Aired";
+
+"Last Downloaded" = "Laaste afgelaai";
+
+"Miso is a social network made for people that love watching TV shows." = "Miso is 'n sosiale netwerk gemaak vir mense wat lief is TV kyk toon.";
+
+/* This string is on a button. */
+"More Info" = "Meer Info";
+
+/* This string is on a button. */
+"More Shows" = "Meer Programme";
+
+"Getting Started" = "Aan die slag";
+
+"Name" = "Naam";
+
+/* This string is on a very narrow button, max 3 charaters (use a dot after that like "Des." in Spanish instead of "Desactivado") */
+"Off" = "Af";
+
+/* This string refers to the default episode quality to download (Standard/High Definition). */
+"High Definition" = "High Definition";
+
+/* This string is on a button. */
+"Ok" = "Ok";
+
+/* This string is on a very narrow button, max 3 charaters (use a dot after that like "Act." in Spanish instead of "Activado") */
+"On" = "Op";
+
+"Only download items matching the following rules:" = "Net aflaai items wat ooreenstem met die volgende reëls:";
+
+/* To select a custom folder not listed. */
+"Other..." = "Ander ...";
+
+"Please Select a Show:" = "Kies asseblief 'n Show:";
+
+"Last Checked:" = "Laaste Gekontroleer:";
+
+"Prioritize Magnet links (select this if The Pirate Bay is blocked)" = "Prioritiseer Magnet skakels (kies dit indien The Pirate Bay geblok is)";
+
+"Preferences" = "Voorkeure";
+
+/* This refers to "Preset shows" */
+"Preset" = "Geprogrammeerde";
+
+/* Title of a column in a table. */
+"Published Date" = "Gepubliseer Datum";
+
+"Logs are stored in ~/Library/Logs/TVShows/" = "Logs gestoor word in ~/Library/Logs/TVShows/ (~/Bibliotheek/Logs/TVShows/)";
+
+"RSS Feed Information:" = "RSS Feed inligting:";
+
+"Rating:" = "Gradering";
+
+/* This string is on a small button, it stands for "Reset Warnings" */
+"Reset Warn." = "Reset waarsku.";
+
+"Save each show in its own folder" = "Slaan elk in sy eie gids";
+
+/* This string is on a button. */
+"Save" = "Slaan";
+
+"Search" = "Soek";
+
+/* This string is on a button. */
+"Sign In" = "Teken In";
+
+/* This string is on a button. */
+"Sign Out" = "Teken Uit";
+
+"Never" = "Nooit";
+
+"Next Episode" = "Volgende Episode";
+
+/* This string is split, the full version is "Start subscription with: Next aired episode" */
+"Next aired episode" = "Volgende episode uitgesaai";
+
+/* Title of a column in a table. */
+"Season" = "Seisoen";
+
+"No" = "Geen";
+
+"Select a preset show from showRSS" = "Kies 'n instelling show van showRSS";
+
+"No activity has been logged yet. Have you recently installed TVShows?" = "Geen aktiwiteit is nog aangeteken. Het jy onlangs geïnstalleer TVShows?";
+
+"Password:" = "Wagwoord:";
+
+"Please choose one of the following actions:" = "Kies een van die volgende aksies:";
+
+"Send Growl notifications when…" = "Stuur grom kennisgewings wanneer ...";
+
+"No actual videos are downloaded by TVShows, only torrents which will require other programs to use. It is up to you, the user, to decide the legality of using any of the files downloaded by this application, in accordance with applicable copyright laws of you country." = "Geen werklike video's afgelaai deur TVShows, net torrents wat sal vereis dat ander programme te gebruik. Dit is aan u, die gebruiker, die wettigheid van die gebruik van om te besluit enige van die lêers afgelaai deur hierdie aansoek, in ooreenstemming met die toepaslike kopiereg wette van julle land.";
+
+"Status" = "Status";
+
+"No description was found for this show." = "Nie beskrywing kan gevind vir die show.";
+
+/* This string is on a button. */
+"Submit Feedback" = "Stuur terugvoering";
+
+/* This string is on a button. */
+"Subscribe" = "Skryf";
+
+"Subscribed" = "Ingeskryf";
+
+"Subscriptions" = "Subskripsies";
+
+/* This string is split, the full version is "Start subscription with: Next aired episode" or "Start subscription with: This episode: My Show S01E01" */
+"Start subscription with:" = "Begin inskrywing met:";
+
+"Sync" = "Sync";
+
+"Sync shows between Miso and TVShows" = "Sync toon tussen Miso en TVShows";
+
+"The check-in will be made when the download starts. This is not advisable, but it could allow you to sync episode downloads across several computers." = "Die check-in gemaak sal word wanneer die aflaai begin. Dit is nie raadsaam nie, maar dit kon toelaat dat jy episode afgelaai te pas op verskillende rekenaars.";
+
+"The file may not be released yet. Please try again later or check your internet connection. Alternatively you can download the SD version." = "Die lêer kan nog nie bekend gemaak word. Probeer asseblief later weer of jou internet-verbinding. Alternatiewelik kan jy die aflaai van die SD-weergawe.";
+
+/* Disclaimer for a destructive action */
+"This action cannot be undone." = "Hierdie aksie kan nie ongedaan gemaak word nie.";
+
+/* This string is split, the full version is "Start subscription with: This episode: My Show S01E01" */
+"This episode:" = "Hierdie episode:";
+
+"TVDB id" = "TVDB id";
+
+/* Title of an error message or Growl notification. */
+"TVShows Update Available" = "TVShows update beskikbaar";
+
+/* Title of an error message or Growl notification. */
+"TVShows Update Downloading" = "TVShows update laai";
+
+/* The %@ will be replaced by the name of the torrent file. */
+"Unable to download %@" = "Kan nie af te laai %@";
+
+/* The %@ will be replaced by the name of the torrent file. */
+"Unable to find an HD torrent for %@" = "Kan nie 'n HD torrent te vind vir %@";
+
+/* Title of an error message or Growl notification. */
+"Unable to Update the Show List" = "Nie kan die Show Lys te verander";
+
+/* This string is on a button. */
+"Unsubscribe" = "Bedank";
+
+/* Title of an error message or Growl notification. */
+"Update Installed Automatically" = "Update outomaties geïnstalleer";
+
+"User Name:" = "Gebruikers Naam:";
+
+"Show TVShows status in the menu bar" = "Wys TVShows status in die menu bar";
+
+/* This string refers to the default episode quality to download (Standard/High Definition). */
+"Standard" = "Gemiddelde";
+
+/* This string is on a button. */
+"View on TV.com" = "Kyk op TV.com";
+
+"… a new episode is downloaded." = "n Nuwe episode is afgelaai.";
+
+"Recently Logged Activity" = "Onlangs Logged aktiwiteit";
+
+"… a new version of TVShows is released." = "n Nuwe weergawe van TVShows is beskikbaar.";
+
+/* This string is on a button. */
+"Uninstall" = "Verwyder";
+
+"Uninstall TVShows" = "Verwyder TVShows";
+
+"Unknown" = "Onbekend";
+
+"Updating Show Information…" = "Opdatering Wys Inligting ...";
+
+"Use additional sources for HD (may contain rars)" = "Gebruik ander bronne vir HD (kan ook rars)";
+
+"View Logs" = "Kyk na Logs";
+
+"Visit Miso" = "Besoek Miso";
+
+"Warnings restored" = "Waarskuwings herstel";
+
+"Website" = "Webwerf";
+
+"Why try it?" = "Waarom proberen?";
+
+"Yes" = "Ja";
+
+"Your preferences about warnings were restored. If needed, next time TVShows will ask for your confirmation to complete a sensitive operation." = "Jou voorkeure oor waarskuwings is herstel. Indien nodig, sal volgende keer TVShows vra vir jou bevestiging 'n sensitiewe aksie te voltooi.";
+
+"Your subscriptions will be backed up in the cloud and they can be synced between different computers." = "Jou ledegeld sal gerugsteun word in die wolk en hulle kan gesynchroniseerd word tussen verskillende rekenaars.";
+
+"Your TVShows subscriptions will be automatically synced with your followed shows on Miso. Only airings shows known by TVShows will be synced." = "Jou TVShows ledegeld word outomaties gesynchroniseerd met jou gevolg toon op Miso. Slegs airings toon bekend deur TVShows sal gesynchroniseerd word.";
+

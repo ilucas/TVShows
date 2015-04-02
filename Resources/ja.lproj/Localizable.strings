@@ -1,0 +1,180 @@
+"1 day" = "1日";
+
+"1 hour" = "1時間";
+
+"12 hours" = "12時間";
+
+"15 minutes" = "15分";
+
+"3 hours" = "3時間";
+
+"30 minutes" = "30分";
+
+"6 hours" = "6時間";
+
+/* The %@ will be replaced by the name of the show. */
+"A new episode of %@ is being downloaded." = "新エピソードの%@のダウンロード終了";
+
+"A new version of TVShows is available for download." = "最新のTVShowsダウンロード可能";
+
+"A new version of TVShows is being downloaded and installed." = "最新のTVShowsのダウンロード・インストール中";
+
+"A newer show list cannot be found. Using an old show list temporarily." = "新しい番組リストが見つかりません。一時的に古いリストを表示します。";
+
+"A show list cannot be found. Please try again later or check your internet connection." = "番組リストが見つかりませんでした。もう一度試してみるか、インターネット接続状況を確認して下さい。";
+
+"About" = "について";
+
+"Add a custom RSS source" = "カスタムRSSソースを追加する。";
+
+/* Title of an error message or Growl notification. */
+"An Error Has Occurred" = "エラーが発生しました。";
+
+"An unknown error has occurred. Please try again later." = "不明なエラーが発生しました。もう一度試して下さい。";
+
+"An update for TVShows has been installed automatically. To disable this feature go to the Preferences tab and uncheck 'Automatically install new updates.'" = "TVShowsのアップデートが自動的にインストールされました。この機能を無効にするには設定タブの「新しいアップデートを自動的にインストールする。」のチェックをはずして下さい。";
+
+"Application Update Preferences" = "アプリケーションアップデート設定";
+
+"Automatically check for updates" = "アップデートを自動的に確認する。";
+
+"Automatically install new updates" = "新しいアップデートを自動的にインストールする。";
+
+"Automatically open each file after download" = "ダウンロード後自動的にそれぞれのファイルを開く";
+
+/* This string is on a button. */
+"Cancel" = "取消";
+
+"Cannot connect. Please try again later or check your internet connection" = "接続に失敗しました。もう一度試してみるか、インターネットの接続状況を確認して下さい。";
+
+"Cannot connect. Using an old show list temporarily." = "接続に失敗しました。古いリストを一時的に表示します。";
+
+"Check for episodes every:" = "定期的にエピソードを確認する。";
+
+/* This string is on a button. */
+"Check Now" = "今すぐ確認する。";
+
+"Choose this to download torrent files from a list of preset shows." = "これを選んで番組のリストからTorrentファイルをダウンロード";
+
+/* This string is on a button. */
+"Close" = "閉じる";
+
+"Download beta versions when available" = "入手可能なベータバージョンをダウンロードする。";
+
+"Download in HD" = "HDでダウンロード";
+
+"Choose this to input your own RSS feed." = "これを選んで自分のRSSフィードを入力する。";
+
+"Enable downloading new episodes" = "新エピソードダウンロードを有効にする。";
+
+/* Title of a column in a table. */
+"Episode" = "エピソード";
+
+"Default video quality:" = "デフォルトビデオクオリティー";
+
+"Download Preferences" = "ダウンロード設定";
+
+/* Title of a column in a table. */
+"Episode Name" = "エピソード名";
+
+"Episode save location:" = "エピソード保存場所";
+
+"Feed" = "フィード";
+
+"Growl Settings" = "Growl設定";
+
+"Include anonymous system information" = "匿名のシステム情報を含む。";
+
+"Info" = "インフォメーション";
+
+"Last Aired" = "最終放送日";
+
+"Last Downloaded" = "最終ダウンロード";
+
+/* This string is on a button. */
+"More Info" = "詳細";
+
+"Name" = "名前";
+
+/* This string is on a very narrow button, max 3 charaters (use a dot after that like "Des." in Spanish instead of "Desactivado") */
+"Off" = "オフ";
+
+/* This string refers to the default episode quality to download (Standard/High Definition). */
+"High Definition" = "HD";
+
+/* This string is on a button. */
+"Ok" = "OK";
+
+/* This string is on a very narrow button, max 3 charaters (use a dot after that like "Act." in Spanish instead of "Activado") */
+"On" = "オン";
+
+"Only download items matching the following rules:" = "以下にあてはまるアイテムのみダウンロードする。";
+
+"Please Select a Show:" = "番組を選んで下さい。";
+
+"Preferences" = "設定";
+
+/* Title of a column in a table. */
+"Published Date" = "発行日";
+
+"RSS Feed Information:" = "RSSフィードインフォメーション";
+
+"Rating:" = "評価";
+
+"Search" = "検索";
+
+/* Title of a column in a table. */
+"Season" = "シーズン";
+
+"No" = "いいえ";
+
+"Select a preset show from showRSS" = "showRSSから番組を選んで追加する。";
+
+"Please choose one of the following actions:" = "この中から一つ選択して下さい。";
+
+"Send Growl notifications when…" = "次の時Growl通知の送信";
+
+"Status" = "ステイタス";
+
+/* This string is on a button. */
+"Submit Feedback" = "フィードバックを送る。";
+
+/* This string is on a button. */
+"Subscribe" = "購読する";
+
+"Subscriptions" = "サブスクリプション";
+
+/* Title of an error message or Growl notification. */
+"TVShows Update Available" = "TVShowアップデート入手可能";
+
+/* Title of an error message or Growl notification. */
+"TVShows Update Downloading" = "TVShowsアップデートダウンロード中";
+
+/* Title of an error message or Growl notification. */
+"Unable to Update the Show List" = "番組リストのアップデートに失敗しました。";
+
+/* This string is on a button. */
+"Unsubscribe" = "購読をやめる";
+
+/* Title of an error message or Growl notification. */
+"Update Installed Automatically" = "アップデートが自動的にインストールされました。";
+
+/* This string refers to the default episode quality to download (Standard/High Definition). */
+"Standard" = "スタンダード";
+
+/* This string is on a button. */
+"View on TV.com" = "TV.comで観る";
+
+"… a new episode is downloaded." = "新エピソードダウンロード時";
+
+"… a new version of TVShows is released." = "TVShows最新バージョンのリリース時";
+
+/* This string is on a button. */
+"Uninstall" = "アンインストール";
+
+"Uninstall TVShows" = "TVShowsをアンインストールする";
+
+"Website" = "ウエブサイト";
+
+"Yes" = "はい";
+

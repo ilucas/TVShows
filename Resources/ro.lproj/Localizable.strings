@@ -1,0 +1,277 @@
+"1 day" = "1 zi";
+
+/* This string is used between a date and a time, e.g, 1/1/1 at 01:01am. */
+" at " = " la ";
+
+"1 hour" = "1 ora";
+
+"12 hours" = "12 ore";
+
+"15 minutes" = "15 minute";
+
+"3 hours" = "3 ore";
+
+"30 minutes" = "30 minute";
+
+"6 hours" = "6 ore";
+
+/* This refers to "All shows" */
+"All" = "Tot";
+
+/* The %@ will be replaced by the name of the show. */
+"A new episode of %@ is being downloaded." = "Un nou episod din %@ este descarcat.";
+
+"A new version of TVShows is available for download." = "O noua versiune TVShows este gata de descarcat.";
+
+"A new version of TVShows is being downloaded and installed." = "O noua versiune TVShows se descarca si se va instala.";
+
+"A newer show list cannot be found. Using an old show list temporarily." = "O lista noua nu a fost gasita. Folosesc o lista veche.";
+
+"A show list cannot be found. Please try again later or check your internet connection." = "Lista de show-uri nu poate fi gasita. Va rugam sa incercati din nou mai tarziu sau sa verificati conexiunea la Internet.";
+
+"About" = "Despre";
+
+"Add a custom RSS source" = "Adauga o sursa RSS";
+
+/* This string is on a button. */
+"Add Custom RSS" = "Adauga RSS";
+
+/* This string is on a button. */
+"Add Show" = "Adauga Show";
+
+/* Title of an error message or Growl notification. */
+"An Error Has Occurred" = "A apărut o eroare";
+
+"An unknown error has occurred. Please try again later." = "A aparut o eroare necunoscuta. Te rog incearca mai tarziu.";
+
+"An update for TVShows has been installed automatically. To disable this feature go to the Preferences tab and uncheck 'Automatically install new updates.'" = "O actualizare TVShows a fost instalata automat. Pentru a dezactiva aceasta functie, mergi la Preferinte si dezactiveaza \"Instaleaza automat noi actualizari.\"";
+
+"Application Update Preferences" = "Preferinte de atualizare";
+
+"Automatically check for updates" = "Caută actualizări automat";
+
+"Automatically install new updates" = "Instaleaza actualizari automat";
+
+"Automatically open each file after download" = "Deschide ficare fisier Torrent dupa descarcare automat";
+
+/* This string is on a button. */
+"Cancel" = "Anulează";
+
+"Cannot connect. Please try again later or check your internet connection" = "Imposibil de conectat. Incearca mai tarziu, sau verifica legatura la internet.";
+
+"Cannot connect. Using an old show list temporarily." = "Imposibil de conectat. Folosesc o lista veche de show-uri.";
+
+"Check for episodes every:" = "Verifica noi episoade la fiecare:";
+
+/* This string is on a button. */
+"Check for new episodes now" = "Verifica acum";
+
+/* This string is on a button. */
+"Check Now" = "Verifica Acum";
+
+"Checking for new episodes..." = "Verific episoade noi...";
+
+"Checking now, please wait..." = "Verific acum, asteapta...";
+
+"Choose this to download torrent files from a list of preset shows." = "Alege asta pentru a downloada fisiere torrent dintr-o lista predefinita.";
+
+/* This string is on a button. */
+"Close" = "Inchide";
+
+/* This string is on a button. */
+"Create New Account" = "Creaza cont nou";
+
+"Create season subfolders" = "Creaza subfoldere pe sezoane";
+
+"Disable TVShows" = "Dezactiveaza TVShows";
+
+"Download beta versions when available" = "Descarca versiuni beta cand apar";
+
+"Download in HD" = "Descarca in HD";
+
+"Choose this to input your own RSS feed." = "Alege asta pentru a adauga lista ta RSS.";
+
+"Enable downloading new episodes" = "Descarca noi episoade";
+
+/* This refers to "Enabled shows" */
+"Enabled" = "Activat";
+
+/* Status of the current show when it is airing. It is shown in a label as "Status: Continuing" */
+"Continuing" = "Continua";
+
+/* This refers to "Custom shows" */
+"Custom" = "Personal";
+
+/* Title of a column in a table. */
+"Episode" = "Episod";
+
+"Default video quality:" = "Calitate video implicita:";
+
+/* This refers to "Disabled shows" */
+"Disabled" = "dezactivat";
+
+"Donate" = "Doneaza";
+
+"Download Preferences" = "Preferinte de descarcare";
+
+/* This string is on a button. */
+"Edit" = "Editare";
+
+/* Title of a column in a table. */
+"Episode Name" = "Nume Episod";
+
+"Episode save location:" = "Locatia showurilor:";
+
+"Feed" = "Lista";
+
+"Feed URLs" = "URL-uri de feed-uri";
+
+"Download HD versions by default" = "Descarca versiuni HD implicit";
+
+"General Settings" = "Setări generale";
+
+"Growl Settings" = "Setari Growl";
+
+"Include anonymous system information" = "Include informatii anonime despre sistem";
+
+"Info" = "Info";
+
+"Ended" = "Terminat";
+
+"Last Aired" = "Ultima emisie";
+
+"Last Downloaded" = "Ultima descarcare";
+
+/* This string is on a button. */
+"More Info" = "Mai mult";
+
+/* This string is on a button. */
+"More Shows" = "Mai Mult";
+
+"Getting Started" = "Începe aici";
+
+"Name" = "Nume";
+
+/* This string is on a very narrow button, max 3 charaters (use a dot after that like "Des." in Spanish instead of "Desactivado") */
+"Off" = "Opr";
+
+/* This string refers to the default episode quality to download (Standard/High Definition). */
+"High Definition" = "Inalta Definitie";
+
+/* This string is on a button. */
+"Ok" = "Ok";
+
+/* This string is on a very narrow button, max 3 charaters (use a dot after that like "Act." in Spanish instead of "Activado") */
+"On" = "Por";
+
+"Only download items matching the following rules:" = "Descarca numai fisiere care indeplinesc urmatoarele conditii:";
+
+/* To select a custom folder not listed. */
+"Other..." = "Alte";
+
+"Please Select a Show:" = "Alege un show:";
+
+"Last Checked:" = "Ultima verificare:";
+
+"Prioritize Magnet links (select this if The Pirate Bay is blocked)" = "Prioritizeaza linkuri Magnet (selecteaza daca The Pirate Bay este blocat)";
+
+"Preferences" = "Preferințe";
+
+/* This refers to "Preset shows" */
+"Preset" = "Presetat";
+
+/* Title of a column in a table. */
+"Published Date" = "Data Publicare";
+
+"Logs are stored in ~/Library/Logs/TVShows/" = "Jurnal este salvat in ~/Library/Logs/TVShows/";
+
+"RSS Feed Information:" = "Informatii Lista RSS:";
+
+"Rating:" = "Evaluare";
+
+/* This string is on a button. */
+"Save" = "Salvează";
+
+"Search" = "Caută";
+
+"Never" = "Niciodată";
+
+"Next Episode" = "Urmatorul Episod";
+
+/* Title of a column in a table. */
+"Season" = "Sezon";
+
+"No" = "Nu";
+
+"Select a preset show from showRSS" = "Alege un show predefinit din showRSS";
+
+"No activity has been logged yet. Have you recently installed TVShows?" = "Nu exista activitate inca. Ai instalat TVShows recent?";
+
+"Password:" = "Parolă";
+
+"Please choose one of the following actions:" = "Alege o actiune:";
+
+"Send Growl notifications when…" = "Trimite notificari Growl cand...";
+
+"Status" = "Stare";
+
+"No description was found for this show." = "Nu am gasit informatii despre acest show.";
+
+/* This string is on a button. */
+"Submit Feedback" = "Trimite feedback";
+
+/* This string is on a button. */
+"Subscribe" = "Aboneaza-te";
+
+"Subscribed" = "Abonat";
+
+"Subscriptions" = "Abonamente";
+
+"Sync" = "Sincronizare rețea";
+
+"TVDB id" = "TVDB id";
+
+/* Title of an error message or Growl notification. */
+"TVShows Update Available" = "Exista Actalizare TVShows";
+
+/* Title of an error message or Growl notification. */
+"TVShows Update Downloading" = "Actualizare TVShows se descarca";
+
+/* Title of an error message or Growl notification. */
+"Unable to Update the Show List" = "Nu am putut actualiza lista de show-uri";
+
+/* This string is on a button. */
+"Unsubscribe" = "Dezabonează-te";
+
+/* Title of an error message or Growl notification. */
+"Update Installed Automatically" = "Actualizare instalata automat";
+
+"User Name:" = "Nume utilizator";
+
+"Show TVShows status in the menu bar" = "Arata statusul TVShows in bara de meniu";
+
+/* This string refers to the default episode quality to download (Standard/High Definition). */
+"Standard" = "Standard";
+
+/* This string is on a button. */
+"View on TV.com" = "Vizualizeaza pe TV.com";
+
+"… a new episode is downloaded." = "... se descarca un nou episod.";
+
+"… a new version of TVShows is released." = "... o versiune noua TVShows este lansata.";
+
+/* This string is on a button. */
+"Uninstall" = "Dezinstaleaza";
+
+"Uninstall TVShows" = "Dezinstaleaza TVShows";
+
+"Unknown" = "Necunoscut";
+
+"Visit Miso" = "Viziteaza Miso";
+
+"Website" = "Pagina web";
+
+"Why try it?" = "De ce sa incerci?";
+
+"Yes" = "Da";
+

@@ -1,0 +1,237 @@
+"1 day" = "Egun bat";
+
+/* This string is used between a date and a time, e.g, 1/1/1 at 01:01am. */
+" at " = "ordua:";
+
+"1 hour" = "ordu bat";
+
+"12 hours" = "12 ordu";
+
+"15 minutes" = "15 minutu";
+
+"3 hours" = "3 ordu";
+
+"30 minutes" = "30 minutu";
+
+"6 hours" = "6 ordu";
+
+"A message is logged each time new episodes are checked for. Unless noted otherwise, no new episodes were found." = "Atal berriak bilatzen diren dakoitzean mezu bat gordetzen da erregistroan. Besterik ez bada esaten, ez daude atal berririk.";
+
+/* The %@ will be replaced by the name of the show. */
+"A new episode of %@ is being downloaded." = "%@ -ren atal berri bat deskargatzen ari da";
+
+"A new version of TVShows is available for download." = "TVShows-en bertsio berri bat dago eskuragarri";
+
+"A new version of TVShows is being downloaded and installed." = "TVShows-en bertsio berria deskargatzen eta instalatzen ari da.";
+
+"A newer show list cannot be found. Using an old show list temporarily." = "Ezin da telesailen zerrenda berriagorik aurkitu. Orain arteko zerrenda erabiliko da.";
+
+"A show list cannot be found. Please try again later or check your internet connection." = "Ezin da telesailen zerrenda aurkitu. Saiatu beranduago edo begiratu ea internet  konexioa badabilen.";
+
+"About" = "Honi buruz";
+
+"Add a custom RSS source" = "Gehitu RSS iturri pertsonalizatu bat";
+
+/* This string is on a button. */
+"Add Show" = "Gehitu telesaila";
+
+/* Title of an error message or Growl notification. */
+"An Error Has Occurred" = "Akats bat gertatu da.";
+
+"An unknown error has occurred. Please try again later." = "Akats ezezagun bat gertatu da. Saiatu beranduago mesedez.";
+
+"An update for TVShows has been installed automatically. To disable this feature go to the Preferences tab and uncheck 'Automatically install new updates.'" = "TVShows-en eguneratze bat instalatu da automatikoki. Ezarpen hau baliogabetzeko joan Ezarpenak etiketara eta \"Eguneratze berriak automatikoki instalatu\" dioen laukitxoa baliogabetu";
+
+"Application Update Preferences" = "Aplikazioaren eguneratze ezarpenak";
+
+"Automatically check for updates" = "Eguneratzeak automatikoki bilatu";
+
+"Automatically install new updates" = "Eguneratze berriak automatikoki instalatu";
+
+"Automatically open each file after download" = "Behin deskarga amaitutakoan fitxategiak automatikoki ireki";
+
+"Are you sure you want to uninstall TVShows? This will also remove all preferences and subscriptions." = "Ziur al zaude? TVShows desinstalatzeak zure ezarpen eta harpidetzak ezabatzea lekarke...";
+
+/* This string is on a button. */
+"Cancel" = "Ezeztatu";
+
+"Cannot connect. Please try again later or check your internet connection" = "Ezin da konexiorik ezarri. Saiatu beranduago edo egiaztatu internet konexioa badabilela.";
+
+"Cannot connect. Using an old show list temporarily." = "Ezin da konexiorik ezarri. Orain arteko zerrenda erabiliko da.";
+
+"Check for episodes every:" = "Atal berririk dagoen bilatu (zenbatero):";
+
+/* This string is on a button. */
+"Check for new episodes now" = "Bilatu atal berriak orain";
+
+/* This string is on a button. */
+"Check Now" = "Egiaztatu";
+
+"Checking for new episodes..." = "Atal berrien bila...";
+
+"Checking now, please wait..." = "Bilatze prozesuan, itxaron mesedez...";
+
+"Choose this to download torrent files from a list of preset shows." = "Hautatu hau torrent fitxategiak telesail zerrenda  predeterminatu batetik jeisteko.";
+
+/* This string is on a button. */
+"Close" = "Itxi";
+
+"Disable TVShows" = "TVShows ezgaitu";
+
+"Download beta versions when available" = "Beta bertsioak eskuragarri direnean deskargatu.";
+
+"Download in HD" = "HD-n deskargatu";
+
+"Choose this to input your own RSS feed." = "Hautatu hau zeure RSS iturri bat gehitzeko";
+
+"Enable downloading new episodes" = "Atal berrien deskarga onartu";
+
+/* Status of the current show when it is airing. It is shown in a label as "Status: Continuing" */
+"Continuing" = "Emisioan";
+
+/* Title of a column in a table. */
+"Episode" = "Atala";
+
+"Default video quality:" = "Bideoen kalitatea aurremugatua:";
+
+"Donate" = "Donazioa egin";
+
+"Download Preferences" = "Deskarga ezarpenak";
+
+/* Title of a column in a table. */
+"Episode Name" = "Atalaren izena";
+
+"Episode save location:" = "Atalak non gorde:";
+
+"Feed" = "Feed-a";
+
+"Download HD versions by default" = "HD bertsioak deskargatu ezarpenez";
+
+"General Settings" = "Ezarpen orokorrak";
+
+"Growl Settings" = "Growl ezarpenak";
+
+"Include anonymous system information" = "Sistemaren informazio anonimoa ezarri";
+
+"Info" = "Informazioa";
+
+"Ended" = "Amaitua";
+
+"Last Aired" = "Azken emisioa";
+
+"Last Downloaded" = "Azkeneko deskargak";
+
+/* This string is on a button. */
+"More Info" = "Informazio gehiago";
+
+"Getting Started" = "Lehenengo pausuak";
+
+"Name" = "Izena";
+
+/* This string is on a very narrow button, max 3 charaters (use a dot after that like "Des." in Spanish instead of "Desactivado") */
+"Off" = "Des.";
+
+/* This string refers to the default episode quality to download (Standard/High Definition). */
+"High Definition" = "Definizio altua";
+
+/* This string is on a button. */
+"Ok" = "Ados";
+
+/* This string is on a very narrow button, max 3 charaters (use a dot after that like "Act." in Spanish instead of "Activado") */
+"On" = "Akt.";
+
+"Only download items matching the following rules:" = "Ondorengo arauak betetzen dituzten elementuak deskargatu soilik:";
+
+/* To select a custom folder not listed. */
+"Other..." = "Beste bat...";
+
+"Please Select a Show:" = "Hautatu telesail bat mesedez:";
+
+"Last Checked:" = "Azkeneko eguneratzea:";
+
+"Preferences" = "Ezarpenak";
+
+/* Title of a column in a table. */
+"Published Date" = "Aireratze data";
+
+"Logs are stored in ~/Library/Logs/TVShows/" = "Erregistro datuak ~/Library/Logs/TVShows/   -en gordetzen dira";
+
+"RSS Feed Information:" = "RSS iturriaren informazioa:";
+
+"Rating:" = "Balorazioa:";
+
+"Search" = "Bilatu";
+
+"Never" = "Inoiz ez";
+
+/* Title of a column in a table. */
+"Season" = "Denboraldia";
+
+"No" = "Ez";
+
+"Select a preset show from showRSS" = "Hautatu showRSS-ko telesail predeterminatu bat";
+
+"No activity has been logged yet. Have you recently installed TVShows?" = "Orain arte ez da jarduerarik atzeman. Duela gutxi instalatu al duzu TVShows?";
+
+"Please choose one of the following actions:" = "Ondoko ekintza bat aukeratu mesedez.";
+
+"Send Growl notifications when…" = "Growl oharpenak erabili...";
+
+"No actual videos are downloaded by TVShows, only torrents which will require other programs to use. It is up to you, the user, to decide the legality of using any of the files downloaded by this application, in accordance with applicable copyright laws of you country." = "TVShows-ek ez du bideorik deskargatzen, torrent artxiboak baizik. Hauek beste programak behar dituzte eduki erreala jeisteko. Zeure ardura da, erabiltzaile bezela, eduki horien erabilerak zure estatuko copyright legeen pean duen izaera legala jakitea.";
+
+"Status" = "Egoera";
+
+"No description was found for this show." = "Ez da aurkitu telesail honi buruzko azalpenik";
+
+/* This string is on a button. */
+"Submit Feedback" = "Bidali iritzia";
+
+/* This string is on a button. */
+"Subscribe" = "Harpidetu";
+
+"Subscriptions" = "Harpidetzak";
+
+/* Title of an error message or Growl notification. */
+"TVShows Update Available" = "TVShows-en eguneratzea eskuragarri";
+
+/* Title of an error message or Growl notification. */
+"TVShows Update Downloading" = "TVShows -en eguneratzea deskargatzen";
+
+/* Title of an error message or Growl notification. */
+"Unable to Update the Show List" = "Ezin da eguneratu telesailen zerrenda";
+
+/* This string is on a button. */
+"Unsubscribe" = "Ezabatu";
+
+/* Title of an error message or Growl notification. */
+"Update Installed Automatically" = "Eguneratzea automatikoki instalatu da";
+
+"Show TVShows status in the menu bar" = "Menu barran TVShows-en egoera erakutxi";
+
+/* This string refers to the default episode quality to download (Standard/High Definition). */
+"Standard" = "Estandar";
+
+/* This string is on a button. */
+"View on TV.com" = "TV.com-en ikusi";
+
+"… a new episode is downloaded." = "atal berri bat deskargatzerakoan.";
+
+"Recently Logged Activity" = "Azkenaldian jarduerak atzeman dira";
+
+"… a new version of TVShows is released." = "TVShows-en bertsio berri bat eskuragarri egotean.";
+
+/* This string is on a button. */
+"Uninstall" = "Desinstalatu";
+
+"Uninstall TVShows" = "TVShows desinstalatu";
+
+"Unknown" = "Ezezaguna";
+
+"Updating Show Information…" = "Telesailaren informazioa eguneratzen...";
+
+"View Logs" = "Ikusi Log-ak";
+
+"Website" = "Web orria";
+
+"Yes" = "Bai";
+

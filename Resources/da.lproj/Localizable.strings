@@ -1,0 +1,251 @@
+"1 day" = "1 dag";
+
+/* This string is used between a date and a time, e.g, 1/1/1 at 01:01am. */
+" at " = "kl.";
+
+"1 hour" = "1 time";
+
+"12 hours" = "12 timer";
+
+"15 minutes" = "15 minutter";
+
+"3 hours" = "3 timer";
+
+"30 minutes" = "30 minutter";
+
+"6 hours" = "6 timer";
+
+/* The %@ will be replaced by the name of the show. */
+"A new episode of %@ is being downloaded." = "Et nyt afsnit af %@ er igang med at blive hentet.";
+
+"A new version of TVShows is available for download." = "En ny version af TVShows er tilgængelig";
+
+"A new version of TVShows is being downloaded and installed." = "En ny version af TVShows er igang med at blive hentet og installeret.";
+
+"A newer show list cannot be found. Using an old show list temporarily." = "En nyere liste over udsendelser blev ikke fundet. En tidligere liste vil blive brugt midlertidigt.";
+
+"A show list cannot be found. Please try again later or check your internet connection." = "En liste over udsendelser blev ikke fundet. Prøv igen senere eller tjek om du har forbindelse til internettet.";
+
+"About" = "Om";
+
+"Add a custom RSS source" = "Tilføj en RSS kilde";
+
+/* This string is on a button. */
+"Add Custom RSS" = "Tilføj brugerdefineret RSS";
+
+/* This string is on a button. */
+"Add Show" = "Tilføj serie";
+
+/* Title of an error message or Growl notification. */
+"An Error Has Occurred" = "Der er opstået en fejl";
+
+"An unknown error has occurred. Please try again later." = "Der opstod en ukendt fejl. Prøv venligst senere.";
+
+"An update for TVShows has been installed automatically. To disable this feature go to the Preferences tab and uncheck 'Automatically install new updates.'" = "En TVShows opdatering er blevet installeret automatisk. Hvis du fremover ønsker at installeringen ikke sker automatisk, skal vælge Indstillinger og fjern markeringen ud for 'Installér automatisk nye opdateringer'.";
+
+"Application Update Preferences" = "Indstillinger for programopdateringer";
+
+"Automatically check for updates" = "Tjek automatisk for opdateringer";
+
+"Automatically install new updates" = "Installér automatisk nye opdateringer";
+
+"Automatically open each file after download" = "Åben automatisk hver fil når den er hentet";
+
+"Are you sure you want to uninstall TVShows? This will also remove all preferences and subscriptions." = "Er du sikker på du vil afinstallere TVShows? Dette vil også fjerne alle indstillinger og abonnementer.";
+
+/* The %@ will be replaced by the name of the show. */
+"Are you sure you want to unsubscribe from %@?" = "Er du sikker på at du vil afmelde %@?";
+
+/* This string is on a button. */
+"Cancel" = "Afbryd";
+
+"Cannot connect. Please try again later or check your internet connection" = "Kan ikke få forbindelse. Prøv venligst igen senere eller tjek om du har forbindelse til internettet.";
+
+"Cannot connect. Using an old show list temporarily." = "Kan ikke få forbindelse. En tidligere liste vil blive brugt midlertidigt.";
+
+"Check for episodes every:" = "Tjek for afsnit hver:";
+
+/* This string is on a button. */
+"Check for new episodes now" = "Tjek om der er nye episoder nu";
+
+/* This string is on a button. */
+"Check Now" = "Tjek nu";
+
+"Checking for new episodes..." = "Tjekker om der er nye episoder...";
+
+"Checking now, please wait..." = "Tjekker nu, vent venligst...";
+
+"Choose this to download torrent files from a list of preset shows." = "Klik her for at hente torrent-filer fra en liste af udsendelser.";
+
+/* This string is on a button. */
+"Close" = "Luk";
+
+"Disable TVShows" = "Deaktiver TVShows";
+
+"Download beta versions when available" = "Hent betaversioner når de er tilgængelige";
+
+"Download in HD" = "Hent i HD";
+
+"Choose this to input your own RSS feed." = "Klik her for at tilføje dit eget RSS feed.";
+
+"Enable downloading new episodes" = "Tillad at nye afsnit hentes";
+
+/* Status of the current show when it is airing. It is shown in a label as "Status: Continuing" */
+"Continuing" = "Fortsættes";
+
+/* Title of a column in a table. */
+"Episode" = "Afsnit";
+
+"Default video quality:" = "Standard videokvalitet:";
+
+"Donate" = "Donér";
+
+"Download Preferences" = "Hent indstillinger";
+
+/* This string is on a button. */
+"Edit" = "Rediger";
+
+/* Title of a column in a table. */
+"Episode Name" = "Navn på afsnit";
+
+"Episode save location:" = "Sti til hentede afsnit:";
+
+"Feed" = "Feed";
+
+"Feed URLs" = "Feed URL";
+
+"Download HD versions by default" = "Download HD version som standard";
+
+"General Settings" = "Generelle indstillinger";
+
+"Growl Settings" = "Growl indstillinger";
+
+"Include anonymous system information" = "Medsend anonym systeminformation";
+
+"Info" = "Information";
+
+"Ended" = "Afsluttet";
+
+"Last Aired" = "Sidst sendt";
+
+"Last Downloaded" = "Sidst hentet";
+
+/* This string is on a button. */
+"More Info" = "Læs mere";
+
+"Getting Started" = "Kom igang";
+
+"Name" = "Navn";
+
+/* This string is on a very narrow button, max 3 charaters (use a dot after that like "Des." in Spanish instead of "Desactivado") */
+"Off" = "Fra";
+
+/* This string refers to the default episode quality to download (Standard/High Definition). */
+"High Definition" = "High Definition";
+
+/* This string is on a button. */
+"Ok" = "Ok";
+
+/* This string is on a very narrow button, max 3 charaters (use a dot after that like "Act." in Spanish instead of "Activado") */
+"On" = "Til";
+
+"Only download items matching the following rules:" = "Hent kun titler der matcher følgende regler:";
+
+/* To select a custom folder not listed. */
+"Other..." = "Andre...";
+
+"Please Select a Show:" = "Vælg venligst en udsendelse:";
+
+"Last Checked:" = "Sidst opdateret:";
+
+"Preferences" = "Indstillinger";
+
+/* Title of a column in a table. */
+"Published Date" = "Dato";
+
+"Logs are stored in ~/Library/Logs/TVShows/" = "Logs bliver gemt i ~/Library/Logs/TVShows/";
+
+"RSS Feed Information:" = "RSS Feed information:";
+
+"Rating:" = "Bedømmelse:";
+
+"Save each show in its own folder" = "Gem hver serie i sin egen mappe";
+
+/* This string is on a button. */
+"Save" = "Gem";
+
+"Search" = "Søg";
+
+"Never" = "Aldrig";
+
+"Next Episode" = "Næste Episode";
+
+/* Title of a column in a table. */
+"Season" = "Sæson";
+
+"No" = "Nej";
+
+"Select a preset show from showRSS" = "Vælg en forudindstillet udsendelse fra showRSS";
+
+"No activity has been logged yet. Have you recently installed TVShows?" = "Ingen aktivitet er blevet registreret. Har du for nyligt installeret TVShows?";
+
+"Please choose one of the following actions:" = "Vælg venligst en af de følgende muligheder:";
+
+"Send Growl notifications when…" = "Vis Growl meddelelser når…";
+
+"No actual videos are downloaded by TVShows, only torrents which will require other programs to use. It is up to you, the user, to decide the legality of using any of the files downloaded by this application, in accordance with applicable copyright laws of you country." = "TVShows downloader ingen videoer, men kun torrents, som kræver et andet program for at blive brugt. Det er op til dig, brugeren, at bestemme hvorvidt brugen af filer downloadet er lovligt ifølge love i dit land.";
+
+"Status" = "Status";
+
+"No description was found for this show." = "Ingen beskrivelse at denne serie blev fundet.";
+
+/* This string is on a button. */
+"Submit Feedback" = "Send feedback";
+
+/* This string is on a button. */
+"Subscribe" = "Abonnér";
+
+"Subscriptions" = "Abonnementer";
+
+/* Title of an error message or Growl notification. */
+"TVShows Update Available" = "En TVShows opdatering er tilgængelig";
+
+/* Title of an error message or Growl notification. */
+"TVShows Update Downloading" = "TVShows opdatering hentes";
+
+/* Title of an error message or Growl notification. */
+"Unable to Update the Show List" = "Det mislykkedes at opdatere listen over udsendelser";
+
+/* This string is on a button. */
+"Unsubscribe" = "Stop abonnement";
+
+/* Title of an error message or Growl notification. */
+"Update Installed Automatically" = "En opdatering er installeret automatisk";
+
+"Show TVShows status in the menu bar" = "Vis TVShows status i menu baren";
+
+/* This string refers to the default episode quality to download (Standard/High Definition). */
+"Standard" = "Standard";
+
+/* This string is on a button. */
+"View on TV.com" = "Se på TV.com";
+
+"… a new episode is downloaded." = "… et nyt afsnit er hentet.";
+
+"… a new version of TVShows is released." = "… TVShows er tilgængelig i en ny version.";
+
+/* This string is on a button. */
+"Uninstall" = "Afinstallér";
+
+"Uninstall TVShows" = "Afinstallér TVShows";
+
+"Unknown" = "Ukendt";
+
+"Updating Show Information…" = "Opdaterer information om serie...";
+
+"View Logs" = "Se logs";
+
+"Website" = "Hjemmeside";
+
+"Yes" = "Ja";
+

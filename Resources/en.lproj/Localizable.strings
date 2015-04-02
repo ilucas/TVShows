@@ -1,0 +1,345 @@
+"1 day" = "1 day";
+
+/* This string is used between a date and a time, e.g, 1/1/1 at 01:01am. */
+" at " = " at ";
+
+"1 hour" = "1 hour";
+
+"12 hours" = "12 hours";
+
+"15 minutes" = "15 minutes";
+
+"3 hours" = "3 hours";
+
+"30 minutes" = "30 minutes";
+
+"6 hours" = "6 hours";
+
+/* This refers to "All shows" */
+"All" = "All";
+
+"A message is logged each time new episodes are checked for. Unless noted otherwise, no new episodes were found." = "A message is logged each time new episodes are checked for. Unless noted otherwise, no new episodes were found.";
+
+/* The %@ will be replaced by the name of the show. */
+"A new episode of %@ is being downloaded." = "A new episode of %@ is being downloaded.";
+
+"A new version of TVShows is available for download." = "A new version of TVShows is available for download.";
+
+"A new version of TVShows is being downloaded and installed." = "A new version of TVShows is being downloaded and installed.";
+
+"A newer show list cannot be found. Using an old show list temporarily." = "A newer show list cannot be found. Using an old show list temporarily.";
+
+"A show list cannot be found. Please try again later or check your internet connection." = "A show list cannot be found. Please try again later or check your internet connection.";
+
+"About" = "About";
+
+"Add a custom RSS source" = "Add a custom RSS source";
+
+/* This string is on a button. */
+"Add Custom RSS" = "Add Custom RSS";
+
+/* This string is on a button. */
+"Add Show" = "Add Show";
+
+/* Title of an error message or Growl notification. */
+"An Error Has Occurred" = "An Error Has Occurred";
+
+"An unknown error has occurred. Please try again later." = "An unknown error has occurred. Please try again later.";
+
+"An update for TVShows has been installed automatically. To disable this feature go to the Preferences tab and uncheck 'Automatically install new updates.'" = "An update for TVShows has been installed automatically. To disable this feature go to the Preferences tab and uncheck 'Automatically install new updates.'";
+
+"Application Update Preferences" = "Application Update Preferences";
+
+"Automatic check-in when an episode is downloaded" = "Automatic check-in when an episode is downloaded";
+
+"Automatically check for updates" = "Automatically check for updates";
+
+"Automatically install new updates" = "Automatically install new updates";
+
+"Automatically open each file after download" = "Automatically open each Torrent file after download";
+
+"Are you sure you want to uninstall TVShows? This will also remove all preferences and subscriptions." = "Are you sure you want to uninstall TVShows? This will also remove all preferences and subscriptions.";
+
+/* The %@ will be replaced by the name of the show. */
+"Are you sure you want to unsubscribe from %@?" = "Are you sure you want to unsubscribe from %@?";
+
+/* This string is on a button. */
+"Cancel" = "Cancel";
+
+"Cannot connect. Please try again later or check your internet connection" = "Cannot connect. Please try again later or check your internet connection.";
+
+"Cannot connect. Using an old show list temporarily." = "Cannot connect. Using an old show list temporarily.";
+
+"Check for episodes every:" = "Check for episodes every:";
+
+/* This string is on a button. */
+"Check for new episodes now" = "Check for new episodes now";
+
+/* This string is on a button. */
+"Check Now" = "Check Now";
+
+"Checking for new episodes..." = "Checking for new episodes...";
+
+"Checking now, please wait..." = "Checking now, please wait...";
+
+"Choose this to download torrent files from a list of preset shows." = "Choose this to download torrent files from a list of preset shows.";
+
+/* This string is on a button. */
+"Close" = "Close";
+
+/* This string is on a button. */
+"Create New Account" = "Create New Account";
+
+"Create season subfolders" = "Create season subfolders";
+
+"Disable TVShows" = "Disable TVShows";
+
+"Download beta versions when available" = "Download beta versions when available";
+
+"Download in HD" = "Download in HD";
+
+"Choose this to input your own RSS feed." = "Choose this to input your own RSS feed.";
+
+"Enable downloading new episodes" = "Enable downloading new episodes";
+
+/* This refers to "Enabled shows" */
+"Enabled" = "Enabled";
+
+/* Status of the current show when it is airing. It is shown in a label as "Status: Continuing" */
+"Continuing" = "Continuing";
+
+/* This refers to "Custom shows" */
+"Custom" = "Custom";
+
+/* Title of a column in a table. */
+"Episode" = "Episode";
+
+"Default video quality:" = "Default video quality:";
+
+/* This refers to "Disabled shows" */
+"Disabled" = "Disabled";
+
+"Donate" = "Donate";
+
+"Download Preferences" = "Download Preferences";
+
+/* This string is on a button. */
+"Edit" = "Edit";
+
+/* Title of a column in a table. */
+"Episode Name" = "Episode Name";
+
+"Episode naming convention:" = "Episode naming convention:";
+
+"Episode save location:" = "Episode save location:";
+
+"Feed" = "Feed";
+
+"Feed URLs" = "Feed URLs";
+
+"Download HD versions by default" = "Download HD versions by default";
+
+"General Settings" = "General Settings";
+
+"Growl Settings" = "Growl Settings";
+
+"I am already a Miso user" = "I am already a Miso user";
+
+"Include anonymous system information" = "Include anonymous system information";
+
+"Info" = "Info";
+
+"Ended" = "Ended";
+
+"Last Aired" = "Last Aired";
+
+"Last Downloaded" = "Last Downloaded";
+
+"Miso is a social network made for people that love watching TV shows." = "Miso is a social network made for people that love watching TV shows.";
+
+/* This string is on a button. */
+"More Info" = "More Info";
+
+/* This string is on a button. */
+"More Shows" = "More Shows";
+
+"Getting Started" = "Getting Started";
+
+"Name" = "Name";
+
+/* This string is on a very narrow button, max 3 charaters (use a dot after that like "Des." in Spanish instead of "Desactivado") */
+"Off" = "Off";
+
+/* This string refers to the default episode quality to download (Standard/High Definition). */
+"High Definition" = "High Definition";
+
+/* This string is on a button. */
+"Ok" = "Ok";
+
+/* This string is on a very narrow button, max 3 charaters (use a dot after that like "Act." in Spanish instead of "Activado") */
+"On" = "On";
+
+"Only download items matching the following rules:" = "Only download items matching the following rules:";
+
+/* To select a custom folder not listed. */
+"Other..." = "Other...";
+
+"Please Select a Show:" = "Please Select a Show:";
+
+"Last Checked:" = "Last Checked:";
+
+"Prioritize Magnet links (select this if The Pirate Bay is blocked)" = "Prioritize Magnet links (select this if The Pirate Bay is blocked)";
+
+"Preferences" = "Preferences";
+
+/* This refers to "Preset shows" */
+"Preset" = "Preset";
+
+/* Title of a column in a table. */
+"Published Date" = "Published Date";
+
+"Logs are stored in ~/Library/Logs/TVShows/" = "Logs are stored in ~/Library/Logs/TVShows/";
+
+"RSS Feed Information:" = "RSS Feed Information:";
+
+"Rating:" = "Rating:";
+
+/* This string is on a small button, it stands for "Reset Warnings" */
+"Reset Warn." = "Reset Warn.";
+
+"Save each show in its own folder" = "Save each show in its own folder";
+
+/* This string is on a button. */
+"Save" = "Save";
+
+"Search" = "Search";
+
+/* This string is on a button. */
+"Sign In" = "Sign In";
+
+/* This string is on a button. */
+"Sign Out" = "Sign Out";
+
+"Never" = "Never";
+
+"Next Episode" = "Next Episode";
+
+/* This string is split, the full version is "Start subscription with: Next aired episode" */
+"Next aired episode" = "Next aired episode";
+
+/* Title of a column in a table. */
+"Season" = "Season";
+
+"No" = "No";
+
+"Select a preset show from showRSS" = "Select a preset show from showRSS";
+
+"No activity has been logged yet. Have you recently installed TVShows?" = "No activity has been logged yet. Have you recently installed TVShows?";
+
+"Password:" = "Password:";
+
+"Please choose one of the following actions:" = "Please choose one of the following actions:";
+
+"Send Growl notifications when…" = "Send Growl notifications when…";
+
+"No actual videos are downloaded by TVShows, only torrents which will require other programs to use. It is up to you, the user, to decide the legality of using any of the files downloaded by this application, in accordance with applicable copyright laws of you country." = "No actual videos are downloaded by TVShows, only torrents which will require other programs to use. It is up to you, the user, to decide the legality of using any of the files downloaded by this application, in accordance with applicable copyright laws of your country.";
+
+"Status" = "Status";
+
+"No description was found for this show." = "No description was found for this show.";
+
+/* This string is on a button. */
+"Submit Feedback" = "Submit Feedback";
+
+/* This string is on a button. */
+"Subscribe" = "Subscribe";
+
+"Subscribed" = "Subscribed";
+
+"Subscriptions" = "Subscriptions";
+
+/* This string is split, the full version is "Start subscription with: Next aired episode" or "Start subscription with: This episode: My Show S01E01" */
+"Start subscription with:" = "Start subscription with:";
+
+"Sync" = "Sync";
+
+"Sync shows between Miso and TVShows" = "Sync shows between Miso and TVShows";
+
+"The check-in will be made when the download starts. This is not advisable, but it could allow you to sync episode downloads across several computers." = "The check-in will be made when the download starts. This is not advisable, but it could allow you to sync episode downloads across several computers.";
+
+"The file may not be released yet. Please try again later or check your internet connection. Alternatively you can download the SD version." = "The file may not be released yet. Please try again later or check your internet connection. Alternatively you can download the SD version.";
+
+/* Disclaimer for a destructive action */
+"This action cannot be undone." = "This action cannot be undone.";
+
+/* This string is split, the full version is "Start subscription with: This episode: My Show S01E01" */
+"This episode:" = "This episode:";
+
+"TVDB id" = "TVDB id";
+
+/* Title of an error message or Growl notification. */
+"TVShows Update Available" = "TVShows Update Available";
+
+/* Title of an error message or Growl notification. */
+"TVShows Update Downloading" = "TVShows Update Downloading";
+
+/* The %@ will be replaced by the name of the torrent file. */
+"Unable to download %@" = "Unable to download %@";
+
+/* The %@ will be replaced by the name of the torrent file. */
+"Unable to find an HD torrent for %@" = "Unable to find an HD torrent for %@";
+
+/* Title of an error message or Growl notification. */
+"Unable to Update the Show List" = "Unable to Update the Show List";
+
+/* This string is on a button. */
+"Unsubscribe" = "Unsubscribe";
+
+/* Title of an error message or Growl notification. */
+"Update Installed Automatically" = "Update Installed Automatically";
+
+"User Name:" = "User Name:";
+
+"Show TVShows status in the menu bar" = "Show TVShows status in the menu bar";
+
+/* This string refers to the default episode quality to download (Standard/High Definition). */
+"Standard" = "Standard";
+
+/* This string is on a button. */
+"View on TV.com" = "View on TV.com";
+
+"… a new episode is downloaded." = "… a new episode is downloaded.";
+
+"Recently Logged Activity" = "Recently Logged Activity";
+
+"… a new version of TVShows is released." = "… a new version of TVShows is released.";
+
+/* This string is on a button. */
+"Uninstall" = "Uninstall";
+
+"Uninstall TVShows" = "Uninstall TVShows";
+
+"Unknown" = "Unknown";
+
+"Updating Show Information…" = "Updating Show Information…";
+
+"Use additional sources for HD (may contain rars)" = "Use additional sources for HD (may contain rars)";
+
+"View Logs" = "View Logs";
+
+"Visit Miso" = "Visit Miso";
+
+"Warnings restored" = "Warnings restored";
+
+"Website" = "Website";
+
+"Why try it?" = "Why try it?";
+
+"Yes" = "Yes";
+
+"Your preferences about warnings were restored. If needed, next time TVShows will ask for your confirmation to complete a sensitive operation." = "Your preferences about warnings were restored. If needed, next time TVShows will ask for your confirmation to complete a sensitive operation.";
+
+"Your subscriptions will be backed up in the cloud and they can be synced between different computers." = "Your subscriptions will be backed up in the cloud and they can be synced between different computers.";
+
+"Your TVShows subscriptions will be automatically synced with your followed shows on Miso. Only airings shows known by TVShows will be synced." = "Your TVShows subscriptions will be automatically synced with your followed shows on Miso. Only airings shows known by TVShows will be synced.";
+

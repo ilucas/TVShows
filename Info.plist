@@ -3,36 +3,38 @@
 <plist version="1.0">
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
-	<string>English</string>
+	<string>en</string>
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
 	<key>CFBundleIconFile</key>
-	<string>TVShows.icns</string>
+	<string></string>
 	<key>CFBundleIdentifier</key>
-	<string>net.sourceforge.tvshows</string>
+	<string>com.victorpimentel.TVShows2</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
 	<string>${PRODUCT_NAME}</string>
 	<key>CFBundlePackageType</key>
-	<string>APPL</string>
+	<string>BNDL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>${CURRENT_BUNDLE_SHORT}</string>
+	<string>1.0</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>${CURRENT_PROJECT_VERSION}</string>
-	<key>LSMinimumSystemVersion</key>
-	<string>10.4</string>
+	<string>1</string>
 	<key>NSMainNibFile</key>
-	<string>MainMenu</string>
+	<string>TVShowsPref</string>
+	<key>NSPrefPaneIconFile</key>
+	<string>TVShows-Beta-Large.icns</string>
+	<key>NSPrefPaneIconLabel</key>
+	<string>TVShows</string>
 	<key>NSPrincipalClass</key>
-	<string>NSApplication</string>
+	<string>TVShowsPref</string>
 	<key>SUFeedURL</key>
-	<string>http://deathtobunnies.com/tvshows/appcast.xml</string>
+	<string>http://tvshowsapp.com/tvshows.xml</string>
 	<key>SUPublicDSAKeyFile</key>
-	<string>SUPublicDSAKeyFile.pem</string>
-	<key>SUCheckAtStartup</key>
-	<true/>
+	<string>SUPublicDSAKey.pem</string>
+	<key>TSBundleBuildDate</key>
+	<string>January 1st, 1970</string>
 </dict>
 </plist>

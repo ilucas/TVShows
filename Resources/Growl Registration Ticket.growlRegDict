@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>TicketVersion</key>
+	<string>1</string>
+	<key>AllNotifications</key>
+	<array>
+		<string>TVShows Update Available</string>
+		<string>TVShows Update Downloaded</string>
+		<string>New Episode Downloaded</string>
+		<string>Checking For New Episodes</string>
+	</array>
+	<key>DefaultNotifications</key>
+	<array>
+		<string>TVShows Update Available</string>
+		<string>TVShows Update Downloaded</string>
+		<string>New Episode Downloaded</string>
+		<string>Checking For New Episodes</string>
+	</array>
+</dict>
+</plist>

@@ -1,0 +1,345 @@
+"1 day" = "하루";
+
+/* This string is used between a date and a time, e.g, 1/1/1 at 01:01am. */
+" at " = " at ";
+
+"1 hour" = "1 시간";
+
+"12 hours" = "12 시간";
+
+"15 minutes" = "15 분";
+
+"3 hours" = "3 시간";
+
+"30 minutes" = "30 분";
+
+"6 hours" = "6 시간";
+
+/* This refers to "All shows" */
+"All" = "모두";
+
+"A message is logged each time new episodes are checked for. Unless noted otherwise, no new episodes were found." = "새로운 에피소드가 있으면 메세지가 기록됩니다. 새로운 에피소드가 없습니다.";
+
+/* The %@ will be replaced by the name of the show. */
+"A new episode of %@ is being downloaded." = "%@의 새로운 에피소드가 다운로드 되었습니다.";
+
+"A new version of TVShows is available for download." = "새로운 버전의 TVShows가 다운로드 가능합니다.";
+
+"A new version of TVShows is being downloaded and installed." = "새로운 버전의 TVShows가 다운로드후 설치 되었습니다.";
+
+"A newer show list cannot be found. Using an old show list temporarily." = "새로운 방송 목록을 찾을 수 없습니다. 이전 방송 목록을 임시로 사용합니다.";
+
+"A show list cannot be found. Please try again later or check your internet connection." = "방송 목록을 찾을 수 없습니다. 나중에 다시 시도하거나 인터넷 연결을 확인해 주세요.";
+
+"About" = "정보";
+
+"Add a custom RSS source" = "커스텀 RSS 주소 추가하기";
+
+/* This string is on a button. */
+"Add Custom RSS" = "커스텀 RSS 추가";
+
+/* This string is on a button. */
+"Add Show" = "방송 추가";
+
+/* Title of an error message or Growl notification. */
+"An Error Has Occurred" = "오류가 발생하였습니다";
+
+"An unknown error has occurred. Please try again later." = "알 수 없는 오류가 발생하였습니다. 나중에 다시 시도해 주세요.";
+
+"An update for TVShows has been installed automatically. To disable this feature go to the Preferences tab and uncheck 'Automatically install new updates.'" = "새로운 버전의 TVShows가 자동으로 설치되었습니다. 이 기능을 비활성화 하시려면 설정 탭에 들어가 \"자동으로 업데이트 설치하기\" 박스를 체크 해지해 주세요.";
+
+"Application Update Preferences" = "프로그램 업데이트 설정";
+
+"Automatic check-in when an episode is downloaded" = "에피소드를 다운로드 받으면 자동으로 체크인 하기";
+
+"Automatically check for updates" = "자동으로 업데이트 확인";
+
+"Automatically install new updates" = "자동으로 업데이트 설치하기";
+
+"Automatically open each file after download" = "받은 토렌트 파일을 자동으로 열기";
+
+"Are you sure you want to uninstall TVShows? This will also remove all preferences and subscriptions." = "TVShows를 정말로 제거할건가요? 모든 설정과 구독목록도 지워집니다.";
+
+/* The %@ will be replaced by the name of the show. */
+"Are you sure you want to unsubscribe from %@?" = "%@(을)를 정말로 구독 해제 하시겠습니까?";
+
+/* This string is on a button. */
+"Cancel" = "취소";
+
+"Cannot connect. Please try again later or check your internet connection" = "연결할 수 없습니다. 나중에 다시 시도하거나 인터넷 연결을 확인해 주세요.";
+
+"Cannot connect. Using an old show list temporarily." = "연결할 수 없습니다. 이전 방송 목록을 임시로 사용합니다.";
+
+"Check for episodes every:" = "새로운 에피소드 체크 간격 :";
+
+/* This string is on a button. */
+"Check for new episodes now" = "새 에피소드 지금 확인";
+
+/* This string is on a button. */
+"Check Now" = "지금 확인하기";
+
+"Checking for new episodes..." = "새로운 에피소드 확인하는 중...";
+
+"Checking now, please wait..." = "확인중입니다, 잠시 기다려 주세요..";
+
+"Choose this to download torrent files from a list of preset shows." = "프리셋 쇼로부터 토렌트 파일을 다운로드 하시려면 이 곳을 선택해 주세요.";
+
+/* This string is on a button. */
+"Close" = "닫기";
+
+/* This string is on a button. */
+"Create New Account" = "새 계정 만들기";
+
+"Create season subfolders" = "각 시즌별로 하위폴더 만들기";
+
+"Disable TVShows" = "TVShows 비활성화";
+
+"Download beta versions when available" = "최신 베타버전 받기";
+
+"Download in HD" = "HD화질로 받기";
+
+"Choose this to input your own RSS feed." = "RSS 피드 주소를 직접 추가 하시려면 이 곳을 선택해 주세요.";
+
+"Enable downloading new episodes" = "새로운 에피소드를 다운받습니다";
+
+/* This refers to "Enabled shows" */
+"Enabled" = "구독중";
+
+/* Status of the current show when it is airing. It is shown in a label as "Status: Continuing" */
+"Continuing" = "방영중";
+
+/* This refers to "Custom shows" */
+"Custom" = "커스텀";
+
+/* Title of a column in a table. */
+"Episode" = "에피소드";
+
+"Default video quality:" = "기본 비디오 품질 :";
+
+/* This refers to "Disabled shows" */
+"Disabled" = "사용안함";
+
+"Donate" = "기부";
+
+"Download Preferences" = "다운로드 설정";
+
+/* This string is on a button. */
+"Edit" = "수정";
+
+/* Title of a column in a table. */
+"Episode Name" = "에피소드 이름";
+
+"Episode naming convention:" = "에피소드 이름 바꾸기:";
+
+"Episode save location:" = "에피소드를 저장할 위치 :";
+
+"Feed" = "피드";
+
+"Feed URLs" = "피드 URL";
+
+"Download HD versions by default" = "항상 HD로 다운로드 하기";
+
+"General Settings" = "일반 설정";
+
+"Growl Settings" = "Growl 설정";
+
+"I am already a Miso user" = "이미 Miso계정이 있습니다.";
+
+"Include anonymous system information" = "익명 시스템 정보 포함하기";
+
+"Info" = "정보";
+
+"Ended" = "종영";
+
+"Last Aired" = "최근 방송된 에피소드";
+
+"Last Downloaded" = "최근 받은 에피소드";
+
+"Miso is a social network made for people that love watching TV shows." = "Miso는 방송을 즐겨보는 사람들을 위한 소셜 네트워크 입니다.";
+
+/* This string is on a button. */
+"More Info" = "더 많은 정보..";
+
+/* This string is on a button. */
+"More Shows" = "더 많은 방송";
+
+"Getting Started" = "시작하기";
+
+"Name" = "이름";
+
+/* This string is on a very narrow button, max 3 charaters (use a dot after that like "Des." in Spanish instead of "Desactivado") */
+"Off" = "끔";
+
+/* This string refers to the default episode quality to download (Standard/High Definition). */
+"High Definition" = "고화질";
+
+/* This string is on a button. */
+"Ok" = "OK";
+
+/* This string is on a very narrow button, max 3 charaters (use a dot after that like "Act." in Spanish instead of "Activado") */
+"On" = "켬";
+
+"Only download items matching the following rules:" = "이하의 규칙에 맞는 파일만 받기 :";
+
+/* To select a custom folder not listed. */
+"Other..." = "기타...";
+
+"Please Select a Show:" = "방송을 선택해 주세요 :";
+
+"Last Checked:" = "마지막으로 확인한 날짜 :";
+
+"Prioritize Magnet links (select this if The Pirate Bay is blocked)" = "마그넷 링크로 다운 (Pirate Bay가 막혀있을경우 사용하세요)";
+
+"Preferences" = "설정";
+
+/* This refers to "Preset shows" */
+"Preset" = "프리셋";
+
+/* Title of a column in a table. */
+"Published Date" = "발행 날짜";
+
+"Logs are stored in ~/Library/Logs/TVShows/" = "로그는 ~/Library/Logs/TVShows/ 에 저장되어 있습니다.";
+
+"RSS Feed Information:" = "RSS피드 정보 :";
+
+"Rating:" = "평점 :";
+
+/* This string is on a small button, it stands for "Reset Warnings" */
+"Reset Warn." = "경고 리셋.";
+
+"Save each show in its own folder" = "방송마다 다른 폴더에 저장하기";
+
+/* This string is on a button. */
+"Save" = "저장";
+
+"Search" = "검색";
+
+/* This string is on a button. */
+"Sign In" = "로그인";
+
+/* This string is on a button. */
+"Sign Out" = "로그아웃";
+
+"Never" = "하지 않기";
+
+"Next Episode" = "다음 에피소드";
+
+/* This string is split, the full version is "Start subscription with: Next aired episode" */
+"Next aired episode" = "다음번에 방영되는 에피소드";
+
+/* Title of a column in a table. */
+"Season" = "시즌";
+
+"No" = "아니오";
+
+"Select a preset show from showRSS" = "showRSS로부터 프리셋 쇼 선택하기";
+
+"No activity has been logged yet. Have you recently installed TVShows?" = "로그에 남아있는 기록이 없습니다. 최근에 TVShows를 설치하셨나요?";
+
+"Password:" = "비밀번호";
+
+"Please choose one of the following actions:" = "다음중에서 원하는 동작을 골라주세요.";
+
+"Send Growl notifications when…" = "Growl 알림 띄우기";
+
+"No actual videos are downloaded by TVShows, only torrents which will require other programs to use. It is up to you, the user, to decide the legality of using any of the files downloaded by this application, in accordance with applicable copyright laws of you country." = "TVShows는 동영상 파일이 아닌 토렌트 파일만 찾아줍니다. 사용자 국가의 저작권 보호법을 침해하는, 사용자가 이 프로그램을 이용해 다운로드한 파일을 불법적으로 사용해 생긴 문제에 대해서, TVShows는 책임이 없습니다.";
+
+"Status" = "상태";
+
+"No description was found for this show." = "이 방송에 대한 설명을 찾을 수 없습니다.";
+
+/* This string is on a button. */
+"Submit Feedback" = "피드백 보내기";
+
+/* This string is on a button. */
+"Subscribe" = "구독";
+
+"Subscribed" = "구독됨";
+
+"Subscriptions" = "구독목록";
+
+/* This string is split, the full version is "Start subscription with: Next aired episode" or "Start subscription with: This episode: My Show S01E01" */
+"Start subscription with:" = "구독을 시작할 에피소드:";
+
+"Sync" = "동기화";
+
+"Sync shows between Miso and TVShows" = "Miso와 TVShows 동기화";
+
+"The check-in will be made when the download starts. This is not advisable, but it could allow you to sync episode downloads across several computers." = "다운로드가 시작되면 체크인이 됩니다. 추천하지는 않지만, 여러 컴퓨터에서 동시에 방송을 다운로드 하도록 사용할 수 있습니다.";
+
+"The file may not be released yet. Please try again later or check your internet connection. Alternatively you can download the SD version." = "파일이 아직 배포되지 않았을 수도 있습니다. 네트워크 연결을 확인해 주십시오. 혹은, SD버전을 받으실 수도 있습니다.";
+
+/* Disclaimer for a destructive action */
+"This action cannot be undone." = "이 결정은 되돌릴 수 없습니다.";
+
+/* This string is split, the full version is "Start subscription with: This episode: My Show S01E01" */
+"This episode:" = "이 에피소드:";
+
+"TVDB id" = "TVDB id";
+
+/* Title of an error message or Growl notification. */
+"TVShows Update Available" = "TVShows 업데이트 가능";
+
+/* Title of an error message or Growl notification. */
+"TVShows Update Downloading" = "TVShows 업데이트 받는중";
+
+/* The %@ will be replaced by the name of the torrent file. */
+"Unable to download %@" = "%@(을)를 다운로드 할 수 없습니다";
+
+/* The %@ will be replaced by the name of the torrent file. */
+"Unable to find an HD torrent for %@" = "%@의 HD 토렌트를 찾을 수 없습니다.";
+
+/* Title of an error message or Growl notification. */
+"Unable to Update the Show List" = "방송 목록을 업데이트 할 수 없습니다";
+
+/* This string is on a button. */
+"Unsubscribe" = "구독 취소";
+
+/* Title of an error message or Growl notification. */
+"Update Installed Automatically" = "업데이트가 자동 설치되었습니다";
+
+"User Name:" = "사용자명";
+
+"Show TVShows status in the menu bar" = "TVShows 상태를 메뉴 바에 보이기";
+
+/* This string refers to the default episode quality to download (Standard/High Definition). */
+"Standard" = "표준";
+
+/* This string is on a button. */
+"View on TV.com" = "TV.com에서 보기";
+
+"… a new episode is downloaded." = "새 에피소드가 다운로드 되었을 때.";
+
+"Recently Logged Activity" = "최근에 기록된 로그";
+
+"… a new version of TVShows is released." = "새 버전의 TVShows가 업데이트 되었을 때.";
+
+/* This string is on a button. */
+"Uninstall" = "삭제";
+
+"Uninstall TVShows" = "TVShows 제거";
+
+"Unknown" = "알 수 없음";
+
+"Updating Show Information…" = "방송 정보 업데이트중...";
+
+"Use additional sources for HD (may contain rars)" = "HD 다운로드를 위해 추가적인 소스 사용 (rar파일을 포함할 수도 있음)";
+
+"View Logs" = "로그 보기";
+
+"Visit Miso" = "Miso 방문하기";
+
+"Warnings restored" = "경고메세지가 복원됨";
+
+"Website" = "웹사이트";
+
+"Why try it?" = "왜 사용해야 하나요?";
+
+"Yes" = "예";
+
+"Your preferences about warnings were restored. If needed, next time TVShows will ask for your confirmation to complete a sensitive operation." = "경고메세지에 대한 설정이 복구되었습니다. 필요하다고 판단되는 경우, TVShows가 사용자의 확인을 요청할 것입니다.";
+
+"Your subscriptions will be backed up in the cloud and they can be synced between different computers." = "사용자의 구독 목록을 클라우드를 통해 여러 컴퓨터에서 싱크 가능합니다.";
+
+"Your TVShows subscriptions will be automatically synced with your followed shows on Miso. Only airings shows known by TVShows will be synced." = "사용자의 TVShows 구독 목록은 Miso와 자동으로 동기화 될 것입니다. TVShows목록에 없는 방송은 동기화되지 않습니다.";
+

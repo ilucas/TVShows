@@ -1,0 +1,195 @@
+"1 day" = "יום אחד";
+
+/* This string is used between a date and a time, e.g, 1/1/1 at 01:01am. */
+" at " = " ב ";
+
+"1 hour" = "שעה אחת";
+
+"12 hours" = "12 שעות";
+
+"15 minutes" = "15 דקות";
+
+"3 hours" = "3 שעות";
+
+"30 minutes" = "30 דקות";
+
+"6 hours" = "6 שעות";
+
+/* The %@ will be replaced by the name of the show. */
+"A new episode of %@ is being downloaded." = "הורד הפרק החדש של @%.";
+
+"A newer show list cannot be found. Using an old show list temporarily." = "לא נמצאה רשימת תוכניות חדשה יותר. משתמש ברשימת תוכניות ישנה באופן זמני.";
+
+"A show list cannot be found. Please try again later or check your internet connection." = "לא נמצאה רשימת תוכניות. אנא נסה מאוחר יותר או בדוק את חיבור האינטרנט.";
+
+"About" = "אודות";
+
+"Add a custom RSS source" = "הוסף מקור RSS שונה";
+
+/* This string is on a button. */
+"Add Show" = "הוספת תוכנית";
+
+/* Title of an error message or Growl notification. */
+"An Error Has Occurred" = "אירעה שגיאה";
+
+"An unknown error has occurred. Please try again later." = "אירעה שגיאה בלתי ידועה. אנא נסה שנית מאוחר יותר.";
+
+"An update for TVShows has been installed automatically. To disable this feature go to the Preferences tab and uncheck 'Automatically install new updates.'" = "עדכון עבור TVShows הותקן באופן אוטומטי. כדי לבטל תכונה זו פנה לכרטיסית העדפות ובטל את אפשרות \"התקן עדכונים חדשים באופן אוטומטי\".";
+
+"Application Update Preferences" = "הגדרות עדכון תוכנה";
+
+"Automatically check for updates" = "בדוק עדכונים באופן אוטומטי";
+
+"Automatically install new updates" = "התקן עדכונים חדשים באופן אוטומטי";
+
+"Automatically open each file after download" = "פתח באופן אוטומטי כל קובץ Torrent לאחר ההורדה";
+
+/* This string is on a button. */
+"Cancel" = "בטל";
+
+"Cannot connect. Please try again later or check your internet connection" = "לא ניתן להתחבר. אנא נסה מאוחר יותר או בדוק את חיבור האינטרנט.";
+
+"Cannot connect. Using an old show list temporarily." = "לא ניתן להתחבר. משתמש ברשימת תוכניות ישנה באופן זמני.";
+
+"Check for episodes every:" = "בדוק פרקים כל:";
+
+/* This string is on a button. */
+"Check for new episodes now" = "בדוק פרקים חדשים עכשיו";
+
+/* This string is on a button. */
+"Check Now" = "בדוק עכשיו";
+
+"Checking for new episodes..." = "בדיקת פרקים חדשים...";
+
+"Choose this to download torrent files from a list of preset shows." = "בחר באפשרות זו כדי להוריד קבצי torrent מתוך רשימה של תוכניות שמורות.";
+
+/* This string is on a button. */
+"Close" = "סגור";
+
+"Disable TVShows" = "נטרל TVShows";
+
+"Download beta versions when available" = "הורד גרסאות בטא כאשר קיימות";
+
+"Download in HD" = "הורד ב-HD";
+
+"Choose this to input your own RSS feed." = "בחר באפשרות זו כדי להזין RSS משלך.";
+
+"Enable downloading new episodes" = "אפשר להוריד פרקים חדשים";
+
+/* Status of the current show when it is airing. It is shown in a label as "Status: Continuing" */
+"Continuing" = "ממשיך";
+
+/* Title of a column in a table. */
+"Episode" = "פרק";
+
+"Default video quality:" = "ברירת מחדל לאיכות וידאו:";
+
+"Donate" = "תרום";
+
+"Download Preferences" = "הגדרות הורדה";
+
+/* This string is on a button. */
+"Edit" = "ערוך";
+
+/* Title of a column in a table. */
+"Episode Name" = "שם פרק";
+
+"Episode save location:" = "מיקום שמירת פרק:";
+
+"Feed" = "Feed";
+
+"General Settings" = "הגדרות כלליות";
+
+"Growl Settings" = "הגדרות Growl";
+
+"Include anonymous system information" = "כלול מידע מערכת אנונימי";
+
+"Info" = "מידע";
+
+"Ended" = "הסתיימה";
+
+"Last Aired" = "שודר לאחרונה";
+
+"Last Downloaded" = "הורד לאחרונה";
+
+/* This string is on a button. */
+"More Info" = "פרטים נוספים";
+
+"Name" = "שם";
+
+/* This string is on a button. */
+"Ok" = "אשר";
+
+"Only download items matching the following rules:" = "הורד רק פריטים המתאימים לחוקים הבאים:";
+
+/* To select a custom folder not listed. */
+"Other..." = "אחר...";
+
+"Please Select a Show:" = "אנא בחר תוכנית:";
+
+"Last Checked:" = "נבדק לאחרונה:";
+
+/* Title of a column in a table. */
+"Published Date" = "תאריך פרסום";
+
+"RSS Feed Information:" = "מידע RSS Feed:";
+
+"Rating:" = "דירוג:";
+
+/* This string is on a button. */
+"Save" = "שמור";
+
+"Search" = "חפש";
+
+"Never" = "מעולם לא";
+
+/* Title of a column in a table. */
+"Season" = "עונה";
+
+"No" = "לא";
+
+"Select a preset show from showRSS" = "בחר תוכנית שמורה מshowRSS";
+
+"Please choose one of the following actions:" = "בחר אחת מהפעולות הבאות:";
+
+"Send Growl notifications when…" = "שלח התראות Growl כאשר...";
+
+"Status" = "מצב";
+
+/* This string is on a button. */
+"Submit Feedback" = "שלח משוב";
+
+/* This string is on a button. */
+"Subscribe" = "הירשם";
+
+/* Title of an error message or Growl notification. */
+"TVShows Update Available" = "זמין עדכון לTVShows";
+
+/* Title of an error message or Growl notification. */
+"TVShows Update Downloading" = "מורד עדכון לTVShows";
+
+/* Title of an error message or Growl notification. */
+"Unable to Update the Show List" = "אין אפשרות לעדכן את רשימת התוכניות";
+
+/* This string is on a button. */
+"Unsubscribe" = "ביטול מנוי";
+
+/* Title of an error message or Growl notification. */
+"Update Installed Automatically" = "התקנה אוטומטית של עדכונים";
+
+/* This string is on a button. */
+"View on TV.com" = "הצג ב TV.com";
+
+"… a new episode is downloaded." = "פרק חדש הורד.";
+
+"… a new version of TVShows is released." = "גרסה חדשה של TVShows שוחררה.";
+
+/* This string is on a button. */
+"Uninstall" = "הסר התקנה";
+
+"Unknown" = "לא ידוע";
+
+"Updating Show Information…" = "מעדכן מידע תוכנית...";
+
+"Yes" = "כן";
+

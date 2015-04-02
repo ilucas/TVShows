@@ -1,0 +1,161 @@
+"1 day" = "päev";
+
+"1 hour" = "tunni tagant";
+
+"12 hours" = "kaheteist tunni tagant";
+
+"15 minutes" = "15 minuti tagant";
+
+"3 hours" = "kolme tunni tagant";
+
+"30 minutes" = "30 minuti tagant";
+
+"6 hours" = "kuue tunni tagant";
+
+/* The %@ will be replaced by the name of the show. */
+"A new episode of %@ is being downloaded." = "Laetakse alla %@ uut episoodi.";
+
+"A new version of TVShows is available for download." = "Uus versioon TVShows'ist on saadaval allalaadimiseks.";
+
+"A newer show list cannot be found. Using an old show list temporarily." = "Uuemat seriaalide nimekirja ei leitud. Ajutiselt on kasutusel vanem nimekiri.";
+
+"A show list cannot be found. Please try again later or check your internet connection." = "Ei leia seriaalide nimekirja. Palun proovige hiljem uuesti või kontrollige oma internetiühendust.";
+
+"About" = "Informatsioon";
+
+"Add a custom RSS source" = "Lisa RSS allikas";
+
+/* Title of an error message or Growl notification. */
+"An Error Has Occurred" = "On tekkinud viga";
+
+"An unknown error has occurred. Please try again later." = "Tekkis tundmatu viga. Palun proovige hiljem uuesti.";
+
+"Application Update Preferences" = "Rakenduse uuendamise seaded";
+
+"Automatically check for updates" = "Otsi uuendusi automaatselt";
+
+"Automatically install new updates" = "Paigalda uuendused automaatselt";
+
+"Automatically open each file after download" = "Ava allalaetud failid automaatselt";
+
+/* This string is on a button. */
+"Cancel" = "Tühista";
+
+"Cannot connect. Please try again later or check your internet connection" = "Ühenduse loomine ebaõnnestus. Palun proovige hiljem uuesti või kontrollige internetiühendust.";
+
+"Cannot connect. Using an old show list temporarily." = "Ühenduse loomine ebaõnnestus. Ajutiselt on kasutusel vanem seriaalide nimekiri.";
+
+"Check for episodes every:" = "Otsi uusi episoode iga:";
+
+/* This string is on a button. */
+"Check Now" = "Otsi nüüd";
+
+/* This string is on a button. */
+"Close" = "Sulge";
+
+"Download beta versions when available" = "Lae alla beetaversioone kui võimalik";
+
+"Download in HD" = "Lae alla HD'na";
+
+"Choose this to input your own RSS feed." = "Valige see kui soovite sisestada oma RSS'i.";
+
+"Enable downloading new episodes" = "Luba uute episoodide automaatne allalaadimine";
+
+/* Title of a column in a table. */
+"Episode" = "Episood";
+
+"Default video quality:" = "Tavaline video kvaliteet";
+
+"Download Preferences" = "Allalaadimise valikud";
+
+/* Title of a column in a table. */
+"Episode Name" = "Episoodi nimi";
+
+"Episode save location:" = "Episoodide salvestamise asukoht:";
+
+"Growl Settings" = "Growli seaded";
+
+"Include anonymous system information" = "Kaasa anonüümset süsteemiteavet";
+
+"Info" = "Informatsioon";
+
+"Last Aired" = "Viimati eetris";
+
+"Last Downloaded" = "Viimati allalaetud";
+
+/* This string is on a button. */
+"More Info" = "Rohkem infot";
+
+"Getting Started" = "Alustamine";
+
+"Name" = "Nimi";
+
+/* This string is on a very narrow button, max 3 charaters (use a dot after that like "Des." in Spanish instead of "Desactivado") */
+"Off" = "Väljas";
+
+/* This string refers to the default episode quality to download (Standard/High Definition). */
+"High Definition" = "Kõrglahutus";
+
+/* This string is on a button. */
+"Ok" = "OK";
+
+/* This string is on a very narrow button, max 3 charaters (use a dot after that like "Act." in Spanish instead of "Activado") */
+"On" = "Sees";
+
+"Please Select a Show:" = "Valige seriaal:";
+
+"Preferences" = "Seaded";
+
+/* Title of a column in a table. */
+"Published Date" = "Avalikustamise kuupäev";
+
+"RSS Feed Information:" = "RSS'i informatsioon:";
+
+"Rating:" = "Hinne:";
+
+"Search" = "Otsing";
+
+/* Title of a column in a table. */
+"Season" = "Hooaeg";
+
+"Select a preset show from showRSS" = "Vali episood läbi showRSS'i";
+
+"Please choose one of the following actions:" = "Palun valige üks järgmistest tegevustest:";
+
+"Send Growl notifications when…" = "Saada Growli teateid kui…";
+
+"Status" = "Staatus";
+
+/* This string is on a button. */
+"Submit Feedback" = "Tagasiside saatmine";
+
+/* This string is on a button. */
+"Subscribe" = "Telli uued episoodid";
+
+"Subscriptions" = "Tellimused";
+
+/* Title of an error message or Growl notification. */
+"TVShows Update Available" = "On saadaval uus versioon TVShows'ist";
+
+/* Title of an error message or Growl notification. */
+"TVShows Update Downloading" = "Toimub TVShows uuenduse allalaadimine";
+
+/* Title of an error message or Growl notification. */
+"Unable to Update the Show List" = "Seriaalide nimekirja ei saa uuendada, viga";
+
+/* This string is on a button. */
+"Unsubscribe" = "Tühista tellimus";
+
+/* Title of an error message or Growl notification. */
+"Update Installed Automatically" = "Uuendus paigaldatud automaatselt";
+
+/* This string refers to the default episode quality to download (Standard/High Definition). */
+"Standard" = "Tavaline";
+
+/* This string is on a button. */
+"View on TV.com" = "Vaata TV.com lehelt";
+
+"… a new episode is downloaded." = "… uus episood on allalaetud.";
+
+"… a new version of TVShows is released." = "… on saadaval uus versioon TVShows tarkvarast.";
+

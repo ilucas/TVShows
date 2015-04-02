@@ -1,0 +1,341 @@
+"1 day" = "1 يوم";
+
+/* This string is used between a date and a time, e.g, 1/1/1 at 01:01am. */
+" at " = "في";
+
+"1 hour" = "1 ساعة";
+
+"12 hours" = "12 ساعة";
+
+"15 minutes" = "15 دقيقة";
+
+"3 hours" = "3 ساعات";
+
+"30 minutes" = "30 دقيقة";
+
+"6 hours" = "6 ساعات";
+
+/* This refers to "All shows" */
+"All" = "الكل";
+
+"A message is logged each time new episodes are checked for. Unless noted otherwise, no new episodes were found." = "يتم تسجيل رسالة في كل مرة يتم التحقق من حلقات جديدة . ما لم يذكر خلاف ذلك ، أو لم يتم العثور على حلقات جديدة.";
+
+/* The %@ will be replaced by the name of the show. */
+"A new episode of %@ is being downloaded." = "حلقة جديدة من @ ٪ يتم تحميلها.";
+
+"A new version of TVShows is available for download." = "نسخة جديدة من TVShows متوفرة للتحميل.";
+
+"A new version of TVShows is being downloaded and installed." = "جاري تحميلها نسخة جديدة من TVShows وتثبيتها.";
+
+"A newer show list cannot be found. Using an old show list temporarily." = "لا يمكن العثور على احدث قائمة للمسلسلات. سيتم استخدام قائمة مسلسلات قديمة مؤقتا.";
+
+"A show list cannot be found. Please try again later or check your internet connection." = "لا يمكن العثور على قائمة المسلسلات. يرجى المحاولة مرة أخرى لاحقا أو تحقق من اتصال الإنترنت الخاص بك.";
+
+"About" = "حول";
+
+"Add a custom RSS source" = "إضافة مصدر خلاصات (RSS) مخصص";
+
+/* This string is on a button. */
+"Add Custom RSS" = "إضافة خلاصات (RSS) مخصص";
+
+/* This string is on a button. */
+"Add Show" = "إضافة مسلسل";
+
+/* Title of an error message or Growl notification. */
+"An Error Has Occurred" = "خطأ !!";
+
+"An unknown error has occurred. Please try again later." = "لقد حدث خطأ غير معروف. يرجى المحاولة مرة أخرى لاحقا.";
+
+"An update for TVShows has been installed automatically. To disable this feature go to the Preferences tab and uncheck 'Automatically install new updates.'" = "تم تثبيت تحديث لـ TVShows تلقائيا. لتعطيل هذه الميزة انتقل إلى علامة التبويب خصائص وإلغاء تحديد \"تثبيت التحديثات تلقائيا\"";
+
+"Application Update Preferences" = "خصائص تحديث التطبيق";
+
+"Automatic check-in when an episode is downloaded" = "التحقق التلقائي في حين يتم تحميل حلقة";
+
+"Automatically check for updates" = "التحقق من وجود تحديثات تلقائيا";
+
+"Automatically install new updates" = "تلقائيا تثبيت التحديثات الجديدة";
+
+"Automatically open each file after download" = "تلقائيا فتح ملف التورنت بعد التحميل";
+
+"Are you sure you want to uninstall TVShows? This will also remove all preferences and subscriptions." = "هل أنت متأكد أنك تريد حذف TVShows؟ وهذا يؤدي إلى حذف كل التفضيلات والاشتراكات.";
+
+/* The %@ will be replaced by the name of the show. */
+"Are you sure you want to unsubscribe from %@?" = "هل أنت متأكد أنك تريد إلغاء الاشتراك من @ ٪؟";
+
+/* This string is on a button. */
+"Cancel" = "إلغاء";
+
+"Cannot connect. Please try again later or check your internet connection" = "لا يمكن الاتصال. يرجى المحاولة مرة أخرى لاحقا أو تحقق من اتصال الإنترنت الخاص بك.";
+
+"Cannot connect. Using an old show list temporarily." = "لا يمكن الاتصال. سيتم استخدام قائمة مسلسلات قديمة مؤقتا.";
+
+"Check for episodes every:" = "تحقق من الحلقات كل :";
+
+/* This string is on a button. */
+"Check for new episodes now" = "تحقق من وجود حلقات جديدة الآن";
+
+/* This string is on a button. */
+"Check Now" = "تحقق الآن";
+
+"Checking for new episodes..." = "التحقق من وجود حلقات جديدة...";
+
+"Checking now, please wait..." = "التحقق الآن ، يرجى الانتظار...";
+
+"Choose this to download torrent files from a list of preset shows." = "اختر هذا لتحميل ملفات تورنت من قائمة من مسلسلات مسبقا.";
+
+/* This string is on a button. */
+"Close" = "اغلاق";
+
+/* This string is on a button. */
+"Create New Account" = "إنشاء حساب جديد";
+
+"Create season subfolders" = "إنشاء مجلدات فرعية للموسم";
+
+"Disable TVShows" = "تعطيل TVShows";
+
+"Download beta versions when available" = "تحميل إصدارات بيتا (beta) عندما تكون متاحة";
+
+"Download in HD" = "تحميل دقة عالية (HD)";
+
+"Choose this to input your own RSS feed." = "اختر هذا لإدخال الخلاصات (RSS) الخاصة بك.";
+
+"Enable downloading new episodes" = "تفعيل تحميل الحلقات الجديدة";
+
+/* This refers to "Enabled shows" */
+"Enabled" = "تفعيل";
+
+/* Status of the current show when it is airing. It is shown in a label as "Status: Continuing" */
+"Continuing" = "مستمر";
+
+/* This refers to "Custom shows" */
+"Custom" = "مخصص";
+
+/* Title of a column in a table. */
+"Episode" = "حلقة";
+
+"Default video quality:" = "جودة الفيديو الافتراضية :";
+
+/* This refers to "Disabled shows" */
+"Disabled" = "تعطيل";
+
+"Donate" = "تبرع";
+
+"Download Preferences" = "تحميل الخصائص";
+
+/* This string is on a button. */
+"Edit" = "تحرير";
+
+/* Title of a column in a table. */
+"Episode Name" = "اسم الحلقة";
+
+"Episode naming convention:" = "تركيبة تسمية الحلقة :";
+
+"Episode save location:" = "مسار حفظ الحلقة :";
+
+"Feed" = "خلاصات";
+
+"Feed URLs" = "رابط الخلاصات";
+
+"Download HD versions by default" = "تحميل إصدارات HD افتراضيا";
+
+"General Settings" = "إعدادات عامة";
+
+"Growl Settings" = "إعدادات نظام التنبيهات (Growl)";
+
+"I am already a Miso user" = "لدي حساب في Miso";
+
+"Include anonymous system information" = "تضمين نظام معلومات مجهولة المصدر";
+
+"Info" = "معلومات";
+
+"Ended" = "انتهى";
+
+"Last Aired" = "اخر ما تم بثه";
+
+"Last Downloaded" = "اخر ما تم تحميله";
+
+"Miso is a social network made for people that love watching TV shows." = "ميسو عبارة عن شبكة اجتماعية لمحبي مشاهدة البرامج التلفزيونية.";
+
+/* This string is on a button. */
+"More Info" = "مزيد من المعلومات";
+
+/* This string is on a button. */
+"More Shows" = "المزيد من المسلسلات";
+
+"Getting Started" = "ابدأ";
+
+"Name" = "اسم";
+
+/* This string is on a very narrow button, max 3 charaters (use a dot after that like "Des." in Spanish instead of "Desactivado") */
+"Off" = "غلق";
+
+/* This string refers to the default episode quality to download (Standard/High Definition). */
+"High Definition" = "عالية الوضوح";
+
+/* This string is on a button. */
+"Ok" = "موافق";
+
+/* This string is on a very narrow button, max 3 charaters (use a dot after that like "Act." in Spanish instead of "Activado") */
+"On" = "فتح";
+
+"Only download items matching the following rules:" = "فقط قم بتحميل حلقات تتوافق مع الشروط التالية :";
+
+/* To select a custom folder not listed. */
+"Other..." = "أخرى...";
+
+"Please Select a Show:" = "يرجى تحديد مسلسل :";
+
+"Last Checked:" = "تم فحصه:";
+
+"Preferences" = "خصائص";
+
+/* This refers to "Preset shows" */
+"Preset" = "سابقة";
+
+/* Title of a column in a table. */
+"Published Date" = "تاريخ النشر";
+
+"Logs are stored in ~/Library/Logs/TVShows/" = "يتم تخزين السجلات في  ( /Library/Logs/TVShows/~)";
+
+"RSS Feed Information:" = "معلومات الخلاصات (RSS) :";
+
+"Rating:" = "التقييم :";
+
+/* This string is on a small button, it stands for "Reset Warnings" */
+"Reset Warn." = "تهيئة التحذيرات.";
+
+"Save each show in its own folder" = "حفظ كل مسلسل في المجلد الخاص به";
+
+/* This string is on a button. */
+"Save" = "حفظ";
+
+"Search" = "بحث";
+
+/* This string is on a button. */
+"Sign In" = "تسجيل دخول";
+
+/* This string is on a button. */
+"Sign Out" = "تسجيل الخروج";
+
+"Never" = "مطلقا";
+
+"Next Episode" = "الحلقة القادمة";
+
+/* This string is split, the full version is "Start subscription with: Next aired episode" */
+"Next aired episode" = "الحلقة القادمة";
+
+/* Title of a column in a table. */
+"Season" = "الموسم";
+
+"No" = "لا";
+
+"Select a preset show from showRSS" = "اختر مسلسل سابق من showRSS";
+
+"No activity has been logged yet. Have you recently installed TVShows?" = "لم يتم تسجيل أي نشاط حتى الان. هل لقد قمت مؤخرا بتثبيت TVShows؟";
+
+"Password:" = "كلمة السر:";
+
+"Please choose one of the following actions:" = "الرجاء اختيار أحد الإجراءات التالية :";
+
+"Send Growl notifications when…" = "اعرض تنبيهات (Growl) عند...";
+
+"No actual videos are downloaded by TVShows, only torrents which will require other programs to use. It is up to you, the user, to decide the legality of using any of the files downloaded by this application, in accordance with applicable copyright laws of you country." = "لا يتم تحميل الفيديو من خلال TVShows، فقط عن طريق التورنت (torrents) وسوف تحتاج إلى برامج أخرى لاستخدامها. الأمر يرجع إليك للبت في شرعية استخدام أي من الملفات التي تم تحميلها من قبل هذا التطبيق ، وفقا لقوانين حقوق النشر المعمول بها في بلدك.";
+
+"Status" = "الحالة";
+
+"No description was found for this show." = "لم يتم العثور على الوصف لهذا المسلسل.";
+
+/* This string is on a button. */
+"Submit Feedback" = "قدم اقتراح";
+
+/* This string is on a button. */
+"Subscribe" = "متابعة";
+
+"Subscriptions" = "المتابعات";
+
+/* This string is split, the full version is "Start subscription with: Next aired episode" or "Start subscription with: This episode: My Show S01E01" */
+"Start subscription with:" = "بدء الاشتراك من :";
+
+"Sync" = "مزامنة";
+
+"Sync shows between Miso and TVShows" = "مزامنة المسلسلات بين (Miso) و (TVShows)";
+
+"The check-in will be made when the download starts. This is not advisable, but it could allow you to sync episode downloads across several computers." = "تأكيد التنزيل ينشئ في حين بدأ التحميل. هذا الخيار ليس مستحسن ، لكنها قد تسمح لك لمزامنة تنزيلات الحلقة عبر العديد من أجهزة الكمبيوتر.";
+
+"The file may not be released yet. Please try again later or check your internet connection. Alternatively you can download the SD version." = "قد لا يكون الملف اصدر بعد. يرجى المحاولة مرة أخرى لاحقا أو تحقق من اتصال الإنترنت الخاص بك. بدلا من ذلك يمكنك تحميل النسخة SD.";
+
+/* Disclaimer for a destructive action */
+"This action cannot be undone." = "لا يمكن التراجع عن هذا الإجراء.";
+
+/* This string is split, the full version is "Start subscription with: This episode: My Show S01E01" */
+"This episode:" = "هذه الحلقة :";
+
+"TVDB id" = "حساب TVDB";
+
+/* Title of an error message or Growl notification. */
+"TVShows Update Available" = "تحديث جديد لـ TVShows";
+
+/* Title of an error message or Growl notification. */
+"TVShows Update Downloading" = "تحميل تحديث لـ TVShows";
+
+/* The %@ will be replaced by the name of the torrent file. */
+"Unable to download %@" = "غير قادر على تحميل ٪ @";
+
+/* The %@ will be replaced by the name of the torrent file. */
+"Unable to find an HD torrent for %@" = "غير قادر على العثور على HD تورنت (torrent) لـ ٪ @";
+
+/* Title of an error message or Growl notification. */
+"Unable to Update the Show List" = "غير قادر على تحديث قائمة المسلسلات";
+
+/* This string is on a button. */
+"Unsubscribe" = "إلغاء المتابعة";
+
+/* Title of an error message or Growl notification. */
+"Update Installed Automatically" = "تثبيت التحديثات تلقائيا";
+
+"User Name:" = "اسم المستخدم :";
+
+"Show TVShows status in the menu bar" = "اظهار حالة TVShows في شريط القوائم";
+
+/* This string refers to the default episode quality to download (Standard/High Definition). */
+"Standard" = "قياسي";
+
+/* This string is on a button. */
+"View on TV.com" = "عرض على TV.com";
+
+"… a new episode is downloaded." = "... يتم تحميل حلقة جديدة.";
+
+"Recently Logged Activity" = "النشاط المسجل مؤخرا";
+
+"… a new version of TVShows is released." = "... صدور نسخة جديدة من TVShows.";
+
+/* This string is on a button. */
+"Uninstall" = "حذف البرنامج";
+
+"Uninstall TVShows" = "حذف TVShows";
+
+"Unknown" = "غير معروف";
+
+"Updating Show Information…" = "تحديث معلومات المسلسل...";
+
+"Use additional sources for HD (may contain rars)" = "استخدام مصادر إضافية للـ HD (قد تحتوي على ملفات مضغوطة (rar) )";
+
+"View Logs" = "عرض السجلات";
+
+"Visit Miso" = "زيارة Miso";
+
+"Warnings restored" = "استعادة التحذيرات";
+
+"Website" = "الموقع";
+
+"Why try it?" = "لماذا تحاول ذلك؟";
+
+"Yes" = "نعم";
+
+"Your preferences about warnings were restored. If needed, next time TVShows will ask for your confirmation to complete a sensitive operation." = "تم استعادة خصائص التحذيرات. إذا لزم الأمر، سيتم طلب تأكيد لإكمال عملية حساسة في المرة القادمة.";
+
+"Your subscriptions will be backed up in the cloud and they can be synced between different computers." = "متابعاتك سيتم تخزينها سحابيا (cloud)، ويمكن مزامنتها ما بين أجهزة كمبيوتر مختلفة.";
+
+"Your TVShows subscriptions will be automatically synced with your followed shows on Miso. Only airings shows known by TVShows will be synced." = "متابعاتك على TVShows سيتم مزامنتها تلقائيا مع المسلسلاتك التي تتابعها على Miso. فقط المسلسلات المستمرة في TVShows سيتم مزامنتها";
+

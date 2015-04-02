@@ -1,0 +1,345 @@
+"1 day" = "1 den";
+
+/* This string is used between a date and a time, e.g, 1/1/1 at 01:01am. */
+" at " = "v";
+
+"1 hour" = "1 hodina";
+
+"12 hours" = "12 hodin";
+
+"15 minutes" = "15 minut";
+
+"3 hours" = "3 hodiny";
+
+"30 minutes" = "30 minut";
+
+"6 hours" = "6 hodin";
+
+/* This refers to "All shows" */
+"All" = "Všechny";
+
+"A message is logged each time new episodes are checked for. Unless noted otherwise, no new episodes were found." = "Při každém ověření dostupnosti nové epizody se vytváří záznam. Pokud není uvedeno jinak, nebyly nalezeny žádné nové epizody.";
+
+/* The %@ will be replaced by the name of the show. */
+"A new episode of %@ is being downloaded." = "Stahuji novou epizodu pořadu %@.";
+
+"A new version of TVShows is available for download." = "Ke stažení je dostupná nová verze TVShows";
+
+"A new version of TVShows is being downloaded and installed." = "Stahuji a instaluji novou verzi TVShows.";
+
+"A newer show list cannot be found. Using an old show list temporarily." = "Novější seznam pořadů nebyl nalezen. Prozatím bude použit starý seznam pořadů.";
+
+"A show list cannot be found. Please try again later or check your internet connection." = "Nelze nalézt seznam pořadů. Zkuste to prosím později znovu, nebo zkontrolujte své připojení k internetu.";
+
+"About" = "O aplikaci";
+
+"Add a custom RSS source" = "Přidat vlastní RSS zdroj";
+
+/* This string is on a button. */
+"Add Custom RSS" = "Přidat vlastní RSS";
+
+/* This string is on a button. */
+"Add Show" = "Přidat pořad";
+
+/* Title of an error message or Growl notification. */
+"An Error Has Occurred" = "Vyskytla se chyba";
+
+"An unknown error has occurred. Please try again later." = "Nastala neznámá chyba. Zkuste to prosím později znovu.";
+
+"An update for TVShows has been installed automatically. To disable this feature go to the Preferences tab and uncheck 'Automatically install new updates.'" = "Aktualizace TVShows byla nainstalována automaticky. Pokud chcete tuto funkci zakázat, přejděte na záložku Nastavení a odškrtňěte políčko s popiskem „Instalovat nové aktualizace automaticky.“";
+
+"Application Update Preferences" = "Nastavení aktualizací aplikace";
+
+"Automatic check-in when an episode is downloaded" = "Automatický check-in ve chvíli, kdy je stažena nová epizoda";
+
+"Automatically check for updates" = "Kontrolovat aktualizace automaticky";
+
+"Automatically install new updates" = "Instalovat nové aktualizace automaticky";
+
+"Automatically open each file after download" = "Po stažení každý torrent soubor automaticky otevřít";
+
+"Are you sure you want to uninstall TVShows? This will also remove all preferences and subscriptions." = "Jste si jistí, že chcete odinstalovat TVShows? Odstraní se tím také veškerá nastavení a odběry.";
+
+/* The %@ will be replaced by the name of the show. */
+"Are you sure you want to unsubscribe from %@?" = "Opravdu chcete zrušit odběr %@?";
+
+/* This string is on a button. */
+"Cancel" = "Zrušit";
+
+"Cannot connect. Please try again later or check your internet connection" = "Nelze se připojit. Zkuste to prosím později znova, nebo zkontrolujte své připojení k internetu.";
+
+"Cannot connect. Using an old show list temporarily." = "Nelze se připojit. Prozatím bude použit starý seznam pořadů.";
+
+"Check for episodes every:" = "Zkontrolovat epizody jednou za:";
+
+/* This string is on a button. */
+"Check for new episodes now" = "Zkontrolovat dostupnost nových epizod";
+
+/* This string is on a button. */
+"Check Now" = "Ihned";
+
+"Checking for new episodes..." = "Kontrola dostupnosti nových epizod ...";
+
+"Checking now, please wait..." = "Právě kontroluji, čekejte prosím ...";
+
+"Choose this to download torrent files from a list of preset shows." = "Zvolte, pokud chcete stahovat soubory torrent ze seznamu přednastavených pořadů.";
+
+/* This string is on a button. */
+"Close" = "Zavřít";
+
+/* This string is on a button. */
+"Create New Account" = "Nový účet";
+
+"Create season subfolders" = "Vytvářet podadresáře jednotlivých řad";
+
+"Disable TVShows" = "Zakázat TVShows";
+
+"Download beta versions when available" = "V případě dostupnosti stahovat betaverze";
+
+"Download in HD" = "Stahovat v HD";
+
+"Choose this to input your own RSS feed." = "Zvolte, pokud chcete vložit váš vlastní RSS kanál.";
+
+"Enable downloading new episodes" = "Povolit stahování nových epizod";
+
+/* This refers to "Enabled shows" */
+"Enabled" = "Povolené";
+
+/* Status of the current show when it is airing. It is shown in a label as "Status: Continuing" */
+"Continuing" = "Pokračování";
+
+/* This refers to "Custom shows" */
+"Custom" = "Vlastní";
+
+/* Title of a column in a table. */
+"Episode" = "Epizoda";
+
+"Default video quality:" = "Výchozí kvalita videa:";
+
+/* This refers to "Disabled shows" */
+"Disabled" = "Zakázané";
+
+"Donate" = "Darujte $";
+
+"Download Preferences" = "Možnosti stahování";
+
+/* This string is on a button. */
+"Edit" = "Upravit";
+
+/* Title of a column in a table. */
+"Episode Name" = "Název epizody";
+
+"Episode naming convention:" = "Vzor pojmenovávání epizod:";
+
+"Episode save location:" = "Ukládat epizody do:";
+
+"Feed" = "Kanál";
+
+"Feed URLs" = "Adresy odběrů";
+
+"Download HD versions by default" = "Vždy stahovat HD verze pořadů";
+
+"General Settings" = "Obecná nastavení";
+
+"Growl Settings" = "Nastavení Growlu";
+
+"I am already a Miso user" = "Používám Miso";
+
+"Include anonymous system information" = "Připojovat anonymní systémové informace";
+
+"Info" = "Info";
+
+"Ended" = "Konec";
+
+"Last Aired" = "Naposledy odvysíláno";
+
+"Last Downloaded" = "Naposledy staženo";
+
+"Miso is a social network made for people that love watching TV shows." = "Miso je sociální síť určená lidem, kteří zbožňují sledování seriálů.";
+
+/* This string is on a button. */
+"More Info" = "Podrobnosti";
+
+/* This string is on a button. */
+"More Shows" = "Další pořady";
+
+"Getting Started" = "Začínáme";
+
+"Name" = "Název";
+
+/* This string is on a very narrow button, max 3 charaters (use a dot after that like "Des." in Spanish instead of "Desactivado") */
+"Off" = "Off";
+
+/* This string refers to the default episode quality to download (Standard/High Definition). */
+"High Definition" = "Vysoké rozlišení";
+
+/* This string is on a button. */
+"Ok" = "OK";
+
+/* This string is on a very narrow button, max 3 charaters (use a dot after that like "Act." in Spanish instead of "Activado") */
+"On" = "On";
+
+"Only download items matching the following rules:" = "Stahovat pouze položky splňující tato pravidla:";
+
+/* To select a custom folder not listed. */
+"Other..." = "Jiný...";
+
+"Please Select a Show:" = "Prosím zvolte pořad:";
+
+"Last Checked:" = "Naposledy zkontrolováno:";
+
+"Prioritize Magnet links (select this if The Pirate Bay is blocked)" = "Dát přednost Magnet odkazům (zvolte v případě, že je blokována The Pirate Bay)";
+
+"Preferences" = "Nastavení";
+
+/* This refers to "Preset shows" */
+"Preset" = "Nastavené";
+
+/* Title of a column in a table. */
+"Published Date" = "Datum zveřejnění";
+
+"Logs are stored in ~/Library/Logs/TVShows/" = "Záznamy jsou uloženy v ~/Library/Logs/TVShows/";
+
+"RSS Feed Information:" = "Informace o RSS kanálu:";
+
+"Rating:" = "Hodnocení:";
+
+/* This string is on a small button, it stands for "Reset Warnings" */
+"Reset Warn." = "Reset zpráv";
+
+"Save each show in its own folder" = "Ukládat každý pořad do vlastní složky";
+
+/* This string is on a button. */
+"Save" = "Uložit";
+
+"Search" = "Hledat";
+
+/* This string is on a button. */
+"Sign In" = "Přihlásit";
+
+/* This string is on a button. */
+"Sign Out" = "Odhlásit";
+
+"Never" = "Nikdy";
+
+"Next Episode" = "Další epizoda";
+
+/* This string is split, the full version is "Start subscription with: Next aired episode" */
+"Next aired episode" = "příští vysílanou epizodou";
+
+/* Title of a column in a table. */
+"Season" = "Řada";
+
+"No" = "Žádné";
+
+"Select a preset show from showRSS" = "Zvolit přednastavený pořad ze showRSS";
+
+"No activity has been logged yet. Have you recently installed TVShows?" = "Zatím nebyla zaznamenána žádná aktivita. Nainstalovali jste TVShows terprve nedávno?";
+
+"Password:" = "Heslo:";
+
+"Please choose one of the following actions:" = "Zvolte prosím jednu z následujících možností:";
+
+"Send Growl notifications when…" = "Zobrazit Growl oznámení vždy, když...";
+
+"No actual videos are downloaded by TVShows, only torrents which will require other programs to use. It is up to you, the user, to decide the legality of using any of the files downloaded by this application, in accordance with applicable copyright laws of you country." = "TVShows nestahují žádná videa, pouze torrenty, pro jejichž použití je třeba jiných programů. Je pouze na vás jako uživateli, abyste zvážil legálnost použití kteréhokoli ze souborů stažených touto aplikací, podle použitelných autorských zákonů vaší země.";
+
+"Status" = "Status";
+
+"No description was found for this show." = "Pro tento pořad nebyl nalezen žádný popis.";
+
+/* This string is on a button. */
+"Submit Feedback" = "Poslat odezvu";
+
+/* This string is on a button. */
+"Subscribe" = "Odebírat";
+
+"Subscribed" = "Odebíráno";
+
+"Subscriptions" = "Odběry";
+
+/* This string is split, the full version is "Start subscription with: Next aired episode" or "Start subscription with: This episode: My Show S01E01" */
+"Start subscription with:" = "Zahájit odběr:";
+
+"Sync" = "Synchronizovat";
+
+"Sync shows between Miso and TVShows" = "Synchronizovat pořady v Miso i v TVShows";
+
+"The check-in will be made when the download starts. This is not advisable, but it could allow you to sync episode downloads across several computers." = "Check-in se uskuteční ve chvíli, kdy se spustí stahování. Toto nastavení nedoporučujeme, ale umožní vám synchronizovat stahování epizod napříč několika počítači.";
+
+"The file may not be released yet. Please try again later or check your internet connection. Alternatively you can download the SD version." = "Soubor ještě nebyl zveřejněn. Zkuste to znovu později, nebo zkontrolujte své připojení k internetu. Případně můžete stáhnout SD verzi.";
+
+/* Disclaimer for a destructive action */
+"This action cannot be undone." = "Tento příkaz nelze vzít zpět.";
+
+/* This string is split, the full version is "Start subscription with: This episode: My Show S01E01" */
+"This episode:" = "epizodou:";
+
+"TVDB id" = "TVDB id";
+
+/* Title of an error message or Growl notification. */
+"TVShows Update Available" = "Je dostupná aktualizace TVShows";
+
+/* Title of an error message or Growl notification. */
+"TVShows Update Downloading" = "Stahuji aktualizaci TVShows";
+
+/* The %@ will be replaced by the name of the torrent file. */
+"Unable to download %@" = "Nelze stáhnout %@";
+
+/* The %@ will be replaced by the name of the torrent file. */
+"Unable to find an HD torrent for %@" = "Nelze nalézt HD torrent %@";
+
+/* Title of an error message or Growl notification. */
+"Unable to Update the Show List" = "Nelze aktualizovat seznam pořadů";
+
+/* This string is on a button. */
+"Unsubscribe" = "Neodebírat";
+
+/* Title of an error message or Growl notification. */
+"Update Installed Automatically" = "Aktualizace byla nainstalována automaticky";
+
+"User Name:" = "Uživatelské jméno:";
+
+"Show TVShows status in the menu bar" = "Zobrazovat stav TVShows v horní liště";
+
+/* This string refers to the default episode quality to download (Standard/High Definition). */
+"Standard" = "Standardní rozlišení";
+
+/* This string is on a button. */
+"View on TV.com" = "Zobrazit na TV.com";
+
+"… a new episode is downloaded." = "je stažena nová epizoda.";
+
+"Recently Logged Activity" = "Poslední zaznamenaná aktivita";
+
+"… a new version of TVShows is released." = "je zveřejněna nová verze TVShows.";
+
+/* This string is on a button. */
+"Uninstall" = "Odinstalovat";
+
+"Uninstall TVShows" = "Odinstalovat TVShows";
+
+"Unknown" = "Neznámé";
+
+"Updating Show Information…" = "Aktualizuji informace o pořadu...";
+
+"Use additional sources for HD (may contain rars)" = "Používat další zdroje HD (mohou obsahovat soubory RAR)";
+
+"View Logs" = "Záznamy";
+
+"Visit Miso" = "Otevřít Miso";
+
+"Warnings restored" = "Upozornění obnovena";
+
+"Website" = "Web";
+
+"Why try it?" = "Vyzkoušet?";
+
+"Yes" = "Ano";
+
+"Your preferences about warnings were restored. If needed, next time TVShows will ask for your confirmation to complete a sensitive operation." = "Nastavení vašich upozornění bylo obnoveno. Pokud to bude třeba, TVShows vás příště požádá o svolení k dokončení citlivých úkonů.";
+
+"Your subscriptions will be backed up in the cloud and they can be synced between different computers." = "Vaše odběry budou zálohovány v cloudu a lze je synchronizovat napříč různými počítači.";
+
+"Your TVShows subscriptions will be automatically synced with your followed shows on Miso. Only airings shows known by TVShows will be synced." = "Vaše odběry v TVShows budou automaticky synchronizovány s vašimi pořady na Miso. Synchronizovat se budou pouze odvysílané pořady, které TVShows zná.";
+

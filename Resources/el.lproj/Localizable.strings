@@ -1,0 +1,344 @@
+"1 day" = "1 ημέρα";
+
+/* This string is used between a date and a time, e.g, 1/1/1 at 01:01am. */
+" at " = " στις ";
+
+"1 hour" = "1 ώρα";
+
+"12 hours" = "12 ώρες";
+
+"15 minutes" = "15 λεπτά";
+
+"3 hours" = "3 ώρες";
+
+"30 minutes" = "30 λεπτά";
+
+"6 hours" = "6 ώρες";
+
+/* This refers to "All shows" */
+"All" = "Όλες";
+
+"A message is logged each time new episodes are checked for. Unless noted otherwise, no new episodes were found." = "Ένα μήνυμα καταγράφεται κάθε φορά που γίνεται έλεγχος για νέα επεισόδια.\nΑν δεν αναφερθεί κάτι, δεν βρέθηκαν νέα επεισόδια.";
+
+/* The %@ will be replaced by the name of the show. */
+"A new episode of %@ is being downloaded." = "Κατεβαίνει ένα νέο επεισόδιο του %@.";
+
+"A new version of TVShows is available for download." = "Μια νέα έκδοση του TVShows είναι διαθέσιμη για λήψη.";
+
+"A new version of TVShows is being downloaded and installed." = "Μια νέα έκδοση του TVShows λαμβάνετε και εγκαθιστάτε.";
+
+"A newer show list cannot be found. Using an old show list temporarily." = "Αδυναμία εύρεσης λίστας σειρών. Χρησιμοποιείται προσωρινά μια παλιά λίστα.";
+
+"A show list cannot be found. Please try again later or check your internet connection." = "Αδυναμία εύρεσης λίστας σειρών. Παρακαλώ δοκιμάστε αργότερα ή ελέγξτε τη σύνδεσή σας στο Internet.";
+
+"About" = "Σχετικά";
+
+"Add a custom RSS source" = "Ροή RSS";
+
+/* This string is on a button. */
+"Add Custom RSS" = "Ροή RSS";
+
+/* This string is on a button. */
+"Add Show" = "Προσθήκη Σειράς";
+
+/* Title of an error message or Growl notification. */
+"An Error Has Occurred" = "Προέκυψε ένα σφάλμα";
+
+"An unknown error has occurred. Please try again later." = "Προέκυψε άγνωστο σφάλμα. Παρακαλώ δοκιμάστε αργότερα.";
+
+"An update for TVShows has been installed automatically. To disable this feature go to the Preferences tab and uncheck 'Automatically install new updates.'" = "Μια ενημερωμένη έκδοση για το TVShows έχει αυτόματα εγκατασταθεί. Για να απενεργοποιήσετε αυτό το χαρακτηριστικό μεταβείτε στην καρτέλα Προτιμήσεις και καταργήστε την επιλογή «αυτόματη εγκατάσταση νέων ενημερώσεων».";
+
+"Application Update Preferences" = "Προτιμήσεις Ενημέρωσης Εφαρμογής";
+
+"Automatic check-in when an episode is downloaded" = "Αυτόματο check-in, όταν ένα επεισόδιο έχει κατέβει";
+
+"Automatically check for updates" = "Αυτόματος έλεγχος για ενημερώσεις";
+
+"Automatically install new updates" = "Αυτόματη εγκατάσταση νέων ενημερώσεων";
+
+"Automatically open each file after download" = "Αυτόματο άνοιγμα κάθε αρχείου Torrent μετά τη λήψη";
+
+"Are you sure you want to uninstall TVShows? This will also remove all preferences and subscriptions." = "Είστε σίγουροι ότι θέλετε να καταργήσετε το TVShows; Θα αφαιρεθούν επίσης όλες οι προτιμήσεις και τις συνδρομές.";
+
+/* The %@ will be replaced by the name of the show. */
+"Are you sure you want to unsubscribe from %@?" = "Είστε σίγουροι ότι θέλετε να διαγραφείτε από τη σειρά %@;";
+
+/* This string is on a button. */
+"Cancel" = "Ακύρωση";
+
+"Cannot connect. Please try again later or check your internet connection" = "Δεν ήταν δυνατή η σύνδεση. Παρακαλώ δοκιμάστε αργότερα ή ελέγξτε τη σύνδεσή σας στο Internet.";
+
+"Cannot connect. Using an old show list temporarily." = "Αδυναμία σύνδεσης. Χρησιμοποιείται προσωρινά μια παλιά λίστα σειρών.";
+
+"Check for episodes every:" = "Έλεγχος για επεισόδια ανά:";
+
+/* This string is on a button. */
+"Check for new episodes now" = "Έλεγχος για νέα επεισόδια τώρα";
+
+/* This string is on a button. */
+"Check Now" = "Έλεγχος";
+
+"Checking for new episodes..." = "Γίνεται έλεγχος για νέα επεισόδια ...";
+
+"Checking now, please wait..." = "Γίνεται λεγχος, παρακαλώ περιμένετε ...";
+
+"Choose this to download torrent files from a list of preset shows." = "Επιλέξτε για να κατεβάζετε αρχεία torrent από μια λίστα με τα προκαθορισμένα επεισόδια.";
+
+/* This string is on a button. */
+"Close" = "Κλείσιμο";
+
+/* This string is on a button. */
+"Create New Account" = "Δημιουργία νέου λογαριασμού";
+
+"Create season subfolders" = "Δημιουργία υποφακέλων ανα σεζόν";
+
+"Disable TVShows" = "Απενεργοποίηση του TVShows";
+
+"Download beta versions when available" = "Κατέβασμα δοκιμαστικών εκδόσεων";
+
+"Download in HD" = "Λήψη σε HD";
+
+"Choose this to input your own RSS feed." = "Επιλέξτε εδώ για να εισάγετε το δικό σας RSS Feed.";
+
+"Enable downloading new episodes" = "Ενεργοποιήστε τη λήψη νέων επεισοδίων";
+
+/* This refers to "Enabled shows" */
+"Enabled" = "Ενεργοποίηση";
+
+/* Status of the current show when it is airing. It is shown in a label as "Status: Continuing" */
+"Continuing" = "Συνεχίζεται";
+
+/* This refers to "Custom shows" */
+"Custom" = "Προσαρμοσμένο";
+
+/* Title of a column in a table. */
+"Episode" = "Επεισόδιο";
+
+"Default video quality:" = "Προεπιλεγμένη ποιότητα βίντεο:";
+
+/* This refers to "Disabled shows" */
+"Disabled" = "Απενεργοποίηση";
+
+"Donate" = "Εισφορές";
+
+"Download Preferences" = "Προτιμήσεις Λήψεων";
+
+/* This string is on a button. */
+"Edit" = "Επεξεργασία";
+
+/* Title of a column in a table. */
+"Episode Name" = "Όνομα Επεισοδίου";
+
+"Episode naming convention:" = "Τύπος ονομασίας επεισοδίων:";
+
+"Episode save location:" = "Τοποθεσία αποθήκευσης:";
+
+"Feed" = "Ροή";
+
+"Feed URLs" = "URLs ροής";
+
+"Download HD versions by default" = "Κατεβάστε εκδόσεις HD ως προεπιλογή";
+
+"General Settings" = "Γενικές ρυθμίσεις";
+
+"Growl Settings" = "Ρυθμίσεις Growl";
+
+"I am already a Miso user" = "Είμαι ήδη χρήστης του Miso";
+
+"Include anonymous system information" = "Συμπεριλάβετε ανώνυμες πληροφορίες συστήματος";
+
+"Info" = "Πληροφορίες";
+
+"Ended" = "Τερματίστηκε";
+
+"Last Aired" = "Τελευταία Προβολή";
+
+"Last Downloaded" = "Τελευταία Λήψη";
+
+"Miso is a social network made for people that love watching TV shows." = "Το Miso είναι ένα κοινωνικό δίκτυο για τους ανθρώπους που λατρεύουν να παρακολουθούν τηλεοπτικές εκπομπές.";
+
+/* This string is on a button. */
+"More Info" = "Περισσότερα...";
+
+/* This string is on a button. */
+"More Shows" = "Περισσότερες σειρές";
+
+"Getting Started" = "Ξεκινώντας";
+
+"Name" = "Όνομα";
+
+/* This string is on a very narrow button, max 3 charaters (use a dot after that like "Des." in Spanish instead of "Desactivado") */
+"Off" = "Ανε.";
+
+/* This string refers to the default episode quality to download (Standard/High Definition). */
+"High Definition" = "Υψηλής Ευκρίνειας";
+
+/* This string is on a button. */
+"Ok" = "Εντάξει";
+
+/* This string is on a very narrow button, max 3 charaters (use a dot after that like "Act." in Spanish instead of "Activado") */
+"On" = "Ενε.";
+
+"Only download items matching the following rules:" = "Κατέβασε όσα ταιριάζουν με τους ακόλουθους κανόνες:";
+
+/* To select a custom folder not listed. */
+"Other..." = "Άλλα ...";
+
+"Please Select a Show:" = "Παρακαλώ επιλέξτε μια σειρά:";
+
+"Last Checked:" = "Τελευταίος έλεγχος:";
+
+"Prioritize Magnet links (select this if The Pirate Bay is blocked)" = "Προτεραιότητα σε Magnet συνδέσμους (το Pirate Bay είναι μπλοκαρισμένο)";
+
+"Preferences" = "Προτιμήσεις";
+
+/* This refers to "Preset shows" */
+"Preset" = "Προκαθορισμένα";
+
+/* Title of a column in a table. */
+"Published Date" = "Ημερομηνία Έκδοσης";
+
+"Logs are stored in ~/Library/Logs/TVShows/" = "Τα Logs αποθηκεύονται στο ~/Library/Logs/TVShows /";
+
+"RSS Feed Information:" = "Πληροφορίες Ροής RSS:";
+
+"Rating:" = "Βαθμολογία:";
+
+/* This string is on a small button, it stands for "Reset Warnings" */
+"Reset Warn." = "Επαναφορά προειδοποιήσεων";
+
+"Save each show in its own folder" = "Αποθήκευση κάθε σειράς σε δικό της φάκελο";
+
+/* This string is on a button. */
+"Save" = "Αποθήκευση";
+
+"Search" = "Αναζήτηση";
+
+/* This string is on a button. */
+"Sign In" = "Σύνδεση";
+
+/* This string is on a button. */
+"Sign Out" = "Αποσύνδεση";
+
+"Never" = "Ποτέ";
+
+"Next Episode" = "Επόμενο επεισόδιο";
+
+/* This string is split, the full version is "Start subscription with: Next aired episode" */
+"Next aired episode" = "Επόμενη προβολή επεισοδίου";
+
+/* Title of a column in a table. */
+"Season" = "Σεζόν";
+
+"No" = "Όχι";
+
+"Select a preset show from showRSS" = "Επιλέξτε μια προκαθορισμένη σειρά από το showRSS";
+
+"No activity has been logged yet. Have you recently installed TVShows?" = "Δεν έχει καταγραφεί καμία δραστηριότητα ακόμη. Το TVShows έχει εγκατασταθεί πρόσφατα;";
+
+"Password:" = "Κωδικός:";
+
+"Please choose one of the following actions:" = "Επιλέξτε μία από τις ακόλουθες ενέργειες:";
+
+"Send Growl notifications when…" = "Αποστολή κοινοποιήσεων στον Growl όταν ...";
+
+"No actual videos are downloaded by TVShows, only torrents which will require other programs to use. It is up to you, the user, to decide the legality of using any of the files downloaded by this application, in accordance with applicable copyright laws of you country." = "Τα επεισόδια δεν κατεβαίνουν από το TVShows, μόνο αρχεία torrent τα οποία απαιτούν άλλα προγράμματα για να λειτουργήσουν. Εξαρτάται από εσένα, τον χρήστη, το πως θα τα χρησιμοποιήσεις και σύμφωνα πάντα με την ισχύουσα νομοθεσία περί πνευματικών δικαιωμάτων της χώρας σας.";
+
+"Status" = "Κατάσταση";
+
+"No description was found for this show." = "Δεν βρέθηκε περιγραφή για αυτή τη σειρά.";
+
+/* This string is on a button. */
+"Submit Feedback" = "Σχόλια";
+
+/* This string is on a button. */
+"Subscribe" = "Εγγραφή";
+
+"Subscribed" = "Εγγραφή";
+
+"Subscriptions" = "Συνδρομές";
+
+/* This string is split, the full version is "Start subscription with: Next aired episode" or "Start subscription with: This episode: My Show S01E01" */
+"Start subscription with:" = "Έναρξη εγγραφής με:";
+
+"Sync" = "Συγχρονισμός";
+
+"Sync shows between Miso and TVShows" = "Συγχρονισμός σειρών μεταξύ Miso και TVShows";
+
+"The check-in will be made when the download starts. This is not advisable, but it could allow you to sync episode downloads across several computers." = "Το check-in θα γίνει όταν αρχίσει το κατέβασμα. Αυτό δεν είναι προτεινόμενο, αλλά μπορεί να βοηθήσει στο να συγχρονίσετε το κατέβασμα των επεισοδίων σας σε άλλους υπολογιστές.";
+
+"The file may not be released yet. Please try again later or check your internet connection. Alternatively you can download the SD version." = "Το αρχείο μπορεί να μην έχει κυκλοφορήσει ακόμη. Παρακαλώ δοκιμάστε αργότερα ή ελέγξτε τη σύνδεσή σας στο Internet. Εναλλακτικά μπορείτε να κατεβάσετε την SD έκδοση.";
+
+/* Disclaimer for a destructive action */
+"This action cannot be undone." = "Αυτή η ενέργεια δεν μπορεί να αναιρεθεί.";
+
+/* This string is split, the full version is "Start subscription with: This episode: My Show S01E01" */
+"This episode:" = "Αυτό το επεισόδιο:";
+
+"TVDB id" = "TVDB id";
+
+/* Title of an error message or Growl notification. */
+"TVShows Update Available" = "Μια νέα ενημέρωση TVShows είναι διαθέσιμη";
+
+/* Title of an error message or Growl notification. */
+"TVShows Update Downloading" = "Το TVShows λαμβάνει ενημερώσεις";
+
+/* The %@ will be replaced by the name of the torrent file. */
+"Unable to download %@" = "Δεν ήταν δυνατή η λήψη του %@";
+
+/* The %@ will be replaced by the name of the torrent file. */
+"Unable to find an HD torrent for %@" = "Δεν ήταν δυνατή εύρεση HD έκδοσης του %@";
+
+/* Title of an error message or Growl notification. */
+"Unable to Update the Show List" = "Αδυναμία ενημέρωσης λίστας σειρών";
+
+/* This string is on a button. */
+"Unsubscribe" = "Διαγραφή";
+
+/* Title of an error message or Growl notification. */
+"Update Installed Automatically" = "Οι ενημερώσεις έχουν εγκατασταθεί αυτόματα";
+
+"User Name:" = "Χρήστης:";
+
+"Show TVShows status in the menu bar" = "Εμφάνιση του TVShows στη γραμμή μενού";
+
+/* This string refers to the default episode quality to download (Standard/High Definition). */
+"Standard" = "Κανονικό";
+
+/* This string is on a button. */
+"View on TV.com" = "Δείτε στο TV.com";
+
+"… a new episode is downloaded." = "... γίνεται λήψη ενός νέου επεισοδίου.";
+
+"Recently Logged Activity" = "Πρόσφατα καταγραμμένη δραστηριότητα.";
+
+"… a new version of TVShows is released." = "... μια νέα έκδοση του TVShows έχει δημοσιευθεί.";
+
+/* This string is on a button. */
+"Uninstall" = "Απεγκατάσταση";
+
+"Uninstall TVShows" = "Απεγκατάσταση του TVShows";
+
+"Unknown" = "Άγνωστο";
+
+"Updating Show Information…" = "Ενημέρωση πληροφοριών σειράς..";
+
+"Use additional sources for HD (may contain rars)" = "Χρησιμοποιήστε πρόσθετες πηγές για HD";
+
+"View Logs" = "Αρχείο";
+
+"Visit Miso" = "Επισκεφθείτε το Miso";
+
+"Warnings restored" = "Αποκατάσταση προειδοποιήσεων";
+
+"Website" = "Ιστοσελίδα";
+
+"Why try it?" = "Γιατί να το δοκιμάσετε;";
+
+"Yes" = "Ναι";
+
+"Your preferences about warnings were restored. If needed, next time TVShows will ask for your confirmation to complete a sensitive operation." = "Οι προτιμήσεις σας σχετικά με τις προειδοποιήσεις αποκαταστάθηκαν. Εάν χρειαστεί, την επόμενη φορά το TVShows θα ζητήσει την επιβεβαίωσή σας για να ολοκληρώσετε μια ευαίσθητη λειτουργία.";
+
+"Your subscriptions will be backed up in the cloud and they can be synced between different computers." = "Οι συνδρομές αποθηκεύονται στο σύννεφο και συγχρονίζονται σε διαφορετικούς υπολογιστές.";
+
+"Your TVShows subscriptions will be automatically synced with your followed shows on Miso. Only airings shows known by TVShows will be synced." = "Οι συνδρομές σας στο TVShows θα συγχρονίζονται αυτόματα στο Miso. Μόνο airings δείχνει γνωστό από TVShows θα συγχρονιστεί. Θα συγχρονίζονται μόνο οι σειρές που υποστηρίζονται από το TVShows.";

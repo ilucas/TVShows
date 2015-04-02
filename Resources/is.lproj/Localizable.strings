@@ -1,0 +1,171 @@
+"1 day" = "1 dagur";
+
+"1 hour" = "1 klukkustund";
+
+"12 hours" = "12 klukkustundir";
+
+"15 minutes" = "15 mínútur";
+
+"3 hours" = "3 klukkustundir";
+
+"30 minutes" = "30 mínútur";
+
+"6 hours" = "6 klukkustundir";
+
+/* The %@ will be replaced by the name of the show. */
+"A new episode of %@ is being downloaded." = "Verið er að sækja nýjan þátt af %@.";
+
+"A new version of TVShows is available for download." = "Ný útgáfa af TVShows er í boði.";
+
+"A new version of TVShows is being downloaded and installed." = "Verið er að sækja og setja upp nýja útgáfu af TVShows";
+
+"A newer show list cannot be found. Using an old show list temporarily." = "Fann ekki nýrri þáttalista. Notast við gamlan lista til bráðabirgða.";
+
+"A show list cannot be found. Please try again later or check your internet connection." = "Listi yfir þætti fannst ekki. Reyndu síðar eða athugaðu nettenginguna.";
+
+"About" = "Um";
+
+"Add a custom RSS source" = "Bæta við sérsniðinni RSS uppsprettu";
+
+/* Title of an error message or Growl notification. */
+"An Error Has Occurred" = "Villa kom upp";
+
+"An unknown error has occurred. Please try again later." = "Óvænt villa kom upp. Visamlegast reyndu aftur síðar.";
+
+"An update for TVShows has been installed automatically. To disable this feature go to the Preferences tab and uncheck 'Automatically install new updates.'" = "TVShows hefur verið uppfært. Til að slökkva á þessari hegðun er farið í Preferences flipann og afhakað við 'Setja sjálfkrafa upp uppfærslur'";
+
+"Application Update Preferences" = "Uppfærslustillingar";
+
+"Automatically check for updates" = "Athuga sjálfkrafa með uppfærslur";
+
+"Automatically install new updates" = "Setja sjálfkrafa upp uppfærslur";
+
+"Automatically open each file after download" = "Opna skrá eftir að hún hefur verið sótt";
+
+/* This string is on a button. */
+"Cancel" = "Hætta við";
+
+"Cannot connect. Please try again later or check your internet connection" = "Tókst ekki að tengast. Reyndu síðar eða athugaðu nettenginguna.";
+
+"Cannot connect. Using an old show list temporarily." = "Tókst ekki að tengjast. Notast við gamlan lista tímabundið.";
+
+"Check for episodes every:" = "Athuga með nýja þætti:";
+
+/* This string is on a button. */
+"Check Now" = "Athuga núna";
+
+"Choose this to download torrent files from a list of preset shows." = "Veldu þetta til að sækja torrent skrár úr forstilltum lista.";
+
+/* This string is on a button. */
+"Close" = "Loka";
+
+"Download beta versions when available" = "Sækja beta útgáfur þegar þær eru í boði";
+
+"Download in HD" = "Sækja í háskerpugæðum";
+
+"Choose this to input your own RSS feed." = "Veldu þetta til að slá inn þína eigin RSS.";
+
+"Enable downloading new episodes" = "Leyfa að nýjir þættir séu sóttir";
+
+/* Title of a column in a table. */
+"Episode" = "Þáttur";
+
+"Default video quality:" = "Sjálfgefin myndgæði:";
+
+"Download Preferences" = "Niðurhalsstillingar";
+
+/* Title of a column in a table. */
+"Episode Name" = "Nafn þattar";
+
+"Episode save location:" = "Staðsetning til að vista þætti:";
+
+"Feed" = "Matari";
+
+"Growl Settings" = "Growl stillingar";
+
+"Include anonymous system information" = "Senda nafnlausar kerfisupplýsingar";
+
+"Info" = "Upplýsingar";
+
+"Last Aired" = "Síðast sýndur";
+
+"Last Downloaded" = "Siðast sótt";
+
+/* This string is on a button. */
+"More Info" = "Nánar";
+
+"Getting Started" = "Byrja hér";
+
+"Name" = "Nafn";
+
+/* This string is on a very narrow button, max 3 charaters (use a dot after that like "Des." in Spanish instead of "Desactivado") */
+"Off" = "Af";
+
+/* This string refers to the default episode quality to download (Standard/High Definition). */
+"High Definition" = "Háskerpa";
+
+/* This string is on a button. */
+"Ok" = "Ok";
+
+/* This string is on a very narrow button, max 3 charaters (use a dot after that like "Act." in Spanish instead of "Activado") */
+"On" = "Á";
+
+"Only download items matching the following rules:" = "Sækja bara hluti sem passa við eftirfarandi reglur:";
+
+"Please Select a Show:" = "Veldu þátt:";
+
+"Preferences" = "Stillingar";
+
+/* Title of a column in a table. */
+"Published Date" = "Dagsetning";
+
+"RSS Feed Information:" = "Upplýsingar um RSS matara:";
+
+"Rating:" = "Einkunn:";
+
+"Search" = "Leita";
+
+/* Title of a column in a table. */
+"Season" = "Sería";
+
+"Select a preset show from showRSS" = "Veldu þátt úr showRSS";
+
+"Please choose one of the following actions:" = "Veldu eina af eftirfarandi aðgerðum:";
+
+"Send Growl notifications when…" = "Sýna Growl skilaboð þegar…";
+
+"Status" = "Staða";
+
+/* This string is on a button. */
+"Submit Feedback" = "Senda álit";
+
+/* This string is on a button. */
+"Subscribe" = "Gerast áskrifandi";
+
+"Subscriptions" = "Áskriftir";
+
+/* Title of an error message or Growl notification. */
+"TVShows Update Available" = "Uppfærsla á TVShows er í boði.";
+
+/* Title of an error message or Growl notification. */
+"TVShows Update Downloading" = "Verið er að sækja uppfærslu á TVShows.";
+
+/* Title of an error message or Growl notification. */
+"Unable to Update the Show List" = "Tókst ekki að uppfæra þáttalista";
+
+/* This string is on a button. */
+"Unsubscribe" = "Hætta áskrift";
+
+/* Title of an error message or Growl notification. */
+"Update Installed Automatically" = "Uppfærsla var set up sjálfkrafa";
+
+/* This string refers to the default episode quality to download (Standard/High Definition). */
+"Standard" = "Hefðbundið";
+
+/* This string is on a button. */
+"View on TV.com" = "Skoða á TV.com";
+
+"… a new episode is downloaded." = "… nýr þáttur hefur verið sóttur.";
+
+"… a new version of TVShows is released." = "… ný útgáfa af TVShows er í boði.";
+

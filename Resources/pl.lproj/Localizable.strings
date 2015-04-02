@@ -1,0 +1,323 @@
+"1 day" = "1 dzień";
+
+/* This string is used between a date and a time, e.g, 1/1/1 at 01:01am. */
+" at " = " o ";
+
+"1 hour" = "1 godzinę";
+
+"12 hours" = "12 godzin";
+
+"15 minutes" = "15 minut";
+
+"3 hours" = "3 godziny";
+
+"30 minutes" = "30 minut";
+
+"6 hours" = "6 godzin";
+
+/* This refers to "All shows" */
+"All" = "Wszystkie";
+
+/* The %@ will be replaced by the name of the show. */
+"A new episode of %@ is being downloaded." = "Rozpoczęto ściąganie nowego odcinka %@.";
+
+"A new version of TVShows is available for download." = "Now wersja TVShows jest dostępna do pobrania.";
+
+"A new version of TVShows is being downloaded and installed." = "Nowa wersja TVShows zostanie pobrana i zainstalowana.";
+
+"A newer show list cannot be found. Using an old show list temporarily." = "Nie można znaleźć aktualnej listy seriali. Tymczasowo wczytano starą listę.";
+
+"A show list cannot be found. Please try again later or check your internet connection." = "Nie można znaleźć listy seriali. Proszę spróbować ponownie później lub sprawdzić czy nie występują problemy z połączeniem internetowym.";
+
+"About" = "O…";
+
+"Add a custom RSS source" = "Dodaj własne źródło RSS.";
+
+/* This string is on a button. */
+"Add Custom RSS" = "Własny RSS";
+
+/* This string is on a button. */
+"Add Show" = "Dodaj program";
+
+/* Title of an error message or Growl notification. */
+"An Error Has Occurred" = "Wystąpił błąd";
+
+"An unknown error has occurred. Please try again later." = "Wystąpił nieznany błąd. Proszę spróbować ponownie później.";
+
+"An update for TVShows has been installed automatically. To disable this feature go to the Preferences tab and uncheck 'Automatically install new updates.'" = "Autmatyczna aktualizacja dla TVShows została zainstalowana. Jeżeli chcesz wyłączyć tą funkcję wejdź w zakładkę Ustawienia i odznacz \"Automatycznie instaluj nowe aktualizacje\".";
+
+"Application Update Preferences" = "Ustawienia aktualizacji";
+
+"Automatically check for updates" = "Automatycznie sprawdzaj czy są aktualizacje";
+
+"Automatically install new updates" = "Automatycznie instaluj nowe aktualizacje";
+
+"Automatically open each file after download" = "Automatycznie otwieraj każdy plik po ściągnięciu";
+
+"Are you sure you want to uninstall TVShows? This will also remove all preferences and subscriptions." = "Czy na pewno chcesz odinstalować TVShows? Spowoduje to również usunięcie wszystkich ustawień i sunskrypcji.";
+
+/* The %@ will be replaced by the name of the show. */
+"Are you sure you want to unsubscribe from %@?" = "Na pewno chcesz anulować subskrypcję %@?";
+
+/* This string is on a button. */
+"Cancel" = "Anuluj";
+
+"Cannot connect. Please try again later or check your internet connection" = "Wystąpił problem z połączeniem. Proszę spróbować ponownie później lub sprawdzić swój dostęp do sieci.";
+
+"Cannot connect. Using an old show list temporarily." = "Nie można się połączyć. Tymczasowo wczytano starą listę seriali.";
+
+"Check for episodes every:" = "Sprawdzaj czy jest nowy odcinek co:";
+
+/* This string is on a button. */
+"Check for new episodes now" = "Sprawdź, czy są nowe odcinki";
+
+/* This string is on a button. */
+"Check Now" = "Sprawdź teraz";
+
+"Checking for new episodes..." = "Poszukiwanie nowych odcinków...";
+
+"Checking now, please wait..." = "Poszukiwanie w trakcie, proszę czekać...";
+
+"Choose this to download torrent files from a list of preset shows." = "Wybierz aby pobrać pliki torrent z predefiniowanej listy seriali.";
+
+/* This string is on a button. */
+"Close" = "Zamknij";
+
+/* This string is on a button. */
+"Create New Account" = "Stwórz konto";
+
+"Create season subfolders" = "Twórz podfolder dla każdego sezonu";
+
+"Disable TVShows" = "Zablokuj TVShows";
+
+"Download beta versions when available" = "Pobieraj wersje beta kiedy są dostępne";
+
+"Download in HD" = "Ściągnij w jakości HD";
+
+"Choose this to input your own RSS feed." = "Wybierz aby dodać wybrany przez Ciebie kanał RSS.";
+
+"Enable downloading new episodes" = "Włącz pobieranie nowych odcinków";
+
+/* This refers to "Enabled shows" */
+"Enabled" = "Włączony";
+
+/* Status of the current show when it is airing. It is shown in a label as "Status: Continuing" */
+"Continuing" = "W trakcie";
+
+/* This refers to "Custom shows" */
+"Custom" = "Własne";
+
+/* Title of a column in a table. */
+"Episode" = "Odcinek";
+
+"Default video quality:" = "Domyślna jakość wideo:";
+
+/* This refers to "Disabled shows" */
+"Disabled" = "Wyłączony";
+
+"Donate" = "Wesprzyj nas";
+
+"Download Preferences" = "Ustawienia pobierania";
+
+/* This string is on a button. */
+"Edit" = "Zmień";
+
+/* Title of a column in a table. */
+"Episode Name" = "Tytuł odcinka";
+
+"Episode naming convention:" = "Schemat nazewnictwa odcinków";
+
+"Episode save location:" = "Zapisuj odcinki w:";
+
+"Feed" = "Kanał";
+
+"Feed URLs" = "URL kanału";
+
+"Download HD versions by default" = "Pobieraj domyślnie wersje w jakości HD";
+
+"General Settings" = "Ustawienia ogólne";
+
+"Growl Settings" = "Ustawienia Growl";
+
+"I am already a Miso user" = "Jestem już użytkownikiem Miso";
+
+"Include anonymous system information" = "Dołącz anonimowy profil systemu";
+
+"Info" = "Info";
+
+"Ended" = "Zakończony";
+
+"Last Aired" = "Ostatnio wyemitowane";
+
+"Last Downloaded" = "Ostatnio pobrane";
+
+"Miso is a social network made for people that love watching TV shows." = "Miso jest serwisem społecznościowym dla ludzi, którzy kochają oglądać seriale telewizyjne.";
+
+/* This string is on a button. */
+"More Info" = "Więcej informacji";
+
+/* This string is on a button. */
+"More Shows" = "Więcej programów";
+
+"Getting Started" = "Aby rozpocząć";
+
+"Name" = "Nazwa";
+
+/* This string is on a very narrow button, max 3 charaters (use a dot after that like "Des." in Spanish instead of "Desactivado") */
+"Off" = "OFF";
+
+/* This string refers to the default episode quality to download (Standard/High Definition). */
+"High Definition" = "Wysoka jakość (HD)";
+
+/* This string is on a button. */
+"Ok" = "OK";
+
+/* This string is on a very narrow button, max 3 charaters (use a dot after that like "Act." in Spanish instead of "Activado") */
+"On" = "ON";
+
+"Only download items matching the following rules:" = "Pobieraj jedynie jeśli:";
+
+/* To select a custom folder not listed. */
+"Other..." = "Inny...";
+
+"Please Select a Show:" = "Proszę wybrać serial:";
+
+"Last Checked:" = "Ostatnio sprawdzano:";
+
+"Preferences" = "Ustawienia";
+
+/* This refers to "Preset shows" */
+"Preset" = "Ustawienia";
+
+/* Title of a column in a table. */
+"Published Date" = "Data publikacji";
+
+"Logs are stored in ~/Library/Logs/TVShows/" = "Logi są przechowywane w ~/Library/Logs/TVShows/";
+
+"RSS Feed Information:" = "Informacje o kanale RSS:";
+
+"Rating:" = "Ocena:";
+
+/* This string is on a small button, it stands for "Reset Warnings" */
+"Reset Warn." = "Usuń ostrz.";
+
+"Save each show in its own folder" = "Zapisuj każdy program w innym folderze";
+
+/* This string is on a button. */
+"Save" = "Zapisz";
+
+"Search" = "Szukaj";
+
+/* This string is on a button. */
+"Sign In" = "Wpisz";
+
+/* This string is on a button. */
+"Sign Out" = "Wypisz";
+
+"Never" = "Nigdy";
+
+"Next Episode" = "Następny odcinek";
+
+/* This string is split, the full version is "Start subscription with: Next aired episode" */
+"Next aired episode" = "Następnego wyemitowanego odcinka";
+
+/* Title of a column in a table. */
+"Season" = "Sezon";
+
+"No" = "Nie";
+
+"Select a preset show from showRSS" = "Wybierz serial z bazy showRSS";
+
+"Password:" = "Hasło:";
+
+"Please choose one of the following actions:" = "Proszę wybrać jedną z poniższych czynności:";
+
+"Send Growl notifications when…" = "Używaj powiadomień Growl gdy…";
+
+"Status" = "Status";
+
+"No description was found for this show." = "Nie znaleziono żadnego opisu dla tego programu";
+
+/* This string is on a button. */
+"Submit Feedback" = "Wyraź swą opinię";
+
+/* This string is on a button. */
+"Subscribe" = "Subskrybuj";
+
+"Subscribed" = "Zapisany";
+
+"Subscriptions" = "Subskrypcje";
+
+/* This string is split, the full version is "Start subscription with: Next aired episode" or "Start subscription with: This episode: My Show S01E01" */
+"Start subscription with:" = "Zacznij subskrypcję od:";
+
+"Sync" = "Synchronizuj";
+
+"Sync shows between Miso and TVShows" = "Synchronizuj programy między Miso i TVShows";
+
+/* Disclaimer for a destructive action */
+"This action cannot be undone." = "Operacja nie może zostać ukończona";
+
+/* This string is split, the full version is "Start subscription with: This episode: My Show S01E01" */
+"This episode:" = "Tego odcinka:";
+
+"TVDB id" = "TVDB id";
+
+/* Title of an error message or Growl notification. */
+"TVShows Update Available" = "Aktualizacja TVShows dostępna";
+
+/* Title of an error message or Growl notification. */
+"TVShows Update Downloading" = "Pobieram aktualizację TVShows";
+
+/* The %@ will be replaced by the name of the torrent file. */
+"Unable to download %@" = "Nie można pobrać %@";
+
+/* The %@ will be replaced by the name of the torrent file. */
+"Unable to find an HD torrent for %@" = "Nie można znaleźć wersji HD torrenta %@";
+
+/* Title of an error message or Growl notification. */
+"Unable to Update the Show List" = "Nie można uaktualnić listy programów";
+
+/* This string is on a button. */
+"Unsubscribe" = "Anuluj subskrypcję";
+
+/* Title of an error message or Growl notification. */
+"Update Installed Automatically" = "Automatycznie zainstalowano aktualizację.";
+
+"User Name:" = "Nazwa użytkownika:";
+
+"Show TVShows status in the menu bar" = "Pokaż status TVShows w menu bar";
+
+/* This string refers to the default episode quality to download (Standard/High Definition). */
+"Standard" = "Standardowa";
+
+/* This string is on a button. */
+"View on TV.com" = "Sprawdź na TV.com";
+
+"… a new episode is downloaded." = "… nowy odciek został pobrany.";
+
+"… a new version of TVShows is released." = "… nowa wersja TVShows została wydana.";
+
+/* This string is on a button. */
+"Uninstall" = "Usuń";
+
+"Uninstall TVShows" = "Usuń TVShows";
+
+"Unknown" = "Nieznany";
+
+"Updating Show Information…" = "Aktualizowanie informacji o programie...";
+
+"Use additional sources for HD (may contain rars)" = "Użyj dodatkowych źródeł dla wersji HD (może zawierać archiwa)";
+
+"View Logs" = "Wyświetl logi";
+
+"Visit Miso" = "Odwiedź Miso";
+
+"Warnings restored" = "Ostrzeżenia przywrócone";
+
+"Website" = "Strona";
+
+"Why try it?" = "Dlaczego warto spróbować?";
+
+"Yes" = "Tak";
+
