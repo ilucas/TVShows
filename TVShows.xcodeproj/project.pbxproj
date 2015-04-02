@@ -259,7 +259,7 @@
 		34163BAD133EEA84007CDD87 /* tr */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = tr; path = Resources/tr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		3419982611A07913003768D5 /* WebsiteFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebsiteFunctions.h; sourceTree = "<group>"; };
 		3419982711A07913003768D5 /* WebsiteFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebsiteFunctions.m; sourceTree = "<group>"; };
-		3422ECD3118B3C130061E2E2 /* AppInfoConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppInfoConstants.h; sourceTree = "<group>"; };
+		3422ECD3118B3C130061E2E2 /* AppInfoConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppInfoConstants.h; path = Classes/AppInfoConstants.h; sourceTree = "<group>"; };
 		3422ECE7118B3D7D0061E2E2 /* PreferencesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreferencesController.h; sourceTree = "<group>"; };
 		3422ECE8118B3D7D0061E2E2 /* PreferencesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreferencesController.m; sourceTree = "<group>"; };
 		3424120C11DC023600BC0742 /* Growl Registration Ticket.growlRegDict */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = "Growl Registration Ticket.growlRegDict"; path = "Resources/Growl Registration Ticket.growlRegDict"; sourceTree = "<group>"; };
@@ -287,8 +287,8 @@
 		34463CD41331B90D001453EB /* InfoViewSubclass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoViewSubclass.m; sourceTree = "<group>"; };
 		34463CD61331BC3F001453EB /* CRViewSubclass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRViewSubclass.h; sourceTree = "<group>"; };
 		34463CD71331BC40001453EB /* CRViewSubclass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRViewSubclass.m; sourceTree = "<group>"; };
-		3446722711C155690014C522 /* TVShowsHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TVShowsHelper.h; sourceTree = "<group>"; };
-		3446722811C155690014C522 /* TVShowsHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TVShowsHelper.m; sourceTree = "<group>"; };
+		3446722711C155690014C522 /* TVShowsHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TVShowsHelper.h; path = Classes/TVShowsHelper.h; sourceTree = "<group>"; };
+		3446722811C155690014C522 /* TVShowsHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TVShowsHelper.m; path = Classes/TVShowsHelper.m; sourceTree = "<group>"; };
 		3446726511C157B60014C522 /* TVShowsHelper-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "TVShowsHelper-Info.plist"; sourceTree = "<group>"; };
 		3446726911C167560014C522 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = Resources/en.lproj/TVShowsHelper.xib; sourceTree = "<group>"; };
 		344971561330671700D24D68 /* Uninstaller.app */ = {isa = PBXFileReference; lastKnownFileType = wrapper.application; name = Uninstaller.app; path = Resources/Uninstaller.app; sourceTree = "<group>"; };
@@ -352,8 +352,8 @@
 		349FEE031183590500D24FC9 /* TVShows-Beta-Large.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = "TVShows-Beta-Large.icns"; sourceTree = "<group>"; };
 		349FEE051183590500D24FC9 /* TVShows-Off-Large.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = "TVShows-Off-Large.icns"; sourceTree = "<group>"; };
 		349FEE071183590500D24FC9 /* TVShows-On-Large.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = "TVShows-On-Large.icns"; sourceTree = "<group>"; };
-		349FEE151183597500D24FC9 /* TVShowsPref.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TVShowsPref.h; sourceTree = "<group>"; };
-		349FEE161183597500D24FC9 /* TVShowsPref.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TVShowsPref.m; sourceTree = "<group>"; };
+		349FEE151183597500D24FC9 /* TVShowsPref.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TVShowsPref.h; path = Classes/TVShowsPref.h; sourceTree = "<group>"; };
+		349FEE161183597500D24FC9 /* TVShowsPref.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TVShowsPref.m; path = Classes/TVShowsPref.m; sourceTree = "<group>"; };
 		349FEEBF11835A1C00D24FC9 /* TabController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabController.h; sourceTree = "<group>"; };
 		349FEEC011835A1C00D24FC9 /* TabController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabController.m; sourceTree = "<group>"; };
 		34A8FF9C1187C17000DDD3DE /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
@@ -454,7 +454,7 @@
 		5793D8191369569F00BFF6B0 /* el */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = el; path = Resources/el.lproj/Localizable.strings; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.simpleColoring; };
 		579CAD5013AB8216006743B4 /* MisoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MisoController.h; sourceTree = "<group>"; };
 		579CAD5113AB8216006743B4 /* MisoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MisoController.m; sourceTree = "<group>"; };
-		579CAD5413AB8471006743B4 /* AppSecretConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppSecretConstants.h; sourceTree = "<group>"; };
+		579CAD5413AB8471006743B4 /* AppSecretConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppSecretConstants.h; path = Classes/AppSecretConstants.h; sourceTree = "<group>"; };
 		579CAD5713AB9234006743B4 /* Miso-Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Miso-Logo.png"; sourceTree = "<group>"; };
 		57A82B0F13953A3500E71F7F /* NSXMLNode-utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSXMLNode-utils.h"; sourceTree = "<group>"; };
 		57A82B1013953A3500E71F7F /* NSXMLNode-utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSXMLNode-utils.m"; sourceTree = "<group>"; };
@@ -537,10 +537,12 @@
 		089C166AFE841209C02AAC07 /* TVShows */ = {
 			isa = PBXGroup;
 			children = (
+				A02FB6D41AC4E81A007466D8 /* TVShowsPref */,
+				A02FB6D31AC4E814007466D8 /* TVShowsHelper */,
 				3401816611951C9D00FB0E39 /* Models */,
-				349FEE141183597500D24FC9 /* Classes */,
-				347F1E7911AA0E54005A40AA /* External Classes */,
-				32DBCFA10370C40200C91783 /* Other Sources */,
+				349FEE141183597500D24FC9 /* Other Sources */,
+				A02FB6D51AC4E8ED007466D8 /* Supporting Files */,
+				347F1E7911AA0E54005A40AA /* External */,
 				089C167CFE841241C02AAC07 /* Resources */,
 				089C1671FE841209C02AAC07 /* Frameworks and Libraries */,
 				19C28FB8FE9D52D311CA2CBB /* Products */,
@@ -561,7 +563,6 @@
 			isa = PBXGroup;
 			children = (
 				349FEE021183590500D24FC9 /* Images */,
-				347AFB25119115AC00393565 /* Interface Builder */,
 				34EA89D411E64370005C031A /* Localizations */,
 				34F6EA64119BCBA200F8AD4C /* Info.plist */,
 				3446726511C157B60014C522 /* TVShowsHelper-Info.plist */,
@@ -611,15 +612,6 @@
 				3444F2C311DD182000BF3724 /* relaunch */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		32DBCFA10370C40200C91783 /* Other Sources */ = {
-			isa = PBXGroup;
-			children = (
-				34FBC62D11C0B567005D290B /* main.m */,
-				34F6EA39119BCAD100F8AD4C /* TVShows_Prefix.pch */,
-			);
-			name = "Other Sources";
 			sourceTree = "<group>";
 		};
 		3401816611951C9D00FB0E39 /* Models */ = {
@@ -680,15 +672,6 @@
 			name = LCLLogFile;
 			sourceTree = "<group>";
 		};
-		347AFB25119115AC00393565 /* Interface Builder */ = {
-			isa = PBXGroup;
-			children = (
-				34EC6AB811A312AD00BD660A /* TVShowsPref.xib */,
-				34184AFD11F88F7700AA1DC2 /* TVShowsHelper.xib */,
-			);
-			name = "Interface Builder";
-			sourceTree = "<group>";
-		};
 		347B35CC1210D80400F4BFF0 /* The TVDB */ = {
 			isa = PBXGroup;
 			children = (
@@ -729,7 +712,7 @@
 			name = Controllers;
 			sourceTree = "<group>";
 		};
-		347F1E7911AA0E54005A40AA /* External Classes */ = {
+		347F1E7911AA0E54005A40AA /* External */ = {
 			isa = PBXGroup;
 			children = (
 				5791A5FA13A926D80038A638 /* Miso */,
@@ -744,7 +727,7 @@
 				5791A5E413A925890038A638 /* JSON */,
 				571D4F7813A9188100EBD5EA /* MPOAuth */,
 			);
-			name = "External Classes";
+			name = External;
 			path = Classes;
 			sourceTree = "<group>";
 		};
@@ -837,20 +820,15 @@
 			path = Resources/Images;
 			sourceTree = "<group>";
 		};
-		349FEE141183597500D24FC9 /* Classes */ = {
+		349FEE141183597500D24FC9 /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
 				347F1E7811AA0E2D005A40AA /* Controllers */,
 				347F1E6F11AA0D9E005A40AA /* Core Data */,
 				34E6242811DAAA74007E7854 /* Helper Classes */,
 				3444F29011DD13F700BF3724 /* Subclasses */,
-				3422ECD3118B3C130061E2E2 /* AppInfoConstants.h */,
-				579CAD5413AB8471006743B4 /* AppSecretConstants.h */,
-				3446722711C155690014C522 /* TVShowsHelper.h */,
-				3446722811C155690014C522 /* TVShowsHelper.m */,
-				349FEE151183597500D24FC9 /* TVShowsPref.h */,
-				349FEE161183597500D24FC9 /* TVShowsPref.m */,
 			);
+			name = "Other Sources";
 			path = Classes;
 			sourceTree = "<group>";
 		};
@@ -1002,6 +980,37 @@
 			path = LRFilterBar;
 			sourceTree = "<group>";
 		};
+		A02FB6D31AC4E814007466D8 /* TVShowsHelper */ = {
+			isa = PBXGroup;
+			children = (
+				3446722711C155690014C522 /* TVShowsHelper.h */,
+				3446722811C155690014C522 /* TVShowsHelper.m */,
+				34184AFD11F88F7700AA1DC2 /* TVShowsHelper.xib */,
+			);
+			name = TVShowsHelper;
+			sourceTree = "<group>";
+		};
+		A02FB6D41AC4E81A007466D8 /* TVShowsPref */ = {
+			isa = PBXGroup;
+			children = (
+				349FEE151183597500D24FC9 /* TVShowsPref.h */,
+				349FEE161183597500D24FC9 /* TVShowsPref.m */,
+				34EC6AB811A312AD00BD660A /* TVShowsPref.xib */,
+			);
+			name = TVShowsPref;
+			sourceTree = "<group>";
+		};
+		A02FB6D51AC4E8ED007466D8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				34FBC62D11C0B567005D290B /* main.m */,
+				3422ECD3118B3C130061E2E2 /* AppInfoConstants.h */,
+				579CAD5413AB8471006743B4 /* AppSecretConstants.h */,
+				34F6EA39119BCAD100F8AD4C /* TVShows_Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1040,9 +1049,9 @@
 			productReference = 34FBC5E111C0B3C2005D290B /* TVShowsHelper.app */;
 			productType = "com.apple.product-type.application";
 		};
-		8D202CE80486D31800D8A456 /* TVShows */ = {
+		8D202CE80486D31800D8A456 /* TVShowsPref */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1DBD214808BA80EA00186707 /* Build configuration list for PBXNativeTarget "TVShows" */;
+			buildConfigurationList = 1DBD214808BA80EA00186707 /* Build configuration list for PBXNativeTarget "TVShowsPref" */;
 			buildPhases = (
 				8D202CEC0486D31800D8A456 /* Resources */,
 				575C0D5C136A4F26005DE73D /* Generate Version */,
@@ -1056,7 +1065,7 @@
 				3444F2C911DD184000BF3724 /* PBXTargetDependency */,
 				3444F28711DD0D5B00BF3724 /* PBXTargetDependency */,
 			);
-			name = TVShows;
+			name = TVShowsPref;
 			productInstallPath = "$(HOME)/Library/PreferencePanes";
 			productName = TVShows;
 			productReference = 8D202CF80486D31800D8A456 /* TVShows.prefPane */;
@@ -1124,7 +1133,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8D202CE80486D31800D8A456 /* TVShows */,
+				8D202CE80486D31800D8A456 /* TVShowsPref */,
 				34FBC5E011C0B3C2005D290B /* TVShowsHelper */,
 				3444F2C211DD182000BF3724 /* relaunch */,
 			);
@@ -1702,7 +1711,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1DBD214808BA80EA00186707 /* Build configuration list for PBXNativeTarget "TVShows" */ = {
+		1DBD214808BA80EA00186707 /* Build configuration list for PBXNativeTarget "TVShowsPref" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1DBD214908BA80EA00186707 /* Debug */,
