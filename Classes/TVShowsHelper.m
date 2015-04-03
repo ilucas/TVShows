@@ -44,15 +44,6 @@
         TVShowsHelperIcon = [[NSData alloc] initWithContentsOfFile:
                              [appPath stringByAppendingPathComponent:@"TVShows-On-Large.icns"]];
         
-        misoBackend = [[Miso alloc] init];
-        
-        [misoBackend setDelegate:self];
-        
-        [[NSDistributedNotificationCenter defaultCenter] addObserver:self
-                                                            selector:@selector(authenticatedOnMiso:)
-                                                                name:@"TSMisoAuthenticated"
-                                                              object:nil];
-        
         [[[NSWorkspace sharedWorkspace] notificationCenter] addObserver:self
                                                                selector:@selector(awakeFromSleep)
                                                                    name:NSWorkspaceDidWakeNotification
@@ -74,14 +65,8 @@
             [self activateStatusMenu];
         }
         
-        // Check first if we have to add or delete subscriptions because of Miso
-        if ([TSUserDefaults getBoolFromKey:@"MisoEnabled" withDefault:NO]) {
-            // Try to login in Miso
-            manually = NO;
-            [misoBackend authorizeWithKey:MISO_API_KEY secret:MISO_API_SECRET];
-        } else {
-            [self checkNow:nil];
-        }
+        [self checkNow:nil];
+        
         
     } else {
         // TVShows is not enabled.
@@ -109,307 +94,6 @@
     }
     
     return nil;
-}
-
-- (void)followSubscriptions:(NSDictionary *)followedShows {
-    // Fetch subscriptions
-    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Subscription"
-                                              inManagedObjectContext:[subscriptionsDelegate managedObjectContext]];
-    NSFetchRequest *request = [[NSFetchRequest alloc] init];
-    [request setEntity:entity];
-    
-    NSError *error = nil;
-    NSArray *subscriptions = [[subscriptionsDelegate managedObjectContext] executeFetchRequest:request error:&error];
-    
-    // Follow on Miso our (this is made only when the user manually enter the credentials)
-    for (NSDictionary *show in subscriptions) {
-        // Get the TVDB id
-        NSString *showID = [[show valueForKey:@"tvdbID"] description];
-        
-        // Disregard custom RSS and check if the show is been already followed
-        if (showID && ![show valueForKey:@"filters"] &&
-            ![self getShow:showID withName:[show valueForKey:@"name"] fromDictionary:followedShows]) {
-            
-            // Search for it on Miso
-            NSDictionary *results = [misoBackend showWithQuery:[show valueForKey:@"name"]];
-            
-            // Filter those results by TVDB id
-            NSObject *newShow = [self getShow:[[show valueForKey:@"tvdbID"] description]
-                                     withName:[show valueForKey:@"name"] fromDictionary:results];
-            
-            // Some shows do not have TVDB ids yet; try to map them together
-            if (!newShow) {
-                // Just pick the first show (too late, I cannot even think anymore)
-                for (NSObject *result in results) {
-                    newShow = result;
-                    break;
-                }
-                // If the name is not equal... go back
-                if (newShow && ![[[newShow valueForKey:@"media"] valueForKey:@"title"] isEqualToString:[show valueForKey:@"name"]]) {
-                    newShow = nil;
-                }
-            }
-            
-            // At this point, it should be a valid show, but maybe it is not on the Miso database yet
-            if (newShow && ![[[newShow valueForKey:@"media"] valueForKey:@"currently_favorited"] boolValue]) {
-                LogInfo(@"Adding show %@ on Miso.", [show valueForKey:@"name"]);
-                
-                [misoBackend favoriteShow:[[[newShow valueForKey:@"media"] valueForKey:@"id"] description]];
-            }
-        }
-    }
-}
-
-- (void)unsubscribeFromUnfollowedShows:(NSDictionary *)followedShows {
-    // Fetch subscriptions
-    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Subscription"
-                                              inManagedObjectContext:[subscriptionsDelegate managedObjectContext]];
-    NSFetchRequest *request = [[NSFetchRequest alloc] init];
-    [request setEntity:entity];
-    
-    NSError *error = nil;
-    NSArray *subscriptions = [[subscriptionsDelegate managedObjectContext] executeFetchRequest:request error:&error];
-    
-    // Delete from our subscriptions unfollowed shows on Miso
-    for (NSManagedObject *show in subscriptions) {
-        // Get the TVDB id
-        NSString *showID = [[show valueForKey:@"tvdbID"] description];
-        NSString *seriesName = [show valueForKey:@"name"];
-        
-        // Check if the show is been followed and if it is a custom RSS (if it has some filters)
-        if (![show valueForKey:@"filters"] &&
-            ![self getShow:showID withName:seriesName fromDictionary:followedShows] &&
-            followedShows != nil && [followedShows count] > 0) {
-            
-            // Some shows do not have TVDB ids yet; search for it on Miso to see if they are favorited
-            NSDictionary *results = [misoBackend showWithQuery:seriesName];
-            
-            // Let's see if the show has id
-            if (![self getShow:showID withName:(NSString *)seriesName fromDictionary:results]) {
-                
-                NSObject *newShow = nil;
-                
-                // Just pick the first show (too late, I cannot even think anymore)
-                for (NSObject *result in results) {
-                    newShow = result;
-                    break;
-                }
-                
-                // If the name is not equal... do not remove
-                if (newShow && ![[[newShow valueForKey:@"media"] valueForKey:@"title"] isEqualToString:seriesName]) {
-                    continue;
-                }
-                
-                // Or if this show is favorited... do it
-                if (newShow && [[[newShow valueForKey:@"media"] valueForKey:@"currently_favorited"] boolValue]) {
-                    continue;
-                }
-            }
-            
-            LogInfo(@"Unsubscribe show %@ because of Miso.", seriesName);
-            NSManagedObject *selectedShow = [[subscriptionsDelegate managedObjectContext] objectWithID:[show objectID]];
-            
-            [[subscriptionsDelegate managedObjectContext] deleteObject:selectedShow];
-            
-            [[subscriptionsDelegate managedObjectContext] processPendingChanges];
-            [subscriptionsDelegate saveAction];
-            
-            changed = YES;
-        }
-    }
-}
-
-- (void)subscribeToFollowedShows:(NSDictionary *)followedShows {
-    // Fetch subscriptions
-    NSEntityDescription *entitySubscriptions = [NSEntityDescription entityForName:@"Subscription"
-                                                           inManagedObjectContext:[subscriptionsDelegate managedObjectContext]];
-    NSFetchRequest *requestSubscriptions = [[NSFetchRequest alloc] init];
-    [requestSubscriptions setEntity:entitySubscriptions];
-    
-    NSError *error = nil;
-    NSArray *subscriptions = [[subscriptionsDelegate managedObjectContext]
-                              executeFetchRequest:requestSubscriptions error:&error];
-    
-    // Fetch presets
-    NSEntityDescription *entityPresets = [NSEntityDescription entityForName:@"Show"
-                                                     inManagedObjectContext:[presetShowsDelegate managedObjectContext]];
-    NSFetchRequest *requestPresets = [[NSFetchRequest alloc] init];
-    [requestPresets setEntity:entityPresets];
-    
-    NSArray *presets = [[presetShowsDelegate managedObjectContext]
-                        executeFetchRequest:requestPresets error:&error];
-    
-    // The other way around, update our subscriptions with the followed shows on Miso
-    for (NSDictionary *show in followedShows) {
-        // Get the precious data for that show
-        NSString *showID = [[[show valueForKey:@"media"] valueForKey:@"tvdb_id"] description];
-        NSString *seriesName = [[show valueForKey:@"media"] valueForKey:@"title"];
-        
-        // Let's check that the show is in the preset show list
-        NSObject *selectedShow = [self getShow:showID fromArray:presets];
-        // Some shows do not have TVDB ids yet; try to map them together
-        if (!selectedShow && (!showID || [showID isEqualToString:@"<null>"] || [showID length] == 0)) {
-            // Just pick the first show with that name, if there is any
-            for (NSObject *presetShow in presets) {
-                if ([[presetShow valueForKey:@"displayName"] isEqualToString:seriesName]) {
-                    selectedShow = presetShow;
-                    showID = [[presetShow valueForKey:@"tvdbID"] description];
-                    break;
-                }
-            }
-        }
-        
-        // If the user is not subscribed to this show and the show is still airing, add to the subscriptions
-        if (selectedShow && ![self getShow:showID fromArray:subscriptions] &&
-            ![[TheTVDB getShowStatus:seriesName withShowID:showID] isEqualToString:@"Ended"]) {
-            
-            LogInfo(@"Adding show %@ from Miso.", seriesName);
-            
-            NSManagedObject *newSubscription = [NSEntityDescription insertNewObjectForEntityForName:@"Subscription"
-                                                                             inManagedObjectContext:[subscriptionsDelegate managedObjectContext]];
-            
-            // Set the information about the new show
-            [newSubscription setValue:[selectedShow valueForKey:@"displayName"] forKey:@"name"];
-            [newSubscription setValue:[selectedShow valueForKey:@"sortName"] forKey:@"sortName"];
-            [newSubscription setValue:[selectedShow valueForKey:@"tvdbID"] forKey:@"tvdbID"];
-            [newSubscription setValue:[selectedShow valueForKey:@"name"] forKey:@"url"];
-            [newSubscription setValue:[NSNumber numberWithBool:[TSUserDefaults getBoolFromKey:@"AutoSelectHDVersion" withDefault:NO]]
-                               forKey:@"quality"];
-            [newSubscription setValue:[NSNumber numberWithBool:YES] forKey:@"isEnabled"];
-            
-            // OK, so we know that the user has Miso.
-            // And that the user has followed a "new" show.
-            // So let's go back in time thirteen days so that the last episodes
-            // will be downloaded. So that user can leverage this Miso synchronization.
-            // If the user does not want to download an episode he can cancel,
-            // but the other user case is more cumbersome.
-            // Anyway, if the user did a check-in for th(at/ose) episode(s)
-            // it will not be downloaded (and again, the user is Miso synced)
-            [newSubscription setValue:[NSDate dateWithTimeIntervalSinceNow:-6*24*60*60] forKey:@"lastDownloaded"];
-            
-            [[subscriptionsDelegate managedObjectContext] processPendingChanges];
-            [subscriptionsDelegate saveAction];
-            
-            changed = YES;
-        }
-    }
-}
-
-- (void)syncShows {
-    // Check the followed shows and process them
-    NSDictionary *followedShows = [misoBackend favoritedShows];
-    
-    if (followedShows) {
-        changed = NO;
-        if ([TSUserDefaults getBoolFromKey:@"MisoSyncInProgress" withDefault:NO]) {
-            [self followSubscriptions:followedShows];
-            [TSUserDefaults setKey:@"MisoSyncInProgress" fromBool:NO];
-        } else {
-            [self unsubscribeFromUnfollowedShows:followedShows];
-        }
-        [self subscribeToFollowedShows:followedShows];
-        // Warn the pref pane
-        if (changed) {
-            [[NSDistributedNotificationCenter defaultCenter] postNotificationName:@"TSUpdatedShows" object:nil];
-            changed = NO;
-        }
-    }
-}
-
-- (BOOL)hasCheckInForShow:(NSObject *)show andEpisode:(NSObject *)episode {
-    // If the user did not enable check-ins, obviously we cannot know if there is a check-in
-    if (![TSUserDefaults getBoolFromKey:@"MisoEnabled" withDefault:NO] ||
-        ![TSUserDefaults getBoolFromKey:@"MisoCheckInEnabled" withDefault:NO]) {
-        return NO;
-    }
-    
-    // Only check check-ins for normal shows
-    if ([[episode valueForKey:@"episodeSeason"] isEqualToString:@"-"] ||
-        [[episode valueForKey:@"episodeNumber"] isEqualToString:@"-"] ||
-        [show valueForKey:@"filters"]) {
-        return NO;
-    }
-    
-    // Retrieve the user id
-    NSDictionary *userDetails = [misoBackend userDetails];
-    if (!userDetails) {
-        return NO;
-    }
-    
-    // Search for it on Miso
-    NSDictionary *results = [misoBackend showWithQuery:[show valueForKey:@"name"]];
-    NSObject *showData = nil;
-    
-    // Just pick the first show (too late, I cannot even think anymore)
-    for (NSObject *result in results) {
-        showData = result;
-        break;
-    }
-    if (!showData) {
-        return NO;
-    }
-    
-    // We have all the data, so search for checkins of that show!
-    NSDictionary *checkins = [misoBackend checkingsForUser:[[[userDetails valueForKey:@"user"] valueForKey:@"id"] description]
-                                                   andShow:[[[showData valueForKey:@"media"] valueForKey:@"id"] description]];
-    
-    // So check if the checkin was done
-    for (NSObject *checkin in checkins) {
-        if ([[[[checkin valueForKey:@"checkin"] valueForKey:@"episode_season_num"] description]
-             isEqualToString:[episode valueForKey:@"episodeSeason"]] &&
-            [[[[checkin valueForKey:@"checkin"] valueForKey:@"episode_num"] description]
-             isEqualToString:[episode valueForKey:@"episodeNumber"]]) {
-            return YES;
-        }
-    }
-    
-    return NO;
-}
-
-- (void)authenticationEnded:(BOOL)authenticated {
-    // If the shows were updated in the prefpane, we don't need to update them again
-    if (!manually) {
-        // Now we can check the new episodes!
-        [self checkNow:nil];
-        manually = YES;
-    }
-}
-
-- (void)authenticatedOnMiso:(NSNotification *)inNotification {
-    // The user just login with the prefpane, so we have the credentials now!
-    manually = YES;
-    [misoBackend authorizeWithKey:MISO_API_KEY secret:MISO_API_SECRET];
-}
-
-- (void)checkinEpisode:(NSString *)episodeName ofShow:(NSString *)showName {
-    if ([TSUserDefaults getBoolFromKey:@"MisoEnabled" withDefault:NO] &&
-        [TSUserDefaults getBoolFromKey:@"MisoCheckInEnabled" withDefault:NO]) {
-        
-        NSArray *seasonAndEpisode = [TSRegexFun parseSeasonAndEpisode:episodeName];
-        
-        if ([seasonAndEpisode count] == 3) {
-            
-            // Search for it on Miso
-            NSDictionary *results = [misoBackend showWithQuery:showName];
-            
-            NSObject *show = nil;
-            
-            // Just pick the first show (too late, I cannot even think anymore)
-            for (NSObject *result in results) {
-                show = result;
-                break;
-            }
-            
-            // At this point, it should be a valid show, but maybe it is not on the Miso database yet
-            if (show) {
-                LogInfo(@"Adding check-in for %@ on Miso.", episodeName);
-                
-                [misoBackend addCheckingForShow:[[[show valueForKey:@"media"] valueForKey:@"id"] description]
-                                  withSeasonNum:[TSRegexFun removeLeadingZero:[seasonAndEpisode objectAtIndex:1]]
-                                     episodeNum:[TSRegexFun removeLeadingZero:[seasonAndEpisode objectAtIndex:2]]];
-            }
-        }
-    }
 }
 
 - (NSTimeInterval) userDelay {
@@ -583,13 +267,6 @@
         // Update the showlist
         [self updateShowList];
         
-        // Sync shows with Miso
-        if ([TSUserDefaults getBoolFromKey:@"MisoEnabled" withDefault:NO] &&
-            [TSUserDefaults getBoolFromKey:@"MisoSyncEnabled" withDefault:YES]) {
-            
-            [self syncShows];
-        }
-        
         NSEntityDescription *entity = [NSEntityDescription entityForName:@"Subscription"
                                                   inManagedObjectContext:[subscriptionsDelegate managedObjectContext]];
         NSFetchRequest *request = [[NSFetchRequest alloc] init];
@@ -701,18 +378,9 @@
                     
                     BOOL downloaded = NO;
                     
-                    // If the user has Miso enabled, check if there is a check-in for that episode
-                    if ([self hasCheckInForShow:show andEpisode:episode]) {
-                        LogInfo(@"There is already a checkin for this episode, so it will not be downloaded.");
-                        downloaded = YES;
-                    }
-                    
                     // Otherwise download the episode! With mirrors (they are stored in a string separated by #)
                     if (!downloaded && [TSTorrentFunctions downloadEpisode:episode ofShow:show]) {
                         downloaded = YES;
-                        
-                        // Checkin the episode on Miso
-                        [self checkinEpisode:[episode valueForKey:@"episodeName"] ofShow:[show valueForKey:@"name"]];
                     }
                     
                     // Update the last downloaded episode name only if it was aired after the previous stored one
@@ -759,7 +427,6 @@
     [lastUpdateItem setTitle:[NSString stringWithFormat:@"%@ %@", TSLocalizeString(@"Last Checked:"), TSLocalizeString(@"Never")]];
     [checkShowsItem setTitle:TSLocalizeString(@"Checking now, please wait...")];
     [subscriptionsItem setTitle:[NSString stringWithFormat:@"%@...", TSLocalizeString(@"Subscriptions")]];
-    [syncItem setTitle:[NSString stringWithFormat:@"%@...", TSLocalizeString(@"Sync")]];
     [preferencesItem setTitle:[NSString stringWithFormat:@"%@...", TSLocalizeString(@"Preferences")]];
     [feedbackItem setTitle:[NSString stringWithFormat:@"%@...", TSLocalizeString(@"Submit Feedback")]];
     [aboutItem setTitle:[NSString stringWithFormat:@"%@ TVShows", TSLocalizeString(@"About")]];
@@ -821,16 +488,12 @@
     [self openTab:1];
 }
 
-- (IBAction) showSync:(id)sender {
+- (IBAction) showPreferences:(id)sender {
     [self openTab:2];
 }
 
-- (IBAction) showPreferences:(id)sender {
-    [self openTab:3];
-}
-
 - (IBAction) showAbout:(id)sender {
-    [self openTab:4];
+    [self openTab:3];
 }
 
 - (IBAction) showFeedback:(id)sender {

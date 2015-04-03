@@ -17,16 +17,14 @@
 #import <Growl/GrowlApplicationBridge.h>
 #import "SubscriptionsDelegate.h"
 #import "PresetShowsDelegate.h"
-#import "Miso.h"
 
-@interface TVShowsHelper : NSObject <GrowlApplicationBridgeDelegate, MisoDelegate>
+@interface TVShowsHelper : NSObject <GrowlApplicationBridgeDelegate>
 {
     BOOL manually;
     BOOL changed;
     NSThread *checkerThread;
     NSTimer *checkerLoop;
     NSData *TVShowsHelperIcon;
-    Miso *misoBackend;
     SubscriptionsDelegate *subscriptionsDelegate;
     PresetShowsDelegate *presetShowsDelegate;
     
@@ -35,7 +33,6 @@
     IBOutlet NSMenuItem *lastUpdateItem;
     IBOutlet NSMenuItem *checkShowsItem;
     IBOutlet NSMenuItem *subscriptionsItem;
-    IBOutlet NSMenuItem *syncItem;
     IBOutlet NSMenuItem *preferencesItem;
     IBOutlet NSMenuItem *feedbackItem;
     IBOutlet NSMenuItem *aboutItem;
@@ -59,7 +56,6 @@
 - (IBAction) checkNow:(id)sender;
 - (IBAction) openApplication:(id)sender;
 - (IBAction) showSubscriptions:(id)sender;
-- (IBAction) showSync:(id)sender;
 - (IBAction) showPreferences:(id)sender;
 - (IBAction) showAbout:(id)sender;
 - (IBAction) showFeedback:(id)sender;

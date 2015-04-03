@@ -111,9 +111,8 @@
     
     // Localize everything
     [[prefTabView tabViewItemAtIndex:0] setLabel: TSLocalizeString(@"Subscriptions")];
-    [[prefTabView tabViewItemAtIndex:1] setLabel: TSLocalizeString(@"Sync")];
-    [[prefTabView tabViewItemAtIndex:2] setLabel: TSLocalizeString(@"Preferences")];
-    [[prefTabView tabViewItemAtIndex:3] setLabel: TSLocalizeString(@"About")];
+    [[prefTabView tabViewItemAtIndex:1] setLabel: TSLocalizeString(@"Preferences")];
+    [[prefTabView tabViewItemAtIndex:2] setLabel: TSLocalizeString(@"About")];
     
     [feedbackButton setTitle: TSLocalizeString(@"Submit Feedback")];
     

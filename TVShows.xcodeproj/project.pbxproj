@@ -107,46 +107,6 @@
 		34FBC69511C0B7CE005D290B /* SUUpdaterSubclass.m in Sources */ = {isa = PBXBuildFile; fileRef = 340F15F9118FEBDE00A1BD00 /* SUUpdaterSubclass.m */; };
 		34FBC69B11C0B804005D290B /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3473845E119074C8003DFFA0 /* Sparkle.framework */; };
 		571C60E3139905320072D921 /* ribbon.png in Resources */ = {isa = PBXBuildFile; fileRef = 571C60E2139905320072D921 /* ribbon.png */; };
-		571D4FA513A9188100EBD5EA /* Base64Transcoder.c in Sources */ = {isa = PBXBuildFile; fileRef = 571D4F7A13A9188100EBD5EA /* Base64Transcoder.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		571D4FA613A9188100EBD5EA /* Base64Transcoder.c in Sources */ = {isa = PBXBuildFile; fileRef = 571D4F7A13A9188100EBD5EA /* Base64Transcoder.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		571D4FA713A9188100EBD5EA /* MPOAuthAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 571D4F7F13A9188100EBD5EA /* MPOAuthAPI.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		571D4FA813A9188100EBD5EA /* MPOAuthAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 571D4F7F13A9188100EBD5EA /* MPOAuthAPI.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		571D4FA913A9188100EBD5EA /* MPOAuthAPIRequestLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 571D4F8113A9188100EBD5EA /* MPOAuthAPIRequestLoader.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		571D4FAA13A9188100EBD5EA /* MPOAuthAPIRequestLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 571D4F8113A9188100EBD5EA /* MPOAuthAPIRequestLoader.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		571D4FAB13A9188100EBD5EA /* MPOAuthAuthenticationMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 571D4F8313A9188100EBD5EA /* MPOAuthAuthenticationMethod.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		571D4FAC13A9188100EBD5EA /* MPOAuthAuthenticationMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 571D4F8313A9188100EBD5EA /* MPOAuthAuthenticationMethod.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		571D4FAD13A9188100EBD5EA /* MPOAuthAuthenticationMethodAuthExchange.m in Sources */ = {isa = PBXBuildFile; fileRef = 571D4F8513A9188100EBD5EA /* MPOAuthAuthenticationMethodAuthExchange.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		571D4FAE13A9188100EBD5EA /* MPOAuthAuthenticationMethodAuthExchange.m in Sources */ = {isa = PBXBuildFile; fileRef = 571D4F8513A9188100EBD5EA /* MPOAuthAuthenticationMethodAuthExchange.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		571D4FAF13A9188100EBD5EA /* MPOAuthAuthenticationMethodOAuth.m in Sources */ = {isa = PBXBuildFile; fileRef = 571D4F8713A9188100EBD5EA /* MPOAuthAuthenticationMethodOAuth.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		571D4FB013A9188100EBD5EA /* MPOAuthAuthenticationMethodOAuth.m in Sources */ = {isa = PBXBuildFile; fileRef = 571D4F8713A9188100EBD5EA /* MPOAuthAuthenticationMethodOAuth.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		571D4FB113A9188100EBD5EA /* MPOAuthAuthenticationMethodXAuth.m in Sources */ = {isa = PBXBuildFile; fileRef = 571D4F8913A9188100EBD5EA /* MPOAuthAuthenticationMethodXAuth.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		571D4FB213A9188100EBD5EA /* MPOAuthAuthenticationMethodXAuth.m in Sources */ = {isa = PBXBuildFile; fileRef = 571D4F8913A9188100EBD5EA /* MPOAuthAuthenticationMethodXAuth.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		571D4FB313A9188100EBD5EA /* MPOAuthConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 571D4F8B13A9188100EBD5EA /* MPOAuthConnection.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		571D4FB413A9188100EBD5EA /* MPOAuthConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 571D4F8B13A9188100EBD5EA /* MPOAuthConnection.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		571D4FB513A9188100EBD5EA /* MPOAuthCredentiaIConcreteStore+KeychainAdditionsMac.m in Sources */ = {isa = PBXBuildFile; fileRef = 571D4F8C13A9188100EBD5EA /* MPOAuthCredentiaIConcreteStore+KeychainAdditionsMac.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		571D4FB613A9188100EBD5EA /* MPOAuthCredentiaIConcreteStore+KeychainAdditionsMac.m in Sources */ = {isa = PBXBuildFile; fileRef = 571D4F8C13A9188100EBD5EA /* MPOAuthCredentiaIConcreteStore+KeychainAdditionsMac.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		571D4FB713A9188100EBD5EA /* MPOAuthCredentialConcreteStore+KeychainAdditionsiPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = 571D4F8E13A9188100EBD5EA /* MPOAuthCredentialConcreteStore+KeychainAdditionsiPhone.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		571D4FB813A9188100EBD5EA /* MPOAuthCredentialConcreteStore+KeychainAdditionsiPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = 571D4F8E13A9188100EBD5EA /* MPOAuthCredentialConcreteStore+KeychainAdditionsiPhone.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		571D4FB913A9188100EBD5EA /* MPOAuthCredentialConcreteStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 571D4F9013A9188100EBD5EA /* MPOAuthCredentialConcreteStore.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		571D4FBA13A9188100EBD5EA /* MPOAuthCredentialConcreteStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 571D4F9013A9188100EBD5EA /* MPOAuthCredentialConcreteStore.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		571D4FBB13A9188100EBD5EA /* MPOAuthSignatureParameter.m in Sources */ = {isa = PBXBuildFile; fileRef = 571D4F9413A9188100EBD5EA /* MPOAuthSignatureParameter.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		571D4FBC13A9188100EBD5EA /* MPOAuthSignatureParameter.m in Sources */ = {isa = PBXBuildFile; fileRef = 571D4F9413A9188100EBD5EA /* MPOAuthSignatureParameter.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		571D4FBD13A9188100EBD5EA /* MPOAuthURLRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 571D4F9613A9188100EBD5EA /* MPOAuthURLRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		571D4FBE13A9188100EBD5EA /* MPOAuthURLRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 571D4F9613A9188100EBD5EA /* MPOAuthURLRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		571D4FBF13A9188100EBD5EA /* MPOAuthURLResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 571D4F9813A9188100EBD5EA /* MPOAuthURLResponse.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		571D4FC013A9188100EBD5EA /* MPOAuthURLResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 571D4F9813A9188100EBD5EA /* MPOAuthURLResponse.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		571D4FC113A9188100EBD5EA /* MPURLRequestParameter.m in Sources */ = {isa = PBXBuildFile; fileRef = 571D4F9A13A9188100EBD5EA /* MPURLRequestParameter.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		571D4FC213A9188100EBD5EA /* MPURLRequestParameter.m in Sources */ = {isa = PBXBuildFile; fileRef = 571D4F9A13A9188100EBD5EA /* MPURLRequestParameter.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		571D4FC313A9188100EBD5EA /* MPWSLRDDiscoverer.m in Sources */ = {isa = PBXBuildFile; fileRef = 571D4F9C13A9188100EBD5EA /* MPWSLRDDiscoverer.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		571D4FC413A9188100EBD5EA /* MPWSLRDDiscoverer.m in Sources */ = {isa = PBXBuildFile; fileRef = 571D4F9C13A9188100EBD5EA /* MPWSLRDDiscoverer.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		571D4FC513A9188100EBD5EA /* MPWSXRDDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 571D4F9E13A9188100EBD5EA /* MPWSXRDDocument.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		571D4FC613A9188100EBD5EA /* MPWSXRDDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 571D4F9E13A9188100EBD5EA /* MPWSXRDDocument.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		571D4FC713A9188100EBD5EA /* NSString+URLEscapingAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 571D4FA013A9188100EBD5EA /* NSString+URLEscapingAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		571D4FC813A9188100EBD5EA /* NSString+URLEscapingAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 571D4FA013A9188100EBD5EA /* NSString+URLEscapingAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		571D4FC913A9188100EBD5EA /* NSURL+MPURLParameterAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 571D4FA213A9188100EBD5EA /* NSURL+MPURLParameterAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		571D4FCA13A9188100EBD5EA /* NSURL+MPURLParameterAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 571D4FA213A9188100EBD5EA /* NSURL+MPURLParameterAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		571D4FCB13A9188100EBD5EA /* NSURLResponse+Encoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 571D4FA413A9188100EBD5EA /* NSURLResponse+Encoding.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		571D4FCC13A9188100EBD5EA /* NSURLResponse+Encoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 571D4FA413A9188100EBD5EA /* NSURLResponse+Encoding.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		571D4FCD13A91DD200EBD5EA /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 571D4E4713A90A8D00EBD5EA /* Security.framework */; };
 		571D4FCE13A91DD500EBD5EA /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 571D4E4513A90A7900EBD5EA /* libxml2.dylib */; };
 		571D4FCF13A91DDE00EBD5EA /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 571D4E4713A90A8D00EBD5EA /* Security.framework */; };
@@ -173,11 +133,8 @@
 		5791A5F713A925890038A638 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 5791A5ED13A925890038A638 /* SBJsonParser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		5791A5F813A925890038A638 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5791A5EF13A925890038A638 /* SBJsonWriter.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		5791A5F913A925890038A638 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5791A5EF13A925890038A638 /* SBJsonWriter.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		5791A5FD13A926D80038A638 /* Miso.m in Sources */ = {isa = PBXBuildFile; fileRef = 5791A5FC13A926D80038A638 /* Miso.m */; };
-		5791A5FE13A926D80038A638 /* Miso.m in Sources */ = {isa = PBXBuildFile; fileRef = 5791A5FC13A926D80038A638 /* Miso.m */; };
 		5791A5FF13A92A720038A638 /* oauthAutoConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 571D4F7613A914BA00EBD5EA /* oauthAutoConfig.plist */; };
 		5791A60013A92A790038A638 /* oauthAutoConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 571D4F7613A914BA00EBD5EA /* oauthAutoConfig.plist */; };
-		579CAD5213AB8216006743B4 /* MisoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 579CAD5113AB8216006743B4 /* MisoController.m */; };
 		579CAD5813AB9234006743B4 /* Miso-Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 579CAD5713AB9234006743B4 /* Miso-Logo.png */; };
 		57A82B1113953A3600E71F7F /* NSXMLNode-utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 57A82B1013953A3500E71F7F /* NSXMLNode-utils.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		57C712BF139811F60045361A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57C712BE139811F50045361A /* QuartzCore.framework */; };
@@ -383,49 +340,6 @@
 		571D4E4513A90A7900EBD5EA /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		571D4E4713A90A8D00EBD5EA /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		571D4F7613A914BA00EBD5EA /* oauthAutoConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = oauthAutoConfig.plist; path = Resources/oauthAutoConfig.plist; sourceTree = "<group>"; };
-		571D4F7A13A9188100EBD5EA /* Base64Transcoder.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Base64Transcoder.c; sourceTree = "<group>"; };
-		571D4F7B13A9188100EBD5EA /* Base64Transcoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base64Transcoder.h; sourceTree = "<group>"; };
-		571D4F7C13A9188100EBD5EA /* MPDebug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPDebug.h; sourceTree = "<group>"; };
-		571D4F7D13A9188100EBD5EA /* MPOAuth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPOAuth.h; sourceTree = "<group>"; };
-		571D4F7E13A9188100EBD5EA /* MPOAuthAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPOAuthAPI.h; sourceTree = "<group>"; };
-		571D4F7F13A9188100EBD5EA /* MPOAuthAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPOAuthAPI.m; sourceTree = "<group>"; };
-		571D4F8013A9188100EBD5EA /* MPOAuthAPIRequestLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPOAuthAPIRequestLoader.h; sourceTree = "<group>"; };
-		571D4F8113A9188100EBD5EA /* MPOAuthAPIRequestLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPOAuthAPIRequestLoader.m; sourceTree = "<group>"; };
-		571D4F8213A9188100EBD5EA /* MPOAuthAuthenticationMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPOAuthAuthenticationMethod.h; sourceTree = "<group>"; };
-		571D4F8313A9188100EBD5EA /* MPOAuthAuthenticationMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPOAuthAuthenticationMethod.m; sourceTree = "<group>"; };
-		571D4F8413A9188100EBD5EA /* MPOAuthAuthenticationMethodAuthExchange.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPOAuthAuthenticationMethodAuthExchange.h; sourceTree = "<group>"; };
-		571D4F8513A9188100EBD5EA /* MPOAuthAuthenticationMethodAuthExchange.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPOAuthAuthenticationMethodAuthExchange.m; sourceTree = "<group>"; };
-		571D4F8613A9188100EBD5EA /* MPOAuthAuthenticationMethodOAuth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPOAuthAuthenticationMethodOAuth.h; sourceTree = "<group>"; };
-		571D4F8713A9188100EBD5EA /* MPOAuthAuthenticationMethodOAuth.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPOAuthAuthenticationMethodOAuth.m; sourceTree = "<group>"; };
-		571D4F8813A9188100EBD5EA /* MPOAuthAuthenticationMethodXAuth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPOAuthAuthenticationMethodXAuth.h; sourceTree = "<group>"; };
-		571D4F8913A9188100EBD5EA /* MPOAuthAuthenticationMethodXAuth.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPOAuthAuthenticationMethodXAuth.m; sourceTree = "<group>"; };
-		571D4F8A13A9188100EBD5EA /* MPOAuthConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPOAuthConnection.h; sourceTree = "<group>"; };
-		571D4F8B13A9188100EBD5EA /* MPOAuthConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPOAuthConnection.m; sourceTree = "<group>"; };
-		571D4F8C13A9188100EBD5EA /* MPOAuthCredentiaIConcreteStore+KeychainAdditionsMac.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MPOAuthCredentiaIConcreteStore+KeychainAdditionsMac.m"; sourceTree = "<group>"; };
-		571D4F8D13A9188100EBD5EA /* MPOAuthCredentialConcreteStore+KeychainAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MPOAuthCredentialConcreteStore+KeychainAdditions.h"; sourceTree = "<group>"; };
-		571D4F8E13A9188100EBD5EA /* MPOAuthCredentialConcreteStore+KeychainAdditionsiPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MPOAuthCredentialConcreteStore+KeychainAdditionsiPhone.m"; sourceTree = "<group>"; };
-		571D4F8F13A9188100EBD5EA /* MPOAuthCredentialConcreteStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPOAuthCredentialConcreteStore.h; sourceTree = "<group>"; };
-		571D4F9013A9188100EBD5EA /* MPOAuthCredentialConcreteStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPOAuthCredentialConcreteStore.m; sourceTree = "<group>"; };
-		571D4F9113A9188100EBD5EA /* MPOAuthCredentialStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPOAuthCredentialStore.h; sourceTree = "<group>"; };
-		571D4F9213A9188100EBD5EA /* MPOAuthParameterFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPOAuthParameterFactory.h; sourceTree = "<group>"; };
-		571D4F9313A9188100EBD5EA /* MPOAuthSignatureParameter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPOAuthSignatureParameter.h; sourceTree = "<group>"; };
-		571D4F9413A9188100EBD5EA /* MPOAuthSignatureParameter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPOAuthSignatureParameter.m; sourceTree = "<group>"; };
-		571D4F9513A9188100EBD5EA /* MPOAuthURLRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPOAuthURLRequest.h; sourceTree = "<group>"; };
-		571D4F9613A9188100EBD5EA /* MPOAuthURLRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPOAuthURLRequest.m; sourceTree = "<group>"; };
-		571D4F9713A9188100EBD5EA /* MPOAuthURLResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPOAuthURLResponse.h; sourceTree = "<group>"; };
-		571D4F9813A9188100EBD5EA /* MPOAuthURLResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPOAuthURLResponse.m; sourceTree = "<group>"; };
-		571D4F9913A9188100EBD5EA /* MPURLRequestParameter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPURLRequestParameter.h; sourceTree = "<group>"; };
-		571D4F9A13A9188100EBD5EA /* MPURLRequestParameter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPURLRequestParameter.m; sourceTree = "<group>"; };
-		571D4F9B13A9188100EBD5EA /* MPWSLRDDiscoverer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPWSLRDDiscoverer.h; sourceTree = "<group>"; };
-		571D4F9C13A9188100EBD5EA /* MPWSLRDDiscoverer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPWSLRDDiscoverer.m; sourceTree = "<group>"; };
-		571D4F9D13A9188100EBD5EA /* MPWSXRDDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPWSXRDDocument.h; sourceTree = "<group>"; };
-		571D4F9E13A9188100EBD5EA /* MPWSXRDDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPWSXRDDocument.m; sourceTree = "<group>"; };
-		571D4F9F13A9188100EBD5EA /* NSString+URLEscapingAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+URLEscapingAdditions.h"; sourceTree = "<group>"; };
-		571D4FA013A9188100EBD5EA /* NSString+URLEscapingAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+URLEscapingAdditions.m"; sourceTree = "<group>"; };
-		571D4FA113A9188100EBD5EA /* NSURL+MPURLParameterAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+MPURLParameterAdditions.h"; sourceTree = "<group>"; };
-		571D4FA213A9188100EBD5EA /* NSURL+MPURLParameterAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+MPURLParameterAdditions.m"; sourceTree = "<group>"; };
-		571D4FA313A9188100EBD5EA /* NSURLResponse+Encoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURLResponse+Encoding.h"; sourceTree = "<group>"; };
-		571D4FA413A9188100EBD5EA /* NSURLResponse+Encoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURLResponse+Encoding.m"; sourceTree = "<group>"; };
 		573210E914096F2D00497D44 /* ar */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = ar; path = Resources/ar.lproj/Localizable.strings; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.simpleColoring; };
 		573ABCC613734E9B0018F6F3 /* TorrentzParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TorrentzParser.h; path = TorrentzParser/TorrentzParser.h; sourceTree = "<group>"; };
 		573ABCC713734E9B0018F6F3 /* TorrentzParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TorrentzParser.m; path = TorrentzParser/TorrentzParser.m; sourceTree = "<group>"; };
@@ -448,12 +362,8 @@
 		5791A5ED13A925890038A638 /* SBJsonParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonParser.m; sourceTree = "<group>"; };
 		5791A5EE13A925890038A638 /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
 		5791A5EF13A925890038A638 /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
-		5791A5FB13A926D80038A638 /* Miso.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Miso.h; sourceTree = "<group>"; };
-		5791A5FC13A926D80038A638 /* Miso.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Miso.m; sourceTree = "<group>"; };
 		5793D8171369560000BFF6B0 /* gl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = gl; path = Resources/gl.lproj/Localizable.strings; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.simpleColoring; };
 		5793D8191369569F00BFF6B0 /* el */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = el; path = Resources/el.lproj/Localizable.strings; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.simpleColoring; };
-		579CAD5013AB8216006743B4 /* MisoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MisoController.h; sourceTree = "<group>"; };
-		579CAD5113AB8216006743B4 /* MisoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MisoController.m; sourceTree = "<group>"; };
 		579CAD5413AB8471006743B4 /* AppSecretConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppSecretConstants.h; path = Classes/AppSecretConstants.h; sourceTree = "<group>"; };
 		579CAD5713AB9234006743B4 /* Miso-Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Miso-Logo.png"; sourceTree = "<group>"; };
 		57A82B0F13953A3500E71F7F /* NSXMLNode-utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSXMLNode-utils.h"; sourceTree = "<group>"; };
@@ -706,8 +616,6 @@
 				34D8D1C111AB5C63006382C3 /* CustomRSSController.m */,
 				349FEEBF11835A1C00D24FC9 /* TabController.h */,
 				349FEEC011835A1C00D24FC9 /* TabController.m */,
-				579CAD5013AB8216006743B4 /* MisoController.h */,
-				579CAD5113AB8216006743B4 /* MisoController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -715,7 +623,6 @@
 		347F1E7911AA0E54005A40AA /* External */ = {
 			isa = PBXGroup;
 			children = (
-				5791A5FA13A926D80038A638 /* Miso */,
 				573ABCC513734E5C0018F6F3 /* TorrentzParser */,
 				347B35CC1210D80400F4BFF0 /* The TVDB */,
 				342A5427132D4C9500FB526F /* BWToolkit */,
@@ -725,7 +632,6 @@
 				57D19A1213AEF44A00BDE873 /* LRFilterBar */,
 				34A91891119E2F83004B339D /* RegexKitLite */,
 				5791A5E413A925890038A638 /* JSON */,
-				571D4F7813A9188100EBD5EA /* MPOAuth */,
 			);
 			name = External;
 			path = Classes;
@@ -871,64 +777,6 @@
 			name = Localizations;
 			sourceTree = "<group>";
 		};
-		571D4F7813A9188100EBD5EA /* MPOAuth */ = {
-			isa = PBXGroup;
-			children = (
-				571D4F7913A9188100EBD5EA /* Crypto */,
-				571D4F7C13A9188100EBD5EA /* MPDebug.h */,
-				571D4F7D13A9188100EBD5EA /* MPOAuth.h */,
-				571D4F7E13A9188100EBD5EA /* MPOAuthAPI.h */,
-				571D4F7F13A9188100EBD5EA /* MPOAuthAPI.m */,
-				571D4F8013A9188100EBD5EA /* MPOAuthAPIRequestLoader.h */,
-				571D4F8113A9188100EBD5EA /* MPOAuthAPIRequestLoader.m */,
-				571D4F8213A9188100EBD5EA /* MPOAuthAuthenticationMethod.h */,
-				571D4F8313A9188100EBD5EA /* MPOAuthAuthenticationMethod.m */,
-				571D4F8413A9188100EBD5EA /* MPOAuthAuthenticationMethodAuthExchange.h */,
-				571D4F8513A9188100EBD5EA /* MPOAuthAuthenticationMethodAuthExchange.m */,
-				571D4F8613A9188100EBD5EA /* MPOAuthAuthenticationMethodOAuth.h */,
-				571D4F8713A9188100EBD5EA /* MPOAuthAuthenticationMethodOAuth.m */,
-				571D4F8813A9188100EBD5EA /* MPOAuthAuthenticationMethodXAuth.h */,
-				571D4F8913A9188100EBD5EA /* MPOAuthAuthenticationMethodXAuth.m */,
-				571D4F8A13A9188100EBD5EA /* MPOAuthConnection.h */,
-				571D4F8B13A9188100EBD5EA /* MPOAuthConnection.m */,
-				571D4F8C13A9188100EBD5EA /* MPOAuthCredentiaIConcreteStore+KeychainAdditionsMac.m */,
-				571D4F8D13A9188100EBD5EA /* MPOAuthCredentialConcreteStore+KeychainAdditions.h */,
-				571D4F8E13A9188100EBD5EA /* MPOAuthCredentialConcreteStore+KeychainAdditionsiPhone.m */,
-				571D4F8F13A9188100EBD5EA /* MPOAuthCredentialConcreteStore.h */,
-				571D4F9013A9188100EBD5EA /* MPOAuthCredentialConcreteStore.m */,
-				571D4F9113A9188100EBD5EA /* MPOAuthCredentialStore.h */,
-				571D4F9213A9188100EBD5EA /* MPOAuthParameterFactory.h */,
-				571D4F9313A9188100EBD5EA /* MPOAuthSignatureParameter.h */,
-				571D4F9413A9188100EBD5EA /* MPOAuthSignatureParameter.m */,
-				571D4F9513A9188100EBD5EA /* MPOAuthURLRequest.h */,
-				571D4F9613A9188100EBD5EA /* MPOAuthURLRequest.m */,
-				571D4F9713A9188100EBD5EA /* MPOAuthURLResponse.h */,
-				571D4F9813A9188100EBD5EA /* MPOAuthURLResponse.m */,
-				571D4F9913A9188100EBD5EA /* MPURLRequestParameter.h */,
-				571D4F9A13A9188100EBD5EA /* MPURLRequestParameter.m */,
-				571D4F9B13A9188100EBD5EA /* MPWSLRDDiscoverer.h */,
-				571D4F9C13A9188100EBD5EA /* MPWSLRDDiscoverer.m */,
-				571D4F9D13A9188100EBD5EA /* MPWSXRDDocument.h */,
-				571D4F9E13A9188100EBD5EA /* MPWSXRDDocument.m */,
-				571D4F9F13A9188100EBD5EA /* NSString+URLEscapingAdditions.h */,
-				571D4FA013A9188100EBD5EA /* NSString+URLEscapingAdditions.m */,
-				571D4FA113A9188100EBD5EA /* NSURL+MPURLParameterAdditions.h */,
-				571D4FA213A9188100EBD5EA /* NSURL+MPURLParameterAdditions.m */,
-				571D4FA313A9188100EBD5EA /* NSURLResponse+Encoding.h */,
-				571D4FA413A9188100EBD5EA /* NSURLResponse+Encoding.m */,
-			);
-			path = MPOAuth;
-			sourceTree = "<group>";
-		};
-		571D4F7913A9188100EBD5EA /* Crypto */ = {
-			isa = PBXGroup;
-			children = (
-				571D4F7A13A9188100EBD5EA /* Base64Transcoder.c */,
-				571D4F7B13A9188100EBD5EA /* Base64Transcoder.h */,
-			);
-			path = Crypto;
-			sourceTree = "<group>";
-		};
 		573ABCC513734E5C0018F6F3 /* TorrentzParser */ = {
 			isa = PBXGroup;
 			children = (
@@ -954,15 +802,6 @@
 				5791A5EF13A925890038A638 /* SBJsonWriter.m */,
 			);
 			path = JSON;
-			sourceTree = "<group>";
-		};
-		5791A5FA13A926D80038A638 /* Miso */ = {
-			isa = PBXGroup;
-			children = (
-				5791A5FB13A926D80038A638 /* Miso.h */,
-				5791A5FC13A926D80038A638 /* Miso.m */,
-			);
-			path = Miso;
 			sourceTree = "<group>";
 		};
 		57D19A1213AEF44A00BDE873 /* LRFilterBar */ = {
@@ -1267,32 +1106,11 @@
 				345EC8DB13235DA400F36BFF /* Subscriptions.xcdatamodel in Sources */,
 				3493F1151335B0F800467073 /* LCLLogFile.m in Sources */,
 				573ABCC813734E9B0018F6F3 /* TorrentzParser.m in Sources */,
-				571D4FA613A9188100EBD5EA /* Base64Transcoder.c in Sources */,
-				571D4FA813A9188100EBD5EA /* MPOAuthAPI.m in Sources */,
-				571D4FAA13A9188100EBD5EA /* MPOAuthAPIRequestLoader.m in Sources */,
-				571D4FAC13A9188100EBD5EA /* MPOAuthAuthenticationMethod.m in Sources */,
-				571D4FAE13A9188100EBD5EA /* MPOAuthAuthenticationMethodAuthExchange.m in Sources */,
-				571D4FB013A9188100EBD5EA /* MPOAuthAuthenticationMethodOAuth.m in Sources */,
-				571D4FB213A9188100EBD5EA /* MPOAuthAuthenticationMethodXAuth.m in Sources */,
-				571D4FB413A9188100EBD5EA /* MPOAuthConnection.m in Sources */,
-				571D4FB613A9188100EBD5EA /* MPOAuthCredentiaIConcreteStore+KeychainAdditionsMac.m in Sources */,
-				571D4FB813A9188100EBD5EA /* MPOAuthCredentialConcreteStore+KeychainAdditionsiPhone.m in Sources */,
-				571D4FBA13A9188100EBD5EA /* MPOAuthCredentialConcreteStore.m in Sources */,
-				571D4FBC13A9188100EBD5EA /* MPOAuthSignatureParameter.m in Sources */,
-				571D4FBE13A9188100EBD5EA /* MPOAuthURLRequest.m in Sources */,
-				571D4FC013A9188100EBD5EA /* MPOAuthURLResponse.m in Sources */,
-				571D4FC213A9188100EBD5EA /* MPURLRequestParameter.m in Sources */,
-				571D4FC413A9188100EBD5EA /* MPWSLRDDiscoverer.m in Sources */,
-				571D4FC613A9188100EBD5EA /* MPWSXRDDocument.m in Sources */,
-				571D4FC813A9188100EBD5EA /* NSString+URLEscapingAdditions.m in Sources */,
-				571D4FCA13A9188100EBD5EA /* NSURL+MPURLParameterAdditions.m in Sources */,
-				571D4FCC13A9188100EBD5EA /* NSURLResponse+Encoding.m in Sources */,
 				5791A5F113A925890038A638 /* NSObject+SBJSON.m in Sources */,
 				5791A5F313A925890038A638 /* NSString+SBJSON.m in Sources */,
 				5791A5F513A925890038A638 /* SBJsonBase.m in Sources */,
 				5791A5F713A925890038A638 /* SBJsonParser.m in Sources */,
 				5791A5F913A925890038A638 /* SBJsonWriter.m in Sources */,
-				5791A5FE13A926D80038A638 /* Miso.m in Sources */,
 				57FDFEBB13A94E310019EDB6 /* TheTVDB.m in Sources */,
 				577322A613ACC608002F0926 /* PresetShowsDelegate.m in Sources */,
 				5786454F13B1380900C840C3 /* TSTorrentFunctions.m in Sources */,
@@ -1345,33 +1163,11 @@
 				3493F1141335B0F800467073 /* LCLLogFile.m in Sources */,
 				57F33F891376FE4C00270A75 /* TorrentzParser.m in Sources */,
 				57A82B1113953A3600E71F7F /* NSXMLNode-utils.m in Sources */,
-				571D4FA513A9188100EBD5EA /* Base64Transcoder.c in Sources */,
-				571D4FA713A9188100EBD5EA /* MPOAuthAPI.m in Sources */,
-				571D4FA913A9188100EBD5EA /* MPOAuthAPIRequestLoader.m in Sources */,
-				571D4FAB13A9188100EBD5EA /* MPOAuthAuthenticationMethod.m in Sources */,
-				571D4FAD13A9188100EBD5EA /* MPOAuthAuthenticationMethodAuthExchange.m in Sources */,
-				571D4FAF13A9188100EBD5EA /* MPOAuthAuthenticationMethodOAuth.m in Sources */,
-				571D4FB113A9188100EBD5EA /* MPOAuthAuthenticationMethodXAuth.m in Sources */,
-				571D4FB313A9188100EBD5EA /* MPOAuthConnection.m in Sources */,
-				571D4FB513A9188100EBD5EA /* MPOAuthCredentiaIConcreteStore+KeychainAdditionsMac.m in Sources */,
-				571D4FB713A9188100EBD5EA /* MPOAuthCredentialConcreteStore+KeychainAdditionsiPhone.m in Sources */,
-				571D4FB913A9188100EBD5EA /* MPOAuthCredentialConcreteStore.m in Sources */,
-				571D4FBB13A9188100EBD5EA /* MPOAuthSignatureParameter.m in Sources */,
-				571D4FBD13A9188100EBD5EA /* MPOAuthURLRequest.m in Sources */,
-				571D4FBF13A9188100EBD5EA /* MPOAuthURLResponse.m in Sources */,
-				571D4FC113A9188100EBD5EA /* MPURLRequestParameter.m in Sources */,
-				571D4FC313A9188100EBD5EA /* MPWSLRDDiscoverer.m in Sources */,
-				571D4FC513A9188100EBD5EA /* MPWSXRDDocument.m in Sources */,
-				571D4FC713A9188100EBD5EA /* NSString+URLEscapingAdditions.m in Sources */,
-				571D4FC913A9188100EBD5EA /* NSURL+MPURLParameterAdditions.m in Sources */,
-				571D4FCB13A9188100EBD5EA /* NSURLResponse+Encoding.m in Sources */,
 				5791A5F013A925890038A638 /* NSObject+SBJSON.m in Sources */,
 				5791A5F213A925890038A638 /* NSString+SBJSON.m in Sources */,
 				5791A5F413A925890038A638 /* SBJsonBase.m in Sources */,
 				5791A5F613A925890038A638 /* SBJsonParser.m in Sources */,
 				5791A5F813A925890038A638 /* SBJsonWriter.m in Sources */,
-				5791A5FD13A926D80038A638 /* Miso.m in Sources */,
-				579CAD5213AB8216006743B4 /* MisoController.m in Sources */,
 				57D19A1F13AEF44B00BDE873 /* LRFilterBar.m in Sources */,
 				57D19A2013AEF44B00BDE873 /* LRFilterButton.m in Sources */,
 				57D19A2113AEF44B00BDE873 /* LRFilterButtonCell.m in Sources */,
