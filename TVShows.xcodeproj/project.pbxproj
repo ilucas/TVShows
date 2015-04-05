@@ -543,7 +543,8 @@
 				342A5429132D4CB800FB526F /* BWInsetTextField.m */,
 			);
 			name = BWToolkit;
-			sourceTree = "<group>";
+			path = Vendor;
+			sourceTree = SOURCE_ROOT;
 		};
 		3444F29011DD13F700BF3724 /* Subclasses */ = {
 			isa = PBXGroup;
@@ -569,8 +570,9 @@
 				344A204011F5470B00026735 /* MBSliderButton.h */,
 				344A204111F5470B00026735 /* MBSliderButton.m */,
 			);
-			path = MBSliderButton;
-			sourceTree = "<group>";
+			name = MBSliderButton;
+			path = Vendor/MBSliderButton;
+			sourceTree = SOURCE_ROOT;
 		};
 		344A6367133307970076FC2F /* LCLLogFile */ = {
 			isa = PBXGroup;
@@ -580,7 +582,8 @@
 				344A637213330E960076FC2F /* LCLLogFileConfig.h */,
 			);
 			name = LCLLogFile;
-			sourceTree = "<group>";
+			path = Vendor;
+			sourceTree = SOURCE_ROOT;
 		};
 		347B35CC1210D80400F4BFF0 /* The TVDB */ = {
 			isa = PBXGroup;
@@ -589,6 +592,7 @@
 				347B35D51210DB6000F4BFF0 /* TheTVDB.m */,
 			);
 			name = "The TVDB";
+			path = Classes;
 			sourceTree = "<group>";
 		};
 		347F1E6F11AA0D9E005A40AA /* Core Data */ = {
@@ -634,8 +638,7 @@
 				5791A5E413A925890038A638 /* JSON */,
 			);
 			name = External;
-			path = Classes;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 		349F2F6211B2E7DB00D10D96 /* FeedParser */ = {
 			isa = PBXGroup;
@@ -657,8 +660,8 @@
 				349F2F7B11B2E7DB00D10D96 /* XML Extensions */,
 			);
 			name = FeedParser;
-			path = FeedParser/FeedParser;
-			sourceTree = "<group>";
+			path = Vendor/FeedParser/FeedParser;
+			sourceTree = SOURCE_ROOT;
 		};
 		349F2F6311B2E7DB00D10D96 /* Extensions */ = {
 			isa = PBXGroup;
@@ -744,8 +747,9 @@
 				34A91892119E2F83004B339D /* RegexKitLite.h */,
 				34A91893119E2F83004B339D /* RegexKitLite.m */,
 			);
-			path = RegexKitLite;
-			sourceTree = "<group>";
+			name = RegexKitLite;
+			path = Vendor/RegexKitLite;
+			sourceTree = SOURCE_ROOT;
 		};
 		34E6242811DAAA74007E7854 /* Helper Classes */ = {
 			isa = PBXGroup;
@@ -784,6 +788,7 @@
 				573ABCC713734E9B0018F6F3 /* TorrentzParser.m */,
 			);
 			name = TorrentzParser;
+			path = Classes;
 			sourceTree = "<group>";
 		};
 		5791A5E413A925890038A638 /* JSON */ = {
@@ -801,8 +806,9 @@
 				5791A5EE13A925890038A638 /* SBJsonWriter.h */,
 				5791A5EF13A925890038A638 /* SBJsonWriter.m */,
 			);
-			path = JSON;
-			sourceTree = "<group>";
+			name = JSON;
+			path = Vendor/JSON;
+			sourceTree = SOURCE_ROOT;
 		};
 		57D19A1213AEF44A00BDE873 /* LRFilterBar */ = {
 			isa = PBXGroup;
@@ -816,8 +822,9 @@
 				57D19A1D13AEF44A00BDE873 /* LROverflowButton.h */,
 				57D19A1E13AEF44A00BDE873 /* LROverflowButton.m */,
 			);
-			path = LRFilterBar;
-			sourceTree = "<group>";
+			name = LRFilterBar;
+			path = Vendor/LRFilterBar;
+			sourceTree = SOURCE_ROOT;
 		};
 		A02FB6D31AC4E814007466D8 /* TVShowsHelper */ = {
 			isa = PBXGroup;
