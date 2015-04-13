@@ -155,11 +155,13 @@
 		57FDFEBB13A94E310019EDB6 /* TheTVDB.m in Sources */ = {isa = PBXBuildFile; fileRef = 347B35D51210DB6000F4BFF0 /* TheTVDB.m */; };
 		8D202CF30486D31800D8A456 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */; };
 		8D202CF40486D31800D8A456 /* PreferencePanes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F506C035013D953901CA16C8 /* PreferencePanes.framework */; };
+		A001C0761ADA34B0002DCC99 /* SidebarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A001C0751ADA34B0002DCC99 /* SidebarItem.m */; };
 		A0432F241AD9649600C19189 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A0432F231AD9649600C19189 /* AppDelegate.m */; };
 		A0432F261AD9649600C19189 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A0432F251AD9649600C19189 /* main.m */; };
 		A0432F281AD9649600C19189 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0432F271AD9649600C19189 /* Images.xcassets */; };
 		A0432F2B1AD9649600C19189 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = A0432F291AD9649600C19189 /* MainMenu.xib */; };
 		A0432F371AD9649700C19189 /* TVShowsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A0432F361AD9649700C19189 /* TVShowsTests.m */; };
+		A09D54F91ADB489A0005C2FF /* WAYSourceListWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = A09D54F81ADB489A0005C2FF /* WAYSourceListWindow.m */; };
 		F1BB481C1532836C00CDE2A8 /* PTViewSubclass.m in Sources */ = {isa = PBXBuildFile; fileRef = F1BB481B1532836C00CDE2A8 /* PTViewSubclass.m */; };
 /* End PBXBuildFile section */
 
@@ -409,6 +411,8 @@
 		57F7062913AF32E5002A83E4 /* Cover-DVD.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Cover-DVD.png"; sourceTree = "<group>"; };
 		57F7062C13AF3798002A83E4 /* Cover-Bluray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Cover-Bluray.png"; sourceTree = "<group>"; };
 		8D202CF80486D31800D8A456 /* TVShows.prefPane */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TVShows.prefPane; sourceTree = BUILT_PRODUCTS_DIR; };
+		A001C0741ADA34B0002DCC99 /* SidebarItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SidebarItem.h; sourceTree = "<group>"; };
+		A001C0751ADA34B0002DCC99 /* SidebarItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SidebarItem.m; sourceTree = "<group>"; };
 		A0432F1E1AD9649600C19189 /* TVShows.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TVShows.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0432F211AD9649600C19189 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A0432F221AD9649600C19189 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -419,6 +423,8 @@
 		A0432F301AD9649700C19189 /* TVShowsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TVShowsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0432F351AD9649700C19189 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A0432F361AD9649700C19189 /* TVShowsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TVShowsTests.m; sourceTree = "<group>"; };
+		A09D54F71ADB489A0005C2FF /* WAYSourceListWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WAYSourceListWindow.h; sourceTree = "<group>"; };
+		A09D54F81ADB489A0005C2FF /* WAYSourceListWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WAYSourceListWindow.m; sourceTree = "<group>"; };
 		F1BB481A1532836C00CDE2A8 /* PTViewSubclass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTViewSubclass.h; sourceTree = "<group>"; };
 		F1BB481B1532836C00CDE2A8 /* PTViewSubclass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTViewSubclass.m; sourceTree = "<group>"; };
 		F506C035013D953901CA16C8 /* PreferencePanes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PreferencePanes.framework; path = /System/Library/Frameworks/PreferencePanes.framework; sourceTree = "<absolute>"; };
@@ -667,6 +673,7 @@
 		347F1E7911AA0E54005A40AA /* External */ = {
 			isa = PBXGroup;
 			children = (
+				A09D54F61ADB489A0005C2FF /* WAYSourceListWindow */,
 				573ABCC513734E5C0018F6F3 /* TorrentzParser */,
 				347B35CC1210D80400F4BFF0 /* The TVDB */,
 				342A5427132D4C9500FB526F /* BWToolkit */,
@@ -866,6 +873,15 @@
 			path = Vendor/LRFilterBar;
 			sourceTree = SOURCE_ROOT;
 		};
+		A001C0731ADA3379002DCC99 /* Sidebar */ = {
+			isa = PBXGroup;
+			children = (
+				A001C0741ADA34B0002DCC99 /* SidebarItem.h */,
+				A001C0751ADA34B0002DCC99 /* SidebarItem.m */,
+			);
+			name = Sidebar;
+			sourceTree = "<group>";
+		};
 		A02FB6D31AC4E814007466D8 /* TVShowsHelper */ = {
 			isa = PBXGroup;
 			children = (
@@ -904,6 +920,7 @@
 				A0432F231AD9649600C19189 /* AppDelegate.m */,
 				A0432F271AD9649600C19189 /* Images.xcassets */,
 				A0432F291AD9649600C19189 /* MainMenu.xib */,
+				A001C0731ADA3379002DCC99 /* Sidebar */,
 				A0432F201AD9649600C19189 /* Supporting Files */,
 			);
 			path = TVShows;
@@ -933,6 +950,16 @@
 				A0432F351AD9649700C19189 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A09D54F61ADB489A0005C2FF /* WAYSourceListWindow */ = {
+			isa = PBXGroup;
+			children = (
+				A09D54F71ADB489A0005C2FF /* WAYSourceListWindow.h */,
+				A09D54F81ADB489A0005C2FF /* WAYSourceListWindow.m */,
+			);
+			name = WAYSourceListWindow;
+			path = Vendor/WAYSourceListWindow;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1328,6 +1355,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A0432F261AD9649600C19189 /* main.m in Sources */,
+				A001C0761ADA34B0002DCC99 /* SidebarItem.m in Sources */,
+				A09D54F91ADB489A0005C2FF /* WAYSourceListWindow.m in Sources */,
 				A0432F241AD9649600C19189 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1886,6 +1915,7 @@
 				A0432F391AD9649700C19189 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A0432F3D1AD9649700C19189 /* Build configuration list for PBXNativeTarget "TVShowsTests" */ = {
 			isa = XCConfigurationList;
@@ -1894,6 +1924,7 @@
 				A0432F3B1AD9649700C19189 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
