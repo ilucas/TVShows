@@ -11,13 +11,18 @@
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
         <customObject id="Voe-Tx-rLC" customClass="AppDelegate">
             <connections>
-                <outlet property="outilneView" destination="HMz-M4-vth" id="MQn-ry-pMV"/>
                 <outlet property="window" destination="QvC-M9-y7g" id="gIp-Ho-8D9"/>
             </connections>
         </customObject>
-        <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
+        <viewController id="lVz-ua-9XS" customClass="SidebarViewController">
+            <connections>
+                <outlet property="outlineView" destination="HMz-M4-vth" id="U0E-Ri-MhI"/>
+                <outlet property="view" destination="Kz6-Rq-hoD" id="rH3-Wc-9cQ"/>
+            </connections>
+        </viewController>
         <menu title="Main Menu" systemMenu="main" id="AYu-sK-qS6">
             <items>
                 <menuItem title="TVShows" id="1Xt-HY-uBw">
@@ -694,7 +699,7 @@
         <customView id="Rvk-Qu-uc5">
             <rect key="frame" x="0.0" y="0.0" width="433" height="377"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-            <point key="canvasLocation" x="166.5" y="957.5"/>
+            <point key="canvasLocation" x="154.5" y="1023.5"/>
         </customView>
         <customView id="Kz6-Rq-hoD">
             <rect key="frame" x="0.0" y="5" width="200" height="340"/>
@@ -706,7 +711,7 @@
                         <rect key="frame" x="1" y="1" width="148" height="398"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <outlineView appearanceType="vibrantLight" verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" selectionHighlightStyle="sourceList" multipleSelection="NO" autosaveColumns="NO" rowHeight="24" rowSizeStyle="automatic" viewBased="YES" indentationPerLevel="16" outlineTableColumn="v1o-R3-KkP" id="HMz-M4-vth">
+                            <outlineView appearanceType="vibrantLight" verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" selectionHighlightStyle="sourceList" multipleSelection="NO" autosaveColumns="NO" rowHeight="24" rowSizeStyle="automatic" viewBased="YES" indentationPerLevel="16" autosaveExpandedItems="YES" outlineTableColumn="v1o-R3-KkP" id="HMz-M4-vth">
                                 <rect key="frame" x="0.0" y="0.0" width="200" height="0.0"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <size key="intercellSpacing" width="3" height="2"/>
@@ -726,21 +731,21 @@
                                         </textFieldCell>
                                         <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                         <prototypeCellViews>
-                                            <tableCellView identifier="HeaderCell" id="dCd-Ew-KWA">
-                                                <rect key="frame" x="1" y="1" width="197" height="24"/>
+                                            <tableCellView identifier="HeaderCell" id="8UO-1w-166">
+                                                <rect key="frame" x="1" y="43" width="197" height="17"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
-                                                    <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Ru-0f-shm">
-                                                        <rect key="frame" x="0.0" y="8" width="145" height="14"/>
-                                                        <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="HEADER CELL" id="s3N-Vf-MjX">
+                                                    <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yFx-rt-4Xq">
+                                                        <rect key="frame" x="0.0" y="-2" width="145" height="14"/>
+                                                        <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="HEADER CELL" id="Keh-sQ-JSz">
                                                             <font key="font" metaFont="smallSystemBold"/>
                                                             <color key="textColor" name="headerColor" catalog="System" colorSpace="catalog"/>
-                                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                         </textFieldCell>
                                                     </textField>
                                                 </subviews>
                                                 <connections>
-                                                    <outlet property="textField" destination="8Ru-0f-shm" id="Bx9-QE-1OB"/>
+                                                    <outlet property="textField" destination="yFx-rt-4Xq" id="psT-hT-8Gb"/>
                                                 </connections>
                                             </tableCellView>
                                             <tableCellView identifier="DataCell" id="jxk-al-BVs">
@@ -769,12 +774,12 @@
                                     </tableColumn>
                                 </tableColumns>
                                 <connections>
-                                    <outlet property="dataSource" destination="Voe-Tx-rLC" id="kSZ-rZ-uYW"/>
-                                    <outlet property="delegate" destination="Voe-Tx-rLC" id="dOe-II-XHR"/>
+                                    <outlet property="dataSource" destination="lVz-ua-9XS" id="P1r-HH-Qnp"/>
+                                    <outlet property="delegate" destination="lVz-ua-9XS" id="GfE-vU-yTs"/>
                                 </connections>
                             </outlineView>
                         </subviews>
-                        <nil key="backgroundColor"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
                     </clipView>
                     <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="d3o-ph-SXx">
                         <rect key="frame" x="1" y="119" width="238" height="15"/>
@@ -792,7 +797,7 @@
                 <constraint firstItem="8qy-We-65r" firstAttribute="top" secondItem="Kz6-Rq-hoD" secondAttribute="top" constant="23" id="kEw-HF-cJs"/>
                 <constraint firstAttribute="bottom" secondItem="8qy-We-65r" secondAttribute="bottom" id="md7-xW-tUu"/>
             </constraints>
-            <point key="canvasLocation" x="-255" y="1011"/>
+            <point key="canvasLocation" x="-260" y="1024"/>
         </customView>
     </objects>
     <resources>

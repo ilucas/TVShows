@@ -162,6 +162,7 @@
 		A0432F2B1AD9649600C19189 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = A0432F291AD9649600C19189 /* MainMenu.xib */; };
 		A0432F371AD9649700C19189 /* TVShowsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A0432F361AD9649700C19189 /* TVShowsTests.m */; };
 		A09D54F91ADB489A0005C2FF /* WAYSourceListWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = A09D54F81ADB489A0005C2FF /* WAYSourceListWindow.m */; };
+		A0CB705E1ADDFA57006FBAEB /* SidebarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0CB705D1ADDFA57006FBAEB /* SidebarViewController.m */; };
 		F1BB481C1532836C00CDE2A8 /* PTViewSubclass.m in Sources */ = {isa = PBXBuildFile; fileRef = F1BB481B1532836C00CDE2A8 /* PTViewSubclass.m */; };
 /* End PBXBuildFile section */
 
@@ -425,6 +426,8 @@
 		A0432F361AD9649700C19189 /* TVShowsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TVShowsTests.m; sourceTree = "<group>"; };
 		A09D54F71ADB489A0005C2FF /* WAYSourceListWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WAYSourceListWindow.h; sourceTree = "<group>"; };
 		A09D54F81ADB489A0005C2FF /* WAYSourceListWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WAYSourceListWindow.m; sourceTree = "<group>"; };
+		A0CB705C1ADDFA57006FBAEB /* SidebarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SidebarViewController.h; sourceTree = "<group>"; };
+		A0CB705D1ADDFA57006FBAEB /* SidebarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SidebarViewController.m; sourceTree = "<group>"; };
 		F1BB481A1532836C00CDE2A8 /* PTViewSubclass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTViewSubclass.h; sourceTree = "<group>"; };
 		F1BB481B1532836C00CDE2A8 /* PTViewSubclass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTViewSubclass.m; sourceTree = "<group>"; };
 		F506C035013D953901CA16C8 /* PreferencePanes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PreferencePanes.framework; path = /System/Library/Frameworks/PreferencePanes.framework; sourceTree = "<absolute>"; };
@@ -876,6 +879,8 @@
 		A001C0731ADA3379002DCC99 /* Sidebar */ = {
 			isa = PBXGroup;
 			children = (
+				A0CB705C1ADDFA57006FBAEB /* SidebarViewController.h */,
+				A0CB705D1ADDFA57006FBAEB /* SidebarViewController.m */,
 				A001C0741ADA34B0002DCC99 /* SidebarItem.h */,
 				A001C0751ADA34B0002DCC99 /* SidebarItem.m */,
 			);
@@ -1356,6 +1361,7 @@
 			files = (
 				A0432F261AD9649600C19189 /* main.m in Sources */,
 				A001C0761ADA34B0002DCC99 /* SidebarItem.m in Sources */,
+				A0CB705E1ADDFA57006FBAEB /* SidebarViewController.m in Sources */,
 				A09D54F91ADB489A0005C2FF /* WAYSourceListWindow.m in Sources */,
 				A0432F241AD9649600C19189 /* AppDelegate.m in Sources */,
 			);
