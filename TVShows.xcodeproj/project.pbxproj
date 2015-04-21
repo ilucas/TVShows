@@ -185,6 +185,11 @@
 		A06F87741AE6904700CD66DC /* box_gloss.pdf in Resources */ = {isa = PBXBuildFile; fileRef = A06F875D1AE6904700CD66DC /* box_gloss.pdf */; };
 		A06F87751AE6904700CD66DC /* noise.png in Resources */ = {isa = PBXBuildFile; fileRef = A06F875E1AE6904700CD66DC /* noise.png */; };
 		A06F87761AE6904700CD66DC /* noise@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A06F875F1AE6904700CD66DC /* noise@2x.png */; };
+		A06F88051AE6B92900CD66DC /* TVShows.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A06F88031AE6B92900CD66DC /* TVShows.xcdatamodeld */; };
+		A06F88121AE6D58400CD66DC /* Subscription.m in Sources */ = {isa = PBXBuildFile; fileRef = A06F88111AE6D58400CD66DC /* Subscription.m */; };
+		A06F88151AE6D58500CD66DC /* Episode.m in Sources */ = {isa = PBXBuildFile; fileRef = A06F88141AE6D58500CD66DC /* Episode.m */; };
+		A06F88181AE6D58500CD66DC /* Series.m in Sources */ = {isa = PBXBuildFile; fileRef = A06F88171AE6D58500CD66DC /* Series.m */; };
+		A06F881F1AE6D98F00CD66DC /* TVRage.m in Sources */ = {isa = PBXBuildFile; fileRef = A06F881E1AE6D98F00CD66DC /* TVRage.m */; };
 		A09D54F91ADB489A0005C2FF /* WAYSourceListWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = A09D54F81ADB489A0005C2FF /* WAYSourceListWindow.m */; };
 		A0CB705E1ADDFA57006FBAEB /* SidebarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0CB705D1ADDFA57006FBAEB /* SidebarViewController.m */; };
 		F1BB481C1532836C00CDE2A8 /* PTViewSubclass.m in Sources */ = {isa = PBXBuildFile; fileRef = F1BB481B1532836C00CDE2A8 /* PTViewSubclass.m */; };
@@ -501,6 +506,15 @@
 		A06F875D1AE6904700CD66DC /* box_gloss.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = box_gloss.pdf; sourceTree = "<group>"; };
 		A06F875E1AE6904700CD66DC /* noise.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = noise.png; sourceTree = "<group>"; };
 		A06F875F1AE6904700CD66DC /* noise@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "noise@2x.png"; sourceTree = "<group>"; };
+		A06F88041AE6B92900CD66DC /* TVShows.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TVShows.xcdatamodel; sourceTree = "<group>"; };
+		A06F88101AE6D58400CD66DC /* Subscription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Subscription.h; path = TVShows/Subscription.h; sourceTree = "<group>"; };
+		A06F88111AE6D58400CD66DC /* Subscription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Subscription.m; path = TVShows/Subscription.m; sourceTree = "<group>"; };
+		A06F88131AE6D58500CD66DC /* Episode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Episode.h; path = TVShows/Episode.h; sourceTree = "<group>"; };
+		A06F88141AE6D58500CD66DC /* Episode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Episode.m; path = TVShows/Episode.m; sourceTree = "<group>"; };
+		A06F88161AE6D58500CD66DC /* Series.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Series.h; path = TVShows/Series.h; sourceTree = "<group>"; };
+		A06F88171AE6D58500CD66DC /* Series.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Series.m; path = TVShows/Series.m; sourceTree = "<group>"; };
+		A06F881D1AE6D98F00CD66DC /* TVRage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TVRage.h; path = TVShows/TVRage.h; sourceTree = SOURCE_ROOT; };
+		A06F881E1AE6D98F00CD66DC /* TVRage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TVRage.m; path = TVShows/TVRage.m; sourceTree = SOURCE_ROOT; };
 		A09D54F71ADB489A0005C2FF /* WAYSourceListWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WAYSourceListWindow.h; sourceTree = "<group>"; };
 		A09D54F81ADB489A0005C2FF /* WAYSourceListWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WAYSourceListWindow.m; sourceTree = "<group>"; };
 		A0CB705C1ADDFA57006FBAEB /* SidebarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SidebarViewController.h; sourceTree = "<group>"; };
@@ -576,7 +590,7 @@
 				A0432F331AD9649700C19189 /* TVShowsTests */,
 				A02FB6D41AC4E81A007466D8 /* TVShowsPref */,
 				A02FB6D31AC4E814007466D8 /* TVShowsHelper */,
-				3401816611951C9D00FB0E39 /* Models */,
+				3401816611951C9D00FB0E39 /* Core Data */,
 				349FEE141183597500D24FC9 /* Other Sources */,
 				A02FB6D51AC4E8ED007466D8 /* Supporting Files */,
 				347F1E7911AA0E54005A40AA /* External */,
@@ -655,14 +669,16 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		3401816611951C9D00FB0E39 /* Models */ = {
+		3401816611951C9D00FB0E39 /* Core Data */ = {
 			isa = PBXGroup;
 			children = (
+				A06F88061AE6D0E300CD66DC /* Models */,
 				342A32F611AA4C6200C433CD /* Cache.xcdatamodel */,
 				347F1E6411A9FA96005A40AA /* PresetShows.xcdatamodel */,
 				345EC8D913235DA400F36BFF /* Subscriptions.xcdatamodel */,
+				A06F88031AE6B92900CD66DC /* TVShows.xcdatamodeld */,
 			);
-			name = Models;
+			name = "Core Data";
 			sourceTree = "<group>";
 		};
 		342A5427132D4C9500FB526F /* BWToolkit */ = {
@@ -723,7 +739,6 @@
 				347B35D51210DB6000F4BFF0 /* TheTVDB.m */,
 			);
 			name = "The TVDB";
-			path = Classes;
 			sourceTree = "<group>";
 		};
 		347F1E6F11AA0D9E005A40AA /* Core Data */ = {
@@ -760,8 +775,6 @@
 			children = (
 				A09D54F61ADB489A0005C2FF /* WAYSourceListWindow */,
 				A06F87271AE6904700CD66DC /* OpenEmu */,
-				573ABCC513734E5C0018F6F3 /* TorrentzParser */,
-				347B35CC1210D80400F4BFF0 /* The TVDB */,
 				342A5427132D4C9500FB526F /* BWToolkit */,
 				349F2F6211B2E7DB00D10D96 /* FeedParser */,
 				344A6367133307970076FC2F /* LCLLogFile */,
@@ -869,6 +882,9 @@
 				347F1E6F11AA0D9E005A40AA /* Core Data */,
 				34E6242811DAAA74007E7854 /* Helper Classes */,
 				3444F29011DD13F700BF3724 /* Subclasses */,
+				A06F881C1AE6D95A00CD66DC /* TVRage */,
+				347B35CC1210D80400F4BFF0 /* The TVDB */,
+				573ABCC513734E5C0018F6F3 /* TorrentzParser */,
 			);
 			name = "Other Sources";
 			path = Classes;
@@ -921,7 +937,6 @@
 				573ABCC713734E9B0018F6F3 /* TorrentzParser.m */,
 			);
 			name = TorrentzParser;
-			path = Classes;
 			sourceTree = "<group>";
 		};
 		5791A5E413A925890038A638 /* JSON */ = {
@@ -1147,6 +1162,28 @@
 				A06F875F1AE6904700CD66DC /* noise@2x.png */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		A06F88061AE6D0E300CD66DC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A06F88161AE6D58500CD66DC /* Series.h */,
+				A06F88171AE6D58500CD66DC /* Series.m */,
+				A06F88131AE6D58500CD66DC /* Episode.h */,
+				A06F88141AE6D58500CD66DC /* Episode.m */,
+				A06F88101AE6D58400CD66DC /* Subscription.h */,
+				A06F88111AE6D58400CD66DC /* Subscription.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		A06F881C1AE6D95A00CD66DC /* TVRage */ = {
+			isa = PBXGroup;
+			children = (
+				A06F881D1AE6D98F00CD66DC /* TVRage.h */,
+				A06F881E1AE6D98F00CD66DC /* TVRage.m */,
+			);
+			name = TVRage;
 			sourceTree = "<group>";
 		};
 		A09D54F61ADB489A0005C2FF /* WAYSourceListWindow */ = {
@@ -1576,6 +1613,7 @@
 				34C5B59111BB3C1500AAE681 /* TSParseXMLFeeds.m in Sources */,
 				344A204211F5470B00026735 /* MBSliderButton.m in Sources */,
 				347B35D61210DB6000F4BFF0 /* TheTVDB.m in Sources */,
+				A06F88051AE6B92900CD66DC /* TVShows.xcdatamodeld in Sources */,
 				345EC8DA13235DA400F36BFF /* Subscriptions.xcdatamodel in Sources */,
 				345EC8EE13235E4800F36BFF /* ValueTransformers.m in Sources */,
 				342A542A132D4CB800FB526F /* BWInsetTextField.m in Sources */,
@@ -1604,6 +1642,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A06F88181AE6D58500CD66DC /* Series.m in Sources */,
+				A06F881F1AE6D98F00CD66DC /* TVRage.m in Sources */,
 				A06F87601AE6904700CD66DC /* NSColor+OEAdditions.m in Sources */,
 				A0432F261AD9649600C19189 /* main.m in Sources */,
 				A06F876A1AE6904700CD66DC /* OEGridViewFieldEditor.m in Sources */,
@@ -1624,7 +1664,9 @@
 				A09D54F91ADB489A0005C2FF /* WAYSourceListWindow.m in Sources */,
 				A06F87671AE6904700CD66DC /* OEGridMediaItemCell.m in Sources */,
 				A06F876D1AE6904700CD66DC /* OEThemeGradient.m in Sources */,
+				A06F88121AE6D58400CD66DC /* Subscription.m in Sources */,
 				A06F876C1AE6904700CD66DC /* OEThemeColor.m in Sources */,
+				A06F88151AE6D58500CD66DC /* Episode.m in Sources */,
 				A0432F241AD9649600C19189 /* AppDelegate.m in Sources */,
 				A06F87641AE6904700CD66DC /* OEGridCell.m in Sources */,
 			);
@@ -2198,6 +2240,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A06F88031AE6B92900CD66DC /* TVShows.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A06F88041AE6B92900CD66DC /* TVShows.xcdatamodel */,
+			);
+			currentVersion = A06F88041AE6B92900CD66DC /* TVShows.xcdatamodel */;
+			name = TVShows.xcdatamodeld;
+			path = Models/TVShows.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 089C1669FE841209C02AAC07 /* Project object */;
 }

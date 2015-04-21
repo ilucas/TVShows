@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7549" systemVersion="14D136" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Episode" representedClassName="Episode" syncable="YES">
+        <attribute name="episode" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="episodeDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="episodeID" optional="YES" attributeType="Float" defaultValueString="0" syncable="YES"/>
+        <attribute name="firstAired" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="rating" optional="YES" attributeType="Float" defaultValueString="0" syncable="YES"/>
+        <attribute name="season" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <relationship name="serie" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Series" inverseName="episodes" inverseEntity="Series" syncable="YES"/>
+    </entity>
+    <entity name="Series" representedClassName="Series" syncable="YES">
+        <attribute name="banner" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="country" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="dateAdded" attributeType="Date" syncable="YES"/>
+        <attribute name="firstAired" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="imdb_id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="language" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="rating" optional="YES" attributeType="Float" defaultValueString="0" syncable="YES"/>
+        <attribute name="seriesDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="status" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="tvdb_id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="tvrage_id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <relationship name="episodes" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Episode" inverseName="serie" inverseEntity="Episode" syncable="YES"/>
+        <relationship name="subscription" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Subscription" inverseName="serie" inverseEntity="Subscription" syncable="YES"/>
+    </entity>
+    <entity name="Subscription" representedClassName="Subscription" syncable="YES">
+        <attribute name="filters" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="isEnabled" attributeType="Boolean" defaultValueString="YES" syncable="YES"/>
+        <attribute name="lastDownloaded" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="quality" attributeType="Float" defaultValueString="0" syncable="YES"/>
+        <relationship name="serie" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Series" inverseName="subscription" inverseEntity="Series" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Subscription" positionX="502" positionY="126" width="128" height="118"/>
+        <element name="Episode" positionX="63" positionY="54" width="128" height="163"/>
+        <element name="Series" positionX="297" positionY="-72" width="128" height="253"/>
+    </elements>
+</model>

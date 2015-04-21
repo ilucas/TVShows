@@ -2,13 +2,13 @@
 <archive type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="8.00">
 	<data>
 		<int key="IBDocument.SystemTarget">1050</int>
-		<string key="IBDocument.SystemVersion">14C1514</string>
-		<string key="IBDocument.InterfaceBuilderVersion">6751</string>
-		<string key="IBDocument.AppKitVersion">1344.72</string>
-		<string key="IBDocument.HIToolboxVersion">757.30</string>
+		<string key="IBDocument.SystemVersion">14D136</string>
+		<string key="IBDocument.InterfaceBuilderVersion">7531</string>
+		<string key="IBDocument.AppKitVersion">1347.57</string>
+		<string key="IBDocument.HIToolboxVersion">758.70</string>
 		<object class="NSMutableDictionary" key="IBDocument.PluginVersions">
 			<string key="NS.key.0">com.apple.InterfaceBuilder.CocoaPlugin</string>
-			<string key="NS.object.0">6751</string>
+			<string key="NS.object.0">7531</string>
 		</object>
 		<array key="IBDocument.IntegratedClassDependencies">
 			<string>NSArrayController</string>
@@ -113,6 +113,9 @@
 						<object class="NSTabView" id="890473180">
 							<reference key="NSNextResponder" ref="1037298196"/>
 							<int key="NSvFlags">275</int>
+							<set class="NSMutableSet" key="NSDragTypes">
+								<string>public.item</string>
+							</set>
 							<string key="NSFrame">{{146, 10}, {509, 527}}</string>
 							<reference key="NSSuperview" ref="1037298196"/>
 							<array class="NSMutableArray" key="NSTabViewItems">
@@ -1397,7 +1400,7 @@
 																	<nil key="NSTextFinder"/>
 																	<int key="NSPreferredTextFinderStyle">1</int>
 																</object>
-																<int key="NSTVFlags">7</int>
+																<int key="NSTVFlags">71</int>
 																<string key="NSMaxSize">{1940, 10000000}</string>
 																<nil key="NSDelegate"/>
 															</object>
@@ -2172,7 +2175,7 @@ AAEAAQAAAT0AAwAAAAEAAgAAAVIAAwAAAAEAAQAAAVMAAwAAAAIAAQABAAAAAA</bytes>
 											</array>
 											<double key="NSIntercellSpacingWidth">3</double>
 											<double key="NSIntercellSpacingHeight">2</double>
-											<reference key="NSBackgroundColor" ref="889596145"/>
+											<reference key="NSBackgroundColor" ref="502507810"/>
 											<reference key="NSGridColor" ref="994143233"/>
 											<double key="NSRowHeight">14</double>
 											<int key="NSTvFlags">1109393408</int>
@@ -2250,7 +2253,7 @@ AAEAAQAAAT0AAwAAAAEAAgAAAVIAAwAAAAEAAQAAAVMAAwAAAAIAAQABAAAAAA</bytes>
 						<object class="NSButton" id="892941970">
 							<reference key="NSNextResponder" ref="241592026"/>
 							<int key="NSvFlags">267</int>
-							<string key="NSFrame">{{519.00000017152524, 290}, {129, 19}}</string>
+							<string key="NSFrame">{{519.00000023226539, 290}, {129, 19}}</string>
 							<reference key="NSSuperview" ref="241592026"/>
 							<reference key="NSNextKeyView" ref="818937748"/>
 							<bool key="NSEnabled">YES</bool>
@@ -2364,7 +2367,7 @@ bW1vZG8gY29uc2VxdWF0Lg</bytes>
 												<nil key="NSTextFinder"/>
 												<int key="NSPreferredTextFinderStyle">0</int>
 											</object>
-											<int key="NSTVFlags">6</int>
+											<int key="NSTVFlags">70</int>
 											<string key="NSMaxSize">{463, 10000000}</string>
 											<nil key="NSDelegate"/>
 										</object>
@@ -4888,7 +4891,7 @@ y7bMNcy1zTXNtc42zrbPN8+40DnQutE80b7SP9LB00TTxtRJ1MvVTtXR1lXW2Ndc1+DYZNjo2WzZ8dp2
 											</array>
 											<double key="NSIntercellSpacingWidth">3</double>
 											<double key="NSIntercellSpacingHeight">2</double>
-											<reference key="NSBackgroundColor" ref="889596145"/>
+											<reference key="NSBackgroundColor" ref="502507810"/>
 											<reference key="NSGridColor" ref="994143233"/>
 											<double key="NSRowHeight">14</double>
 											<int key="NSTvFlags">1377828864</int>
@@ -6109,7 +6112,7 @@ y7bMNcy1zTXNtc42zrbPN8+40DnQutE80b7SP9LB00TTxtRJ1MvVTtXR1lXW2Ndc1+DYZNjo2WzZ8dp2
 												<nil key="NSTextFinder"/>
 												<int key="NSPreferredTextFinderStyle">1</int>
 											</object>
-											<int key="NSTVFlags">6</int>
+											<int key="NSTVFlags">70</int>
 											<string key="NSMaxSize">{626, 10000000}</string>
 											<nil key="NSDelegate"/>
 										</object>

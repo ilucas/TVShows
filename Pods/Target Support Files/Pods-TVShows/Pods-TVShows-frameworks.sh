@@ -49,9 +49,13 @@ code_sign() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework 'AFNetworking.framework'
+  install_framework 'AFOnoResponseSerializer.framework'
   install_framework 'MagicalRecord.framework'
+  install_framework 'Ono.framework'
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework 'AFNetworking.framework'
+  install_framework 'AFOnoResponseSerializer.framework'
   install_framework 'MagicalRecord.framework'
+  install_framework 'Ono.framework'
 fi

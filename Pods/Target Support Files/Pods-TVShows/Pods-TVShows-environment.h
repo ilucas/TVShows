@@ -42,6 +42,12 @@
 #define COCOAPODS_VERSION_MINOR_AFNetworking_Serialization 5
 #define COCOAPODS_VERSION_PATCH_AFNetworking_Serialization 3
 
+// AFOnoResponseSerializer
+#define COCOAPODS_POD_AVAILABLE_AFOnoResponseSerializer
+#define COCOAPODS_VERSION_MAJOR_AFOnoResponseSerializer 1
+#define COCOAPODS_VERSION_MINOR_AFOnoResponseSerializer 0
+#define COCOAPODS_VERSION_PATCH_AFOnoResponseSerializer 0
+
 // MagicalRecord
 #define COCOAPODS_POD_AVAILABLE_MagicalRecord
 #define COCOAPODS_VERSION_MAJOR_MagicalRecord 2
@@ -53,4 +59,10 @@
 #define COCOAPODS_VERSION_MAJOR_MagicalRecord_Core 2
 #define COCOAPODS_VERSION_MINOR_MagicalRecord_Core 2
 #define COCOAPODS_VERSION_PATCH_MagicalRecord_Core 0
+
+// Ono
+#define COCOAPODS_POD_AVAILABLE_Ono
+#define COCOAPODS_VERSION_MAJOR_Ono 1
+#define COCOAPODS_VERSION_MINOR_Ono 2
+#define COCOAPODS_VERSION_PATCH_Ono 1
 

@@ -17,16 +17,24 @@ PODS:
   - AFNetworking/Reachability (2.5.3)
   - AFNetworking/Security (2.5.3)
   - AFNetworking/Serialization (2.5.3)
+  - AFOnoResponseSerializer (1.0.0):
+    - AFNetworking (~> 2.2)
+    - Ono (~> 1.0)
   - MagicalRecord (2.2):
     - MagicalRecord/Core (= 2.2)
   - MagicalRecord/Core (2.2)
+  - Ono (1.2.1)
 
 DEPENDENCIES:
   - AFNetworking (~> 2.5)
+  - AFOnoResponseSerializer (~> 1.0)
   - MagicalRecord (~> 2.2)
+  - Ono (~> 1.2)
 
 SPEC CHECKSUMS:
   AFNetworking: e1d86c2a96bb5d2e7408da36149806706ee122fe
+  AFOnoResponseSerializer: c02c8bef1d6742ac68f33ecaed41826c9657bc33
   MagicalRecord: f8a56bb87ab6552f20c4bb8681a1958a197ea3cd
+  Ono: 1122212de602280cc7af19d7ab12ee98a3fc0339
 
-COCOAPODS: 0.36.3
+COCOAPODS: 0.36.4
