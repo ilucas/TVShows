@@ -1,0 +1,6 @@
+framework module MagicalRecord {
+  umbrella header "Pods-TVShows-MagicalRecord-umbrella.h"
+
+  export *
+  module * { export * }
+}
