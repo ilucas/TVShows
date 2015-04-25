@@ -17,7 +17,7 @@
 @property (nonatomic, retain) NSString *country;
 @property (nonatomic, retain) NSDate *dateAdded;
 @property (nonatomic, retain) NSDate *firstAired;
-@property (nonatomic, retain) NSNumber *imdb_id;
+@property (nonatomic, retain) NSString *imdb_id;
 @property (nonatomic, retain) NSString *language;
 @property (nonatomic, retain) NSString *name;
 @property (nonatomic, retain) NSNumber *rating;

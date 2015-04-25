@@ -15,7 +15,7 @@
         <attribute name="country" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="dateAdded" attributeType="Date" syncable="YES"/>
         <attribute name="firstAired" optional="YES" attributeType="Date" syncable="YES"/>
-        <attribute name="imdb_id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="imdb_id" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="language" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" attributeType="String" indexed="YES" syncable="YES"/>
         <attribute name="rating" optional="YES" attributeType="Float" defaultValueString="0" syncable="YES"/>
@@ -34,8 +34,8 @@
         <relationship name="serie" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Series" inverseName="subscription" inverseEntity="Series" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Subscription" positionX="502" positionY="126" width="128" height="118"/>
         <element name="Episode" positionX="63" positionY="54" width="128" height="163"/>
-        <element name="Series" positionX="297" positionY="-72" width="128" height="253"/>
+        <element name="Series" positionX="297" positionY="-72" width="128" height="255"/>
+        <element name="Subscription" positionX="502" positionY="126" width="128" height="118"/>
     </elements>
 </model>
