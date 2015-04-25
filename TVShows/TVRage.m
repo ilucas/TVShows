@@ -12,34 +12,11 @@
 static NSString * const TVRageDefaultLanguage = @"en";
 static NSString * const TVRageBaseURL = @"http://services.tvrage.com";
 
-@interface TVRage ()
-@property (assign, getter=isCancelled) BOOL canceled;
-@end
-
 @implementation TVRage
-
-#pragma mark - Lifecycle
-
-+ (instancetype)sharedInstance {
-    static dispatch_once_t pred;
-    static id shared = nil;
-    dispatch_once(&pred, ^{
-        shared = [[TVRage alloc] init];
-    });
-    return shared;
-}
-
-- (instancetype)init {
-    self = [super init];
-    if (self) {
-        [self setCanceled:NO];
-    }
-    return self;
-}
 
 #pragma mark - Async request
 
-- (void)getShowListWithCompletionHandler:(void(^)(NSArray *results))handler {
+- (void)getShowListWithCompletionHandler:(void(^)(NSArray *results, NSError *error))handler {
     NSString *url = [TVRageBaseURL stringByAppendingPathComponent:@"/feeds/show_list.php"];
     
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
@@ -58,20 +35,20 @@ static NSString * const TVRageBaseURL = @"http://services.tvrage.com";
         
         dispatch_async(dispatch_get_main_queue(), ^{
             if (!self.isCancelled) {
-                handler(shows);
+                handler(shows, nil);
             }
         });
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        NSLog(@"Error: %@", error);
         dispatch_async(dispatch_get_main_queue(), ^{
             if (!self.isCancelled) {
-                handler(nil);
+                handler(nil, error);
             }
         });
     }];
 }
 
 - (void)getShow:(NSInteger)showid WithEpisodeList:(BOOL)episodelist completionHandler:(void(^)(NSDictionary *result))handler {
+    //NSString *url = [TVRageBaseURL stringByAppendingPathComponent:@"/feeds/show_list.php"];
     
 }
 
@@ -85,10 +62,6 @@ static NSString * const TVRageBaseURL = @"http://services.tvrage.com";
 
 - (void)getEipsodeInfoForShow:(NSString *)name Season:(NSInteger)season Episode:(NSInteger)episode completionHandler:(void(^)(NSArray *results))handler {
     
-}
-
-- (void)cancel {
-    [self setCanceled:YES];
 }
 
 @end

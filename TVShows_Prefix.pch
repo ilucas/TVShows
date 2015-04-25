@@ -16,6 +16,8 @@
     #import <Foundation/Foundation.h>
     #import <AppKit/AppKit.h>
     #import "LCLLogFile.h"
+    #import "TVShowsUtilities.h"
+    #import "AppInfoConstants.h"
 #endif
 
 // Bundle version of the application

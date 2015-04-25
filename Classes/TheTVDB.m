@@ -12,245 +12,101 @@
  *
  */
 
-#import "AppInfoConstants.h"
-
 #import "TheTVDB.h"
-#import "RegexKitLite.h"
-#import "WebsiteFunctions.h"
+#import "AFOnoResponseSerializer.h"
 
-#define TVDB_SEARCH @"http://www.thetvdb.com/api/GetSeries.php?seriesname=%@&language=all"
+static NSString * const TVDBBaseURL = @"http://www.thetvdb.com";
 
 @implementation TheTVDB
 
-+ (NSString *) applicationCacheDirectory
-{
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSApplicationSupportDirectory, NSUserDomainMask, YES);
-    NSString *basePath = ([paths count] > 0) ? [paths objectAtIndex:0] : NSTemporaryDirectory();
-    
-    basePath = [basePath stringByAppendingPathComponent:@"TVShows 2"];
-    return [basePath stringByAppendingPathComponent:@"Cache"];
-}
+#pragma mark - Async request
 
-+ (NSString *) getIDForShow:(NSString *)showName
-{
-    NSString *seriesURL = [NSString stringWithFormat:TVDB_SEARCH,
-                           [showName stringByReplacingOccurrencesOfRegex:@" " withString:@"+"]];
-    NSString *seriesInfo = [WebsiteFunctions downloadStringFrom:seriesURL];
-    
-    // For now select the first show in the list that's returned.
-    NSArray *tempArray = [seriesInfo componentsMatchedByRegex:@"(?!<seriesid>)(\\d|\n|\r)*?(?=</seriesid>)"];
-    if ([tempArray count] >= 1) {
-        return [tempArray objectAtIndex:0];
-    } else {
-        return nil;
-    }
-}
-
-+ (NSString *) getValueForKey:(NSString *)key withShowID:(NSString *)seriesID andShowName:(NSString *)show
-{
-    // TODO: Save the information returned for each series into the Cache.
-    // TODO: Get the TVDB ID from the Subscriptions file.
-    
-    // Check to see if we already know the show's ID. If we don't then we need to search for it.
-    if ([seriesID length] == 0 || [seriesID isEqualToString:@"(null)"] || [seriesID isEqualToString:@"0"]) {
-        seriesID = [self getIDForShow:show];
-    }
-    
-    // Only proceed if we received a series ID from somewhere above...
-    if ([seriesID length] > 0 && ![seriesID isEqualToString:@"0"]) {
-        // Now let's grab complete info for the show using our API key.
-        // TODO: Grab the correct localization.
-        NSString *seriesURL = [NSString stringWithFormat:@"http://www.thetvdb.com/api/%@/series/%@/en.xml",TVDB_API_KEY,seriesID];
-        NSString *seriesInfo = [WebsiteFunctions downloadStringFrom:seriesURL];
-        
-        // Regex fun...
-        key = [NSString stringWithFormat:@"<%@>(.|\n|\r)*?</%@>",key,key];
-        NSArray *tempValue = [seriesInfo componentsMatchedByRegex:key];
-        if ( [tempValue count] >= 1 ) {
-            NSString *value = [tempValue objectAtIndex:0];
-            value = [value stringByReplacingOccurrencesOfRegex:@"<(.+?)>" withString:@""];
-            
-            return value;
-        } else {
-            return NULL;
-        }
-
-    } else {
-        return NULL;
-    }
-}
-
-+ (NSArray *) getValuesForKey:(NSString *)key withShowID:(NSString *)seriesID andShowName:(NSString *)show
-{
-    // TODO: Save the information returned for each series into the Cache.
-    // TODO: Get the TVDB ID from the Subscriptions file.
-    // Quick dirty code mostly copied from the previous method, it should be refactored
-    
-    // Check to see if we already know the show's ID. If we don't then we need to search for it.
-    if ([seriesID length] == 0 || [seriesID isEqualToString:@"(null)"] || [seriesID isEqualToString:@"0"]) {
-        seriesID = [self getIDForShow:show];
-    }
-    
-    // Only proceed if we received a series ID from somewhere above...
-    if ([seriesID length] > 0 && ![seriesID isEqualToString:@"0"]) {
-        // Now let's grab complete info for the show using our API key.
-        // TODO: Grab the correct localization.
-        NSString *seriesURL = [NSString stringWithFormat:@"http://www.thetvdb.com/api/%@/series/%@/all/en.xml",TVDB_API_KEY,seriesID];
-        NSString *seriesInfo = [WebsiteFunctions downloadStringFrom:seriesURL];
-        
-        // Regex fun...
-        key = [NSString stringWithFormat:@"<%@>(.|\n|\r)*?</%@>",key,key];
-        NSArray *tempValues = [seriesInfo componentsMatchedByRegex:key];
-        if ( [tempValues count] >= 1 ) {
-            NSMutableArray *values = [[NSMutableArray alloc] initWithCapacity:[tempValues count]];
-            
-            for (NSString *value in tempValues) {
-                [values addObject:[value stringByReplacingOccurrencesOfRegex:@"<(.+?)>" withString:@""]];
-            }
-            
-            return values;
-        } else {
-            return NULL;
-        }
-        
-    } else {
-        return NULL;
-    }
-}
-
-+ (NSString *) getShowStatus:(NSString *)showName withShowID:(NSString *)seriesID
-{
-    // Grab the show's status.
-    NSString *status = [self getValueForKey:@"Status" withShowID:seriesID andShowName:showName];
-    
-    // If no known status was returned...
-    if (status == NULL) {
-        status = @"Unknown";
-    }
-    
-    return status;
-}
-
-+ (NSDate *) getShowNextEpisode:(NSString *)showName withShowID:(NSString *)seriesID
-{
-    // Preset date formatter
-    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    [dateFormatter setDateFormat:@"yyyy-MM-dd"];
-    
-    NSDate *now = [NSDate date];
-    NSDate *date = nil;
-    
-    // Grab the show's dates for all episodes
-    for (NSString *value in [self getValuesForKey:@"FirstAired" withShowID:seriesID andShowName:showName]) {
-        
-        date = [dateFormatter dateFromString:value];
-        
-        // The first date that is after now is the very first unaired episode
-        if ([date isGreaterThan:now]) {
-            return date;
-        }
-    }
-    
-    // There is no known unaired episode ::sadface::
-    return nil;
-}
-
-+ (NSImage *) getPosterForShow:(NSString *)showName withShowID:(NSString *)seriesID withHeight:(float)height withWidth:(float)width
-{
-    // If the TVShows cache directory doesn't exist then create it.
-    NSFileManager *fileManager = [NSFileManager defaultManager];
-    NSString *applicationCacheDirectory = [self applicationCacheDirectory];
+- (void)getShow:(NSString *)showName completionHandler:(void(^)(NSDictionary *result, NSError *error))handler {
+    NSString *url = [TVDBBaseURL stringByAppendingPathComponent:@"/api/GetSeries.php"];
+    NSDictionary *parameters = @{@"seriesname" : showName};
     NSError *error = nil;
     
-    if ( ![fileManager fileExistsAtPath:applicationCacheDirectory isDirectory:NULL] ) {
-        if (![fileManager createDirectoryAtPath:applicationCacheDirectory withIntermediateDirectories:NO attributes:nil error:&error]) {
-            LogError(@"Error creating application cache directory: %@",error);
-            return nil;
-        }
-    }
+    NSMutableURLRequest *request = [[AFHTTPRequestSerializer serializer] requestWithMethod:@"GET" URLString:url parameters:parameters error:&error];
     
-    // If the image already exists then return the data, otherwise we need to download it.
-    NSString *imagePath = [[[self applicationCacheDirectory] stringByAppendingPathComponent:showName] stringByAppendingFormat:@".jpg"];
+    AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
+    operation.responseSerializer = [AFOnoResponseSerializer serializer];
     
-    if ([fileManager fileExistsAtPath:imagePath]) {
-        NSImage *sourceImage = [[NSImage alloc] initWithContentsOfFile:imagePath];
-        NSImage *finalImage = [[NSImage alloc] initWithSize: NSMakeSize(width, height)];
+    [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSMutableDictionary *show = [[NSMutableDictionary alloc] init];
         
-        NSSize originalSize = [sourceImage size];
-        
-        // Resize the cached image so that it fits the actual situation.
-        [finalImage lockFocus];
-        [[NSGraphicsContext currentContext] setImageInterpolation:NSImageInterpolationHigh];
-        [sourceImage drawInRect: NSMakeRect(0, 0, width, height)
-                       fromRect: NSMakeRect(0, 0, originalSize.width, originalSize.height)
-                      operation: NSCompositeSourceOver fraction: 1.0];
-        [finalImage unlockFocus];
-        
-        return finalImage;
-    } else {
-        // Grab the URL of the show poster
-        NSImage *sourceImage;
-        NSString *posterURL = [self getValueForKey:@"poster" withShowID:seriesID andShowName:showName];
-        
-        // If a poster URL was returned, download the image.
-        if (posterURL != NULL) {
-            sourceImage = [[NSImage alloc] initWithData:
-                            [WebsiteFunctions downloadDataFrom:
-                             [NSString stringWithFormat:@"http://thetvdb.com/banners/_cache/%@", posterURL]]];
-        } else {
-            sourceImage = [[NSImage alloc] initWithContentsOfFile:
-                            [[NSBundle bundleWithIdentifier: TVShowsAppDomain] pathForResource: @"posterArtPlaceholder"
-                                                                                        ofType: @"jpg"]];
-        }
-        
-        // Resize the show poster so that it scales smoothly and still fits the box.
-        NSImage *resizedImage = [[NSImage alloc] initWithSize: NSMakeSize(129, 187)];
-        NSImage *finalImage = [[NSImage alloc] initWithSize: NSMakeSize(width, height)];
-        
-        NSSize originalSize = [sourceImage size];
-        
-        [resizedImage lockFocus];
-        [[NSGraphicsContext currentContext] setImageInterpolation:NSImageInterpolationHigh];
-        [sourceImage drawInRect: NSMakeRect(0, 0, 129, 187)
-                       fromRect: NSMakeRect(0, 0, originalSize.width, originalSize.height)
-                      operation: NSCompositeSourceOver fraction: 1.0];
-        [resizedImage unlockFocus];
-        
-        // If a poster URL was returned, save the image so that it's not downloaded again.
-        if (posterURL != NULL) {
-            // Turn the NSImage into an NSData TIFFRepresentation. We do this since
-            // it will always work, no matter what the source image's type is.
-            NSData *imageData = [resizedImage TIFFRepresentation];
-
-            // Now it's safe to turn the NSData into an NSBitmapImageRep...
-            NSBitmapImageRep *imageRep = [NSBitmapImageRep imageRepWithData:imageData];
+        [responseObject enumerateElementsWithXPath:@"//Series" usingBlock:^(ONOXMLElement *element, NSUInteger idx, BOOL *stop) {
+            *stop = YES; // Stop enumerating. we only need the first value.
             
-            // From BitmapImageRep we can turn it into anything we want. Here, we're using a JPEG.
-            NSDictionary *imageProps = [NSDictionary dictionaryWithObject: [NSNumber numberWithFloat:0.8]
-                                                                   forKey: NSImageCompressionFactor];
-            NSData *resizedData = [imageRep representationUsingType: NSJPEGFileType
-                                                         properties: imageProps];
-            
-            // The conversion is done, so save it to the disk.
-            [resizedData writeToFile:imagePath atomically:YES];
-        }
+            [show setObject:[[element firstChildWithTag:@"id"] numberValue] forKey:@"tvdb_id"];
+            [show setObject:[[element firstChildWithTag:@"IMDB_ID"] stringValue] forKey:@"imdb_id"];
+            [show setObject:[[element firstChildWithTag:@"FirstAired"] stringValue] forKey:@"firstAired"];
+            [show setObject:[[element firstChildWithTag:@"language"] stringValue] forKey:@"language"];
+            [show setObject:[[element firstChildWithTag:@"SeriesName"] stringValue] forKey:@"name"];
+            [show setObject:[[element firstChildWithTag:@"Overview"] stringValue] forKey:@"seriesDescription"];
+            [show setObject:[[element firstChildWithTag:@"Network"] stringValue] forKey:@"network"];
+            [show setObject:[[element firstChildWithTag:@"banner"] stringValue] forKey:@"banner"];
+        }];
         
-        // Now we need to resize the image in memory one last time so that it fits the actual situation.
-        [finalImage lockFocus];
-        [[NSGraphicsContext currentContext] setImageInterpolation:NSImageInterpolationHigh];
-        [sourceImage drawInRect: NSMakeRect(0, 0, width, height)
-                       fromRect: NSMakeRect(0, 0, originalSize.width, originalSize.height)
-                      operation: NSCompositeSourceOver fraction: 1.0];
-        [finalImage unlockFocus];
-        
-        return finalImage;
-    }
+        dispatch_async(dispatch_get_main_queue(), ^{
+            if (!self.isCancelled)
+                handler(show, nil);
+        });
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            if (!self.isCancelled)
+                handler(nil, error);
+        });
+    }];
+    
+    [operation start];
 }
 
-+ (void) removePosterForShow:(NSString *)showName
-{
-    NSString *imagePath = [[[self applicationCacheDirectory] stringByAppendingPathComponent:showName] stringByAppendingFormat:@".jpg"];
+- (void)getShowWithIMDB:(NSString *)serieID completionHandler:(void(^)(NSDictionary *result, NSError *error))handler {
+    NSString *url = [TVDBBaseURL stringByAppendingPathComponent:@"/api/GetSeriesByRemoteID.php"];
+    NSDictionary *parameters = @{@"imdbid" : serieID};
+    NSError *error = nil;
     
-    [[NSFileManager defaultManager] removeItemAtPath:imagePath error:nil];
+    NSMutableURLRequest *request = [[AFHTTPRequestSerializer serializer] requestWithMethod:@"GET" URLString:url parameters:parameters error:&error];
+    
+    AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
+    operation.responseSerializer = [AFOnoResponseSerializer serializer];
+    
+    [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSMutableDictionary *show = [[NSMutableDictionary alloc] init];
+        
+        [responseObject enumerateElementsWithXPath:@"//Series" usingBlock:^(ONOXMLElement *element, NSUInteger idx, BOOL *stop) {
+            *stop = YES; // Stop enumerating. we only need the first value.
+            
+            [show setObject:[[element firstChildWithTag:@"id"] numberValue] forKey:@"tvdb_id"];
+            [show setObject:[[element firstChildWithTag:@"IMDB_ID"] stringValue] forKey:@"imdb_id"];
+            [show setObject:[[element firstChildWithTag:@"FirstAired"] stringValue] forKey:@"firstAired"];
+            [show setObject:[[element firstChildWithTag:@"language"] stringValue] forKey:@"language"];
+            [show setObject:[[element firstChildWithTag:@"SeriesName"] stringValue] forKey:@"name"];
+            [show setObject:[[element firstChildWithTag:@"Overview"] stringValue] forKey:@"seriesDescription"];
+            [show setObject:[[element firstChildWithTag:@"Network"] stringValue] forKey:@"network"];
+            [show setObject:[[element firstChildWithTag:@"banner"] stringValue] forKey:@"banner"];
+        }];
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            if (!self.isCancelled)
+                handler(show, nil);
+        });
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            if (!self.isCancelled)
+                handler(nil, error);
+        });
+    }];
+    
+    [operation start];
 }
+
+- (void)searchEpisode:(NSString *)aEpisodeNum seasonNum:(NSString *)aSeasonNum ShowID:(NSString *)seriesID completionHandler:(void(^)(NSDictionary *result, NSError *error))handler {
+    
+}
+
+- (void)getPosterForShow:(NSString *)showName withShowID:(NSString *)seriesID completionHandler:(void(^)(NSDictionary *result, NSError *error))handler {
+    
+}
+
 @end

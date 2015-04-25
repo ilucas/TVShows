@@ -12,20 +12,18 @@
  *
  */
 
-#import <Cocoa/Cocoa.h>
+@import Cocoa;
+@import AFNetworking;
+@import Ono;
 
+#import "TSAbstractAPI.h"
 
-@interface TheTVDB : NSObject {
-}
+@interface TheTVDB : TSAbstractAPI
 
-+ (NSString *) applicationCacheDirectory;
-+ (NSString *) getIDForShow:(NSString *)showName;
-+ (NSString *) getValueForKey:(NSString *)key withShowID:(NSString *)seriesID andShowName:(NSString *)show;
-+ (NSArray *) getValuesForKey:(NSString *)key withShowID:(NSString *)seriesID andShowName:(NSString *)show;
-
-+ (NSString *) getShowStatus:(NSString *)showName withShowID:(NSString *)seriesID;
-+ (NSDate *) getShowNextEpisode:(NSString *)showName withShowID:(NSString *)seriesID;
-+ (NSImage *) getPosterForShow:(NSString *)showName withShowID:(NSString *)seriesID withHeight:(float)height withWidth:(float)width;
-+ (void) removePosterForShow:(NSString *)showName;
+//TODO: Add support for multiples languages
+- (void)getShow:(NSString *)showName completionHandler:(void(^)(NSDictionary *result, NSError *error))handler;
+- (void)getShowWithIMDB:(NSString *)serieID completionHandler:(void(^)(NSDictionary *result, NSError *error))handler;
+- (void)searchEpisode:(NSString *)aEpisodeNum seasonNum:(NSString *)aSeasonNum ShowID:(NSString *)seriesID completionHandler:(void(^)(NSDictionary *result, NSError *error))handler;
+- (void)getPosterForShow:(NSString *)showName withShowID:(NSString *)seriesID completionHandler:(void(^)(NSDictionary *result, NSError *error))handler;
 
 @end

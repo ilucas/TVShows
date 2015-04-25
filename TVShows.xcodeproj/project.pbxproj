@@ -43,7 +43,6 @@
 		34785D07119B9CE200A28449 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 34785D04119B9CE200A28449 /* Credits.rtf */; };
 		347AFBD51191206700393565 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 347AFBD41191206700393565 /* AddressBook.framework */; };
 		347AFBD91191207300393565 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 347AFBD81191207300393565 /* SystemConfiguration.framework */; };
-		347B35D61210DB6000F4BFF0 /* TheTVDB.m in Sources */ = {isa = PBXBuildFile; fileRef = 347B35D51210DB6000F4BFF0 /* TheTVDB.m */; };
 		347F1E6511A9FA96005A40AA /* PresetShows.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 347F1E6411A9FA96005A40AA /* PresetShows.xcdatamodel */; };
 		347F1E6911AA090D005A40AA /* PresetShowsDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 347F1E6711AA090D005A40AA /* PresetShowsDelegate.m */; };
 		347F1E6D11AA093C005A40AA /* PresetTorrentsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 347F1E6B11AA093C005A40AA /* PresetTorrentsController.m */; };
@@ -153,7 +152,6 @@
 		57F7062B13AF32E5002A83E4 /* Cover-DVD.png in Resources */ = {isa = PBXBuildFile; fileRef = 57F7062913AF32E5002A83E4 /* Cover-DVD.png */; };
 		57F7062D13AF3798002A83E4 /* Cover-Bluray.png in Resources */ = {isa = PBXBuildFile; fileRef = 57F7062C13AF3798002A83E4 /* Cover-Bluray.png */; };
 		57FBDC4D13B4C5B6006E0617 /* NSXMLNode-utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 57A82B1013953A3500E71F7F /* NSXMLNode-utils.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		57FDFEBB13A94E310019EDB6 /* TheTVDB.m in Sources */ = {isa = PBXBuildFile; fileRef = 347B35D51210DB6000F4BFF0 /* TheTVDB.m */; };
 		8D202CF30486D31800D8A456 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */; };
 		8D202CF40486D31800D8A456 /* PreferencePanes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F506C035013D953901CA16C8 /* PreferencePanes.framework */; };
 		A001C0761ADA34B0002DCC99 /* SidebarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A001C0751ADA34B0002DCC99 /* SidebarItem.m */; };
@@ -191,7 +189,10 @@
 		A06F88181AE6D58500CD66DC /* Series.m in Sources */ = {isa = PBXBuildFile; fileRef = A06F88171AE6D58500CD66DC /* Series.m */; };
 		A06F881F1AE6D98F00CD66DC /* TVRage.m in Sources */ = {isa = PBXBuildFile; fileRef = A06F881E1AE6D98F00CD66DC /* TVRage.m */; };
 		A09D54F91ADB489A0005C2FF /* WAYSourceListWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = A09D54F81ADB489A0005C2FF /* WAYSourceListWindow.m */; };
+		A0AE546C1AEC3A2000D2C37B /* TSAbstractAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = A0AE546A1AEC3A0F00D2C37B /* TSAbstractAPI.m */; };
 		A0CB705E1ADDFA57006FBAEB /* SidebarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0CB705D1ADDFA57006FBAEB /* SidebarViewController.m */; };
+		A0EF7F5E1AE9DB440081188C /* TVShowsUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = A0EF7F5B1AE9D20F0081188C /* TVShowsUtilities.m */; };
+		A0EF7F5F1AE9DB980081188C /* TheTVDB.m in Sources */ = {isa = PBXBuildFile; fileRef = 347B35D51210DB6000F4BFF0 /* TheTVDB.m */; };
 		F1BB481C1532836C00CDE2A8 /* PTViewSubclass.m in Sources */ = {isa = PBXBuildFile; fileRef = F1BB481B1532836C00CDE2A8 /* PTViewSubclass.m */; };
 /* End PBXBuildFile section */
 
@@ -517,8 +518,12 @@
 		A06F881E1AE6D98F00CD66DC /* TVRage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TVRage.m; path = TVShows/TVRage.m; sourceTree = SOURCE_ROOT; };
 		A09D54F71ADB489A0005C2FF /* WAYSourceListWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WAYSourceListWindow.h; sourceTree = "<group>"; };
 		A09D54F81ADB489A0005C2FF /* WAYSourceListWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WAYSourceListWindow.m; sourceTree = "<group>"; };
+		A0AE54691AEC3A0F00D2C37B /* TSAbstractAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSAbstractAPI.h; sourceTree = "<group>"; };
+		A0AE546A1AEC3A0F00D2C37B /* TSAbstractAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSAbstractAPI.m; sourceTree = "<group>"; };
 		A0CB705C1ADDFA57006FBAEB /* SidebarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SidebarViewController.h; sourceTree = "<group>"; };
 		A0CB705D1ADDFA57006FBAEB /* SidebarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SidebarViewController.m; sourceTree = "<group>"; };
+		A0EF7F5A1AE9D20F0081188C /* TVShowsUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TVShowsUtilities.h; path = TVShows/TVShowsUtilities.h; sourceTree = "<group>"; };
+		A0EF7F5B1AE9D20F0081188C /* TVShowsUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TVShowsUtilities.m; path = TVShows/TVShowsUtilities.m; sourceTree = "<group>"; };
 		B3F243393169C18DB2AB02E4 /* Pods_TVShows.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TVShows.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1BB481A1532836C00CDE2A8 /* PTViewSubclass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTViewSubclass.h; sourceTree = "<group>"; };
 		F1BB481B1532836C00CDE2A8 /* PTViewSubclass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTViewSubclass.m; sourceTree = "<group>"; };
@@ -732,15 +737,6 @@
 			path = Vendor;
 			sourceTree = SOURCE_ROOT;
 		};
-		347B35CC1210D80400F4BFF0 /* The TVDB */ = {
-			isa = PBXGroup;
-			children = (
-				347B35D41210DB6000F4BFF0 /* TheTVDB.h */,
-				347B35D51210DB6000F4BFF0 /* TheTVDB.m */,
-			);
-			name = "The TVDB";
-			sourceTree = "<group>";
-		};
 		347F1E6F11AA0D9E005A40AA /* Core Data */ = {
 			isa = PBXGroup;
 			children = (
@@ -882,8 +878,7 @@
 				347F1E6F11AA0D9E005A40AA /* Core Data */,
 				34E6242811DAAA74007E7854 /* Helper Classes */,
 				3444F29011DD13F700BF3724 /* Subclasses */,
-				A06F881C1AE6D95A00CD66DC /* TVRage */,
-				347B35CC1210D80400F4BFF0 /* The TVDB */,
+				A06F881C1AE6D95A00CD66DC /* API */,
 				573ABCC513734E5C0018F6F3 /* TorrentzParser */,
 			);
 			name = "Other Sources";
@@ -1028,6 +1023,8 @@
 				34FBC62D11C0B567005D290B /* main.m */,
 				3422ECD3118B3C130061E2E2 /* AppInfoConstants.h */,
 				579CAD5413AB8471006743B4 /* AppSecretConstants.h */,
+				A0EF7F5A1AE9D20F0081188C /* TVShowsUtilities.h */,
+				A0EF7F5B1AE9D20F0081188C /* TVShowsUtilities.m */,
 				34F6EA39119BCAD100F8AD4C /* TVShows_Prefix.pch */,
 			);
 			name = "Supporting Files";
@@ -1177,13 +1174,17 @@
 			name = Models;
 			sourceTree = "<group>";
 		};
-		A06F881C1AE6D95A00CD66DC /* TVRage */ = {
+		A06F881C1AE6D95A00CD66DC /* API */ = {
 			isa = PBXGroup;
 			children = (
+				A0AE54691AEC3A0F00D2C37B /* TSAbstractAPI.h */,
+				A0AE546A1AEC3A0F00D2C37B /* TSAbstractAPI.m */,
 				A06F881D1AE6D98F00CD66DC /* TVRage.h */,
 				A06F881E1AE6D98F00CD66DC /* TVRage.m */,
+				347B35D41210DB6000F4BFF0 /* TheTVDB.h */,
+				347B35D51210DB6000F4BFF0 /* TheTVDB.m */,
 			);
-			name = TVRage;
+			name = API;
 			sourceTree = "<group>";
 		};
 		A09D54F61ADB489A0005C2FF /* WAYSourceListWindow */ = {
@@ -1571,7 +1572,6 @@
 				5791A5F513A925890038A638 /* SBJsonBase.m in Sources */,
 				5791A5F713A925890038A638 /* SBJsonParser.m in Sources */,
 				5791A5F913A925890038A638 /* SBJsonWriter.m in Sources */,
-				57FDFEBB13A94E310019EDB6 /* TheTVDB.m in Sources */,
 				577322A613ACC608002F0926 /* PresetShowsDelegate.m in Sources */,
 				5786454F13B1380900C840C3 /* TSTorrentFunctions.m in Sources */,
 				5737D1BD13B4A5670092359C /* PresetTorrentsController.m in Sources */,
@@ -1612,7 +1612,6 @@
 				34C5B58B11BB3BFE00AAE681 /* TSRegexFun.m in Sources */,
 				34C5B59111BB3C1500AAE681 /* TSParseXMLFeeds.m in Sources */,
 				344A204211F5470B00026735 /* MBSliderButton.m in Sources */,
-				347B35D61210DB6000F4BFF0 /* TheTVDB.m in Sources */,
 				A06F88051AE6B92900CD66DC /* TVShows.xcdatamodeld in Sources */,
 				345EC8DA13235DA400F36BFF /* Subscriptions.xcdatamodel in Sources */,
 				345EC8EE13235E4800F36BFF /* ValueTransformers.m in Sources */,
@@ -1653,7 +1652,10 @@
 				A06F87681AE6904700CD66DC /* OEGridView.m in Sources */,
 				A06F87611AE6904700CD66DC /* NSImage+OEDrawingAdditions.m in Sources */,
 				A06F876E1AE6904700CD66DC /* OEThemeImage.m in Sources */,
+				A0EF7F5F1AE9DB980081188C /* TheTVDB.m in Sources */,
+				A0EF7F5E1AE9DB440081188C /* TVShowsUtilities.m in Sources */,
 				A001C0761ADA34B0002DCC99 /* SidebarItem.m in Sources */,
+				A0AE546C1AEC3A2000D2C37B /* TSAbstractAPI.m in Sources */,
 				A06F87621AE6904700CD66DC /* NSString+UUID.m in Sources */,
 				A06F87701AE6904700CD66DC /* OEThemeTextAttributes.m in Sources */,
 				A0CB705E1ADDFA57006FBAEB /* SidebarViewController.m in Sources */,
