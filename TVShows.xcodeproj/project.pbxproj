@@ -154,7 +154,6 @@
 		57FBDC4D13B4C5B6006E0617 /* NSXMLNode-utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 57A82B1013953A3500E71F7F /* NSXMLNode-utils.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		8D202CF30486D31800D8A456 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */; };
 		8D202CF40486D31800D8A456 /* PreferencePanes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F506C035013D953901CA16C8 /* PreferencePanes.framework */; };
-		A001C0761ADA34B0002DCC99 /* SidebarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A001C0751ADA34B0002DCC99 /* SidebarItem.m */; };
 		A0432F241AD9649600C19189 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A0432F231AD9649600C19189 /* AppDelegate.m */; };
 		A0432F261AD9649600C19189 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A0432F251AD9649600C19189 /* main.m */; };
 		A0432F281AD9649600C19189 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0432F271AD9649600C19189 /* Images.xcassets */; };
@@ -190,7 +189,6 @@
 		A06F881F1AE6D98F00CD66DC /* TVRage.m in Sources */ = {isa = PBXBuildFile; fileRef = A06F881E1AE6D98F00CD66DC /* TVRage.m */; };
 		A09D54F91ADB489A0005C2FF /* WAYSourceListWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = A09D54F81ADB489A0005C2FF /* WAYSourceListWindow.m */; };
 		A0AE546C1AEC3A2000D2C37B /* TSAbstractAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = A0AE546A1AEC3A0F00D2C37B /* TSAbstractAPI.m */; };
-		A0CB705E1ADDFA57006FBAEB /* SidebarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0CB705D1ADDFA57006FBAEB /* SidebarViewController.m */; };
 		A0EF7F5E1AE9DB440081188C /* TVShowsUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = A0EF7F5B1AE9D20F0081188C /* TVShowsUtilities.m */; };
 		A0EF7F5F1AE9DB980081188C /* TheTVDB.m in Sources */ = {isa = PBXBuildFile; fileRef = 347B35D51210DB6000F4BFF0 /* TheTVDB.m */; };
 		F1BB481C1532836C00CDE2A8 /* PTViewSubclass.m in Sources */ = {isa = PBXBuildFile; fileRef = F1BB481B1532836C00CDE2A8 /* PTViewSubclass.m */; };
@@ -443,8 +441,6 @@
 		57F7062913AF32E5002A83E4 /* Cover-DVD.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Cover-DVD.png"; sourceTree = "<group>"; };
 		57F7062C13AF3798002A83E4 /* Cover-Bluray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Cover-Bluray.png"; sourceTree = "<group>"; };
 		8D202CF80486D31800D8A456 /* TVShows.prefPane */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TVShows.prefPane; sourceTree = BUILT_PRODUCTS_DIR; };
-		A001C0741ADA34B0002DCC99 /* SidebarItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SidebarItem.h; sourceTree = "<group>"; };
-		A001C0751ADA34B0002DCC99 /* SidebarItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SidebarItem.m; sourceTree = "<group>"; };
 		A0432F1E1AD9649600C19189 /* TVShows.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TVShows.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0432F211AD9649600C19189 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A0432F221AD9649600C19189 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -520,8 +516,6 @@
 		A09D54F81ADB489A0005C2FF /* WAYSourceListWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WAYSourceListWindow.m; sourceTree = "<group>"; };
 		A0AE54691AEC3A0F00D2C37B /* TSAbstractAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSAbstractAPI.h; sourceTree = "<group>"; };
 		A0AE546A1AEC3A0F00D2C37B /* TSAbstractAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSAbstractAPI.m; sourceTree = "<group>"; };
-		A0CB705C1ADDFA57006FBAEB /* SidebarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SidebarViewController.h; sourceTree = "<group>"; };
-		A0CB705D1ADDFA57006FBAEB /* SidebarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SidebarViewController.m; sourceTree = "<group>"; };
 		A0EF7F5A1AE9D20F0081188C /* TVShowsUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TVShowsUtilities.h; path = TVShows/TVShowsUtilities.h; sourceTree = "<group>"; };
 		A0EF7F5B1AE9D20F0081188C /* TVShowsUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TVShowsUtilities.m; path = TVShows/TVShowsUtilities.m; sourceTree = "<group>"; };
 		B3F243393169C18DB2AB02E4 /* Pods_TVShows.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TVShows.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -986,17 +980,6 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		A001C0731ADA3379002DCC99 /* Sidebar */ = {
-			isa = PBXGroup;
-			children = (
-				A0CB705C1ADDFA57006FBAEB /* SidebarViewController.h */,
-				A0CB705D1ADDFA57006FBAEB /* SidebarViewController.m */,
-				A001C0741ADA34B0002DCC99 /* SidebarItem.h */,
-				A001C0751ADA34B0002DCC99 /* SidebarItem.m */,
-			);
-			name = Sidebar;
-			sourceTree = "<group>";
-		};
 		A02FB6D31AC4E814007466D8 /* TVShowsHelper */ = {
 			isa = PBXGroup;
 			children = (
@@ -1037,7 +1020,6 @@
 				A0432F231AD9649600C19189 /* AppDelegate.m */,
 				A0432F271AD9649600C19189 /* Images.xcassets */,
 				A0432F291AD9649600C19189 /* MainMenu.xib */,
-				A001C0731ADA3379002DCC99 /* Sidebar */,
 				A0432F201AD9649600C19189 /* Supporting Files */,
 			);
 			path = TVShows;
@@ -1654,11 +1636,10 @@
 				A06F876E1AE6904700CD66DC /* OEThemeImage.m in Sources */,
 				A0EF7F5F1AE9DB980081188C /* TheTVDB.m in Sources */,
 				A0EF7F5E1AE9DB440081188C /* TVShowsUtilities.m in Sources */,
-				A001C0761ADA34B0002DCC99 /* SidebarItem.m in Sources */,
 				A0AE546C1AEC3A2000D2C37B /* TSAbstractAPI.m in Sources */,
+				A00B46241AEC7FA30022BDBF /* CRViewSubclass.m in Sources */,
 				A06F87621AE6904700CD66DC /* NSString+UUID.m in Sources */,
 				A06F87701AE6904700CD66DC /* OEThemeTextAttributes.m in Sources */,
-				A0CB705E1ADDFA57006FBAEB /* SidebarViewController.m in Sources */,
 				A06F87711AE6904700CD66DC /* OEUtilities.m in Sources */,
 				A06F87631AE6904700CD66DC /* OEBackgroundNoisePattern.m in Sources */,
 				A06F87661AE6904700CD66DC /* OEGridMediaGroupItemCell.m in Sources */,
@@ -1666,10 +1647,15 @@
 				A09D54F91ADB489A0005C2FF /* WAYSourceListWindow.m in Sources */,
 				A06F87671AE6904700CD66DC /* OEGridMediaItemCell.m in Sources */,
 				A06F876D1AE6904700CD66DC /* OEThemeGradient.m in Sources */,
+				A00B46201AEC6D390022BDBF /* GradientViewSubclass.m in Sources */,
 				A06F88121AE6D58400CD66DC /* Subscription.m in Sources */,
 				A06F876C1AE6904700CD66DC /* OEThemeColor.m in Sources */,
+				A00B46221AEC7F350022BDBF /* NSColor+BWAdditions.m in Sources */,
+				A00B46231AEC7F390022BDBF /* BWInsetTextField.m in Sources */,
 				A06F88151AE6D58500CD66DC /* Episode.m in Sources */,
 				A0432F241AD9649600C19189 /* AppDelegate.m in Sources */,
+				A00847CB1AF5C0F900F5D2A3 /* SubscriptionWindowController.m in Sources */,
+				A09521EA1AF6BDD4005AC0EF /* TVShows.xcdatamodeld in Sources */,
 				A06F87641AE6904700CD66DC /* OEGridCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
