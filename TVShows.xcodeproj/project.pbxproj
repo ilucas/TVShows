@@ -154,6 +154,13 @@
 		57FBDC4D13B4C5B6006E0617 /* NSXMLNode-utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 57A82B1013953A3500E71F7F /* NSXMLNode-utils.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		8D202CF30486D31800D8A456 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */; };
 		8D202CF40486D31800D8A456 /* PreferencePanes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F506C035013D953901CA16C8 /* PreferencePanes.framework */; };
+		A00847CB1AF5C0F900F5D2A3 /* SubscriptionWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = A00847C91AF5C0F900F5D2A3 /* SubscriptionWindowController.m */; };
+		A00847CC1AF5C0F900F5D2A3 /* SubscriptionWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A00847CA1AF5C0F900F5D2A3 /* SubscriptionWindowController.xib */; };
+		A00B46201AEC6D390022BDBF /* GradientViewSubclass.m in Sources */ = {isa = PBXBuildFile; fileRef = 34463CCC1331AD34001453EB /* GradientViewSubclass.m */; };
+		A00B46211AEC7F1B0022BDBF /* posterArtPlaceholder.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 340A20B011AF0E15004351EB /* posterArtPlaceholder.jpg */; };
+		A00B46221AEC7F350022BDBF /* NSColor+BWAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 34463CCF1331B424001453EB /* NSColor+BWAdditions.m */; };
+		A00B46231AEC7F390022BDBF /* BWInsetTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 342A5429132D4CB800FB526F /* BWInsetTextField.m */; };
+		A00B46241AEC7FA30022BDBF /* CRViewSubclass.m in Sources */ = {isa = PBXBuildFile; fileRef = 34463CD71331BC40001453EB /* CRViewSubclass.m */; };
 		A0432F241AD9649600C19189 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A0432F231AD9649600C19189 /* AppDelegate.m */; };
 		A0432F261AD9649600C19189 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A0432F251AD9649600C19189 /* main.m */; };
 		A0432F281AD9649600C19189 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0432F271AD9649600C19189 /* Images.xcassets */; };
@@ -182,11 +189,11 @@
 		A06F87741AE6904700CD66DC /* box_gloss.pdf in Resources */ = {isa = PBXBuildFile; fileRef = A06F875D1AE6904700CD66DC /* box_gloss.pdf */; };
 		A06F87751AE6904700CD66DC /* noise.png in Resources */ = {isa = PBXBuildFile; fileRef = A06F875E1AE6904700CD66DC /* noise.png */; };
 		A06F87761AE6904700CD66DC /* noise@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A06F875F1AE6904700CD66DC /* noise@2x.png */; };
-		A06F88051AE6B92900CD66DC /* TVShows.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A06F88031AE6B92900CD66DC /* TVShows.xcdatamodeld */; };
 		A06F88121AE6D58400CD66DC /* Subscription.m in Sources */ = {isa = PBXBuildFile; fileRef = A06F88111AE6D58400CD66DC /* Subscription.m */; };
 		A06F88151AE6D58500CD66DC /* Episode.m in Sources */ = {isa = PBXBuildFile; fileRef = A06F88141AE6D58500CD66DC /* Episode.m */; };
 		A06F88181AE6D58500CD66DC /* Series.m in Sources */ = {isa = PBXBuildFile; fileRef = A06F88171AE6D58500CD66DC /* Series.m */; };
 		A06F881F1AE6D98F00CD66DC /* TVRage.m in Sources */ = {isa = PBXBuildFile; fileRef = A06F881E1AE6D98F00CD66DC /* TVRage.m */; };
+		A09521EA1AF6BDD4005AC0EF /* TVShows.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A06F88031AE6B92900CD66DC /* TVShows.xcdatamodeld */; };
 		A09D54F91ADB489A0005C2FF /* WAYSourceListWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = A09D54F81ADB489A0005C2FF /* WAYSourceListWindow.m */; };
 		A0AE546C1AEC3A2000D2C37B /* TSAbstractAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = A0AE546A1AEC3A0F00D2C37B /* TSAbstractAPI.m */; };
 		A0EF7F5E1AE9DB440081188C /* TVShowsUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = A0EF7F5B1AE9D20F0081188C /* TVShowsUtilities.m */; };
@@ -441,6 +448,9 @@
 		57F7062913AF32E5002A83E4 /* Cover-DVD.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Cover-DVD.png"; sourceTree = "<group>"; };
 		57F7062C13AF3798002A83E4 /* Cover-Bluray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Cover-Bluray.png"; sourceTree = "<group>"; };
 		8D202CF80486D31800D8A456 /* TVShows.prefPane */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TVShows.prefPane; sourceTree = BUILT_PRODUCTS_DIR; };
+		A00847C81AF5C0F900F5D2A3 /* SubscriptionWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubscriptionWindowController.h; sourceTree = "<group>"; };
+		A00847C91AF5C0F900F5D2A3 /* SubscriptionWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubscriptionWindowController.m; sourceTree = "<group>"; };
+		A00847CA1AF5C0F900F5D2A3 /* SubscriptionWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SubscriptionWindowController.xib; sourceTree = "<group>"; };
 		A0432F1E1AD9649600C19189 /* TVShows.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TVShows.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0432F211AD9649600C19189 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A0432F221AD9649600C19189 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -1020,6 +1030,7 @@
 				A0432F231AD9649600C19189 /* AppDelegate.m */,
 				A0432F271AD9649600C19189 /* Images.xcassets */,
 				A0432F291AD9649600C19189 /* MainMenu.xib */,
+				A0AE546F1AEC461400D2C37B /* Subscription */,
 				A0432F201AD9649600C19189 /* Supporting Files */,
 			);
 			path = TVShows;
@@ -1177,6 +1188,16 @@
 			);
 			name = WAYSourceListWindow;
 			path = Vendor/WAYSourceListWindow;
+			sourceTree = "<group>";
+		};
+		A0AE546F1AEC461400D2C37B /* Subscription */ = {
+			isa = PBXGroup;
+			children = (
+				A00847C81AF5C0F900F5D2A3 /* SubscriptionWindowController.h */,
+				A00847C91AF5C0F900F5D2A3 /* SubscriptionWindowController.m */,
+				A00847CA1AF5C0F900F5D2A3 /* SubscriptionWindowController.xib */,
+			);
+			name = Subscription;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1418,6 +1439,8 @@
 				A0432F281AD9649600C19189 /* Images.xcassets in Resources */,
 				A06F87761AE6904700CD66DC /* noise@2x.png in Resources */,
 				A06F87721AE6904700CD66DC /* background_lighting.png in Resources */,
+				A00B46211AEC7F1B0022BDBF /* posterArtPlaceholder.jpg in Resources */,
+				A00847CC1AF5C0F900F5D2A3 /* SubscriptionWindowController.xib in Resources */,
 				A0432F2B1AD9649600C19189 /* MainMenu.xib in Resources */,
 				A06F87741AE6904700CD66DC /* box_gloss.pdf in Resources */,
 			);
@@ -1594,7 +1617,6 @@
 				34C5B58B11BB3BFE00AAE681 /* TSRegexFun.m in Sources */,
 				34C5B59111BB3C1500AAE681 /* TSParseXMLFeeds.m in Sources */,
 				344A204211F5470B00026735 /* MBSliderButton.m in Sources */,
-				A06F88051AE6B92900CD66DC /* TVShows.xcdatamodeld in Sources */,
 				345EC8DA13235DA400F36BFF /* Subscriptions.xcdatamodel in Sources */,
 				345EC8EE13235E4800F36BFF /* ValueTransformers.m in Sources */,
 				342A542A132D4CB800FB526F /* BWInsetTextField.m in Sources */,
