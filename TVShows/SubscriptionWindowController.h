@@ -11,6 +11,9 @@
 
 @interface SubscriptionWindowController : NSWindowController <NSTableViewDelegate, NSTableViewDataSource>
 
+#pragma mark - Core Data
+@property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
+
 #pragma mark - Show info
 @property (weak) IBOutlet NSBox *metadataBox;
 @property (weak) IBOutlet NSImageView *showPoster;

@@ -10,6 +10,8 @@
 
 @interface SubscriptionWindowController ()
 
+@property (readwrite, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
+
 - (void)toggleLoading:(BOOL)isLoading;
 - (BOOL)userIsSubscribedToShow:(NSString*)showName;
 
@@ -56,6 +58,12 @@
 #pragma mark - NSTableViewDelegate
 
 #pragma mark - NSTableViewDataSource
+
+#pragma mark - Core Data
+
+- (NSManagedObjectContext *)managedObjectContext {
+    return _managedObjectContext ?: [NSManagedObjectContext MR_context];
+}
 
 #pragma mark - Private
 

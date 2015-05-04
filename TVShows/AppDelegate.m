@@ -11,12 +11,13 @@
 @interface AppDelegate ()
 
 @property (weak) IBOutlet NSWindow *window;
+
 @end
 
 @implementation AppDelegate
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
-    // Insert code here to initialize your application
+    [MagicalRecord setupCoreDataStack];
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
