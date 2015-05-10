@@ -9,7 +9,7 @@
 @import Foundation;
 @import CoreData;
 
-@class Series;
+@class Serie;
 
 @interface Episode : NSManagedObject
 
@@ -20,6 +20,6 @@
 @property (nonatomic, retain) NSString *name;
 @property (nonatomic, retain) NSNumber *rating;
 @property (nonatomic, retain) NSNumber *season;
-@property (nonatomic, retain) Series *serie;
+@property (nonatomic, retain) Serie *serie;
 
 @end

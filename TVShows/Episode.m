@@ -7,7 +7,7 @@
 //
 
 #import "Episode.h"
-#import "Series.h"
+#import "Serie.h"
 
 @implementation Episode
 

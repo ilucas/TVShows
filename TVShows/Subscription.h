@@ -9,7 +9,7 @@
 @import Foundation;
 @import CoreData;
 
-@class Series;
+@class Serie;
 
 @interface Subscription : NSManagedObject
 
@@ -17,6 +17,6 @@
 @property (nonatomic, retain) NSNumber *isEnabled;
 @property (nonatomic, retain) NSDate *lastDownloaded;
 @property (nonatomic, retain) NSNumber *quality;
-@property (nonatomic, retain) Series *serie;
+@property (nonatomic, retain) Serie *serie;
 
 @end

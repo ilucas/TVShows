@@ -11,11 +11,10 @@
 
 @class Episode, Subscription;
 
-@interface Series : NSManagedObject
+@interface Serie : NSManagedObject
 
 @property (nonatomic, retain) NSString *banner;
 @property (nonatomic, retain) NSString *country;
-@property (nonatomic, retain) NSDate *dateAdded;
 @property (nonatomic, retain) NSDate *firstAired;
 @property (nonatomic, retain) NSString *imdb_id;
 @property (nonatomic, retain) NSString *language;
@@ -29,11 +28,14 @@
 @property (nonatomic, retain) Subscription *subscription;
 @end
 
-@interface Series (CoreDataGeneratedAccessors)
+@interface Serie (CoreDataGeneratedAccessors)
 
 - (void)addEpisodesObject:(Episode *)value;
 - (void)removeEpisodesObject:(Episode *)value;
 - (void)addEpisodes:(NSSet *)values;
 - (void)removeEpisodes:(NSSet *)values;
+
+
+- (void)updateAttributes:(NSDictionary *)attributes;
 
 @end

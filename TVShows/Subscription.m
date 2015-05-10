@@ -7,7 +7,7 @@
 //
 
 #import "Subscription.h"
-#import "Series.h"
+#import "Serie.h"
 
 @implementation Subscription
 
