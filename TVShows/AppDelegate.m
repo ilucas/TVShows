@@ -7,21 +7,32 @@
 //
 
 #import "AppDelegate.h"
+#import "SubscriptionWindowController.h"
 
 @interface AppDelegate ()
 
 @property (weak) IBOutlet NSWindow *window;
+
+@property (strong) SubscriptionWindowController *subscriptionWindow;
 
 @end
 
 @implementation AppDelegate
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
-    [MagicalRecord setupCoreDataStack];
+    [MagicalRecord setupAutoMigratingCoreDataStack];
+    _subscriptionWindow = [SubscriptionWindowController new];
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
     // Insert code here to tear down your application
 }
+
+- (IBAction)asas:(id)sender {
+    [_window beginSheet:[_subscriptionWindow window] completionHandler:^(NSModalResponse returnCode) {
+        
+    }];
+}
+
 
 @end

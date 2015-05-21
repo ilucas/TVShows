@@ -7,7 +7,6 @@
 //
 
 @import Cocoa;
-@import Ono;
 @import AFNetworking;
 
 #import "TSAbstractAPI.h"

@@ -7,9 +7,10 @@
 //
 
 @import Cocoa;
+@import Quartz;
 @import MagicalRecord;
 
-@interface SubscriptionWindowController : NSWindowController <NSTableViewDelegate, NSTableViewDataSource>
+@interface SubscriptionWindowController : NSWindowController <NSTableViewDelegate>
 
 #pragma mark - Core Data
 @property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;

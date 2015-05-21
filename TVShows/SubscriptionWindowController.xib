@@ -9,6 +9,7 @@
                 <outlet property="SearchField" destination="oQC-zZ-kcF" id="MYH-yn-rGr"/>
                 <outlet property="genre" destination="4mc-MB-cwI" id="Y4j-R7-sgN"/>
                 <outlet property="loadingText" destination="8Us-hb-5Kh" id="Hfy-l9-dBd"/>
+                <outlet property="loadingViewController" destination="Leg-kr-IGP" id="e2t-mb-zpZ"/>
                 <outlet property="metadataBox" destination="urd-4Z-dSx" id="jkk-lg-xta"/>
                 <outlet property="rating" destination="yQb-Gw-osl" id="ugf-Xo-NhL"/>
                 <outlet property="showDescription" destination="Q2N-o0-Shp" id="Kfs-yi-ISB"/>
@@ -25,11 +26,17 @@
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
-        <arrayController mode="entity" entityName="Series" automaticallyPreparesContent="YES" id="EiV-qk-2Vu">
+        <arrayController mode="entity" entityName="Serie" automaticallyPreparesContent="YES" id="EiV-qk-2Vu">
             <connections>
                 <binding destination="-2" name="managedObjectContext" keyPath="managedObjectContext" id="fqU-ac-vad"/>
+                <binding destination="-2" name="sortDescriptors" keyPath="sorter" id="6k2-mM-2vu"/>
             </connections>
         </arrayController>
+        <viewController id="Leg-kr-IGP" customClass="LoadingViewController">
+            <connections>
+                <outlet property="view" destination="K0l-HE-s0U" id="YuZ-tf-Fgm"/>
+            </connections>
+        </viewController>
         <window title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="F0z-JX-Cv5">
             <windowStyleMask key="styleMask" titled="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
@@ -163,6 +170,7 @@
                                     </tableColumns>
                                     <connections>
                                         <binding destination="EiV-qk-2Vu" name="content" keyPath="arrangedObjects" id="xoS-WE-Rv6"/>
+                                        <outlet property="delegate" destination="-2" id="Xjf-ke-D9e"/>
                                     </connections>
                                 </tableView>
                             </subviews>
@@ -194,6 +202,12 @@
                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                         </searchFieldCell>
                         <connections>
+                            <binding destination="EiV-qk-2Vu" name="predicate" keyPath="filterPredicate" id="eIO-wp-LgP">
+                                <dictionary key="options">
+                                    <string key="NSDisplayName">predicate</string>
+                                    <string key="NSPredicateFormat">name contains $value</string>
+                                </dictionary>
+                            </binding>
                             <outlet property="nextKeyView" destination="PSW-jJ-D1t" id="WS6-n5-eUa"/>
                         </connections>
                     </searchField>
@@ -550,8 +564,23 @@ Gw
             <connections>
                 <outlet property="delegate" destination="-2" id="LPN-wl-fLI"/>
             </connections>
-            <point key="canvasLocation" x="446" y="125"/>
+            <point key="canvasLocation" x="256" y="84"/>
         </window>
+        <customView id="K0l-HE-s0U">
+            <rect key="frame" x="0.0" y="0.0" width="462" height="275"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="L3L-Tg-D1i">
+                    <rect key="frame" x="104" y="125" width="254" height="24"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Downloading..." id="JCZ-6N-8Qk">
+                        <font key="font" metaFont="system" size="20"/>
+                        <color key="textColor" red="0.34189551767676762" green="0.34189551767676762" blue="0.34189551767676762" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+            </subviews>
+            <point key="canvasLocation" x="165" y="597.5"/>
+        </customView>
     </objects>
     <resources>
         <image name="NSFlowViewTemplate" width="18" height="10"/>
