@@ -47,15 +47,11 @@ static NSString * const TVDBBaseURL = @"http://www.thetvdb.com";
             [show setObject:[[element firstChildWithTag:@"banner"] stringValue] forKey:@"banner"];
         }];
         
-        dispatch_async(dispatch_get_main_queue(), ^{
-            if (!self.isCancelled)
-                handler(show, nil);
-        });
+        if (!self.isCancelled)
+            handler(show, nil);
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        dispatch_async(dispatch_get_main_queue(), ^{
-            if (!self.isCancelled)
-                handler(nil, error);
-        });
+        if (!self.isCancelled)
+            handler(nil, error);
     }];
     
     [operation start];
@@ -87,15 +83,11 @@ static NSString * const TVDBBaseURL = @"http://www.thetvdb.com";
             [show setObject:[[element firstChildWithTag:@"banner"] stringValue] forKey:@"banner"];
         }];
         
-        dispatch_async(dispatch_get_main_queue(), ^{
-            if (!self.isCancelled)
-                handler(show, nil);
-        });
+        if (!self.isCancelled)
+            handler(show, nil);
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        dispatch_async(dispatch_get_main_queue(), ^{
-            if (!self.isCancelled)
-                handler(nil, error);
-        });
+        if (!self.isCancelled)
+            handler(nil, error);
     }];
     
     [operation start];
