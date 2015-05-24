@@ -18,6 +18,7 @@
                 <outlet property="showPoster" destination="J0A-Dn-DTy" id="b5Q-Sl-Pdy"/>
                 <outlet property="showQuality" destination="3ou-Mr-Oz6" id="31X-fW-mZI"/>
                 <outlet property="showYear" destination="yOf-k3-tLA" id="N7K-0b-8hB"/>
+                <outlet property="showsArrayController" destination="EiV-qk-2Vu" id="dg0-9F-HaE"/>
                 <outlet property="showsTableView" destination="PSW-jJ-D1t" id="zKd-Xq-fff"/>
                 <outlet property="spinner" destination="3ep-Wx-Nev" id="OzQ-Dz-2a8"/>
                 <outlet property="studioLogo" destination="IlG-Cp-zKj" id="hXA-nT-5oz"/>
@@ -170,6 +171,7 @@
                                     </tableColumns>
                                     <connections>
                                         <binding destination="EiV-qk-2Vu" name="content" keyPath="arrangedObjects" id="xoS-WE-Rv6"/>
+                                        <binding destination="EiV-qk-2Vu" name="selectionIndexes" keyPath="selectionIndexes" previousBinding="xoS-WE-Rv6" id="k6U-hW-w5h"/>
                                         <outlet property="delegate" destination="-2" id="Xjf-ke-D9e"/>
                                     </connections>
                                 </tableView>
@@ -202,10 +204,10 @@
                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                         </searchFieldCell>
                         <connections>
-                            <binding destination="EiV-qk-2Vu" name="predicate" keyPath="filterPredicate" id="eIO-wp-LgP">
+                            <binding destination="EiV-qk-2Vu" name="predicate" keyPath="filterPredicate" id="ZRw-s1-Lc7">
                                 <dictionary key="options">
                                     <string key="NSDisplayName">predicate</string>
-                                    <string key="NSPredicateFormat">name contains $value</string>
+                                    <string key="NSPredicateFormat">name contains[cd] $value</string>
                                 </dictionary>
                             </binding>
                             <outlet property="nextKeyView" destination="PSW-jJ-D1t" id="WS6-n5-eUa"/>
