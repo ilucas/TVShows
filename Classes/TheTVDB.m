@@ -40,7 +40,7 @@ static NSString * const TVDBBaseURL = @"http://www.thetvdb.com";
             
             [show setObject:[[element firstChildWithTag:@"id"] numberValue] forKey:@"tvdb_id"];
             [show setObject:([[element firstChildWithTag:@"IMDB_ID"] stringValue] ?: [NSNull null]) forKey:@"imdb_id"];
-            [show setObject:[[element firstChildWithTag:@"FirstAired"] dateValue] forKey:@"firstAired"];
+            [show setObject:[[element firstChildWithTag:@"FirstAired"] dateValue] forKey:@"started"];
             [show setObject:[[element firstChildWithTag:@"language"] stringValue] forKey:@"language"];
             [show setObject:[[element firstChildWithTag:@"SeriesName"] stringValue] forKey:@"name"];
             [show setObject:([[element firstChildWithTag:@"Overview"] stringValue] ?: [NSNull null]) forKey:@"seriesDescription"];
@@ -76,7 +76,7 @@ static NSString * const TVDBBaseURL = @"http://www.thetvdb.com";
             
             [show setObject:[[element firstChildWithTag:@"id"] numberValue] forKey:@"tvdb_id"];
             [show setObject:[[element firstChildWithTag:@"IMDB_ID"] stringValue] forKey:@"imdb_id"];
-            [show setObject:[[element firstChildWithTag:@"FirstAired"] stringValue] forKey:@"firstAired"];
+            [show setObject:[[element firstChildWithTag:@"FirstAired"] stringValue] forKey:@"started"];
             [show setObject:[[element firstChildWithTag:@"language"] stringValue] forKey:@"language"];
             [show setObject:[[element firstChildWithTag:@"SeriesName"] stringValue] forKey:@"name"];
             [show setObject:[[element firstChildWithTag:@"Overview"] stringValue] forKey:@"seriesDescription"];
