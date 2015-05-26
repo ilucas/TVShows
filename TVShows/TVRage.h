@@ -14,9 +14,10 @@
 @interface TVRage : TSAbstractAPI
 
 - (void)getShowListWithCompletionHandler:(void(^)(NSArray *results, NSError *error))handler;
-- (void)getShow:(NSInteger)showid WithEpisodeList:(BOOL)episodelist completionHandler:(void(^)(NSDictionary *result, NSError *error))handler;
+- (void)getShow:(NSNumber *)showid completionHandler:(void(^)(NSDictionary *result, NSError *error))handler;
+- (void)getShowWithEpisodeList:(NSNumber *)showid completionHandler:(void(^)(NSDictionary *result, NSError *error))handler;
 - (void)searchForShowWithName:(NSString *)name Detailed:(BOOL)detailed completionHandler:(void(^)(NSArray *results, NSError *error))handler;
-- (void)getEipsodeListForShow:(NSInteger)showid completionHandler:(void(^)(NSArray *results, NSError *error))handler;
+- (void)getEipsodeListForShow:(NSNumber *)showid completionHandler:(void(^)(NSArray *results, NSError *error))handler;
 - (void)getEipsodeInfoForShow:(NSString *)name Season:(NSInteger)season Episode:(NSInteger)episode completionHandler:(void(^)(NSArray *results, NSError *error))handler;
 
 @end

@@ -36,15 +36,16 @@ static NSString * const TVDBBaseURL = @"http://www.thetvdb.com";
         
         [responseObject enumerateElementsWithXPath:@"//Series" usingBlock:^(ONOXMLElement *element, NSUInteger idx, BOOL *stop) {
             *stop = YES; // Stop enumerating. we only need the first value.
+            [element.document.dateFormatter setDateFormat:@"yyyy-mm-dd"];
             
             [show setObject:[[element firstChildWithTag:@"id"] numberValue] forKey:@"tvdb_id"];
-            [show setObject:[[element firstChildWithTag:@"IMDB_ID"] stringValue] forKey:@"imdb_id"];
-            [show setObject:[[element firstChildWithTag:@"FirstAired"] stringValue] forKey:@"firstAired"];
+            [show setObject:([[element firstChildWithTag:@"IMDB_ID"] stringValue] ?: [NSNull null]) forKey:@"imdb_id"];
+            [show setObject:[[element firstChildWithTag:@"FirstAired"] dateValue] forKey:@"firstAired"];
             [show setObject:[[element firstChildWithTag:@"language"] stringValue] forKey:@"language"];
             [show setObject:[[element firstChildWithTag:@"SeriesName"] stringValue] forKey:@"name"];
-            [show setObject:[[element firstChildWithTag:@"Overview"] stringValue] forKey:@"seriesDescription"];
-            [show setObject:[[element firstChildWithTag:@"Network"] stringValue] forKey:@"network"];
-            [show setObject:[[element firstChildWithTag:@"banner"] stringValue] forKey:@"banner"];
+            [show setObject:([[element firstChildWithTag:@"Overview"] stringValue] ?: [NSNull null]) forKey:@"seriesDescription"];
+            [show setObject:([[element firstChildWithTag:@"Network"] stringValue] ?: [NSNull null]) forKey:@"network"];
+            [show setObject:([[element firstChildWithTag:@"banner"] stringValue] ?: [NSNull null]) forKey:@"banner"];
         }];
         
         if (!self.isCancelled)

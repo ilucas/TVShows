@@ -54,7 +54,7 @@ static NSString * const TVRageBaseURL = @"http://services.tvrage.com";
     
 }
 
-- (void)getEipsodeListForShow:(NSInteger)showid completionHandler:(void(^)(NSArray *results, NSError *error))handler {
+- (void)getEipsodeListForShow:(NSNumber *)showid completionHandler:(void(^)(NSArray *results, NSError *error))handler {
     
 }
 

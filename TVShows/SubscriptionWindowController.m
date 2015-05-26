@@ -9,6 +9,7 @@
 #import "SubscriptionWindowController.h"
 #import "LoadingViewController.h"
 #import "TVRage.h"
+#import "TheTVDB.h"
 #import "Serie.h"
 
 @interface SubscriptionWindowController ()
@@ -52,7 +53,6 @@
 #pragma mark - Actions
 
 - (IBAction)reloadShowList:(id)sender {
-    // Start overlay
     TVRage *service = [TVRage sharedInstance];
     
     [service getShowListWithCompletionHandler:^(NSArray *results, NSError *error) {
@@ -63,6 +63,8 @@
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^(void){
             
             [MagicalRecord saveWithBlockAndWait:^(NSManagedObjectContext *localContext) {
+                [localContext setUndoManager:nil];
+                
                 [results enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
                     
                     NSArray *series = [Serie MR_findByAttribute:@"name" withValue:obj[@"name"] inContext:localContext];
@@ -76,7 +78,7 @@
                     }
                     
 //                    dispatch_async(dispatch_get_main_queue(), ^(void){
-//                        NSLog(@"Importing %ld of %ld", idx, count);
+                        NSLog(@"Importing %ld of %ld", idx, count);
 //                    });
                 }];
             }];
@@ -84,6 +86,7 @@
             dispatch_async(dispatch_get_main_queue(), ^(void){
             //dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
                 NSLog(@"Done importing.");
+                [self.showsTableView reloadData];
             });
             
         });
@@ -116,18 +119,18 @@
 #pragma mark - NSTableViewDelegate
 
 - (void)tableViewSelectionDidChange:(NSNotification *)notification {
-    
-    NSInteger idx = [self.showsTableView selectedRow];
-    
-    NSArray* selectedObjects = [self.showsArrayController selectedObjects];
-    //NSLog(@"%@", [self.showsArrayController selection]);
+    Serie * __weak selectedObject = [[self.showsArrayController selectedObjects] firstObject];
     
 }
 
 #pragma mark - Core Data
 
 - (NSManagedObjectContext *)managedObjectContext {
-    return _managedObjectContext ?: [NSManagedObjectContext MR_context];
+    if (!_managedObjectContext) {
+        _managedObjectContext = [NSManagedObjectContext MR_context];
+    }
+    
+    return _managedObjectContext;
 }
 
 #pragma mark - Private
