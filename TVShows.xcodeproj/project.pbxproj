@@ -6,6 +6,20 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		A0E434141B1A67B3000AF57C /* Mogenerator */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = A0E434151B1A67B3000AF57C /* Build configuration list for PBXAggregateTarget "Mogenerator" */;
+			buildPhases = (
+				A0E434191B1A67CE000AF57C /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = Mogenerator;
+			productName = Mogenerator;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		340A20B111AF0E15004351EB /* posterArtPlaceholder.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 340A20B011AF0E15004351EB /* posterArtPlaceholder.jpg */; };
 		340F15FB118FEBDE00A1BD00 /* SUUpdaterSubclass.m in Sources */ = {isa = PBXBuildFile; fileRef = 340F15F9118FEBDE00A1BD00 /* SUUpdaterSubclass.m */; };
@@ -197,6 +211,9 @@
 		A08864421B141C1B00A4DBB6 /* Subscription.m in Sources */ = {isa = PBXBuildFile; fileRef = A08864411B141C1B00A4DBB6 /* Subscription.m */; };
 		A09521EA1AF6BDD4005AC0EF /* TVShows.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A06F88031AE6B92900CD66DC /* TVShows.xcdatamodeld */; };
 		A0AE546C1AEC3A2000D2C37B /* TSAbstractAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = A0AE546A1AEC3A0F00D2C37B /* TSAbstractAPI.m */; };
+		A0E4340D1B1A6209000AF57C /* _Subscription.m in Sources */ = {isa = PBXBuildFile; fileRef = A0E4340C1B1A6209000AF57C /* _Subscription.m */; };
+		A0E434101B1A620A000AF57C /* _Episode.m in Sources */ = {isa = PBXBuildFile; fileRef = A0E4340F1B1A620A000AF57C /* _Episode.m */; };
+		A0E434131B1A620A000AF57C /* _Serie.m in Sources */ = {isa = PBXBuildFile; fileRef = A0E434121B1A620A000AF57C /* _Serie.m */; };
 		A0EF7F5E1AE9DB440081188C /* TVShowsUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = A0EF7F5B1AE9D20F0081188C /* TVShowsUtilities.m */; };
 		A0EF7F5F1AE9DB980081188C /* TheTVDB.m in Sources */ = {isa = PBXBuildFile; fileRef = 347B35D51210DB6000F4BFF0 /* TheTVDB.m */; };
 		F1BB481C1532836C00CDE2A8 /* PTViewSubclass.m in Sources */ = {isa = PBXBuildFile; fileRef = F1BB481B1532836C00CDE2A8 /* PTViewSubclass.m */; };
@@ -529,6 +546,12 @@
 		A08864411B141C1B00A4DBB6 /* Subscription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Subscription.m; path = TVShows/Subscription.m; sourceTree = "<group>"; };
 		A0AE54691AEC3A0F00D2C37B /* TSAbstractAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSAbstractAPI.h; sourceTree = "<group>"; };
 		A0AE546A1AEC3A0F00D2C37B /* TSAbstractAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSAbstractAPI.m; sourceTree = "<group>"; };
+		A0E4340B1B1A6209000AF57C /* _Subscription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = _Subscription.h; path = TVShows/_Subscription.h; sourceTree = "<group>"; };
+		A0E4340C1B1A6209000AF57C /* _Subscription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = _Subscription.m; path = TVShows/_Subscription.m; sourceTree = "<group>"; };
+		A0E4340E1B1A620A000AF57C /* _Episode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = _Episode.h; path = TVShows/_Episode.h; sourceTree = "<group>"; };
+		A0E4340F1B1A620A000AF57C /* _Episode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = _Episode.m; path = TVShows/_Episode.m; sourceTree = "<group>"; };
+		A0E434111B1A620A000AF57C /* _Serie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = _Serie.h; path = TVShows/_Serie.h; sourceTree = "<group>"; };
+		A0E434121B1A620A000AF57C /* _Serie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = _Serie.m; path = TVShows/_Serie.m; sourceTree = "<group>"; };
 		A0EF7F5A1AE9D20F0081188C /* TVShowsUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TVShowsUtilities.h; path = TVShows/TVShowsUtilities.h; sourceTree = "<group>"; };
 		A0EF7F5B1AE9D20F0081188C /* TVShowsUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TVShowsUtilities.m; path = TVShows/TVShowsUtilities.m; sourceTree = "<group>"; };
 		B3F243393169C18DB2AB02E4 /* Pods_TVShows.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TVShows.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1160,6 +1183,12 @@
 		A06F88061AE6D0E300CD66DC /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				A0E434111B1A620A000AF57C /* _Serie.h */,
+				A0E434121B1A620A000AF57C /* _Serie.m */,
+				A0E4340E1B1A620A000AF57C /* _Episode.h */,
+				A0E4340F1B1A620A000AF57C /* _Episode.m */,
+				A0E4340B1B1A6209000AF57C /* _Subscription.h */,
+				A0E4340C1B1A6209000AF57C /* _Subscription.m */,
 				A088643A1B140A9B00A4DBB6 /* Serie.h */,
 				A088643B1B140A9B00A4DBB6 /* Serie.m */,
 				A08864371B140A9B00A4DBB6 /* Episode.h */,
@@ -1321,6 +1350,9 @@
 						CreatedOnToolsVersion = 6.2;
 						TestTargetID = A0432F1D1AD9649600C19189;
 					};
+					A0E434141B1A67B3000AF57C = {
+						CreatedOnToolsVersion = 6.3;
+					};
 				};
 			};
 			buildConfigurationList = 1DBD214C08BA80EA00186707 /* Build configuration list for PBXProject "TVShows" */;
@@ -1377,6 +1409,7 @@
 				3444F2C211DD182000BF3724 /* relaunch */,
 				A0432F1D1AD9649600C19189 /* TVShows */,
 				A0432F2F1AD9649600C19189 /* TVShowsTests */,
+				A0E434141B1A67B3000AF57C /* Mogenerator */,
 			);
 		};
 /* End PBXProject section */
@@ -1518,6 +1551,19 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TVShows/Pods-TVShows-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		A0E434191B1A67CE000AF57C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "mogenerator --v2 --model Models/TVShows.xcdatamodeld --output-dir TVShows";
+		};
 		D86E2571DB04E641D333C284 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1654,12 +1700,14 @@
 				A08864421B141C1B00A4DBB6 /* Subscription.m in Sources */,
 				A0432F261AD9649600C19189 /* main.m in Sources */,
 				A06F876A1AE6904700CD66DC /* OEGridViewFieldEditor.m in Sources */,
+				A0E434101B1A620A000AF57C /* _Episode.m in Sources */,
 				A06F876B1AE6904700CD66DC /* OETheme.m in Sources */,
 				A06F87691AE6904700CD66DC /* OEGridViewCellIndicationLayer.m in Sources */,
 				A06F876F1AE6904700CD66DC /* OEThemeObject.m in Sources */,
 				A06F87681AE6904700CD66DC /* OEGridView.m in Sources */,
 				A06F87611AE6904700CD66DC /* NSImage+OEDrawingAdditions.m in Sources */,
 				A06F876E1AE6904700CD66DC /* OEThemeImage.m in Sources */,
+				A0E434131B1A620A000AF57C /* _Serie.m in Sources */,
 				A0EF7F5F1AE9DB980081188C /* TheTVDB.m in Sources */,
 				A0EF7F5E1AE9DB440081188C /* TVShowsUtilities.m in Sources */,
 				A0AE546C1AEC3A2000D2C37B /* TSAbstractAPI.m in Sources */,
@@ -1683,6 +1731,7 @@
 				A00847CB1AF5C0F900F5D2A3 /* SubscriptionWindowController.m in Sources */,
 				A088643C1B140A9B00A4DBB6 /* Serie.m in Sources */,
 				A09521EA1AF6BDD4005AC0EF /* TVShows.xcdatamodeld in Sources */,
+				A0E4340D1B1A6209000AF57C /* _Subscription.m in Sources */,
 				A06F87641AE6904700CD66DC /* OEGridCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2197,6 +2246,20 @@
 			};
 			name = Release;
 		};
+		A0E434161B1A67B3000AF57C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A0E434171B1A67B3000AF57C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -2253,6 +2316,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		A0E434151B1A67B3000AF57C /* Build configuration list for PBXAggregateTarget "Mogenerator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A0E434161B1A67B3000AF57C /* Debug */,
+				A0E434171B1A67B3000AF57C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 

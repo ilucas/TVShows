@@ -9,14 +9,8 @@
 @import Foundation;
 @import CoreData;
 
-@class Serie;
+#import "_Subscription.h"
 
-@interface Subscription : NSManagedObject
-
-@property (nonatomic, retain) id filters;
-@property (nonatomic, retain) NSNumber *isEnabled;
-@property (nonatomic, retain) NSDate *lastDownloaded;
-@property (nonatomic, retain) NSNumber *quality;
-@property (nonatomic, retain) Serie *serie;
+@interface Subscription : _Subscription
 
 @end

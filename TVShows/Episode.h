@@ -9,19 +9,8 @@
 @import Foundation;
 @import CoreData;
 
-@class Serie;
+#import "_Episode.h"
 
-@interface Episode : NSManagedObject
-
-@property (nonatomic, retain) NSNumber * episode;
-@property (nonatomic, retain) NSString * episodeDescription;
-@property (nonatomic, retain) NSNumber * episodeID;
-@property (nonatomic, retain) NSDate * airDate;
-@property (nonatomic, retain) NSString * name;
-@property (nonatomic, retain) NSNumber * rating;
-@property (nonatomic, retain) NSNumber * season;
-@property (nonatomic, retain) NSString * tvRageLink;
-@property (nonatomic, retain) NSNumber * number;
-@property (nonatomic, retain) Serie *serie;
+@interface Episode : _Episode
 
 @end

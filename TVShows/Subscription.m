@@ -6,15 +6,9 @@
 //  Copyright (c) 2015 Lucas Casteletti. All rights reserved.
 //
 
-#import "Subscription.h"
 #import "Serie.h"
+#import "Subscription.h"
 
 @implementation Subscription
-
-@dynamic filters;
-@dynamic isEnabled;
-@dynamic lastDownloaded;
-@dynamic quality;
-@dynamic serie;
 
 @end
