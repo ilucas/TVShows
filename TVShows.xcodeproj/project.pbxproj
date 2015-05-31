@@ -214,6 +214,7 @@
 		A0E4340D1B1A6209000AF57C /* _Subscription.m in Sources */ = {isa = PBXBuildFile; fileRef = A0E4340C1B1A6209000AF57C /* _Subscription.m */; };
 		A0E434101B1A620A000AF57C /* _Episode.m in Sources */ = {isa = PBXBuildFile; fileRef = A0E4340F1B1A620A000AF57C /* _Episode.m */; };
 		A0E434131B1A620A000AF57C /* _Serie.m in Sources */ = {isa = PBXBuildFile; fileRef = A0E434121B1A620A000AF57C /* _Serie.m */; };
+		A0E4341F1B1AA1D7000AF57C /* NSManagedObject+Attributes.m in Sources */ = {isa = PBXBuildFile; fileRef = A0E4341E1B1AA1D7000AF57C /* NSManagedObject+Attributes.m */; };
 		A0EF7F5E1AE9DB440081188C /* TVShowsUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = A0EF7F5B1AE9D20F0081188C /* TVShowsUtilities.m */; };
 		A0EF7F5F1AE9DB980081188C /* TheTVDB.m in Sources */ = {isa = PBXBuildFile; fileRef = 347B35D51210DB6000F4BFF0 /* TheTVDB.m */; };
 		F1BB481C1532836C00CDE2A8 /* PTViewSubclass.m in Sources */ = {isa = PBXBuildFile; fileRef = F1BB481B1532836C00CDE2A8 /* PTViewSubclass.m */; };
@@ -552,6 +553,8 @@
 		A0E4340F1B1A620A000AF57C /* _Episode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = _Episode.m; path = TVShows/_Episode.m; sourceTree = "<group>"; };
 		A0E434111B1A620A000AF57C /* _Serie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = _Serie.h; path = TVShows/_Serie.h; sourceTree = "<group>"; };
 		A0E434121B1A620A000AF57C /* _Serie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = _Serie.m; path = TVShows/_Serie.m; sourceTree = "<group>"; };
+		A0E4341D1B1AA1D7000AF57C /* NSManagedObject+Attributes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSManagedObject+Attributes.h"; path = "TVShows/NSManagedObject+Attributes.h"; sourceTree = SOURCE_ROOT; };
+		A0E4341E1B1AA1D7000AF57C /* NSManagedObject+Attributes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSManagedObject+Attributes.m"; path = "TVShows/NSManagedObject+Attributes.m"; sourceTree = SOURCE_ROOT; };
 		A0EF7F5A1AE9D20F0081188C /* TVShowsUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TVShowsUtilities.h; path = TVShows/TVShowsUtilities.h; sourceTree = "<group>"; };
 		A0EF7F5B1AE9D20F0081188C /* TVShowsUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TVShowsUtilities.m; path = TVShows/TVShowsUtilities.m; sourceTree = "<group>"; };
 		B3F243393169C18DB2AB02E4 /* Pods_TVShows.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TVShows.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1217,6 +1220,8 @@
 			children = (
 				A07C6FB11AFFFA6E00611B8D /* NSDictionary+Extensions.h */,
 				A07C6FB21AFFFA6E00611B8D /* NSDictionary+Extensions.m */,
+				A0E4341D1B1AA1D7000AF57C /* NSManagedObject+Attributes.h */,
+				A0E4341E1B1AA1D7000AF57C /* NSManagedObject+Attributes.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -1733,6 +1738,7 @@
 				A09521EA1AF6BDD4005AC0EF /* TVShows.xcdatamodeld in Sources */,
 				A0E4340D1B1A6209000AF57C /* _Subscription.m in Sources */,
 				A06F87641AE6904700CD66DC /* OEGridCell.m in Sources */,
+				A0E4341F1B1AA1D7000AF57C /* NSManagedObject+Attributes.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

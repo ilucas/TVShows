@@ -10,6 +10,7 @@
 @import CoreData;
 
 #import "_Subscription.h"
+#import "NSManagedObject+Attributes.h"
 
 @interface Subscription : _Subscription
 

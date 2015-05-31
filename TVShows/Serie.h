@@ -10,9 +10,10 @@
 @import CoreData;
 
 #import "_Serie.h"
+#import "NSManagedObject+Attributes.h"
 
 @interface Serie : _Serie
 
-- (void)updateAttributes:(NSDictionary *)attributes;
+- (BOOL)isComplete;
 
 @end

@@ -10,6 +10,7 @@
 @import CoreData;
 
 #import "_Episode.h"
+#import "NSManagedObject+Attributes.h"
 
 @interface Episode : _Episode
 

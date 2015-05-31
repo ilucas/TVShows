@@ -11,21 +11,12 @@
 #import "Subscription.h"
 
 #import <MagicalRecord/MagicalRecord.h>
-#import "NSDictionary+Extensions.h"
 
 @implementation Serie
 
-- (void)updateAttributes:(NSDictionary *)attributes {
-    self.banner = [attributes objectForKeyOrNil:@"banner"];
-    self.country = [attributes objectForKeyOrNil:@"country"];
-    self.started = [attributes objectForKeyOrNil:@"started"];
-    self.imdb_id = [attributes objectForKeyOrNil:@"imdb_id"];
-    self.language = [attributes objectForKeyOrNil:@"language"];
-    self.name = [attributes objectForKeyOrNil:@"name"];
-    self.rating = [attributes objectForKeyOrNil:@"rating"];
-    self.seriesDescription = [attributes objectForKeyOrNil:@"seriesDescription"];
-    self.tvdb_id = [attributes objectForKeyOrNil:@"tvdb_id"];
-    self.tvrage_id = [attributes objectForKeyOrNil:@"tvrage_id"];
+- (BOOL)isComplete {
+    // Since the first batch of series don't have a description, let's use seriesDescription to validate if the Serie is complete.
+    return (self.seriesDescription != nil);
 }
 
 @end
