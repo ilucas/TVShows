@@ -7,7 +7,7 @@
         <attribute name="episodeID" optional="YES" attributeType="Float" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="number" optional="YES" attributeType="Integer 32" syncable="YES"/>
-        <attribute name="rating" optional="YES" attributeType="Float" syncable="YES"/>
+        <attribute name="rating" optional="YES" attributeType="Float" minValueString="0" maxValueString="5" syncable="YES"/>
         <attribute name="season" attributeType="Integer 32" indexed="YES" syncable="YES"/>
         <attribute name="tvRageLink" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="serie" maxCount="1" deletionRule="Nullify" destinationEntity="Serie" inverseName="episodes" inverseEntity="Serie" syncable="YES"/>
@@ -18,11 +18,12 @@
         <attribute name="banner" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="country" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="ended" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="genre" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="imdb_id" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="language" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" attributeType="String" indexed="YES" syncable="YES"/>
         <attribute name="network" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="rating" optional="YES" attributeType="Float" defaultValueString="0" syncable="YES"/>
+        <attribute name="rating" optional="YES" attributeType="Float" minValueString="0" maxValueString="5" syncable="YES"/>
         <attribute name="runtime" optional="YES" attributeType="Integer 16" syncable="YES"/>
         <attribute name="seriesDescription" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="started" optional="YES" attributeType="Date" syncable="YES"/>
@@ -44,7 +45,7 @@
     </entity>
     <elements>
         <element name="Episode" positionX="63" positionY="54" width="128" height="195"/>
-        <element name="Serie" positionX="297" positionY="-81" width="128" height="360"/>
+        <element name="Serie" positionX="297" positionY="-81" width="128" height="375"/>
         <element name="Subscription" positionX="502" positionY="126" width="128" height="120"/>
     </elements>
 </model>

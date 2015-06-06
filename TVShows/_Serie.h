@@ -9,6 +9,7 @@ extern const struct SerieAttributes {
 	__unsafe_unretained NSString *banner;
 	__unsafe_unretained NSString *country;
 	__unsafe_unretained NSString *ended;
+	__unsafe_unretained NSString *genre;
 	__unsafe_unretained NSString *imdb_id;
 	__unsafe_unretained NSString *language;
 	__unsafe_unretained NSString *name;
@@ -61,6 +62,10 @@ extern const struct SerieRelationships {
 @property (nonatomic, strong) NSDate* ended;
 
 //- (BOOL)validateEnded:(id*)value_ error:(NSError**)error_;
+
+@property (nonatomic, strong) NSString* genre;
+
+//- (BOOL)validateGenre:(id*)value_ error:(NSError**)error_;
 
 @property (nonatomic, strong) NSString* imdb_id;
 
@@ -172,6 +177,9 @@ extern const struct SerieRelationships {
 
 - (NSDate*)primitiveEnded;
 - (void)setPrimitiveEnded:(NSDate*)value;
+
+- (NSString*)primitiveGenre;
+- (void)setPrimitiveGenre:(NSString*)value;
 
 - (NSString*)primitiveImdb_id;
 - (void)setPrimitiveImdb_id:(NSString*)value;

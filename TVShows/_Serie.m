@@ -9,6 +9,7 @@ const struct SerieAttributes SerieAttributes = {
 	.banner = @"banner",
 	.country = @"country",
 	.ended = @"ended",
+	.genre = @"genre",
 	.imdb_id = @"imdb_id",
 	.language = @"language",
 	.name = @"name",
@@ -94,6 +95,8 @@ const struct SerieRelationships SerieRelationships = {
 @dynamic country;
 
 @dynamic ended;
+
+@dynamic genre;
 
 @dynamic imdb_id;
 
