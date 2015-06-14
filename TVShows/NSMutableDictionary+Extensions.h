@@ -10,6 +10,5 @@
 
 @interface NSMutableDictionary (Extensions)
 
-- (void)setObjectIfNotNull:(id)anObject forKey:(id <NSCopying>)aKey;
-
+- (void)addObject:(id)anObject key:(id <NSCopying>)aKey;
 @end

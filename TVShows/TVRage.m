@@ -31,10 +31,10 @@ static NSString * const TVRageBaseURL = @"http://services.tvrage.com";
             @autoreleasepool {
                 NSMutableDictionary *show = [[NSMutableDictionary alloc] init];
                 
-                [show setObjectIfNotNull:[[element firstChildWithTag:@"name"] stringValue] forKey:@"name"];
-                [show setObjectIfNotNull:[[element firstChildWithTag:@"country"] stringValue] forKey:@"country"];
-                //[show setObjectIfNotNull:[[element firstChildWithTag:@"status"] numberValue] forKey:@"status"];
-                [show setObjectIfNotNull:[[element firstChildWithTag:@"id"] numberValue] forKey:@"tvrage_id"];
+                [show addObject:[[element firstChildWithTag:@"name"] stringValue] key:@"name"];
+                [show addObject:[[element firstChildWithTag:@"country"] stringValue] key:@"country"];
+                //[show addObject:[[element firstChildWithTag:@"status"] numberValue] key:@"status"];
+                [show addObject:[[element firstChildWithTag:@"id"] numberValue] key:@"tvrage_id"];
                 [shows addObject:[show copy]];
             }
         }];
@@ -73,18 +73,18 @@ static NSString * const TVRageBaseURL = @"http://services.tvrage.com";
             
             [element.document.dateFormatter setDateFormat:@"MM/dd/yyyy"];
             
-            [show setObjectIfNotNull:[[element firstChildWithTag:@"name"] stringValue] forKey:@"name"];
-            [show setObjectIfNotNull:[[element firstChildWithTag:@"totalseasons"] numberValue] forKey:@"totalseasons"];
-            [show setObjectIfNotNull:[[element firstChildWithTag:@"image"] stringValue] forKey:@"banner"];
-            [show setObjectIfNotNull:[[element firstChildWithTag:@"showlink"] stringValue] forKey:@"tvRageLink"];
-            [show setObjectIfNotNull:[[element firstChildWithTag:@"started"] dateValue] forKey:@"started"];
-            [show setObjectIfNotNull:[[element firstChildWithTag:@"ended"] dateValue] forKey:@"ended"];
-            [show setObjectIfNotNull:[[element firstChildWithTag:@"status"] stringValue] forKey:@"status"];
-            [show setObjectIfNotNull:[[element firstChildWithTag:@"runtime"] numberValue]  forKey:@"runtime"];
-            [show setObjectIfNotNull:[[element firstChildWithTag:@"network"] stringValue] forKey:@"network"];
-            [show setObjectIfNotNull:[[element firstChildWithTag:@"airtime"] stringValue] forKey:@"airtime"];
-            [show setObjectIfNotNull:[[element firstChildWithTag:@"airday"] stringValue] forKey:@"airday"];
-            [show setObjectIfNotNull:[[element firstChildWithTag:@"timezone"] stringValue] forKey:@"timezone"];
+            [show addObject:[[element firstChildWithTag:@"name"] stringValue] key:@"name"];
+            [show addObject:[[element firstChildWithTag:@"totalseasons"] numberValue] key:@"totalseasons"];
+            [show addObject:[[element firstChildWithTag:@"image"] stringValue] key:@"banner"];
+            [show addObject:[[element firstChildWithTag:@"showlink"] stringValue] key:@"tvRageLink"];
+            [show addObject:[[element firstChildWithTag:@"started"] dateValue] key:@"started"];
+            [show addObject:[[element firstChildWithTag:@"ended"] dateValue] key:@"ended"];
+            [show addObject:[[element firstChildWithTag:@"status"] stringValue] key:@"status"];
+            [show addObject:[[element firstChildWithTag:@"runtime"] numberValue]  key:@"runtime"];
+            [show addObject:[[element firstChildWithTag:@"network"] stringValue] key:@"network"];
+            [show addObject:[[element firstChildWithTag:@"airtime"] stringValue] key:@"airtime"];
+            [show addObject:[[element firstChildWithTag:@"airday"] stringValue] key:@"airday"];
+            [show addObject:[[element firstChildWithTag:@"timezone"] stringValue] key:@"timezone"];
             
             // Genres
             NSMutableArray __block *genres = [NSMutableArray arrayWithCapacity:2];
@@ -96,7 +96,7 @@ static NSString * const TVRageBaseURL = @"http://services.tvrage.com";
                     *stop = true;// stop if idx is higher than 1
             }];
             
-            [show setObjectIfNotNull:[genres componentsJoinedByString:@", "] forKey:@"genre"];
+            [show addObject:[genres componentsJoinedByString:@", "] key:@"genre"];
             
             // Episode List
             ONOXMLElement *Episodelist = [element firstChildWithTag:@"Episodelist"];
@@ -116,12 +116,12 @@ static NSString * const TVRageBaseURL = @"http://services.tvrage.com";
                     @autoreleasepool {
                         [episodeElement.document.dateFormatter setDateFormat:@"yyyy-mm-dd"];
                         
-                        [episode setObject:season forKey:@"season"];
-                        [episode setObjectIfNotNull:[[episodeElement firstChildWithTag:@"seasonnum"] numberValue] forKey:@"episode"];
-                        [episode setObjectIfNotNull:[[episodeElement firstChildWithTag:@"epnum"] numberValue] forKey:@"number"];
-                        [episode setObjectIfNotNull:[[episodeElement firstChildWithTag:@"link"] stringValue] forKey:@"tvRageLink"];
-                        [episode setObjectIfNotNull:[[episodeElement firstChildWithTag:@"title"] stringValue] forKey:@"name"];
-                        [episode setObjectIfNotNull:[[episodeElement firstChildWithTag:@"airdate"] dateValue] forKey:@"airDate"];
+                        [episode addObject:season key:@"season"];
+                        [episode addObject:[[episodeElement firstChildWithTag:@"seasonnum"] numberValue] key:@"episode"];
+                        [episode addObject:[[episodeElement firstChildWithTag:@"epnum"] numberValue] key:@"number"];
+                        [episode addObject:[[episodeElement firstChildWithTag:@"link"] stringValue] key:@"tvRageLink"];
+                        [episode addObject:[[episodeElement firstChildWithTag:@"title"] stringValue] key:@"name"];
+                        [episode addObject:[[episodeElement firstChildWithTag:@"airdate"] dateValue] key:@"airDate"];
                         
                         // Add the episode to the episodes array.
                         [episodes addObject:[episode copy]];
