@@ -14,7 +14,9 @@
     [attributes enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
         // Check if key exists and is empty.
         if ([self respondsToSelector:NSSelectorFromString((NSString *)key)] && ![self valueForKey:key]) {
+            [self willChangeValueForKey:key];
             [self setValue:obj forKey:key];
+            [self didChangeValueForKey:key];
         }
     }];
 }
