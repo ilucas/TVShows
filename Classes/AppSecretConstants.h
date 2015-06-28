@@ -18,8 +18,5 @@
 //
 // If you plan to release a custom package, please get your own API keys at:
 // http://thetvdb.com/?tab=apiregister
-// http://gomiso.com/oauth_clients
 
-#define TVDB_API_KEY                     @"BB420D2FDA505290"
-#define MISO_API_KEY                     @"tGF06vv7cJrcLoLAGcbA"
-#define MISO_API_SECRET                  @"V57MzuhMdGRnOETdTkmx4AT4kFIGSvN8gzIDHfAT"
+static NSString * const TVDB_API_KEY = @"BB420D2FDA505290";

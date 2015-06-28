@@ -16,6 +16,29 @@ static NSString * const TVRageBaseURL = @"http://services.tvrage.com";
 
 @implementation TVRage
 
+#pragma mark - LifeCycle
+
++ (instancetype)sharedInstance {
+    static dispatch_once_t pred;
+    static id shared = nil;
+    dispatch_once(&pred, ^{
+        shared = [[self alloc] init];
+    });
+    return shared;
+}
+
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        [self setCanceled:NO];
+    }
+    return self;
+}
+
+- (void)cancel {
+    [self setCanceled:YES];
+}
+
 #pragma mark - Async request
 
 - (void)getShowListWithCompletionHandler:(void(^)(NSArray *results, NSError *error))handler {

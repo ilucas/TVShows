@@ -14,16 +14,16 @@
 
 @import Cocoa;
 @import AFNetworking;
-@import Ono;
 
-#import "TSAbstractAPI.h"
+@interface TheTVDB : NSObject
 
-@interface TheTVDB : TSAbstractAPI
+@property (assign, getter=isCancelled) BOOL canceled;
 
-//TODO: Add support for multiples languages
-- (void)getShow:(NSString *)showName completionHandler:(void(^)(NSDictionary *result, NSError *error))handler;
++ (instancetype)sharedInstance;
+
+- (void)searchShow:(NSString *)showName completionHandler:(void(^)(NSArray *result, NSError *error))handler;
+- (void)getShow:(NSNumber *)showid completionHandler:(void(^)(NSDictionary *result, NSError *error))handler;
 - (void)getShowWithIMDB:(NSString *)serieID completionHandler:(void(^)(NSDictionary *result, NSError *error))handler;
-- (void)searchEpisode:(NSString *)aEpisodeNum seasonNum:(NSString *)aSeasonNum ShowID:(NSString *)seriesID completionHandler:(void(^)(NSDictionary *result, NSError *error))handler;
-- (void)getPosterForShow:(NSString *)showName withShowID:(NSString *)seriesID completionHandler:(void(^)(NSDictionary *result, NSError *error))handler;
+- (void)getShowWithEpisodeList:(NSString *)showName completionHandler:(void(^)(NSDictionary *result, NSError *error))handler;
 
 @end

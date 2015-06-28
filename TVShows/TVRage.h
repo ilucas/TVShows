@@ -9,9 +9,11 @@
 @import Cocoa;
 @import AFNetworking;
 
-#import "TSAbstractAPI.h"
+@interface TVRage : NSObject
 
-@interface TVRage : TSAbstractAPI
+@property (assign, getter=isCancelled) BOOL canceled;
+
++ (instancetype)sharedInstance;
 
 - (void)getShowListWithCompletionHandler:(void(^)(NSArray *results, NSError *error))handler;
 - (void)getShow:(NSNumber *)showid completionHandler:(void(^)(NSDictionary *result, NSError *error))handler;

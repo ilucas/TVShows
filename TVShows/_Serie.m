@@ -7,11 +7,13 @@ const struct SerieAttributes SerieAttributes = {
 	.airday = @"airday",
 	.airtime = @"airtime",
 	.banner = @"banner",
+	.contentRating = @"contentRating",
 	.country = @"country",
 	.ended = @"ended",
 	.genre = @"genre",
 	.imdb_id = @"imdb_id",
 	.language = @"language",
+	.lastUpdate = @"lastUpdate",
 	.name = @"name",
 	.network = @"network",
 	.rating = @"rating",
@@ -92,6 +94,8 @@ const struct SerieRelationships SerieRelationships = {
 
 @dynamic banner;
 
+@dynamic contentRating;
+
 @dynamic country;
 
 @dynamic ended;
@@ -101,6 +105,8 @@ const struct SerieRelationships SerieRelationships = {
 @dynamic imdb_id;
 
 @dynamic language;
+
+@dynamic lastUpdate;
 
 @dynamic name;
 
@@ -198,21 +204,21 @@ const struct SerieRelationships SerieRelationships = {
 
 @dynamic tvrage_id;
 
-- (int16_t)tvrage_idValue {
+- (int32_t)tvrage_idValue {
 	NSNumber *result = [self tvrage_id];
-	return [result shortValue];
+	return [result intValue];
 }
 
-- (void)setTvrage_idValue:(int16_t)value_ {
+- (void)setTvrage_idValue:(int32_t)value_ {
 	[self setTvrage_id:@(value_)];
 }
 
-- (int16_t)primitiveTvrage_idValue {
+- (int32_t)primitiveTvrage_idValue {
 	NSNumber *result = [self primitiveTvrage_id];
-	return [result shortValue];
+	return [result intValue];
 }
 
-- (void)setPrimitiveTvrage_idValue:(int16_t)value_ {
+- (void)setPrimitiveTvrage_idValue:(int32_t)value_ {
 	[self setPrimitiveTvrage_id:@(value_)];
 }
 

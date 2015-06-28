@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="7531"/>
+        <development version="6300" identifier="xcode"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="7706"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="SubscriptionWindowController">
@@ -306,7 +307,7 @@
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
                         <tableHeaderView key="headerView" id="HNn-Yq-tkF">
-                            <rect key="frame" x="0.0" y="0.0" width="456" height="17"/>
+                            <rect key="frame" x="0.0" y="0.0" width="520" height="17"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </tableHeaderView>
                         <connections>
@@ -372,20 +373,12 @@
                             <rect key="frame" x="0.0" y="0.0" width="385" height="227"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
-                                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IlG-Cp-zKj">
-                                    <rect key="frame" x="218" y="4" width="164" height="74"/>
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="74" id="YSV-mB-fFJ"/>
-                                        <constraint firstAttribute="width" constant="164" id="ZvO-hh-Cne"/>
-                                    </constraints>
-                                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageAlignment="right" imageScaling="proportionallyUpOrDown" image="NSFlowViewTemplate" id="b1z-yf-o9x"/>
-                                </imageView>
                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="4pT-fV-4NT">
-                                    <rect key="frame" x="1" y="164" width="56" height="17"/>
+                                    <rect key="frame" x="1" y="164" width="60" height="17"/>
                                     <constraints>
-                                        <constraint firstAttribute="width" constant="52" id="lgA-ms-pRj"/>
+                                        <constraint firstAttribute="width" constant="56" id="lgA-ms-pRj"/>
                                     </constraints>
-                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="55 Min" id="9x6-Jh-aaI">
+                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="120 Min" id="9x6-Jh-aaI">
                                         <font key="font" metaFont="system" size="15"/>
                                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -402,11 +395,11 @@
                                 <scrollView borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dLx-EH-xeq">
                                     <rect key="frame" x="3" y="30" width="379" height="128"/>
                                     <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="kEk-o5-HFg">
-                                        <rect key="frame" x="1" y="1" width="223" height="133"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="379" height="128"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <subviews>
                                             <textView editable="NO" drawsBackground="NO" importsGraphics="NO" findStyle="panel" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" smartInsertDelete="YES" id="Q2N-o0-Shp">
-                                                <rect key="frame" x="0.0" y="0.0" width="223" height="133"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="379" height="128"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <size key="minSize" width="379" height="128"/>
@@ -432,12 +425,12 @@
                                         <autoresizingMask key="autoresizingMask"/>
                                     </scroller>
                                     <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="KDD-ix-BVu">
-                                        <rect key="frame" x="224" y="1" width="15" height="133"/>
+                                        <rect key="frame" x="363" y="0.0" width="16" height="128"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                     </scroller>
                                 </scrollView>
                                 <levelIndicator verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="yQb-Gw-osl">
-                                    <rect key="frame" x="63" y="166" width="70" height="13"/>
+                                    <rect key="frame" x="68" y="166" width="70" height="13"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="13" id="6Eg-vY-LY5"/>
                                         <constraint firstAttribute="width" constant="70" id="zhc-9x-XUX"/>
@@ -466,10 +459,18 @@
                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                     </textFieldCell>
                                 </textField>
+                                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IlG-Cp-zKj">
+                                    <rect key="frame" x="218" y="4" width="164" height="74"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="74" id="YSV-mB-fFJ"/>
+                                        <constraint firstAttribute="width" constant="164" id="ZvO-hh-Cne"/>
+                                    </constraints>
+                                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageAlignment="right" image="NSFlowViewTemplate" id="b1z-yf-o9x"/>
+                                </imageView>
                             </subviews>
                         </view>
                         <constraints>
-                            <constraint firstItem="4mc-MB-cwI" firstAttribute="leading" secondItem="yQb-Gw-osl" secondAttribute="trailing" constant="8" symbolic="YES" id="4rX-m8-0E4"/>
+                            <constraint firstItem="4mc-MB-cwI" firstAttribute="leading" secondItem="yQb-Gw-osl" secondAttribute="trailing" constant="3" id="4rX-m8-0E4"/>
                             <constraint firstItem="dLx-EH-xeq" firstAttribute="top" secondItem="yQb-Gw-osl" secondAttribute="bottom" constant="8" symbolic="YES" id="DSo-ET-XDe"/>
                             <constraint firstItem="4mc-MB-cwI" firstAttribute="top" secondItem="uIJ-aH-D9a" secondAttribute="bottom" constant="6" id="KVQ-Yp-Eve"/>
                             <constraint firstItem="4pT-fV-4NT" firstAttribute="top" secondItem="uIJ-aH-D9a" secondAttribute="bottom" constant="8" symbolic="YES" id="NiW-Ub-ZfW"/>
@@ -485,7 +486,7 @@
                             <constraint firstItem="dLx-EH-xeq" firstAttribute="trailing" secondItem="IlG-Cp-zKj" secondAttribute="trailing" id="oMj-CV-cYO"/>
                             <constraint firstItem="dLx-EH-xeq" firstAttribute="top" secondItem="4pT-fV-4NT" secondAttribute="bottom" constant="6" id="oPb-wg-87H"/>
                             <constraint firstAttribute="bottom" secondItem="dLx-EH-xeq" secondAttribute="bottom" constant="26" id="qVn-1a-UGo"/>
-                            <constraint firstItem="yQb-Gw-osl" firstAttribute="leading" secondItem="4pT-fV-4NT" secondAttribute="trailing" constant="8" symbolic="YES" id="qdz-80-2vf"/>
+                            <constraint firstItem="yQb-Gw-osl" firstAttribute="leading" secondItem="4pT-fV-4NT" secondAttribute="trailing" constant="9" id="qdz-80-2vf"/>
                             <constraint firstItem="4pT-fV-4NT" firstAttribute="leading" secondItem="dLx-EH-xeq" secondAttribute="leading" id="tRr-oT-uqP"/>
                             <constraint firstItem="uIJ-aH-D9a" firstAttribute="baseline" secondItem="yOf-k3-tLA" secondAttribute="baseline" id="tf6-Gi-q9T"/>
                             <constraint firstItem="uIJ-aH-D9a" firstAttribute="leading" secondItem="4pT-fV-4NT" secondAttribute="leading" id="wZc-Oh-ssa"/>

@@ -7,11 +7,13 @@ extern const struct SerieAttributes {
 	__unsafe_unretained NSString *airday;
 	__unsafe_unretained NSString *airtime;
 	__unsafe_unretained NSString *banner;
+	__unsafe_unretained NSString *contentRating;
 	__unsafe_unretained NSString *country;
 	__unsafe_unretained NSString *ended;
 	__unsafe_unretained NSString *genre;
 	__unsafe_unretained NSString *imdb_id;
 	__unsafe_unretained NSString *language;
+	__unsafe_unretained NSString *lastUpdate;
 	__unsafe_unretained NSString *name;
 	__unsafe_unretained NSString *network;
 	__unsafe_unretained NSString *rating;
@@ -55,6 +57,10 @@ extern const struct SerieRelationships {
 
 //- (BOOL)validateBanner:(id*)value_ error:(NSError**)error_;
 
+@property (nonatomic, strong) NSString* contentRating;
+
+//- (BOOL)validateContentRating:(id*)value_ error:(NSError**)error_;
+
 @property (nonatomic, strong) NSString* country;
 
 //- (BOOL)validateCountry:(id*)value_ error:(NSError**)error_;
@@ -74,6 +80,10 @@ extern const struct SerieRelationships {
 @property (nonatomic, strong) NSString* language;
 
 //- (BOOL)validateLanguage:(id*)value_ error:(NSError**)error_;
+
+@property (nonatomic, strong) NSDate* lastUpdate;
+
+//- (BOOL)validateLastUpdate:(id*)value_ error:(NSError**)error_;
 
 @property (nonatomic, strong) NSString* name;
 
@@ -137,9 +147,9 @@ extern const struct SerieRelationships {
 
 @property (nonatomic, strong) NSNumber* tvrage_id;
 
-@property (atomic) int16_t tvrage_idValue;
-- (int16_t)tvrage_idValue;
-- (void)setTvrage_idValue:(int16_t)value_;
+@property (atomic) int32_t tvrage_idValue;
+- (int32_t)tvrage_idValue;
+- (void)setTvrage_idValue:(int32_t)value_;
 
 //- (BOOL)validateTvrage_id:(id*)value_ error:(NSError**)error_;
 
@@ -172,6 +182,9 @@ extern const struct SerieRelationships {
 - (NSString*)primitiveBanner;
 - (void)setPrimitiveBanner:(NSString*)value;
 
+- (NSString*)primitiveContentRating;
+- (void)setPrimitiveContentRating:(NSString*)value;
+
 - (NSString*)primitiveCountry;
 - (void)setPrimitiveCountry:(NSString*)value;
 
@@ -186,6 +199,9 @@ extern const struct SerieRelationships {
 
 - (NSString*)primitiveLanguage;
 - (void)setPrimitiveLanguage:(NSString*)value;
+
+- (NSDate*)primitiveLastUpdate;
+- (void)setPrimitiveLastUpdate:(NSDate*)value;
 
 - (NSString*)primitiveName;
 - (void)setPrimitiveName:(NSString*)value;
@@ -235,8 +251,8 @@ extern const struct SerieRelationships {
 - (NSNumber*)primitiveTvrage_id;
 - (void)setPrimitiveTvrage_id:(NSNumber*)value;
 
-- (int16_t)primitiveTvrage_idValue;
-- (void)setPrimitiveTvrage_idValue:(int16_t)value_;
+- (int32_t)primitiveTvrage_idValue;
+- (void)setPrimitiveTvrage_idValue:(int32_t)value_;
 
 - (NSMutableSet*)primitiveEpisodes;
 - (void)setPrimitiveEpisodes:(NSMutableSet*)value;
