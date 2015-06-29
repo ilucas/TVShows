@@ -10,10 +10,7 @@
 @import Quartz;
 @import MagicalRecord;
 
-@interface SubscriptionWindowController : NSWindowController <NSTableViewDelegate>
-
-#pragma mark - Core Data
-@property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
+@interface SubscriptionWindowController : NSWindowController <NSTableViewDelegate, NSTextFieldDelegate>
 
 #pragma mark - Show info
 @property (weak) IBOutlet NSBox *metadataBox;
@@ -37,9 +34,9 @@
 @property (weak, nonatomic) IBOutlet NSTableView *showsTableView;
 @property (strong, nonatomic) IBOutlet NSArrayController *showsArrayController;
 @property (weak, nonatomic) IBOutlet NSSearchField *SearchField;
+@property (readonly, strong, nonatomic) NSMutableArray *showList;
 
 #pragma mark - Actions
-- (IBAction)reloadShowList:(id)sender;
 - (IBAction)openMoreInfoURL:(id)sender;
 - (IBAction)closeWindow:(id)sender;
 - (IBAction)subscribeToShow:(id)sender;

@@ -7,7 +7,6 @@
 //
 
 #import "SubscriptionWindowController.h"
-#import "LoadingViewController.h"
 #import "TVRage.h"
 #import "TheTVDB.h"
 #import "Serie.h"
@@ -16,15 +15,14 @@
 @interface SubscriptionWindowController ()
 
 #pragma mark - Core Data
-@property (readwrite, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
-
-#pragma mark - Loading Overlay
-@property (weak, nonatomic) IBOutlet LoadingViewController *loadingViewController;
+@property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 
 #pragma mark - Bindings
 @property (strong) NSMutableArray *sorter;
+@property (readwrite, strong, nonatomic) NSMutableArray *showList;
 
 - (void)toggleLoading:(BOOL)isLoading;
+- (void)updateShowInfo:(Serie *)serie;
 - (BOOL)userIsSubscribedToShow:(NSString*)showName;
 
 @end
@@ -46,6 +44,7 @@
     self = [super initWithWindowNibName:windowNibName];
     
     if (self) {
+        _showList = [[NSMutableArray alloc] init];
         _sorter = [NSMutableArray arrayWithObject:[[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES]];
     }
     
@@ -53,49 +52,6 @@
 }
 
 #pragma mark - Actions
-
-- (IBAction)reloadShowList:(id)sender {
-    TVRage *service = [TVRage sharedInstance];
-    
-    [service getShowListWithCompletionHandler:^(NSArray *results, NSError *error) {
-        NSUInteger count = [results count];
-        
-        NSLog(@"Total :%ld", count);
-        
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^(void){
-            
-            [MagicalRecord saveWithBlockAndWait:^(NSManagedObjectContext *localContext) {
-                [localContext setUndoManager:nil];
-                
-                [results enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-                    
-                    NSArray *series = [Serie MR_findByAttribute:@"name" withValue:obj[@"name"] inContext:localContext];
-                    
-                    /*
-                     * If Serie already exists
-                     */
-                    if ([series count] < 1) {
-                        Serie *serie = [Serie MR_createInContext:localContext];
-                        [serie updateAttributes:obj];
-                    }
-                    
-//                    dispatch_async(dispatch_get_main_queue(), ^(void){
-                        NSLog(@"Importing %ld of %ld", idx, count);
-                        // });
-                    }
-                }];
-            }];
-            
-            dispatch_async(dispatch_get_main_queue(), ^(void){
-                //dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                NSLog(@"Done importing.");
-                [self.managedObjectContext reset];
-                [self.showsArrayController fetch:self];
-            });
-            
-        });
-    }];
-}
 
 - (IBAction)openMoreInfoURL:(id)sender {
 
@@ -111,6 +67,29 @@
     [self closeWindow:nil];
 }
 
+#pragma mark - NSTextFieldDelegate
+
+- (void)controlTextDidChange:(NSNotification *)notification {
+    NSString *search = [[notification object] stringValue];
+    
+    if ([search isEmpty]){
+        [self.showList removeAllObjects];
+        [self.showsTableView reloadData];
+        return;
+    }
+    
+    [[TheTVDB sharedInstance] searchShow:search completionHandler:^(NSArray *result, NSError *error) {
+        if (result) {
+            [self.showList removeAllObjects];
+            [self.showsArrayController addObjects:result];
+            
+            // Select the first item in TableView if not empty.
+            if (self.showList.count > 0)
+                [self.showsTableView selectRowIndexes:[NSIndexSet indexSetWithIndex:0] byExtendingSelection:NO];
+        }
+    }];
+}
+
 #pragma mark - NSWindowDelegate
 
 - (void)windowDidLoad {
@@ -122,45 +101,50 @@
 #pragma mark - NSTableViewDelegate
 
 - (void)tableViewSelectionDidChange:(NSNotification *)notification {
-    __block Serie *selectedObject = [[self.showsArrayController selectedObjects] firstObject];
-    
+    NSDictionary __block *selectedObject = [[self.showsArrayController selectedObjects] firstObject];
+        
     if (selectedObject) {
-        // If the show information isn't complete, download the information
-        if (selectedObject.isComplete) {
+        NSNumber *thetvdbid = selectedObject[@"tvdb_id"];
+        Serie __block *serie = [Serie MR_findFirstByAttribute:@"tvdb_id" withValue:thetvdbid inContext:self.managedObjectContext];
+        
+        // download serie info if is not already cached
+        if (serie) {
             [self toggleLoading:NO];
-            [self updateShowInfo:selectedObject];
+            [self updateShowInfo:serie];
         } else {
             [self toggleLoading:YES];
-            NSString *serie = [selectedObject name];
             
-            [[TheTVDB sharedInstance] getShowWithEpisodeList:serie completionHandler:^(NSDictionary *result, NSError *error) {
+            [[TheTVDB sharedInstance] getShowWithEpisodeList:thetvdbid completionHandler:^(NSDictionary *result, NSError *error) {
                 if (result) {
+                    // Create the entity
+                    serie = [Serie MR_createInContext:managedObjectContext];
+                    [serie updateAttributes:result];
+                    
                     // Update the Serie in Core Data
                     [result[@"episodes"] enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
                         @autoreleasepool {
                             Episode *ep = [Episode MR_createInContext:managedObjectContext];
                             [ep updateAttributes:obj];
-                            
-                            [selectedObject addEpisodesObject:ep];// Add the episode to the serie.
+                            [serie addEpisodesObject:ep];// Add the episode to the serie.
                         }
                     }];
                     
                     NSMutableDictionary *updates = [NSMutableDictionary dictionaryWithDictionary:result];
                     [updates removeObjectForKey:@"episodes"];
                     
-                    [selectedObject updateAttributes:updates];
+                    [serie updateAttributes:updates];
                     
                     // Save the changes
                     [managedObjectContext MR_saveToPersistentStoreWithCompletion:nil];
                     
                     // Update the UI.
-                    [self updateShowInfo:selectedObject];
+                    [self updateShowInfo:serie];
                 }
                 
                 if (error) {
                     NSLog(@"Error TheTVDB getShowWithEpisodeList:");
                     [self updateShowInfo:nil];
-//                    NSLog(@"%@", error);
+                    // NSLog(@"%@", error);
                 }
                 
                 [self toggleLoading:NO];
@@ -197,8 +181,6 @@
 }
 
 - (void)updateShowInfo:(Serie *)serie {
-    // do something when theres no value.
-    
     if (!serie) {
         [self.showName setStringValue:@""];
         [self.genre setStringValue:@""];
@@ -209,9 +191,17 @@
         return;
     }
     
-    NSImage *ea = [NSImage imageNamed:@"ea"];
+    // Get the poster
+    [TheTVDB getPosterForShow:serie completionHandler:^(NSImage *poster, NSNumber *showID) {
+        NSNumber *selectedObjectID = [[[self.showsArrayController selectedObjects] firstObject] objectForKey:@"tvdb_id"];
+        
+        // Only set the poster if the selected item id is equal to poster id.
+        if ([selectedObjectID isEqualToNumber:showID])
+            [self.showPoster setImage:poster];
+    }];
     
-    [self.studioLogo setImage:ea];
+//    NSImage *ea = [NSImage imageNamed:@"ea"];
+//    [self.studioLogo setImage:ea];
     
     [self.showName setStringValue:(serie.name ?: @"")];
     [self.genre setStringValue:(serie.genre ?: @"")];

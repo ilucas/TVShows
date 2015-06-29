@@ -6,4 +6,5 @@
 //  Copyright (c) 2015 Lucas Casteletti. All rights reserved.
 //
 
-extern inline NSString *applicationCacheDirectory();
+extern inline NSString * applicationSupportDirectory();
+extern inline NSString * applicationCacheDirectory();

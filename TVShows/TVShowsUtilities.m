@@ -8,8 +8,12 @@
 
 #import "TVShowsUtilities.h"
 
+NSString *applicationSupportDirectory() {
+    NSString *applicationName = [[[NSBundle mainBundle] infoDictionary] valueForKey:(NSString *)kCFBundleNameKey];
+    NSString *applicationStorageDirectory = [NSSearchPathForDirectoriesInDomains(NSApplicationSupportDirectory, NSUserDomainMask, YES) lastObject];
+    return [applicationStorageDirectory stringByAppendingPathComponent:applicationName];
+}
+
 NSString *applicationCacheDirectory() {
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);
-    NSString *cacheDir = [paths objectAtIndex:0];
-    return cacheDir;
+    return [applicationSupportDirectory() stringByAppendingPathComponent:@"Cache"];
 }

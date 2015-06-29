@@ -18,6 +18,10 @@
     #import "LCLLogFile.h"
     #import "TVShowsUtilities.h"
     #import "AppInfoConstants.h"
+
+    #import "NSString+Extensions.h"
+    #import "NSDictionary+Extensions.h"
+    #import "NSMutableDictionary+Extensions.h"
 #endif
 
 // Bundle version of the application

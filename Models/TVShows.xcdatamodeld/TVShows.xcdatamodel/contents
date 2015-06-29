@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7549" systemVersion="14D136" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7701" systemVersion="14D136" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="Episode" representedClassName="Episode" syncable="YES">
         <attribute name="airDate" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="episode" attributeType="Integer 32" indexed="YES" syncable="YES"/>
@@ -15,7 +15,6 @@
     <entity name="Serie" representedClassName="Serie" syncable="YES">
         <attribute name="airday" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="airtime" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="banner" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="contentRating" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="country" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="ended" optional="YES" attributeType="Date" syncable="YES"/>
@@ -25,6 +24,7 @@
         <attribute name="lastUpdate" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="name" attributeType="String" indexed="YES" syncable="YES"/>
         <attribute name="network" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="poster" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="rating" optional="YES" attributeType="Float" minValueString="0" maxValueString="5" syncable="YES"/>
         <attribute name="runtime" optional="YES" attributeType="Integer 16" syncable="YES"/>
         <attribute name="seriesDescription" optional="YES" attributeType="String" syncable="YES"/>

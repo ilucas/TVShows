@@ -168,7 +168,6 @@
 		57FBDC4D13B4C5B6006E0617 /* NSXMLNode-utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 57A82B1013953A3500E71F7F /* NSXMLNode-utils.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		8D202CF30486D31800D8A456 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */; };
 		8D202CF40486D31800D8A456 /* PreferencePanes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F506C035013D953901CA16C8 /* PreferencePanes.framework */; };
-		A000F9BE1B093B420040687C /* LoadingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A000F9BD1B093B420040687C /* LoadingViewController.m */; };
 		A00847CB1AF5C0F900F5D2A3 /* SubscriptionWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = A00847C91AF5C0F900F5D2A3 /* SubscriptionWindowController.m */; };
 		A00847CC1AF5C0F900F5D2A3 /* SubscriptionWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A00847CA1AF5C0F900F5D2A3 /* SubscriptionWindowController.xib */; };
 		A00B46201AEC6D390022BDBF /* GradientViewSubclass.m in Sources */ = {isa = PBXBuildFile; fileRef = 34463CCC1331AD34001453EB /* GradientViewSubclass.m */; };
@@ -211,6 +210,7 @@
 		A088643C1B140A9B00A4DBB6 /* Serie.m in Sources */ = {isa = PBXBuildFile; fileRef = A088643B1B140A9B00A4DBB6 /* Serie.m */; };
 		A08864421B141C1B00A4DBB6 /* Subscription.m in Sources */ = {isa = PBXBuildFile; fileRef = A08864411B141C1B00A4DBB6 /* Subscription.m */; };
 		A09521EA1AF6BDD4005AC0EF /* TVShows.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A06F88031AE6B92900CD66DC /* TVShows.xcdatamodeld */; };
+		A0C190211B4081A90020ACD9 /* NSString+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C190201B4081A90020ACD9 /* NSString+Extensions.m */; };
 		A0E4340D1B1A6209000AF57C /* _Subscription.m in Sources */ = {isa = PBXBuildFile; fileRef = A0E4340C1B1A6209000AF57C /* _Subscription.m */; };
 		A0E434101B1A620A000AF57C /* _Episode.m in Sources */ = {isa = PBXBuildFile; fileRef = A0E4340F1B1A620A000AF57C /* _Episode.m */; };
 		A0E434131B1A620A000AF57C /* _Serie.m in Sources */ = {isa = PBXBuildFile; fileRef = A0E434121B1A620A000AF57C /* _Serie.m */; };
@@ -467,8 +467,6 @@
 		57F7062913AF32E5002A83E4 /* Cover-DVD.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Cover-DVD.png"; sourceTree = "<group>"; };
 		57F7062C13AF3798002A83E4 /* Cover-Bluray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Cover-Bluray.png"; sourceTree = "<group>"; };
 		8D202CF80486D31800D8A456 /* TVShows.prefPane */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TVShows.prefPane; sourceTree = BUILT_PRODUCTS_DIR; };
-		A000F9BC1B093B420040687C /* LoadingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadingViewController.h; sourceTree = "<group>"; };
-		A000F9BD1B093B420040687C /* LoadingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadingViewController.m; sourceTree = "<group>"; };
 		A00847C81AF5C0F900F5D2A3 /* SubscriptionWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubscriptionWindowController.h; sourceTree = "<group>"; };
 		A00847C91AF5C0F900F5D2A3 /* SubscriptionWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubscriptionWindowController.m; sourceTree = "<group>"; };
 		A00847CA1AF5C0F900F5D2A3 /* SubscriptionWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SubscriptionWindowController.xib; sourceTree = "<group>"; };
@@ -547,6 +545,8 @@
 		A088643B1B140A9B00A4DBB6 /* Serie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Serie.m; path = TVShows/Serie.m; sourceTree = "<group>"; };
 		A08864401B141C1B00A4DBB6 /* Subscription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Subscription.h; path = TVShows/Subscription.h; sourceTree = "<group>"; };
 		A08864411B141C1B00A4DBB6 /* Subscription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Subscription.m; path = TVShows/Subscription.m; sourceTree = "<group>"; };
+		A0C1901F1B4081A90020ACD9 /* NSString+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extensions.h"; sourceTree = "<group>"; };
+		A0C190201B4081A90020ACD9 /* NSString+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extensions.m"; sourceTree = "<group>"; };
 		A0E4340B1B1A6209000AF57C /* _Subscription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = _Subscription.h; path = TVShows/_Subscription.h; sourceTree = "<group>"; };
 		A0E4340C1B1A6209000AF57C /* _Subscription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = _Subscription.m; path = TVShows/_Subscription.m; sourceTree = "<group>"; };
 		A0E4340E1B1A620A000AF57C /* _Episode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = _Episode.h; path = TVShows/_Episode.h; sourceTree = "<group>"; };
@@ -1222,6 +1222,8 @@
 				A0E4341E1B1AA1D7000AF57C /* NSManagedObject+Attributes.m */,
 				A02F332C1B1BC9BC004F2D4B /* NSMutableDictionary+Extensions.h */,
 				A02F332D1B1BC9BC004F2D4B /* NSMutableDictionary+Extensions.m */,
+				A0C1901F1B4081A90020ACD9 /* NSString+Extensions.h */,
+				A0C190201B4081A90020ACD9 /* NSString+Extensions.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -1232,8 +1234,6 @@
 				A00847C81AF5C0F900F5D2A3 /* SubscriptionWindowController.h */,
 				A00847C91AF5C0F900F5D2A3 /* SubscriptionWindowController.m */,
 				A00847CA1AF5C0F900F5D2A3 /* SubscriptionWindowController.xib */,
-				A000F9BC1B093B420040687C /* LoadingViewController.h */,
-				A000F9BD1B093B420040687C /* LoadingViewController.m */,
 			);
 			name = Subscription;
 			sourceTree = "<group>";
@@ -1727,7 +1727,6 @@
 				A06F87671AE6904700CD66DC /* OEGridMediaItemCell.m in Sources */,
 				A06F876D1AE6904700CD66DC /* OEThemeGradient.m in Sources */,
 				A00B46201AEC6D390022BDBF /* GradientViewSubclass.m in Sources */,
-				A000F9BE1B093B420040687C /* LoadingViewController.m in Sources */,
 				A07C6FB31AFFFA6E00611B8D /* NSDictionary+Extensions.m in Sources */,
 				A06F876C1AE6904700CD66DC /* OEThemeColor.m in Sources */,
 				A00B46221AEC7F350022BDBF /* NSColor+BWAdditions.m in Sources */,
@@ -1735,6 +1734,7 @@
 				A0432F241AD9649600C19189 /* AppDelegate.m in Sources */,
 				A00847CB1AF5C0F900F5D2A3 /* SubscriptionWindowController.m in Sources */,
 				A088643C1B140A9B00A4DBB6 /* Serie.m in Sources */,
+				A0C190211B4081A90020ACD9 /* NSString+Extensions.m in Sources */,
 				A09521EA1AF6BDD4005AC0EF /* TVShows.xcdatamodeld in Sources */,
 				A0E4340D1B1A6209000AF57C /* _Subscription.m in Sources */,
 				A06F87641AE6904700CD66DC /* OEGridCell.m in Sources */,

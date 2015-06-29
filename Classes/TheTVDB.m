@@ -17,6 +17,7 @@
 #import "AFOnoResponseSerializer.h"
 #import "AppSecretConstants.h"
 #import "NSMutableDictionary+Extensions.h"
+#import "Serie.h"
 
 static NSString * const TVDBBaseURL = @"http://www.thetvdb.com";
 static NSNumber * parseRating(NSString *rating);
@@ -165,24 +166,8 @@ static NSNumber * parseRating(NSString *rating);
     [operation start];
 }
 
-- (void)getShowWithEpisodeList:(NSString *)showName completionHandler:(void(^)(NSDictionary *result, NSError *error))handler {
-    NSString *searchUrl = [TVDBBaseURL stringByAppendingPathComponent:@"/api/GetSeries.php"];
-    NSDictionary *searchParameters = @{@"seriesname" : showName};
-    NSError *searchError = nil;
-    
-    NSMutableURLRequest *searchRequest = [[AFHTTPRequestSerializer serializer] requestWithMethod:@"GET" URLString:searchUrl parameters:searchParameters error:&searchError];
-    
-    AFHTTPRequestOperation *searchOperation = [[AFHTTPRequestOperation alloc] initWithRequest:searchRequest];
-    searchOperation.responseSerializer = [AFOnoResponseSerializer serializer];
-    
-    [searchOperation start];
-    [searchOperation waitUntilFinished];
-    
-    // Get the is of the first result.
-    NSString *seriesid = [[[searchOperation responseObject] firstChildWithXPath:@"//Series/seriesid"] stringValue];
-    
-    
-    NSString *url = [TVDBBaseURL stringByAppendingFormat:@"/api/%@/series/%@/all/en.xml", TVDB_API_KEY, seriesid];
+- (void)getShowWithEpisodeList:(NSNumber *)showid completionHandler:(void(^)(NSDictionary *result, NSError *error))handler {
+    NSString *url = [TVDBBaseURL stringByAppendingFormat:@"/api/%@/series/%@/all/en.xml", TVDB_API_KEY, [showid stringValue]];
     NSError *error = nil;
     
     NSMutableURLRequest *request = [[AFHTTPRequestSerializer serializer] requestWithMethod:@"GET" URLString:url parameters:nil error:&error];
@@ -208,7 +193,14 @@ static NSNumber * parseRating(NSString *rating);
         [show addObject:[[serie firstChildWithTag:@"Runtime"] numberValue] key:@"runtime"];
         [show addObject:[[serie firstChildWithTag:@"SeriesName"] stringValue] key:@"name"];
         [show addObject:[[serie firstChildWithTag:@"Status"] stringValue] key:@"status"];
-        //[show addObject:[[serie firstChildWithTag:@"poster"] stringValue] key:@""];
+        
+        // Poster
+        NSString *poster = [[serie firstChildWithTag:@"poster"] stringValue];
+        if (![poster isEmpty]) {
+            NSString *posterUrl = [TVDBBaseURL stringByAppendingPathComponent:@"banners"];
+            [show addObject:[posterUrl stringByAppendingPathComponent:poster] key:@"poster"];
+        }
+        
         [show addObject:parseRating([[serie firstChildWithTag:@"Rating"] stringValue]) key:@"rating"];
         
         // Convert lastupdated (Unix Timestamp) to NSDate
@@ -253,6 +245,75 @@ static NSNumber * parseRating(NSString *rating);
     
     [operation start];
 }
+
++ (void)getPosterForShow:(Serie *)serie completionHandler:(void(^)(NSImage *poster, NSNumber *showID))handler {
+    // If theres no poster in the entity, return a error
+    if (!serie.poster) {
+        NSImage *placeholder = [NSImage imageNamed:@"posterArtPlaceholder"];
+        handler(placeholder, serie.tvdb_id);
+        return;
+    }
+    
+    // If the TVShows cache directory doesn't exist then create it.
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSString *cacheDir = applicationCacheDirectory();
+    
+    NSError *error = nil;
+    
+    if ( ![fileManager fileExistsAtPath:cacheDir isDirectory:NULL] ) {
+        if (![fileManager createDirectoryAtPath:cacheDir withIntermediateDirectories:NO attributes:nil error:&error]) {
+            //LogError(@"Error creating application cache directory: %@",error);
+            if (handler) {
+                NSImage *placeholder = [NSImage imageNamed:@"posterArtPlaceholder"];
+                handler(placeholder, serie.tvdb_id);
+            }
+        }
+    }
+    
+    // If the image already exists then return the data, otherwise we need to download it.
+    NSString *imagePath = [[cacheDir stringByAppendingPathComponent:[serie.tvdb_id stringValue]] stringByAppendingFormat:@".png"];
+    
+    if ([fileManager fileExistsAtPath:imagePath]) {
+        NSImage *sourceImage = [[NSImage alloc] initWithContentsOfFile:imagePath];
+        
+        if (handler)
+            handler(sourceImage, serie.tvdb_id);
+    } else {
+        NSError *error = nil;
+        NSMutableURLRequest *request = [[AFHTTPRequestSerializer serializer] requestWithMethod:@"GET" URLString:serie.poster parameters:nil error:&error];
+        
+        AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
+        operation.responseSerializer = [AFImageResponseSerializer serializer];
+        
+        [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
+            // If a poster URL was returned, save the image so that it's not downloaded again.
+            
+            // Turn the NSImage into an NSData TIFFRepresentation. We do this since
+            // it will always work, no matter what the source image's type is.
+            NSData *imageData = [responseObject TIFFRepresentation];
+            
+            // Now it's safe to turn the NSData into an NSBitmapImageRep...
+            NSBitmapImageRep *imageRep = [NSBitmapImageRep imageRepWithData:imageData];
+            
+            // From BitmapImageRep we can turn it into anything we want. Here, we're using a PNG.
+            NSData *finalData = [imageRep representationUsingType:NSPNGFileType properties:nil];
+            
+            // The conversion is done, so save it to the disk.
+            [finalData writeToFile:imagePath atomically:YES];
+            
+            if (handler)
+                handler(responseObject, serie.tvdb_id);
+        } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+            if (handler) {
+                NSImage *placeholder = [NSImage imageNamed:@"posterArtPlaceholder"];
+                handler(placeholder, serie.tvdb_id);
+            }
+        }];
+        
+        [operation start];
+    }
+}
+
 
 #pragma mark - Private
 

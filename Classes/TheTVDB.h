@@ -15,6 +15,8 @@
 @import Cocoa;
 @import AFNetworking;
 
+@class Serie;
+
 @interface TheTVDB : NSObject
 
 @property (assign, getter=isCancelled) BOOL canceled;
@@ -22,8 +24,10 @@
 + (instancetype)sharedInstance;
 
 - (void)searchShow:(NSString *)showName completionHandler:(void(^)(NSArray *result, NSError *error))handler;
-- (void)getShow:(NSNumber *)showid completionHandler:(void(^)(NSDictionary *result, NSError *error))handler;
+- (void)getShow:(NSString *)showName completionHandler:(void(^)(NSDictionary *result, NSError *error))handler;
 - (void)getShowWithIMDB:(NSString *)serieID completionHandler:(void(^)(NSDictionary *result, NSError *error))handler;
-- (void)getShowWithEpisodeList:(NSString *)showName completionHandler:(void(^)(NSDictionary *result, NSError *error))handler;
+- (void)getShowWithEpisodeList:(NSNumber *)showid completionHandler:(void(^)(NSDictionary *result, NSError *error))handler;
+
++ (void)getPosterForShow:(Serie *)serie completionHandler:(void(^)(NSImage *poster, NSNumber *showID))handler;
 
 @end

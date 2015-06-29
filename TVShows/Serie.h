@@ -14,6 +14,4 @@
 
 @interface Serie : _Serie
 
-- (BOOL)isComplete;
-
 @end

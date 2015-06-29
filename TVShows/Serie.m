@@ -14,9 +14,4 @@
 
 @implementation Serie
 
-- (BOOL)isComplete {
-    // Since the first batch of series don't have a TVRage link, let's use tvRageLink to validate if the Serie is complete.
-    return (self.tvRageLink != nil);
-}
-
 @end

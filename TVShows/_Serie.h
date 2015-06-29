@@ -6,7 +6,6 @@
 extern const struct SerieAttributes {
 	__unsafe_unretained NSString *airday;
 	__unsafe_unretained NSString *airtime;
-	__unsafe_unretained NSString *banner;
 	__unsafe_unretained NSString *contentRating;
 	__unsafe_unretained NSString *country;
 	__unsafe_unretained NSString *ended;
@@ -16,6 +15,7 @@ extern const struct SerieAttributes {
 	__unsafe_unretained NSString *lastUpdate;
 	__unsafe_unretained NSString *name;
 	__unsafe_unretained NSString *network;
+	__unsafe_unretained NSString *poster;
 	__unsafe_unretained NSString *rating;
 	__unsafe_unretained NSString *runtime;
 	__unsafe_unretained NSString *seriesDescription;
@@ -53,10 +53,6 @@ extern const struct SerieRelationships {
 
 //- (BOOL)validateAirtime:(id*)value_ error:(NSError**)error_;
 
-@property (nonatomic, strong) NSString* banner;
-
-//- (BOOL)validateBanner:(id*)value_ error:(NSError**)error_;
-
 @property (nonatomic, strong) NSString* contentRating;
 
 //- (BOOL)validateContentRating:(id*)value_ error:(NSError**)error_;
@@ -92,6 +88,10 @@ extern const struct SerieRelationships {
 @property (nonatomic, strong) NSString* network;
 
 //- (BOOL)validateNetwork:(id*)value_ error:(NSError**)error_;
+
+@property (nonatomic, strong) NSString* poster;
+
+//- (BOOL)validatePoster:(id*)value_ error:(NSError**)error_;
 
 @property (nonatomic, strong) NSNumber* rating;
 
@@ -179,9 +179,6 @@ extern const struct SerieRelationships {
 - (NSString*)primitiveAirtime;
 - (void)setPrimitiveAirtime:(NSString*)value;
 
-- (NSString*)primitiveBanner;
-- (void)setPrimitiveBanner:(NSString*)value;
-
 - (NSString*)primitiveContentRating;
 - (void)setPrimitiveContentRating:(NSString*)value;
 
@@ -208,6 +205,9 @@ extern const struct SerieRelationships {
 
 - (NSString*)primitiveNetwork;
 - (void)setPrimitiveNetwork:(NSString*)value;
+
+- (NSString*)primitivePoster;
+- (void)setPrimitivePoster:(NSString*)value;
 
 - (NSNumber*)primitiveRating;
 - (void)setPrimitiveRating:(NSNumber*)value;

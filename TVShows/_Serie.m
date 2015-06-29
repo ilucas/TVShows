@@ -6,7 +6,6 @@
 const struct SerieAttributes SerieAttributes = {
 	.airday = @"airday",
 	.airtime = @"airtime",
-	.banner = @"banner",
 	.contentRating = @"contentRating",
 	.country = @"country",
 	.ended = @"ended",
@@ -16,6 +15,7 @@ const struct SerieAttributes SerieAttributes = {
 	.lastUpdate = @"lastUpdate",
 	.name = @"name",
 	.network = @"network",
+	.poster = @"poster",
 	.rating = @"rating",
 	.runtime = @"runtime",
 	.seriesDescription = @"seriesDescription",
@@ -92,8 +92,6 @@ const struct SerieRelationships SerieRelationships = {
 
 @dynamic airtime;
 
-@dynamic banner;
-
 @dynamic contentRating;
 
 @dynamic country;
@@ -111,6 +109,8 @@ const struct SerieRelationships SerieRelationships = {
 @dynamic name;
 
 @dynamic network;
+
+@dynamic poster;
 
 @dynamic rating;
 
