@@ -11,6 +11,7 @@
 #import "TheTVDB.h"
 #import "Serie.h"
 #import "Episode.h"
+#import "Subscription.h"
 
 @interface SubscriptionWindowController ()
 
@@ -23,8 +24,8 @@
 
 - (void)toggleLoading:(BOOL)isLoading;
 - (void)updateShowInfo:(Serie *)serie;
-- (BOOL)userIsSubscribedToShow:(NSString*)showName;
-
+- (BOOL)userIsSubscribedToShow:(Serie *)serie;
+- (void)resetShowView;
 @end
 
 @implementation SubscriptionWindowController
@@ -45,6 +46,7 @@
     
     if (self) {
         _showList = [[NSMutableArray alloc] init];
+        _episodesList = [[NSMutableArray alloc] init];
         _sorter = [NSMutableArray arrayWithObject:[[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES]];
     }
     
@@ -62,9 +64,27 @@
 }
 
 - (IBAction)subscribeToShow:(id)sender {
+    [MagicalRecord saveWithBlock:^(NSManagedObjectContext *localContext) {
+        NSDictionary *selectedObject = [[self.showsArrayController selectedObjects] firstObject];
+        Serie  *serie = [Serie MR_findFirstByAttribute:@"tvdb_id" withValue:selectedObject[@"tvdb_id"] inContext:localContext];
+        
+        Subscription *subscription = [Subscription MR_createInContext:localContext];
+        [subscription setIsEnabledValue:YES];
+        [subscription setSerie:serie];
+    } completion:^(BOOL success, NSError *error) {
+        //TODO: Send a subscribed notification
+    }];
     
     // Close window after subscribe to show.
     [self closeWindow:nil];
+}
+
+- (IBAction)selectNextAired:(id)sender {
+    [self.episodesTableView setEnabled:NO];
+}
+
+- (IBAction)selectOtherEpisode:(id)sender {
+    [self.episodesTableView setEnabled:YES];
 }
 
 #pragma mark - NSTextFieldDelegate
@@ -94,15 +114,14 @@
 
 - (void)windowDidLoad {
     [super windowDidLoad];
-    
-    // Check last update date
 }
 
 #pragma mark - NSTableViewDelegate
 
 - (void)tableViewSelectionDidChange:(NSNotification *)notification {
     NSDictionary __block *selectedObject = [[self.showsArrayController selectedObjects] firstObject];
-        
+    [self resetShowView];
+    
     if (selectedObject) {
         NSNumber *thetvdbid = selectedObject[@"tvdb_id"];
         Serie __block *serie = [Serie MR_findFirstByAttribute:@"tvdb_id" withValue:thetvdbid inContext:self.managedObjectContext];
@@ -211,16 +230,41 @@
     NSString *runtime = (serie.runtime ? [[serie.runtime stringValue] stringByAppendingString:@" Min"] : @"");
     [self.showDuration setStringValue:runtime];
     
+    //FIXME: crash when the serie is new to the database.
+    //NSArray *episodes = [serie.episodes allObjects];
+    //[self.episodesArrayController addObjects:episodes];
+    
     if (serie.started) {
         NSInteger year = [[[NSCalendar currentCalendar] components:NSCalendarUnitYear fromDate:serie.started] year];
         [self.showYear setStringValue:[NSString stringWithFormat:@"%ld", year]];
     } else {
         [self.showYear setStringValue:@""];
     }
+    
+    // Disable subscribe button if already subscribed.
+    if ([self userIsSubscribedToShow:serie]) {
+        [self.subscribeButton setEnabled:NO];
+        [self.subscribeButton setTitle:@"Subscribed"];
+    } else {
+        [self.subscribeButton setEnabled:YES];
+        [self.subscribeButton setTitle:@"Subscribe"];
+    }
 }
 
-- (BOOL)userIsSubscribedToShow:(NSString*)showName {
-    return false;
+- (void)resetShowView {
+    [self.showName setStringValue:@""];
+    [self.genre setStringValue:@""];
+    [self.rating setIntegerValue:0];
+    [self.showDescription setString:@""];
+    [self.showYear setStringValue:@""];
+    [self.showDuration setStringValue:@""];
+    [self.showPoster setImage:[NSImage imageNamed:@"posterArtPlaceholder"]];
+    //[self.studioLogo setImage:nil];
+}
+
+- (BOOL)userIsSubscribedToShow:(Serie *)serie {
+    NSArray *subs = [Subscription MR_findByAttribute:@"serie" withValue:serie inContext:self.managedObjectContext];
+    return subs.count;
 }
 
 @end

@@ -28,7 +28,7 @@
 
 #pragma mark - Settings
 @property (weak) IBOutlet NSPopUpButton *showQuality;
-@property (weak) IBOutlet NSTableView *episodesTableView;
+@property (weak) IBOutlet NSButton *subscribeButton;
 
 #pragma mark - Show list
 @property (weak, nonatomic) IBOutlet NSTableView *showsTableView;
@@ -36,9 +36,16 @@
 @property (weak, nonatomic) IBOutlet NSSearchField *SearchField;
 @property (readonly, strong, nonatomic) NSMutableArray *showList;
 
+#pragma mark - Episodes List
+@property (weak) IBOutlet NSTableView *episodesTableView;
+@property (weak, nonatomic) IBOutlet NSArrayController *episodesArrayController;
+@property (strong, nonatomic) NSMutableArray *episodesList;
+
 #pragma mark - Actions
 - (IBAction)openMoreInfoURL:(id)sender;
 - (IBAction)closeWindow:(id)sender;
 - (IBAction)subscribeToShow:(id)sender;
+- (IBAction)selectNextAired:(id)sender;
+- (IBAction)selectOtherEpisode:(id)sender;
 
 @end
