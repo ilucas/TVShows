@@ -7,7 +7,6 @@
 //
 
 #import "SubscriptionWindowController.h"
-#import "TVRage.h"
 #import "TheTVDB.h"
 #import "Serie.h"
 #import "Episode.h"
@@ -110,6 +109,10 @@
     }];
 }
 
+- (void)controlTextDidEndEditing:(NSNotification *)obj {
+    
+}
+
 #pragma mark - NSWindowDelegate
 
 - (void)windowDidLoad {
@@ -135,29 +138,35 @@
             
             [[TheTVDB sharedInstance] getShowWithEpisodeList:thetvdbid completionHandler:^(NSDictionary *result, NSError *error) {
                 if (result) {
-                    // Create the entity
-                    serie = [Serie MR_createInContext:managedObjectContext];
-                    [serie updateAttributes:result];
+                    NSManagedObjectContext *localContext = [NSManagedObjectContext MR_contextWithParent:managedObjectContext];
                     
-                    // Update the Serie in Core Data
-                    [result[@"episodes"] enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-                        @autoreleasepool {
-                            Episode *ep = [Episode MR_createInContext:managedObjectContext];
-                            [ep updateAttributes:obj];
-                            [serie addEpisodesObject:ep];// Add the episode to the serie.
-                        }
+                    [localContext performBlock:^{
+                        // Create the entity
+                        serie = [Serie MR_createInContext:localContext];
+                        [serie updateAttributes:result];
+                        
+                        // Update the Serie in Core Data
+                        [result[@"episodes"] enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+                            @autoreleasepool {
+                                Episode *ep = [Episode MR_createInContext:localContext];
+                                [ep updateAttributes:obj];
+                                [serie addEpisodesObject:ep];// Add the episode to the serie.
+                            }
+                        }];
+                        
+                        NSMutableDictionary *updates = [NSMutableDictionary dictionaryWithDictionary:result];
+                        [updates removeObjectForKey:@"episodes"];
+                         
+                        [serie updateAttributes:updates];
+                        
+                        // Save the changes
+                        [localContext MR_saveToPersistentStoreWithCompletion:^(BOOL success, NSError *error) {
+                            if (success) {
+                                // Update the UI.
+                                [self updateShowInfo:serie];
+                            }
+                        }];
                     }];
-                    
-                    NSMutableDictionary *updates = [NSMutableDictionary dictionaryWithDictionary:result];
-                    [updates removeObjectForKey:@"episodes"];
-                    
-                    [serie updateAttributes:updates];
-                    
-                    // Save the changes
-                    [managedObjectContext MR_saveToPersistentStoreWithCompletion:nil];
-                    
-                    // Update the UI.
-                    [self updateShowInfo:serie];
                 }
                 
                 if (error) {
@@ -207,17 +216,24 @@
         [self.showDescription setString:@""];
         [self.showYear setStringValue:@""];
         [self.showDuration setStringValue:@""];
+        
+        // Empty the episodes table view
+        [self.episodesList removeAllObjects];
+        [self.episodesTableView reloadData];
+        
         return;
     }
     
     // Get the poster
-    [TheTVDB getPosterForShow:serie completionHandler:^(NSImage *poster, NSNumber *showID) {
+    [[TheTVDB sharedInstance] getPosterForShow:serie completionHandler:^(NSImage *poster, NSNumber *showID) {
         NSNumber *selectedObjectID = [[[self.showsArrayController selectedObjects] firstObject] objectForKey:@"tvdb_id"];
         
         // Only set the poster if the selected item id is equal to poster id.
         if ([selectedObjectID isEqualToNumber:showID])
             [self.showPoster setImage:poster];
     }];
+    
+    
     
 //    NSImage *ea = [NSImage imageNamed:@"ea"];
 //    [self.studioLogo setImage:ea];
@@ -230,9 +246,8 @@
     NSString *runtime = (serie.runtime ? [[serie.runtime stringValue] stringByAppendingString:@" Min"] : @"");
     [self.showDuration setStringValue:runtime];
     
-    //FIXME: crash when the serie is new to the database.
-    //NSArray *episodes = [serie.episodes allObjects];
-    //[self.episodesArrayController addObjects:episodes];
+    NSArray *episodes = [serie.episodes allObjects];
+    [self.episodesArrayController addObjects:episodes];
     
     if (serie.started) {
         NSInteger year = [[[NSCalendar currentCalendar] components:NSCalendarUnitYear fromDate:serie.started] year];
@@ -260,10 +275,24 @@
     [self.showDuration setStringValue:@""];
     [self.showPoster setImage:[NSImage imageNamed:@"posterArtPlaceholder"]];
     //[self.studioLogo setImage:nil];
+    
+    // Empty the episodes table view
+    [self.episodesList removeAllObjects];
+    [self.episodesTableView reloadData];
 }
 
 - (BOOL)userIsSubscribedToShow:(Serie *)serie {
-    NSArray *subs = [Subscription MR_findByAttribute:@"serie" withValue:serie inContext:self.managedObjectContext];
+    NSArray __block *subs;
+    
+    [self.managedObjectContext performBlockAndWait:^{
+//        NSFetchRequest *request = [Subscription MR_requestAllWhere:@"serie" isEqualTo:serie inContext:self.managedObjectContext];
+//        NSUInteger count = [managedObjectContext countForFetchRequest:request error:nil];
+        
+        
+        
+        subs = [Subscription MR_findByAttribute:@"serie" withValue:serie inContext:self.managedObjectContext];
+    }];
+
     return subs.count;
 }
 
