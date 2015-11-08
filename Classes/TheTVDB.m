@@ -23,9 +23,11 @@ static NSString * const TVDBBaseURL = @"http://www.thetvdb.com";
 static NSNumber * parseRating(NSString *rating);
 
 @interface TheTVDB ()
+
 @end
 
 @implementation TheTVDB
+@synthesize queue;
 
 #pragma mark - LifeCycle
 
@@ -42,6 +44,8 @@ static NSNumber * parseRating(NSString *rating);
     self = [super init];
     if (self) {
         [self setCanceled:NO];
+        queue = [[NSOperationQueue alloc] init];
+        //[queue setMaxConcurrentOperationCount:1];
     }
     return self;
 }
@@ -88,7 +92,8 @@ static NSNumber * parseRating(NSString *rating);
             handler(nil, error);
     }];
     
-    [operation start];
+    //[operation start];
+    [queue addOperation:operation];
 }
 
 - (void)getShow:(NSString *)showName completionHandler:(void(^)(NSDictionary *result, NSError *error))handler {
@@ -118,8 +123,6 @@ static NSNumber * parseRating(NSString *rating);
             [show setObject:([[element firstChildWithTag:@"banner"] stringValue] ?: [NSNull null]) forKey:@"banner"];
         }];
         
-        
-        
         if (!self.isCancelled)
             handler(show, nil);
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
@@ -127,7 +130,8 @@ static NSNumber * parseRating(NSString *rating);
             handler(nil, error);
     }];
     
-    [operation start];
+    //[operation start];
+    [queue addOperation:operation];
 }
 
 - (void)getShowWithIMDB:(NSString *)serieID completionHandler:(void(^)(NSDictionary *result, NSError *error))handler {
@@ -163,7 +167,8 @@ static NSNumber * parseRating(NSString *rating);
             handler(nil, error);
     }];
     
-    [operation start];
+    //[operation start];
+    [queue addOperation:operation];
 }
 
 - (void)getShowWithEpisodeList:(NSNumber *)showid completionHandler:(void(^)(NSDictionary *result, NSError *error))handler {
@@ -208,7 +213,8 @@ static NSNumber * parseRating(NSString *rating);
         [show addObject:lastUpdated key:@"lastUpdate"];
         
         // Parse Genres
-        NSMutableArray *genres = [NSMutableArray arrayWithArray:[[[serie firstChildWithTag:@"Genre"] stringValue] componentsSeparatedByString:@"|"]];
+        NSMutableArray *genres = [[[[serie firstChildWithTag:@"Genre"] stringValue] componentsSeparatedByString:@"|"] mutableCopy];
+        
         [genres removeObject:@""];// Remove empty strings
         [show addObject:[genres componentsJoinedByString:@", "] key:@"genre"];
         
@@ -243,10 +249,15 @@ static NSNumber * parseRating(NSString *rating);
             handler(nil, error);
     }];
     
-    [operation start];
+    //[operation start];
+    [queue addOperation:operation];
 }
 
-+ (void)getPosterForShow:(Serie *)serie completionHandler:(void(^)(NSImage *poster, NSNumber *showID))handler {
+- (void)getPosterForShow:(Serie *)serie completionHandler:(void(^)(NSImage *poster, NSNumber *showID))handler {
+    if (serie.isFault) {
+        return;
+    }
+    
     // If theres no poster in the entity, return a error
     if (!serie.poster) {
         NSImage *placeholder = [NSImage imageNamed:@"posterArtPlaceholder"];
@@ -260,12 +271,13 @@ static NSNumber * parseRating(NSString *rating);
     
     NSError *error = nil;
     
-    if ( ![fileManager fileExistsAtPath:cacheDir isDirectory:NULL] ) {
+    if (![fileManager fileExistsAtPath:cacheDir isDirectory:NO]) {
         if (![fileManager createDirectoryAtPath:cacheDir withIntermediateDirectories:NO attributes:nil error:&error]) {
-            //LogError(@"Error creating application cache directory: %@",error);
+            NSLog(@"Error creating application cache directory: %@",error);
             if (handler) {
                 NSImage *placeholder = [NSImage imageNamed:@"posterArtPlaceholder"];
                 handler(placeholder, serie.tvdb_id);
+                return;
             }
         }
     }
@@ -282,6 +294,10 @@ static NSNumber * parseRating(NSString *rating);
         NSError *error = nil;
         NSMutableURLRequest *request = [[AFHTTPRequestSerializer serializer] requestWithMethod:@"GET" URLString:serie.poster parameters:nil error:&error];
         
+        // Specifies that the existing cached data should be used to satisfy the request, regardless of its age or expiration date.
+        // If there is no existing data in the cache corresponding the request, the data is loaded from the originating source.
+        //[request setCachePolicy:NSURLRequestReturnCacheDataElseLoad];
+        
         AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
         operation.responseSerializer = [AFImageResponseSerializer serializer];
         
@@ -290,16 +306,19 @@ static NSNumber * parseRating(NSString *rating);
             
             // Turn the NSImage into an NSData TIFFRepresentation. We do this since
             // it will always work, no matter what the source image's type is.
-            NSData *imageData = [responseObject TIFFRepresentation];
+            NSData __block *imageData = [responseObject TIFFRepresentation];
             
-            // Now it's safe to turn the NSData into an NSBitmapImageRep...
-            NSBitmapImageRep *imageRep = [NSBitmapImageRep imageRepWithData:imageData];
-            
-            // From BitmapImageRep we can turn it into anything we want. Here, we're using a PNG.
-            NSData *finalData = [imageRep representationUsingType:NSPNGFileType properties:nil];
-            
-            // The conversion is done, so save it to the disk.
-            [finalData writeToFile:imagePath atomically:YES];
+            // Convert and save the image in a background thread
+            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
+                // Now it's safe to turn the NSData into an NSBitmapImageRep...
+                NSBitmapImageRep *imageRep = [NSBitmapImageRep imageRepWithData:imageData];
+                
+                // From BitmapImageRep we can turn it into anything we want. Here, we're using a PNG.
+                NSData *finalData = [imageRep representationUsingType:NSPNGFileType properties:@{NSImageProgressive: @TRUE}];
+                
+                // The conversion is done, so save it to the disk.
+                [finalData writeToFile:imagePath atomically:YES];
+            });
             
             if (handler)
                 handler(responseObject, serie.tvdb_id);
@@ -310,10 +329,11 @@ static NSNumber * parseRating(NSString *rating);
             }
         }];
         
-        [operation start];
+        //[operation start];
+        //[queue addOperation:operation];
+        [[NSOperationQueue mainQueue] addOperation:operation];
     }
 }
-
 
 #pragma mark - Private
 
@@ -321,7 +341,7 @@ static NSNumber *parseRating(NSString *rating) {
     NSDecimalNumber *decimalRating = [NSDecimalNumber decimalNumberWithString:rating];
     float finalRating = [decimalRating floatValue] / 2;// TVDB Rating is up to 10, we divide by 2 to have a 5 stars reating.
     
-    if (isnan(finalRating)) finalRating = 0.0;
+    if (isnan(finalRating)) finalRating = 0.0;// set 0 to finalRating if the value is not a number.
     
     return [NSNumber numberWithFloat:finalRating];
 }
