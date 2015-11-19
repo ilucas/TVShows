@@ -12,6 +12,7 @@ xcuserdata
 DerivedData
 *.hmap
 *.xcuserstate
+*.xcscmblueprint
 
 # OSX Noise
 .DS_Store
