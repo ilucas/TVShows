@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 Lucas Casteletti. All rights reserved.
 //
 
-@import Foundation;
+#import <Foundation/Foundation.h>
 
 @interface NSDictionary (Extensions)
 

@@ -19,13 +19,27 @@
 
 @implementation AppDelegate
 
+#pragma mark - NSApplicationDelegate
+
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
+    // Core Data
     [MagicalRecord setupAutoMigratingCoreDataStack];
+    
+    // Cache
+    [self setupCache];
+    
     _subscriptionWindow = [SubscriptionWindowController new];
+    
+    
+    
+    [self asas:nil];
+    
+//    NSString *showName = @"dexter";
+//    NSString *TVDBBaseURL = @"http://www.thetvdb.com";
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
-    // Insert code here to tear down your application
+    [MagicalRecord cleanUp];
 }
 
 - (IBAction)asas:(id)sender {
@@ -34,5 +48,13 @@
     }];
 }
 
+#pragma mark - Private
+
+- (void)setupCache {
+    NSURLCache *URLCache = [[NSURLCache alloc] initWithMemoryCapacity:0 // 1MB mem cache
+                                                         diskCapacity:1024*1024*100 // 100MB disk cache
+                                                             diskPath:applicationCacheDirectory()];
+    [NSURLCache setSharedURLCache:URLCache];
+}
 
 @end

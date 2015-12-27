@@ -131,7 +131,8 @@ static NSNumber * parseRating(NSString *rating);
     }];
     
     //[operation start];
-    [queue addOperation:operation];
+    //[queue addOperation:operation];
+    [[NSOperationQueue mainQueue] addOperation:operation];
 }
 
 - (void)getShowWithIMDB:(NSString *)serieID completionHandler:(void(^)(NSDictionary *result, NSError *error))handler {
@@ -254,10 +255,6 @@ static NSNumber * parseRating(NSString *rating);
 }
 
 - (void)getPosterForShow:(Serie *)serie completionHandler:(void(^)(NSImage *poster, NSNumber *showID))handler {
-    if (serie.isFault) {
-        return;
-    }
-    
     // If theres no poster in the entity, return a error
     if (!serie.poster) {
         NSImage *placeholder = [NSImage imageNamed:@"posterArtPlaceholder"];

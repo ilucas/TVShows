@@ -8,10 +8,13 @@
 
 @import Foundation;
 @import CoreData;
+@import MagicalRecord;
 
 #import "_Serie.h"
 #import "NSManagedObject+Attributes.h"
 
 @interface Serie : _Serie
+
++ (void)create:(NSDictionary *)data InContext:(NSManagedObjectContext *)context WithCompletion:(void(^)(SerieID *serieID))completion Error:(void(^)(NSError *error))error;
 
 @end

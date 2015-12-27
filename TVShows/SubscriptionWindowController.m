@@ -7,12 +7,13 @@
 //
 
 #import "SubscriptionWindowController.h"
+#import "MetadataViewController.h"
 #import "TheTVDB.h"
 #import "Serie.h"
 #import "Episode.h"
 #import "Subscription.h"
 
-@interface SubscriptionWindowController ()
+@interface SubscriptionWindowController () <MetadataViewDelegate>
 
 #pragma mark - Core Data
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
@@ -21,10 +22,9 @@
 @property (strong) NSMutableArray *sorter;
 @property (readwrite, strong, nonatomic) NSMutableArray *showList;
 
-- (void)toggleLoading:(BOOL)isLoading;
-- (void)updateShowInfo:(Serie *)serie;
 - (BOOL)userIsSubscribedToShow:(Serie *)serie;
-- (void)resetShowView;
+- (void)updateShowInfo:(SerieID *)serieID;
+- (void)reset;
 @end
 
 @implementation SubscriptionWindowController
@@ -47,35 +47,42 @@
         _showList = [[NSMutableArray alloc] init];
         _episodesList = [[NSMutableArray alloc] init];
         _sorter = [NSMutableArray arrayWithObject:[[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES]];
+        
+        managedObjectContext = [NSManagedObjectContext MR_context];
     }
     
     return self;
 }
 
-#pragma mark - Actions
+#pragma mark - IBActions
 
 - (IBAction)openMoreInfoURL:(id)sender {
 
 }
 
 - (IBAction)closeWindow:(id)sender {
+    [self reset];
     [self close];
 }
 
 - (IBAction)subscribeToShow:(id)sender {
     [MagicalRecord saveWithBlock:^(NSManagedObjectContext *localContext) {
-        NSDictionary *selectedObject = [[self.showsArrayController selectedObjects] firstObject];
+        NSDictionary *selectedObject = [self selectedShow];
         Serie  *serie = [Serie MR_findFirstByAttribute:@"tvdb_id" withValue:selectedObject[@"tvdb_id"] inContext:localContext];
         
         Subscription *subscription = [Subscription MR_createInContext:localContext];
         [subscription setIsEnabledValue:YES];
+        [subscription setQualityValue:1.0];
         [subscription setSerie:serie];
     } completion:^(BOOL success, NSError *error) {
-        //TODO: Send a subscribed notification
+        if (success) {
+            // Close window after subscribe to show.
+            [self closeWindow:nil];
+        } else {
+            NSAlert *alert = [NSAlert alertWithError:error];
+            [alert beginSheetModalForWindow:self.window completionHandler:nil];
+        }
     }];
-    
-    // Close window after subscribe to show.
-    [self closeWindow:nil];
 }
 
 - (IBAction)selectNextAired:(id)sender {
@@ -91,7 +98,7 @@
 - (void)controlTextDidChange:(NSNotification *)notification {
     NSString *search = [[notification object] stringValue];
     
-    if ([search isEmpty]){
+    if ([search isEmpty]) {
         [self.showList removeAllObjects];
         [self.showsTableView reloadData];
         return;
@@ -100,17 +107,19 @@
     [[TheTVDB sharedInstance] searchShow:search completionHandler:^(NSArray *result, NSError *error) {
         if (result) {
             [self.showList removeAllObjects];
-            [self.showsArrayController addObjects:result];
+            [self.showList addObjectsFromArray:result];
+            [self.showsTableView reloadData];
             
             // Select the first item in TableView if not empty.
             if (self.showList.count > 0)
                 [self.showsTableView selectRowIndexes:[NSIndexSet indexSetWithIndex:0] byExtendingSelection:NO];
         }
+        
+        if (error) {
+            NSAlert *alert = [NSAlert alertWithError:error];
+            [alert beginSheetModalForWindow:self.window completionHandler:nil];
+        }
     }];
-}
-
-- (void)controlTextDidEndEditing:(NSNotification *)obj {
-    
 }
 
 #pragma mark - NSWindowDelegate
@@ -119,11 +128,34 @@
     [super windowDidLoad];
 }
 
+#pragma mark - NSTableViewDataSource
+
+- (NSInteger)numberOfRowsInTableView:(NSTableView *)tableView {
+    return self.showList.count;
+}
+
+- (id)tableView:(NSTableView *)tableView objectValueForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row {
+    return [[self.showList objectAtIndex:row] objectForKey:@"name"];
+}
+
+- (NSDictionary  *)selectedShow {
+    NSInteger selectedRow = self.showsTableView.selectedRow;
+    
+    if (selectedRow < 0) {
+        return nil;
+    }
+    
+    return [self.showList objectAtIndex:selectedRow];
+}
+
 #pragma mark - NSTableViewDelegate
 
 - (void)tableViewSelectionDidChange:(NSNotification *)notification {
-    NSDictionary __block *selectedObject = [[self.showsArrayController selectedObjects] firstObject];
-    [self resetShowView];
+    if (self.showList.count <= 0) return;
+    
+    NSDictionary __block *selectedObject = [self selectedShow];
+    
+    [self.metadataViewController resetView];
     
     if (selectedObject) {
         NSNumber *thetvdbid = selectedObject[@"tvdb_id"];
@@ -131,10 +163,10 @@
         
         // download serie info if is not already cached
         if (serie) {
-            [self toggleLoading:NO];
-            [self updateShowInfo:serie];
+            [self.metadataViewController toggleLoading:NO];
+            [self updateShowInfo:serie.objectID];
         } else {
-            [self toggleLoading:YES];
+            [self.metadataViewController toggleLoading:YES];
             
             [[TheTVDB sharedInstance] getShowWithEpisodeList:thetvdbid completionHandler:^(NSDictionary *result, NSError *error) {
                 if (result) {
@@ -163,59 +195,44 @@
                         [localContext MR_saveToPersistentStoreWithCompletion:^(BOOL success, NSError *error) {
                             if (success) {
                                 // Update the UI.
-                                [self updateShowInfo:serie];
+                                [self updateShowInfo:serie.objectID];
+                            }
+                            
+                            if (error) {
+                                NSAlert *alert = [NSAlert alertWithError:error];
+                                [alert beginSheetModalForWindow:self.window completionHandler:nil];
                             }
                         }];
                     }];
+                    
+                    /* NOT WORKING
+                    [Serie create:result InContext:managedObjectContext WithCompletion:^(SerieID *serieID) {
+                        [self updateShowInfo:serieID];
+                    } Error:^(NSError *error) {
+                        NSAlert *al = [NSAlert alertWithError:error];
+                        [al beginSheetModalForWindow:self.window completionHandler:nil];
+                    }];
+                     */
                 }
                 
                 if (error) {
-                    NSLog(@"Error TheTVDB getShowWithEpisodeList:");
+                    NSAlert *al = [NSAlert alertWithError:error];
+                    [al beginSheetModalForWindow:self.window completionHandler:nil];
                     [self updateShowInfo:nil];
                     // NSLog(@"%@", error);
                 }
                 
-                [self toggleLoading:NO];
+                [self.metadataViewController toggleLoading:NO];
             }];
         }
     }
 }
 
-#pragma mark - Core Data
-
-- (NSManagedObjectContext *)managedObjectContext {
-    if (!managedObjectContext) {
-        managedObjectContext = [NSManagedObjectContext MR_context];
-    }
-    
-    return managedObjectContext;
-}
-
 #pragma mark - Private
 
-- (void)toggleLoading:(BOOL)isLoading {
-    if (isLoading) {
-        [self.metadataBox setHidden:YES];
-        [self.loadingText setHidden:NO];
-        [self.spinner setHidden:NO];
-        [self.spinner startAnimation:nil];
-    } else {
-        [self.metadataBox setHidden:NO];
-        [self.loadingText setHidden:YES];
-        [self.spinner setHidden:YES];
-        [self.spinner stopAnimation:nil];
-    }
-    
-}
+- (void)updateShowInfo:(SerieID *)serieID {
 
-- (void)updateShowInfo:(Serie *)serie {
-    if (!serie) {
-        [self.showName setStringValue:@""];
-        [self.genre setStringValue:@""];
-        [self.rating setIntegerValue:0];
-        [self.showDescription setString:@""];
-        [self.showYear setStringValue:@""];
-        [self.showDuration setStringValue:@""];
+    if (!serieID) {
         
         // Empty the episodes table view
         [self.episodesList removeAllObjects];
@@ -224,37 +241,10 @@
         return;
     }
     
-    // Get the poster
-    [[TheTVDB sharedInstance] getPosterForShow:serie completionHandler:^(NSImage *poster, NSNumber *showID) {
-        NSNumber *selectedObjectID = [[[self.showsArrayController selectedObjects] firstObject] objectForKey:@"tvdb_id"];
-        
-        // Only set the poster if the selected item id is equal to poster id.
-        if ([selectedObjectID isEqualToNumber:showID])
-            [self.showPoster setImage:poster];
-    }];
+    Serie * serie = [managedObjectContext objectWithID:serieID];
     
-    
-    
-//    NSImage *ea = [NSImage imageNamed:@"ea"];
-//    [self.studioLogo setImage:ea];
-    
-    [self.showName setStringValue:(serie.name ?: @"")];
-    [self.genre setStringValue:(serie.genre ?: @"")];
-    [self.rating setDoubleValue:[serie.rating doubleValue]];// if rating is null doubleValue will return 0.
-    [self.showDescription setString:(serie.seriesDescription ?: @"Description not avaible!")];
-    
-    NSString *runtime = (serie.runtime ? [[serie.runtime stringValue] stringByAppendingString:@" Min"] : @"");
-    [self.showDuration setStringValue:runtime];
-    
-    NSArray *episodes = [serie.episodes allObjects];
-    [self.episodesArrayController addObjects:episodes];
-    
-    if (serie.started) {
-        NSInteger year = [[[NSCalendar currentCalendar] components:NSCalendarUnitYear fromDate:serie.started] year];
-        [self.showYear setStringValue:[NSString stringWithFormat:@"%ld", year]];
-    } else {
-        [self.showYear setStringValue:@""];
-    }
+    [self.metadataViewController updateShowInfo:serie];
+
     
     // Disable subscribe button if already subscribed.
     if ([self userIsSubscribedToShow:serie]) {
@@ -266,34 +256,26 @@
     }
 }
 
-- (void)resetShowView {
-    [self.showName setStringValue:@""];
-    [self.genre setStringValue:@""];
-    [self.rating setIntegerValue:0];
-    [self.showDescription setString:@""];
-    [self.showYear setStringValue:@""];
-    [self.showDuration setStringValue:@""];
-    [self.showPoster setImage:[NSImage imageNamed:@"posterArtPlaceholder"]];
-    //[self.studioLogo setImage:nil];
+- (void)reset {
+    [self.metadataViewController resetView];
     
-    // Empty the episodes table view
-    [self.episodesList removeAllObjects];
-    [self.episodesTableView reloadData];
+    //Clean the search field
+    [self.searchField setStringValue:@""];
+    
+    //Empty the series tableview
+    [self.showList removeAllObjects];
+    [self.showsTableView reloadData];
 }
 
 - (BOOL)userIsSubscribedToShow:(Serie *)serie {
-    NSArray __block *subs;
+    NSUInteger __block count;
     
     [self.managedObjectContext performBlockAndWait:^{
-//        NSFetchRequest *request = [Subscription MR_requestAllWhere:@"serie" isEqualTo:serie inContext:self.managedObjectContext];
-//        NSUInteger count = [managedObjectContext countForFetchRequest:request error:nil];
-        
-        
-        
-        subs = [Subscription MR_findByAttribute:@"serie" withValue:serie inContext:self.managedObjectContext];
+        NSFetchRequest *request = [Subscription MR_requestAllWhere:@"serie" isEqualTo:serie inContext:self.managedObjectContext];
+        count = [managedObjectContext countForFetchRequest:request error:nil];
     }];
-
-    return subs.count;
+    
+    return count;
 }
 
 @end

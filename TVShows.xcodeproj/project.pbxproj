@@ -11,7 +11,7 @@
 			isa = PBXAggregateTarget;
 			buildConfigurationList = A0E434151B1A67B3000AF57C /* Build configuration list for PBXAggregateTarget "Mogenerator" */;
 			buildPhases = (
-				A0E434191B1A67CE000AF57C /* ShellScript */,
+				A0E434191B1A67CE000AF57C /* Run Script */,
 			);
 			dependencies = (
 			);
@@ -175,6 +175,7 @@
 		A00B46221AEC7F350022BDBF /* NSColor+BWAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 34463CCF1331B424001453EB /* NSColor+BWAdditions.m */; };
 		A00B46231AEC7F390022BDBF /* BWInsetTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 342A5429132D4CB800FB526F /* BWInsetTextField.m */; };
 		A00B46241AEC7FA30022BDBF /* CRViewSubclass.m in Sources */ = {isa = PBXBuildFile; fileRef = 34463CD71331BC40001453EB /* CRViewSubclass.m */; };
+		A01813CD1C2DDEB500C5B221 /* MetadataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A01813CC1C2DDEB500C5B221 /* MetadataViewController.m */; };
 		A02F332E1B1BC9BC004F2D4B /* NSMutableDictionary+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A02F332D1B1BC9BC004F2D4B /* NSMutableDictionary+Extensions.m */; };
 		A0432F241AD9649600C19189 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A0432F231AD9649600C19189 /* AppDelegate.m */; };
 		A0432F261AD9649600C19189 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A0432F251AD9649600C19189 /* main.m */; };
@@ -470,6 +471,9 @@
 		A00847C81AF5C0F900F5D2A3 /* SubscriptionWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubscriptionWindowController.h; sourceTree = "<group>"; };
 		A00847C91AF5C0F900F5D2A3 /* SubscriptionWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubscriptionWindowController.m; sourceTree = "<group>"; };
 		A00847CA1AF5C0F900F5D2A3 /* SubscriptionWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SubscriptionWindowController.xib; sourceTree = "<group>"; };
+		A01813CB1C2DDEB500C5B221 /* MetadataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MetadataViewController.h; sourceTree = "<group>"; };
+		A01813CC1C2DDEB500C5B221 /* MetadataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MetadataViewController.m; sourceTree = "<group>"; };
+		A01813CE1C2DE6B500C5B221 /* TVShows-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TVShows-Bridging-Header.h"; sourceTree = "<group>"; };
 		A02F332C1B1BC9BC004F2D4B /* NSMutableDictionary+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSMutableDictionary+Extensions.h"; path = "TVShows/NSMutableDictionary+Extensions.h"; sourceTree = SOURCE_ROOT; };
 		A02F332D1B1BC9BC004F2D4B /* NSMutableDictionary+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSMutableDictionary+Extensions.m"; path = "TVShows/NSMutableDictionary+Extensions.m"; sourceTree = SOURCE_ROOT; };
 		A0432F1E1AD9649600C19189 /* TVShows.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TVShows.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1070,6 +1074,7 @@
 			children = (
 				A0432F211AD9649600C19189 /* Info.plist */,
 				A0432F251AD9649600C19189 /* main.m */,
+				A01813CE1C2DE6B500C5B221 /* TVShows-Bridging-Header.h */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -1234,6 +1239,8 @@
 				A00847C81AF5C0F900F5D2A3 /* SubscriptionWindowController.h */,
 				A00847C91AF5C0F900F5D2A3 /* SubscriptionWindowController.m */,
 				A00847CA1AF5C0F900F5D2A3 /* SubscriptionWindowController.xib */,
+				A01813CB1C2DDEB500C5B221 /* MetadataViewController.h */,
+				A01813CC1C2DDEB500C5B221 /* MetadataViewController.m */,
 			);
 			name = Subscription;
 			sourceTree = "<group>";
@@ -1342,6 +1349,7 @@
 		089C1669FE841209C02AAC07 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = "Víctor Pimentel";
 				TargetAttributes = {
@@ -1556,13 +1564,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TVShows/Pods-TVShows-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A0E434191B1A67CE000AF57C /* ShellScript */ = {
+		A0E434191B1A67CE000AF57C /* Run Script */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
+			name = "Run Script";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1737,6 +1746,7 @@
 				A0C190211B4081A90020ACD9 /* NSString+Extensions.m in Sources */,
 				A09521EA1AF6BDD4005AC0EF /* TVShows.xcdatamodeld in Sources */,
 				A0E4340D1B1A6209000AF57C /* _Subscription.m in Sources */,
+				A01813CD1C2DDEB500C5B221 /* MetadataViewController.m in Sources */,
 				A06F87641AE6904700CD66DC /* OEGridCell.m in Sources */,
 				A0E4341F1B1AA1D7000AF57C /* NSManagedObject+Attributes.m in Sources */,
 			);
@@ -1906,6 +1916,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEPLOYMENT_LOCATION = YES;
@@ -1938,6 +1949,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -2020,6 +2032,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
@@ -2061,6 +2074,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
@@ -2129,9 +2143,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				INFOPLIST_FILE = TVShows/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TVShows/TVShows-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -2165,9 +2182,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				INFOPLIST_FILE = TVShows/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TVShows/TVShows-Bridging-Header.h";
 			};
 			name = Release;
 		};
