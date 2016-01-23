@@ -1,7 +1,0 @@
-[submodule "Vendor/FeedParser"]
-	path = Vendor/FeedParser
-  url = https://github.com/victorpimentel/feedparser.git
-[submodule "Vendor/RegexKitLite"]
-	path = Vendor/RegexKitLite
-  url = https://github.com/victorpimentel/RegexKitLite.git
-
