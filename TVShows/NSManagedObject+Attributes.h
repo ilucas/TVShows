@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 Lucas Casteletti. All rights reserved.
 //
 
-#import <CoreData/CoreData.h>
+@import Cocoa;
 
 @interface NSManagedObject (Attributes)
 

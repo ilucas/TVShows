@@ -70,7 +70,7 @@
         NSDictionary *selectedObject = [self selectedShow];
         Serie  *serie = [Serie MR_findFirstByAttribute:@"tvdb_id" withValue:selectedObject[@"tvdb_id"] inContext:localContext];
         
-        Subscription *subscription = [Subscription MR_createInContext:localContext];
+        Subscription *subscription = [Subscription MR_createEntityInContext:localContext];
         [subscription setIsEnabledValue:YES];
         [subscription setQualityValue:1.0];
         [subscription setSerie:serie];
@@ -174,13 +174,13 @@
                     
                     [localContext performBlock:^{
                         // Create the entity
-                        serie = [Serie MR_createInContext:localContext];
+                        serie = [Serie MR_createEntityInContext:localContext];
                         [serie updateAttributes:result];
                         
                         // Update the Serie in Core Data
                         [result[@"episodes"] enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
                             @autoreleasepool {
-                                Episode *ep = [Episode MR_createInContext:localContext];
+                                Episode *ep = [Episode MR_createEntityInContext:localContext];
                                 [ep updateAttributes:obj];
                                 [serie addEpisodesObject:ep];// Add the episode to the serie.
                             }

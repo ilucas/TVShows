@@ -1,40 +1,58 @@
 PODS:
-  - AFNetworking (2.5.3):
-    - AFNetworking/NSURLConnection (= 2.5.3)
-    - AFNetworking/NSURLSession (= 2.5.3)
-    - AFNetworking/Reachability (= 2.5.3)
-    - AFNetworking/Security (= 2.5.3)
-    - AFNetworking/Serialization (= 2.5.3)
-    - AFNetworking/UIKit (= 2.5.3)
-  - AFNetworking/NSURLConnection (2.5.3):
+  - AFNetworkActivityLogger (2.0.4):
+    - AFNetworking/NSURLConnection (~> 2.0)
+    - AFNetworking/NSURLSession (~> 2.0)
+  - AFNetworking (2.6.3):
+    - AFNetworking/NSURLConnection (= 2.6.3)
+    - AFNetworking/NSURLSession (= 2.6.3)
+    - AFNetworking/Reachability (= 2.6.3)
+    - AFNetworking/Security (= 2.6.3)
+    - AFNetworking/Serialization (= 2.6.3)
+    - AFNetworking/UIKit (= 2.6.3)
+  - AFNetworking/NSURLConnection (2.6.3):
     - AFNetworking/Reachability
     - AFNetworking/Security
     - AFNetworking/Serialization
-  - AFNetworking/NSURLSession (2.5.3):
+  - AFNetworking/NSURLSession (2.6.3):
     - AFNetworking/Reachability
     - AFNetworking/Security
     - AFNetworking/Serialization
-  - AFNetworking/Reachability (2.5.3)
-  - AFNetworking/Security (2.5.3)
-  - AFNetworking/Serialization (2.5.3)
+  - AFNetworking/Reachability (2.6.3)
+  - AFNetworking/Security (2.6.3)
+  - AFNetworking/Serialization (2.6.3)
   - AFOnoResponseSerializer (1.0.0):
     - AFNetworking (~> 2.2)
     - Ono (~> 1.0)
-  - MagicalRecord (2.2):
-    - MagicalRecord/Core (= 2.2)
-  - MagicalRecord/Core (2.2)
-  - Ono (1.2.1)
+  - CocoaLumberjack (2.2.0):
+    - CocoaLumberjack/Default (= 2.2.0)
+    - CocoaLumberjack/Extensions (= 2.2.0)
+  - CocoaLumberjack/Core (2.2.0)
+  - CocoaLumberjack/Default (2.2.0):
+    - CocoaLumberjack/Core
+  - CocoaLumberjack/Extensions (2.2.0):
+    - CocoaLumberjack/Default
+  - MagicalRecord/CocoaLumberjack (2.3.2):
+    - CocoaLumberjack (~> 2.0)
+    - MagicalRecord/Core
+  - MagicalRecord/Core (2.3.2)
+  - MagicalRecord/ShorthandMethodAliases (2.3.2)
+  - Ono (1.2.2)
 
 DEPENDENCIES:
-  - AFNetworking (~> 2.5)
+  - AFNetworkActivityLogger (~> 2.0)
+  - AFNetworking (~> 2.6)
   - AFOnoResponseSerializer (~> 1.0)
-  - MagicalRecord (~> 2.2)
+  - CocoaLumberjack (~> 2.2)
+  - MagicalRecord/CocoaLumberjack (~> 2.3)
+  - MagicalRecord/ShorthandMethodAliases (~> 2.3)
   - Ono (~> 1.2)
 
 SPEC CHECKSUMS:
-  AFNetworking: e1d86c2a96bb5d2e7408da36149806706ee122fe
+  AFNetworkActivityLogger: 121486778117d53b3ab1c61d264b88081d0c3eee
+  AFNetworking: cb8d14a848e831097108418f5d49217339d4eb60
   AFOnoResponseSerializer: c02c8bef1d6742ac68f33ecaed41826c9657bc33
-  MagicalRecord: f8a56bb87ab6552f20c4bb8681a1958a197ea3cd
-  Ono: 1122212de602280cc7af19d7ab12ee98a3fc0339
+  CocoaLumberjack: 17fe8581f84914d5d7e6360f7c70022b173c3ae0
+  MagicalRecord: 53bed74b4323b930992a725be713e53b37d19755
+  Ono: 80b1c686777d3f6d5d5ce6fcac8a74afef4ca197
 
-COCOAPODS: 0.36.4
+COCOAPODS: 0.39.0

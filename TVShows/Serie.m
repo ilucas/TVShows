@@ -20,14 +20,14 @@
     
     [localContext performBlock:^{
         // Create the entity
-        Serie *serie = [Serie MR_createInContext:localContext];
+        Serie *serie = [Serie MR_createEntityInContext:localContext];
         
         [serie updateAttributes:data];
         
         // Update the Serie in Core Data
         [data[@"episodes"] enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
             @autoreleasepool {
-                Episode *ep = [Episode MR_createInContext:localContext];
+                Episode *ep = [Episode MR_createEntityInContext:localContext];
                 [ep updateAttributes:obj];
                 [serie addEpisodesObject:ep];// Add the episode to the serie.
             }

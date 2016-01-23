@@ -1,6 +1,0 @@
-framework module AFOnoResponseSerializer {
-  umbrella header "Pods-TVShows-AFOnoResponseSerializer-umbrella.h"
-
-  export *
-  module * { export * }
-}

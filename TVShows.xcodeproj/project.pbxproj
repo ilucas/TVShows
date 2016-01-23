@@ -119,7 +119,7 @@
 		34FBC64211C0B601005D290B /* Sparkle.framework in Copy Linked Libraries */ = {isa = PBXBuildFile; fileRef = 3473845E119074C8003DFFA0 /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		34FBC69511C0B7CE005D290B /* SUUpdaterSubclass.m in Sources */ = {isa = PBXBuildFile; fileRef = 340F15F9118FEBDE00A1BD00 /* SUUpdaterSubclass.m */; };
 		34FBC69B11C0B804005D290B /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3473845E119074C8003DFFA0 /* Sparkle.framework */; };
-		3EA18B5DF530B66A1DF949C2 /* Pods_TVShows.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3F243393169C18DB2AB02E4 /* Pods_TVShows.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		3EA18B5DF530B66A1DF949C2 /* Pods_TVShows.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3F243393169C18DB2AB02E4 /* Pods_TVShows.framework */; };
 		571C60E3139905320072D921 /* ribbon.png in Resources */ = {isa = PBXBuildFile; fileRef = 571C60E2139905320072D921 /* ribbon.png */; };
 		571D4FCD13A91DD200EBD5EA /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 571D4E4713A90A8D00EBD5EA /* Security.framework */; };
 		571D4FCE13A91DD500EBD5EA /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 571D4E4513A90A7900EBD5EA /* libxml2.dylib */; };
@@ -2113,8 +2113,8 @@
 			baseConfigurationReference = 3447183A9BB6C01A14888407 /* Pods-TVShows.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
@@ -2157,8 +2157,8 @@
 			baseConfigurationReference = F9C800E2DCC50DF3944EE579 /* Pods-TVShows.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;

@@ -4,23 +4,30 @@ platform :osx, '10.9'
 use_frameworks!
 inhibit_all_warnings!
 
-target 'TVShowsPref' do
-
-end
-
-target 'TVShowsHelper' do
-
-end
-
-target 'relaunch' do
-
+def objc()
+    pod 'ObjectiveSugar'
+    pod 'libextobjc'
 end
 
 target 'TVShows' do
-	pod 'AFNetworking', '~> 2.5'
+    # Networking
+	pod 'AFNetworking', '~> 2.6'
+    pod 'AFNetworkActivityLogger', '~> 2.0'
     pod 'AFOnoResponseSerializer', '~> 1.0'
-	pod 'MagicalRecord', '~> 2.2'
+    
+    # Logging
+    pod 'CocoaLumberjack', '~> 2.2'
+    
+    # Core Data
+    pod 'MagicalRecord', '~> 2.3', :subspecs => ['CocoaLumberjack', 'ShorthandMethodAliases']
+    
+    # Update
+    #pod 'Sparkle'
+    
+    # Misc
     pod 'Ono', '~> 1.2'
+    #pod 'LetsMove'
+    #pod 'Operations'
 end
 
 target 'TVShowsTests' do

@@ -9,7 +9,7 @@
 //  Licensed under the New BSD License
 //
 
-#import <Foundation/Foundation.h>
+@import Foundation;
 
 @interface NSString (Extensions)
 

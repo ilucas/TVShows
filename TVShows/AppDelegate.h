@@ -7,7 +7,6 @@
 //
 
 @import Cocoa;
-@import MagicalRecord;
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 
