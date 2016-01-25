@@ -1,7 +1,6 @@
 /*
- Copyright (c) 2010, OpenEmu Team
- 
- 
+ Copyright (c) 2012, OpenEmu Team
+
  Redistribution and use in source and binary forms, with or without
  modification, are permitted provided that the following conditions are met:
      * Redistributions of source code must retain the above copyright
@@ -12,7 +11,7 @@
      * Neither the name of the OpenEmu Team nor the
        names of its contributors may be used to endorse or promote products
        derived from this software without specific prior written permission.
- 
+
  THIS SOFTWARE IS PROVIDED BY OpenEmu Team ''AS IS'' AND ANY
  EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
  WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
@@ -25,9 +24,37 @@
   SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-@import Cocoa;
+#import "OEThemeImage.h"
 
-// Quicky UUID
-@interface NSString (UUID)
-+ (NSString *)stringWithUUID;
+#pragma mark -
+#pragma mark Theme image attributes
+
+static NSString * const OEThemeImageResourceAttributeName = @"Resource";
+static NSString * const OEThemeImagePartsAttributeName    = @"Parts";
+static NSString * const OEThemeImageVerticalAttributeName = @"Vertical";
+
+#pragma mark -
+#pragma mark Implementation
+
+@implementation OEThemeImage
+
++ (id)parseWithDefinition:(NSDictionary *)definition
+{
+    NSString *resource = [definition valueForKey:OEThemeImageResourceAttributeName];
+    if (resource == nil) return nil;
+
+    id   parts    = ([definition objectForKey:OEThemeImagePartsAttributeName] ?: [definition objectForKey:OEThemeObjectValueAttributeName]);
+    BOOL vertical = [[definition objectForKey:OEThemeImageVerticalAttributeName] boolValue];
+
+    if([parts isKindOfClass:[NSString class]])      parts = [NSArray arrayWithObject:parts];
+    else if(![parts isKindOfClass:[NSArray class]]) parts = nil;
+
+    return [[NSImage imageNamed:resource] imageFromParts:parts vertical:vertical];
+}
+
+- (NSImage *)imageForState:(OEThemeState)state
+{
+    return (NSImage *)[self objectForState:state];
+}
+
 @end

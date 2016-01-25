@@ -24,8 +24,11 @@
   SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#import "OEUtilities.h"
+@import Cocoa;
+
+#import "OEUtilities.m"
 #import <CommonCrypto/CommonDigest.h>
+//#import "OEBuildVersion.h"
 
 // output must be at least 2*len+1 bytes
 void tohex(const unsigned char *input, size_t len, char *output)
@@ -36,6 +39,30 @@ void tohex(const unsigned char *input, size_t len, char *output)
         output[2*i+1] = table[input[i]&0xF];
     }
     output[2*len+1] = '\0';
+}
+
+NSArray *OENextRespondersFromResponder(NSResponder *responder)
+{
+    if(responder == nil) return @[ ];
+    
+    NSMutableArray *responders = [NSMutableArray array];
+    
+    while(responder != nil)
+    {
+        [responders addObject:responder];
+        responder = [responder nextResponder];
+    }
+    
+    return responders;
+}
+
+void OEPrintFirstResponderChain(void)
+{
+    NSWindow *keyWindow = [NSApp keyWindow];
+    
+    if(keyWindow == nil) return;
+    
+    NSLog(@"responders: %@", OENextRespondersFromResponder([keyWindow firstResponder]));
 }
 
 NSString *temporaryDirectoryForDecompressionOfPath(NSString *aPath)
@@ -52,20 +79,23 @@ NSString *temporaryDirectoryForDecompressionOfPath(NSString *aPath)
     // get the bundle identifier of ourself, or our parent app if we have none
     NSBundle *bundle = [NSBundle mainBundle];
     NSString *folder = [bundle bundleIdentifier];
+    
     if (!folder) {
         NSString *path = [bundle bundlePath];
         path = [[path stringByDeletingLastPathComponent] stringByDeletingLastPathComponent];
         bundle = [NSBundle bundleWithPath:path];
         folder = [bundle bundleIdentifier];
         if (!folder) {
-            NSLog(@"Couldn't get bundle identifier of OpenEmu");
+            //DLog(@"Couldn't get bundle identifier of OpenEmu");
             folder = @"OpenEmu";
         }
     }
+    
     folder = [NSTemporaryDirectory() stringByAppendingPathComponent:folder];
     folder = [folder stringByAppendingPathComponent:[NSString stringWithUTF8String:hexhash]];
+    
     if (![fm createDirectoryAtPath:folder withIntermediateDirectories:YES attributes:nil error:&error]) {
-        NSLog(@"Couldn't create temp directory %@, %@", folder, error);
+        //DLog(@"Couldn't create temp directory %@, %@", folder, error);
         return nil;
     }
 
@@ -107,7 +137,6 @@ bool GetSystemVersion(int *major, int *minor, int *bugfix)
 #ifdef DebugLocalization
 static NSFileHandle *OELocalizationLog = nil;
 static NSMutableDictionary *OELocalizationTableLog = nil;
-
 NSString *OELogLocalizedString(NSString *key, NSString *comment, NSString *fileName, int line, const char* function, NSString *table)
 {
     NSFileHandle *handle = nil;

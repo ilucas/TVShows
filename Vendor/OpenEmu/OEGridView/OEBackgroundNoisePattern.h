@@ -1,6 +1,5 @@
 /*
- Copyright (c) 2010, OpenEmu Team
- 
+ Copyright (c) 2012, OpenEmu Team
  
  Redistribution and use in source and binary forms, with or without
  modification, are permitted provided that the following conditions are met:
@@ -12,7 +11,7 @@
      * Neither the name of the OpenEmu Team nor the
        names of its contributors may be used to endorse or promote products
        derived from this software without specific prior written permission.
- 
+
  THIS SOFTWARE IS PROVIDED BY OpenEmu Team ''AS IS'' AND ANY
  EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
  WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
@@ -23,11 +22,18 @@
  ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
   SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
- */
+*/
 
 @import Cocoa;
+@import CoreGraphics;
 
-// Quicky UUID
-@interface NSString (UUID)
-+ (NSString *)stringWithUUID;
-@end
+extern void OEBackgroundNoisePatternCreate(void);
+extern void OEBackgroundHighResolutionNoisePatternCreate(void);
+
+extern void OEBackgroundNoisePatternDrawInContext(void *info, CGContextRef ctx);
+extern void OEBackgroundNoisePatternRelease(void *info);
+
+extern CGColorRef OEBackgroundNoiseColorRef;
+extern CGImageRef OEBackgroundNoiseImageRef;
+extern CGColorRef OEBackgroundHighResolutionNoiseColorRef;
+extern CGImageRef OEBackgroundHighResolutionNoiseImageRef;

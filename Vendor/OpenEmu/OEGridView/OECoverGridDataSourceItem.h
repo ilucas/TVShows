@@ -1,6 +1,5 @@
 /*
- Copyright (c) 2010, OpenEmu Team
- 
+ Copyright (c) 2011, OpenEmu Team
  
  Redistribution and use in source and binary forms, with or without
  modification, are permitted provided that the following conditions are met:
@@ -25,9 +24,24 @@
   SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-@import Cocoa;
+@import Foundation;
 
-// Quicky UUID
-@interface NSString (UUID)
-+ (NSString *)stringWithUUID;
+// used for cover grid and cover flow
+@protocol OECoverGridDataSourceItem <NSObject>
+
+- (NSString *)imageUID;
+- (NSString *)imageRepresentationType;
+- (id)imageRepresentation;
+- (NSString *)imageTitle;
+- (NSString *)imageSubtitle;
+
+- (NSInteger)gridStatus;
+- (NSUInteger)gridRating;
+
+- (void)setGridRating:(NSUInteger)newRating;
+- (void)setGridTitle:(NSString*)title;
+
+#pragma mark -
+- (BOOL)shouldIndicateDownloadable;
+- (BOOL)shouldIndicateDeletable;
 @end

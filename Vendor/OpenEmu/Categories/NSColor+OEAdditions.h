@@ -24,14 +24,9 @@
   SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-@import AppKit;
-
-extern NSColor  *OENSColorFromString(NSString *colorString);
-extern NSString *OENSStringFromColor(NSColor *color);
+@import Cocoa;
 
 @interface NSColor (OEAdditions)
-
-+ (NSColor *)colorWithCGColor:(CGColorRef)color;
-- (CGColorRef)CGColor;
-
++ (NSColor*)colorFromString:(NSString*)string;
+- (NSString*)toString;
 @end
