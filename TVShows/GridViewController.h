@@ -14,7 +14,6 @@
 @interface GridViewController : NSViewController
 
 @property (weak) IBOutlet OEGridView *gridView;
-@property (weak) IBOutlet NSArrayController *subscriptionArrayController;
 
 - (void)reloadData;
 

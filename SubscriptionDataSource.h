@@ -2,12 +2,13 @@
 //  SubscriptionDataSource.h
 //  TVShows
 //
-//  Created by Lucas casteletti on 1/24/16.
-//  Copyright © 2016 Víctor Pimentel. All rights reserved.
+//  Created by Lucas Casteletti on 1/24/16.
+//  Copyright © 2016 Lucas Casteletti. All rights reserved.
 //
 
 #import "Subscription.h"
+#import "OECoverGridDataSourceItem.h"
 
-@interface SubscriptionDataSource : Subscription
+@interface Subscription (GridDataSource) <OECoverGridDataSourceItem>
 
 @end

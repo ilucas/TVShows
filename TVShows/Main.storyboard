@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="yg5-Hd-OGd">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9531"/>
+    </dependencies>
+    <scenes>
+        <!--Window Controller-->
+        <scene sceneID="Unw-Kf-6zI">
+            <objects>
+                <windowController id="yg5-Hd-OGd" customClass="MainWindowController" sceneMemberID="viewController">
+                    <window key="window" title="TV Shows" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" frameAutosaveName="" animationBehavior="default" id="1nD-cS-KHS">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" unifiedTitleAndToolbar="YES"/>
+                        <rect key="contentRect" x="1440" y="0.0" width="500" height="300"/>
+                        <rect key="screenRect" x="1440" y="0.0" width="1920" height="1057"/>
+                        <toolbar key="toolbar" implicitIdentifier="4B3F0E5D-991E-42C4-AFFA-88DE4BA55DC9" autosavesConfiguration="NO" allowsUserCustomization="NO" displayMode="iconOnly" sizeMode="regular" id="LB3-uU-Kmz">
+                            <allowedToolbarItems>
+                                <toolbarItem implicitItemIdentifier="NSToolbarSpaceItem" explicitItemIdentifier="NSToolbarSpaceItem2" id="I3H-5O-xMX"/>
+                                <toolbarItem implicitItemIdentifier="NSToolbarFlexibleSpaceItem" id="dCI-L5-LQU"/>
+                                <toolbarItem implicitItemIdentifier="8CFCC9C4-C47D-4675-B471-00B9D670FE74" label="Custom View" paletteLabel="Custom View" id="c3x-jA-2tf">
+                                    <nil key="toolTip"/>
+                                    <size key="minSize" width="96" height="22"/>
+                                    <size key="maxSize" width="200" height="22"/>
+                                    <searchField key="view" wantsLayer="YES" verticalHuggingPriority="750" id="bmm-E2-Fff">
+                                        <rect key="frame" x="0.0" y="14" width="96" height="22"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <searchFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" borderStyle="bezel" usesSingleLineMode="YES" bezelStyle="round" id="g3o-DV-V2Z">
+                                            <font key="font" metaFont="system"/>
+                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </searchFieldCell>
+                                    </searchField>
+                                </toolbarItem>
+                                <toolbarItem implicitItemIdentifier="BA917028-169D-4E47-A2D0-70A8B1967205" label="Custom View" paletteLabel="Custom View" image="NSAddTemplate" id="9dJ-km-4Dw">
+                                    <nil key="toolTip"/>
+                                    <size key="minSize" width="34" height="32"/>
+                                    <size key="maxSize" width="46" height="32"/>
+                                    <button key="view" verticalHuggingPriority="750" id="CRL-Wu-OZK">
+                                        <rect key="frame" x="15" y="14" width="46" height="32"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <buttonCell key="cell" type="push" bezelStyle="rounded" image="NSAddTemplate" imagePosition="overlaps" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="7a7-Ch-hiW">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                    </button>
+                                    <connections>
+                                        <action selector="addAction:" target="yg5-Hd-OGd" id="JXg-nx-RJU"/>
+                                    </connections>
+                                </toolbarItem>
+                            </allowedToolbarItems>
+                            <defaultToolbarItems>
+                                <toolbarItem reference="9dJ-km-4Dw"/>
+                                <toolbarItem reference="dCI-L5-LQU"/>
+                                <toolbarItem reference="c3x-jA-2tf"/>
+                            </defaultToolbarItems>
+                        </toolbar>
+                        <connections>
+                            <outlet property="delegate" destination="yg5-Hd-OGd" id="eB7-de-rTe"/>
+                        </connections>
+                    </window>
+                    <connections>
+                        <outlet property="toolBar" destination="LB3-uU-Kmz" id="1zX-63-I36"/>
+                        <segue destination="Hg3-DA-dve" kind="relationship" relationship="window.shadowedContentViewController" id="nWZ-cz-QnF"/>
+                    </connections>
+                </windowController>
+                <customObject id="Dh2-Vo-0OX" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="884" y="256.5"/>
+        </scene>
+        <!--Data Source-->
+        <scene sceneID="VBi-o6-6MY">
+            <objects>
+                <viewController id="Hg3-DA-dve" customClass="GridViewController" sceneMemberID="viewController">
+                    <scrollView key="view" borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" id="KGr-dr-oee">
+                        <rect key="frame" x="0.0" y="0.0" width="500" height="300"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="NdP-Hc-Zqg">
+                            <rect key="frame" x="0.0" y="0.0" width="500" height="300"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <subviews>
+                                <view translatesAutoresizingMaskIntoConstraints="NO" id="bIp-JD-jD8" customClass="OEGridView">
+                                    <rect key="frame" x="0.0" y="0.0" width="500" height="300"/>
+                                    <connections>
+                                        <outlet property="dataSource" destination="Hg3-DA-dve" id="Pko-sK-y5I"/>
+                                        <outlet property="delegate" destination="Hg3-DA-dve" id="i9X-yA-Gcy"/>
+                                    </connections>
+                                </view>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="bIp-JD-jD8" firstAttribute="top" secondItem="NdP-Hc-Zqg" secondAttribute="top" id="1mB-3X-El9"/>
+                                <constraint firstAttribute="bottom" secondItem="bIp-JD-jD8" secondAttribute="bottom" id="OIT-Hn-7RE"/>
+                                <constraint firstItem="bIp-JD-jD8" firstAttribute="leading" secondItem="NdP-Hc-Zqg" secondAttribute="leading" id="u1d-fi-Lad"/>
+                                <constraint firstAttribute="trailing" secondItem="bIp-JD-jD8" secondAttribute="trailing" id="zS6-BX-nXQ"/>
+                            </constraints>
+                        </clipView>
+                        <scroller key="horizontalScroller" verticalHuggingPriority="750" horizontal="YES" id="Dlv-i0-IiW">
+                            <rect key="frame" x="0.0" y="284" width="500" height="16"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </scroller>
+                        <scroller key="verticalScroller" verticalHuggingPriority="750" horizontal="NO" id="Q63-hY-ecK">
+                            <rect key="frame" x="484" y="0.0" width="16" height="300"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </scroller>
+                    </scrollView>
+                    <connections>
+                        <outlet property="gridView" destination="bIp-JD-jD8" id="gZ9-QG-cDP"/>
+                        <outlet property="subscriptions" destination="gUh-b5-b9L" id="hGi-pP-H35"/>
+                    </connections>
+                </viewController>
+                <customObject id="m12-BA-jg5" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <arrayController mode="entity" entityName="Subscription" id="gUh-b5-b9L">
+                    <connections>
+                        <binding destination="Hg3-DA-dve" name="managedObjectContext" keyPath="context" id="amL-5Z-LCR"/>
+                    </connections>
+                </arrayController>
+            </objects>
+            <point key="canvasLocation" x="876.5" y="742.5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="NSAddTemplate" width="11" height="11"/>
+    </resources>
+</document>

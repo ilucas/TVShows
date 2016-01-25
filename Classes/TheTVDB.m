@@ -270,7 +270,7 @@ static NSNumber * parseRating(NSString *rating);
     
     if (![fileManager fileExistsAtPath:cacheDir isDirectory:NO]) {
         if (![fileManager createDirectoryAtPath:cacheDir withIntermediateDirectories:NO attributes:nil error:&error]) {
-            NSLog(@"Error creating application cache directory: %@",error);
+            DDLogError(@"Error creating application cache directory: %@",error);
             if (handler) {
                 NSImage *placeholder = [NSImage imageNamed:@"posterArtPlaceholder"];
                 handler(placeholder, serie.tvdb_id);

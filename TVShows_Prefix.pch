@@ -17,6 +17,9 @@
     @import CocoaLumberjack;
     @import MagicalRecord;
 
+    // Swift bridge
+    #import "TVShows-Swift.h"
+
     #import "TVShowsUtilities.h"
     #import "AppInfoConstants.h"
 

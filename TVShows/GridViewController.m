@@ -17,59 +17,63 @@
 
 @interface GridViewController ()
 
-@property (strong) NSMutableArray *items;
-
 @property (strong) NSManagedObjectContext *context;
+@property (weak) IBOutlet NSArrayController *subscriptions;
 
 @end
 
 @implementation GridViewController
 @synthesize gridView;
 
+#pragma mark - Lifecycle
+
+- (instancetype)initWithCoder:(NSCoder *)coder {
+    self = [super initWithCoder:coder];
+    
+    if (self) {
+        self.context = [NSManagedObjectContext context];
+    }
+    
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    self.items = [NSMutableArray new];
-    self.context = [NSManagedObjectContext context];
-    
-    [gridView setAllowsReordering:YES];
-    [gridView setAnimates:YES];
-    [gridView setDraggingDestinationDelegate:nil];
-    [gridView setCellClass:[OEGridGameCell class]];
-    [gridView setCellSize:defaultGridSize];
-    
-    [self.items addObjectsFromArray:[Subscription findAllInContext:self.context]];
-    
-    [gridView reloadData];
-    
-    [self stuff];
+    [self setupGridView];
 }
 
-
-- (void)stuff {
-    NSArrayController *ac = [[NSArrayController alloc] init];
-    
-    [ac setManagedObjectContext:self.context];
-    [ac setEntityName:[Subscription entityName]];
-    
-//    [ac fetchWithRequest:nil merge:NO error:nil];
-//    
-//    NSLog(@"%@", [ac arrangedObjects]);
-    
+- (void)awakeFromNib {
+    [self reloadData];
 }
+
+#pragma mark - Actions
 
 - (void)reloadData {
-    NSLog(@"data realod");
+    [self.subscriptions fetchWithRequest:nil merge:NO error:nil];
+    [gridView reloadData];
 }
 
 #pragma mark - IKImageBrowserDataSource
 
 - (NSUInteger)numberOfItemsInImageBrowser:(IKImageBrowserView *)view {
-    return self.items.count;
+    NSArray __weak *arrangedObjects = self.subscriptions.arrangedObjects;
+    return arrangedObjects.count;
 }
 
 - (id)imageBrowser:(IKImageBrowserView *)view itemAtIndex:(NSUInteger)index {
-    return self.items[index];
+    NSArray __weak *arrangedObjects = self.subscriptions.arrangedObjects;
+    return arrangedObjects[index];
+}
+
+#pragma mark - Setup stuff
+
+- (void)setupGridView {
+    [gridView setAllowsReordering:NO];
+    [gridView setAnimates:YES];
+    [gridView setDraggingDestinationDelegate:nil];
+    [gridView setCellClass:[OEGridGameCell class]];
+    [gridView setCellSize:defaultGridSize];
+    [gridView reloadData];
 }
 
 @end

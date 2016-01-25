@@ -9,13 +9,13 @@
 @import AFNetworkActivityLogger;
 
 #import "AppDelegate.h"
-#import "SubscriptionWindowController.h"
+#import "MainWindowController.h"
 
 @interface AppDelegate ()
 
 @property (weak) IBOutlet NSWindow *window;
 
-@property (strong) SubscriptionWindowController *subscriptionWindow;
+@property (strong) MainWindowController *mainWindowController;
 
 @end
 
@@ -23,31 +23,41 @@
 
 #pragma mark - NSApplicationDelegate
 
-- (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
+- (void)applicationWillFinishLaunching:(NSNotification *)notification {
     // Log
     [self setupLogging];
-
+    
     // Core Data
     [self setupCoreData];
     
     // Cache
     [self setupCache];
     
-    _subscriptionWindow = [SubscriptionWindowController new];
-    
-    [self asas:nil];
+    // Main Window init
+    NSStoryboard *storyBoard = [NSStoryboard storyboardWithName:@"Main" bundle:nil];
+    self.mainWindowController = [storyBoard instantiateInitialController];
+}
+
+- (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
+    [self.mainWindowController.window center];
+    [self.mainWindowController showWindow:self];
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
     [MagicalRecord cleanUp];
 }
 
-#pragma mark - DEBUG
-
-- (IBAction)asas:(id)sender {
-    [_window beginSheet:[_subscriptionWindow window] completionHandler:^(NSModalResponse returnCode) {
-        
-    }];
+- (BOOL)applicationShouldHandleReopen:(NSApplication *)sender hasVisibleWindows:(BOOL)hasVisibleWindows {
+    
+    if (hasVisibleWindows) {
+        // some window may not be visible, so let NSApplication do his thing.
+        return true;
+    }
+    
+    // If there's no window visible, show the main window.
+    [self.mainWindowController showWindow:sender];
+    
+    return false;
 }
 
 #pragma mark - Setup
