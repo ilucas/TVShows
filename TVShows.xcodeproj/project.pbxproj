@@ -142,6 +142,9 @@
 		57FBDC4D13B4C5B6006E0617 /* NSXMLNode-utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 57A82B1013953A3500E71F7F /* NSXMLNode-utils.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		8D202CF30486D31800D8A456 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */; };
 		8D202CF40486D31800D8A456 /* PreferencePanes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F506C035013D953901CA16C8 /* PreferencePanes.framework */; };
+		A00468CA1C56E69500732FB5 /* Preferences.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A00468C91C56E69500732FB5 /* Preferences.storyboard */; };
+		A00468D11C56F94200732FB5 /* AboutWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00468CF1C56F94200732FB5 /* AboutWindowController.swift */; };
+		A00468D21C56F94200732FB5 /* AboutWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A00468D01C56F94200732FB5 /* AboutWindowController.xib */; };
 		A00847CB1AF5C0F900F5D2A3 /* SubscriptionWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = A00847C91AF5C0F900F5D2A3 /* SubscriptionWindowController.m */; };
 		A00847CC1AF5C0F900F5D2A3 /* SubscriptionWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A00847CA1AF5C0F900F5D2A3 /* SubscriptionWindowController.xib */; };
 		A00B46201AEC6D390022BDBF /* GradientViewSubclass.m in Sources */ = {isa = PBXBuildFile; fileRef = 34463CCC1331AD34001453EB /* GradientViewSubclass.m */; };
@@ -410,6 +413,9 @@
 		57F7062913AF32E5002A83E4 /* Cover-DVD.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Cover-DVD.png"; sourceTree = "<group>"; };
 		57F7062C13AF3798002A83E4 /* Cover-Bluray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Cover-Bluray.png"; sourceTree = "<group>"; };
 		8D202CF80486D31800D8A456 /* TVShows.prefPane */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TVShows.prefPane; sourceTree = BUILT_PRODUCTS_DIR; };
+		A00468C91C56E69500732FB5 /* Preferences.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Preferences.storyboard; sourceTree = "<group>"; };
+		A00468CF1C56F94200732FB5 /* AboutWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutWindowController.swift; sourceTree = "<group>"; };
+		A00468D01C56F94200732FB5 /* AboutWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutWindowController.xib; sourceTree = "<group>"; };
 		A00847C81AF5C0F900F5D2A3 /* SubscriptionWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubscriptionWindowController.h; sourceTree = "<group>"; };
 		A00847C91AF5C0F900F5D2A3 /* SubscriptionWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubscriptionWindowController.m; sourceTree = "<group>"; };
 		A00847CA1AF5C0F900F5D2A3 /* SubscriptionWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SubscriptionWindowController.xib; sourceTree = "<group>"; };
@@ -892,6 +898,23 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		A00468C81C56E65B00732FB5 /* Preferences Window */ = {
+			isa = PBXGroup;
+			children = (
+				A00468C91C56E69500732FB5 /* Preferences.storyboard */,
+			);
+			name = "Preferences Window";
+			sourceTree = "<group>";
+		};
+		A00468D31C56F94600732FB5 /* About Window */ = {
+			isa = PBXGroup;
+			children = (
+				A00468CF1C56F94200732FB5 /* AboutWindowController.swift */,
+				A00468D01C56F94200732FB5 /* AboutWindowController.xib */,
+			);
+			name = "About Window";
+			sourceTree = "<group>";
+		};
 		A02FB6D31AC4E814007466D8 /* TVShowsHelper */ = {
 			isa = PBXGroup;
 			children = (
@@ -933,6 +956,8 @@
 				A0432F291AD9649600C19189 /* MainMenu.xib */,
 				A0EE124E1C54270B00F4AB82 /* MainWindow */,
 				A0AE546F1AEC461400D2C37B /* Subscription */,
+				A00468C81C56E65B00732FB5 /* Preferences Window */,
+				A00468D31C56F94600732FB5 /* About Window */,
 				A0432F201AD9649600C19189 /* Supporting Files */,
 			);
 			path = TVShows;
@@ -1363,7 +1388,9 @@
 			files = (
 				A0432F281AD9649600C19189 /* Images.xcassets in Resources */,
 				A07A51F01C54389C00D40063 /* Main.storyboard in Resources */,
+				A00468D21C56F94200732FB5 /* AboutWindowController.xib in Resources */,
 				A00B46211AEC7F1B0022BDBF /* posterArtPlaceholder.jpg in Resources */,
+				A00468CA1C56E69500732FB5 /* Preferences.storyboard in Resources */,
 				A00847CC1AF5C0F900F5D2A3 /* SubscriptionWindowController.xib in Resources */,
 				A0432F2B1AD9649600C19189 /* MainMenu.xib in Resources */,
 			);
@@ -1561,6 +1588,7 @@
 				A08864421B141C1B00A4DBB6 /* Subscription.m in Sources */,
 				A0432F261AD9649600C19189 /* main.m in Sources */,
 				A0EE12481C54238900F4AB82 /* OETheme.m in Sources */,
+				A00468D11C56F94200732FB5 /* AboutWindowController.swift in Sources */,
 				A0E434101B1A620A000AF57C /* _Episode.m in Sources */,
 				A02F332E1B1BC9BC004F2D4B /* NSMutableDictionary+Extensions.m in Sources */,
 				A0E434131B1A620A000AF57C /* _Serie.m in Sources */,

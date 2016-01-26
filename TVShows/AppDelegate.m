@@ -13,9 +13,9 @@
 
 @interface AppDelegate ()
 
-@property (weak) IBOutlet NSWindow *window;
-
 @property (strong) MainWindowController *mainWindowController;
+@property (nonatomic, strong) NSWindowController *preferencesWindowController;
+@property (nonatomic, strong) AboutWindowController *aboutWindowController;
 
 @end
 
@@ -58,6 +58,26 @@
     [self.mainWindowController showWindow:sender];
     
     return false;
+}
+
+#pragma mark - Actions
+
+- (IBAction)showAboutWindow:(id)sender {
+    if (!self.aboutWindowController) {
+        self.aboutWindowController = [[AboutWindowController alloc] initWithWindowNibName:@"AboutWindowController"];
+    }
+    
+    [self.aboutWindowController.window center];
+    [self.aboutWindowController showWindow:nil];
+}
+
+- (IBAction)showPreferencesWindow:(id)sender {
+    if (!self.preferencesWindowController) {
+        NSStoryboard *storyBoard = [NSStoryboard storyboardWithName:@"Preferences" bundle:nil];
+        self.preferencesWindowController = [storyBoard instantiateInitialController];
+    }
+    
+    [self.preferencesWindowController showWindow:nil];
 }
 
 #pragma mark - Setup

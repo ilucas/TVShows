@@ -10,6 +10,9 @@
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 
+- (IBAction)showAboutWindow:(id)sender;
+- (IBAction)showPreferencesWindow:(id)sender;
+
 
 @end
 
