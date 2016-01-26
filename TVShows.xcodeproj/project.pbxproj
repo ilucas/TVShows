@@ -41,19 +41,20 @@
 		A05A9BF41C58337E00FBEF9A /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A05A9BF31C58337E00FBEF9A /* Cocoa.framework */; };
 		A05A9BF61C58338700FBEF9A /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A05A9BF51C58338700FBEF9A /* Quartz.framework */; };
 		A05A9BF81C5833D800FBEF9A /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A05A9BF71C5833D800FBEF9A /* NotificationCenter.framework */; };
+		A05A9C371C583BD600FBEF9A /* _Episode.m in Sources */ = {isa = PBXBuildFile; fileRef = A05A9C291C583BD600FBEF9A /* _Episode.m */; };
+		A05A9C381C583BD600FBEF9A /* _Serie.m in Sources */ = {isa = PBXBuildFile; fileRef = A05A9C2B1C583BD600FBEF9A /* _Serie.m */; };
+		A05A9C391C583BD600FBEF9A /* _Subscription.m in Sources */ = {isa = PBXBuildFile; fileRef = A05A9C2D1C583BD600FBEF9A /* _Subscription.m */; };
+		A05A9C3A1C583BD600FBEF9A /* Episode.m in Sources */ = {isa = PBXBuildFile; fileRef = A05A9C2F1C583BD600FBEF9A /* Episode.m */; };
+		A05A9C3B1C583BD600FBEF9A /* SubscriptionDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = A05A9C321C583BD600FBEF9A /* SubscriptionDataSource.m */; };
+		A05A9C3C1C583BD600FBEF9A /* Serie.m in Sources */ = {isa = PBXBuildFile; fileRef = A05A9C341C583BD600FBEF9A /* Serie.m */; };
+		A05A9C3D1C583BD600FBEF9A /* Subscription.m in Sources */ = {isa = PBXBuildFile; fileRef = A05A9C361C583BD600FBEF9A /* Subscription.m */; };
 		A06F87711AE6904700CD66DC /* OEUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = A06F87591AE6904700CD66DC /* OEUtilities.m */; };
 		A06F881F1AE6D98F00CD66DC /* TVRage.m in Sources */ = {isa = PBXBuildFile; fileRef = A06F881E1AE6D98F00CD66DC /* TVRage.m */; };
 		A07A51F01C54389C00D40063 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A07A51EF1C54389C00D40063 /* Main.storyboard */; };
 		A07A51F71C543DCF00D40063 /* MainWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = A07A51F61C543DCF00D40063 /* MainWindowController.m */; };
 		A07C6FB31AFFFA6E00611B8D /* NSDictionary+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A07C6FB21AFFFA6E00611B8D /* NSDictionary+Extensions.m */; };
-		A08864391B140A9B00A4DBB6 /* Episode.m in Sources */ = {isa = PBXBuildFile; fileRef = A08864381B140A9B00A4DBB6 /* Episode.m */; };
-		A088643C1B140A9B00A4DBB6 /* Serie.m in Sources */ = {isa = PBXBuildFile; fileRef = A088643B1B140A9B00A4DBB6 /* Serie.m */; };
-		A08864421B141C1B00A4DBB6 /* Subscription.m in Sources */ = {isa = PBXBuildFile; fileRef = A08864411B141C1B00A4DBB6 /* Subscription.m */; };
 		A09521EA1AF6BDD4005AC0EF /* TVShows.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A06F88031AE6B92900CD66DC /* TVShows.xcdatamodeld */; };
 		A0C190211B4081A90020ACD9 /* NSString+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C190201B4081A90020ACD9 /* NSString+Extensions.m */; };
-		A0E4340D1B1A6209000AF57C /* _Subscription.m in Sources */ = {isa = PBXBuildFile; fileRef = A0E4340C1B1A6209000AF57C /* _Subscription.m */; };
-		A0E434101B1A620A000AF57C /* _Episode.m in Sources */ = {isa = PBXBuildFile; fileRef = A0E4340F1B1A620A000AF57C /* _Episode.m */; };
-		A0E434131B1A620A000AF57C /* _Serie.m in Sources */ = {isa = PBXBuildFile; fileRef = A0E434121B1A620A000AF57C /* _Serie.m */; };
 		A0E4341F1B1AA1D7000AF57C /* NSManagedObject+Attributes.m in Sources */ = {isa = PBXBuildFile; fileRef = A0E4341E1B1AA1D7000AF57C /* NSManagedObject+Attributes.m */; };
 		A0EE123E1C54238900F4AB82 /* NSColor+OEAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A0EE12131C54238900F4AB82 /* NSColor+OEAdditions.m */; };
 		A0EE123F1C54238900F4AB82 /* NSImage+DrawingAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0EE12141C54238900F4AB82 /* NSImage+DrawingAdditions.swift */; };
@@ -73,7 +74,6 @@
 		A0EE124D1C54238900F4AB82 /* OEThemeTextAttributes.m in Sources */ = {isa = PBXBuildFile; fileRef = A0EE123D1C54238900F4AB82 /* OEThemeTextAttributes.m */; };
 		A0EF7F5E1AE9DB440081188C /* TVShowsUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = A0EF7F5B1AE9D20F0081188C /* TVShowsUtilities.m */; };
 		A0EF7F5F1AE9DB980081188C /* TheTVDB.m in Sources */ = {isa = PBXBuildFile; fileRef = 347B35D51210DB6000F4BFF0 /* TheTVDB.m */; };
-		A0FC60811C5573F300FD6044 /* SubscriptionDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = A0FC60801C5573F300FD6044 /* SubscriptionDataSource.m */; };
 		A0FC60841C55932500FD6044 /* GridViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0FC60831C55932500FD6044 /* GridViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -96,7 +96,7 @@
 		34163BA9133EEA69007CDD87 /* nl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = nl; path = Resources/nl.lproj/Localizable.strings; sourceTree = "<group>"; };
 		34163BAC133EEA7F007CDD87 /* ru */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = ru; path = Resources/ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		34163BAD133EEA84007CDD87 /* tr */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = tr; path = Resources/tr.lproj/Localizable.strings; sourceTree = "<group>"; };
-		3422ECD3118B3C130061E2E2 /* AppInfoConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppInfoConstants.h; path = Classes/AppInfoConstants.h; sourceTree = "<group>"; };
+		3422ECD3118B3C130061E2E2 /* AppInfoConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppInfoConstants.h; path = TVShows/AppInfoConstants.h; sourceTree = "<group>"; };
 		3424120C11DC023600BC0742 /* Growl Registration Ticket.growlRegDict */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = "Growl Registration Ticket.growlRegDict"; path = "Resources/Growl Registration Ticket.growlRegDict"; sourceTree = "<group>"; };
 		3424AF2111EF643A009C49DD /* ca */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = ca; path = Resources/ca.lproj/Localizable.strings; sourceTree = "<group>"; wrapsLines = 1; };
 		3424AF2211EF643C009C49DD /* da */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = da; path = Resources/da.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -106,14 +106,13 @@
 		3424AF2611EF644D009C49DD /* no */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = no; path = Resources/no.lproj/Localizable.strings; sourceTree = "<group>"; };
 		3424AF2711EF6451009C49DD /* pt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = pt; path = Resources/pt.lproj/Localizable.strings; sourceTree = "<group>"; };
 		3424AF2811EF6453009C49DD /* sv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = sv; path = Resources/sv.lproj/Localizable.strings; sourceTree = "<group>"; };
-		342A32F611AA4C6200C433CD /* Cache.xcdatamodel */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.xcdatamodel; name = Cache.xcdatamodel; path = Models/Cache.xcdatamodel; sourceTree = "<group>"; };
 		342A5428132D4CB800FB526F /* BWInsetTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BWInsetTextField.h; path = BWToolkit/BWInsetTextField.h; sourceTree = "<group>"; };
 		342A5429132D4CB800FB526F /* BWInsetTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BWInsetTextField.m; path = BWToolkit/BWInsetTextField.m; sourceTree = "<group>"; };
 		342FEC8411E1864000E21FC0 /* hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hd.png; sourceTree = "<group>"; };
 		34463CCE1331B424001453EB /* NSColor+BWAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSColor+BWAdditions.h"; path = "BWToolkit/NSColor+BWAdditions.h"; sourceTree = "<group>"; };
 		34463CCF1331B424001453EB /* NSColor+BWAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSColor+BWAdditions.m"; path = "BWToolkit/NSColor+BWAdditions.m"; sourceTree = "<group>"; };
-		34463CD61331BC3F001453EB /* CRViewSubclass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRViewSubclass.h; sourceTree = "<group>"; };
-		34463CD71331BC40001453EB /* CRViewSubclass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRViewSubclass.m; sourceTree = "<group>"; };
+		34463CD61331BC3F001453EB /* CRViewSubclass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CRViewSubclass.h; path = ../TVShows/CRViewSubclass.h; sourceTree = "<group>"; };
+		34463CD71331BC40001453EB /* CRViewSubclass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CRViewSubclass.m; path = ../TVShows/CRViewSubclass.m; sourceTree = "<group>"; };
 		3446726511C157B60014C522 /* TVShowsHelper-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "TVShowsHelper-Info.plist"; sourceTree = "<group>"; };
 		3447183A9BB6C01A14888407 /* Pods-TVShows.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TVShows.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TVShows/Pods-TVShows.debug.xcconfig"; sourceTree = "<group>"; };
 		344971561330671700D24D68 /* Uninstaller.app */ = {isa = PBXFileReference; lastKnownFileType = wrapper.application; name = Uninstaller.app; path = Resources/Uninstaller.app; sourceTree = "<group>"; };
@@ -123,12 +122,10 @@
 		344A205911F5485900026735 /* Toggle-Slider.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Toggle-Slider.png"; sourceTree = "<group>"; };
 		344A637213330E960076FC2F /* LCLLogFileConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCLLogFileConfig.h; path = LCLLogFile/LCLLogFileConfig.h; sourceTree = "<group>"; };
 		345BE412119344E10016EA2D /* en */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = en; path = Resources/en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		345EC8D913235DA400F36BFF /* Subscriptions.xcdatamodel */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.xcdatamodel; name = Subscriptions.xcdatamodel; path = Models/Subscriptions.xcdatamodel; sourceTree = "<group>"; };
 		346C5BDF11FF6056003830CC /* de */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = de; path = Resources/de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		34785D04119B9CE200A28449 /* Credits.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = Credits.rtf; path = Resources/Credits.rtf; sourceTree = "<group>"; };
-		347B35D41210DB6000F4BFF0 /* TheTVDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TheTVDB.h; sourceTree = "<group>"; };
-		347B35D51210DB6000F4BFF0 /* TheTVDB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TheTVDB.m; sourceTree = "<group>"; };
-		347F1E6411A9FA96005A40AA /* PresetShows.xcdatamodel */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.xcdatamodel; name = PresetShows.xcdatamodel; path = Models/PresetShows.xcdatamodel; sourceTree = "<group>"; };
+		347B35D41210DB6000F4BFF0 /* TheTVDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TheTVDB.h; path = ../TVShows/TheTVDB.h; sourceTree = "<group>"; };
+		347B35D51210DB6000F4BFF0 /* TheTVDB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TheTVDB.m; path = ../TVShows/TheTVDB.m; sourceTree = "<group>"; };
 		347FC7AB11F6AE1E00E5B353 /* it */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = it; path = Resources/it.lproj/Localizable.strings; sourceTree = "<group>"; };
 		34908BD0119B9C1C00BDFC01 /* SUPublicDSAKey.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = SUPublicDSAKey.pem; path = Resources/SUPublicDSAKey.pem; sourceTree = "<group>"; };
 		3493F1121335B0F800467073 /* LCLLogFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCLLogFile.h; path = LCLLogFile/LCLLogFile.h; sourceTree = "<group>"; };
@@ -168,7 +165,7 @@
 		5791A5EF13A925890038A638 /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
 		5793D8171369560000BFF6B0 /* gl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = gl; path = Resources/gl.lproj/Localizable.strings; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.simpleColoring; };
 		5793D8191369569F00BFF6B0 /* el */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = el; path = Resources/el.lproj/Localizable.strings; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.simpleColoring; };
-		579CAD5413AB8471006743B4 /* AppSecretConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppSecretConstants.h; path = Classes/AppSecretConstants.h; sourceTree = "<group>"; };
+		579CAD5413AB8471006743B4 /* AppSecretConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppSecretConstants.h; path = TVShows/AppSecretConstants.h; sourceTree = "<group>"; };
 		579CAD5713AB9234006743B4 /* Miso-Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Miso-Logo.png"; sourceTree = "<group>"; };
 		57A9248713AFE5600038C76C /* af */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = af; path = Resources/af.lproj/Localizable.strings; sourceTree = "<group>"; };
 		57A9248813AFE5780038C76C /* eu */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = eu; path = Resources/eu.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -206,14 +203,14 @@
 		A01813CB1C2DDEB500C5B221 /* MetadataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MetadataViewController.h; sourceTree = "<group>"; };
 		A01813CC1C2DDEB500C5B221 /* MetadataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MetadataViewController.m; sourceTree = "<group>"; };
 		A01813CE1C2DE6B500C5B221 /* TVShows-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TVShows-Bridging-Header.h"; sourceTree = "<group>"; };
-		A02F332C1B1BC9BC004F2D4B /* NSMutableDictionary+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSMutableDictionary+Extensions.h"; path = "TVShows/NSMutableDictionary+Extensions.h"; sourceTree = SOURCE_ROOT; };
-		A02F332D1B1BC9BC004F2D4B /* NSMutableDictionary+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSMutableDictionary+Extensions.m"; path = "TVShows/NSMutableDictionary+Extensions.m"; sourceTree = SOURCE_ROOT; };
+		A02F332C1B1BC9BC004F2D4B /* NSMutableDictionary+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSMutableDictionary+Extensions.h"; path = "TVShows/Extensions/NSMutableDictionary+Extensions.h"; sourceTree = SOURCE_ROOT; };
+		A02F332D1B1BC9BC004F2D4B /* NSMutableDictionary+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSMutableDictionary+Extensions.m"; path = "TVShows/Extensions/NSMutableDictionary+Extensions.m"; sourceTree = SOURCE_ROOT; };
 		A0432F1E1AD9649600C19189 /* TVShows.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TVShows.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0432F211AD9649600C19189 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A0432F221AD9649600C19189 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A0432F231AD9649600C19189 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		A0432F251AD9649600C19189 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		A0432F271AD9649600C19189 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		A0432F271AD9649600C19189 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ../Resources/Images.xcassets; sourceTree = "<group>"; };
 		A0432F2A1AD9649600C19189 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		A0432F301AD9649700C19189 /* TVShowsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TVShowsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0432F351AD9649700C19189 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -221,6 +218,20 @@
 		A05A9BF31C58337E00FBEF9A /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		A05A9BF51C58338700FBEF9A /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = System/Library/Frameworks/Quartz.framework; sourceTree = SDKROOT; };
 		A05A9BF71C5833D800FBEF9A /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		A05A9C281C583BD600FBEF9A /* _Episode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = _Episode.h; path = ../../Models/_Episode.h; sourceTree = "<group>"; };
+		A05A9C291C583BD600FBEF9A /* _Episode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = _Episode.m; path = ../../Models/_Episode.m; sourceTree = "<group>"; };
+		A05A9C2A1C583BD600FBEF9A /* _Serie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = _Serie.h; path = ../../Models/_Serie.h; sourceTree = "<group>"; };
+		A05A9C2B1C583BD600FBEF9A /* _Serie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = _Serie.m; path = ../../Models/_Serie.m; sourceTree = "<group>"; };
+		A05A9C2C1C583BD600FBEF9A /* _Subscription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = _Subscription.h; path = ../../Models/_Subscription.h; sourceTree = "<group>"; };
+		A05A9C2D1C583BD600FBEF9A /* _Subscription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = _Subscription.m; path = ../../Models/_Subscription.m; sourceTree = "<group>"; };
+		A05A9C2E1C583BD600FBEF9A /* Episode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Episode.h; path = ../../Models/Episode.h; sourceTree = "<group>"; };
+		A05A9C2F1C583BD600FBEF9A /* Episode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Episode.m; path = ../../Models/Episode.m; sourceTree = "<group>"; };
+		A05A9C311C583BD600FBEF9A /* SubscriptionDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubscriptionDataSource.h; sourceTree = "<group>"; };
+		A05A9C321C583BD600FBEF9A /* SubscriptionDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubscriptionDataSource.m; sourceTree = "<group>"; };
+		A05A9C331C583BD600FBEF9A /* Serie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Serie.h; path = ../../Models/Serie.h; sourceTree = "<group>"; };
+		A05A9C341C583BD600FBEF9A /* Serie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Serie.m; path = ../../Models/Serie.m; sourceTree = "<group>"; };
+		A05A9C351C583BD600FBEF9A /* Subscription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Subscription.h; path = ../../Models/Subscription.h; sourceTree = "<group>"; };
+		A05A9C361C583BD600FBEF9A /* Subscription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Subscription.m; path = ../../Models/Subscription.m; sourceTree = "<group>"; };
 		A06F874B1AE6904700CD66DC /* OEGeometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OEGeometry.h; sourceTree = "<group>"; };
 		A06F87581AE6904700CD66DC /* OEUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OEUtilities.h; sourceTree = "<group>"; };
 		A06F87591AE6904700CD66DC /* OEUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OEUtilities.m; sourceTree = "<group>"; };
@@ -230,24 +241,12 @@
 		A07A51EF1C54389C00D40063 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		A07A51F51C543DCF00D40063 /* MainWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainWindowController.h; sourceTree = "<group>"; };
 		A07A51F61C543DCF00D40063 /* MainWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainWindowController.m; sourceTree = "<group>"; };
-		A07C6FB11AFFFA6E00611B8D /* NSDictionary+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+Extensions.h"; path = "TVShows/NSDictionary+Extensions.h"; sourceTree = SOURCE_ROOT; };
-		A07C6FB21AFFFA6E00611B8D /* NSDictionary+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+Extensions.m"; path = "TVShows/NSDictionary+Extensions.m"; sourceTree = SOURCE_ROOT; };
-		A08864371B140A9B00A4DBB6 /* Episode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Episode.h; path = TVShows/Episode.h; sourceTree = "<group>"; };
-		A08864381B140A9B00A4DBB6 /* Episode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Episode.m; path = TVShows/Episode.m; sourceTree = "<group>"; };
-		A088643A1B140A9B00A4DBB6 /* Serie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Serie.h; path = TVShows/Serie.h; sourceTree = "<group>"; };
-		A088643B1B140A9B00A4DBB6 /* Serie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Serie.m; path = TVShows/Serie.m; sourceTree = "<group>"; };
-		A08864401B141C1B00A4DBB6 /* Subscription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Subscription.h; path = TVShows/Subscription.h; sourceTree = "<group>"; };
-		A08864411B141C1B00A4DBB6 /* Subscription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Subscription.m; path = TVShows/Subscription.m; sourceTree = "<group>"; };
-		A0C1901F1B4081A90020ACD9 /* NSString+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extensions.h"; sourceTree = "<group>"; };
-		A0C190201B4081A90020ACD9 /* NSString+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extensions.m"; sourceTree = "<group>"; };
-		A0E4340B1B1A6209000AF57C /* _Subscription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = _Subscription.h; path = TVShows/_Subscription.h; sourceTree = "<group>"; };
-		A0E4340C1B1A6209000AF57C /* _Subscription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = _Subscription.m; path = TVShows/_Subscription.m; sourceTree = "<group>"; };
-		A0E4340E1B1A620A000AF57C /* _Episode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = _Episode.h; path = TVShows/_Episode.h; sourceTree = "<group>"; };
-		A0E4340F1B1A620A000AF57C /* _Episode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = _Episode.m; path = TVShows/_Episode.m; sourceTree = "<group>"; };
-		A0E434111B1A620A000AF57C /* _Serie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = _Serie.h; path = TVShows/_Serie.h; sourceTree = "<group>"; };
-		A0E434121B1A620A000AF57C /* _Serie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = _Serie.m; path = TVShows/_Serie.m; sourceTree = "<group>"; };
-		A0E4341D1B1AA1D7000AF57C /* NSManagedObject+Attributes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSManagedObject+Attributes.h"; path = "TVShows/NSManagedObject+Attributes.h"; sourceTree = SOURCE_ROOT; };
-		A0E4341E1B1AA1D7000AF57C /* NSManagedObject+Attributes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSManagedObject+Attributes.m"; path = "TVShows/NSManagedObject+Attributes.m"; sourceTree = SOURCE_ROOT; };
+		A07C6FB11AFFFA6E00611B8D /* NSDictionary+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+Extensions.h"; path = "TVShows/Extensions/NSDictionary+Extensions.h"; sourceTree = SOURCE_ROOT; };
+		A07C6FB21AFFFA6E00611B8D /* NSDictionary+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+Extensions.m"; path = "TVShows/Extensions/NSDictionary+Extensions.m"; sourceTree = SOURCE_ROOT; };
+		A0C1901F1B4081A90020ACD9 /* NSString+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+Extensions.h"; path = "../TVShows/Extensions/NSString+Extensions.h"; sourceTree = "<group>"; };
+		A0C190201B4081A90020ACD9 /* NSString+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+Extensions.m"; path = "../TVShows/Extensions/NSString+Extensions.m"; sourceTree = "<group>"; };
+		A0E4341D1B1AA1D7000AF57C /* NSManagedObject+Attributes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSManagedObject+Attributes.h"; path = "TVShows/Extensions/NSManagedObject+Attributes.h"; sourceTree = SOURCE_ROOT; };
+		A0E4341E1B1AA1D7000AF57C /* NSManagedObject+Attributes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSManagedObject+Attributes.m"; path = "TVShows/Extensions/NSManagedObject+Attributes.m"; sourceTree = SOURCE_ROOT; };
 		A0EE12121C54238900F4AB82 /* NSColor+OEAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSColor+OEAdditions.h"; sourceTree = "<group>"; };
 		A0EE12131C54238900F4AB82 /* NSColor+OEAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSColor+OEAdditions.m"; sourceTree = "<group>"; };
 		A0EE12141C54238900F4AB82 /* NSImage+DrawingAdditions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSImage+DrawingAdditions.swift"; sourceTree = "<group>"; };
@@ -291,8 +290,6 @@
 		A0EE123D1C54238900F4AB82 /* OEThemeTextAttributes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OEThemeTextAttributes.m; sourceTree = "<group>"; };
 		A0EF7F5A1AE9D20F0081188C /* TVShowsUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TVShowsUtilities.h; path = TVShows/TVShowsUtilities.h; sourceTree = "<group>"; };
 		A0EF7F5B1AE9D20F0081188C /* TVShowsUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TVShowsUtilities.m; path = TVShows/TVShowsUtilities.m; sourceTree = "<group>"; };
-		A0FC607F1C5573F300FD6044 /* SubscriptionDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubscriptionDataSource.h; sourceTree = "<group>"; };
-		A0FC60801C5573F300FD6044 /* SubscriptionDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubscriptionDataSource.m; sourceTree = "<group>"; };
 		A0FC60821C55932500FD6044 /* GridViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GridViewController.h; sourceTree = "<group>"; };
 		A0FC60831C55932500FD6044 /* GridViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GridViewController.m; sourceTree = "<group>"; };
 		B3F243393169C18DB2AB02E4 /* Pods_TVShows.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TVShows.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -368,10 +365,7 @@
 		3401816611951C9D00FB0E39 /* Core Data */ = {
 			isa = PBXGroup;
 			children = (
-				A06F88061AE6D0E300CD66DC /* Models */,
-				342A32F611AA4C6200C433CD /* Cache.xcdatamodel */,
-				347F1E6411A9FA96005A40AA /* PresetShows.xcdatamodel */,
-				345EC8D913235DA400F36BFF /* Subscriptions.xcdatamodel */,
+				A05A9BFB1C58375900FBEF9A /* Model */,
 				A06F88031AE6B92900CD66DC /* TVShows.xcdatamodeld */,
 			);
 			name = "Core Data";
@@ -611,6 +605,37 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		A05A9BFB1C58375900FBEF9A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A05A9C281C583BD600FBEF9A /* _Episode.h */,
+				A05A9C291C583BD600FBEF9A /* _Episode.m */,
+				A05A9C2A1C583BD600FBEF9A /* _Serie.h */,
+				A05A9C2B1C583BD600FBEF9A /* _Serie.m */,
+				A05A9C2C1C583BD600FBEF9A /* _Subscription.h */,
+				A05A9C2D1C583BD600FBEF9A /* _Subscription.m */,
+				A05A9C2E1C583BD600FBEF9A /* Episode.h */,
+				A05A9C2F1C583BD600FBEF9A /* Episode.m */,
+				A05A9C331C583BD600FBEF9A /* Serie.h */,
+				A05A9C341C583BD600FBEF9A /* Serie.m */,
+				A05A9C351C583BD600FBEF9A /* Subscription.h */,
+				A05A9C361C583BD600FBEF9A /* Subscription.m */,
+				A05A9C301C583BD600FBEF9A /* Extenstions */,
+			);
+			name = Model;
+			path = TVShows/Model;
+			sourceTree = "<group>";
+		};
+		A05A9C301C583BD600FBEF9A /* Extenstions */ = {
+			isa = PBXGroup;
+			children = (
+				A05A9C311C583BD600FBEF9A /* SubscriptionDataSource.h */,
+				A05A9C321C583BD600FBEF9A /* SubscriptionDataSource.m */,
+			);
+			name = Extenstions;
+			path = ../../Models/Extenstions;
+			sourceTree = "<group>";
+		};
 		A06F87271AE6904700CD66DC /* OpenEmu */ = {
 			isa = PBXGroup;
 			children = (
@@ -625,27 +650,6 @@
 			name = OpenEmu;
 			path = Vendor/OpenEmu;
 			sourceTree = SOURCE_ROOT;
-		};
-		A06F88061AE6D0E300CD66DC /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				A0E434111B1A620A000AF57C /* _Serie.h */,
-				A0E434121B1A620A000AF57C /* _Serie.m */,
-				A0E4340E1B1A620A000AF57C /* _Episode.h */,
-				A0E4340F1B1A620A000AF57C /* _Episode.m */,
-				A0E4340B1B1A6209000AF57C /* _Subscription.h */,
-				A0E4340C1B1A6209000AF57C /* _Subscription.m */,
-				A088643A1B140A9B00A4DBB6 /* Serie.h */,
-				A088643B1B140A9B00A4DBB6 /* Serie.m */,
-				A08864371B140A9B00A4DBB6 /* Episode.h */,
-				A08864381B140A9B00A4DBB6 /* Episode.m */,
-				A08864401B141C1B00A4DBB6 /* Subscription.h */,
-				A08864411B141C1B00A4DBB6 /* Subscription.m */,
-				A0FC607F1C5573F300FD6044 /* SubscriptionDataSource.h */,
-				A0FC60801C5573F300FD6044 /* SubscriptionDataSource.m */,
-			);
-			name = Models;
-			sourceTree = "<group>";
 		};
 		A06F881C1AE6D95A00CD66DC /* Networking */ = {
 			isa = PBXGroup;
@@ -953,7 +957,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "mogenerator --v2 --model Models/TVShows.xcdatamodeld --output-dir TVShows";
+			shellScript = "mogenerator --v2 --model Models/TVShows.xcdatamodeld --output-dir Models";
 		};
 		D86E2571DB04E641D333C284 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -977,15 +981,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A05A9C3C1C583BD600FBEF9A /* Serie.m in Sources */,
+				A05A9C381C583BD600FBEF9A /* _Serie.m in Sources */,
 				A06F881F1AE6D98F00CD66DC /* TVRage.m in Sources */,
 				A0EE124A1C54238900F4AB82 /* OEThemeGradient.m in Sources */,
-				A08864421B141C1B00A4DBB6 /* Subscription.m in Sources */,
 				A0432F261AD9649600C19189 /* main.m in Sources */,
 				A0EE12481C54238900F4AB82 /* OETheme.m in Sources */,
 				A00468D11C56F94200732FB5 /* AboutWindowController.swift in Sources */,
-				A0E434101B1A620A000AF57C /* _Episode.m in Sources */,
 				A02F332E1B1BC9BC004F2D4B /* NSMutableDictionary+Extensions.m in Sources */,
-				A0E434131B1A620A000AF57C /* _Serie.m in Sources */,
 				A0EE12491C54238900F4AB82 /* OEThemeColor.m in Sources */,
 				A0EE12411C54238900F4AB82 /* OEBackgroundNoisePattern.m in Sources */,
 				A0FC60841C55932500FD6044 /* GridViewController.m in Sources */,
@@ -994,15 +997,15 @@
 				A0EE123E1C54238900F4AB82 /* NSColor+OEAdditions.m in Sources */,
 				A0EF7F5F1AE9DB980081188C /* TheTVDB.m in Sources */,
 				A0EE12421C54238900F4AB82 /* OEGridCell.m in Sources */,
+				A05A9C3D1C583BD600FBEF9A /* Subscription.m in Sources */,
 				A0EF7F5E1AE9DB440081188C /* TVShowsUtilities.m in Sources */,
 				A00B46241AEC7FA30022BDBF /* CRViewSubclass.m in Sources */,
 				A06F87711AE6904700CD66DC /* OEUtilities.m in Sources */,
 				A0EE123F1C54238900F4AB82 /* NSImage+DrawingAdditions.swift in Sources */,
-				A0FC60811C5573F300FD6044 /* SubscriptionDataSource.m in Sources */,
+				A05A9C3B1C583BD600FBEF9A /* SubscriptionDataSource.m in Sources */,
 				A0EE12461C54238900F4AB82 /* OEGridViewCellIndicationLayer.m in Sources */,
 				A0EE124D1C54238900F4AB82 /* OEThemeTextAttributes.m in Sources */,
 				A0EE12431C54238900F4AB82 /* OEGridGameCell.m in Sources */,
-				A08864391B140A9B00A4DBB6 /* Episode.m in Sources */,
 				A07C6FB31AFFFA6E00611B8D /* NSDictionary+Extensions.m in Sources */,
 				A00B46221AEC7F350022BDBF /* NSColor+BWAdditions.m in Sources */,
 				A0EE12441C54238900F4AB82 /* OEGridMediaItemCell.m in Sources */,
@@ -1012,11 +1015,12 @@
 				A0EE12401C54238900F4AB82 /* NSString+UUID.m in Sources */,
 				A0EE124B1C54238900F4AB82 /* OEThemeImage.m in Sources */,
 				A00847CB1AF5C0F900F5D2A3 /* SubscriptionWindowController.m in Sources */,
-				A088643C1B140A9B00A4DBB6 /* Serie.m in Sources */,
 				A0C190211B4081A90020ACD9 /* NSString+Extensions.m in Sources */,
+				A05A9C391C583BD600FBEF9A /* _Subscription.m in Sources */,
 				A09521EA1AF6BDD4005AC0EF /* TVShows.xcdatamodeld in Sources */,
-				A0E4340D1B1A6209000AF57C /* _Subscription.m in Sources */,
 				A0EE12471C54238900F4AB82 /* OEGridViewFieldEditor.m in Sources */,
+				A05A9C371C583BD600FBEF9A /* _Episode.m in Sources */,
+				A05A9C3A1C583BD600FBEF9A /* Episode.m in Sources */,
 				A01813CD1C2DDEB500C5B221 /* MetadataViewController.m in Sources */,
 				A0E4341F1B1AA1D7000AF57C /* NSManagedObject+Attributes.m in Sources */,
 			);
@@ -1199,6 +1203,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				INFOPLIST_FILE = TVShows/Info.plist;
+				INSTALL_PATH = "$(LOCAL_APPS_DIR)";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = YES;
