@@ -1,0 +1,26 @@
+//
+//  TVShowsHelper_Prefix.pch
+//  TVShows
+//
+//  Created by Lucas casteletti on 2/9/16.
+//  Copyright © 2016 Lucas Casteletti. All rights reserved.
+//
+
+#ifndef TVShowsHelper_Prefix_pch
+#define TVShowsHelper_Prefix_pch
+
+@import Cocoa;
+@import CocoaLumberjack;
+@import MagicalRecord;
+
+// Swift bridge
+#import "TVShowsHelper-Swift.h"
+
+#import "TVShowsUtilities.h"
+#import "AppInfoConstants.h"
+
+#import "NSString+Extensions.h"
+#import "NSDictionary+Extensions.h"
+#import "NSMutableDictionary+Extensions.h"
+
+#endif /* TVShowsHelper_Prefix_pch */
