@@ -8,11 +8,12 @@
 
 @import Cocoa;
 
-@interface AppDelegate : NSObject <NSApplicationDelegate>
+#import "TSAppDelegate.h"
+
+@interface AppDelegate : TSAppDelegate <NSApplicationDelegate>
 
 - (IBAction)showAboutWindow:(id)sender;
 - (IBAction)showPreferencesWindow:(id)sender;
-
 
 @end
 

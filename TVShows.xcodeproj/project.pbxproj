@@ -74,6 +74,7 @@
 		A0EE124D1C54238900F4AB82 /* OEThemeTextAttributes.m in Sources */ = {isa = PBXBuildFile; fileRef = A0EE123D1C54238900F4AB82 /* OEThemeTextAttributes.m */; };
 		A0EF7F5E1AE9DB440081188C /* TVShowsUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = A0EF7F5B1AE9D20F0081188C /* TVShowsUtilities.m */; };
 		A0EF7F5F1AE9DB980081188C /* TheTVDB.m in Sources */ = {isa = PBXBuildFile; fileRef = 347B35D51210DB6000F4BFF0 /* TheTVDB.m */; };
+		A0F43D1D1C6A96C7005ABB35 /* TSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A0F43D1C1C6A96C7005ABB35 /* TSAppDelegate.m */; };
 		A0FC60841C55932500FD6044 /* GridViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0FC60831C55932500FD6044 /* GridViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -290,6 +291,8 @@
 		A0EE123D1C54238900F4AB82 /* OEThemeTextAttributes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OEThemeTextAttributes.m; sourceTree = "<group>"; };
 		A0EF7F5A1AE9D20F0081188C /* TVShowsUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TVShowsUtilities.h; path = TVShows/TVShowsUtilities.h; sourceTree = "<group>"; };
 		A0EF7F5B1AE9D20F0081188C /* TVShowsUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TVShowsUtilities.m; path = TVShows/TVShowsUtilities.m; sourceTree = "<group>"; };
+		A0F43D1B1C6A96C7005ABB35 /* TSAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TSAppDelegate.h; path = TVShows/TSAppDelegate.h; sourceTree = SOURCE_ROOT; };
+		A0F43D1C1C6A96C7005ABB35 /* TSAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TSAppDelegate.m; path = TVShows/TSAppDelegate.m; sourceTree = SOURCE_ROOT; };
 		A0FC60821C55932500FD6044 /* GridViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GridViewController.h; sourceTree = "<group>"; };
 		A0FC60831C55932500FD6044 /* GridViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GridViewController.m; sourceTree = "<group>"; };
 		B3F243393169C18DB2AB02E4 /* Pods_TVShows.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TVShows.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -461,6 +464,8 @@
 				A07C6FB01AFFF9CB00611B8D /* Categories */,
 				3444F29011DD13F700BF3724 /* Subclasses */,
 				A06F881C1AE6D95A00CD66DC /* Networking */,
+				A0F43D1B1C6A96C7005ABB35 /* TSAppDelegate.h */,
+				A0F43D1C1C6A96C7005ABB35 /* TSAppDelegate.m */,
 			);
 			name = "Other Sources";
 			path = Classes;
@@ -820,7 +825,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0610;
-				ORGANIZATIONNAME = "Víctor Pimentel";
+				ORGANIZATIONNAME = "Lucas Casteletti";
 				TargetAttributes = {
 					A0432F1D1AD9649600C19189 = {
 						CreatedOnToolsVersion = 6.2;
@@ -986,6 +991,7 @@
 				A06F881F1AE6D98F00CD66DC /* TVRage.m in Sources */,
 				A0EE124A1C54238900F4AB82 /* OEThemeGradient.m in Sources */,
 				A0432F261AD9649600C19189 /* main.m in Sources */,
+				A0F43D1D1C6A96C7005ABB35 /* TSAppDelegate.m in Sources */,
 				A0EE12481C54238900F4AB82 /* OETheme.m in Sources */,
 				A00468D11C56F94200732FB5 /* AboutWindowController.swift in Sources */,
 				A02F332E1B1BC9BC004F2D4B /* NSMutableDictionary+Extensions.m in Sources */,
