@@ -204,22 +204,12 @@
                             }
                         }];
                     }];
-                    
-                    /* NOT WORKING
-                    [Serie create:result InContext:managedObjectContext WithCompletion:^(SerieID *serieID) {
-                        [self updateShowInfo:serieID];
-                    } Error:^(NSError *error) {
-                        NSAlert *al = [NSAlert alertWithError:error];
-                        [al beginSheetModalForWindow:self.window completionHandler:nil];
-                    }];
-                     */
                 }
                 
                 if (error) {
                     NSAlert *al = [NSAlert alertWithError:error];
                     [al beginSheetModalForWindow:self.window completionHandler:nil];
                     [self updateShowInfo:nil];
-                    // NSLog(@"%@", error);
                 }
                 
                 [self.metadataViewController toggleLoading:NO];
@@ -271,8 +261,7 @@
     NSUInteger __block count;
     
     [self.managedObjectContext performBlockAndWait:^{
-        NSFetchRequest *request = [Subscription MR_requestAllWhere:@"serie" isEqualTo:serie inContext:self.managedObjectContext];
-        count = [managedObjectContext countForFetchRequest:request error:nil];
+        count = [Subscription numberOfEntitiesWithPredicate:[NSPredicate predicateWithFormat:@"serie = %@", @YES] inContext:self.managedObjectContext]
     }];
     
     return count;

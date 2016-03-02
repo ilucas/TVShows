@@ -25,7 +25,7 @@
 		1E9D4A87060F8C9E0113A9589A57D30A /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C98CDD424E6A1843F3699690FC6D2C /* AFHTTPRequestOperationManager.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		22B35870A80CAC7E97421EED4F168697 /* NSManagedObjectContext+MagicalObserving.h in Headers */ = {isa = PBXBuildFile; fileRef = 0396FF945D5CD59C58CD21A45EFEA983 /* NSManagedObjectContext+MagicalObserving.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		23D2D65B7DF0724774D13C08FC8DCF72 /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57560AC610E0D104A753B76359AD96FD /* AFNetworking.framework */; };
-		24B5B4857CE1F0523CBF7D193BF6EA6C /* Pods-TVShows-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 85BE3B3580DA61F32FD4905E29D7E68A /* Pods-TVShows-dummy.m */; };
+		24B5B4857CE1F0523CBF7D193BF6EA6C /* Pods-TVShows-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A0CD1BA5A83F8CD5382BE8AB8254878 /* Pods-TVShows-dummy.m */; };
 		25489BE65D2F7A29954058EDDB49ED4B /* Ono.h in Headers */ = {isa = PBXBuildFile; fileRef = 71C6F7ABC6487AD23E318B71E7FB0596 /* Ono.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		266BBA381F8BC4B3181EDCA7C1AF9D89 /* NSRelationshipDescription+MagicalDataImport.m in Sources */ = {isa = PBXBuildFile; fileRef = 444A8E234757BAB0F6BCB4A50E601B7D /* NSRelationshipDescription+MagicalDataImport.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		26BA59E06288B97A65F85E77A89884F5 /* DDLog+LOGV.h in Headers */ = {isa = PBXBuildFile; fileRef = 8AB83187008C6BB5C0DD8E4269697838 /* DDLog+LOGV.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -45,6 +45,7 @@
 		412553FF505DCEE9BA9018CA8FCD13C4 /* DDASLLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FDA3E43E6BF6A13E4057871D66F2941 /* DDASLLogger.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		41A2D2DDC36A357E0352C8EB5ADDB24E /* NSEntityDescription+MagicalDataImport.h in Headers */ = {isa = PBXBuildFile; fileRef = DDEB93E81E25BCF527B6883569CFEDB4 /* NSEntityDescription+MagicalDataImport.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		423772AFD100A1B58624832ACF801D1D /* AFURLRequestSerialization.h in Headers */ = {isa = PBXBuildFile; fileRef = 86EE998EE18DE1F8C9C83F64108F45A9 /* AFURLRequestSerialization.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4452733163433A54DE214B8C4A193B5D /* Pods-TVShowsHelper-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C27FE0C88B2E8106A9A0A35C5C37166 /* Pods-TVShowsHelper-dummy.m */; };
 		456F4B5BD91968C3BD244D63BBF996D4 /* NSManagedObjectContext+MagicalSaves.m in Sources */ = {isa = PBXBuildFile; fileRef = B629A200D132596ED90591C48820FFB9 /* NSManagedObjectContext+MagicalSaves.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		463D5B34D399527CEC20FD0CF69F694B /* MagicalRecord+ErrorHandling.h in Headers */ = {isa = PBXBuildFile; fileRef = 42AF4854D113765317678A0B41969C12 /* MagicalRecord+ErrorHandling.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		48684B9AE80D6952C1E7C8C2B3455538 /* CocoaLumberjack.h in Headers */ = {isa = PBXBuildFile; fileRef = A2FE0FD216C3E38192FD954B766FDE23 /* CocoaLumberjack.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -108,9 +109,10 @@
 		B2B88967CAB0E618AFEF00FEA3523F95 /* NSPersistentStoreCoordinator+MagicalRecord.h in Headers */ = {isa = PBXBuildFile; fileRef = 93B5D6753C38B507B4349A88B035A33D /* NSPersistentStoreCoordinator+MagicalRecord.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B5ACC9EF50E6E16BA18005DF36509697 /* Ono-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B7AAFE79A61B81C7C8FCBE5DAED6567 /* Ono-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B6C10103DC311BEFC5DBD13CC9C221B7 /* MagicalRecord+Options.m in Sources */ = {isa = PBXBuildFile; fileRef = 366E9CA71D4046DB01AB8A32DB0E9CC7 /* MagicalRecord+Options.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		B7271BB125BCA258522210884DFA5FF5 /* Pods-TVShows-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6C1BB9BEBC9ADFD5251650BC93A10EB5 /* Pods-TVShows-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B7271BB125BCA258522210884DFA5FF5 /* Pods-TVShows-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FDE77E2577970A3038D59670E8B56968 /* Pods-TVShows-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B7B2CD34FAD8AC06667E1B71EB533E4C /* NSManagedObject+MagicalFinders.m in Sources */ = {isa = PBXBuildFile; fileRef = B147952CAD0003B843F4248402A4DC97 /* NSManagedObject+MagicalFinders.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		BCFADEFA71CBF9191311CF288E13F159 /* NSNumber+MagicalDataImport.m in Sources */ = {isa = PBXBuildFile; fileRef = 6823A010910A7D6380157ABB722B0A50 /* NSNumber+MagicalDataImport.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		BD3E8DE8771B7F068664D0CC42BF978A /* Pods-TVShowsHelper-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A2B12511A2B99A80247BE92826E2A6D4 /* Pods-TVShowsHelper-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BE11464D5D1E4D1D4B53824C188CFF01 /* AFOnoResponseSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7282BEA2AC2473FDEBFE5E8A35B107F9 /* AFOnoResponseSerializer.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		C3CA32EF9F35195A3FC25A174F31CBD4 /* MagicalRecord+Actions.h in Headers */ = {isa = PBXBuildFile; fileRef = BF786331EA709D52898D955734728A1C /* MagicalRecord+Actions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C51D1EC6AE6684641AC18ED9FABC1108 /* MagicalRecord+Options.h in Headers */ = {isa = PBXBuildFile; fileRef = DE2281DF4203C5327D3446E2A55BFC14 /* MagicalRecord+Options.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -123,6 +125,7 @@
 		CBFB81A6AF5CD4C412609BE7B05F7780 /* DDDispatchQueueLogFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = C7311BF62FAAE006B10995A6CBCEC3EE /* DDDispatchQueueLogFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CC941A0C18E7B529B571651B518EF152 /* DDASLLogCapture.h in Headers */ = {isa = PBXBuildFile; fileRef = 5E798E3059F0B94C2FA3272FD90CA1BC /* DDASLLogCapture.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CD9A1FD0548426F9BAC0B7A3CEF79206 /* DDLegacyMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = AB89A4FA499D1DDF69C760E4B7116A14 /* DDLegacyMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CE0F5E8D9FEE918BF49B0F86E17014CD /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C251EF7092B5087B6FC7813EF771A3D /* Cocoa.framework */; };
 		CE4A8BAD029164D09F879A4DDD4DA922 /* NSManagedObjectContext+MagicalRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = E4F750F21D47366E377B281B2CF3D0B5 /* NSManagedObjectContext+MagicalRecord.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		D2E13DF0DDD622D12A2A6C58361B47AC /* DDAssertMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D62F76E20A7FB5230007CAE9406EB91 /* DDAssertMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D48F1DCE2D98CF39619A92E29E01D1DB /* CocoaLumberjack-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 67128EDB3B301D5B735D295950647136 /* CocoaLumberjack-dummy.m */; };
@@ -160,12 +163,26 @@
 			remoteGlobalIDString = 6C47374726E463087D55B4250373F519;
 			remoteInfo = AFNetworking;
 		};
+		15ED36F7EA9ACA19F9B42EA676E713CC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A20929BA38EBA05957C67C0FFF334640;
+			remoteInfo = Ono;
+		};
 		3D6267C8A1EA9160D73AD0C942C443EE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 6C47374726E463087D55B4250373F519;
 			remoteInfo = AFNetworking;
+		};
+		47AB3D364294726722071D91B83C5C43 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B9814B0957B977DA6BFFA2D02F61F8B9;
+			remoteInfo = MagicalRecord;
 		};
 		5EA3EC6CCE9013AB2B1B77F625936B8A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -181,12 +198,26 @@
 			remoteGlobalIDString = A20929BA38EBA05957C67C0FFF334640;
 			remoteInfo = Ono;
 		};
+		647EC0C08D9E45A4DAD18148CF12BB44 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6C47374726E463087D55B4250373F519;
+			remoteInfo = AFNetworking;
+		};
 		73303BDADCAD2A3D034C2A7AD84F14AF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = A20929BA38EBA05957C67C0FFF334640;
 			remoteInfo = Ono;
+		};
+		7E8A033273D4CA7791E7411F8CCD7EE5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2079008752CE45DC5EA95D0C9D919D07;
+			remoteInfo = AFOnoResponseSerializer;
 		};
 		86A2C84DC97C74FBD02C4D790E6207B7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -216,16 +247,30 @@
 			remoteGlobalIDString = B9814B0957B977DA6BFFA2D02F61F8B9;
 			remoteInfo = MagicalRecord;
 		};
+		DEBEE3ECD101373A3E81D4416158B3D4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AD92CB560CCD279E630ADE73283AC02D;
+			remoteInfo = AFNetworkActivityLogger;
+		};
+		F73959B880D5B33A9E1767CD289159F4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8A2E8FED01C8A6BC8ADFCF3C3B78368F;
+			remoteInfo = CocoaLumberjack;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		00FEC1E7FC662A36E594041CB085C919 /* Pods_TVShowsHelper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TVShowsHelper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		010AA8FF6F1884184A98C530CA5AF7D1 /* Pods-TVShowsHelper-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TVShowsHelper-acknowledgements.markdown"; sourceTree = "<group>"; };
 		03038D1058B998385FDA09F001C6CFA9 /* NSManagedObjectContext+MagicalChainSave.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSManagedObjectContext+MagicalChainSave.m"; path = "MagicalRecord/Categories/NSManagedObjectContext/NSManagedObjectContext+MagicalChainSave.m"; sourceTree = "<group>"; };
 		0362242BCB1D84BF68837EA671D92572 /* DDFileLogger.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DDFileLogger.m; path = Classes/DDFileLogger.m; sourceTree = "<group>"; };
 		0396FF945D5CD59C58CD21A45EFEA983 /* NSManagedObjectContext+MagicalObserving.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSManagedObjectContext+MagicalObserving.h"; path = "MagicalRecord/Categories/NSManagedObjectContext/NSManagedObjectContext+MagicalObserving.h"; sourceTree = "<group>"; };
 		04135F40F2D2B0906F37EA93A89F4CB1 /* AFNetworking.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = AFNetworking.modulemap; sourceTree = "<group>"; };
 		04AA83842AAA8212E5AB9A89CEEAD599 /* NSManagedObject+MagicalRecord.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSManagedObject+MagicalRecord.h"; path = "MagicalRecord/Categories/NSManagedObject/NSManagedObject+MagicalRecord.h"; sourceTree = "<group>"; };
-		05884598E5A066DCE1FF0144B5B31C8D /* MagicalRecord.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MagicalRecord.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		058E7251F2DB47ED61B57C760B76A40C /* Pods-TVShows-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TVShows-acknowledgements.markdown"; sourceTree = "<group>"; };
 		064C257AC9C819328C46C116CD69E615 /* DDContextFilterLogFormatter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DDContextFilterLogFormatter.m; path = Classes/Extensions/DDContextFilterLogFormatter.m; sourceTree = "<group>"; };
 		08C17043D7768E3EBC2E504219D21379 /* Ono-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Ono-prefix.pch"; sourceTree = "<group>"; };
 		096439C44B3CD59126A307665F8DAB01 /* MagicalRecord-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MagicalRecord-umbrella.h"; sourceTree = "<group>"; };
@@ -233,6 +278,7 @@
 		0C251EF7092B5087B6FC7813EF771A3D /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
 		119346C90F2A356ECC1BEC7DD6C708FD /* MagicalRecord.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MagicalRecord.h; path = MagicalRecord/MagicalRecord.h; sourceTree = "<group>"; };
 		12B62A74C91FED64FB5F5459A84B7D74 /* Ono-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Ono-dummy.m"; sourceTree = "<group>"; };
+		14422F429E06524CB90892E18519AAD9 /* Ono.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Ono.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		145541C98FB39AE23988EAD258FD71B0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		151088C1AD77964B2316736BC25F598F /* NSObject+MagicalDataImport.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+MagicalDataImport.h"; path = "MagicalRecord/Categories/DataImport/NSObject+MagicalDataImport.h"; sourceTree = "<group>"; };
 		156A56BFD6B288ED58BE18D1D360D281 /* AFNetworking.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AFNetworking.xcconfig; sourceTree = "<group>"; };
@@ -240,38 +286,43 @@
 		183EC38DAF210BB5C3A87E04E684DDC3 /* MagicalRecord+ShorthandMethods.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "MagicalRecord+ShorthandMethods.h"; path = "MagicalRecord/Core/MagicalRecord+ShorthandMethods.h"; sourceTree = "<group>"; };
 		188AC85C8B03314F4AEFA91578ACA196 /* DDLog.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DDLog.m; path = Classes/DDLog.m; sourceTree = "<group>"; };
 		192618FD6C3A603FAF65ADA87BB4A8A3 /* AFNetworking-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AFNetworking-umbrella.h"; sourceTree = "<group>"; };
+		1A0CD1BA5A83F8CD5382BE8AB8254878 /* Pods-TVShows-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TVShows-dummy.m"; sourceTree = "<group>"; };
 		1A9E17B2B8B31C507B9A565F7628FE57 /* MagicalRecord+Setup.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "MagicalRecord+Setup.m"; path = "MagicalRecord/Core/MagicalRecord+Setup.m"; sourceTree = "<group>"; };
+		1BE989C5C8F6B68ABE2FE45BC7574349 /* AFNetworkActivityLogger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AFNetworkActivityLogger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C9A0E9CE11442E5938BC4DB24107D56 /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFURLResponseSerialization.m; path = AFNetworking/AFURLResponseSerialization.m; sourceTree = "<group>"; };
 		1DF8625533724FF2E44F4B6E47850CE8 /* AFOnoResponseSerializer-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AFOnoResponseSerializer-prefix.pch"; sourceTree = "<group>"; };
+		213556F9ECB08CDC3E49449A66A2FF31 /* Pods-TVShowsHelper-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TVShowsHelper-frameworks.sh"; sourceTree = "<group>"; };
+		2143C3050CAA63368D1CF4407E8885AE /* Pods-TVShows-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TVShows-acknowledgements.markdown"; sourceTree = "<group>"; };
 		2399D05505DB1D04EDF156EC050D2401 /* AFHTTPRequestOperationManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFHTTPRequestOperationManager.h; path = AFNetworking/AFHTTPRequestOperationManager.h; sourceTree = "<group>"; };
 		28DF373639598827482B66B0180E0C8C /* AFNetworkActivityLogger.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = AFNetworkActivityLogger.modulemap; sourceTree = "<group>"; };
 		2A88B1D79BFDB9B9043A335BFB8B5E2F /* AFNetworkReachabilityManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFNetworkReachabilityManager.h; path = AFNetworking/AFNetworkReachabilityManager.h; sourceTree = "<group>"; };
 		2B7AAFE79A61B81C7C8FCBE5DAED6567 /* Ono-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Ono-umbrella.h"; sourceTree = "<group>"; };
 		2BB74052B23BA918D98DE72170F1AE22 /* NSEntityDescription+MagicalDataImport.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSEntityDescription+MagicalDataImport.m"; path = "MagicalRecord/Categories/DataImport/NSEntityDescription+MagicalDataImport.m"; sourceTree = "<group>"; };
 		2C982BFA32C0037C62C97EDB028B3AEF /* DDLog.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDLog.h; path = Classes/DDLog.h; sourceTree = "<group>"; };
-		2CA16CA5F896D73F3CEC9885E4917CF7 /* Pods-TVShows.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TVShows.release.xcconfig"; sourceTree = "<group>"; };
 		2D1AA63B2C89E4C7A795688E1C0881E7 /* AFHTTPSessionManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFHTTPSessionManager.m; path = AFNetworking/AFHTTPSessionManager.m; sourceTree = "<group>"; };
 		2EC8DFB04D7A84028F3F6C7AE1AA70E3 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
+		314DF37089030E280AA2B0CE9C8BED37 /* MagicalRecord.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MagicalRecord.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		33A125495CDA7A7A865EB1853EA40733 /* Ono.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Ono.modulemap; sourceTree = "<group>"; };
 		36163844D746360011A819212856F16C /* NSManagedObject+MagicalAggregation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSManagedObject+MagicalAggregation.h"; path = "MagicalRecord/Categories/NSManagedObject/NSManagedObject+MagicalAggregation.h"; sourceTree = "<group>"; };
 		36544EF3BDF1D018033C1E61B485BAA0 /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFHTTPRequestOperation.m; path = AFNetworking/AFHTTPRequestOperation.m; sourceTree = "<group>"; };
 		366E9CA71D4046DB01AB8A32DB0E9CC7 /* MagicalRecord+Options.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "MagicalRecord+Options.m"; path = "MagicalRecord/Core/MagicalRecord+Options.m"; sourceTree = "<group>"; };
 		3B3847D2712FD9AB03885F345F90520F /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFHTTPSessionManager.h; path = AFNetworking/AFHTTPSessionManager.h; sourceTree = "<group>"; };
 		3C0EEBDCCEBB8EA3E50A51BCDC40D001 /* AFURLSessionManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFURLSessionManager.h; path = AFNetworking/AFURLSessionManager.h; sourceTree = "<group>"; };
+		3C27FE0C88B2E8106A9A0A35C5C37166 /* Pods-TVShowsHelper-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TVShowsHelper-dummy.m"; sourceTree = "<group>"; };
 		3DA27598CD3BEC3EF90C35B6D7CD14AA /* NSAttributeDescription+MagicalDataImport.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSAttributeDescription+MagicalDataImport.h"; path = "MagicalRecord/Categories/DataImport/NSAttributeDescription+MagicalDataImport.h"; sourceTree = "<group>"; };
+		3EEF0ABC93B06581C1904719175204AF /* Pods-TVShowsHelper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TVShowsHelper.release.xcconfig"; sourceTree = "<group>"; };
 		3F80A3FDB99D55BB966177B5100BCF96 /* MagicalRecordShorthandMethodAliases.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MagicalRecordShorthandMethodAliases.h; path = MagicalRecord/Core/MagicalRecordShorthandMethodAliases.h; sourceTree = "<group>"; };
 		4053C341A9A4FDB0793C2B2D715E0C82 /* NSManagedObjectContext+MagicalThreading.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSManagedObjectContext+MagicalThreading.h"; path = "MagicalRecord/Categories/NSManagedObjectContext/NSManagedObjectContext+MagicalThreading.h"; sourceTree = "<group>"; };
-		40C19F0E9A80F6EE76EBA37ED66B74FB /* Ono.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Ono.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		415710B540A98C88C795333D067F9D88 /* CocoaLumberjack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CocoaLumberjack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4282AFA7B941E980A3BC9FBB0D2D90BD /* NSManagedObject+MagicalRecord.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSManagedObject+MagicalRecord.m"; path = "MagicalRecord/Categories/NSManagedObject/NSManagedObject+MagicalRecord.m"; sourceTree = "<group>"; };
 		42AF4854D113765317678A0B41969C12 /* MagicalRecord+ErrorHandling.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "MagicalRecord+ErrorHandling.h"; path = "MagicalRecord/Core/MagicalRecord+ErrorHandling.h"; sourceTree = "<group>"; };
 		42B1D59D6DD943852BFA1876F05B01B2 /* NSManagedObject+MagicalRequests.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSManagedObject+MagicalRequests.h"; path = "MagicalRecord/Categories/NSManagedObject/NSManagedObject+MagicalRequests.h"; sourceTree = "<group>"; };
 		444A8E234757BAB0F6BCB4A50E601B7D /* NSRelationshipDescription+MagicalDataImport.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSRelationshipDescription+MagicalDataImport.m"; path = "MagicalRecord/Categories/DataImport/NSRelationshipDescription+MagicalDataImport.m"; sourceTree = "<group>"; };
-		4538B2432B752B059E6BD961ECDEAB5B /* AFOnoResponseSerializer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AFOnoResponseSerializer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		471C5978FEB7434D5A95122F4C9F164D /* Pods-TVShows-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TVShows-resources.sh"; sourceTree = "<group>"; };
+		48BB9B5BFC8F77601E5B466E2422B7D3 /* CocoaLumberjack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CocoaLumberjack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FDA3E43E6BF6A13E4057871D66F2941 /* DDASLLogger.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DDASLLogger.m; path = Classes/DDASLLogger.m; sourceTree = "<group>"; };
 		5249241072E9976774C9C9BF4C02601E /* AFSecurityPolicy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFSecurityPolicy.m; path = AFNetworking/AFSecurityPolicy.m; sourceTree = "<group>"; };
 		54BF76ACF45966E6E01B22C38E61BE4A /* NSObject+MagicalDataImport.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+MagicalDataImport.m"; path = "MagicalRecord/Categories/DataImport/NSObject+MagicalDataImport.m"; sourceTree = "<group>"; };
-		556E91CD3BE93C6B84DD85CAF88264E7 /* Pods-TVShows.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-TVShows.modulemap"; sourceTree = "<group>"; };
 		57560AC610E0D104A753B76359AD96FD /* AFNetworking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AFNetworking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BBF8C75F79087AD2883B2950DFF2951 /* ONOXMLDocument.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ONOXMLDocument.h; path = Source/ONOXMLDocument.h; sourceTree = "<group>"; };
 		5C376F70DBC2D9A5C95FC69CAF2DA9DF /* DDDispatchQueueLogFormatter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DDDispatchQueueLogFormatter.m; path = Classes/Extensions/DDDispatchQueueLogFormatter.m; sourceTree = "<group>"; };
@@ -280,12 +331,13 @@
 		5E798E3059F0B94C2FA3272FD90CA1BC /* DDASLLogCapture.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDASLLogCapture.h; path = Classes/DDASLLogCapture.h; sourceTree = "<group>"; };
 		62DE57821C6C6121A1D40F5CC9D33B06 /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/CoreServices.framework; sourceTree = DEVELOPER_DIR; };
 		6455D73E5CDA50E942437D494D4A3270 /* NSString+MagicalDataImport.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+MagicalDataImport.m"; path = "MagicalRecord/Categories/DataImport/NSString+MagicalDataImport.m"; sourceTree = "<group>"; };
+		66B21FE6D445E5BA7E339BA0372CE99E /* Pods-TVShowsHelper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TVShowsHelper.debug.xcconfig"; sourceTree = "<group>"; };
 		66FCF50F0517F22AE66C33A40AAB1855 /* AFNetworkActivityLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFNetworkActivityLogger.h; path = AFNetworkActivityLogger/AFNetworkActivityLogger.h; sourceTree = "<group>"; };
 		67128EDB3B301D5B735D295950647136 /* CocoaLumberjack-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CocoaLumberjack-dummy.m"; sourceTree = "<group>"; };
 		6823A010910A7D6380157ABB722B0A50 /* NSNumber+MagicalDataImport.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSNumber+MagicalDataImport.m"; path = "MagicalRecord/Categories/DataImport/NSNumber+MagicalDataImport.m"; sourceTree = "<group>"; };
 		68F298BE05EA9A5303AA999815E47544 /* NSString+MagicalDataImport.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+MagicalDataImport.h"; path = "MagicalRecord/Categories/DataImport/NSString+MagicalDataImport.h"; sourceTree = "<group>"; };
 		69C0C61C659237BCBAF04EAEA0F85F54 /* NSPersistentStore+MagicalRecord.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSPersistentStore+MagicalRecord.h"; path = "MagicalRecord/Categories/NSPersistentStore+MagicalRecord.h"; sourceTree = "<group>"; };
-		6C1BB9BEBC9ADFD5251650BC93A10EB5 /* Pods-TVShows-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TVShows-umbrella.h"; sourceTree = "<group>"; };
+		6B129A8F144A21D425775AA63025DC68 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6C9F5D8A229B5346451307612F5990A5 /* NSManagedObjectContext+MagicalSaves.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSManagedObjectContext+MagicalSaves.h"; path = "MagicalRecord/Categories/NSManagedObjectContext/NSManagedObjectContext+MagicalSaves.h"; sourceTree = "<group>"; };
 		6DA2E96B0942D84A59448E2B8AED0DE0 /* DDTTYLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDTTYLogger.h; path = Classes/DDTTYLogger.h; sourceTree = "<group>"; };
 		71C6F7ABC6487AD23E318B71E7FB0596 /* Ono.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Ono.h; path = Source/Ono.h; sourceTree = "<group>"; };
@@ -295,26 +347,24 @@
 		75657CBA6765C78EC83B5D7A874C0EB7 /* DDFileLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDFileLogger.h; path = Classes/DDFileLogger.h; sourceTree = "<group>"; };
 		758497AC99EAE2C24C4BC3CC9889B429 /* MagicalRecord+Setup.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "MagicalRecord+Setup.h"; path = "MagicalRecord/Core/MagicalRecord+Setup.h"; sourceTree = "<group>"; };
 		76A2239A319E5D3C22A2A25254B35F57 /* NSNumber+MagicalDataImport.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSNumber+MagicalDataImport.h"; path = "MagicalRecord/Categories/DataImport/NSNumber+MagicalDataImport.h"; sourceTree = "<group>"; };
-		7AF093C370EB31919D0EFED8598EAABE /* AFNetworking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AFNetworking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7B5EB0237E8F684C9484AEB5E846BF58 /* Pods-TVShows.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TVShows.debug.xcconfig"; sourceTree = "<group>"; };
 		7B8AAD1F30A9996511339B3E0E4BD18B /* MagicalRecord+ShorthandMethods.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "MagicalRecord+ShorthandMethods.m"; path = "MagicalRecord/Core/MagicalRecord+ShorthandMethods.m"; sourceTree = "<group>"; };
 		7F792A47F946F446C19C846C4439C26C /* DDLogMacros.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDLogMacros.h; path = Classes/DDLogMacros.h; sourceTree = "<group>"; };
 		8126AACC725784D22F69267563823B05 /* AFNetworkActivityLogger.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AFNetworkActivityLogger.xcconfig; sourceTree = "<group>"; };
 		8156A35DB6E0CD3A52B90B1E006E3466 /* MagicalImportFunctions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MagicalImportFunctions.h; path = MagicalRecord/Categories/DataImport/MagicalImportFunctions.h; sourceTree = "<group>"; };
 		82032C0E65F12C4B820A27B836797631 /* NSPersistentStoreCoordinator+MagicalRecord.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSPersistentStoreCoordinator+MagicalRecord.m"; path = "MagicalRecord/Categories/NSPersistentStoreCoordinator+MagicalRecord.m"; sourceTree = "<group>"; };
-		83A44A3B205C024CA71DA2736E935886 /* Pods_TVShows.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TVShows.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		83C98CDD424E6A1843F3699690FC6D2C /* AFHTTPRequestOperationManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFHTTPRequestOperationManager.m; path = AFNetworking/AFHTTPRequestOperationManager.m; sourceTree = "<group>"; };
 		84B42B646F5960091AFA0BBB661A45BD /* AFURLResponseSerialization.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFURLResponseSerialization.h; path = AFNetworking/AFURLResponseSerialization.h; sourceTree = "<group>"; };
 		856047A30E3BFA906E37C6691129F115 /* CocoaLumberjack-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CocoaLumberjack-prefix.pch"; sourceTree = "<group>"; };
-		85BE3B3580DA61F32FD4905E29D7E68A /* Pods-TVShows-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TVShows-dummy.m"; sourceTree = "<group>"; };
 		86EE998EE18DE1F8C9C83F64108F45A9 /* AFURLRequestSerialization.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFURLRequestSerialization.h; path = AFNetworking/AFURLRequestSerialization.h; sourceTree = "<group>"; };
 		8AB83187008C6BB5C0DD8E4269697838 /* DDLog+LOGV.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "DDLog+LOGV.h"; path = "Classes/DDLog+LOGV.h"; sourceTree = "<group>"; };
-		8FCB932FEFB6686A92E31EE7BE358BF3 /* CocoaLumberjack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CocoaLumberjack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8DA117E06A98356D16F12067BCBA4C77 /* Pods-TVShows-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TVShows-acknowledgements.plist"; sourceTree = "<group>"; };
 		9053545648D22E75FC6349CA16EE3A1A /* AFNetworkActivityLogger-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AFNetworkActivityLogger-umbrella.h"; sourceTree = "<group>"; };
 		90EEA87CFB6D0293A760C3A8D8B3D9E0 /* NSManagedObjectModel+MagicalRecord.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSManagedObjectModel+MagicalRecord.m"; path = "MagicalRecord/Categories/NSManagedObjectModel+MagicalRecord.m"; sourceTree = "<group>"; };
 		91BFE67968CAFCAC6553DA8BD3D601F2 /* NSManagedObjectContext+MagicalChainSave.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSManagedObjectContext+MagicalChainSave.h"; path = "MagicalRecord/Categories/NSManagedObjectContext/NSManagedObjectContext+MagicalChainSave.h"; sourceTree = "<group>"; };
+		91FAFE786B601644735F4A2C582F87B0 /* AFNetworking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AFNetworking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		92A1A41B19D9A87418496169086A273D /* DDMultiFormatter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DDMultiFormatter.m; path = Classes/Extensions/DDMultiFormatter.m; sourceTree = "<group>"; };
 		93B5D6753C38B507B4349A88B035A33D /* NSPersistentStoreCoordinator+MagicalRecord.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSPersistentStoreCoordinator+MagicalRecord.h"; path = "MagicalRecord/Categories/NSPersistentStoreCoordinator+MagicalRecord.h"; sourceTree = "<group>"; };
+		975CC9BEAA21E2D582B88862E5E443A7 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		979B5F45BF66DD1C990F2F556CE0CC51 /* CocoaLumberjack.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CocoaLumberjack.xcconfig; sourceTree = "<group>"; };
 		98F30FF85E267A497F46675BCDFDB71F /* MagicalRecord+ErrorHandling.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "MagicalRecord+ErrorHandling.m"; path = "MagicalRecord/Core/MagicalRecord+ErrorHandling.m"; sourceTree = "<group>"; };
 		991314279C02A9FA80A463280C386634 /* NSManagedObject+MagicalDataImport.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSManagedObject+MagicalDataImport.m"; path = "MagicalRecord/Categories/NSManagedObject/NSManagedObject+MagicalDataImport.m"; sourceTree = "<group>"; };
@@ -325,6 +375,7 @@
 		9E09CA4E160FA4AEDE01A51B7C1E7AAA /* NSAttributeDescription+MagicalDataImport.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSAttributeDescription+MagicalDataImport.m"; path = "MagicalRecord/Categories/DataImport/NSAttributeDescription+MagicalDataImport.m"; sourceTree = "<group>"; };
 		A0E8E94459C058F438AE42AAAD8A324A /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
 		A1D0327B655BB88779C66433D4B65F4D /* DDASLLogCapture.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DDASLLogCapture.m; path = Classes/DDASLLogCapture.m; sourceTree = "<group>"; };
+		A2B12511A2B99A80247BE92826E2A6D4 /* Pods-TVShowsHelper-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TVShowsHelper-umbrella.h"; sourceTree = "<group>"; };
 		A2FE0FD216C3E38192FD954B766FDE23 /* CocoaLumberjack.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CocoaLumberjack.h; path = Classes/CocoaLumberjack.h; sourceTree = "<group>"; };
 		A482838D56BBE455100F1CB1820303BF /* DDContextFilterLogFormatter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDContextFilterLogFormatter.h; path = Classes/Extensions/DDContextFilterLogFormatter.h; sourceTree = "<group>"; };
 		A535BCDB5FC1E6A0CE04C79785336C63 /* NSManagedObject+MagicalAggregation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSManagedObject+MagicalAggregation.m"; path = "MagicalRecord/Categories/NSManagedObject/NSManagedObject+MagicalAggregation.m"; sourceTree = "<group>"; };
@@ -333,8 +384,8 @@
 		A8B81D3264BFF6431F6D58B752E10384 /* MagicalRecord.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MagicalRecord.xcconfig; sourceTree = "<group>"; };
 		AB89A4FA499D1DDF69C760E4B7116A14 /* DDLegacyMacros.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDLegacyMacros.h; path = Classes/DDLegacyMacros.h; sourceTree = "<group>"; };
 		ABA0549744066539C101C1C6F360D0CA /* ONOXMLDocument.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ONOXMLDocument.m; path = Source/ONOXMLDocument.m; sourceTree = "<group>"; };
+		AC0631D1EC21CDAA92AA4B1D52E2235C /* Pods-TVShows.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TVShows.debug.xcconfig"; sourceTree = "<group>"; };
 		ACF5BFDB75F9E5B4BBFB525066AD0E19 /* MagicalRecordXcode7CompatibilityMacros.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MagicalRecordXcode7CompatibilityMacros.h; path = MagicalRecord/Core/MagicalRecordXcode7CompatibilityMacros.h; sourceTree = "<group>"; };
-		AD6935BF3549A0F84C3EFF265868742E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ADC2A1848433E937A51F526FDE1F4AD8 /* AFOnoResponseSerializer-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AFOnoResponseSerializer-dummy.m"; sourceTree = "<group>"; };
 		AEDC405A65B90001B4DF05A6C0165D50 /* MagicalRecord-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MagicalRecord-prefix.pch"; sourceTree = "<group>"; };
 		AF71FA09E8AFC2C05BAEE864D0DB53AA /* DDAbstractDatabaseLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDAbstractDatabaseLogger.h; path = Classes/DDAbstractDatabaseLogger.h; sourceTree = "<group>"; };
@@ -343,23 +394,24 @@
 		B403E769FCA5B6DCB72D10906F225466 /* MagicalRecordLogging.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MagicalRecordLogging.h; path = MagicalRecord/Core/MagicalRecordLogging.h; sourceTree = "<group>"; };
 		B467CA8D2E33F07C10A57B0C437E2E40 /* AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFNetworking.h; path = AFNetworking/AFNetworking.h; sourceTree = "<group>"; };
 		B4DD2B1E056C3D770081EC20337398A8 /* AFURLConnectionOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFURLConnectionOperation.m; path = AFNetworking/AFURLConnectionOperation.m; sourceTree = "<group>"; };
+		B59690F38C661C9A984CE7A790190ECE /* Pods-TVShows-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TVShows-frameworks.sh"; sourceTree = "<group>"; };
 		B629A200D132596ED90591C48820FFB9 /* NSManagedObjectContext+MagicalSaves.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSManagedObjectContext+MagicalSaves.m"; path = "MagicalRecord/Categories/NSManagedObjectContext/NSManagedObjectContext+MagicalSaves.m"; sourceTree = "<group>"; };
 		B6B2382A255257EA609E194A7B627121 /* AFNetworkActivityLogger.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFNetworkActivityLogger.m; path = AFNetworkActivityLogger/AFNetworkActivityLogger.m; sourceTree = "<group>"; };
 		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		BCAA5BE0A25B4A24B1AAC74341836D26 /* AFOnoResponseSerializer.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = AFOnoResponseSerializer.modulemap; sourceTree = "<group>"; };
+		BD3958045F2909260015EB976CEB10E6 /* Pods-TVShows.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TVShows.release.xcconfig"; sourceTree = "<group>"; };
+		BEB48F69F18D06FC7921F970A13D4F86 /* Pods_TVShows.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TVShows.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF786331EA709D52898D955734728A1C /* MagicalRecord+Actions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "MagicalRecord+Actions.h"; path = "MagicalRecord/Core/MagicalRecord+Actions.h"; sourceTree = "<group>"; };
 		C121AA6CF59CD33EEB8E93D4FD74764D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C262036E6D0C74E83DB8FE87EF3401BC /* NSManagedObjectContext+MagicalObserving.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSManagedObjectContext+MagicalObserving.m"; path = "MagicalRecord/Categories/NSManagedObjectContext/NSManagedObjectContext+MagicalObserving.m"; sourceTree = "<group>"; };
 		C31324EFA0A8E229CF20679CA7591E35 /* AFNetworkReachabilityManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFNetworkReachabilityManager.m; path = AFNetworking/AFNetworkReachabilityManager.m; sourceTree = "<group>"; };
 		C3FE317C2AA6B3BE0B9063328224EFD7 /* AFNetworkActivityLogger-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AFNetworkActivityLogger-prefix.pch"; sourceTree = "<group>"; };
-		C54E7FB00F6C5C628392829E707659FD /* Pods-TVShows-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TVShows-acknowledgements.plist"; sourceTree = "<group>"; };
 		C662B08CADD797A647251B4BD2E98294 /* NSRelationshipDescription+MagicalDataImport.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSRelationshipDescription+MagicalDataImport.h"; path = "MagicalRecord/Categories/DataImport/NSRelationshipDescription+MagicalDataImport.h"; sourceTree = "<group>"; };
 		C72B944DC72BB317755662CA6E6C0969 /* NSManagedObjectModel+MagicalRecord.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSManagedObjectModel+MagicalRecord.h"; path = "MagicalRecord/Categories/NSManagedObjectModel+MagicalRecord.h"; sourceTree = "<group>"; };
 		C7311BF62FAAE006B10995A6CBCEC3EE /* DDDispatchQueueLogFormatter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDDispatchQueueLogFormatter.h; path = Classes/Extensions/DDDispatchQueueLogFormatter.h; sourceTree = "<group>"; };
 		C873DB91A046DEC67122B77F43A1A9B2 /* MagicalRecord+iCloud.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "MagicalRecord+iCloud.m"; path = "MagicalRecord/Core/MagicalRecord+iCloud.m"; sourceTree = "<group>"; };
 		C9587C3EBA7D1125B818DAFFE70E089A /* Ono.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Ono.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9E5DB3ED96202833F1F7DA577AD2FCA /* NSManagedObjectContext+MagicalThreading.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSManagedObjectContext+MagicalThreading.m"; path = "MagicalRecord/Categories/NSManagedObjectContext/NSManagedObjectContext+MagicalThreading.m"; sourceTree = "<group>"; };
-		CBCBDB85E35BA5146774CD8DD559F00D /* Pods-TVShows-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TVShows-frameworks.sh"; sourceTree = "<group>"; };
 		CE6265545CBAE674AE481DBC7D0E840E /* MagicalRecord.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = MagicalRecord.modulemap; sourceTree = "<group>"; };
 		D01528C7A482D4BD8C304854B556388B /* MagicalRecord+iCloud.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "MagicalRecord+iCloud.h"; path = "MagicalRecord/Core/MagicalRecord+iCloud.h"; sourceTree = "<group>"; };
 		D24661EEA319915ABEEB9D255D0406AC /* DDAbstractDatabaseLogger.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DDAbstractDatabaseLogger.m; path = Classes/DDAbstractDatabaseLogger.m; sourceTree = "<group>"; };
@@ -368,6 +420,7 @@
 		D60C207FD1B6823775F94879BE87B90C /* NSManagedObject+MagicalDataImport.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSManagedObject+MagicalDataImport.h"; path = "MagicalRecord/Categories/NSManagedObject/NSManagedObject+MagicalDataImport.h"; sourceTree = "<group>"; };
 		D9570850F216ABCAFD789D6A971A8289 /* DDMultiFormatter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDMultiFormatter.h; path = Classes/Extensions/DDMultiFormatter.h; sourceTree = "<group>"; };
 		D9D38AD4D84874E5AB972550E240BFE5 /* AFNetworkActivityLogger-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AFNetworkActivityLogger-dummy.m"; sourceTree = "<group>"; };
+		DA18A60A2B18D653FEEEB6583D7F5F74 /* Pods-TVShowsHelper-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TVShowsHelper-resources.sh"; sourceTree = "<group>"; };
 		DAAA2674DA6ABDCE3646CCBC4230A797 /* AFURLRequestSerialization.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFURLRequestSerialization.m; path = AFNetworking/AFURLRequestSerialization.m; sourceTree = "<group>"; };
 		DAC37A0E83F0045E0B4A7D5B1016B744 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DAE17D286CF3D79EAE84B7FB235F22A5 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -375,19 +428,22 @@
 		DE2281DF4203C5327D3446E2A55BFC14 /* MagicalRecord+Options.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "MagicalRecord+Options.h"; path = "MagicalRecord/Core/MagicalRecord+Options.h"; sourceTree = "<group>"; };
 		DF86D4BACA0B768CA49A787A6A22D7B6 /* NSPersistentStore+MagicalRecord.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSPersistentStore+MagicalRecord.m"; path = "MagicalRecord/Categories/NSPersistentStore+MagicalRecord.m"; sourceTree = "<group>"; };
 		DFC7238BA6E8E2E105CC0AFA97E1C2D1 /* NSManagedObject+MagicalFinders.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSManagedObject+MagicalFinders.h"; path = "MagicalRecord/Categories/NSManagedObject/NSManagedObject+MagicalFinders.h"; sourceTree = "<group>"; };
-		DFF88EA28BCBA1EE1CCE6127AAF7F19A /* Pods-TVShows-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TVShows-resources.sh"; sourceTree = "<group>"; };
 		E10B1F7BEB3FE1D814F648E3EA886912 /* MagicalRecordInternal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MagicalRecordInternal.h; path = MagicalRecord/Core/MagicalRecordInternal.h; sourceTree = "<group>"; };
 		E1FC5AEC60D478A7BE9E4CFB102177AA /* AFSecurityPolicy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFSecurityPolicy.h; path = AFNetworking/AFSecurityPolicy.h; sourceTree = "<group>"; };
 		E28C610B2BBFB94039E3BBB533B91A68 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E4D861AEF432F57077121E355769ACEE /* Pods-TVShows.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-TVShows.modulemap"; sourceTree = "<group>"; };
 		E4F750F21D47366E377B281B2CF3D0B5 /* NSManagedObjectContext+MagicalRecord.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSManagedObjectContext+MagicalRecord.m"; path = "MagicalRecord/Categories/NSManagedObjectContext/NSManagedObjectContext+MagicalRecord.m"; sourceTree = "<group>"; };
+		E639F5399E87B3B7754472F109B1DCAB /* Pods-TVShowsHelper-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TVShowsHelper-acknowledgements.plist"; sourceTree = "<group>"; };
 		E74D08ECF128178681CA4105191D018A /* Ono.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Ono.xcconfig; sourceTree = "<group>"; };
-		EA08C923DE0D7EB30DBEB602F2EF9D34 /* AFNetworkActivityLogger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AFNetworkActivityLogger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECA27072CC5E08FB41FD965823B4D93E /* NSManagedObject+MagicalRequests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSManagedObject+MagicalRequests.m"; path = "MagicalRecord/Categories/NSManagedObject/NSManagedObject+MagicalRequests.m"; sourceTree = "<group>"; };
 		EF64C295F909DEA257AD5E097EB2595A /* NSManagedObjectContext+MagicalRecord.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSManagedObjectContext+MagicalRecord.h"; path = "MagicalRecord/Categories/NSManagedObjectContext/NSManagedObjectContext+MagicalRecord.h"; sourceTree = "<group>"; };
 		F12DA8D74999254447621DA2DFA9A703 /* MagicalRecordInternal.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MagicalRecordInternal.m; path = MagicalRecord/Core/MagicalRecordInternal.m; sourceTree = "<group>"; };
+		F1F5EA910FAB35062702D9921E4E73A9 /* AFOnoResponseSerializer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AFOnoResponseSerializer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F32226CF1901C824DF28F8E31D51CD28 /* Pods-TVShowsHelper.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-TVShowsHelper.modulemap"; sourceTree = "<group>"; };
 		F5B9480D0E4E8C6FC74A3A4DF5786DC7 /* CocoaLumberjack.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = CocoaLumberjack.modulemap; sourceTree = "<group>"; };
 		F9D37F644234FE7142A8439C44D1D212 /* AFOnoResponseSerializer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFOnoResponseSerializer.h; path = AFOnoResponseSerializer/AFOnoResponseSerializer.h; sourceTree = "<group>"; };
 		FDC378970F3CB67DFB5FE50F505944FA /* MagicalRecord+Actions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "MagicalRecord+Actions.m"; path = "MagicalRecord/Core/MagicalRecord+Actions.m"; sourceTree = "<group>"; };
+		FDE77E2577970A3038D59670E8B56968 /* Pods-TVShows-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TVShows-umbrella.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -404,6 +460,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				59AD833FF0D47A0E1EDEFE6DF5B64413 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		58C4FEC8E7CE1FF0E735AFE68B61DC1A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE0F5E8D9FEE918BF49B0F86E17014CD /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -458,6 +522,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0E8CA4B5E31B9B6DA118B85093F6B9BA /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				31AE8867FA8A7D79A19EFBA0F9AE2D66 /* Pods-TVShows */,
+				944D5531E5A531644F004B11FC9FE7A0 /* Pods-TVShowsHelper */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
 		14F94D07617A8478D01DE9B6BF15BBDE /* AFNetworking */ = {
 			isa = PBXGroup;
 			children = (
@@ -530,6 +603,24 @@
 			name = NSURLSession;
 			sourceTree = "<group>";
 		};
+		31AE8867FA8A7D79A19EFBA0F9AE2D66 /* Pods-TVShows */ = {
+			isa = PBXGroup;
+			children = (
+				975CC9BEAA21E2D582B88862E5E443A7 /* Info.plist */,
+				E4D861AEF432F57077121E355769ACEE /* Pods-TVShows.modulemap */,
+				2143C3050CAA63368D1CF4407E8885AE /* Pods-TVShows-acknowledgements.markdown */,
+				8DA117E06A98356D16F12067BCBA4C77 /* Pods-TVShows-acknowledgements.plist */,
+				1A0CD1BA5A83F8CD5382BE8AB8254878 /* Pods-TVShows-dummy.m */,
+				B59690F38C661C9A984CE7A790190ECE /* Pods-TVShows-frameworks.sh */,
+				471C5978FEB7434D5A95122F4C9F164D /* Pods-TVShows-resources.sh */,
+				FDE77E2577970A3038D59670E8B56968 /* Pods-TVShows-umbrella.h */,
+				AC0631D1EC21CDAA92AA4B1D52E2235C /* Pods-TVShows.debug.xcconfig */,
+				BD3958045F2909260015EB976CEB10E6 /* Pods-TVShows.release.xcconfig */,
+			);
+			name = "Pods-TVShows";
+			path = "Target Support Files/Pods-TVShows";
+			sourceTree = "<group>";
+		};
 		33928093D5E8D38E1CD79211417D4D34 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -550,6 +641,21 @@
 				3F80A3FDB99D55BB966177B5100BCF96 /* MagicalRecordShorthandMethodAliases.h */,
 			);
 			name = ShorthandMethodAliases;
+			sourceTree = "<group>";
+		};
+		4633B177D00B556E8ECEC47E50166C21 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1BE989C5C8F6B68ABE2FE45BC7574349 /* AFNetworkActivityLogger.framework */,
+				91FAFE786B601644735F4A2C582F87B0 /* AFNetworking.framework */,
+				F1F5EA910FAB35062702D9921E4E73A9 /* AFOnoResponseSerializer.framework */,
+				48BB9B5BFC8F77601E5B466E2422B7D3 /* CocoaLumberjack.framework */,
+				314DF37089030E280AA2B0CE9C8BED37 /* MagicalRecord.framework */,
+				14422F429E06524CB90892E18519AAD9 /* Ono.framework */,
+				BEB48F69F18D06FC7921F970A13D4F86 /* Pods_TVShows.framework */,
+				00FEC1E7FC662A36E594041CB085C919 /* Pods_TVShowsHelper.framework */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		50F00E68D3F09F6B3A62393CC3AB4ABD /* NSURLConnection */ = {
@@ -627,28 +733,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		78A5B751CA47155D351887F74CD586ED /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				EA08C923DE0D7EB30DBEB602F2EF9D34 /* AFNetworkActivityLogger.framework */,
-				7AF093C370EB31919D0EFED8598EAABE /* AFNetworking.framework */,
-				4538B2432B752B059E6BD961ECDEAB5B /* AFOnoResponseSerializer.framework */,
-				8FCB932FEFB6686A92E31EE7BE358BF3 /* CocoaLumberjack.framework */,
-				05884598E5A066DCE1FF0144B5B31C8D /* MagicalRecord.framework */,
-				40C19F0E9A80F6EE76EBA37ED66B74FB /* Ono.framework */,
-				83A44A3B205C024CA71DA2736E935886 /* Pods_TVShows.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
 				718D298FAB5D83A10A04AE1422AEA801 /* Frameworks */,
 				C3AB9D01D267E95B2F24073A9127C7C4 /* Pods */,
-				78A5B751CA47155D351887F74CD586ED /* Products */,
-				E6BF2DA59DBD398BB1BAB77A191CC026 /* Targets Support Files */,
+				4633B177D00B556E8ECEC47E50166C21 /* Products */,
+				0E8CA4B5E31B9B6DA118B85093F6B9BA /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
@@ -661,6 +753,24 @@
 				A864CCDA27F23FE7A8AE0648C2A8ABDC /* Support Files */,
 			);
 			path = Ono;
+			sourceTree = "<group>";
+		};
+		944D5531E5A531644F004B11FC9FE7A0 /* Pods-TVShowsHelper */ = {
+			isa = PBXGroup;
+			children = (
+				6B129A8F144A21D425775AA63025DC68 /* Info.plist */,
+				F32226CF1901C824DF28F8E31D51CD28 /* Pods-TVShowsHelper.modulemap */,
+				010AA8FF6F1884184A98C530CA5AF7D1 /* Pods-TVShowsHelper-acknowledgements.markdown */,
+				E639F5399E87B3B7754472F109B1DCAB /* Pods-TVShowsHelper-acknowledgements.plist */,
+				3C27FE0C88B2E8106A9A0A35C5C37166 /* Pods-TVShowsHelper-dummy.m */,
+				213556F9ECB08CDC3E49449A66A2FF31 /* Pods-TVShowsHelper-frameworks.sh */,
+				DA18A60A2B18D653FEEEB6583D7F5F74 /* Pods-TVShowsHelper-resources.sh */,
+				A2B12511A2B99A80247BE92826E2A6D4 /* Pods-TVShowsHelper-umbrella.h */,
+				66B21FE6D445E5BA7E339BA0372CE99E /* Pods-TVShowsHelper.debug.xcconfig */,
+				3EEF0ABC93B06581C1904719175204AF /* Pods-TVShowsHelper.release.xcconfig */,
+			);
+			name = "Pods-TVShowsHelper";
+			path = "Target Support Files/Pods-TVShowsHelper";
 			sourceTree = "<group>";
 		};
 		953E43C243C65DCE0C39E64B47DD5BD8 /* MagicalRecord */ = {
@@ -729,32 +839,6 @@
 				8E5893A258EE76AB3ACF065F55E48DAF /* Ono */,
 			);
 			name = Pods;
-			sourceTree = "<group>";
-		};
-		E6BF2DA59DBD398BB1BAB77A191CC026 /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				EA88555A2404C582E1DAFD553A7B2A78 /* Pods-TVShows */,
-			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		EA88555A2404C582E1DAFD553A7B2A78 /* Pods-TVShows */ = {
-			isa = PBXGroup;
-			children = (
-				AD6935BF3549A0F84C3EFF265868742E /* Info.plist */,
-				556E91CD3BE93C6B84DD85CAF88264E7 /* Pods-TVShows.modulemap */,
-				058E7251F2DB47ED61B57C760B76A40C /* Pods-TVShows-acknowledgements.markdown */,
-				C54E7FB00F6C5C628392829E707659FD /* Pods-TVShows-acknowledgements.plist */,
-				85BE3B3580DA61F32FD4905E29D7E68A /* Pods-TVShows-dummy.m */,
-				CBCBDB85E35BA5146774CD8DD559F00D /* Pods-TVShows-frameworks.sh */,
-				DFF88EA28BCBA1EE1CCE6127AAF7F19A /* Pods-TVShows-resources.sh */,
-				6C1BB9BEBC9ADFD5251650BC93A10EB5 /* Pods-TVShows-umbrella.h */,
-				7B5EB0237E8F684C9484AEB5E846BF58 /* Pods-TVShows.debug.xcconfig */,
-				2CA16CA5F896D73F3CEC9885E4917CF7 /* Pods-TVShows.release.xcconfig */,
-			);
-			name = "Pods-TVShows";
-			path = "Target Support Files/Pods-TVShows";
 			sourceTree = "<group>";
 		};
 		EB6457B1FB9529A5BF147BDE587C874D /* AFNetworkActivityLogger */ = {
@@ -942,6 +1026,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		948B2B62A6BEDDFF9C0206FEDB269545 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD3E8DE8771B7F068664D0CC42BF978A /* Pods-TVShowsHelper-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B696790F4D9D354C6F1EE30E08E72EE6 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -1001,7 +1093,7 @@
 			);
 			name = AFOnoResponseSerializer;
 			productName = AFOnoResponseSerializer;
-			productReference = 4538B2432B752B059E6BD961ECDEAB5B /* AFOnoResponseSerializer.framework */;
+			productReference = F1F5EA910FAB35062702D9921E4E73A9 /* AFOnoResponseSerializer.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		24DD000F5E175C1A0A4E491F5E4DAC95 /* Pods-TVShows */ = {
@@ -1024,7 +1116,7 @@
 			);
 			name = "Pods-TVShows";
 			productName = "Pods-TVShows";
-			productReference = 83A44A3B205C024CA71DA2736E935886 /* Pods_TVShows.framework */;
+			productReference = BEB48F69F18D06FC7921F970A13D4F86 /* Pods_TVShows.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		6C47374726E463087D55B4250373F519 /* AFNetworking */ = {
@@ -1041,7 +1133,7 @@
 			);
 			name = AFNetworking;
 			productName = AFNetworking;
-			productReference = 7AF093C370EB31919D0EFED8598EAABE /* AFNetworking.framework */;
+			productReference = 91FAFE786B601644735F4A2C582F87B0 /* AFNetworking.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		8A2E8FED01C8A6BC8ADFCF3C3B78368F /* CocoaLumberjack */ = {
@@ -1058,7 +1150,7 @@
 			);
 			name = CocoaLumberjack;
 			productName = CocoaLumberjack;
-			productReference = 8FCB932FEFB6686A92E31EE7BE358BF3 /* CocoaLumberjack.framework */;
+			productReference = 48BB9B5BFC8F77601E5B466E2422B7D3 /* CocoaLumberjack.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		A20929BA38EBA05957C67C0FFF334640 /* Ono */ = {
@@ -1075,7 +1167,7 @@
 			);
 			name = Ono;
 			productName = Ono;
-			productReference = 40C19F0E9A80F6EE76EBA37ED66B74FB /* Ono.framework */;
+			productReference = 14422F429E06524CB90892E18519AAD9 /* Ono.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		AD92CB560CCD279E630ADE73283AC02D /* AFNetworkActivityLogger */ = {
@@ -1093,7 +1185,7 @@
 			);
 			name = AFNetworkActivityLogger;
 			productName = AFNetworkActivityLogger;
-			productReference = EA08C923DE0D7EB30DBEB602F2EF9D34 /* AFNetworkActivityLogger.framework */;
+			productReference = 1BE989C5C8F6B68ABE2FE45BC7574349 /* AFNetworkActivityLogger.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		B9814B0957B977DA6BFFA2D02F61F8B9 /* MagicalRecord */ = {
@@ -1111,7 +1203,30 @@
 			);
 			name = MagicalRecord;
 			productName = MagicalRecord;
-			productReference = 05884598E5A066DCE1FF0144B5B31C8D /* MagicalRecord.framework */;
+			productReference = 314DF37089030E280AA2B0CE9C8BED37 /* MagicalRecord.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		E0B85AF5D34C3A9B17E162DAEF2F6EA5 /* Pods-TVShowsHelper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 576EDF2190C2352FF52D3630D3C179C1 /* Build configuration list for PBXNativeTarget "Pods-TVShowsHelper" */;
+			buildPhases = (
+				67811FB6BF33CE37FD3AF05FD77287CE /* Sources */,
+				58C4FEC8E7CE1FF0E735AFE68B61DC1A /* Frameworks */,
+				948B2B62A6BEDDFF9C0206FEDB269545 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				71503EB8E2F74637F119EA02AD4230D9 /* PBXTargetDependency */,
+				D65006A1561F3D5CCBF0CD31BC1AD20C /* PBXTargetDependency */,
+				357F0C07B081E7293A52CC424E31F46C /* PBXTargetDependency */,
+				2766BACE2784EA233DEEE55C29E89659 /* PBXTargetDependency */,
+				8BF1B8C9C712F29ABAF117D854E97C30 /* PBXTargetDependency */,
+				2E40FADEC8E9B9BD5AC8CB78B7DBF055 /* PBXTargetDependency */,
+			);
+			name = "Pods-TVShowsHelper";
+			productName = "Pods-TVShowsHelper";
+			productReference = 00FEC1E7FC662A36E594041CB085C919 /* Pods_TVShowsHelper.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -1131,7 +1246,7 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 78A5B751CA47155D351887F74CD586ED /* Products */;
+			productRefGroup = 4633B177D00B556E8ECEC47E50166C21 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -1142,6 +1257,7 @@
 				B9814B0957B977DA6BFFA2D02F61F8B9 /* MagicalRecord */,
 				A20929BA38EBA05957C67C0FFF334640 /* Ono */,
 				24DD000F5E175C1A0A4E491F5E4DAC95 /* Pods-TVShows */,
+				E0B85AF5D34C3A9B17E162DAEF2F6EA5 /* Pods-TVShowsHelper */,
 			);
 		};
 /* End PBXProject section */
@@ -1225,6 +1341,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		67811FB6BF33CE37FD3AF05FD77287CE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4452733163433A54DE214B8C4A193B5D /* Pods-TVShowsHelper-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		69B6B4D621C2C9F61470874F1D557944 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1260,11 +1384,29 @@
 			target = A20929BA38EBA05957C67C0FFF334640 /* Ono */;
 			targetProxy = 73303BDADCAD2A3D034C2A7AD84F14AF /* PBXContainerItemProxy */;
 		};
+		2766BACE2784EA233DEEE55C29E89659 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CocoaLumberjack;
+			target = 8A2E8FED01C8A6BC8ADFCF3C3B78368F /* CocoaLumberjack */;
+			targetProxy = F73959B880D5B33A9E1767CD289159F4 /* PBXContainerItemProxy */;
+		};
 		2834B5B12F39D4D4428DDAA0D423DB56 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = AFNetworking;
 			target = 6C47374726E463087D55B4250373F519 /* AFNetworking */;
 			targetProxy = 3D6267C8A1EA9160D73AD0C942C443EE /* PBXContainerItemProxy */;
+		};
+		2E40FADEC8E9B9BD5AC8CB78B7DBF055 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Ono;
+			target = A20929BA38EBA05957C67C0FFF334640 /* Ono */;
+			targetProxy = 15ED36F7EA9ACA19F9B42EA676E713CC /* PBXContainerItemProxy */;
+		};
+		357F0C07B081E7293A52CC424E31F46C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = AFOnoResponseSerializer;
+			target = 2079008752CE45DC5EA95D0C9D919D07 /* AFOnoResponseSerializer */;
+			targetProxy = 7E8A033273D4CA7791E7411F8CCD7EE5 /* PBXContainerItemProxy */;
 		};
 		4EDC26651FFA1845345B8B8FB20282D5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1278,6 +1420,18 @@
 			target = AD92CB560CCD279E630ADE73283AC02D /* AFNetworkActivityLogger */;
 			targetProxy = 86A2C84DC97C74FBD02C4D790E6207B7 /* PBXContainerItemProxy */;
 		};
+		71503EB8E2F74637F119EA02AD4230D9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = AFNetworkActivityLogger;
+			target = AD92CB560CCD279E630ADE73283AC02D /* AFNetworkActivityLogger */;
+			targetProxy = DEBEE3ECD101373A3E81D4416158B3D4 /* PBXContainerItemProxy */;
+		};
+		8BF1B8C9C712F29ABAF117D854E97C30 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MagicalRecord;
+			target = B9814B0957B977DA6BFFA2D02F61F8B9 /* MagicalRecord */;
+			targetProxy = 47AB3D364294726722071D91B83C5C43 /* PBXContainerItemProxy */;
+		};
 		B5864519C850CE0F8F83C9A86B3360EF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = AFNetworking;
@@ -1289,6 +1443,12 @@
 			name = Ono;
 			target = A20929BA38EBA05957C67C0FFF334640 /* Ono */;
 			targetProxy = 60B7AF4A704F9DD4A3F2FAB181836144 /* PBXContainerItemProxy */;
+		};
+		D65006A1561F3D5CCBF0CD31BC1AD20C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = AFNetworking;
+			target = 6C47374726E463087D55B4250373F519 /* AFNetworking */;
+			targetProxy = 647EC0C08D9E45A4DAD18148CF12BB44 /* PBXContainerItemProxy */;
 		};
 		E9765D05BFED83D87E563A244F4D5B2D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1317,89 +1477,7 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		02172D822AA2B594BA2E6EDD012BCCDC /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7240350DA175691632D073324388B2C1 /* AFOnoResponseSerializer.xcconfig */;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_VERSION = A;
-				GCC_PREFIX_HEADER = "Target Support Files/AFOnoResponseSerializer/AFOnoResponseSerializer-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/AFOnoResponseSerializer/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				MODULEMAP_FILE = "Target Support Files/AFOnoResponseSerializer/AFOnoResponseSerializer.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = AFOnoResponseSerializer;
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		230D4158C56E1E6F0A2F4EB9C24E3278 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7240350DA175691632D073324388B2C1 /* AFOnoResponseSerializer.xcconfig */;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_VERSION = A;
-				GCC_PREFIX_HEADER = "Target Support Files/AFOnoResponseSerializer/AFOnoResponseSerializer-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/AFOnoResponseSerializer/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				MODULEMAP_FILE = "Target Support Files/AFOnoResponseSerializer/AFOnoResponseSerializer.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = AFOnoResponseSerializer;
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		253F9127E276E1147E9BB34684EB164F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8126AACC725784D22F69267563823B05 /* AFNetworkActivityLogger.xcconfig */;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_VERSION = A;
-				GCC_PREFIX_HEADER = "Target Support Files/AFNetworkActivityLogger/AFNetworkActivityLogger-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/AFNetworkActivityLogger/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				MODULEMAP_FILE = "Target Support Files/AFNetworkActivityLogger/AFNetworkActivityLogger.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = AFNetworkActivityLogger;
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		38A312A81C8DA4AF8EBC18304232982C /* Debug */ = {
+		14B40C3835357D68AF42F7A72928F3E2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 979B5F45BF66DD1C990F2F556CE0CC51 /* CocoaLumberjack.xcconfig */;
 			buildSettings = {
@@ -1415,7 +1493,7 @@
 				INFOPLIST_FILE = "Target Support Files/CocoaLumberjack/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MODULEMAP_FILE = "Target Support Files/CocoaLumberjack/CocoaLumberjack.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = CocoaLumberjack;
@@ -1426,35 +1504,7 @@
 			};
 			name = Debug;
 		};
-		4180A6AC004142AF0FEF22ADFF7AC1FD /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = A8B81D3264BFF6431F6D58B752E10384 /* MagicalRecord.xcconfig */;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_VERSION = A;
-				GCC_PREFIX_HEADER = "Target Support Files/MagicalRecord/MagicalRecord-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/MagicalRecord/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				MODULEMAP_FILE = "Target Support Files/MagicalRecord/MagicalRecord.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = MagicalRecord;
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		52D4ECB745D1C035F94BD060EE7F6605 /* Debug */ = {
+		1E621D6BF749EDCE77ACBE7C6D464E29 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -1486,16 +1536,71 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				ONLY_ACTIVE_ARCH = YES;
 				STRIP_INSTALLED_PRODUCT = NO;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Debug;
 		};
-		59A1BE9A897A27C72B3A492836D2CFC2 /* Debug */ = {
+		241E11C5F29A081E194513A26F1F281E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7B5EB0237E8F684C9484AEB5E846BF58 /* Pods-TVShows.debug.xcconfig */;
+			baseConfigurationReference = 979B5F45BF66DD1C990F2F556CE0CC51 /* CocoaLumberjack.xcconfig */;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_PREFIX_HEADER = "Target Support Files/CocoaLumberjack/CocoaLumberjack-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CocoaLumberjack/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MODULEMAP_FILE = "Target Support Files/CocoaLumberjack/CocoaLumberjack.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = CocoaLumberjack;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		2A614BB70183D82EDA8417F560B78469 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A8B81D3264BFF6431F6D58B752E10384 /* MagicalRecord.xcconfig */;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_PREFIX_HEADER = "Target Support Files/MagicalRecord/MagicalRecord-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MagicalRecord/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MODULEMAP_FILE = "Target Support Files/MagicalRecord/MagicalRecord.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = MagicalRecord;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		2B9101D4D4D8E7BA5E1CBD8537C146C5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AC0631D1EC21CDAA92AA4B1D52E2235C /* Pods-TVShows.debug.xcconfig */;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1509,7 +1614,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MODULEMAP_FILE = "Target Support Files/Pods-TVShows/Pods-TVShows.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
@@ -1523,12 +1628,44 @@
 			};
 			name = Debug;
 		};
-		703A9610C76EF101C374AF3AC34057B3 /* Debug */ = {
+		40770A67D78847A2A8089DD74F4B996D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BD3958045F2909260015EB976CEB10E6 /* Pods-TVShows.release.xcconfig */;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "Target Support Files/Pods-TVShows/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MODULEMAP_FILE = "Target Support Files/Pods-TVShows/Pods-TVShows.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_TVShows;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		42BC437C22B9DD1229AF30C3E7F7743F /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E74D08ECF128178681CA4105191D018A /* Ono.xcconfig */;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -1539,20 +1676,20 @@
 				INFOPLIST_FILE = "Target Support Files/Ono/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MODULEMAP_FILE = "Target Support Files/Ono/Ono.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = Ono;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
-		743F95E2FF8BE8DC8E0ACC61D417BFA1 /* Release */ = {
+		552F62E979DF7BFE59C17568A82A77FA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2CA16CA5F896D73F3CEC9885E4917CF7 /* Pods-TVShows.release.xcconfig */;
+			baseConfigurationReference = A8B81D3264BFF6431F6D58B752E10384 /* MagicalRecord.xcconfig */;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1563,17 +1700,14 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = "Target Support Files/Pods-TVShows/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/MagicalRecord/MagicalRecord-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MagicalRecord/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				MODULEMAP_FILE = "Target Support Files/Pods-TVShows/Pods-TVShows.modulemap";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MODULEMAP_FILE = "Target Support Files/MagicalRecord/MagicalRecord.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = Pods_TVShows;
+				PRODUCT_NAME = MagicalRecord;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1581,35 +1715,7 @@
 			};
 			name = Release;
 		};
-		86495FA6F5C98FE7D6786FFCCD43E1F5 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 156A56BFD6B288ED58BE18D1D360D281 /* AFNetworking.xcconfig */;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_VERSION = A;
-				GCC_PREFIX_HEADER = "Target Support Files/AFNetworking/AFNetworking-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/AFNetworking/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				MODULEMAP_FILE = "Target Support Files/AFNetworking/AFNetworking.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = AFNetworking;
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		A070F153A04DD66F4E492261894B37FF /* Release */ = {
+		5577A3F22A37686E40DB6863D68D476C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -1636,14 +1742,69 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				STRIP_INSTALLED_PRODUCT = NO;
 				SYMROOT = "${SRCROOT}/../build";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		A6971E51288724044EC268E081775ECF /* Debug */ = {
+		6050A4AFE9B01810EE940506B534ADF0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7240350DA175691632D073324388B2C1 /* AFOnoResponseSerializer.xcconfig */;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_PREFIX_HEADER = "Target Support Files/AFOnoResponseSerializer/AFOnoResponseSerializer-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/AFOnoResponseSerializer/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MODULEMAP_FILE = "Target Support Files/AFOnoResponseSerializer/AFOnoResponseSerializer.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = AFOnoResponseSerializer;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		68DA6D8AF2715A310A8C47A07595970B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E74D08ECF128178681CA4105191D018A /* Ono.xcconfig */;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_PREFIX_HEADER = "Target Support Files/Ono/Ono-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Ono/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MODULEMAP_FILE = "Target Support Files/Ono/Ono.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = Ono;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		6D91CDF31901954E889CB2BA7F343777 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 156A56BFD6B288ED58BE18D1D360D281 /* AFNetworking.xcconfig */;
 			buildSettings = {
@@ -1659,7 +1820,7 @@
 				INFOPLIST_FILE = "Target Support Files/AFNetworking/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MODULEMAP_FILE = "Target Support Files/AFNetworking/AFNetworking.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = AFNetworking;
@@ -1670,9 +1831,36 @@
 			};
 			name = Debug;
 		};
-		BAE718E0E7C726D2AE29B269A7889D79 /* Release */ = {
+		98DF276383D6A4DC7D0986FF6154BFB3 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 979B5F45BF66DD1C990F2F556CE0CC51 /* CocoaLumberjack.xcconfig */;
+			baseConfigurationReference = 7240350DA175691632D073324388B2C1 /* AFOnoResponseSerializer.xcconfig */;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_PREFIX_HEADER = "Target Support Files/AFOnoResponseSerializer/AFOnoResponseSerializer-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/AFOnoResponseSerializer/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MODULEMAP_FILE = "Target Support Files/AFOnoResponseSerializer/AFOnoResponseSerializer.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = AFOnoResponseSerializer;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		AEF089364EEB7AE242E44E344406FB99 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 156A56BFD6B288ED58BE18D1D360D281 /* AFNetworking.xcconfig */;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1683,14 +1871,14 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				FRAMEWORK_VERSION = A;
-				GCC_PREFIX_HEADER = "Target Support Files/CocoaLumberjack/CocoaLumberjack-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/CocoaLumberjack/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/AFNetworking/AFNetworking-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/AFNetworking/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				MODULEMAP_FILE = "Target Support Files/CocoaLumberjack/CocoaLumberjack.modulemap";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MODULEMAP_FILE = "Target Support Files/AFNetworking/AFNetworking.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = CocoaLumberjack;
+				PRODUCT_NAME = AFNetworking;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1698,35 +1886,64 @@
 			};
 			name = Release;
 		};
-		C5A28BDA6F22D320B5A37E6BC016D698 /* Release */ = {
+		AF3AA7FCFD641DD3392FC83B317C4629 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E74D08ECF128178681CA4105191D018A /* Ono.xcconfig */;
+			baseConfigurationReference = 66B21FE6D445E5BA7E339BA0372CE99E /* Pods-TVShowsHelper.debug.xcconfig */;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				FRAMEWORK_VERSION = A;
-				GCC_PREFIX_HEADER = "Target Support Files/Ono/Ono-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Ono/Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-TVShowsHelper/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				MODULEMAP_FILE = "Target Support Files/Ono/Ono.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = Ono;
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MODULEMAP_FILE = "Target Support Files/Pods-TVShowsHelper/Pods-TVShowsHelper.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_TVShowsHelper;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
-		F8676A9D2DD33B850C1963C118C2F80F /* Release */ = {
+		C23EA79032A7E603179AC3917322C8C0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8126AACC725784D22F69267563823B05 /* AFNetworkActivityLogger.xcconfig */;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_PREFIX_HEADER = "Target Support Files/AFNetworkActivityLogger/AFNetworkActivityLogger-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/AFNetworkActivityLogger/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MODULEMAP_FILE = "Target Support Files/AFNetworkActivityLogger/AFNetworkActivityLogger.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = AFNetworkActivityLogger;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		C4CDEC8DF274E05E5BCA18B70F168426 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8126AACC725784D22F69267563823B05 /* AFNetworkActivityLogger.xcconfig */;
 			buildSettings = {
@@ -1743,7 +1960,7 @@
 				INFOPLIST_FILE = "Target Support Files/AFNetworkActivityLogger/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MODULEMAP_FILE = "Target Support Files/AFNetworkActivityLogger/AFNetworkActivityLogger.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = AFNetworkActivityLogger;
@@ -1754,32 +1971,36 @@
 			};
 			name = Release;
 		};
-		FEF0372978EFF667E7D94F645C626011 /* Debug */ = {
+		E5F65EC9EE9B7FF1737F435B0530F5EF /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A8B81D3264BFF6431F6D58B752E10384 /* MagicalRecord.xcconfig */;
+			baseConfigurationReference = 3EEF0ABC93B06581C1904719175204AF /* Pods-TVShowsHelper.release.xcconfig */;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				FRAMEWORK_VERSION = A;
-				GCC_PREFIX_HEADER = "Target Support Files/MagicalRecord/MagicalRecord-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/MagicalRecord/Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-TVShowsHelper/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				MODULEMAP_FILE = "Target Support Files/MagicalRecord/MagicalRecord.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = MagicalRecord;
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MODULEMAP_FILE = "Target Support Files/Pods-TVShowsHelper/Pods-TVShowsHelper.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_TVShowsHelper;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
@@ -1787,8 +2008,8 @@
 		0A249857EF3A38EF925BAE6F4464F1B3 /* Build configuration list for PBXNativeTarget "CocoaLumberjack" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				38A312A81C8DA4AF8EBC18304232982C /* Debug */,
-				BAE718E0E7C726D2AE29B269A7889D79 /* Release */,
+				14B40C3835357D68AF42F7A72928F3E2 /* Debug */,
+				241E11C5F29A081E194513A26F1F281E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1796,8 +2017,17 @@
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				52D4ECB745D1C035F94BD060EE7F6605 /* Debug */,
-				A070F153A04DD66F4E492261894B37FF /* Release */,
+				1E621D6BF749EDCE77ACBE7C6D464E29 /* Debug */,
+				5577A3F22A37686E40DB6863D68D476C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		576EDF2190C2352FF52D3630D3C179C1 /* Build configuration list for PBXNativeTarget "Pods-TVShowsHelper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF3AA7FCFD641DD3392FC83B317C4629 /* Debug */,
+				E5F65EC9EE9B7FF1737F435B0530F5EF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1805,8 +2035,8 @@
 		592DA0212C25184E78B73A573AA34E8A /* Build configuration list for PBXNativeTarget "Pods-TVShows" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				59A1BE9A897A27C72B3A492836D2CFC2 /* Debug */,
-				743F95E2FF8BE8DC8E0ACC61D417BFA1 /* Release */,
+				2B9101D4D4D8E7BA5E1CBD8537C146C5 /* Debug */,
+				40770A67D78847A2A8089DD74F4B996D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1814,8 +2044,8 @@
 		7E372F2B3024175D3AB4D1AFD407BD85 /* Build configuration list for PBXNativeTarget "Ono" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				703A9610C76EF101C374AF3AC34057B3 /* Debug */,
-				C5A28BDA6F22D320B5A37E6BC016D698 /* Release */,
+				68DA6D8AF2715A310A8C47A07595970B /* Debug */,
+				42BC437C22B9DD1229AF30C3E7F7743F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1823,8 +2053,8 @@
 		BB31475E6751BE157EE9E482065A880C /* Build configuration list for PBXNativeTarget "AFNetworking" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A6971E51288724044EC268E081775ECF /* Debug */,
-				86495FA6F5C98FE7D6786FFCCD43E1F5 /* Release */,
+				6D91CDF31901954E889CB2BA7F343777 /* Debug */,
+				AEF089364EEB7AE242E44E344406FB99 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1832,8 +2062,8 @@
 		BE2C50BADA20CDE878A6F65560B66EDD /* Build configuration list for PBXNativeTarget "MagicalRecord" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FEF0372978EFF667E7D94F645C626011 /* Debug */,
-				4180A6AC004142AF0FEF22ADFF7AC1FD /* Release */,
+				2A614BB70183D82EDA8417F560B78469 /* Debug */,
+				552F62E979DF7BFE59C17568A82A77FA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1841,8 +2071,8 @@
 		C05B224666973B03AF6DB147D11C4716 /* Build configuration list for PBXNativeTarget "AFOnoResponseSerializer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				230D4158C56E1E6F0A2F4EB9C24E3278 /* Debug */,
-				02172D822AA2B594BA2E6EDD012BCCDC /* Release */,
+				98DF276383D6A4DC7D0986FF6154BFB3 /* Debug */,
+				6050A4AFE9B01810EE940506B534ADF0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1850,8 +2080,8 @@
 		F8EA3800FA791CCC7C41C469F6A16EC2 /* Build configuration list for PBXNativeTarget "AFNetworkActivityLogger" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				253F9127E276E1147E9BB34684EB164F /* Debug */,
-				F8676A9D2DD33B850C1963C118C2F80F /* Release */,
+				C23EA79032A7E603179AC3917322C8C0 /* Debug */,
+				C4CDEC8DF274E05E5BCA18B70F168426 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
