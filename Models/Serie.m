@@ -39,7 +39,7 @@
         [serie updateAttributes:updates];
         
         // Save the changes
-        [context MR_saveToPersistentStoreWithCompletion:^(BOOL success, NSError *error) {
+        [localContext MR_saveToPersistentStoreWithCompletion:^(BOOL success, NSError *error) {
             if (success) {
                 completion(serie.objectID);
             } else {

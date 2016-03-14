@@ -261,7 +261,7 @@
     NSUInteger __block count;
     
     [self.managedObjectContext performBlockAndWait:^{
-        count = [Subscription numberOfEntitiesWithPredicate:[NSPredicate predicateWithFormat:@"serie = %@", @YES] inContext:self.managedObjectContext]
+        count = [[Subscription numberOfEntitiesWithPredicate:[NSPredicate predicateWithFormat:@"serie = %@", @YES] inContext:self.managedObjectContext] unsignedIntegerValue];
     }];
     
     return count;

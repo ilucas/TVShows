@@ -237,20 +237,20 @@
 		A05A9BF31C58337E00FBEF9A /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		A05A9BF51C58338700FBEF9A /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = System/Library/Frameworks/Quartz.framework; sourceTree = SDKROOT; };
 		A05A9BF71C5833D800FBEF9A /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
-		A05A9C281C583BD600FBEF9A /* _Episode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = _Episode.h; path = ../../Models/_Episode.h; sourceTree = "<group>"; };
-		A05A9C291C583BD600FBEF9A /* _Episode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = _Episode.m; path = ../../Models/_Episode.m; sourceTree = "<group>"; };
-		A05A9C2A1C583BD600FBEF9A /* _Serie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = _Serie.h; path = ../../Models/_Serie.h; sourceTree = "<group>"; };
-		A05A9C2B1C583BD600FBEF9A /* _Serie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = _Serie.m; path = ../../Models/_Serie.m; sourceTree = "<group>"; };
-		A05A9C2C1C583BD600FBEF9A /* _Subscription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = _Subscription.h; path = ../../Models/_Subscription.h; sourceTree = "<group>"; };
-		A05A9C2D1C583BD600FBEF9A /* _Subscription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = _Subscription.m; path = ../../Models/_Subscription.m; sourceTree = "<group>"; };
-		A05A9C2E1C583BD600FBEF9A /* Episode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Episode.h; path = ../../Models/Episode.h; sourceTree = "<group>"; };
-		A05A9C2F1C583BD600FBEF9A /* Episode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Episode.m; path = ../../Models/Episode.m; sourceTree = "<group>"; };
+		A05A9C281C583BD600FBEF9A /* _Episode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = _Episode.h; path = Models/_Episode.h; sourceTree = "<group>"; };
+		A05A9C291C583BD600FBEF9A /* _Episode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = _Episode.m; path = Models/_Episode.m; sourceTree = "<group>"; };
+		A05A9C2A1C583BD600FBEF9A /* _Serie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = _Serie.h; path = Models/_Serie.h; sourceTree = "<group>"; };
+		A05A9C2B1C583BD600FBEF9A /* _Serie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = _Serie.m; path = Models/_Serie.m; sourceTree = "<group>"; };
+		A05A9C2C1C583BD600FBEF9A /* _Subscription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = _Subscription.h; path = Models/_Subscription.h; sourceTree = "<group>"; };
+		A05A9C2D1C583BD600FBEF9A /* _Subscription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = _Subscription.m; path = Models/_Subscription.m; sourceTree = "<group>"; };
+		A05A9C2E1C583BD600FBEF9A /* Episode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Episode.h; path = Models/Episode.h; sourceTree = "<group>"; };
+		A05A9C2F1C583BD600FBEF9A /* Episode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Episode.m; path = Models/Episode.m; sourceTree = "<group>"; };
 		A05A9C311C583BD600FBEF9A /* SubscriptionDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubscriptionDataSource.h; sourceTree = "<group>"; };
 		A05A9C321C583BD600FBEF9A /* SubscriptionDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubscriptionDataSource.m; sourceTree = "<group>"; };
-		A05A9C331C583BD600FBEF9A /* Serie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Serie.h; path = ../../Models/Serie.h; sourceTree = "<group>"; };
-		A05A9C341C583BD600FBEF9A /* Serie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Serie.m; path = ../../Models/Serie.m; sourceTree = "<group>"; };
-		A05A9C351C583BD600FBEF9A /* Subscription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Subscription.h; path = ../../Models/Subscription.h; sourceTree = "<group>"; };
-		A05A9C361C583BD600FBEF9A /* Subscription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Subscription.m; path = ../../Models/Subscription.m; sourceTree = "<group>"; };
+		A05A9C331C583BD600FBEF9A /* Serie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Serie.h; path = Models/Serie.h; sourceTree = "<group>"; };
+		A05A9C341C583BD600FBEF9A /* Serie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Serie.m; path = Models/Serie.m; sourceTree = "<group>"; };
+		A05A9C351C583BD600FBEF9A /* Subscription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Subscription.h; path = Models/Subscription.h; sourceTree = "<group>"; };
+		A05A9C361C583BD600FBEF9A /* Subscription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Subscription.m; path = Models/Subscription.m; sourceTree = "<group>"; };
 		A06F874B1AE6904700CD66DC /* OEGeometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OEGeometry.h; sourceTree = "<group>"; };
 		A06F87581AE6904700CD66DC /* OEUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OEUtilities.h; sourceTree = "<group>"; };
 		A06F87591AE6904700CD66DC /* OEUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OEUtilities.m; sourceTree = "<group>"; };
@@ -415,7 +415,7 @@
 		3401816611951C9D00FB0E39 /* Core Data */ = {
 			isa = PBXGroup;
 			children = (
-				A05A9BFB1C58375900FBEF9A /* Model */,
+				A0B918E71C86A637005A4527 /* Model */,
 				A06F88031AE6B92900CD66DC /* TVShows.xcdatamodeld */,
 			);
 			name = "Core Data";
@@ -667,27 +667,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		A05A9BFB1C58375900FBEF9A /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				A05A9C281C583BD600FBEF9A /* _Episode.h */,
-				A05A9C291C583BD600FBEF9A /* _Episode.m */,
-				A05A9C2A1C583BD600FBEF9A /* _Serie.h */,
-				A05A9C2B1C583BD600FBEF9A /* _Serie.m */,
-				A05A9C2C1C583BD600FBEF9A /* _Subscription.h */,
-				A05A9C2D1C583BD600FBEF9A /* _Subscription.m */,
-				A05A9C2E1C583BD600FBEF9A /* Episode.h */,
-				A05A9C2F1C583BD600FBEF9A /* Episode.m */,
-				A05A9C331C583BD600FBEF9A /* Serie.h */,
-				A05A9C341C583BD600FBEF9A /* Serie.m */,
-				A05A9C351C583BD600FBEF9A /* Subscription.h */,
-				A05A9C361C583BD600FBEF9A /* Subscription.m */,
-				A05A9C301C583BD600FBEF9A /* Extenstions */,
-			);
-			name = Model;
-			path = TVShows/Model;
-			sourceTree = "<group>";
-		};
 		A05A9C301C583BD600FBEF9A /* Extenstions */ = {
 			isa = PBXGroup;
 			children = (
@@ -695,7 +674,7 @@
 				A05A9C321C583BD600FBEF9A /* SubscriptionDataSource.m */,
 			);
 			name = Extenstions;
-			path = ../../Models/Extenstions;
+			path = Models/Extenstions;
 			sourceTree = "<group>";
 		};
 		A06F87271AE6904700CD66DC /* OpenEmu */ = {
@@ -749,6 +728,26 @@
 				A01813CC1C2DDEB500C5B221 /* MetadataViewController.m */,
 			);
 			name = Subscription;
+			sourceTree = "<group>";
+		};
+		A0B918E71C86A637005A4527 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A05A9C281C583BD600FBEF9A /* _Episode.h */,
+				A05A9C291C583BD600FBEF9A /* _Episode.m */,
+				A05A9C2A1C583BD600FBEF9A /* _Serie.h */,
+				A05A9C2B1C583BD600FBEF9A /* _Serie.m */,
+				A05A9C2C1C583BD600FBEF9A /* _Subscription.h */,
+				A05A9C2D1C583BD600FBEF9A /* _Subscription.m */,
+				A05A9C2E1C583BD600FBEF9A /* Episode.h */,
+				A05A9C2F1C583BD600FBEF9A /* Episode.m */,
+				A05A9C331C583BD600FBEF9A /* Serie.h */,
+				A05A9C341C583BD600FBEF9A /* Serie.m */,
+				A05A9C351C583BD600FBEF9A /* Subscription.h */,
+				A05A9C361C583BD600FBEF9A /* Subscription.m */,
+				A05A9C301C583BD600FBEF9A /* Extenstions */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 		A0EE12111C54238900F4AB82 /* Categories */ = {

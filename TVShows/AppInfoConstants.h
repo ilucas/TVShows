@@ -16,7 +16,11 @@
 #import "AppSecretConstants.h"
 
 // Define log level
+#ifdef DEBUG
 static const DDLogLevel ddLogLevel = DDLogLevelVerbose;
+#else
+static const DDLogLevel ddLogLevel = DDLogLevelInfo;
+#endif
 
 #define TVShowsAppDomain            @"com.victorpimentel.TVShows2"
 #define TVShowsHelperDomain         @"com.victorpimentel.TVShowsHelper"
