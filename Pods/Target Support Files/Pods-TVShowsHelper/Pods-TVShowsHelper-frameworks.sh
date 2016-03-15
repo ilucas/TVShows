@@ -88,14 +88,22 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-TVShowsHelper/AFNetworking.framework"
   install_framework "Pods-TVShowsHelper/AFOnoResponseSerializer.framework"
   install_framework "Pods-TVShowsHelper/CocoaLumberjack.framework"
+  install_framework "Pods-TVShowsHelper/MTLManagedObjectAdapter.framework"
   install_framework "Pods-TVShowsHelper/MagicalRecord.framework"
+  install_framework "Pods-TVShowsHelper/Mantle.framework"
+  install_framework "Pods-TVShowsHelper/ObjectiveSugar.framework"
   install_framework "Pods-TVShowsHelper/Ono.framework"
+  install_framework "Pods-TVShowsHelper/libextobjc.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-TVShowsHelper/AFNetworkActivityLogger.framework"
   install_framework "Pods-TVShowsHelper/AFNetworking.framework"
   install_framework "Pods-TVShowsHelper/AFOnoResponseSerializer.framework"
   install_framework "Pods-TVShowsHelper/CocoaLumberjack.framework"
+  install_framework "Pods-TVShowsHelper/MTLManagedObjectAdapter.framework"
   install_framework "Pods-TVShowsHelper/MagicalRecord.framework"
+  install_framework "Pods-TVShowsHelper/Mantle.framework"
+  install_framework "Pods-TVShowsHelper/ObjectiveSugar.framework"
   install_framework "Pods-TVShowsHelper/Ono.framework"
+  install_framework "Pods-TVShowsHelper/libextobjc.framework"
 fi

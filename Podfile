@@ -16,28 +16,26 @@ def common
     # Core Data
     pod 'MagicalRecord', '~> 2.3', :subspecs => ['CocoaLumberjack', 'ShorthandMethodAliases']
     
+    # Model
+    pod 'Mantle', '~> 2.0'
+    pod 'MTLManagedObjectAdapter', '~> 1.0'
+    
     # Misc
     pod 'Ono', '~> 1.2'
-    #pod 'Operations'
     
     # Objective-c stuff
-    #pod 'ObjectiveSugar'
-    #pod 'libextobjc'
+    pod 'ObjectiveSugar'
+    pod 'libextobjc'
 end
 
 target 'TVShows' do
     common
     
     # Update
-    #pod 'Sparkle'
+    pod 'Sparkle'
     
     # Misc
-    #pod 'LetsMove'
-end
-
-target 'TVShowsTests' do
-    #pod 'Specta', '~> 0.5'
-    #pod 'Expecta', '~> 0.4'
+    pod 'LetsMove'
 end
 
 target 'TVShowsHelper' do

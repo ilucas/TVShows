@@ -38,7 +38,6 @@
 		A0432F261AD9649600C19189 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A0432F251AD9649600C19189 /* main.m */; };
 		A0432F281AD9649600C19189 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0432F271AD9649600C19189 /* Images.xcassets */; };
 		A0432F2B1AD9649600C19189 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = A0432F291AD9649600C19189 /* MainMenu.xib */; };
-		A0432F371AD9649700C19189 /* TVShowsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A0432F361AD9649700C19189 /* TVShowsTests.m */; };
 		A05A9BF41C58337E00FBEF9A /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A05A9BF31C58337E00FBEF9A /* Cocoa.framework */; };
 		A05A9BF61C58338700FBEF9A /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A05A9BF51C58338700FBEF9A /* Quartz.framework */; };
 		A05A9BF81C5833D800FBEF9A /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A05A9BF71C5833D800FBEF9A /* NotificationCenter.framework */; };
@@ -93,16 +92,6 @@
 		A0FC60841C55932500FD6044 /* GridViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0FC60831C55932500FD6044 /* GridViewController.m */; };
 		DAFB536FA931D36D07BBE652 /* Pods_TVShowsHelper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABF2F5AAB1A6625BCB9B29BF /* Pods_TVShowsHelper.framework */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		A0432F311AD9649700C19189 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 089C1669FE841209C02AAC07 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = A0432F1D1AD9649600C19189;
-			remoteInfo = TVShows;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		089C1672FE841209C02AAC07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
@@ -231,9 +220,6 @@
 		A0432F251AD9649600C19189 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A0432F271AD9649600C19189 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ../Resources/Images.xcassets; sourceTree = "<group>"; };
 		A0432F2A1AD9649600C19189 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		A0432F301AD9649700C19189 /* TVShowsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TVShowsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A0432F351AD9649700C19189 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A0432F361AD9649700C19189 /* TVShowsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TVShowsTests.m; sourceTree = "<group>"; };
 		A05A9BF31C58337E00FBEF9A /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		A05A9BF51C58338700FBEF9A /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = System/Library/Frameworks/Quartz.framework; sourceTree = SDKROOT; };
 		A05A9BF71C5833D800FBEF9A /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
@@ -341,13 +327,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A0432F2D1AD9649600C19189 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		A0F43D1F1C6A99F3005ABB35 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -363,7 +342,6 @@
 			isa = PBXGroup;
 			children = (
 				A0432F1F1AD9649600C19189 /* TVShows */,
-				A0432F331AD9649700C19189 /* TVShowsTests */,
 				A0F43D231C6A99F3005ABB35 /* TVShowsHelper */,
 				3401816611951C9D00FB0E39 /* Core Data */,
 				349FEE141183597500D24FC9 /* Other Sources */,
@@ -398,7 +376,6 @@
 			isa = PBXGroup;
 			children = (
 				A0432F1E1AD9649600C19189 /* TVShows.app */,
-				A0432F301AD9649700C19189 /* TVShowsTests.xctest */,
 				A0F43D221C6A99F3005ABB35 /* TVShowsHelper.app */,
 			);
 			name = Products;
@@ -650,23 +627,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		A0432F331AD9649700C19189 /* TVShowsTests */ = {
-			isa = PBXGroup;
-			children = (
-				A0432F361AD9649700C19189 /* TVShowsTests.m */,
-				A0432F341AD9649700C19189 /* Supporting Files */,
-			);
-			path = TVShowsTests;
-			sourceTree = "<group>";
-		};
-		A0432F341AD9649700C19189 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				A0432F351AD9649700C19189 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 		A05A9C301C583BD600FBEF9A /* Extenstions */ = {
 			isa = PBXGroup;
 			children = (
@@ -890,24 +850,6 @@
 			productReference = A0432F1E1AD9649600C19189 /* TVShows.app */;
 			productType = "com.apple.product-type.application";
 		};
-		A0432F2F1AD9649600C19189 /* TVShowsTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = A0432F3D1AD9649700C19189 /* Build configuration list for PBXNativeTarget "TVShowsTests" */;
-			buildPhases = (
-				A0432F2C1AD9649600C19189 /* Sources */,
-				A0432F2D1AD9649600C19189 /* Frameworks */,
-				A0432F2E1AD9649600C19189 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				A0432F321AD9649700C19189 /* PBXTargetDependency */,
-			);
-			name = TVShowsTests;
-			productName = TVShowsTests;
-			productReference = A0432F301AD9649700C19189 /* TVShowsTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 		A0F43D211C6A99F3005ABB35 /* TVShowsHelper */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = A0F43D301C6A99F3005ABB35 /* Build configuration list for PBXNativeTarget "TVShowsHelper" */;
@@ -940,10 +882,6 @@
 				TargetAttributes = {
 					A0432F1D1AD9649600C19189 = {
 						CreatedOnToolsVersion = 6.2;
-					};
-					A0432F2F1AD9649600C19189 = {
-						CreatedOnToolsVersion = 6.2;
-						TestTargetID = A0432F1D1AD9649600C19189;
 					};
 					A0E434141B1A67B3000AF57C = {
 						CreatedOnToolsVersion = 6.3;
@@ -1004,7 +942,6 @@
 			targets = (
 				A0432F1D1AD9649600C19189 /* TVShows */,
 				A0F43D211C6A99F3005ABB35 /* TVShowsHelper */,
-				A0432F2F1AD9649600C19189 /* TVShowsTests */,
 				A0E434141B1A67B3000AF57C /* Mogenerator */,
 			);
 		};
@@ -1022,13 +959,6 @@
 				A00468CA1C56E69500732FB5 /* Preferences.storyboard in Resources */,
 				A00847CC1AF5C0F900F5D2A3 /* SubscriptionWindowController.xib in Resources */,
 				A0432F2B1AD9649600C19189 /* MainMenu.xib in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A0432F2E1AD9649600C19189 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1201,14 +1131,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A0432F2C1AD9649600C19189 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A0432F371AD9649700C19189 /* TVShowsTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		A0F43D1E1C6A99F3005ABB35 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1230,14 +1152,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		A0432F321AD9649700C19189 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = A0432F1D1AD9649600C19189 /* TVShows */;
-			targetProxy = A0432F311AD9649700C19189 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		3424AF1F11EF6432009C49DD /* Localizable.strings */ = {
@@ -1454,89 +1368,6 @@
 			};
 			name = Release;
 		};
-		A0432F3A1AD9649700C19189 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COMBINE_HIDPI_IMAGES = YES;
-				COPY_PHASE_STRIP = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"$(inherited)",
-				);
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				INFOPLIST_FILE = TVShowsTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TVShows.app/Contents/MacOS/TVShows";
-			};
-			name = Debug;
-		};
-		A0432F3B1AD9649700C19189 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COMBINE_HIDPI_IMAGES = YES;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				INFOPLIST_FILE = TVShowsTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TVShows.app/Contents/MacOS/TVShows";
-			};
-			name = Release;
-		};
 		A0E434161B1A67B3000AF57C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1653,15 +1484,6 @@
 			buildConfigurations = (
 				A0432F381AD9649700C19189 /* Debug */,
 				A0432F391AD9649700C19189 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		A0432F3D1AD9649700C19189 /* Build configuration list for PBXNativeTarget "TVShowsTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				A0432F3A1AD9649700C19189 /* Debug */,
-				A0432F3B1AD9649700C19189 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
