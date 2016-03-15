@@ -14,6 +14,7 @@
 
 #ifdef __OBJC__
     @import Cocoa;
+    @import libextobjc;
     @import CocoaLumberjack;
     @import MagicalRecord;
 
