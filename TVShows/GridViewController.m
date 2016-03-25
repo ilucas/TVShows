@@ -17,7 +17,7 @@
 
 @interface GridViewController ()
 
-@property (strong) NSManagedObjectContext *context;
+@property (weak) NSManagedObjectContext *context;
 @property (weak) IBOutlet NSArrayController *subscriptions;
 
 @end
@@ -31,7 +31,7 @@
     self = [super initWithCoder:coder];
     
     if (self) {
-        self.context = [NSManagedObjectContext context];
+        self.context = [NSManagedObjectContext defaultContext];
     }
     
     return self;

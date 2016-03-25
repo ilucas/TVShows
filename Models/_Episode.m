@@ -6,13 +6,12 @@
 const struct EpisodeAttributes EpisodeAttributes = {
 	.airDate = @"airDate",
 	.episode = @"episode",
-	.episodeDescription = @"episodeDescription",
 	.episodeID = @"episodeID",
 	.name = @"name",
 	.number = @"number",
+	.overview = @"overview",
 	.rating = @"rating",
 	.season = @"season",
-	.tvRageLink = @"tvRageLink",
 };
 
 const struct EpisodeRelationships EpisodeRelationships = {
@@ -96,25 +95,23 @@ const struct EpisodeRelationships EpisodeRelationships = {
 	[self setPrimitiveEpisode:@(value_)];
 }
 
-@dynamic episodeDescription;
-
 @dynamic episodeID;
 
-- (float)episodeIDValue {
+- (int32_t)episodeIDValue {
 	NSNumber *result = [self episodeID];
-	return [result floatValue];
+	return [result intValue];
 }
 
-- (void)setEpisodeIDValue:(float)value_ {
+- (void)setEpisodeIDValue:(int32_t)value_ {
 	[self setEpisodeID:@(value_)];
 }
 
-- (float)primitiveEpisodeIDValue {
+- (int32_t)primitiveEpisodeIDValue {
 	NSNumber *result = [self primitiveEpisodeID];
-	return [result floatValue];
+	return [result intValue];
 }
 
-- (void)setPrimitiveEpisodeIDValue:(float)value_ {
+- (void)setPrimitiveEpisodeIDValue:(int32_t)value_ {
 	[self setPrimitiveEpisodeID:@(value_)];
 }
 
@@ -139,6 +136,8 @@ const struct EpisodeRelationships EpisodeRelationships = {
 - (void)setPrimitiveNumberValue:(int32_t)value_ {
 	[self setPrimitiveNumber:@(value_)];
 }
+
+@dynamic overview;
 
 @dynamic rating;
 
@@ -179,8 +178,6 @@ const struct EpisodeRelationships EpisodeRelationships = {
 - (void)setPrimitiveSeasonValue:(int32_t)value_ {
 	[self setPrimitiveSeason:@(value_)];
 }
-
-@dynamic tvRageLink;
 
 @dynamic serie;
 

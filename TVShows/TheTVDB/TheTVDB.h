@@ -23,6 +23,8 @@
 #import "TVDBEpisodesOperation.h"
 #import "TVDBLanguagesOperation.h"
 #import "TVDBAuthenticationOperation.h"
+#import "TVDBImageOperation.h"
+#import "TVDBPosterOperation.h"
 
 //Model
 #import "TVDBSerie.h"

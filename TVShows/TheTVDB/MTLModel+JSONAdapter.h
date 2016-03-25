@@ -16,7 +16,7 @@
 
 @interface MTLModel (JSONAdapter)
 
-+ (instancetype)modelFromJSONDictionary:(NSDictionary *)JSONDictionary error:(NSError **)error;
++ (id)modelFromJSONDictionary:(NSDictionary *)JSONDictionary error:(NSError **)error;
 + (NSArray *)modelsFromJSONArray:(NSArray *)JSONArray error:(NSError **)error;
 
 @end

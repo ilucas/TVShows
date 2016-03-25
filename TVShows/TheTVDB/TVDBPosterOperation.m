@@ -11,29 +11,29 @@
  *  along with TVShows. If not, see <http://www.gnu.org/licenses/>.
  */
 
-#import "TVDBSeriesOperation.h"
-#import "TVDBSerie.h"
+#import "TVDBPosterOperation.h"
 #import "TVDBManager.h"
-#import "NSMutableURLRequestToken.h"
 
 @import Mantle;
 @import libextobjc;
 @import CocoaLumberjack;
 
-@interface TVDBSeriesOperation ()
+@interface TVDBPosterOperation ()
 
-@property (readwrite, nonatomic, strong) NSNumber *serieID;
-@property (readwrite, nonatomic, strong) TVDBSerie *serie;
+@property (readwrite, nonatomic, nullable) NSNumber *serieID;
+@property (readwrite, nonatomic, nullable) NSArray<NSDictionary *> *posters;
 
 @end
 
-@implementation TVDBSeriesOperation
+@implementation TVDBPosterOperation
 
-+ (instancetype)requestSerie:(NSNumber *)serieID WithToken:(NSString *)token {
-    NSString *rawURL = [@"series" stringByAppendingPathComponent:serieID.stringValue];
++ (nullable instancetype)requestPoster:(NSNumber *)serieID WithToken:(nullable NSString *)token {
+    NSString *rawURL = [NSString stringWithFormat:@"/series/%@/images/query", serieID];
     NSURL *url = [NSURL URLWithString:rawURL relativeToURL:[TVDBManager baseURL]];
     
-    TVDBSeriesOperation *operation = [TVDBSeriesOperation GET:url parameters:nil Token:token];
+    TVDBPosterOperation *operation = [TVDBPosterOperation GET:url
+                                                     parameters:@{@"keyType": @"poster"}
+                                                          Token:token];
     operation.serieID = serieID;
     
     return operation;
@@ -41,30 +41,25 @@
 
 #pragma mark - Properties
 
-- (TVDBSerie *)serie {
+- (NSArray<NSDictionary *> *)posters {
     @synchronized(self) {
-        if (!_serie && [self isFinished] && !self.error) {
-            NSError *error = nil;
-            _serie = [TVDBSerie modelFromJSONDictionary:self.responseObject[@"data"] error:&error];
-            
-            if (error) {
-                DDLogError(@"%s [Line %d]: %@", __PRETTY_FUNCTION__, __LINE__, error);
-            }
+        if (!_posters && [self isFinished] && !self.error) {
+            _posters = self.responseObject[@"data"];
         }
     }
-    
-    return _serie;
+    return _posters;
 }
 
 #pragma mark - Completion Block
 
-- (void)setCompletionBlockWithSuccess:(void (^)(TVDBSeriesOperation *operation, TVDBSerie *serie))success
-                              failure:(void (^)(TVDBSeriesOperation *operation, NSError *error))failure {
+- (void)setCompletionBlockWithSuccess:(void (^)(TVDBRequestOperation *, NSArray<NSDictionary *> *posters))success
+                              failure:(void (^)(TVDBRequestOperation *, NSError *))failure {
+    
     @weakify(self)
     [super setCompletionBlockWithSuccess:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
         if (success) {
             @strongify(self)
-            success(self, self.serie);
+            success(self, self.posters);
         }
     } failure:^(AFHTTPRequestOperation * _Nonnull operation, NSError * _Nonnull error) {
         if (failure) {

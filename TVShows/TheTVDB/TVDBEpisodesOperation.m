@@ -63,7 +63,7 @@
                     TVDBEpisode *episode = [TVDBEpisode modelFromJSONDictionary:obj error:&error];
                     
                     if (error) {
-                        NSLog(@"%s [Line %d]: %@", __PRETTY_FUNCTION__, __LINE__, error);
+                        DDLogError(@"%s [Line %d]: %@", __PRETTY_FUNCTION__, __LINE__, error);
                     } else {
                         [results addObject:[episode copy]];
                     }

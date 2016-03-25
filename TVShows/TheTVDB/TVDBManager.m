@@ -20,9 +20,12 @@
 #import "TVDBSearchOperation.h"
 #import "TVDBSeriesOperation.h"
 #import "TVDBUpdatesOperation.h"
+#import "TVDBImageOperation.h"
+#import "TVDBPosterOperation.h"
 
 #import "TVDBSerie.h"
 #import "TVDBEpisode.h"
+#import "Serie.h"
 
 // Spec: https://api-beta.thetvdb.com/swagger#/
 static NSString * const kBaseURL = @"https://api-beta.thetvdb.com";
@@ -67,11 +70,9 @@ static NSString * const kBaseURL = @"https://api-beta.thetvdb.com";
 #pragma mark - Series
 
 - (TVDBSeriesOperation *)serie:(NSNumber *)serieID completionBlock:(void (^)(TVDBSerie * _Nonnull))success failure:(void (^)(NSError * _Nonnull))failure {
-    TVDBSeriesOperation __block *operation = [TVDBSeriesOperation requestSerie:serieID WithToken:self.token];
+    TVDBSeriesOperation *operation = [TVDBSeriesOperation requestSerie:serieID WithToken:self.token];
     
-    [operation setCompletionBlockWithSuccess:^(TVDBSeriesOperation * _Nonnull operation, TVDBSerie * _Nonnull serie) {
-        success(serie);
-    } failure:^(TVDBSeriesOperation * _Nonnull operation, NSError * _Nonnull error) {
+    [operation setCompletionBlockWithSuccess:nil failure:^(TVDBSeriesOperation *operation, NSError *error) {
         if (operation.response.statusCode == 401) {// Not Authorized
             self.token = nil;// Reset token, get a new one.
             [self serie:operation.serieID completionBlock:success failure:failure];
@@ -80,7 +81,28 @@ static NSString * const kBaseURL = @"https://api-beta.thetvdb.com";
         }
     }];
     
+    // request serie posters
+    TVDBPosterOperation *posterOperation = [TVDBPosterOperation requestPoster:serieID WithToken:self.token];
+    
+    // Set the poster in the serie model.
+    NSBlockOperation *mergeOperation = [NSBlockOperation blockOperationWithBlock:^{
+        TVDBSerie *serie = operation.serie;
+        if (!serie) return;// Probably some request error.
+        
+        if (posterOperation.posters.count > 0) {
+            NSString *posterName = posterOperation.posters[0][@"fileName"];
+            serie.banner = posterName;
+        }
+        
+        success(serie);
+    }];
+    
+    [mergeOperation addDependency:operation];
+    [mergeOperation addDependency:posterOperation];
+    
     [self setupOperation:operation];
+    [self setupOperation:posterOperation];
+    [self.operationQueue addOperation:mergeOperation];
     
     return operation;
 }
@@ -129,12 +151,53 @@ static NSString * const kBaseURL = @"https://api-beta.thetvdb.com";
     return operation;
 }
 
+#pragma mark - Poster
+
+- (TVDBImageOperation *)poster:(Serie *)serie
+               completionBlock:(void (^)(NSImage *, NSNumber *))success
+                       failure:(void (^)(NSError *))failure {
+    
+    NSNumber *serieID = serie.serieID;
+    
+    // If theres no poster in the entity, return a error
+    if (!serie.poster) {
+        NSImage *placeholder = [NSImage imageNamed:@"posterArtPlaceholder"];
+        success(placeholder, serieID);
+        return nil;
+    }
+    
+    TVDBImageOperation *operation = [TVDBImageOperation requestImage:serie.poster
+                                          CompletionBlockWithSuccess:^(TVDBImageOperation *operation, NSImage *poster) {
+                                              success(poster, serieID);
+                                          } failure:^(TVDBImageOperation *operation, NSError *error) {
+                                              failure(error);
+                                          }];
+    
+    // Image request don't need token;
+    [self.operationQueue addOperation:operation];
+    
+    return operation;
+}
+
 #pragma mark - Private
 
 - (void)setupOperation:(TVDBRequestOperation *)operation {
     if (!self.token) {
-        TVDBAuthenticationOperation *tokenRequest = [self requestToken];
+        // Search in all operation in the queue if there's a token request.
+        TVDBAuthenticationOperation __block __weak *tokenRequest = nil;
+        [self.operationQueue.operations enumerateObjectsUsingBlock:^(__kindof NSOperation *obj, NSUInteger idx, BOOL *stop) {
+            if ([obj isKindOfClass:[TVDBAuthenticationOperation class]]) {
+                tokenRequest = obj;
+                *stop = true;
+            }
+        }];
         
+        // If no token request found, create one.
+        if (!tokenRequest) {
+            tokenRequest = [self requestToken];
+        }
+        
+        // Create the adapter to set the token to operation.
         NSBlockOperation *adapter = [NSBlockOperation blockOperationWithBlock:^{
             if (tokenRequest.response.statusCode == 200) {
                 operation.token = tokenRequest.token;
@@ -156,11 +219,25 @@ static NSString * const kBaseURL = @"https://api-beta.thetvdb.com";
 #pragma mark - Init
 
 + (instancetype)manager {
-    return [[self alloc] init];
+    static TVDBManager *manager = nil;
+    
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        manager = [[TVDBManager alloc] init];
+    });
+    
+    return manager;
 }
 
 - (instancetype)init {
-    return [super initWithBaseURL:[self baseURL]];
+    self = [super initWithBaseURL:[self baseURL]];
+    
+    if (self) {
+        //[self.operationQueue setMaxConcurrentOperationCount:1];
+        [self.operationQueue setName:@"com.TVShows.TVDB.Queue"];
+    }
+    
+    return self;
 }
 
 + (NSURL *)baseURL {

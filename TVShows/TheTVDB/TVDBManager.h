@@ -21,10 +21,13 @@
 @class TVDBEpisodeOperation;
 @class TVDBEpisodesOperation;
 @class TVDBUpdatesOperation;
+@class TVDBImageOperation;
+@class TVDBPosterOperation;
 
 // Models
 @class TVDBSerie;
 @class TVDBEpisode;
+@class Serie;
 
 @interface TVDBManager : AFHTTPRequestOperationManager
 
@@ -49,6 +52,11 @@ NS_ASSUME_NONNULL_BEGIN
 - (TVDBEpisodeOperation *)episode:(NSNumber *)episodeID
                   completionBlock:(nullable void (^)(TVDBEpisode *serie))success
                           failure:(nullable void (^)(NSError *error))failure;
+
+
+- (nullable TVDBImageOperation *)poster:(Serie *)serie
+                        completionBlock:(nullable void (^)(NSImage *poster, NSNumber *serieID))success
+                                failure:(nullable void (^)(NSError *error))failure;
 
 NS_ASSUME_NONNULL_END
 

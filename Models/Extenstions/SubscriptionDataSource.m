@@ -16,7 +16,7 @@
 #pragma mark - CoverGridDataSourceItem
 
 - (NSString *)imageUID {
-    return self.serie.tvdb_id.stringValue;
+    return self.serie.serieID.stringValue;
 }
 
 - (NSString *)imageRepresentationType {
@@ -35,7 +35,8 @@
     }
     
     NSString *cacheDir = applicationCacheDirectory();
-    NSString *imagePath = [[cacheDir stringByAppendingPathComponent:[self.serie.tvdb_id stringValue]] stringByAppendingFormat:@".png"];
+    NSString *imageName = [[self.serie.poster lastPathComponent] stringByDeletingPathExtension];// Remove "/poster" and ".jpg"
+    NSString *imagePath = [[cacheDir stringByAppendingPathComponent:imageName] stringByAppendingPathExtension:@"png"];
     
     return [NSURL fileURLWithPath:imagePath isDirectory:NO];
 }

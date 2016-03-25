@@ -15,7 +15,7 @@
 
 @implementation MTLModel (JSONAdapter)
 
-+ (instancetype)modelFromJSONDictionary:(NSDictionary *)JSONDictionary error:(NSError **)error {
++ (id)modelFromJSONDictionary:(NSDictionary *)JSONDictionary error:(NSError **)error {
     return [MTLJSONAdapter modelOfClass:[self class] fromJSONDictionary:JSONDictionary error:error];
 }
 

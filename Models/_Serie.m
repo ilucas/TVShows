@@ -4,28 +4,22 @@
 #import "_Serie.h"
 
 const struct SerieAttributes SerieAttributes = {
-	.airday = @"airday",
-	.airtime = @"airtime",
+	.airDay = @"airDay",
+	.airTime = @"airTime",
 	.contentRating = @"contentRating",
-	.country = @"country",
-	.ended = @"ended",
+	.firstAired = @"firstAired",
 	.genre = @"genre",
-	.imdb_id = @"imdb_id",
-	.language = @"language",
-	.lastUpdate = @"lastUpdate",
+	.imdb = @"imdb",
+	.lastUpdated = @"lastUpdated",
 	.name = @"name",
 	.network = @"network",
+	.overview = @"overview",
 	.poster = @"poster",
 	.rating = @"rating",
 	.runtime = @"runtime",
-	.seriesDescription = @"seriesDescription",
-	.started = @"started",
+	.seasons = @"seasons",
+	.serieID = @"serieID",
 	.status = @"status",
-	.timezone = @"timezone",
-	.totalseasons = @"totalseasons",
-	.tvRageLink = @"tvRageLink",
-	.tvdb_id = @"tvdb_id",
-	.tvrage_id = @"tvrage_id",
 };
 
 const struct SerieRelationships SerieRelationships = {
@@ -59,28 +53,23 @@ const struct SerieRelationships SerieRelationships = {
 + (NSSet*)keyPathsForValuesAffectingValueForKey:(NSString*)key {
 	NSSet *keyPaths = [super keyPathsForValuesAffectingValueForKey:key];
 
+	if ([key isEqualToString:@"lastUpdatedValue"]) {
+		NSSet *affectingKey = [NSSet setWithObject:@"lastUpdated"];
+		keyPaths = [keyPaths setByAddingObjectsFromSet:affectingKey];
+		return keyPaths;
+	}
 	if ([key isEqualToString:@"ratingValue"]) {
 		NSSet *affectingKey = [NSSet setWithObject:@"rating"];
 		keyPaths = [keyPaths setByAddingObjectsFromSet:affectingKey];
 		return keyPaths;
 	}
-	if ([key isEqualToString:@"runtimeValue"]) {
-		NSSet *affectingKey = [NSSet setWithObject:@"runtime"];
+	if ([key isEqualToString:@"seasonsValue"]) {
+		NSSet *affectingKey = [NSSet setWithObject:@"seasons"];
 		keyPaths = [keyPaths setByAddingObjectsFromSet:affectingKey];
 		return keyPaths;
 	}
-	if ([key isEqualToString:@"totalseasonsValue"]) {
-		NSSet *affectingKey = [NSSet setWithObject:@"totalseasons"];
-		keyPaths = [keyPaths setByAddingObjectsFromSet:affectingKey];
-		return keyPaths;
-	}
-	if ([key isEqualToString:@"tvdb_idValue"]) {
-		NSSet *affectingKey = [NSSet setWithObject:@"tvdb_id"];
-		keyPaths = [keyPaths setByAddingObjectsFromSet:affectingKey];
-		return keyPaths;
-	}
-	if ([key isEqualToString:@"tvrage_idValue"]) {
-		NSSet *affectingKey = [NSSet setWithObject:@"tvrage_id"];
+	if ([key isEqualToString:@"serieIDValue"]) {
+		NSSet *affectingKey = [NSSet setWithObject:@"serieID"];
 		keyPaths = [keyPaths setByAddingObjectsFromSet:affectingKey];
 		return keyPaths;
 	}
@@ -88,27 +77,43 @@ const struct SerieRelationships SerieRelationships = {
 	return keyPaths;
 }
 
-@dynamic airday;
+@dynamic airDay;
 
-@dynamic airtime;
+@dynamic airTime;
 
 @dynamic contentRating;
 
-@dynamic country;
-
-@dynamic ended;
+@dynamic firstAired;
 
 @dynamic genre;
 
-@dynamic imdb_id;
+@dynamic imdb;
 
-@dynamic language;
+@dynamic lastUpdated;
 
-@dynamic lastUpdate;
+- (int64_t)lastUpdatedValue {
+	NSNumber *result = [self lastUpdated];
+	return [result longLongValue];
+}
+
+- (void)setLastUpdatedValue:(int64_t)value_ {
+	[self setLastUpdated:@(value_)];
+}
+
+- (int64_t)primitiveLastUpdatedValue {
+	NSNumber *result = [self primitiveLastUpdated];
+	return [result longLongValue];
+}
+
+- (void)setPrimitiveLastUpdatedValue:(int64_t)value_ {
+	[self setPrimitiveLastUpdated:@(value_)];
+}
 
 @dynamic name;
 
 @dynamic network;
+
+@dynamic overview;
 
 @dynamic poster;
 
@@ -134,93 +139,47 @@ const struct SerieRelationships SerieRelationships = {
 
 @dynamic runtime;
 
-- (int16_t)runtimeValue {
-	NSNumber *result = [self runtime];
+@dynamic seasons;
+
+- (int16_t)seasonsValue {
+	NSNumber *result = [self seasons];
 	return [result shortValue];
 }
 
-- (void)setRuntimeValue:(int16_t)value_ {
-	[self setRuntime:@(value_)];
+- (void)setSeasonsValue:(int16_t)value_ {
+	[self setSeasons:@(value_)];
 }
 
-- (int16_t)primitiveRuntimeValue {
-	NSNumber *result = [self primitiveRuntime];
+- (int16_t)primitiveSeasonsValue {
+	NSNumber *result = [self primitiveSeasons];
 	return [result shortValue];
 }
 
-- (void)setPrimitiveRuntimeValue:(int16_t)value_ {
-	[self setPrimitiveRuntime:@(value_)];
+- (void)setPrimitiveSeasonsValue:(int16_t)value_ {
+	[self setPrimitiveSeasons:@(value_)];
 }
 
-@dynamic seriesDescription;
+@dynamic serieID;
 
-@dynamic started;
+- (int32_t)serieIDValue {
+	NSNumber *result = [self serieID];
+	return [result intValue];
+}
+
+- (void)setSerieIDValue:(int32_t)value_ {
+	[self setSerieID:@(value_)];
+}
+
+- (int32_t)primitiveSerieIDValue {
+	NSNumber *result = [self primitiveSerieID];
+	return [result intValue];
+}
+
+- (void)setPrimitiveSerieIDValue:(int32_t)value_ {
+	[self setPrimitiveSerieID:@(value_)];
+}
 
 @dynamic status;
-
-@dynamic timezone;
-
-@dynamic totalseasons;
-
-- (int16_t)totalseasonsValue {
-	NSNumber *result = [self totalseasons];
-	return [result shortValue];
-}
-
-- (void)setTotalseasonsValue:(int16_t)value_ {
-	[self setTotalseasons:@(value_)];
-}
-
-- (int16_t)primitiveTotalseasonsValue {
-	NSNumber *result = [self primitiveTotalseasons];
-	return [result shortValue];
-}
-
-- (void)setPrimitiveTotalseasonsValue:(int16_t)value_ {
-	[self setPrimitiveTotalseasons:@(value_)];
-}
-
-@dynamic tvRageLink;
-
-@dynamic tvdb_id;
-
-- (int32_t)tvdb_idValue {
-	NSNumber *result = [self tvdb_id];
-	return [result intValue];
-}
-
-- (void)setTvdb_idValue:(int32_t)value_ {
-	[self setTvdb_id:@(value_)];
-}
-
-- (int32_t)primitiveTvdb_idValue {
-	NSNumber *result = [self primitiveTvdb_id];
-	return [result intValue];
-}
-
-- (void)setPrimitiveTvdb_idValue:(int32_t)value_ {
-	[self setPrimitiveTvdb_id:@(value_)];
-}
-
-@dynamic tvrage_id;
-
-- (int32_t)tvrage_idValue {
-	NSNumber *result = [self tvrage_id];
-	return [result intValue];
-}
-
-- (void)setTvrage_idValue:(int32_t)value_ {
-	[self setTvrage_id:@(value_)];
-}
-
-- (int32_t)primitiveTvrage_idValue {
-	NSNumber *result = [self primitiveTvrage_id];
-	return [result intValue];
-}
-
-- (void)setPrimitiveTvrage_idValue:(int32_t)value_ {
-	[self setPrimitiveTvrage_id:@(value_)];
-}
 
 @dynamic episodes;
 

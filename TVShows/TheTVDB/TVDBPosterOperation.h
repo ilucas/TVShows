@@ -16,19 +16,19 @@
 
 #import "TVDBRequestOperation.h"
 
-@class TVDBSerie;
+@interface TVDBPosterOperation : TVDBRequestOperation
 
-@interface TVDBSeriesOperation : TVDBRequestOperation
-
-@property (readonly, nonatomic, strong, nullable) NSNumber *serieID;
-@property (readonly, nonatomic, strong, nullable) TVDBSerie *serie;
+@property (readonly, nonatomic, nullable) NSNumber *serieID;
+@property (readonly, nonatomic, nullable) NSArray<NSDictionary *> *posters;
 
 NS_ASSUME_NONNULL_BEGIN
 
-+ (nullable instancetype)requestSerie:(NSNumber *)serieID WithToken:(nullable NSString *)token;
++ (nullable instancetype)requestPoster:(NSNumber *)serieID
+                                       WithToken:(nullable NSString *)token;
 
-- (void)setCompletionBlockWithSuccess:(nullable void (^)(TVDBSeriesOperation *operation, TVDBSerie *serie))success
-                              failure:(nullable void (^)(TVDBSeriesOperation *operation, NSError *error))failure;
+- (void)setCompletionBlockWithSuccess:(nullable void (^)(TVDBRequestOperation *operation, NSArray<NSDictionary *> *posters))success
+                              failure:(nullable void (^)(TVDBRequestOperation *operation, NSError *error))failure;
+
 
 NS_ASSUME_NONNULL_END
 

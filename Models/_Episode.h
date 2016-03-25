@@ -6,13 +6,12 @@
 extern const struct EpisodeAttributes {
 	__unsafe_unretained NSString *airDate;
 	__unsafe_unretained NSString *episode;
-	__unsafe_unretained NSString *episodeDescription;
 	__unsafe_unretained NSString *episodeID;
 	__unsafe_unretained NSString *name;
 	__unsafe_unretained NSString *number;
+	__unsafe_unretained NSString *overview;
 	__unsafe_unretained NSString *rating;
 	__unsafe_unretained NSString *season;
-	__unsafe_unretained NSString *tvRageLink;
 } EpisodeAttributes;
 
 extern const struct EpisodeRelationships {
@@ -42,15 +41,11 @@ extern const struct EpisodeRelationships {
 
 //- (BOOL)validateEpisode:(id*)value_ error:(NSError**)error_;
 
-@property (nonatomic, strong) NSString* episodeDescription;
-
-//- (BOOL)validateEpisodeDescription:(id*)value_ error:(NSError**)error_;
-
 @property (nonatomic, strong) NSNumber* episodeID;
 
-@property (atomic) float episodeIDValue;
-- (float)episodeIDValue;
-- (void)setEpisodeIDValue:(float)value_;
+@property (atomic) int32_t episodeIDValue;
+- (int32_t)episodeIDValue;
+- (void)setEpisodeIDValue:(int32_t)value_;
 
 //- (BOOL)validateEpisodeID:(id*)value_ error:(NSError**)error_;
 
@@ -65,6 +60,10 @@ extern const struct EpisodeRelationships {
 - (void)setNumberValue:(int32_t)value_;
 
 //- (BOOL)validateNumber:(id*)value_ error:(NSError**)error_;
+
+@property (nonatomic, strong) NSString* overview;
+
+//- (BOOL)validateOverview:(id*)value_ error:(NSError**)error_;
 
 @property (nonatomic, strong) NSNumber* rating;
 
@@ -81,10 +80,6 @@ extern const struct EpisodeRelationships {
 - (void)setSeasonValue:(int32_t)value_;
 
 //- (BOOL)validateSeason:(id*)value_ error:(NSError**)error_;
-
-@property (nonatomic, strong) NSString* tvRageLink;
-
-//- (BOOL)validateTvRageLink:(id*)value_ error:(NSError**)error_;
 
 @property (nonatomic, strong) Serie *serie;
 
@@ -103,14 +98,11 @@ extern const struct EpisodeRelationships {
 - (int32_t)primitiveEpisodeValue;
 - (void)setPrimitiveEpisodeValue:(int32_t)value_;
 
-- (NSString*)primitiveEpisodeDescription;
-- (void)setPrimitiveEpisodeDescription:(NSString*)value;
-
 - (NSNumber*)primitiveEpisodeID;
 - (void)setPrimitiveEpisodeID:(NSNumber*)value;
 
-- (float)primitiveEpisodeIDValue;
-- (void)setPrimitiveEpisodeIDValue:(float)value_;
+- (int32_t)primitiveEpisodeIDValue;
+- (void)setPrimitiveEpisodeIDValue:(int32_t)value_;
 
 - (NSString*)primitiveName;
 - (void)setPrimitiveName:(NSString*)value;
@@ -120,6 +112,9 @@ extern const struct EpisodeRelationships {
 
 - (int32_t)primitiveNumberValue;
 - (void)setPrimitiveNumberValue:(int32_t)value_;
+
+- (NSString*)primitiveOverview;
+- (void)setPrimitiveOverview:(NSString*)value;
 
 - (NSNumber*)primitiveRating;
 - (void)setPrimitiveRating:(NSNumber*)value;
@@ -132,9 +127,6 @@ extern const struct EpisodeRelationships {
 
 - (int32_t)primitiveSeasonValue;
 - (void)setPrimitiveSeasonValue:(int32_t)value_;
-
-- (NSString*)primitiveTvRageLink;
-- (void)setPrimitiveTvRageLink:(NSString*)value;
 
 - (Serie*)primitiveSerie;
 - (void)setPrimitiveSerie:(Serie*)value;

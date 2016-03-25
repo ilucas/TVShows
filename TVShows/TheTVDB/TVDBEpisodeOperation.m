@@ -23,6 +23,7 @@
 @interface TVDBEpisodeOperation ()
 
 @property (readwrite, nonatomic, strong) NSNumber *episodeID;
+@property (readwrite, nonatomic, strong, nullable) TVDBEpisode *episode;
 
 @end
 
@@ -39,6 +40,23 @@
     return operation;
 }
 
+#pragma mark - Properties
+
+- (TVDBEpisode *)episode {
+    @synchronized(self) {
+        if (!_episode && [self isFinished] && !self.error) {
+            NSError *error;
+            _episode = [TVDBEpisode modelFromJSONDictionary:self.responseObject[@"data"] error:&error];
+            
+            if (error) {
+                DDLogError(@"%s [Line %d]: %@", __PRETTY_FUNCTION__, __LINE__, error);
+            }
+        }
+    }
+    
+    return _episode;
+}
+
 #pragma mark - Completion Block
 
 - (void)setCompletionBlockWithSuccess:(void (^)(TVDBEpisodeOperation * operation, TVDBEpisode* episode))success
@@ -46,16 +64,9 @@
     
     @weakify(self)
     [super setCompletionBlockWithSuccess:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
-        NSError *error;
-        TVDBEpisode *episode = [TVDBEpisode modelFromJSONDictionary:responseObject[@"data"] error:&error];
-        
-        if (error) {
-            NSLog(@"%s [Line %d]: %@", __PRETTY_FUNCTION__, __LINE__, error);
-        }
-        
         if (success) {
             @strongify(self)
-            success(self, episode);
+            success(self, self.episode);
         }
     } failure:^(AFHTTPRequestOperation * _Nonnull operation, NSError * _Nonnull error) {
         if (failure) {

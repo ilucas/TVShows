@@ -4,28 +4,22 @@
 @import CoreData;
 
 extern const struct SerieAttributes {
-	__unsafe_unretained NSString *airday;
-	__unsafe_unretained NSString *airtime;
+	__unsafe_unretained NSString *airDay;
+	__unsafe_unretained NSString *airTime;
 	__unsafe_unretained NSString *contentRating;
-	__unsafe_unretained NSString *country;
-	__unsafe_unretained NSString *ended;
+	__unsafe_unretained NSString *firstAired;
 	__unsafe_unretained NSString *genre;
-	__unsafe_unretained NSString *imdb_id;
-	__unsafe_unretained NSString *language;
-	__unsafe_unretained NSString *lastUpdate;
+	__unsafe_unretained NSString *imdb;
+	__unsafe_unretained NSString *lastUpdated;
 	__unsafe_unretained NSString *name;
 	__unsafe_unretained NSString *network;
+	__unsafe_unretained NSString *overview;
 	__unsafe_unretained NSString *poster;
 	__unsafe_unretained NSString *rating;
 	__unsafe_unretained NSString *runtime;
-	__unsafe_unretained NSString *seriesDescription;
-	__unsafe_unretained NSString *started;
+	__unsafe_unretained NSString *seasons;
+	__unsafe_unretained NSString *serieID;
 	__unsafe_unretained NSString *status;
-	__unsafe_unretained NSString *timezone;
-	__unsafe_unretained NSString *totalseasons;
-	__unsafe_unretained NSString *tvRageLink;
-	__unsafe_unretained NSString *tvdb_id;
-	__unsafe_unretained NSString *tvrage_id;
 } SerieAttributes;
 
 extern const struct SerieRelationships {
@@ -45,41 +39,37 @@ extern const struct SerieRelationships {
 + (NSEntityDescription*)entityInManagedObjectContext:(NSManagedObjectContext*)moc_;
 @property (nonatomic, readonly, strong) SerieID* objectID;
 
-@property (nonatomic, strong) NSString* airday;
+@property (nonatomic, strong) NSString* airDay;
 
-//- (BOOL)validateAirday:(id*)value_ error:(NSError**)error_;
+//- (BOOL)validateAirDay:(id*)value_ error:(NSError**)error_;
 
-@property (nonatomic, strong) NSString* airtime;
+@property (nonatomic, strong) NSString* airTime;
 
-//- (BOOL)validateAirtime:(id*)value_ error:(NSError**)error_;
+//- (BOOL)validateAirTime:(id*)value_ error:(NSError**)error_;
 
 @property (nonatomic, strong) NSString* contentRating;
 
 //- (BOOL)validateContentRating:(id*)value_ error:(NSError**)error_;
 
-@property (nonatomic, strong) NSString* country;
+@property (nonatomic, strong) NSDate* firstAired;
 
-//- (BOOL)validateCountry:(id*)value_ error:(NSError**)error_;
-
-@property (nonatomic, strong) NSDate* ended;
-
-//- (BOOL)validateEnded:(id*)value_ error:(NSError**)error_;
+//- (BOOL)validateFirstAired:(id*)value_ error:(NSError**)error_;
 
 @property (nonatomic, strong) NSString* genre;
 
 //- (BOOL)validateGenre:(id*)value_ error:(NSError**)error_;
 
-@property (nonatomic, strong) NSString* imdb_id;
+@property (nonatomic, strong) NSString* imdb;
 
-//- (BOOL)validateImdb_id:(id*)value_ error:(NSError**)error_;
+//- (BOOL)validateImdb:(id*)value_ error:(NSError**)error_;
 
-@property (nonatomic, strong) NSString* language;
+@property (nonatomic, strong) NSNumber* lastUpdated;
 
-//- (BOOL)validateLanguage:(id*)value_ error:(NSError**)error_;
+@property (atomic) int64_t lastUpdatedValue;
+- (int64_t)lastUpdatedValue;
+- (void)setLastUpdatedValue:(int64_t)value_;
 
-@property (nonatomic, strong) NSDate* lastUpdate;
-
-//- (BOOL)validateLastUpdate:(id*)value_ error:(NSError**)error_;
+//- (BOOL)validateLastUpdated:(id*)value_ error:(NSError**)error_;
 
 @property (nonatomic, strong) NSString* name;
 
@@ -88,6 +78,10 @@ extern const struct SerieRelationships {
 @property (nonatomic, strong) NSString* network;
 
 //- (BOOL)validateNetwork:(id*)value_ error:(NSError**)error_;
+
+@property (nonatomic, strong) NSString* overview;
+
+//- (BOOL)validateOverview:(id*)value_ error:(NSError**)error_;
 
 @property (nonatomic, strong) NSString* poster;
 
@@ -101,57 +95,29 @@ extern const struct SerieRelationships {
 
 //- (BOOL)validateRating:(id*)value_ error:(NSError**)error_;
 
-@property (nonatomic, strong) NSNumber* runtime;
-
-@property (atomic) int16_t runtimeValue;
-- (int16_t)runtimeValue;
-- (void)setRuntimeValue:(int16_t)value_;
+@property (nonatomic, strong) NSString* runtime;
 
 //- (BOOL)validateRuntime:(id*)value_ error:(NSError**)error_;
 
-@property (nonatomic, strong) NSString* seriesDescription;
+@property (nonatomic, strong) NSNumber* seasons;
 
-//- (BOOL)validateSeriesDescription:(id*)value_ error:(NSError**)error_;
+@property (atomic) int16_t seasonsValue;
+- (int16_t)seasonsValue;
+- (void)setSeasonsValue:(int16_t)value_;
 
-@property (nonatomic, strong) NSDate* started;
+//- (BOOL)validateSeasons:(id*)value_ error:(NSError**)error_;
 
-//- (BOOL)validateStarted:(id*)value_ error:(NSError**)error_;
+@property (nonatomic, strong) NSNumber* serieID;
+
+@property (atomic) int32_t serieIDValue;
+- (int32_t)serieIDValue;
+- (void)setSerieIDValue:(int32_t)value_;
+
+//- (BOOL)validateSerieID:(id*)value_ error:(NSError**)error_;
 
 @property (nonatomic, strong) NSString* status;
 
 //- (BOOL)validateStatus:(id*)value_ error:(NSError**)error_;
-
-@property (nonatomic, strong) NSString* timezone;
-
-//- (BOOL)validateTimezone:(id*)value_ error:(NSError**)error_;
-
-@property (nonatomic, strong) NSNumber* totalseasons;
-
-@property (atomic) int16_t totalseasonsValue;
-- (int16_t)totalseasonsValue;
-- (void)setTotalseasonsValue:(int16_t)value_;
-
-//- (BOOL)validateTotalseasons:(id*)value_ error:(NSError**)error_;
-
-@property (nonatomic, strong) NSString* tvRageLink;
-
-//- (BOOL)validateTvRageLink:(id*)value_ error:(NSError**)error_;
-
-@property (nonatomic, strong) NSNumber* tvdb_id;
-
-@property (atomic) int32_t tvdb_idValue;
-- (int32_t)tvdb_idValue;
-- (void)setTvdb_idValue:(int32_t)value_;
-
-//- (BOOL)validateTvdb_id:(id*)value_ error:(NSError**)error_;
-
-@property (nonatomic, strong) NSNumber* tvrage_id;
-
-@property (atomic) int32_t tvrage_idValue;
-- (int32_t)tvrage_idValue;
-- (void)setTvrage_idValue:(int32_t)value_;
-
-//- (BOOL)validateTvrage_id:(id*)value_ error:(NSError**)error_;
 
 @property (nonatomic, strong) NSSet *episodes;
 
@@ -173,38 +139,38 @@ extern const struct SerieRelationships {
 
 @interface _Serie (CoreDataGeneratedPrimitiveAccessors)
 
-- (NSString*)primitiveAirday;
-- (void)setPrimitiveAirday:(NSString*)value;
+- (NSString*)primitiveAirDay;
+- (void)setPrimitiveAirDay:(NSString*)value;
 
-- (NSString*)primitiveAirtime;
-- (void)setPrimitiveAirtime:(NSString*)value;
+- (NSString*)primitiveAirTime;
+- (void)setPrimitiveAirTime:(NSString*)value;
 
 - (NSString*)primitiveContentRating;
 - (void)setPrimitiveContentRating:(NSString*)value;
 
-- (NSString*)primitiveCountry;
-- (void)setPrimitiveCountry:(NSString*)value;
-
-- (NSDate*)primitiveEnded;
-- (void)setPrimitiveEnded:(NSDate*)value;
+- (NSDate*)primitiveFirstAired;
+- (void)setPrimitiveFirstAired:(NSDate*)value;
 
 - (NSString*)primitiveGenre;
 - (void)setPrimitiveGenre:(NSString*)value;
 
-- (NSString*)primitiveImdb_id;
-- (void)setPrimitiveImdb_id:(NSString*)value;
+- (NSString*)primitiveImdb;
+- (void)setPrimitiveImdb:(NSString*)value;
 
-- (NSString*)primitiveLanguage;
-- (void)setPrimitiveLanguage:(NSString*)value;
+- (NSNumber*)primitiveLastUpdated;
+- (void)setPrimitiveLastUpdated:(NSNumber*)value;
 
-- (NSDate*)primitiveLastUpdate;
-- (void)setPrimitiveLastUpdate:(NSDate*)value;
+- (int64_t)primitiveLastUpdatedValue;
+- (void)setPrimitiveLastUpdatedValue:(int64_t)value_;
 
 - (NSString*)primitiveName;
 - (void)setPrimitiveName:(NSString*)value;
 
 - (NSString*)primitiveNetwork;
 - (void)setPrimitiveNetwork:(NSString*)value;
+
+- (NSString*)primitiveOverview;
+- (void)setPrimitiveOverview:(NSString*)value;
 
 - (NSString*)primitivePoster;
 - (void)setPrimitivePoster:(NSString*)value;
@@ -215,44 +181,23 @@ extern const struct SerieRelationships {
 - (float)primitiveRatingValue;
 - (void)setPrimitiveRatingValue:(float)value_;
 
-- (NSNumber*)primitiveRuntime;
-- (void)setPrimitiveRuntime:(NSNumber*)value;
+- (NSString*)primitiveRuntime;
+- (void)setPrimitiveRuntime:(NSString*)value;
 
-- (int16_t)primitiveRuntimeValue;
-- (void)setPrimitiveRuntimeValue:(int16_t)value_;
+- (NSNumber*)primitiveSeasons;
+- (void)setPrimitiveSeasons:(NSNumber*)value;
 
-- (NSString*)primitiveSeriesDescription;
-- (void)setPrimitiveSeriesDescription:(NSString*)value;
+- (int16_t)primitiveSeasonsValue;
+- (void)setPrimitiveSeasonsValue:(int16_t)value_;
 
-- (NSDate*)primitiveStarted;
-- (void)setPrimitiveStarted:(NSDate*)value;
+- (NSNumber*)primitiveSerieID;
+- (void)setPrimitiveSerieID:(NSNumber*)value;
+
+- (int32_t)primitiveSerieIDValue;
+- (void)setPrimitiveSerieIDValue:(int32_t)value_;
 
 - (NSString*)primitiveStatus;
 - (void)setPrimitiveStatus:(NSString*)value;
-
-- (NSString*)primitiveTimezone;
-- (void)setPrimitiveTimezone:(NSString*)value;
-
-- (NSNumber*)primitiveTotalseasons;
-- (void)setPrimitiveTotalseasons:(NSNumber*)value;
-
-- (int16_t)primitiveTotalseasonsValue;
-- (void)setPrimitiveTotalseasonsValue:(int16_t)value_;
-
-- (NSString*)primitiveTvRageLink;
-- (void)setPrimitiveTvRageLink:(NSString*)value;
-
-- (NSNumber*)primitiveTvdb_id;
-- (void)setPrimitiveTvdb_id:(NSNumber*)value;
-
-- (int32_t)primitiveTvdb_idValue;
-- (void)setPrimitiveTvdb_idValue:(int32_t)value_;
-
-- (NSNumber*)primitiveTvrage_id;
-- (void)setPrimitiveTvrage_id:(NSNumber*)value;
-
-- (int32_t)primitiveTvrage_idValue;
-- (void)setPrimitiveTvrage_idValue:(int32_t)value_;
 
 - (NSMutableSet*)primitiveEpisodes;
 - (void)setPrimitiveEpisodes:(NSMutableSet*)value;

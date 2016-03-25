@@ -21,6 +21,7 @@
 @interface TVDBEpisodeOperation : TVDBRequestOperation
 
 @property (readonly, nonatomic, strong, nullable) NSNumber *episodeID;
+@property (readonly, nonatomic, strong, nullable) TVDBEpisode *episode;
 
 NS_ASSUME_NONNULL_BEGIN
 
