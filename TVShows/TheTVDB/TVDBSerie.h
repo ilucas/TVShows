@@ -17,21 +17,34 @@
 
 #import "MTLModel+JSONAdapter.h"
 
+@class TVDBEpisode;
+
 @interface TVDBSerie : MTLModel <MTLJSONSerializing, MTLManagedObjectSerializing>
 
-@property (strong, nonatomic, nullable) NSNumber *seriesID;
+@property (strong, nonatomic, nullable) NSNumber *serieID;
 @property (strong, nonatomic, nullable) NSString *name;
 @property (strong, nonatomic, nullable) NSString *status;
 @property (strong, nonatomic, nullable) NSString *network;
 @property (strong, nonatomic, nullable) NSNumber *networkID;
 @property (strong, nonatomic, nullable) NSString *runtime;
+@property (strong, nonatomic, nullable) NSDate *firstAired;
 @property (strong, nonatomic, nullable) NSString *genre;
 @property (strong, nonatomic, nullable) NSString *overview;
 @property (strong, nonatomic, nullable) NSNumber *lastUpdated;
+@property (strong, nonatomic, nullable) NSString *contentRating;
 @property (strong, nonatomic, nullable) NSString *airDay;
 @property (strong, nonatomic, nullable) NSString *airTime;
 @property (strong, nonatomic, nullable) NSNumber *rating;
-@property (strong, nonatomic, nullable) NSString *imdbId;
+@property (strong, nonatomic, nullable) NSString *imdbID;
 @property (strong, nonatomic, nullable) NSString *banner;
 
+@property (strong, nonatomic, nullable) NSArray <TVDBEpisode *> *episodes;
+
+NS_ASSUME_NONNULL_BEGIN
+
+- (nullable id)insertManagedObjectIntoContext:(NSManagedObjectContext *)context error:(NSError **)error;
+
+NS_ASSUME_NONNULL_END
+
 @end
+

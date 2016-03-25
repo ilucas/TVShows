@@ -27,4 +27,10 @@
 @property (strong, nonatomic, nullable) NSString *name;
 @property (strong, nonatomic, nullable) NSString *overview;
 
+NS_ASSUME_NONNULL_BEGIN
+
+- (nullable id)insertManagedObjectIntoContext:(NSManagedObjectContext *)context error:(NSError **)error;
+
+NS_ASSUME_NONNULL_END
+
 @end

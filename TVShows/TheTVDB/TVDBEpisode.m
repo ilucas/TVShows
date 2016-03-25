@@ -12,6 +12,7 @@
  */
 
 #import "TVDBEpisode.h"
+#import "Episode.h"
 
 @implementation TVDBEpisode
 
@@ -32,12 +33,30 @@
 #pragma mark - MTLManagedObjectSerializing
 
 + (NSDictionary *)managedObjectKeysByPropertyKey {
-    return @{};
+    return @{
+             @"episodeID": @"episodeID",
+             @"episode": @"episode",
+             @"season": @"season",
+             @"number": @"number",
+             @"airDate": @"airDate",
+             @"name": @"name",
+             @"overview": @"overview",
+             };
+}
+
++ (NSSet *)propertyKeysForManagedObjectUniquing {
+    return [NSSet setWithObject:@"episodeID"];
 }
 
 + (NSString *)managedObjectEntityName {
-    return @"";
+    return [Episode entityName];
 }
+
+#pragma mark - MTLManagedObjectAdapter
+
+- (id)insertManagedObjectIntoContext:(NSManagedObjectContext *)context error:(NSError * _Nullable __autoreleasing *)error {
+    return [MTLManagedObjectAdapter managedObjectFromModel:self insertingIntoContext:context error:error];
+};
 
 #pragma mark - JSON Value Transformers
 

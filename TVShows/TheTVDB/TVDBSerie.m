@@ -12,38 +12,71 @@
  */
 
 #import "TVDBSerie.h"
+#import "TVDBEpisode.h"
+#import "Serie.h"
 
 @implementation TVDBSerie
 
 #pragma mark - MTLJSONSerializing
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
-    return @{@"seriesID": @"id",
-            @"name": @"seriesName",
-            @"status": @"status",
-            @"network": @"network",
-            @"networkID": @"networkID",
-            @"runtime": @"runtime",
-            @"genre": @"genre",
-            @"overview": @"overview",
-            @"lastUpdated": @"lastUpdated",
-            @"airDay": @"airsDayOfWeek",
-            @"airTime": @"airsTime",
-            @"rating": @"siteRating",
-            @"imdbId": @"imdbId",
-            @"banner": @"banner"
-            };
+    return @{
+             @"serieID": @"id",
+             @"name": @"seriesName",
+             @"status": @"status",
+             @"network": @"network",
+             @"networkID": @"networkID",
+             @"runtime": @"runtime",
+             @"firstAired": @"firstAired",
+             @"genre": @"genre",
+             @"overview": @"overview",
+             @"lastUpdated": @"lastUpdated",
+             @"contentRating": @"rating",
+             @"airDay": @"airsDayOfWeek",
+             @"airTime": @"airsTime",
+             @"rating": @"siteRating",
+             @"imdbID": @"imdbId",
+             @"banner": @"banner",
+             @"episodes": @"episodes"
+             };
 }
 
 #pragma mark - MTLManagedObjectSerializing
 
 + (NSDictionary *)managedObjectKeysByPropertyKey {
-    return @{};
+    return @{
+             @"serieID": @"serieID",
+             @"name": @"name",
+             @"status": @"status",
+             @"network": @"network",
+             @"runtime": @"runtime",
+             @"firstAired": @"firstAired",
+             @"genre": @"genre",
+             @"overview": @"overview",
+             @"lastUpdated": @"lastUpdated",
+             @"contentRating": @"contentRating",
+             @"airDay": @"airDay",
+             @"airTime": @"airTime",
+             @"rating": @"rating",
+             @"imdbID": @"imdb",
+             @"banner": @"poster",
+             @"episodes": @"episodes"
+             };
+}
+
++ (NSSet *)propertyKeysForManagedObjectUniquing {
+    return [NSSet setWithObject:@"serieID"];
 }
 
 + (NSString *)managedObjectEntityName {
-    return @"";
+    return [Serie entityName];
 }
+
+#pragma mark - MTLManagedObjectAdapter
+
+- (id)insertManagedObjectIntoContext:(NSManagedObjectContext *)context error:(NSError * _Nullable __autoreleasing *)error {
+    return [MTLManagedObjectAdapter managedObjectFromModel:self insertingIntoContext:context error:error];
+};
 
 #pragma mark - JSON Value Transformers
 
@@ -63,6 +96,34 @@
         NSArray *genres = [value subarrayWithRange:NSMakeRange(0, MIN(3, value.count))]; // Only show 3 genres.
         return [genres componentsJoinedByString:@", "];
     }];
+}
+
++ (NSValueTransformer *)episodesJSONTransformer {
+    return [MTLJSONAdapter arrayTransformerWithModelClass:[TVDBEpisode class]];
+}
+
++ (NSValueTransformer *)firstAiredJSONTransformer {
+    return [MTLValueTransformer transformerUsingForwardBlock:^id(NSString *airDate, BOOL *success, NSError *__autoreleasing *error) {
+        return [self.dateFormatter dateFromString:airDate];
+    }];
+}
+
+//+ (NSValueTransformer *)bannerJSONTransformer {
+//    return [MTLValueTransformer transformerUsingForwardBlock:^id(NSString *value, BOOL *success, NSError *__autoreleasing *error) {
+//        return [@"https://www.thetvdb.com/banners/_cache/" stringByAppendingPathComponent:value];
+//    }];
+//}
+
+#pragma mark - NSDateFormatter
+
++ (NSDateFormatter *)dateFormatter {
+    static NSDateFormatter *dateFormatter = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        dateFormatter = [[NSDateFormatter alloc] init];
+        dateFormatter.dateFormat = @"yyyy-MM-dd";
+    });
+    return dateFormatter;
 }
 
 @end
