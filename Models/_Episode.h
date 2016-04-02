@@ -5,6 +5,7 @@
 
 extern const struct EpisodeAttributes {
 	__unsafe_unretained NSString *airDate;
+	__unsafe_unretained NSString *downloaded;
 	__unsafe_unretained NSString *episode;
 	__unsafe_unretained NSString *episodeID;
 	__unsafe_unretained NSString *name;
@@ -32,6 +33,14 @@ extern const struct EpisodeRelationships {
 @property (nonatomic, strong) NSDate* airDate;
 
 //- (BOOL)validateAirDate:(id*)value_ error:(NSError**)error_;
+
+@property (nonatomic, strong) NSNumber* downloaded;
+
+@property (atomic) BOOL downloadedValue;
+- (BOOL)downloadedValue;
+- (void)setDownloadedValue:(BOOL)value_;
+
+//- (BOOL)validateDownloaded:(id*)value_ error:(NSError**)error_;
 
 @property (nonatomic, strong) NSNumber* episode;
 
@@ -91,6 +100,12 @@ extern const struct EpisodeRelationships {
 
 - (NSDate*)primitiveAirDate;
 - (void)setPrimitiveAirDate:(NSDate*)value;
+
+- (NSNumber*)primitiveDownloaded;
+- (void)setPrimitiveDownloaded:(NSNumber*)value;
+
+- (BOOL)primitiveDownloadedValue;
+- (void)setPrimitiveDownloadedValue:(BOOL)value_;
 
 - (NSNumber*)primitiveEpisode;
 - (void)setPrimitiveEpisode:(NSNumber*)value;

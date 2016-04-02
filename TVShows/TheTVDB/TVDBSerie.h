@@ -38,11 +38,14 @@
 @property (strong, nonatomic, nullable) NSString *imdbID;
 @property (strong, nonatomic, nullable) NSString *banner;
 
-@property (strong, nonatomic, nullable) NSArray <TVDBEpisode *> *episodes;
+@property (strong, nonatomic, nullable) NSSet<TVDBEpisode *> *episodes;
 
 NS_ASSUME_NONNULL_BEGIN
 
 - (nullable id)insertManagedObjectIntoContext:(NSManagedObjectContext *)context error:(NSError **)error;
++ (nullable id)modelFromManagedObject:(NSManagedObject *)managedObject error:(NSError **)error;
+
+- (void)addEpisodes:(NSArray<TVDBEpisode *> *)newEpisodes;
 
 NS_ASSUME_NONNULL_END
 

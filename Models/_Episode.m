@@ -5,6 +5,7 @@
 
 const struct EpisodeAttributes EpisodeAttributes = {
 	.airDate = @"airDate",
+	.downloaded = @"downloaded",
 	.episode = @"episode",
 	.episodeID = @"episodeID",
 	.name = @"name",
@@ -44,6 +45,11 @@ const struct EpisodeRelationships EpisodeRelationships = {
 + (NSSet*)keyPathsForValuesAffectingValueForKey:(NSString*)key {
 	NSSet *keyPaths = [super keyPathsForValuesAffectingValueForKey:key];
 
+	if ([key isEqualToString:@"downloadedValue"]) {
+		NSSet *affectingKey = [NSSet setWithObject:@"downloaded"];
+		keyPaths = [keyPaths setByAddingObjectsFromSet:affectingKey];
+		return keyPaths;
+	}
 	if ([key isEqualToString:@"episodeValue"]) {
 		NSSet *affectingKey = [NSSet setWithObject:@"episode"];
 		keyPaths = [keyPaths setByAddingObjectsFromSet:affectingKey];
@@ -74,6 +80,26 @@ const struct EpisodeRelationships EpisodeRelationships = {
 }
 
 @dynamic airDate;
+
+@dynamic downloaded;
+
+- (BOOL)downloadedValue {
+	NSNumber *result = [self downloaded];
+	return [result boolValue];
+}
+
+- (void)setDownloadedValue:(BOOL)value_ {
+	[self setDownloaded:@(value_)];
+}
+
+- (BOOL)primitiveDownloadedValue {
+	NSNumber *result = [self primitiveDownloaded];
+	return [result boolValue];
+}
+
+- (void)setPrimitiveDownloadedValue:(BOOL)value_ {
+	[self setPrimitiveDownloaded:@(value_)];
+}
 
 @dynamic episode;
 

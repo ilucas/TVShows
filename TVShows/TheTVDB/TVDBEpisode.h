@@ -17,19 +17,24 @@
 
 #import "MTLModel+JSONAdapter.h"
 
+@class TVDBSerie;
+
 @interface TVDBEpisode : MTLModel <MTLJSONSerializing, MTLManagedObjectSerializing>
 
 @property (strong, nonatomic, nullable) NSNumber *episodeID;
 @property (strong, nonatomic, nullable) NSNumber *episode;
 @property (strong, nonatomic, nullable) NSNumber *season;
 @property (strong, nonatomic, nullable) NSNumber *number;
-@property (strong, nonatomic, nullable) NSData *airDate;
+@property (strong, nonatomic, nullable) NSDate *airDate;
 @property (strong, nonatomic, nullable) NSString *name;
 @property (strong, nonatomic, nullable) NSString *overview;
+
+@property (weak, nonatomic, nullable) TVDBSerie *serie;
 
 NS_ASSUME_NONNULL_BEGIN
 
 - (nullable id)insertManagedObjectIntoContext:(NSManagedObjectContext *)context error:(NSError **)error;
++ (nullable id)modelFromManagedObject:(NSManagedObject *)managedObject error:(NSError **)error;
 
 NS_ASSUME_NONNULL_END
 

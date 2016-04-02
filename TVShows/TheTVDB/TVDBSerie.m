@@ -14,8 +14,20 @@
 #import "TVDBSerie.h"
 #import "TVDBEpisode.h"
 #import "Serie.h"
+#import "Episode.h"
 
 @implementation TVDBSerie
+
+- (void)addEpisodes:(NSArray<TVDBEpisode *> *)newEpisodes {
+    NSMutableSet<TVDBEpisode *> *episodes = [NSMutableSet setWithSet:self.episodes];
+    
+    [newEpisodes enumerateObjectsUsingBlock:^(TVDBEpisode *episode, NSUInteger idx, BOOL * _Nonnull stop) {
+        episode.serie = self;
+        [episodes addObject:episode];
+    }];
+    
+    self.episodes = episodes;
+}
 
 #pragma mark - MTLJSONSerializing
 
@@ -64,6 +76,10 @@
              };
 }
 
++ (NSDictionary *)relationshipModelClassesByPropertyKey {
+    return @{@"episodes": [TVDBEpisode class]};
+}
+
 + (NSSet *)propertyKeysForManagedObjectUniquing {
     return [NSSet setWithObject:@"serieID"];
 }
@@ -77,6 +93,10 @@
 - (id)insertManagedObjectIntoContext:(NSManagedObjectContext *)context error:(NSError * _Nullable __autoreleasing *)error {
     return [MTLManagedObjectAdapter managedObjectFromModel:self insertingIntoContext:context error:error];
 };
+
++ (id)modelFromManagedObject:(NSManagedObject *)managedObject error:(NSError * _Nullable __autoreleasing *)error {
+    return [MTLManagedObjectAdapter modelOfClass:[self class] fromManagedObject:managedObject error:error];
+}
 
 #pragma mark - JSON Value Transformers
 
@@ -107,12 +127,6 @@
         return [self.dateFormatter dateFromString:airDate];
     }];
 }
-
-//+ (NSValueTransformer *)bannerJSONTransformer {
-//    return [MTLValueTransformer transformerUsingForwardBlock:^id(NSString *value, BOOL *success, NSError *__autoreleasing *error) {
-//        return [@"https://www.thetvdb.com/banners/_cache/" stringByAppendingPathComponent:value];
-//    }];
-//}
 
 #pragma mark - NSDateFormatter
 

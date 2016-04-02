@@ -53,6 +53,9 @@ NS_ASSUME_NONNULL_BEGIN
                   completionBlock:(nullable void (^)(TVDBEpisode *serie))success
                           failure:(nullable void (^)(NSError *error))failure;
 
+- (TVDBEpisodesOperation *)episodes:(NSNumber *)serieID
+                    completionBlock:(nullable void (^)(NSArray<TVDBEpisode *> *episodes))success
+                            failure:(nullable void (^)(NSError *error))failure;
 
 - (nullable TVDBImageOperation *)poster:(Serie *)serie
                         completionBlock:(nullable void (^)(NSImage *poster, NSNumber *serieID))success

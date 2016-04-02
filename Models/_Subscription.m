@@ -45,11 +45,6 @@ const struct SubscriptionRelationships SubscriptionRelationships = {
 		keyPaths = [keyPaths setByAddingObjectsFromSet:affectingKey];
 		return keyPaths;
 	}
-	if ([key isEqualToString:@"qualityValue"]) {
-		NSSet *affectingKey = [NSSet setWithObject:@"quality"];
-		keyPaths = [keyPaths setByAddingObjectsFromSet:affectingKey];
-		return keyPaths;
-	}
 
 	return keyPaths;
 }
@@ -79,24 +74,6 @@ const struct SubscriptionRelationships SubscriptionRelationships = {
 @dynamic lastDownloaded;
 
 @dynamic quality;
-
-- (float)qualityValue {
-	NSNumber *result = [self quality];
-	return [result floatValue];
-}
-
-- (void)setQualityValue:(float)value_ {
-	[self setQuality:@(value_)];
-}
-
-- (float)primitiveQualityValue {
-	NSNumber *result = [self primitiveQuality];
-	return [result floatValue];
-}
-
-- (void)setPrimitiveQualityValue:(float)value_ {
-	[self setPrimitiveQuality:@(value_)];
-}
 
 @dynamic serie;
 

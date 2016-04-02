@@ -12,6 +12,7 @@
  */
 
 #import "TVDBEpisode.h"
+#import "TVDBSerie.h"
 #import "Episode.h"
 
 @implementation TVDBEpisode
@@ -41,7 +42,12 @@
              @"airDate": @"airDate",
              @"name": @"name",
              @"overview": @"overview",
+             @"serie": @"serie"
              };
+}
+
++ (NSDictionary *)relationshipModelClassesByPropertyKey {
+    return @{@"serie": [TVDBSerie class]};
 }
 
 + (NSSet *)propertyKeysForManagedObjectUniquing {
@@ -57,6 +63,10 @@
 - (id)insertManagedObjectIntoContext:(NSManagedObjectContext *)context error:(NSError * _Nullable __autoreleasing *)error {
     return [MTLManagedObjectAdapter managedObjectFromModel:self insertingIntoContext:context error:error];
 };
+
++ (id)modelFromManagedObject:(NSManagedObject *)managedObject error:(NSError * _Nullable __autoreleasing *)error {
+    return [MTLManagedObjectAdapter modelOfClass:[self class] fromManagedObject:managedObject error:error];
+}
 
 #pragma mark - JSON Value Transformers
 
@@ -76,6 +86,20 @@
         dateFormatter.dateFormat = @"yyyy-MM-dd";
     });
     return dateFormatter;
+}
+
+#pragma mark - NSObject
+
+- (NSString *)description {
+    NSMutableDictionary *properties = [[self dictionaryValue] mutableCopy];
+    
+    /*
+     BUG: If description is called from a TVDBSerie who holds a TVDBEpisode, with a pointer to the TVDBSerie, will cause a infinite loop.
+     FIX: Don't show the serie when description is called from a TVDBEpisode.
+     */
+    [properties removeObjectForKey:@"serie"];
+    
+    return [NSString stringWithFormat:@"<%@: %p> %@", self.class, self, properties];
 }
 
 @end

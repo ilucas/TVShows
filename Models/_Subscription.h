@@ -43,11 +43,7 @@ extern const struct SubscriptionRelationships {
 
 //- (BOOL)validateLastDownloaded:(id*)value_ error:(NSError**)error_;
 
-@property (nonatomic, strong) NSNumber* quality;
-
-@property (atomic) float qualityValue;
-- (float)qualityValue;
-- (void)setQualityValue:(float)value_;
+@property (nonatomic, strong) NSString* quality;
 
 //- (BOOL)validateQuality:(id*)value_ error:(NSError**)error_;
 
@@ -71,11 +67,8 @@ extern const struct SubscriptionRelationships {
 - (NSDate*)primitiveLastDownloaded;
 - (void)setPrimitiveLastDownloaded:(NSDate*)value;
 
-- (NSNumber*)primitiveQuality;
-- (void)setPrimitiveQuality:(NSNumber*)value;
-
-- (float)primitiveQualityValue;
-- (void)setPrimitiveQualityValue:(float)value_;
+- (NSString*)primitiveQuality;
+- (void)setPrimitiveQuality:(NSString*)value;
 
 - (Serie*)primitiveSerie;
 - (void)setPrimitiveSerie:(Serie*)value;

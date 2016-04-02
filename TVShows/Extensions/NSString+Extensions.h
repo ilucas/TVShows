@@ -13,13 +13,14 @@
 
 @interface NSString (Extensions)
 
+@property (readonly) NSRange range;
+
 - (BOOL)contains:(NSString *)aString;
 
 // Remove newlines and white space from string
 - (NSString *)stringByRemovingNewLinesAndWhitespace;
 - (NSArray *)componentsSeparatedByWords;
+- (NSString *)stringByTrimmingWhitespaces;
 - (BOOL)isEmpty;
-
-- (NSRange)range;
 
 @end
