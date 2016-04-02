@@ -17,6 +17,7 @@
     @import libextobjc;
     @import CocoaLumberjack;
     @import MagicalRecord;
+    @import ObjectiveSugar;
 
     // Swift bridge
     #import "TVShows-Swift.h"

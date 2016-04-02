@@ -1,10 +1,14 @@
-//
-//  RARBGHTTPClient.m
-//  TVShows
-//
-//  Created by Lucas casteletti on 2/26/16.
-//  Copyright © 2016 Lucas Casteletti. All rights reserved.
-//
+/*
+ *  This file is part of the TVShows source code.
+ *
+ *  TVShows is free software: you can redistribute it and/or modify
+ *  it under the terms of the GNU General Public License as published by
+ *  the Free Software Foundation, either version 3 of the License, or
+ *  (at your option) any later version.
+ *
+ *  You should have received a copy of the GNU General Public License
+ *  along with TVShows. If not, see <http://www.gnu.org/licenses/>.
+ */
 
 #import "RARBGClient.h"
 #import "RARBGSearchOperation.h"
@@ -19,43 +23,22 @@ static NSString * const kBaseURL = @"https://torrentapi.org/pubapi_v2.php";
 @end
 
 @implementation RARBGClient
-@synthesize token;
 
-- (void)search:(NSString *)search {
-    if (token) {
-        // Create a search operation
-        RARBGSearchOperation *searchOP = [self searchRequestWithSearch:search];
-        
-        [searchOP setCompletionBlockWithSuccess:^(AFHTTPRequestOperation * _Nonnull operation, id _Nonnull responseObject) {
-            
-            NSLog(@"Got a serch");
-            NSLog(@"%@", responseObject);
-            
-        } failure:^(AFHTTPRequestOperation * _Nonnull operation, NSError * _Nonnull error) {
-            DDLogError(@"%s Error: %@", __PRETTY_FUNCTION__, error);
-        }];
-        
-        [self.operationQueue addOperation:searchOP];
-    } else {
-        // When there's no token.
-        // 1) Request a token.
-        // 2) when the token is received, create a search operation.
-        AFHTTPRequestOperation *tokenOP = [self tokenRequest];
-        
-        [tokenOP setCompletionBlockWithSuccess:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
-            token = responseObject[@"token"];
-            [self search:search];
-        } failure:^(AFHTTPRequestOperation * _Nonnull operation, NSError * _Nonnull error) {
-            DDLogError(@"%s Error: %@", __PRETTY_FUNCTION__, error);
-        }];
-        
-        [self.operationQueue addOperation:tokenOP];
-    }
+- (RARBGSearchOperation *)search:(NSString *)search {
+    NSMutableURLRequest *request = [self searchRequestWithSearch:search];
+    
+    RARBGSearchOperation __block *operation = [[RARBGSearchOperation alloc] initWithRequest:request];
+    operation.responseSerializer = [AFJSONResponseSerializer serializer];
+    operation.search = search;
+    
+    [self setupOperation:operation];
+    
+    return operation;
 }
 
 #pragma mark - Internal
 
-- (RARBGSearchOperation *)searchRequestWithSearch:(NSString *)search {
+- (NSMutableURLRequest *)searchRequestWithSearch:(NSString *)search {
     NSMutableDictionary *parameters = [[RARBGSearchOperation parameters] mutableCopy];
     [parameters setValue:search forKey:@"search_string"];
     [parameters setValue:self.token forKey:@"token"];
@@ -71,39 +54,87 @@ static NSString * const kBaseURL = @"https://torrentapi.org/pubapi_v2.php";
         DDLogError(@"RARBG Search SerializationError: %@", serializationError);
     }
     
-    RARBGSearchOperation *operation = [[RARBGSearchOperation alloc] initWithRequest:request];
-    operation.responseSerializer = self.responseSerializer;
-    operation.shouldUseCredentialStorage = self.shouldUseCredentialStorage;
-    operation.credential = self.credential;
-    operation.securityPolicy = self.securityPolicy;
-    operation.completionQueue = self.completionQueue;
-    operation.completionGroup = self.completionGroup;
-    operation.search = search;
+    return request;
+}
+
+- (void)setupOperation:(RARBGSearchOperation *)operation {
+    if (!self.token) {
+        // Search in all operation in the queue if there's a token request.
+        AFHTTPRequestOperation __block __weak *tokenRequest = nil;
+        [self.operationQueue.operations enumerateObjectsUsingBlock:^(__kindof NSOperation *obj, NSUInteger idx, BOOL *stop) {
+            if ([obj.name isEqualToString:@"RARBGTokenRequest"]) {
+                tokenRequest = obj;
+                *stop = true;
+            }
+        }];
+        
+        // If no token request found, create one.
+        if (!tokenRequest) {
+            tokenRequest = [self tokenRequest];
+        }
+        
+        // Create the adapter to set the token to operation.
+        NSBlockOperation *adapter = [NSBlockOperation blockOperationWithBlock:^{
+            if (tokenRequest.response.statusCode != 200) {// Not ok.
+                DDLogError(@"%s [Line %d]: %@", __PRETTY_FUNCTION__, __LINE__, tokenRequest.responseString);
+                [operation cancel];
+                return;
+            }
+            
+            self.token = tokenRequest.responseObject[@"token"];
+            
+            [operation setRequest:[self searchRequestWithSearch:operation.search]];
+        }];
+        
+        [adapter addDependency:tokenRequest];
+        [operation addDependency:adapter];
+        
+        [self.operationQueue addOperation:tokenRequest];
+        [self.operationQueue addOperation:adapter];
+    }
     
-    return operation;
+    [self.operationQueue addOperation:operation];
 }
 
 - (AFHTTPRequestOperation *)tokenRequest {
-    NSDictionary *parameters = @{@"get_token" : @"get_token"};
-    
-    NSError *serializationError = nil;
-    
+    NSError *serializationError;
     NSMutableURLRequest *request = [self.requestSerializer requestWithMethod:@"GET"
                                                                    URLString:kBaseURL
-                                                                  parameters:parameters
+                                                                  parameters:@{@"get_token" : @"get_token"}
                                                                        error:&serializationError];
     
     if (serializationError) {
         DDLogError(@"RARBG Token SerializationError: %@", serializationError);
     }
     
-    return [self HTTPRequestOperationWithRequest:request success:nil failure:nil];
+    AFHTTPRequestOperation *tokenRequest = [self HTTPRequestOperationWithRequest:request success:nil failure:nil];
+    tokenRequest.queuePriority = NSOperationQueuePriorityHigh;
+    tokenRequest.name = @"RARBGTokenRequest";
+    
+    return tokenRequest;
 }
 
 #pragma mark - Init
 
++ (instancetype)manager {
+    static RARBGClient *manager;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        manager = [[RARBGClient alloc] init];
+    });
+    
+    return manager;
+}
+
 - (instancetype)init {
-    return [super initWithBaseURL:[NSURL URLWithString:kBaseURL]];
+    self = [super initWithBaseURL:[NSURL URLWithString:kBaseURL]];
+    
+    if (self) {
+        [self.operationQueue setMaxConcurrentOperationCount:1];// The api has a 1req/2s limit.
+        [self.operationQueue setName:@"TVShows.Providers.RARBG.Queue"];
+    }
+    
+    return self;
 }
 
 @end

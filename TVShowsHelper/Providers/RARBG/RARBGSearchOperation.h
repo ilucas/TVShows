@@ -20,13 +20,14 @@ NS_ASSUME_NONNULL_BEGIN
 @interface RARBGSearchOperation : AFHTTPRequestOperation
 
 @property (nonatomic, strong, nullable) NSString *search;
+@property (nonatomic, strong, nullable) NSNumber *episodeID;
 
 + (NSDictionary *)parameters;
 
-- (void)setCompletionBlockWithSuccess:(nullable void (^)(RARBGSearchOperation *, NSArray<RARBGTorrent *> *))success
-                              failure:(nullable void (^)(RARBGSearchOperation *, NSError *))failure;
+- (void)setCompletionBlockWithSuccess:(nullable void (^)(RARBGSearchOperation *operation, NSArray<RARBGTorrent *> *torrents))success
+                              failure:(nullable void (^)(RARBGSearchOperation *operation, NSError *error))failure;
 
-- (void)setRequest:(NSMutableURLRequest *)request;
+- (void)setRequest:(NSURLRequest *)request;
 
 @end
 

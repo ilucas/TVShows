@@ -20,36 +20,33 @@
 // FROM: Michael Waterfall's MWFeedParser
 // https://github.com/mwaterfall/MWFeedParser/blob/master/Classes/NSString%2BHTML.h
 - (NSString *)stringByRemovingNewLinesAndWhitespace {
-	// Scanner
-	NSScanner *scanner = [[NSScanner alloc] initWithString:self];
-	[scanner setCharactersToBeSkipped:nil];
-	NSMutableString *result = [[NSMutableString alloc] init];
-	NSString *temp;
-	NSCharacterSet *characterSet = [NSCharacterSet whitespaceAndNewlineCharacterSet];
-    
-    // Scan
-	while (![scanner isAtEnd]) {
-		// Get non new line or whitespace characters
-		temp = nil;
-		[scanner scanUpToCharactersFromSet:characterSet intoString:&temp];
-		if (temp) [result appendString:temp];
+    @autoreleasepool {
+        NSScanner *scanner = [[NSScanner alloc] initWithString:self];
+        [scanner setCharactersToBeSkipped:nil];
         
-		// Replace with a space
-		if ([scanner scanCharactersFromSet:characterSet intoString:NULL]) {
-			if (result.length > 0 && ![scanner isAtEnd]) // Dont append space to beginning or end of result
-				[result appendString:@" "];
-		}
+        NSMutableString *result = [[NSMutableString alloc] init];
+        NSString *temp;
+        NSCharacterSet *characterSet = [NSCharacterSet whitespaceAndNewlineCharacterSet];
         
-	}
-    
-	// Return
-	NSString *retString = [NSString stringWithString:result];
-    
-	// Return
-	return retString;
+        // Scan
+        while (![scanner isAtEnd]) {
+            // Get non new line or whitespace characters
+            temp = nil;
+            [scanner scanUpToCharactersFromSet:characterSet intoString:&temp];
+            if (temp) [result appendString:temp];
+            
+            // Replace with a space
+            if ([scanner scanCharactersFromSet:characterSet intoString:NULL]) {
+                if (result.length > 0 && ![scanner isAtEnd]) // Dont append space to beginning or end of result
+                    [result appendString:@" "];
+            }
+        }
+        
+        return [NSString stringWithString:result];
+    }
 }
 
-- (NSArray *)componentsSeparatedByWords{
+- (NSArray *)componentsSeparatedByWords {
     NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"\\w+" options:NSRegularExpressionCaseInsensitive error:nil];
     NSMutableArray __block *array = [NSMutableArray array];
     
@@ -62,6 +59,10 @@
     }];
     
     return array;
+}
+
+- (NSString *)stringByTrimmingWhitespaces {
+    return [self stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
 }
 
 - (BOOL)isEmpty {
@@ -77,7 +78,7 @@
     return NO;
 }
 
-- (NSRange)range{
+- (NSRange)range {
     return NSMakeRange(0, self.length);
 }
 

@@ -71,7 +71,7 @@
         
         Subscription *subscription = [Subscription createEntityInContext:localContext];
         [subscription setIsEnabledValue:YES];
-        [subscription setQualityValue:1.0];
+        [subscription setQuality:@""];
         [subscription setSerie:serie];
     } completion:^(BOOL success, NSError *error) {
         if (success) {

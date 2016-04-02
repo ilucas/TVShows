@@ -15,8 +15,14 @@
 
 @import Mantle;
 
+@interface RARBGSearchOperation ()
+
+@property (readwrite, nonatomic, strong) NSURLRequest *request;
+
+@end
+
 @implementation RARBGSearchOperation
-@synthesize search;
+@synthesize request = _request;
 
 + (NSDictionary *)parameters {
     return @{
@@ -27,17 +33,16 @@
              };
 }
 
-- (void)setCompletionBlockWithSuccess:(nullable void (^)(RARBGSearchOperation *, NSArray<RARBGTorrent *> *))success
-                              failure:(nullable void (^)(RARBGSearchOperation *, NSError *))failure {
+- (void)setCompletionBlockWithSuccess:(nullable void (^)(RARBGSearchOperation *operation, NSArray<RARBGTorrent *> *torrents))success
+                              failure:(nullable void (^)(RARBGSearchOperation *operation, NSError *error))failure {
     @weakify(self)
     [super setCompletionBlockWithSuccess:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
         if (success) {
             @strongify(self)
             
             NSError *error;
-            
-            NSArray<RARBGTorrent *> *torrents = [MTLJSONAdapter modelsOfClass:[self class]
-                                                                fromJSONArray:responseObject[@"torrent_results"]
+            NSArray<RARBGTorrent *> *torrents = [MTLJSONAdapter modelsOfClass:[RARBGTorrent class]
+                                                                fromJSONArray:responseObject[@"torrent_results"] ?: @[]
                                                                         error:&error];
             
             if (error) {
@@ -57,10 +62,10 @@
     }];
 }
 
-- (void)setRequest:(NSMutableURLRequest *)request {
+- (void)setRequest:(NSURLRequest *)request {
     @synchronized (self) {
-        if (![self isExecuting]) {// Only change the token if the operation is not running.
-            self.request = request;
+        if (![self isExecuting] || ![self isFinished]) {// Only change the request if the operation is not running or finished.
+            _request = request;
         }
     }
 }

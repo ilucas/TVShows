@@ -10,13 +10,23 @@
  *  along with TVShows. If not, see <http://www.gnu.org/licenses/>.
  */
 
-@import Foundation;
-@import AFNetworking;
+@import Cocoa;
 
-@class RARBGSearchOperation;
+NS_ASSUME_NONNULL_BEGIN
 
-@interface RARBGClient : AFHTTPRequestOperationManager
+@class Subscription;
+@class Episode;
 
-- (RARBGSearchOperation *)search:(NSString *)search;
+@interface SubscriptionManager : NSObject
+
+@property (strong, nonatomic, nullable) NSManagedObjectContext *managedObjectContext;
+@property (strong, nonatomic, nullable) NSOperationQueue *operationQueue;
+
+- (instancetype)initWithManagedObjectContext:(NSManagedObjectContext *)managedObjectContext;
+
+- (void)checkSubscription:(Subscription *)subscription;
 
 @end
+
+
+NS_ASSUME_NONNULL_END

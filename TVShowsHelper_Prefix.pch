@@ -10,11 +10,13 @@
 #define TVShowsHelper_Prefix_pch
 
 @import Cocoa;
+@import libextobjc;
 @import CocoaLumberjack;
 @import MagicalRecord;
+@import ObjectiveSugar;
 
 // Swift bridge
-//#import "TVShowsHelper-Swift.h"
+#import "TVShowsHelper-Swift.h"
 
 #import "TVShowsUtilities.h"
 #import "AppInfoConstants.h"

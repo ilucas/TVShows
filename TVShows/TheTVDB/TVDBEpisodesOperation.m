@@ -35,7 +35,7 @@
 
 // All episodes for a given series. Paginated with 100 results per page.
 + (instancetype)requestEpisodesForSerie:(NSNumber *)serieID WithToken:(NSString *)token Page:(NSNumber *)page {
-    NSString *rawURL = [@"series" stringByAppendingPathComponent:serieID.stringValue];
+    NSString *rawURL = [NSString stringWithFormat:@"/series/%@/episodes", serieID.stringValue];
     NSURL *url = [NSURL URLWithString:rawURL relativeToURL:[TVDBManager baseURL]];
     
     TVDBEpisodesOperation *operation = [TVDBEpisodesOperation GET:url parameters:@{@"page": page} Token:token];

@@ -10,13 +10,11 @@
  *  along with TVShows. If not, see <http://www.gnu.org/licenses/>.
  */
 
-@import Foundation;
-@import AFNetworking;
+#ifndef RARBG_h
+#define RARBG_h
 
-@class RARBGSearchOperation;
+#import "RARBGClient.h"
+#import "RARBGTorrent.h"
+#import "RARBGSearchOperation.h"
 
-@interface RARBGClient : AFHTTPRequestOperationManager
-
-- (RARBGSearchOperation *)search:(NSString *)search;
-
-@end
+#endif /* RARBG_h */

@@ -130,6 +130,73 @@ static NSString * const kBaseURL = @"https://api-beta.thetvdb.com";
 
 #pragma mark - Episodes
 
+- (TVDBEpisodesOperation *)episodes:(NSNumber *)serieID completionBlock:(void (^)(NSArray<TVDBEpisode *> *episodes))success failure:(void (^)(NSError *error))failure {
+    TVDBEpisodesOperation *firstRequest = [TVDBEpisodesOperation requestEpisodesForSerie:serieID WithToken:self.token];
+    
+    // the success block will be called in the mergeOperation.
+    [firstRequest setCompletionBlockWithSuccess:nil failure:^(TVDBEpisodesOperation *operation, NSError *error) {
+        failure(error);
+    }];
+    
+    NSMutableArray <TVDBEpisodesOperation *> __block *operations = [NSMutableArray arrayWithObject:firstRequest];
+    
+    // Merge the episodes from all pages.
+    // This block will execute after all the pages request is done.
+    NSBlockOperation *mergeOperation = [NSBlockOperation blockOperationWithBlock:^{
+        NSMutableArray <TVDBEpisode *> __block *episodes = [NSMutableArray array];
+        
+        [operations enumerateObjectsUsingBlock:^(TVDBEpisodesOperation *op, NSUInteger idx, BOOL *stop) {
+            if (firstRequest.response.statusCode != 200) return;
+            
+            NSArray <NSDictionary *> *data = op.responseObject[@"data"];
+            
+            // Enumerate episodes
+            [data enumerateObjectsUsingBlock:^(NSDictionary *obj, NSUInteger idx, BOOL *stop) {
+                @autoreleasepool {
+                    NSError *error = nil;
+                    TVDBEpisode *episode = [TVDBEpisode modelFromJSONDictionary:obj error:&error];
+                    
+                    if (error) {
+                        DDLogError(@"%s [Line %d]: %@", __PRETTY_FUNCTION__, __LINE__, error);
+                    } else {
+                        [episodes addObject:[episode copy]];
+                    }
+                }
+            }];
+        }];
+        
+        dispatch_async(dispatch_get_main_queue(), ^(void) {
+            success(episodes);
+        });
+    }];
+    
+    // If there's more then 1 page, create a request for each page.
+    // This block will execute after the firstRequest.
+    NSBlockOperation *pagesOperation = [NSBlockOperation blockOperationWithBlock:^{
+        if (firstRequest.response.statusCode != 200) return;
+        
+        NSDictionary *response = firstRequest.responseObject;
+        NSNumber *totalPages = response[@"links"][@"last"];
+        
+        // Ignoring the first page, create a request for each page.
+        [@2 upto:totalPages.intValue do:^(NSInteger number) {
+            TVDBEpisodesOperation *request = [TVDBEpisodesOperation requestEpisodesForSerie:serieID WithToken:self.token Page:@(number)];
+            [mergeOperation addDependency:request];
+            [operations addObject:request];
+            [self.operationQueue addOperation:request];
+        }];
+        
+        [self.operationQueue addOperation:mergeOperation];
+    }];
+    
+    [self setupOperation:firstRequest];
+    
+    [pagesOperation addDependency:firstRequest];
+    [self.operationQueue addOperation:pagesOperation];
+    
+    return firstRequest;
+}
+
 #pragma mark - Search
 
 - (TVDBSearchOperation *)searchSerie:(NSString *)name completionBlock:(void (^)(NSArray<TVDBSerie *> *series))success failure:(void (^)(NSError *error))failure {

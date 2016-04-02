@@ -28,4 +28,29 @@
              };
 }
 
++ (NSValueTransformer *)episodeJSONTransformer {
+    return [self numberValueTransformer];
+}
+
++ (NSValueTransformer *)seasonJSONTransformer {
+    return [self numberValueTransformer];
+}
+
++ (MTLValueTransformer *)numberValueTransformer {
+    static NSNumberFormatter *formatter;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        formatter = [[NSNumberFormatter alloc] init];
+        formatter.numberStyle = NSNumberFormatterDecimalStyle;
+    });
+    
+    return [MTLValueTransformer transformerUsingForwardBlock:^id(id value, BOOL *success, NSError *__autoreleasing *error) {
+        if ([value isKindOfClass:[NSNumber class]]) {
+            return value;
+        } else {
+            return [formatter numberFromString:value];
+        }
+    }];;
+}
+
 @end

@@ -33,6 +33,7 @@
 		A00B46231AEC7F390022BDBF /* BWInsetTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 342A5429132D4CB800FB526F /* BWInsetTextField.m */; };
 		A00B46241AEC7FA30022BDBF /* CRViewSubclass.m in Sources */ = {isa = PBXBuildFile; fileRef = 34463CD71331BC40001453EB /* CRViewSubclass.m */; };
 		A01813CD1C2DDEB500C5B221 /* MetadataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A01813CC1C2DDEB500C5B221 /* MetadataViewController.m */; };
+		A0202B061CAF62020064F1B7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0432F271AD9649600C19189 /* Images.xcassets */; };
 		A02F332E1B1BC9BC004F2D4B /* NSMutableDictionary+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A02F332D1B1BC9BC004F2D4B /* NSMutableDictionary+Extensions.m */; };
 		A03A4E281CA51E6B002AB1F2 /* TVDBPosterOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = A03A4E271CA51E6B002AB1F2 /* TVDBPosterOperation.m */; };
 		A03A4E291CA51E6B002AB1F2 /* TVDBPosterOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = A03A4E271CA51E6B002AB1F2 /* TVDBPosterOperation.m */; };
@@ -40,6 +41,10 @@
 		A0432F261AD9649600C19189 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A0432F251AD9649600C19189 /* main.m */; };
 		A0432F281AD9649600C19189 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0432F271AD9649600C19189 /* Images.xcassets */; };
 		A0432F2B1AD9649600C19189 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = A0432F291AD9649600C19189 /* MainMenu.xib */; };
+		A04F1D621CA6513200F09BAA /* NSDictionary+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A07C6FB21AFFFA6E00611B8D /* NSDictionary+Extensions.m */; };
+		A04F1D631CA6513600F09BAA /* NSManagedObject+Attributes.m in Sources */ = {isa = PBXBuildFile; fileRef = A0E4341E1B1AA1D7000AF57C /* NSManagedObject+Attributes.m */; };
+		A04F1D641CA6514200F09BAA /* NSMutableDictionary+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A02F332D1B1BC9BC004F2D4B /* NSMutableDictionary+Extensions.m */; };
+		A04F1D651CA6514700F09BAA /* NSString+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C190201B4081A90020ACD9 /* NSString+Extensions.m */; };
 		A05A9BF41C58337E00FBEF9A /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A05A9BF31C58337E00FBEF9A /* Cocoa.framework */; };
 		A05A9BF61C58338700FBEF9A /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A05A9BF51C58338700FBEF9A /* Quartz.framework */; };
 		A05A9BF81C5833D800FBEF9A /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A05A9BF71C5833D800FBEF9A /* NotificationCenter.framework */; };
@@ -50,6 +55,8 @@
 		A05A9C3B1C583BD600FBEF9A /* SubscriptionDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = A05A9C321C583BD600FBEF9A /* SubscriptionDataSource.m */; };
 		A05A9C3C1C583BD600FBEF9A /* Serie.m in Sources */ = {isa = PBXBuildFile; fileRef = A05A9C341C583BD600FBEF9A /* Serie.m */; };
 		A05A9C3D1C583BD600FBEF9A /* Subscription.m in Sources */ = {isa = PBXBuildFile; fileRef = A05A9C361C583BD600FBEF9A /* Subscription.m */; };
+		A06B4B361CA6133800FB3C3B /* SubscriptionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A06B4B351CA6133800FB3C3B /* SubscriptionManager.m */; };
+		A06D07F71CAB8628001E9511 /* RARBGTorrent.m in Sources */ = {isa = PBXBuildFile; fileRef = A06D07F61CAB8628001E9511 /* RARBGTorrent.m */; };
 		A06F87711AE6904700CD66DC /* OEUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = A06F87591AE6904700CD66DC /* OEUtilities.m */; };
 		A07A51F01C54389C00D40063 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A07A51EF1C54389C00D40063 /* Main.storyboard */; };
 		A07A51F71C543DCF00D40063 /* MainWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = A07A51F61C543DCF00D40063 /* MainWindowController.m */; };
@@ -85,6 +92,7 @@
 		A0A9DADB1C97BC1500C9299F /* TVDBUpdatesOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = A0A9DAC21C97BC1500C9299F /* TVDBUpdatesOperation.m */; };
 		A0A9DADC1C97BC1500C9299F /* TVDBUpdatesOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = A0A9DAC21C97BC1500C9299F /* TVDBUpdatesOperation.m */; };
 		A0C190211B4081A90020ACD9 /* NSString+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C190201B4081A90020ACD9 /* NSString+Extensions.m */; };
+		A0D0C2821CADC42D005658CF /* TorrentClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D0C2811CADC42D005658CF /* TorrentClient.swift */; };
 		A0E4341F1B1AA1D7000AF57C /* NSManagedObject+Attributes.m in Sources */ = {isa = PBXBuildFile; fileRef = A0E4341E1B1AA1D7000AF57C /* NSManagedObject+Attributes.m */; };
 		A0EE123E1C54238900F4AB82 /* NSColor+OEAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A0EE12131C54238900F4AB82 /* NSColor+OEAdditions.m */; };
 		A0EE123F1C54238900F4AB82 /* NSImage+DrawingAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0EE12141C54238900F4AB82 /* NSImage+DrawingAdditions.swift */; };
@@ -106,7 +114,6 @@
 		A0F43D1D1C6A96C7005ABB35 /* TSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A0F43D1C1C6A96C7005ABB35 /* TSAppDelegate.m */; };
 		A0F43D261C6A99F3005ABB35 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A0F43D251C6A99F3005ABB35 /* AppDelegate.m */; };
 		A0F43D291C6A99F3005ABB35 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A0F43D281C6A99F3005ABB35 /* main.m */; };
-		A0F43D2B1C6A99F3005ABB35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0F43D2A1C6A99F3005ABB35 /* Assets.xcassets */; };
 		A0F43D2E1C6A99F3005ABB35 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = A0F43D2C1C6A99F3005ABB35 /* MainMenu.xib */; };
 		A0F43D331C6A9A33005ABB35 /* _Episode.m in Sources */ = {isa = PBXBuildFile; fileRef = A05A9C291C583BD600FBEF9A /* _Episode.m */; };
 		A0F43D341C6A9A37005ABB35 /* _Serie.m in Sources */ = {isa = PBXBuildFile; fileRef = A05A9C2B1C583BD600FBEF9A /* _Serie.m */; };
@@ -237,6 +244,7 @@
 		A01813CB1C2DDEB500C5B221 /* MetadataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MetadataViewController.h; sourceTree = "<group>"; };
 		A01813CC1C2DDEB500C5B221 /* MetadataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MetadataViewController.m; sourceTree = "<group>"; };
 		A01813CE1C2DE6B500C5B221 /* TVShows-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TVShows-Bridging-Header.h"; sourceTree = "<group>"; };
+		A01D875B1CACAD6200627B63 /* RARBG.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RARBG.h; path = Providers/RARBG/RARBG.h; sourceTree = "<group>"; };
 		A02F332C1B1BC9BC004F2D4B /* NSMutableDictionary+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSMutableDictionary+Extensions.h"; path = "TVShows/Extensions/NSMutableDictionary+Extensions.h"; sourceTree = SOURCE_ROOT; };
 		A02F332D1B1BC9BC004F2D4B /* NSMutableDictionary+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSMutableDictionary+Extensions.m"; path = "TVShows/Extensions/NSMutableDictionary+Extensions.m"; sourceTree = SOURCE_ROOT; };
 		A03A4E261CA51E6B002AB1F2 /* TVDBPosterOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TVDBPosterOperation.h; path = TVShows/TheTVDB/TVDBPosterOperation.h; sourceTree = SOURCE_ROOT; };
@@ -265,6 +273,10 @@
 		A05A9C341C583BD600FBEF9A /* Serie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Serie.m; path = Models/Serie.m; sourceTree = "<group>"; };
 		A05A9C351C583BD600FBEF9A /* Subscription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Subscription.h; path = Models/Subscription.h; sourceTree = "<group>"; };
 		A05A9C361C583BD600FBEF9A /* Subscription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Subscription.m; path = Models/Subscription.m; sourceTree = "<group>"; };
+		A06B4B341CA6133800FB3C3B /* SubscriptionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubscriptionManager.h; sourceTree = "<group>"; };
+		A06B4B351CA6133800FB3C3B /* SubscriptionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubscriptionManager.m; sourceTree = "<group>"; };
+		A06D07F51CAB8628001E9511 /* RARBGTorrent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RARBGTorrent.h; path = Providers/RARBG/RARBGTorrent.h; sourceTree = "<group>"; };
+		A06D07F61CAB8628001E9511 /* RARBGTorrent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RARBGTorrent.m; path = Providers/RARBG/RARBGTorrent.m; sourceTree = "<group>"; };
 		A06F874B1AE6904700CD66DC /* OEGeometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OEGeometry.h; sourceTree = "<group>"; };
 		A06F87581AE6904700CD66DC /* OEUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OEUtilities.h; sourceTree = "<group>"; };
 		A06F87591AE6904700CD66DC /* OEUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OEUtilities.m; sourceTree = "<group>"; };
@@ -307,6 +319,7 @@
 		A0A9DAC21C97BC1500C9299F /* TVDBUpdatesOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TVDBUpdatesOperation.m; path = TVShows/TheTVDB/TVDBUpdatesOperation.m; sourceTree = SOURCE_ROOT; };
 		A0C1901F1B4081A90020ACD9 /* NSString+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+Extensions.h"; path = "../TVShows/Extensions/NSString+Extensions.h"; sourceTree = "<group>"; };
 		A0C190201B4081A90020ACD9 /* NSString+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+Extensions.m"; path = "../TVShows/Extensions/NSString+Extensions.m"; sourceTree = "<group>"; };
+		A0D0C2811CADC42D005658CF /* TorrentClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TorrentClient.swift; sourceTree = "<group>"; };
 		A0E4341D1B1AA1D7000AF57C /* NSManagedObject+Attributes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSManagedObject+Attributes.h"; path = "TVShows/Extensions/NSManagedObject+Attributes.h"; sourceTree = SOURCE_ROOT; };
 		A0E4341E1B1AA1D7000AF57C /* NSManagedObject+Attributes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSManagedObject+Attributes.m"; path = "TVShows/Extensions/NSManagedObject+Attributes.m"; sourceTree = SOURCE_ROOT; };
 		A0EE12121C54238900F4AB82 /* NSColor+OEAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSColor+OEAdditions.h"; sourceTree = "<group>"; };
@@ -358,7 +371,6 @@
 		A0F43D241C6A99F3005ABB35 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A0F43D251C6A99F3005ABB35 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		A0F43D281C6A99F3005ABB35 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		A0F43D2A1C6A99F3005ABB35 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A0F43D2D1C6A99F3005ABB35 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		A0F43D2F1C6A99F3005ABB35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A0F43D3D1C6A9C3E005ABB35 /* TVShowsHelper_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TVShowsHelper_Prefix.pch; sourceTree = SOURCE_ROOT; };
@@ -904,7 +916,9 @@
 			children = (
 				A0F43D241C6A99F3005ABB35 /* AppDelegate.h */,
 				A0F43D251C6A99F3005ABB35 /* AppDelegate.m */,
-				A0F43D2A1C6A99F3005ABB35 /* Assets.xcassets */,
+				A06B4B341CA6133800FB3C3B /* SubscriptionManager.h */,
+				A06B4B351CA6133800FB3C3B /* SubscriptionManager.m */,
+				A0D0C2811CADC42D005658CF /* TorrentClient.swift */,
 				A0F43D2C1C6A99F3005ABB35 /* MainMenu.xib */,
 				A01AAA371C6BB1110051F1E6 /* Providers */,
 				A0F43D271C6A99F3005ABB35 /* Supporting Files */,
@@ -926,10 +940,13 @@
 		A0F52B521C7800A4008388EC /* RARBG */ = {
 			isa = PBXGroup;
 			children = (
+				A01D875B1CACAD6200627B63 /* RARBG.h */,
 				A00746FE1C80EFFF007BF1AA /* RARBGClient.h */,
 				A00746FF1C80EFFF007BF1AA /* RARBGClient.m */,
 				A08DE3D41C78E26D00040D78 /* RARBGSearchOperation.h */,
 				A08DE3D51C78E26D00040D78 /* RARBGSearchOperation.m */,
+				A06D07F51CAB8628001E9511 /* RARBGTorrent.h */,
+				A06D07F61CAB8628001E9511 /* RARBGTorrent.m */,
 			);
 			name = RARBG;
 			sourceTree = "<group>";
@@ -1073,8 +1090,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A0F43D2B1C6A99F3005ABB35 /* Assets.xcassets in Resources */,
 				A0F43D2E1C6A99F3005ABB35 /* MainMenu.xib in Resources */,
+				A0202B061CAF62020064F1B7 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1258,15 +1275,21 @@
 				A0F43D331C6A9A33005ABB35 /* _Episode.m in Sources */,
 				A0F43D291C6A99F3005ABB35 /* main.m in Sources */,
 				A0F43D3B1C6A9A62005ABB35 /* TVShowsUtilities.m in Sources */,
+				A06B4B361CA6133800FB3C3B /* SubscriptionManager.m in Sources */,
 				A0A9DAD41C97BC1500C9299F /* TVDBRequestOperation.m in Sources */,
 				A0A9DACC1C97BC1500C9299F /* TVDBEpisodeOperation.m in Sources */,
 				A0A9DACA1C97BC1500C9299F /* TVDBEpisode.m in Sources */,
+				A06D07F71CAB8628001E9511 /* RARBGTorrent.m in Sources */,
 				A0A9DAC41C97BC1500C9299F /* MTLModel+JSONAdapter.m in Sources */,
+				A04F1D621CA6513200F09BAA /* NSDictionary+Extensions.m in Sources */,
+				A0D0C2821CADC42D005658CF /* TorrentClient.swift in Sources */,
 				A0F43D341C6A9A37005ABB35 /* _Serie.m in Sources */,
 				A0A9DAD21C97BC1500C9299F /* TVDBManager.m in Sources */,
 				A0A9DACE1C97BC1500C9299F /* TVDBEpisodesOperation.m in Sources */,
+				A04F1D651CA6514700F09BAA /* NSString+Extensions.m in Sources */,
 				A0F43D361C6A9A3E005ABB35 /* Episode.m in Sources */,
 				A0A9DAD61C97BC1500C9299F /* TVDBSearchOperation.m in Sources */,
+				A04F1D641CA6514200F09BAA /* NSMutableDictionary+Extensions.m in Sources */,
 				A00747001C80EFFF007BF1AA /* RARBGClient.m in Sources */,
 				A0F43D371C6A9A41005ABB35 /* Serie.m in Sources */,
 				A0A9DADC1C97BC1500C9299F /* TVDBUpdatesOperation.m in Sources */,
@@ -1283,6 +1306,7 @@
 				A0A9DAD81C97BC1500C9299F /* TVDBSerie.m in Sources */,
 				A03A4E291CA51E6B002AB1F2 /* TVDBPosterOperation.m in Sources */,
 				A0F43D261C6A99F3005ABB35 /* AppDelegate.m in Sources */,
+				A04F1D631CA6513600F09BAA /* NSManagedObject+Attributes.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

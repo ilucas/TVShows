@@ -1,28 +1,31 @@
-//
-//  AppDelegate.m
-//  TVShowsHelper
-//
-//  Created by Lucas casteletti on 2/9/16.
-//  Copyright © 2016 Lucas Casteletti. All rights reserved.
-//
+/*
+ *  This file is part of the TVShows source code.
+ *
+ *  TVShows is free software: you can redistribute it and/or modify
+ *  it under the terms of the GNU General Public License as published by
+ *  the Free Software Foundation, either version 3 of the License, or
+ *  (at your option) any later version.
+ *
+ *  You should have received a copy of the GNU General Public License
+ *  along with TVShows. If not, see <http://www.gnu.org/licenses/>.
+ */
 
 #import "AppDelegate.h"
 
 #import "Serie.h"
+#import "Episode.h"
 #import "Subscription.h"
 
-#import "RARBGClient.h"
+#import "SubscriptionManager.h"
+#import "TheTVDB.h"
 
 @import AFNetworking;
+@import MagicalRecord;
 
 @interface AppDelegate ()
 
 @property NSTimer *timer;
-@property (strong, nonatomic) NSManagedObjectContext *context;
-@property (strong, nonatomic) NSOperationQueue *operationQueue;
-
-// Providers
-@property (strong, nonatomic) RARBGClient *rarbg;
+@property (weak, nonatomic) NSManagedObjectContext *managedObjectContext;
 
 @end
 
@@ -39,31 +42,45 @@
 }
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
-    self.context = [NSManagedObjectContext context];
+    self.managedObjectContext = [NSManagedObjectContext defaultContext];
     
-    self.operationQueue = [[NSOperationQueue alloc] init];
-    [self.operationQueue setMaxConcurrentOperationCount:1];
+    [[NSUserNotificationCenter defaultUserNotificationCenter] setDelegate:self];
     
     [self setupTimer];
-    [self setupProviders];
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
     [MagicalRecord cleanUp];
 }
 
+#pragma mark - NSUserNotificationCenterDelegate
+
+// User clicked on a notification.
+- (void)userNotificationCenter:(NSUserNotificationCenter *)center didActivateNotification:(NSUserNotification *)notification {
+    // Remove the notification from the notification center
+    [[NSUserNotificationCenter defaultUserNotificationCenter] removeDeliveredNotification:notification];
+}
+
 #pragma mark - Private
 
 - (void)checkAllShows {
-    NSFetchRequest *fetchRequest = [Subscription requestAllWhere:@"isEnabled" isEqualTo:@YES inContext:self.context];
+    NSUserNotification *notification = [NSUserNotification new];
+    notification.title = @"TVShows";
+    notification.subtitle = @"Checking for new episodes...";
+    notification.identifier = @"TVShows.Helper.notification.checkAllShows";
+    
+    [[NSUserNotificationCenter defaultUserNotificationCenter] deliverNotification:notification];
+    
+    // Fetch all Subscription enabled.
+    NSFetchRequest *fetchRequest = [Subscription requestAllWhere:@"isEnabled" isEqualTo:@YES inContext:self.managedObjectContext];
     
     @autoreleasepool {
-        __unused NSArray *result = [Subscription executeFetchRequest:fetchRequest inContext:self.context];
+        NSArray *result = [Subscription executeFetchRequest:fetchRequest inContext:self.managedObjectContext];
         
-//        [result enumerateObjectsUsingBlock:^(Subscription *obj, NSUInteger idx, BOOL * _Nonnull stop) {
-//            SubscriptionID *objID = [obj objectID];
-//        }];
-        
+        [result enumerateObjectsUsingBlock:^(Subscription *subscription, NSUInteger idx, BOOL *stop) {
+            SubscriptionManager *sm = [[SubscriptionManager alloc] initWithManagedObjectContext:self.managedObjectContext];
+            [sm checkSubscription:subscription];
+        }];
     }
 }
 
@@ -107,11 +124,6 @@
 }
 
 #pragma mark - Setup 
-
-- (void)setupProviders {
-    self.rarbg = [[RARBGClient alloc] init];
-    self.rarbg.operationQueue = self.operationQueue;
-}
 
 - (void)setupTimer {
     dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0);
