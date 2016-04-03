@@ -61,6 +61,7 @@
 		A07A51F01C54389C00D40063 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A07A51EF1C54389C00D40063 /* Main.storyboard */; };
 		A07A51F71C543DCF00D40063 /* MainWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = A07A51F61C543DCF00D40063 /* MainWindowController.m */; };
 		A07C6FB31AFFFA6E00611B8D /* NSDictionary+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A07C6FB21AFFFA6E00611B8D /* NSDictionary+Extensions.m */; };
+		A084A6341CB0BBFF00DB3790 /* Acknowledgments.rtf in Resources */ = {isa = PBXBuildFile; fileRef = A084A6331CB0BBFF00DB3790 /* Acknowledgments.rtf */; };
 		A08DE3D61C78E26D00040D78 /* RARBGSearchOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = A08DE3D51C78E26D00040D78 /* RARBGSearchOperation.m */; };
 		A095178E1CA24FD600FBF76B /* TVDBImageOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = A095178D1CA24FD600FBF76B /* TVDBImageOperation.m */; };
 		A095178F1CA24FD600FBF76B /* TVDBImageOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = A095178D1CA24FD600FBF76B /* TVDBImageOperation.m */; };
@@ -91,6 +92,7 @@
 		A0A9DADA1C97BC1500C9299F /* TVDBSeriesOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = A0A9DAC01C97BC1500C9299F /* TVDBSeriesOperation.m */; };
 		A0A9DADB1C97BC1500C9299F /* TVDBUpdatesOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = A0A9DAC21C97BC1500C9299F /* TVDBUpdatesOperation.m */; };
 		A0A9DADC1C97BC1500C9299F /* TVDBUpdatesOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = A0A9DAC21C97BC1500C9299F /* TVDBUpdatesOperation.m */; };
+		A0AA85B41CAFA9C400A1388C /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = 34A8FF9C1187C17000DDD3DE /* LICENSE.txt */; };
 		A0C190211B4081A90020ACD9 /* NSString+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C190201B4081A90020ACD9 /* NSString+Extensions.m */; };
 		A0D0C2821CADC42D005658CF /* TorrentClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D0C2811CADC42D005658CF /* TorrentClient.swift */; };
 		A0E4341F1B1AA1D7000AF57C /* NSManagedObject+Attributes.m in Sources */ = {isa = PBXBuildFile; fileRef = A0E4341E1B1AA1D7000AF57C /* NSManagedObject+Attributes.m */; };
@@ -286,6 +288,7 @@
 		A07A51F61C543DCF00D40063 /* MainWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainWindowController.m; sourceTree = "<group>"; };
 		A07C6FB11AFFFA6E00611B8D /* NSDictionary+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+Extensions.h"; path = "TVShows/Extensions/NSDictionary+Extensions.h"; sourceTree = SOURCE_ROOT; };
 		A07C6FB21AFFFA6E00611B8D /* NSDictionary+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+Extensions.m"; path = "TVShows/Extensions/NSDictionary+Extensions.m"; sourceTree = SOURCE_ROOT; };
+		A084A6331CB0BBFF00DB3790 /* Acknowledgments.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; name = Acknowledgments.rtf; path = Acknowledge/Acknowledgments.rtf; sourceTree = "<group>"; };
 		A08DE3D41C78E26D00040D78 /* RARBGSearchOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RARBGSearchOperation.h; path = Providers/RARBG/RARBGSearchOperation.h; sourceTree = "<group>"; };
 		A08DE3D51C78E26D00040D78 /* RARBGSearchOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RARBGSearchOperation.m; path = Providers/RARBG/RARBGSearchOperation.m; sourceTree = "<group>"; };
 		A095178C1CA24FD600FBF76B /* TVDBImageOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TVDBImageOperation.h; path = TVShows/TheTVDB/TVDBImageOperation.h; sourceTree = SOURCE_ROOT; };
@@ -434,6 +437,7 @@
 				34908BD0119B9C1C00BDFC01 /* SUPublicDSAKey.pem */,
 				34A8FF9C1187C17000DDD3DE /* LICENSE.txt */,
 				575C0D58136A487A005DE73D /* VERSION */,
+				A084A6331CB0BBFF00DB3790 /* Acknowledgments.rtf */,
 				5950D31D0C586A1737D9D904 /* Frameworks */,
 			);
 			name = Resources;
@@ -1080,8 +1084,10 @@
 				A07A51F01C54389C00D40063 /* Main.storyboard in Resources */,
 				A00468D21C56F94200732FB5 /* AboutWindowController.xib in Resources */,
 				A00B46211AEC7F1B0022BDBF /* posterArtPlaceholder.jpg in Resources */,
+				A0AA85B41CAFA9C400A1388C /* LICENSE.txt in Resources */,
 				A00468CA1C56E69500732FB5 /* Preferences.storyboard in Resources */,
 				A00847CC1AF5C0F900F5D2A3 /* SubscriptionWindowController.xib in Resources */,
+				A084A6341CB0BBFF00DB3790 /* Acknowledgments.rtf in Resources */,
 				A0432F2B1AD9649600C19189 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

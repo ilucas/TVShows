@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9531"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="10116"/>
     </dependencies>
     <objects>
-        <customObject id="-2" userLabel="File's Owner" customClass="AboutWindowController" customModule="TVShows" customModuleProvider="target">
+        <customObject id="-2" userLabel="File's Owner" customClass="AboutWindowController">
             <connections>
+                <outlet property="appName" destination="Fwo-uq-CCB" id="fFd-r9-knJ"/>
+                <outlet property="appVersion" destination="6z7-yI-rCO" id="a2F-bB-D8l"/>
+                <outlet property="textView" destination="MoK-qu-hOy" id="LLm-J0-eKd"/>
+                <outlet property="textWindow" destination="hc0-TB-Apr" id="k0X-FD-vlX"/>
                 <outlet property="window" destination="F0z-JX-Cv5" id="gIp-Ho-8D9"/>
             </connections>
         </customObject>
@@ -76,7 +80,54 @@
             <connections>
                 <outlet property="delegate" destination="-2" id="0bl-1N-AYu"/>
             </connections>
-            <point key="canvasLocation" x="358" y="173"/>
+            <point key="canvasLocation" x="-8" y="39"/>
+        </window>
+        <window title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="hc0-TB-Apr">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" resizable="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="390" y="138" width="650" height="600"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1440" height="877"/>
+            <view key="contentView" id="GF0-4e-pho">
+                <rect key="frame" x="0.0" y="0.0" width="650" height="600"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XS6-eV-ytn">
+                        <rect key="frame" x="0.0" y="0.0" width="650" height="600"/>
+                        <clipView key="contentView" id="hty-Rl-drs">
+                            <rect key="frame" x="1" y="1" width="648" height="598"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <subviews>
+                                <textView editable="NO" importsGraphics="NO" findStyle="panel" continuousSpellChecking="YES" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" smartInsertDelete="YES" id="MoK-qu-hOy">
+                                    <rect key="frame" x="0.0" y="0.0" width="648" height="598"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <size key="minSize" width="648" height="598"/>
+                                    <size key="maxSize" width="650" height="10000000"/>
+                                    <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <size key="minSize" width="648" height="598"/>
+                                    <size key="maxSize" width="650" height="10000000"/>
+                                </textView>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </clipView>
+                        <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="yB8-K4-0Yq">
+                            <rect key="frame" x="-100" y="-100" width="87" height="18"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </scroller>
+                        <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="jiE-B2-HNb">
+                            <rect key="frame" x="633" y="1" width="16" height="598"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </scroller>
+                    </scrollView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="XS6-eV-ytn" firstAttribute="top" secondItem="GF0-4e-pho" secondAttribute="top" id="DHG-Nz-s1p"/>
+                    <constraint firstAttribute="bottom" secondItem="XS6-eV-ytn" secondAttribute="bottom" id="NqJ-HA-94E"/>
+                    <constraint firstAttribute="trailing" secondItem="XS6-eV-ytn" secondAttribute="trailing" id="q7c-5h-Nk6"/>
+                    <constraint firstItem="XS6-eV-ytn" firstAttribute="leading" secondItem="GF0-4e-pho" secondAttribute="leading" id="zfr-Af-vtX"/>
+                </constraints>
+            </view>
+            <point key="canvasLocation" x="-8" y="550"/>
         </window>
     </objects>
     <resources>
