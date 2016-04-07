@@ -35,6 +35,7 @@
 		A01813CD1C2DDEB500C5B221 /* MetadataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A01813CC1C2DDEB500C5B221 /* MetadataViewController.m */; };
 		A0202B061CAF62020064F1B7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0432F271AD9649600C19189 /* Images.xcassets */; };
 		A02F332E1B1BC9BC004F2D4B /* NSMutableDictionary+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A02F332D1B1BC9BC004F2D4B /* NSMutableDictionary+Extensions.m */; };
+		A02F69431CB4BAC100AE9236 /* TorrentPreferencesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A02F69421CB4BAC100AE9236 /* TorrentPreferencesViewController.m */; };
 		A03A4E281CA51E6B002AB1F2 /* TVDBPosterOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = A03A4E271CA51E6B002AB1F2 /* TVDBPosterOperation.m */; };
 		A03A4E291CA51E6B002AB1F2 /* TVDBPosterOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = A03A4E271CA51E6B002AB1F2 /* TVDBPosterOperation.m */; };
 		A0432F241AD9649600C19189 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A0432F231AD9649600C19189 /* AppDelegate.m */; };
@@ -62,6 +63,8 @@
 		A07A51F71C543DCF00D40063 /* MainWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = A07A51F61C543DCF00D40063 /* MainWindowController.m */; };
 		A07C6FB31AFFFA6E00611B8D /* NSDictionary+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A07C6FB21AFFFA6E00611B8D /* NSDictionary+Extensions.m */; };
 		A084A6341CB0BBFF00DB3790 /* Acknowledgments.rtf in Resources */ = {isa = PBXBuildFile; fileRef = A084A6331CB0BBFF00DB3790 /* Acknowledgments.rtf */; };
+		A084A6411CB0DF7000DB3790 /* GeneralPreferencesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A084A6401CB0DF7000DB3790 /* GeneralPreferencesViewController.m */; };
+		A084A6441CB0E01600DB3790 /* PreferencesTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A084A6431CB0E01600DB3790 /* PreferencesTabViewController.m */; };
 		A08DE3D61C78E26D00040D78 /* RARBGSearchOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = A08DE3D51C78E26D00040D78 /* RARBGSearchOperation.m */; };
 		A095178E1CA24FD600FBF76B /* TVDBImageOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = A095178D1CA24FD600FBF76B /* TVDBImageOperation.m */; };
 		A095178F1CA24FD600FBF76B /* TVDBImageOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = A095178D1CA24FD600FBF76B /* TVDBImageOperation.m */; };
@@ -94,7 +97,11 @@
 		A0A9DADC1C97BC1500C9299F /* TVDBUpdatesOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = A0A9DAC21C97BC1500C9299F /* TVDBUpdatesOperation.m */; };
 		A0AA85B41CAFA9C400A1388C /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = 34A8FF9C1187C17000DDD3DE /* LICENSE.txt */; };
 		A0C190211B4081A90020ACD9 /* NSString+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C190201B4081A90020ACD9 /* NSString+Extensions.m */; };
+		A0CE35141CB2323E00581409 /* LaunchAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = A0CE35131CB2323E00581409 /* LaunchAgent.m */; };
+		A0CE35161CB2327C00581409 /* ServiceManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0CE35151CB2327C00581409 /* ServiceManagement.framework */; };
 		A0D0C2821CADC42D005658CF /* TorrentClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D0C2811CADC42D005658CF /* TorrentClient.swift */; };
+		A0D790BD1CB37C9100C4D32D /* TVShowsHelper.app in Copy Helper */ = {isa = PBXBuildFile; fileRef = A0F43D221C6A99F3005ABB35 /* TVShowsHelper.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		A0DD957E1CB616470016CF50 /* AdvancedPreferencesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0DD957D1CB616470016CF50 /* AdvancedPreferencesViewController.m */; };
 		A0E4341F1B1AA1D7000AF57C /* NSManagedObject+Attributes.m in Sources */ = {isa = PBXBuildFile; fileRef = A0E4341E1B1AA1D7000AF57C /* NSManagedObject+Attributes.m */; };
 		A0EE123E1C54238900F4AB82 /* NSColor+OEAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A0EE12131C54238900F4AB82 /* NSColor+OEAdditions.m */; };
 		A0EE123F1C54238900F4AB82 /* NSImage+DrawingAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0EE12141C54238900F4AB82 /* NSImage+DrawingAdditions.swift */; };
@@ -129,6 +136,30 @@
 		A0FC60841C55932500FD6044 /* GridViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0FC60831C55932500FD6044 /* GridViewController.m */; };
 		DAFB536FA931D36D07BBE652 /* Pods_TVShowsHelper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABF2F5AAB1A6625BCB9B29BF /* Pods_TVShowsHelper.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A0D790BA1CB37C7800C4D32D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 089C1669FE841209C02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A0F43D211C6A99F3005ABB35;
+			remoteInfo = TVShowsHelper;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A0D790BC1CB37C7D00C4D32D /* Copy Helper */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Contents/Library/LoginItems;
+			dstSubfolderSpec = 1;
+			files = (
+				A0D790BD1CB37C9100C4D32D /* TVShowsHelper.app in Copy Helper */,
+			);
+			name = "Copy Helper";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		089C1672FE841209C02AAC07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
@@ -249,6 +280,8 @@
 		A01D875B1CACAD6200627B63 /* RARBG.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RARBG.h; path = Providers/RARBG/RARBG.h; sourceTree = "<group>"; };
 		A02F332C1B1BC9BC004F2D4B /* NSMutableDictionary+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSMutableDictionary+Extensions.h"; path = "TVShows/Extensions/NSMutableDictionary+Extensions.h"; sourceTree = SOURCE_ROOT; };
 		A02F332D1B1BC9BC004F2D4B /* NSMutableDictionary+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSMutableDictionary+Extensions.m"; path = "TVShows/Extensions/NSMutableDictionary+Extensions.m"; sourceTree = SOURCE_ROOT; };
+		A02F69411CB4BAC100AE9236 /* TorrentPreferencesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TorrentPreferencesViewController.h; sourceTree = "<group>"; };
+		A02F69421CB4BAC100AE9236 /* TorrentPreferencesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TorrentPreferencesViewController.m; sourceTree = "<group>"; };
 		A03A4E261CA51E6B002AB1F2 /* TVDBPosterOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TVDBPosterOperation.h; path = TVShows/TheTVDB/TVDBPosterOperation.h; sourceTree = SOURCE_ROOT; };
 		A03A4E271CA51E6B002AB1F2 /* TVDBPosterOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TVDBPosterOperation.m; path = TVShows/TheTVDB/TVDBPosterOperation.m; sourceTree = SOURCE_ROOT; };
 		A0432F1E1AD9649600C19189 /* TVShows.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TVShows.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -289,6 +322,10 @@
 		A07C6FB11AFFFA6E00611B8D /* NSDictionary+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+Extensions.h"; path = "TVShows/Extensions/NSDictionary+Extensions.h"; sourceTree = SOURCE_ROOT; };
 		A07C6FB21AFFFA6E00611B8D /* NSDictionary+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+Extensions.m"; path = "TVShows/Extensions/NSDictionary+Extensions.m"; sourceTree = SOURCE_ROOT; };
 		A084A6331CB0BBFF00DB3790 /* Acknowledgments.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; name = Acknowledgments.rtf; path = Acknowledge/Acknowledgments.rtf; sourceTree = "<group>"; };
+		A084A63F1CB0DF7000DB3790 /* GeneralPreferencesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeneralPreferencesViewController.h; sourceTree = "<group>"; };
+		A084A6401CB0DF7000DB3790 /* GeneralPreferencesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeneralPreferencesViewController.m; sourceTree = "<group>"; };
+		A084A6421CB0E01600DB3790 /* PreferencesTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreferencesTabViewController.h; sourceTree = "<group>"; };
+		A084A6431CB0E01600DB3790 /* PreferencesTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreferencesTabViewController.m; sourceTree = "<group>"; };
 		A08DE3D41C78E26D00040D78 /* RARBGSearchOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RARBGSearchOperation.h; path = Providers/RARBG/RARBGSearchOperation.h; sourceTree = "<group>"; };
 		A08DE3D51C78E26D00040D78 /* RARBGSearchOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RARBGSearchOperation.m; path = Providers/RARBG/RARBGSearchOperation.m; sourceTree = "<group>"; };
 		A095178C1CA24FD600FBF76B /* TVDBImageOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TVDBImageOperation.h; path = TVShows/TheTVDB/TVDBImageOperation.h; sourceTree = SOURCE_ROOT; };
@@ -322,7 +359,12 @@
 		A0A9DAC21C97BC1500C9299F /* TVDBUpdatesOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TVDBUpdatesOperation.m; path = TVShows/TheTVDB/TVDBUpdatesOperation.m; sourceTree = SOURCE_ROOT; };
 		A0C1901F1B4081A90020ACD9 /* NSString+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+Extensions.h"; path = "../TVShows/Extensions/NSString+Extensions.h"; sourceTree = "<group>"; };
 		A0C190201B4081A90020ACD9 /* NSString+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+Extensions.m"; path = "../TVShows/Extensions/NSString+Extensions.m"; sourceTree = "<group>"; };
+		A0CE35121CB2323E00581409 /* LaunchAgent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LaunchAgent.h; sourceTree = "<group>"; };
+		A0CE35131CB2323E00581409 /* LaunchAgent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaunchAgent.m; sourceTree = "<group>"; };
+		A0CE35151CB2327C00581409 /* ServiceManagement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ServiceManagement.framework; path = System/Library/Frameworks/ServiceManagement.framework; sourceTree = SDKROOT; };
 		A0D0C2811CADC42D005658CF /* TorrentClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TorrentClient.swift; sourceTree = "<group>"; };
+		A0DD957C1CB616470016CF50 /* AdvancedPreferencesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdvancedPreferencesViewController.h; sourceTree = "<group>"; };
+		A0DD957D1CB616470016CF50 /* AdvancedPreferencesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdvancedPreferencesViewController.m; sourceTree = "<group>"; };
 		A0E4341D1B1AA1D7000AF57C /* NSManagedObject+Attributes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSManagedObject+Attributes.h"; path = "TVShows/Extensions/NSManagedObject+Attributes.h"; sourceTree = SOURCE_ROOT; };
 		A0E4341E1B1AA1D7000AF57C /* NSManagedObject+Attributes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSManagedObject+Attributes.m"; path = "TVShows/Extensions/NSManagedObject+Attributes.m"; sourceTree = SOURCE_ROOT; };
 		A0EE12121C54238900F4AB82 /* NSColor+OEAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSColor+OEAdditions.h"; sourceTree = "<group>"; };
@@ -390,6 +432,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0CE35161CB2327C00581409 /* ServiceManagement.framework in Frameworks */,
 				A05A9BF81C5833D800FBEF9A /* NotificationCenter.framework in Frameworks */,
 				A05A9BF61C58338700FBEF9A /* Quartz.framework in Frameworks */,
 				A05A9BF41C58337E00FBEF9A /* Cocoa.framework in Frameworks */,
@@ -418,9 +461,9 @@
 				A02FB6D51AC4E8ED007466D8 /* Supporting Files */,
 				347F1E7911AA0E54005A40AA /* External */,
 				089C167CFE841241C02AAC07 /* Resources */,
+				5950D31D0C586A1737D9D904 /* Frameworks */,
 				6357C612173661E7C6FBC811 /* Pods */,
 				19C28FB8FE9D52D311CA2CBB /* Products */,
-				22ACF22EAFF86D1E3E308156 /* Frameworks */,
 			);
 			name = TVShows;
 			sourceTree = "<group>";
@@ -438,7 +481,6 @@
 				34A8FF9C1187C17000DDD3DE /* LICENSE.txt */,
 				575C0D58136A487A005DE73D /* VERSION */,
 				A084A6331CB0BBFF00DB3790 /* Acknowledgments.rtf */,
-				5950D31D0C586A1737D9D904 /* Frameworks */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -450,14 +492,6 @@
 				A0F43D221C6A99F3005ABB35 /* TVShowsHelper.app */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		22ACF22EAFF86D1E3E308156 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				ABF2F5AAB1A6625BCB9B29BF /* Pods_TVShowsHelper.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		3401816611951C9D00FB0E39 /* Core Data */ = {
@@ -612,6 +646,8 @@
 		5950D31D0C586A1737D9D904 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A0CE35151CB2327C00581409 /* ServiceManagement.framework */,
+				ABF2F5AAB1A6625BCB9B29BF /* Pods_TVShowsHelper.framework */,
 				A05A9BF71C5833D800FBEF9A /* NotificationCenter.framework */,
 				A05A9BF51C58338700FBEF9A /* Quartz.framework */,
 				A05A9BF31C58337E00FBEF9A /* Cocoa.framework */,
@@ -637,6 +673,9 @@
 			isa = PBXGroup;
 			children = (
 				A00468C91C56E69500732FB5 /* Preferences.storyboard */,
+				A084A6421CB0E01600DB3790 /* PreferencesTabViewController.h */,
+				A084A6431CB0E01600DB3790 /* PreferencesTabViewController.m */,
+				A0DD957F1CB6170F0016CF50 /* Preferences View Controllers */,
 			);
 			name = "Preferences Window";
 			sourceTree = "<group>";
@@ -676,6 +715,8 @@
 				A0432F221AD9649600C19189 /* AppDelegate.h */,
 				A0432F231AD9649600C19189 /* AppDelegate.m */,
 				A0432F291AD9649600C19189 /* MainMenu.xib */,
+				A0CE35121CB2323E00581409 /* LaunchAgent.h */,
+				A0CE35131CB2323E00581409 /* LaunchAgent.m */,
 				A0EE124E1C54270B00F4AB82 /* MainWindow */,
 				A0AE546F1AEC461400D2C37B /* Subscription */,
 				A00468C81C56E65B00732FB5 /* Preferences Window */,
@@ -833,6 +874,19 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
+		A0DD957F1CB6170F0016CF50 /* Preferences View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A084A63F1CB0DF7000DB3790 /* GeneralPreferencesViewController.h */,
+				A084A6401CB0DF7000DB3790 /* GeneralPreferencesViewController.m */,
+				A02F69411CB4BAC100AE9236 /* TorrentPreferencesViewController.h */,
+				A02F69421CB4BAC100AE9236 /* TorrentPreferencesViewController.m */,
+				A0DD957C1CB616470016CF50 /* AdvancedPreferencesViewController.h */,
+				A0DD957D1CB616470016CF50 /* AdvancedPreferencesViewController.m */,
+			);
+			name = "Preferences View Controllers";
+			sourceTree = "<group>";
+		};
 		A0EE12111C54238900F4AB82 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
@@ -968,10 +1022,12 @@
 				A0432F1C1AD9649600C19189 /* Resources */,
 				8E670647DE0BC12CF99B7C67 /* Embed Pods Frameworks */,
 				D86E2571DB04E641D333C284 /* Copy Pods Resources */,
+				A0D790BC1CB37C7D00C4D32D /* Copy Helper */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				A0D790BB1CB37C7800C4D32D /* PBXTargetDependency */,
 			);
 			name = TVShows;
 			productName = TVShows;
@@ -1005,7 +1061,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 0610;
+				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = "Lucas Casteletti";
 				TargetAttributes = {
 					A0432F1D1AD9649600C19189 = {
@@ -1225,11 +1281,14 @@
 				A0A9DAC31C97BC1500C9299F /* MTLModel+JSONAdapter.m in Sources */,
 				A0F43D1D1C6A96C7005ABB35 /* TSAppDelegate.m in Sources */,
 				A0A9DACD1C97BC1500C9299F /* TVDBEpisodesOperation.m in Sources */,
+				A0DD957E1CB616470016CF50 /* AdvancedPreferencesViewController.m in Sources */,
 				A0EE12481C54238900F4AB82 /* OETheme.m in Sources */,
 				A00468D11C56F94200732FB5 /* AboutWindowController.swift in Sources */,
 				A02F332E1B1BC9BC004F2D4B /* NSMutableDictionary+Extensions.m in Sources */,
 				A0EE12491C54238900F4AB82 /* OEThemeColor.m in Sources */,
 				A0EE12411C54238900F4AB82 /* OEBackgroundNoisePattern.m in Sources */,
+				A084A6411CB0DF7000DB3790 /* GeneralPreferencesViewController.m in Sources */,
+				A0CE35141CB2323E00581409 /* LaunchAgent.m in Sources */,
 				A0FC60841C55932500FD6044 /* GridViewController.m in Sources */,
 				A07A51F71C543DCF00D40063 /* MainWindowController.m in Sources */,
 				A0EE124C1C54238900F4AB82 /* OEThemeObject.m in Sources */,
@@ -1257,6 +1316,7 @@
 				A0EE12451C54238900F4AB82 /* OEGridView.m in Sources */,
 				A0EE12401C54238900F4AB82 /* NSString+UUID.m in Sources */,
 				A0A9DAD31C97BC1500C9299F /* TVDBRequestOperation.m in Sources */,
+				A084A6441CB0E01600DB3790 /* PreferencesTabViewController.m in Sources */,
 				A0EE124B1C54238900F4AB82 /* OEThemeImage.m in Sources */,
 				A00847CB1AF5C0F900F5D2A3 /* SubscriptionWindowController.m in Sources */,
 				A0C190211B4081A90020ACD9 /* NSString+Extensions.m in Sources */,
@@ -1264,6 +1324,7 @@
 				A09521EA1AF6BDD4005AC0EF /* TVShows.xcdatamodeld in Sources */,
 				A0A9DAD71C97BC1500C9299F /* TVDBSerie.m in Sources */,
 				A0EE12471C54238900F4AB82 /* OEGridViewFieldEditor.m in Sources */,
+				A02F69431CB4BAC100AE9236 /* TorrentPreferencesViewController.m in Sources */,
 				A0A9DAC51C97BC1500C9299F /* NSMutableURLRequestToken.m in Sources */,
 				A05A9C371C583BD600FBEF9A /* _Episode.m in Sources */,
 				A05A9C3A1C583BD600FBEF9A /* Episode.m in Sources */,
@@ -1317,6 +1378,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A0D790BB1CB37C7800C4D32D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A0F43D211C6A99F3005ABB35 /* TVShowsHelper */;
+			targetProxy = A0D790BA1CB37C7800C4D32D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		3424AF1F11EF6432009C49DD /* Localizable.strings */ = {
@@ -1396,12 +1465,8 @@
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "";
-				DEPLOYMENT_LOCATION = YES;
-				DSTROOT = /;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/Frameworks\"",
-				);
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = TVShowsHelper_Prefix.pch;
@@ -1410,14 +1475,13 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = /usr/include/libxml2;
-				INSTALL_PATH = $HOME/Library/PreferencePanes;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-lstdc++";
 				PREBINDING = NO;
 				PRODUCT_NAME = "";
 				PROVISIONING_PROFILE = "";
 				SDKROOT = macosx;
-				VALID_ARCHS = "i386 x86_64";
+				VALID_ARCHS = x86_64;
 				ZERO_LINK = NO;
 			};
 			name = Debug;
@@ -1429,10 +1493,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/Frameworks\"",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = TVShowsHelper_Prefix.pch;
@@ -1445,7 +1506,7 @@
 				PRODUCT_NAME = "";
 				PROVISIONING_PROFILE = "";
 				SDKROOT = macosx;
-				VALID_ARCHS = "i386 x86_64";
+				VALID_ARCHS = x86_64;
 				ZERO_LINK = NO;
 			};
 			name = Release;
@@ -1485,10 +1546,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				INFOPLIST_FILE = TVShows/Info.plist;
-				INSTALL_PATH = "$(LOCAL_APPS_DIR)";
+				INSTALL_PATH = "$(BUILD_DIR)/$(CONFIGURATION)";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ilucas.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "TVShows/TVShows-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1525,9 +1587,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				INFOPLIST_FILE = TVShows/Info.plist;
+				INSTALL_PATH = "$(BUILD_DIR)/$(CONFIGURATION)";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ilucas.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "TVShows/TVShows-Bridging-Header.h";
 			};
@@ -1586,8 +1650,9 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.TVShows.TVShowsHelper;
+				PRODUCT_BUNDLE_IDENTIFIER = com.TVShows.Helper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "TVShowsHelper/TVShowsHelper-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -1626,8 +1691,9 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = com.TVShows.TVShowsHelper;
+				PRODUCT_BUNDLE_IDENTIFIER = com.TVShows.Helper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "TVShowsHelper/TVShowsHelper-Bridging-Header.h";
 			};
 			name = Release;

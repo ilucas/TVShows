@@ -10,14 +10,17 @@
  *  along with TVShows. If not, see <http://www.gnu.org/licenses/>.
  */
 
-@import Cocoa;
+#import "AdvancedPreferencesViewController.h"
 
-#import "TSAppDelegate.h"
-
-@interface AppDelegate : TSAppDelegate <NSApplicationDelegate>
-
-- (IBAction)showAboutWindow:(id)sender;
-- (IBAction)showPreferencesWindow:(id)sender;
+@interface AdvancedPreferencesViewController ()
 
 @end
 
+@implementation AdvancedPreferencesViewController
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    // Do view setup here.
+}
+
+@end

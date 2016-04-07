@@ -87,7 +87,7 @@
 - (NSTimeInterval)userDelay {
     NSUserDefaults __weak *userDefaults = [self sharedUserDefaults];
     
-    NSInteger delay = [userDefaults floatForKey:@"checkDelay"];;
+    NSInteger delay = [userDefaults integerForKey:@"checkDelay"];
     NSTimeInterval seconds;
     
     switch (delay) {

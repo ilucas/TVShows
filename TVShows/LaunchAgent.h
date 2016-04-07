@@ -10,14 +10,14 @@
  *  along with TVShows. If not, see <http://www.gnu.org/licenses/>.
  */
 
-@import Cocoa;
+@import Foundation;
+@import ServiceManagement;
 
-#import "TSAppDelegate.h"
+@interface LaunchAgent : NSObject
 
-@interface AppDelegate : TSAppDelegate <NSApplicationDelegate>
-
-- (IBAction)showAboutWindow:(id)sender;
-- (IBAction)showPreferencesWindow:(id)sender;
++ (nullable NSArray *)allJobs;
++ (nullable NSDictionary *)jobDictionary;
++ (BOOL)loginItemIsEnabled;
++ (BOOL)enabledLoginItem:(BOOL)flag;
 
 @end
-

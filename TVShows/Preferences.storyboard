@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="rmp-dR-lYQ">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="rmp-dR-lYQ">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9531"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="10116"/>
     </dependencies>
     <scenes>
         <!--Window Controller-->
@@ -9,30 +9,31 @@
             <objects>
                 <windowController id="rmp-dR-lYQ" sceneMemberID="viewController">
                     <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="VOu-7T-PSB">
-                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-                        <rect key="contentRect" x="196" y="240" width="480" height="270"/>
+                        <rect key="contentRect" x="480" y="420" width="480" height="270"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1440" height="877"/>
                     </window>
                     <connections>
-                        <segue destination="3tL-Qa-u3D" kind="relationship" relationship="window.shadowedContentViewController" id="HbT-Ic-VcA"/>
+                        <segue destination="3tL-Qa-u3D" kind="relationship" relationship="window.shadowedContentViewController" id="fjg-cR-5Bh"/>
                     </connections>
                 </windowController>
                 <customObject id="sHv-ZJ-57i" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="240" y="222"/>
+            <point key="canvasLocation" x="-432" y="-223"/>
         </scene>
-        <!--Tab View Controller-->
+        <!--Preferences Tab View Controller-->
         <scene sceneID="5ea-5I-jLc">
             <objects>
-                <tabViewController tabStyle="toolbar" id="3tL-Qa-u3D" sceneMemberID="viewController">
+                <tabViewController tabStyle="toolbar" id="3tL-Qa-u3D" customClass="PreferencesTabViewController" sceneMemberID="viewController">
                     <tabViewItems>
-                        <tabViewItem identifier="" id="ote-fe-yAM"/>
-                        <tabViewItem identifier="" id="Mc7-i5-GVc"/>
-                        <tabViewItem id="ROx-Qj-zgp"/>
+                        <tabViewItem label="General" identifier="" image="NSPreferencesGeneral" id="ote-fe-yAM"/>
+                        <tabViewItem label="Torrent" identifier="" image="magnet" id="Mc7-i5-GVc"/>
+                        <tabViewItem label="Advanced" image="NSAdvanced" id="ROx-Qj-zgp"/>
                     </tabViewItems>
+                    <viewControllerTransitionOptions key="transitionOptions"/>
                     <tabView key="tabView" type="noTabsNoBorder" id="6GQ-za-QXe">
-                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="306"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <font key="font" metaFont="message"/>
                         <tabViewItems/>
@@ -45,71 +46,145 @@
                 </tabViewController>
                 <customObject id="Jxn-NQ-gcL" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="240" y="656"/>
+            <point key="canvasLocation" x="156" y="-230"/>
         </scene>
         <!--General-->
         <scene sceneID="hfV-1A-uD1">
             <objects>
-                <viewController title="General" id="YGy-g2-8Wp" sceneMemberID="viewController">
+                <viewController title="General" id="YGy-g2-8Wp" customClass="GeneralPreferencesViewController" sceneMemberID="viewController">
                     <view key="view" id="GDy-0a-6XW">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <box verticalHuggingPriority="750" fixedFrame="YES" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="Ig8-Wp-FZz">
+                                <rect key="frame" x="20" y="243" width="410" height="5"/>
+                                <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                                <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <font key="titleFont" metaFont="system"/>
+                            </box>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aXC-F5-OFV" customClass="BWInsetTextField">
+                                <rect key="frame" x="18" y="209" width="154" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Refresh every: " id="Vpo-is-5oy">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="n9v-pZ-gk2">
+                                <rect key="frame" x="176" y="203" width="212" height="26"/>
+                                <popUpButtonCell key="cell" type="push" title="30 Minutes" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="9gQ-Vc-e9Y" id="NF8-HE-5Fl">
+                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="menu"/>
+                                    <menu key="menu" id="Tcg-bK-4dC">
+                                        <items>
+                                            <menuItem title="30 Minutes" state="on" id="9gQ-Vc-e9Y">
+                                                <modifierMask key="keyEquivalentModifierMask"/>
+                                            </menuItem>
+                                            <menuItem title="1 Hour" id="ef7-Ar-77J"/>
+                                            <menuItem title="3 Hours" id="pdW-82-e4i">
+                                                <modifierMask key="keyEquivalentModifierMask"/>
+                                            </menuItem>
+                                            <menuItem title="6 Hours" id="svg-mx-rsd">
+                                                <modifierMask key="keyEquivalentModifierMask"/>
+                                            </menuItem>
+                                            <menuItem title="12 Hours" id="xdk-km-lWR">
+                                                <modifierMask key="keyEquivalentModifierMask"/>
+                                            </menuItem>
+                                            <menuItem title="1 Day" id="voo-D5-f7m">
+                                                <modifierMask key="keyEquivalentModifierMask"/>
+                                            </menuItem>
+                                        </items>
+                                    </menu>
+                                </popUpButtonCell>
+                            </popUpButton>
+                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uA5-v7-8jN" customClass="ITSwitch">
+                                <rect key="frame" x="105" y="254" width="65" height="35"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="checked" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="helperSwitch:" target="YGy-g2-8Wp" id="2qK-Rg-vEV"/>
+                                </connections>
+                            </customView>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8BD-SB-WgD" customClass="BWInsetTextField">
+                                <rect key="frame" x="176" y="263" width="211" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="TVShows is enabled" id="yFh-Qs-rl3">
+                                    <font key="font" metaFont="systemBold"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
                     </view>
+                    <connections>
+                        <outlet property="checkDelay" destination="n9v-pZ-gk2" id="kY0-D5-M0Q"/>
+                        <outlet property="helperSwitch" destination="uA5-v7-8jN" id="jXG-Qu-BN5"/>
+                        <outlet property="statusLabel" destination="8BD-SB-WgD" id="cKJ-EO-0TP"/>
+                    </connections>
                 </viewController>
                 <customObject id="iMc-VW-Iqo" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="999" y="273"/>
+            <point key="canvasLocation" x="712" y="250"/>
         </scene>
-        <!--View Controller-->
+        <!--Torrent-->
         <scene sceneID="uff-HJ-9PU">
             <objects>
-                <viewController id="PSr-CX-yhu" sceneMemberID="viewController">
+                <viewController title="Torrent" id="PSr-CX-yhu" customClass="TorrentPreferencesViewController" sceneMemberID="viewController">
                     <view key="view" id="K9A-Pw-CIq">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZLl-uO-yXm">
-                                <rect key="frame" x="51" y="218" width="81" height="32"/>
-                                <buttonCell key="cell" type="push" title="Button" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="xbl-2s-ZJm">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eaN-AC-Vue" customClass="BWInsetTextField">
+                                <rect key="frame" x="18" y="262" width="177" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Torrent Client:" id="jvl-U4-Sh2">
                                     <font key="font" metaFont="system"/>
-                                </buttonCell>
-                            </button>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yE5-8e-9yB">
-                                <rect key="frame" x="334" y="227" width="81" height="32"/>
-                                <buttonCell key="cell" type="push" title="Button" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="GJh-AZ-AKJ">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                            </button>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="teN-7c-RJ1">
+                                <rect key="frame" x="199" y="256" width="212" height="26"/>
+                                <popUpButtonCell key="cell" type="push" title="Item 1" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="eBc-jD-V1r" id="fFs-aS-kfx">
+                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="menu"/>
+                                    <menu key="menu" id="9vw-FK-fOL">
+                                        <items>
+                                            <menuItem title="Item 1" state="on" id="eBc-jD-V1r"/>
+                                            <menuItem title="Item 2" id="ARa-Qy-9O5"/>
+                                        </items>
+                                    </menu>
+                                </popUpButtonCell>
+                                <connections>
+                                    <action selector="torrentClient:" target="PSr-CX-yhu" id="iBI-Zk-AUn"/>
+                                </connections>
+                            </popUpButton>
                         </subviews>
                     </view>
+                    <connections>
+                        <outlet property="torrentClient" destination="teN-7c-RJ1" id="GHY-P7-qwF"/>
+                    </connections>
                 </viewController>
                 <customObject id="epw-yi-Rfg" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="999" y="822"/>
+            <point key="canvasLocation" x="156" y="250"/>
         </scene>
-        <!--View Controller-->
+        <!--Advanced-->
         <scene sceneID="Bui-AR-Mhx">
             <objects>
-                <viewController id="ORy-ZF-Diy" sceneMemberID="viewController">
+                <viewController title="Advanced" id="ORy-ZF-Diy" customClass="AdvancedPreferencesViewController" sceneMemberID="viewController">
                     <view key="view" id="JDo-qS-i4t">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <subviews>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZLc-gI-wAJ">
-                                <rect key="frame" x="57" y="223" width="81" height="32"/>
-                                <buttonCell key="cell" type="push" title="Button" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="xqa-sG-u0g">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                            </button>
-                        </subviews>
                     </view>
                 </viewController>
                 <customObject id="mWE-ZR-bCa" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="422" y="1243"/>
+            <point key="canvasLocation" x="-417" y="250"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="NSAdvanced" width="32" height="32"/>
+        <image name="NSPreferencesGeneral" width="32" height="32"/>
+        <image name="magnet" width="32" height="32"/>
+    </resources>
 </document>

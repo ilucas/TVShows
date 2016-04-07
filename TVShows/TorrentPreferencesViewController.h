@@ -12,12 +12,10 @@
 
 @import Cocoa;
 
-#import "TSAppDelegate.h"
+@interface TorrentPreferencesViewController : NSViewController
 
-@interface AppDelegate : TSAppDelegate <NSApplicationDelegate>
+@property (weak) IBOutlet NSPopUpButton *torrentClient;
 
-- (IBAction)showAboutWindow:(id)sender;
-- (IBAction)showPreferencesWindow:(id)sender;
+- (IBAction)torrentClient:(NSPopUpButton *)sender;
 
 @end
-

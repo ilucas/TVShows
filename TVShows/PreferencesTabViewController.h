@@ -12,12 +12,6 @@
 
 @import Cocoa;
 
-#import "TSAppDelegate.h"
-
-@interface AppDelegate : TSAppDelegate <NSApplicationDelegate>
-
-- (IBAction)showAboutWindow:(id)sender;
-- (IBAction)showPreferencesWindow:(id)sender;
+@interface PreferencesTabViewController : NSTabViewController
 
 @end
-

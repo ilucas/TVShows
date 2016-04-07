@@ -31,6 +31,9 @@ end
 target 'TVShows' do
     common
     
+    # UI
+    pod 'ITSwitch', '~> 1.0'
+    
     # Update
     pod 'Sparkle'
     

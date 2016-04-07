@@ -11,13 +11,13 @@
  */
 
 @import Cocoa;
+@import ITSwitch;
 
-#import "TSAppDelegate.h"
+@interface GeneralPreferencesViewController : NSViewController
 
-@interface AppDelegate : TSAppDelegate <NSApplicationDelegate>
+@property (weak) IBOutlet ITSwitch *helperSwitch;
+@property (weak) IBOutlet NSTextField *statusLabel;
 
-- (IBAction)showAboutWindow:(id)sender;
-- (IBAction)showPreferencesWindow:(id)sender;
+@property (weak) IBOutlet NSPopUpButton *checkDelay;
 
 @end
-

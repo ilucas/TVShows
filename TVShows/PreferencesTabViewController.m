@@ -10,14 +10,14 @@
  *  along with TVShows. If not, see <http://www.gnu.org/licenses/>.
  */
 
-@import Cocoa;
+#import "PreferencesTabViewController.h"
 
-#import "TSAppDelegate.h"
+@implementation PreferencesTabViewController
 
-@interface AppDelegate : TSAppDelegate <NSApplicationDelegate>
+#pragma mark - Toolbar Events
 
-- (IBAction)showAboutWindow:(id)sender;
-- (IBAction)showPreferencesWindow:(id)sender;
+-(void)tabView:(NSTabView *)tabView willSelectTabViewItem:(NSTabViewItem *)tabViewItem {
+    [super tabView:tabView willSelectTabViewItem:tabViewItem];
+}
 
 @end
-
