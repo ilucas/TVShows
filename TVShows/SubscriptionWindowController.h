@@ -17,11 +17,15 @@
 @class TVDBSerie;
 @class TVDBEpisode;
 @class MetadataViewController;
+@class EpisodesViewController;
 
 @interface SubscriptionWindowController : NSWindowController <NSWindowDelegate, NSTableViewDelegate, NSTableViewDataSource>
 
 #pragma mark - Show info
 @property (weak) IBOutlet MetadataViewController *metadataViewController;
+
+#pragma mark - Episodes List
+@property (weak) IBOutlet EpisodesViewController *episodesViewController;
 
 #pragma mark - Settings
 @property (weak) IBOutlet NSPopUpButton *showQuality;
@@ -32,17 +36,9 @@
 @property (weak, nonatomic) IBOutlet NSSearchField *searchField;
 @property (strong, strong, nonatomic) NSMutableArray <TVDBSerie *> *showList;
 
-#pragma mark - Episodes List
-@property (weak) IBOutlet NSTableView *episodesTableView;
-@property (weak, nonatomic) IBOutlet NSArrayController *episodesArrayController;
-@property (strong, nonatomic) NSMutableArray <TVDBEpisode *> *episodesList;
-
 #pragma mark - Actions
-- (IBAction)openMoreInfoURL:(id)sender;
 - (IBAction)closeWindow:(id)sender;
 - (IBAction)subscribeToShow:(id)sender;
-- (IBAction)selectNextAired:(id)sender;
-- (IBAction)selectOtherEpisode:(id)sender;
 - (IBAction)search:(id)sender;
 
 @end

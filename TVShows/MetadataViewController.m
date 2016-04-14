@@ -14,6 +14,10 @@
 #import "Serie.h"
 #import "TheTVDB.h"
 
+@interface MetadataViewController ()
+@property (strong) NSString *imdb;
+@end
+
 @implementation MetadataViewController
 
 - (void)updateShowInfo:(Serie *)serie {
@@ -22,6 +26,8 @@
         [self resetView];
         return;
     }
+    
+    self.imdb = serie.imdb;
     
     // Get the poster
     [[TVDBManager manager] poster:serie completionBlock:^(NSImage * _Nonnull poster, NSNumber * _Nonnull serieID) {
@@ -36,7 +42,8 @@
             }
         }
     } failure:^(NSError * _Nonnull error) {
-        DDLogError(@"Poster request fail: %@", error);
+        DDLogError(@"%s [Line %d]: %@", __PRETTY_FUNCTION__, __LINE__, error);
+        [self.showPoster setImage:[NSImage imageNamed:@"posterArtPlaceholder"]];
     }];
     
     //    NSImage *ea = [NSImage imageNamed:@"ea"];
@@ -56,7 +63,6 @@
     } else {
         [self.showYear setStringValue:@""];
     }
-    
 }
 
 - (void)resetView {
@@ -67,35 +73,32 @@
     [self.showYear setStringValue:@""];
     [self.showDuration setStringValue:@""];
     [self.showPoster setImage:[NSImage imageNamed:@"posterArtPlaceholder"]];
-    //[self.studioLogo setImage:nil];
+    [self.studioLogo setImage:nil];
     
     [self toggleLoading:NO];
 }
 
+- (IBAction)openMoreInfoURL:(id)sender {
+    if (self.imdb) {
+        NSString *url = [@"http://www.imdb.com/title/" stringByAppendingPathComponent:self.imdb];
+        [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:url]];
+    }
+}
+
 - (void)toggleLoading:(BOOL)isLoading {
-    
     dispatch_async(dispatch_get_main_queue(), ^(void) {
-        
-        NSLog(@"toggleLoading");
         if (isLoading) {
             [self.dataBox setHidden:YES];
             [self.loadingText setHidden:NO];
             [self.spinner setHidden:NO];
             [self.spinner startAnimation:nil];
-            NSLog(@"toggleLoading TRUE");
         } else {
             [self.dataBox setHidden:NO];
             [self.loadingText setHidden:YES];
             [self.spinner setHidden:YES];
             [self.spinner stopAnimation:nil];
-            NSLog(@"toggleLoading FALSE");
         }
-    
-    
-    
-        
     });
-
 }
 
 @end

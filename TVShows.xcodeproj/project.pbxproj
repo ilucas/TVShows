@@ -69,6 +69,7 @@
 		A095178E1CA24FD600FBF76B /* TVDBImageOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = A095178D1CA24FD600FBF76B /* TVDBImageOperation.m */; };
 		A095178F1CA24FD600FBF76B /* TVDBImageOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = A095178D1CA24FD600FBF76B /* TVDBImageOperation.m */; };
 		A09521EA1AF6BDD4005AC0EF /* TVShows.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A06F88031AE6B92900CD66DC /* TVShows.xcdatamodeld */; };
+		A0A8763D1CB8A7D900D479B5 /* EpisodesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0A8763C1CB8A7D900D479B5 /* EpisodesViewController.m */; };
 		A0A9DAC31C97BC1500C9299F /* MTLModel+JSONAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = A0A9DAA91C97BC1500C9299F /* MTLModel+JSONAdapter.m */; };
 		A0A9DAC41C97BC1500C9299F /* MTLModel+JSONAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = A0A9DAA91C97BC1500C9299F /* MTLModel+JSONAdapter.m */; };
 		A0A9DAC51C97BC1500C9299F /* NSMutableURLRequestToken.m in Sources */ = {isa = PBXBuildFile; fileRef = A0A9DAAB1C97BC1500C9299F /* NSMutableURLRequestToken.m */; };
@@ -330,6 +331,8 @@
 		A08DE3D51C78E26D00040D78 /* RARBGSearchOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RARBGSearchOperation.m; path = Providers/RARBG/RARBGSearchOperation.m; sourceTree = "<group>"; };
 		A095178C1CA24FD600FBF76B /* TVDBImageOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TVDBImageOperation.h; path = TVShows/TheTVDB/TVDBImageOperation.h; sourceTree = SOURCE_ROOT; };
 		A095178D1CA24FD600FBF76B /* TVDBImageOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TVDBImageOperation.m; path = TVShows/TheTVDB/TVDBImageOperation.m; sourceTree = SOURCE_ROOT; };
+		A0A8763B1CB8A7D900D479B5 /* EpisodesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EpisodesViewController.h; sourceTree = "<group>"; };
+		A0A8763C1CB8A7D900D479B5 /* EpisodesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EpisodesViewController.m; sourceTree = "<group>"; };
 		A0A9DAA81C97BC1500C9299F /* MTLModel+JSONAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "MTLModel+JSONAdapter.h"; path = "TVShows/TheTVDB/MTLModel+JSONAdapter.h"; sourceTree = SOURCE_ROOT; };
 		A0A9DAA91C97BC1500C9299F /* MTLModel+JSONAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "MTLModel+JSONAdapter.m"; path = "TVShows/TheTVDB/MTLModel+JSONAdapter.m"; sourceTree = SOURCE_ROOT; };
 		A0A9DAAA1C97BC1500C9299F /* NSMutableURLRequestToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NSMutableURLRequestToken.h; path = TVShows/TheTVDB/NSMutableURLRequestToken.h; sourceTree = SOURCE_ROOT; };
@@ -849,6 +852,8 @@
 				A00847CA1AF5C0F900F5D2A3 /* SubscriptionWindowController.xib */,
 				A01813CB1C2DDEB500C5B221 /* MetadataViewController.h */,
 				A01813CC1C2DDEB500C5B221 /* MetadataViewController.m */,
+				A0A8763B1CB8A7D900D479B5 /* EpisodesViewController.h */,
+				A0A8763C1CB8A7D900D479B5 /* EpisodesViewController.m */,
 				3444F29011DD13F700BF3724 /* Views */,
 			);
 			name = Subscription;
@@ -1275,6 +1280,7 @@
 				A0A9DADB1C97BC1500C9299F /* TVDBUpdatesOperation.m in Sources */,
 				A05A9C3C1C583BD600FBEF9A /* Serie.m in Sources */,
 				A0A9DAD51C97BC1500C9299F /* TVDBSearchOperation.m in Sources */,
+				A0A8763D1CB8A7D900D479B5 /* EpisodesViewController.m in Sources */,
 				A05A9C381C583BD600FBEF9A /* _Serie.m in Sources */,
 				A0EE124A1C54238900F4AB82 /* OEThemeGradient.m in Sources */,
 				A0432F261AD9649600C19189 /* main.m in Sources */,

@@ -38,6 +38,8 @@
 @property (weak) IBOutlet NSProgressIndicator *spinner;
 @property (weak) IBOutlet NSTextField *loadingText;
 
+- (IBAction)openMoreInfoURL:(id)sender;
+
 - (void)toggleLoading:(BOOL)isLoading;
 - (void)updateShowInfo:(Serie *)serie;
 - (void)resetView;

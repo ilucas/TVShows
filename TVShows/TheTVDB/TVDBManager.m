@@ -94,7 +94,9 @@ static NSString * const kBaseURL = @"https://api-beta.thetvdb.com";
             serie.banner = posterName;
         }
         
-        success(serie);
+        dispatch_async(dispatch_get_main_queue(), ^(void) {
+            success(serie);
+        });
     }];
     
     [mergeOperation addDependency:operation];
