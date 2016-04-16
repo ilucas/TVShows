@@ -1,0 +1,71 @@
+#!/bin/sh
+
+# Check if configuration exists
+if [ ! -f ./acknowledge.cfg ]; then
+  # Configuration doesn't exist, check if the .default exists
+  if [ -f ./acknowledge.cfg.default ]; then
+    echo "\nCopying the default configuration to ./acknowledge.cfg"
+    cp ./acknowledge.cfg.default ./acknowledge.cfg
+  else
+    echo "\nError: Default configuration not found."
+    echo "---"
+    echo "Please clone a new copy of the acknowledge repo."
+    exit 1
+  fi
+fi
+
+# Load configuration
+i=0
+while read line; do
+  if [[ "$line" =~ ^[^#]*= ]]; then
+    name[i]=${line%% =*}
+    value[i]=${line#*= }
+    declare ${name[i]}="${value[i]}"
+    ((i++))
+  fi
+done < ./acknowledge.cfg
+
+if [ ! -n "$MULTIMARKDOWN_PATH" ] || [ ! -n "$PODS_PATH" ]; then
+  echo "\nError: Not all configuration parameters were set."
+  echo "---"
+  echo "Please remove or fix acknowledge.cfg."
+  exit 2
+fi
+
+echo "Running acknowledge.."
+
+# Check if multimarkdown is installed
+if ! loc="$(type -p $MULTIMARKDOWN_PATH)" || [ -z "$loc" ]; then
+  echo "\nError: multimarkdown is not installed."
+  echo "---"
+  echo "Read more: http://brettterpstra.com/projects/markdown-service-tools/"
+  exit 3
+fi
+
+# Create Acknowledgments' source directory if it isn't there already
+if [ ! -d ./source ]; then
+  echo "\n./source doesn't exist, creating it now."
+  mkdir ./source
+fi
+
+# Create acknowledgments for pods
+ACKNOWLEDGEMENT_PATH=$(find "$PODS_PATH" -type f -name "Pods-*acknowledgements.markdown" | head -n 1)
+if [ -f "$ACKNOWLEDGEMENT_PATH" ]; then
+  echo "\nUsing multimarkdown to convert Cocoapod acknowledgments."
+  $MULTIMARKDOWN_PATH "$ACKNOWLEDGEMENT_PATH" -o ./source/10_Pods-acknowledgements.rtf -t rtf > /dev/null 2>&1
+fi
+
+# How to add other acknowledgments
+echo "\nIf you want to add other acknowledgments, add them to ./source."
+echo "Make sure they're markdown files (extension should be .md)."
+
+# Turn other markdown files into rtfs
+$MULTIMARKDOWN_PATH ./source/*.md -b -t rtf
+
+# Run textutil
+echo "\nUsing textutil to concatenate sources files into one Acknowledgments.rtf file".
+
+/usr/bin/textutil -cat rtf -output ./Acknowledgments.rtf ./source/*.rtf
+
+echo "\nAll done!"
+exit 0
