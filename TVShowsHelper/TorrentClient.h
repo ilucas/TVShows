@@ -10,17 +10,10 @@
  *  along with TVShows. If not, see <http://www.gnu.org/licenses/>.
  */
 
-@import Cocoa;
-@import ITSwitch;
+@import Foundation;
 
-@interface GeneralPreferencesViewController : NSViewController
+@interface TorrentClient : NSObject
 
-@property (weak) IBOutlet ITSwitch *helperSwitch;
-@property (weak) IBOutlet NSTextField *statusLabel;
-
-@property (weak) IBOutlet NSPopUpButton *checkDelay;
-
-- (IBAction)helperSwitch:(ITSwitch *)sender;
-- (IBAction)delayAction:(id)sender;
++ (BOOL)openTorrent:(NSString *)magnet;
 
 @end

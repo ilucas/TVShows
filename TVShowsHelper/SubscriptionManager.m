@@ -11,6 +11,7 @@
  */
 
 #import "SubscriptionManager.h"
+#import "TorrentClient.h"
 
 #import "Serie.h"
 #import "Subscription.h"
@@ -37,22 +38,23 @@
 - (void)checkSubscription:(Subscription *)subscription {
     self.subscriptionID = subscription.objectID;
     
-    //Debug
-    [self.managedObjectContext MR_setWorkingName:[NSString stringWithFormat:@"SubscriptionManager Context (Serie: %@)", subscription.serie.serieID]];
-    
     NSNumber *serieID = subscription.serie.serieID;
     
-    //TODO: Only update a serie on new episode day or if subscription.lastDownload is longer than a week.
+    //Debug
+    [self.managedObjectContext MR_setWorkingName:[NSString stringWithFormat:@"SubscriptionManager Context (Serie: %@)", serieID]];
     
-    // Update episodes.
-    [[TVDBManager manager] episodes:serieID completionBlock:^(NSArray<TVDBEpisode *> *episodes) {
-        NSInvocationOperation *updateOperation = [[NSInvocationOperation alloc] initWithTarget:self
-                                                                                      selector:@selector(updateEpisodes:)
-                                                                                        object:episodes];
-        [self.operationQueue addOperation:updateOperation];
-    } failure:^(NSError *error) {
-        DDLogError(@"%s [Line %d]: %@", __PRETTY_FUNCTION__, __LINE__, error);
-    }];
+    // Check if lastDownload is longer than a week
+    if (subscription.lastDownloaded.timeIntervalSinceNow > 604800) {// 604800 seconds = 7 days
+        // Update episodes.
+        [[TVDBManager manager] episodes:serieID completionBlock:^(NSArray<TVDBEpisode *> *episodes) {
+            [self performSelectorInQueue:@selector(updateEpisodes:) withObject:episodes];
+        } failure:^(NSError *error) {
+            DDLogError(@"%s [Line %d]: %@", __PRETTY_FUNCTION__, __LINE__, error);
+        }];
+    } else {
+        // Download episodes
+        [self performSelectorInQueue:@selector(downloadEpisodes) withObject:nil];
+    }
 }
 
 #pragma mark - Private
@@ -60,6 +62,8 @@
 // [2] Save the episodes.
 - (void)updateEpisodes:(NSArray<TVDBEpisode *> *)episodes {
     Subscription *subscription = [self.managedObjectContext objectWithID:self.subscriptionID];
+    
+    DDLogInfo(@"Updating %@ episodes.", subscription.serie.name);
     
     NSError *modelError;
     TVDBSerie *serie = [TVDBSerie modelFromManagedObject:subscription.serie error:&modelError];
@@ -79,11 +83,8 @@
         return;
     }
     
-    [self.managedObjectContext MR_saveWithOptions:MRSaveParentContexts completion:^(BOOL contextDidSave, NSError * _Nullable error) {
-        NSInvocationOperation *updateOperation = [[NSInvocationOperation alloc] initWithTarget:self
-                                                                                      selector:@selector(downloadEpisodes)
-                                                                                        object:nil];
-        [self.operationQueue addOperation:updateOperation];
+    [self.managedObjectContext MR_saveWithOptions:MRSaveParentContexts completion:^(BOOL contextDidSave, NSError *error) {
+        [self performSelectorInQueue:@selector(downloadEpisodes) withObject:nil];
     }];
 }
 
@@ -101,14 +102,14 @@
     [episodes enumerateObjectsUsingBlock:^(Episode *episode, NSUInteger idx, BOOL *stop) {
         // Download the serie.
         NSString *search = [subscription searchNameForEpisode:episode];
+        
+        DDLogInfo(@"RARBG Search: %@", search);
+        
         RARBGSearchOperation *downloadOperation = [[RARBGClient manager] search:search];
         
-        @weakify(episode)
         [downloadOperation setCompletionBlockWithSuccess:^(RARBGSearchOperation *operation, NSArray<RARBGTorrent *> *torrents) {
-            @strongify(episode)
-            
             if (torrents.count == 0) {
-                DDLogInfo(@"No results found");
+                DDLogInfo(@"[%@] No results found", search);
             } else {
                 [self processTorrent:torrents[0] Episode:episode];
             }
@@ -139,6 +140,8 @@
     notification.subtitle = [NSString stringWithFormat:@"%@ %@", episode.serie.name, episode.fullEpisodeNumber];
     notification.identifier = [@"TVShows.Helper.notification.NewEpisode." stringByAppendingPathExtension:episode.episodeID.stringValue];
     
+    DDLogInfo(@"Download: %@", notification.subtitle);
+    
     [[NSUserNotificationCenter defaultUserNotificationCenter] deliverNotification:notification];
 }
 
@@ -162,6 +165,13 @@
         operationQueue.name = @"TVShows.Helper.SubscriptionManager.Queue";
     });
     return operationQueue;
+}
+
+- (void)performSelectorInQueue:(SEL)aSelector withObject:(nullable id)arg {
+    NSInvocationOperation *operation = [[NSInvocationOperation alloc] initWithTarget:self
+                                                                            selector:aSelector
+                                                                              object:arg];
+    [self.operationQueue addOperation:operation];
 }
 
 @end

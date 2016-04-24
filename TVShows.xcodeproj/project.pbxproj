@@ -38,6 +38,7 @@
 		A02F69431CB4BAC100AE9236 /* TorrentPreferencesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A02F69421CB4BAC100AE9236 /* TorrentPreferencesViewController.m */; };
 		A03A4E281CA51E6B002AB1F2 /* TVDBPosterOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = A03A4E271CA51E6B002AB1F2 /* TVDBPosterOperation.m */; };
 		A03A4E291CA51E6B002AB1F2 /* TVDBPosterOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = A03A4E271CA51E6B002AB1F2 /* TVDBPosterOperation.m */; };
+		A03D5E4E1CCC84DB00E33DF9 /* TorrentClient.m in Sources */ = {isa = PBXBuildFile; fileRef = A03D5E4D1CCC84DB00E33DF9 /* TorrentClient.m */; };
 		A0432F241AD9649600C19189 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A0432F231AD9649600C19189 /* AppDelegate.m */; };
 		A0432F261AD9649600C19189 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A0432F251AD9649600C19189 /* main.m */; };
 		A0432F281AD9649600C19189 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0432F271AD9649600C19189 /* Images.xcassets */; };
@@ -100,7 +101,6 @@
 		A0C190211B4081A90020ACD9 /* NSString+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C190201B4081A90020ACD9 /* NSString+Extensions.m */; };
 		A0CE35141CB2323E00581409 /* LaunchAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = A0CE35131CB2323E00581409 /* LaunchAgent.m */; };
 		A0CE35161CB2327C00581409 /* ServiceManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0CE35151CB2327C00581409 /* ServiceManagement.framework */; };
-		A0D0C2821CADC42D005658CF /* TorrentClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D0C2811CADC42D005658CF /* TorrentClient.swift */; };
 		A0D790BD1CB37C9100C4D32D /* TVShowsHelper.app in Copy Helper */ = {isa = PBXBuildFile; fileRef = A0F43D221C6A99F3005ABB35 /* TVShowsHelper.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		A0DD957E1CB616470016CF50 /* AdvancedPreferencesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0DD957D1CB616470016CF50 /* AdvancedPreferencesViewController.m */; };
 		A0E4341F1B1AA1D7000AF57C /* NSManagedObject+Attributes.m in Sources */ = {isa = PBXBuildFile; fileRef = A0E4341E1B1AA1D7000AF57C /* NSManagedObject+Attributes.m */; };
@@ -152,8 +152,8 @@
 		A0D790BC1CB37C7D00C4D32D /* Copy Helper */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
-			dstPath = Contents/Library/LoginItems;
-			dstSubfolderSpec = 1;
+			dstPath = "";
+			dstSubfolderSpec = 6;
 			files = (
 				A0D790BD1CB37C9100C4D32D /* TVShowsHelper.app in Copy Helper */,
 			);
@@ -285,6 +285,8 @@
 		A02F69421CB4BAC100AE9236 /* TorrentPreferencesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TorrentPreferencesViewController.m; sourceTree = "<group>"; };
 		A03A4E261CA51E6B002AB1F2 /* TVDBPosterOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TVDBPosterOperation.h; path = TVShows/TheTVDB/TVDBPosterOperation.h; sourceTree = SOURCE_ROOT; };
 		A03A4E271CA51E6B002AB1F2 /* TVDBPosterOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TVDBPosterOperation.m; path = TVShows/TheTVDB/TVDBPosterOperation.m; sourceTree = SOURCE_ROOT; };
+		A03D5E4C1CCC84DB00E33DF9 /* TorrentClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TorrentClient.h; sourceTree = "<group>"; };
+		A03D5E4D1CCC84DB00E33DF9 /* TorrentClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TorrentClient.m; sourceTree = "<group>"; };
 		A0432F1E1AD9649600C19189 /* TVShows.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TVShows.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0432F211AD9649600C19189 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A0432F221AD9649600C19189 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -365,7 +367,6 @@
 		A0CE35121CB2323E00581409 /* LaunchAgent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LaunchAgent.h; sourceTree = "<group>"; };
 		A0CE35131CB2323E00581409 /* LaunchAgent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaunchAgent.m; sourceTree = "<group>"; };
 		A0CE35151CB2327C00581409 /* ServiceManagement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ServiceManagement.framework; path = System/Library/Frameworks/ServiceManagement.framework; sourceTree = SDKROOT; };
-		A0D0C2811CADC42D005658CF /* TorrentClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TorrentClient.swift; sourceTree = "<group>"; };
 		A0DD957C1CB616470016CF50 /* AdvancedPreferencesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdvancedPreferencesViewController.h; sourceTree = "<group>"; };
 		A0DD957D1CB616470016CF50 /* AdvancedPreferencesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdvancedPreferencesViewController.m; sourceTree = "<group>"; };
 		A0E4341D1B1AA1D7000AF57C /* NSManagedObject+Attributes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSManagedObject+Attributes.h"; path = "TVShows/Extensions/NSManagedObject+Attributes.h"; sourceTree = SOURCE_ROOT; };
@@ -981,7 +982,8 @@
 				A0F43D251C6A99F3005ABB35 /* AppDelegate.m */,
 				A06B4B341CA6133800FB3C3B /* SubscriptionManager.h */,
 				A06B4B351CA6133800FB3C3B /* SubscriptionManager.m */,
-				A0D0C2811CADC42D005658CF /* TorrentClient.swift */,
+				A03D5E4C1CCC84DB00E33DF9 /* TorrentClient.h */,
+				A03D5E4D1CCC84DB00E33DF9 /* TorrentClient.m */,
 				A0F43D2C1C6A99F3005ABB35 /* MainMenu.xib */,
 				A01AAA371C6BB1110051F1E6 /* Providers */,
 				A0F43D271C6A99F3005ABB35 /* Supporting Files */,
@@ -1355,7 +1357,7 @@
 				A06D07F71CAB8628001E9511 /* RARBGTorrent.m in Sources */,
 				A0A9DAC41C97BC1500C9299F /* MTLModel+JSONAdapter.m in Sources */,
 				A04F1D621CA6513200F09BAA /* NSDictionary+Extensions.m in Sources */,
-				A0D0C2821CADC42D005658CF /* TorrentClient.swift in Sources */,
+				A03D5E4E1CCC84DB00E33DF9 /* TorrentClient.m in Sources */,
 				A0F43D341C6A9A37005ABB35 /* _Serie.m in Sources */,
 				A0A9DAD21C97BC1500C9299F /* TVDBManager.m in Sources */,
 				A0A9DACE1C97BC1500C9299F /* TVDBEpisodesOperation.m in Sources */,

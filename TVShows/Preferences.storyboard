@@ -96,6 +96,9 @@
                                         </items>
                                     </menu>
                                 </popUpButtonCell>
+                                <connections>
+                                    <action selector="delayAction:" target="YGy-g2-8Wp" id="8af-4v-8rF"/>
+                                </connections>
                             </popUpButton>
                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uA5-v7-8jN" customClass="ITSwitch">
                                 <rect key="frame" x="105" y="254" width="65" height="35"/>

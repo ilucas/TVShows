@@ -31,7 +31,7 @@
     [self.helperSwitch bind:@"checked" toObject:self withKeyPath:@"helperStatus" options:nil];
     self.helperStatus = [LaunchAgent loginItemIsEnabled];
     
-    [self setupDelayMenu];
+    [self.checkDelay bind:@"selectedIndex" toObject:self.defaultsController withKeyPath:@"values.checkDelay" options:nil];
 }
 
 #pragma mark - Actions
@@ -42,6 +42,11 @@
     if (status == false) {
         [sender setChecked:false];
     }
+}
+
+- (IBAction)delayAction:(id)sender {
+    [[NSDistributedNotificationCenter defaultCenter] postNotificationName:@"TSDelayChangedNotification"
+                                                                   object:nil];
 }
 
 #pragma mark - Properties
@@ -58,13 +63,5 @@
 
 #pragma mark - Private
 
-- (void)setupDelayMenu {
-    //NSArray<NSString *> *items = @[@"30 Minutes", @"1 Hour", @"3 hours", @"6 hours", @"12 hours", @"1 Day"];
-    
-    //[self.checkDelay removeAllItems];
-    //[self.checkDelay addItemsWithTitles:items];
-    
-    [self.checkDelay bind:@"selectedIndex" toObject:self.defaultsController withKeyPath:@"values.checkDelay" options:nil];
-}
 
 @end

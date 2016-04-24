@@ -46,10 +46,25 @@
     
     [[NSUserNotificationCenter defaultUserNotificationCenter] setDelegate:self];
     
+    [[NSDistributedNotificationCenter defaultCenter] addObserver:self
+                                                        selector:@selector(reloadTimer:)
+                                                            name:@"TSDelayChangedNotification"
+                                                          object:nil];
+    
+    [[[NSWorkspace sharedWorkspace] notificationCenter] addObserver:self
+                                                           selector:@selector(reloadTimer:)
+                                                               name:NSWorkspaceDidWakeNotification
+                                                             object:nil];
     [self setupTimer];
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
+    // Remove Notifications observer
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+    [[NSDistributedNotificationCenter defaultCenter] removeObserver:self];
+    [[[NSWorkspace sharedWorkspace] notificationCenter] removeObserver:self];
+    
+    // Core Data clanup
     [MagicalRecord cleanUp];
 }
 
@@ -59,6 +74,10 @@
 - (void)userNotificationCenter:(NSUserNotificationCenter *)center didActivateNotification:(NSUserNotification *)notification {
     // Remove the notification from the notification center
     [[NSUserNotificationCenter defaultUserNotificationCenter] removeDeliveredNotification:notification];
+    
+//    if (![notification.identifier isEqualToString:@"TVShows.Helper.notification.checkAllShows"]) {
+//        // Open TVShows
+//    }
 }
 
 #pragma mark - Private
@@ -71,6 +90,8 @@
     
     [[NSUserNotificationCenter defaultUserNotificationCenter] deliverNotification:notification];
     
+    DDLogInfo(@"Checking for new episodes.");
+    
     // Fetch all Subscription enabled.
     NSFetchRequest *fetchRequest = [Subscription requestAllWhere:@"isEnabled" isEqualTo:@YES inContext:self.managedObjectContext];
     
@@ -82,6 +103,8 @@
             [sm checkSubscription:subscription];
         }];
     }
+    
+    [[self sharedUserDefaults] setObject:[NSDate date] forKey:@"lastCheckedForEpisodes"];
 }
 
 - (NSTimeInterval)userDelay {
@@ -123,27 +146,47 @@
     return seconds;
 }
 
-#pragma mark - Setup 
+#pragma mark - RunLoop
+
+- (void)reloadTimer:(NSNotification *)notification {
+    if (notification) {
+        DDLogInfo(@"[%@] {object = %@, userInfo = %@}", notification.name, notification.object, notification.userInfo);
+    }
+    
+    // The receiver retains the timer.
+    // To remove a timer from all run loop modes on which it is installed, send an invalidate message to the timer.
+    [self.timer invalidate];
+    
+    [self setupTimer];
+}
 
 - (void)setupTimer {
-    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0);
-    dispatch_async(queue, ^{
-        NSTimeInterval interval = [self userDelay];
-        interval = 30;
-        
-        self.timer = [[NSTimer alloc] initWithFireDate:[NSDate dateWithTimeIntervalSinceNow:60]// Wait 1m to start.
-                                              interval:interval
-                                                target:self
-                                              selector:@selector(checkAllShows)
-                                              userInfo:nil
-                                               repeats:YES];
-        
-        NSRunLoop *currentRunLoop = [NSRunLoop currentRunLoop];
-        
-        // The receiver retains the timer. To remove a timer from all run loop modes on which it is installed, send an invalidate message to the timer.
-        [currentRunLoop addTimer:self.timer forMode:NSDefaultRunLoopMode];
-        [currentRunLoop run];
-    });
+    NSDate *lastCheck = [[self sharedUserDefaults] objectForKey:@"lastCheckedForEpisodes"] ?: [NSDate date];
+    
+    NSTimeInterval userDelay = [self userDelay];
+    NSTimeInterval nextCheck = (userDelay - [[NSDate date] timeIntervalSinceDate:lastCheck]);
+    
+    // If the next should already be done, do it now
+    if (nextCheck < 0.1) {
+        // Wait a little for connecting to the network
+        nextCheck = 60;
+    }
+    
+    self.timer = [[NSTimer alloc] initWithFireDate:[NSDate dateWithTimeIntervalSinceNow:nextCheck]
+                                          interval:userDelay
+                                            target:self
+                                          selector:@selector(checkAllShows)
+                                          userInfo:nil
+                                           repeats:YES];
+    
+    DDLogInfo(@"------------ Timer Setup ------------");
+    DDLogInfo(@"Last Check: %@", lastCheck);
+    DDLogInfo(@"Next Check: %@", self.timer.fireDate);
+    DDLogInfo(@"User Delay: %g Seconds", userDelay);
+    DDLogInfo(@"-------------------------------------");
+    
+    NSRunLoop *currentRunLoop = [NSRunLoop currentRunLoop];
+    [currentRunLoop addTimer:self.timer forMode:NSDefaultRunLoopMode];
 }
 
 @end

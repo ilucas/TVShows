@@ -13,6 +13,7 @@
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
         <customObject id="Voe-Tx-rLC" customClass="AppDelegate"/>
+        <customObject id="jAI-ja-Pks" customClass="SUUpdater"/>
         <menu title="Main Menu" systemMenu="main" id="AYu-sK-qS6">
             <items>
                 <menuItem title="TVShows" id="1Xt-HY-uBw">
@@ -29,6 +30,13 @@
                             <menuItem title="Preferences…" keyEquivalent="," id="BOF-NM-1cW">
                                 <connections>
                                     <action selector="showPreferencesWindow:" target="Voe-Tx-rLC" id="YrP-ud-M1M"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="ftU-4B-imY"/>
+                            <menuItem title="Check for Updates..." id="xln-xr-U7v">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="checkForUpdates:" target="jAI-ja-Pks" id="Wk9-F6-QA1"/>
                                 </connections>
                             </menuItem>
                             <menuItem isSeparatorItem="YES" id="wFC-TO-SCJ"/>
