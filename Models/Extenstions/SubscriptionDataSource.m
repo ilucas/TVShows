@@ -13,7 +13,10 @@
 #import "SubscriptionDataSource.h"
 #import "Serie.h"
 
+#import "OEGridViewCellIndicationLayer.h"
+
 @import Quartz;
+@import MagicalRecord;
 
 @implementation Subscription (GridDataSource)
 
@@ -54,12 +57,7 @@
 }
 
 - (NSInteger)gridStatus {
-    //default = OEGridViewCellIndicationTypeNone
-    //1, 3 = OEGridViewCellIndicationTypeProcessing
-    //2 = OEGridViewCellIndicationTypeFileMissing
-    
-    return 0;
-//    return self.isEnabledValue;
+    return self.isEnabledValue ? OEGridViewCellIndicationTypeNone : OEGridViewCellIndicationTypeDropOn;
 }
 
 - (NSUInteger)gridRating {
@@ -67,14 +65,13 @@
 }
 
 - (void)setGridTitle:(NSString *)str {
-    
 }
 
 - (void)setGridRating:(NSUInteger)newRating {
-    DDLogInfo(@"Got a new rating (%ld stars) for show: %@", newRating, self.serie.name);
+    DDLogInfo(@"Got a new rating (%ld stars) for show: %@ (%@)", newRating, self.serie.name, self.serie.serieID);
     
     self.serie.rating = @(newRating);
-    [self.managedObjectContext save:nil];
+    [self.managedObjectContext MR_saveWithOptions:MRSaveParentContexts completion:nil];
 }
 
 - (BOOL)shouldIndicateDeletable {

@@ -23,13 +23,16 @@
 - (void)awakeFromNib {
     self.episodesList = [NSMutableArray array];
     
-    NSSortDescriptor *sortDescriptior = [NSSortDescriptor sortDescriptorWithKey:@"number" ascending:NO];
-    [self.episodesArrayController setSortDescriptors:@[sortDescriptior]];
+    NSSortDescriptor *episodeSorter = [NSSortDescriptor sortDescriptorWithKey:@"episode" ascending:NO];
+    NSSortDescriptor *seasonSorter = [NSSortDescriptor sortDescriptorWithKey:@"season" ascending:NO];
+    
+    [self.episodesArrayController setSortDescriptors:@[seasonSorter, episodeSorter]];
 }
 
 - (void)updateEpisodes:(NSArray <TVDBEpisode *> *)episodes {
     [self resetView];
     [self.episodesArrayController addObjects:episodes];
+    [self.episodesArrayController rearrangeObjects];
     [self.tableView reloadData];
 }
 

@@ -16,61 +16,83 @@
 #import "NSColor+BWAdditions.h"
 
 @implementation CRViewSubclass
-
 @synthesize startingColor, endingColor, angle;
 @synthesize bottomBorderColor, topBorderColor;
 
-- (id) initWithFrame:(NSRect)frame
-{
-    if ((self = [super initWithFrame:frame])) {
-//      [self setStartingColor:[NSColor colorWithCalibratedWhite:0.882 alpha:1.000]];
-//      [self setEndingColor:[NSColor colorWithCalibratedWhite:0.737 alpha:1.000]];
+#pragma mark - Setup
 
-        [self setStartingColor:[NSColor colorWithCalibratedWhite:0.950 alpha:1.000]];
-        [self setEndingColor:[NSColor colorWithCalibratedWhite:0.850 alpha:1.000]];
-        [self setTopBorderColor:[NSColor colorWithCalibratedWhite:0.520 alpha:1.000]];
-        [self setBottomBorderColor:[NSColor colorWithCalibratedWhite:0.520 alpha:1.000]];
-        
-        [self setAngle:270];
+- (instancetype)initWithCoder:(NSCoder *)coder {
+    self = [super initWithCoder:coder];
+    
+    if (self) {
+        [self setup];
     }
     
     return self;
 }
 
-- (void) drawRect:(NSRect)rect
-{
+- (id)initWithFrame:(NSRect)frame {
+    self = [super initWithFrame:frame];
+    
+    if (self) {
+        [self setup];
+    }
+    
+    return self;
+}
+
+- (void)setup {
+    //[self setStartingColor:[NSColor colorWithCalibratedWhite:0.882 alpha:1.000]];
+    //[self setEndingColor:[NSColor colorWithCalibratedWhite:0.737 alpha:1.000]];
+    
+    [self setStartingColor:[NSColor colorWithCalibratedWhite:0.950 alpha:1.000]];
+    [self setEndingColor:[NSColor colorWithCalibratedWhite:0.850 alpha:1.000]];
+    [self setTopBorderColor:[NSColor colorWithCalibratedWhite:0.520 alpha:1.000]];
+    [self setBottomBorderColor:[NSColor colorWithCalibratedWhite:0.520 alpha:1.000]];
+    
+    [self setAngle:270.0];
+}
+
+#pragma mark - Drawing
+
+- (void)drawRect:(NSRect)rect {
     if (endingColor == nil || [startingColor isEqual:endingColor]) {
         // If the start and end color are the same, fill with just one color.
         [startingColor set];
         NSRectFill(rect);
     } else {
         // Fill the view with a top-down gradient, from startingColor to endingColor
-        NSGradient* aGradient = [[NSGradient alloc]
-                                 initWithStartingColor:startingColor
-                                 endingColor:endingColor];
+        NSGradient *gradient = [[NSGradient alloc] initWithStartingColor:startingColor
+                                                             endingColor:endingColor];
         
-        [aGradient drawInRect:[self bounds] angle:angle];
+        [gradient drawInRect:self.bounds angle:angle];
     }
     
-    if (topBorderColor != nil) {
+    if (topBorderColor) {
         // Create a top border, if the topBorder color is set.
         [topBorderColor bwDrawPixelThickLineAtPosition: 0
                                              withInset: 0
-                                                inRect: [self bounds]
+                                                inRect: self.bounds
                                                 inView: self
                                             horizontal: YES
                                                   flip: YES];
     }
     
-    if (bottomBorderColor != nil) {
+    if (bottomBorderColor) {
         // Create a bottom border, if the bottomBorder color is set.
         [bottomBorderColor bwDrawPixelThickLineAtPosition: 0
                                                 withInset: 0
-                                                   inRect: [self bounds]
+                                                   inRect: self.bounds
                                                    inView: self
                                                horizontal: YES
                                                      flip: NO];
     }
+}
+
+#pragma mark - Interface Builder
+
+- (void)prepareForInterfaceBuilder {
+    [self setup];
 }
 
 @end

@@ -45,7 +45,7 @@
 }
 
 - (IBAction)delayAction:(id)sender {
-    [[NSDistributedNotificationCenter defaultCenter] postNotificationName:@"TSDelayChangedNotification"
+    [[NSDistributedNotificationCenter defaultCenter] postNotificationName:@"TVShows.Notification.DelayChanged"
                                                                    object:nil];
 }
 

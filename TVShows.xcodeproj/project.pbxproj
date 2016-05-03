@@ -26,12 +26,12 @@
 		A00468D11C56F94200732FB5 /* AboutWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00468CF1C56F94200732FB5 /* AboutWindowController.swift */; };
 		A00468D21C56F94200732FB5 /* AboutWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A00468D01C56F94200732FB5 /* AboutWindowController.xib */; };
 		A00747001C80EFFF007BF1AA /* RARBGClient.m in Sources */ = {isa = PBXBuildFile; fileRef = A00746FF1C80EFFF007BF1AA /* RARBGClient.m */; };
-		A00847CB1AF5C0F900F5D2A3 /* SubscriptionWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = A00847C91AF5C0F900F5D2A3 /* SubscriptionWindowController.m */; };
-		A00847CC1AF5C0F900F5D2A3 /* SubscriptionWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A00847CA1AF5C0F900F5D2A3 /* SubscriptionWindowController.xib */; };
 		A00B46211AEC7F1B0022BDBF /* posterArtPlaceholder.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 340A20B011AF0E15004351EB /* posterArtPlaceholder.jpg */; };
 		A00B46221AEC7F350022BDBF /* NSColor+BWAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 34463CCF1331B424001453EB /* NSColor+BWAdditions.m */; settings = {COMPILER_FLAGS = "-w"; }; };
 		A00B46231AEC7F390022BDBF /* BWInsetTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 342A5429132D4CB800FB526F /* BWInsetTextField.m */; };
 		A00B46241AEC7FA30022BDBF /* CRViewSubclass.m in Sources */ = {isa = PBXBuildFile; fileRef = 34463CD71331BC40001453EB /* CRViewSubclass.m */; };
+		A01480631CCDB43F00B57CD2 /* MainWindowTitlebarBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01480621CCDB43F00B57CD2 /* MainWindowTitlebarBackgroundView.swift */; };
+		A01480651CCDC2F200B57CD2 /* GridViewAddItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01480641CCDC2F200B57CD2 /* GridViewAddItem.swift */; };
 		A01813CD1C2DDEB500C5B221 /* MetadataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A01813CC1C2DDEB500C5B221 /* MetadataViewController.m */; };
 		A0202B061CAF62020064F1B7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0432F271AD9649600C19189 /* Images.xcassets */; };
 		A02F332E1B1BC9BC004F2D4B /* NSMutableDictionary+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A02F332D1B1BC9BC004F2D4B /* NSMutableDictionary+Extensions.m */; };
@@ -59,6 +59,7 @@
 		A05A9C3D1C583BD600FBEF9A /* Subscription.m in Sources */ = {isa = PBXBuildFile; fileRef = A05A9C361C583BD600FBEF9A /* Subscription.m */; };
 		A06B4B361CA6133800FB3C3B /* SubscriptionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A06B4B351CA6133800FB3C3B /* SubscriptionManager.m */; };
 		A06D07F71CAB8628001E9511 /* RARBGTorrent.m in Sources */ = {isa = PBXBuildFile; fileRef = A06D07F61CAB8628001E9511 /* RARBGTorrent.m */; };
+		A06D26DF1CCDC96B006A0672 /* arrow-this.png in Resources */ = {isa = PBXBuildFile; fileRef = 57EBC9F91482A6FA006E068F /* arrow-this.png */; };
 		A06F87711AE6904700CD66DC /* OEUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = A06F87591AE6904700CD66DC /* OEUtilities.m */; };
 		A07A51F01C54389C00D40063 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A07A51EF1C54389C00D40063 /* Main.storyboard */; };
 		A07A51F71C543DCF00D40063 /* MainWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = A07A51F61C543DCF00D40063 /* MainWindowController.m */; };
@@ -101,8 +102,11 @@
 		A0C190211B4081A90020ACD9 /* NSString+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C190201B4081A90020ACD9 /* NSString+Extensions.m */; };
 		A0CE35141CB2323E00581409 /* LaunchAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = A0CE35131CB2323E00581409 /* LaunchAgent.m */; };
 		A0CE35161CB2327C00581409 /* ServiceManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0CE35151CB2327C00581409 /* ServiceManagement.framework */; };
+		A0D39DB71CD44D6D00277935 /* SubscriptionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D39DB61CD44D6D00277935 /* SubscriptionViewController.m */; };
 		A0D790BD1CB37C9100C4D32D /* TVShowsHelper.app in Copy Helper */ = {isa = PBXBuildFile; fileRef = A0F43D221C6A99F3005ABB35 /* TVShowsHelper.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		A0DD957E1CB616470016CF50 /* AdvancedPreferencesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0DD957D1CB616470016CF50 /* AdvancedPreferencesViewController.m */; };
+		A0E02F731CD81003008BFAC2 /* GridViewSubscriptionItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A0E02F721CD81003008BFAC2 /* GridViewSubscriptionItemCell.m */; };
+		A0E02F761CD81828008BFAC2 /* GridViewCellIndicationLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = A0E02F751CD81828008BFAC2 /* GridViewCellIndicationLayer.m */; };
 		A0E4341F1B1AA1D7000AF57C /* NSManagedObject+Attributes.m in Sources */ = {isa = PBXBuildFile; fileRef = A0E4341E1B1AA1D7000AF57C /* NSManagedObject+Attributes.m */; };
 		A0EE123E1C54238900F4AB82 /* NSColor+OEAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A0EE12131C54238900F4AB82 /* NSColor+OEAdditions.m */; };
 		A0EE123F1C54238900F4AB82 /* NSImage+DrawingAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0EE12141C54238900F4AB82 /* NSImage+DrawingAdditions.swift */; };
@@ -134,6 +138,7 @@
 		A0F43D391C6A9A4B005ABB35 /* TVShows.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A06F88031AE6B92900CD66DC /* TVShows.xcdatamodeld */; };
 		A0F43D3A1C6A9A58005ABB35 /* TSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A0F43D1C1C6A96C7005ABB35 /* TSAppDelegate.m */; };
 		A0F43D3B1C6A9A62005ABB35 /* TVShowsUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = A0EF7F5B1AE9D20F0081188C /* TVShowsUtilities.m */; };
+		A0FA21D71CD7F73F00E0ED41 /* GridViewAddItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A0FA21D61CD7F73F00E0ED41 /* GridViewAddItemCell.m */; };
 		A0FC60841C55932500FD6044 /* GridViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0FC60831C55932500FD6044 /* GridViewController.m */; };
 		DAFB536FA931D36D07BBE652 /* Pods_TVShowsHelper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABF2F5AAB1A6625BCB9B29BF /* Pods_TVShowsHelper.framework */; };
 /* End PBXBuildFile section */
@@ -172,7 +177,6 @@
 		34163BAC133EEA7F007CDD87 /* ru */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = ru; path = Resources/ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		34163BAD133EEA84007CDD87 /* tr */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = tr; path = Resources/tr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		3422ECD3118B3C130061E2E2 /* AppInfoConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppInfoConstants.h; path = TVShows/AppInfoConstants.h; sourceTree = "<group>"; };
-		3424120C11DC023600BC0742 /* Growl Registration Ticket.growlRegDict */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = "Growl Registration Ticket.growlRegDict"; path = "Resources/Growl Registration Ticket.growlRegDict"; sourceTree = "<group>"; };
 		3424AF2111EF643A009C49DD /* ca */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = ca; path = Resources/ca.lproj/Localizable.strings; sourceTree = "<group>"; wrapsLines = 1; };
 		3424AF2211EF643C009C49DD /* da */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = da; path = Resources/da.lproj/Localizable.strings; sourceTree = "<group>"; };
 		3424AF2311EF6442009C49DD /* es */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = es; path = Resources/es.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -186,10 +190,9 @@
 		342FEC8411E1864000E21FC0 /* hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hd.png; sourceTree = "<group>"; };
 		34463CCE1331B424001453EB /* NSColor+BWAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSColor+BWAdditions.h"; path = "BWToolkit/NSColor+BWAdditions.h"; sourceTree = "<group>"; };
 		34463CCF1331B424001453EB /* NSColor+BWAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSColor+BWAdditions.m"; path = "BWToolkit/NSColor+BWAdditions.m"; sourceTree = "<group>"; };
-		34463CD61331BC3F001453EB /* CRViewSubclass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CRViewSubclass.h; path = ../TVShows/CRViewSubclass.h; sourceTree = "<group>"; };
-		34463CD71331BC40001453EB /* CRViewSubclass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CRViewSubclass.m; path = ../TVShows/CRViewSubclass.m; sourceTree = "<group>"; };
+		34463CD61331BC3F001453EB /* CRViewSubclass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRViewSubclass.h; sourceTree = "<group>"; };
+		34463CD71331BC40001453EB /* CRViewSubclass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRViewSubclass.m; sourceTree = "<group>"; };
 		3447183A9BB6C01A14888407 /* Pods-TVShows.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TVShows.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TVShows/Pods-TVShows.debug.xcconfig"; sourceTree = "<group>"; };
-		344971561330671700D24D68 /* Uninstaller.app */ = {isa = PBXFileReference; lastKnownFileType = wrapper.application; name = Uninstaller.app; path = Resources/Uninstaller.app; sourceTree = "<group>"; };
 		344A204011F5470B00026735 /* MBSliderButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBSliderButton.h; sourceTree = "<group>"; };
 		344A204111F5470B00026735 /* MBSliderButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBSliderButton.m; sourceTree = "<group>"; };
 		344A205811F5485900026735 /* Toggle-Knob.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Toggle-Knob.png"; sourceTree = "<group>"; };
@@ -197,9 +200,7 @@
 		344A637213330E960076FC2F /* LCLLogFileConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCLLogFileConfig.h; path = LCLLogFile/LCLLogFileConfig.h; sourceTree = "<group>"; };
 		345BE412119344E10016EA2D /* en */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = en; path = Resources/en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		346C5BDF11FF6056003830CC /* de */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = de; path = Resources/de.lproj/Localizable.strings; sourceTree = "<group>"; };
-		34785D04119B9CE200A28449 /* Credits.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = Credits.rtf; path = Resources/Credits.rtf; sourceTree = "<group>"; };
 		347FC7AB11F6AE1E00E5B353 /* it */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = it; path = Resources/it.lproj/Localizable.strings; sourceTree = "<group>"; };
-		34908BD0119B9C1C00BDFC01 /* SUPublicDSAKey.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = SUPublicDSAKey.pem; path = Resources/SUPublicDSAKey.pem; sourceTree = "<group>"; };
 		3493F1121335B0F800467073 /* LCLLogFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCLLogFile.h; path = LCLLogFile/LCLLogFile.h; sourceTree = "<group>"; };
 		3493F1131335B0F800467073 /* LCLLogFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LCLLogFile.m; path = LCLLogFile/LCLLogFile.m; sourceTree = "<group>"; };
 		349FEE031183590500D24FC9 /* TVShows-Beta-Large.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = "TVShows-Beta-Large.icns"; sourceTree = "<group>"; };
@@ -216,7 +217,6 @@
 		570CB2AF13B76233000A651F /* ro */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; lineEnding = 0; name = ro; path = Resources/ro.lproj/Localizable.strings; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.simpleColoring; };
 		57173C1D13FD49B300730FEF /* he */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; lineEnding = 0; name = he; path = Resources/he.lproj/Localizable.strings; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.simpleColoring; };
 		571C60E2139905320072D921 /* ribbon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ribbon.png; sourceTree = "<group>"; };
-		571D4F7613A914BA00EBD5EA /* oauthAutoConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = oauthAutoConfig.plist; path = Resources/oauthAutoConfig.plist; sourceTree = "<group>"; };
 		573210E914096F2D00497D44 /* ar */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = ar; path = Resources/ar.lproj/Localizable.strings; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.simpleColoring; };
 		574499A81825AFEB00F0481E /* TVShows-Menu-Icon-Black@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TVShows-Menu-Icon-Black@2x.png"; sourceTree = "<group>"; };
 		574499A91825AFEB00F0481E /* TVShows-Menu-Icon-White@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TVShows-Menu-Icon-White@2x.png"; sourceTree = "<group>"; };
@@ -272,9 +272,8 @@
 		A00468D01C56F94200732FB5 /* AboutWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutWindowController.xib; sourceTree = "<group>"; };
 		A00746FE1C80EFFF007BF1AA /* RARBGClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RARBGClient.h; path = Providers/RARBG/RARBGClient.h; sourceTree = "<group>"; };
 		A00746FF1C80EFFF007BF1AA /* RARBGClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RARBGClient.m; path = Providers/RARBG/RARBGClient.m; sourceTree = "<group>"; };
-		A00847C81AF5C0F900F5D2A3 /* SubscriptionWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubscriptionWindowController.h; sourceTree = "<group>"; };
-		A00847C91AF5C0F900F5D2A3 /* SubscriptionWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubscriptionWindowController.m; sourceTree = "<group>"; };
-		A00847CA1AF5C0F900F5D2A3 /* SubscriptionWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SubscriptionWindowController.xib; sourceTree = "<group>"; };
+		A01480621CCDB43F00B57CD2 /* MainWindowTitlebarBackgroundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainWindowTitlebarBackgroundView.swift; sourceTree = "<group>"; };
+		A01480641CCDC2F200B57CD2 /* GridViewAddItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridViewAddItem.swift; sourceTree = "<group>"; };
 		A01813CB1C2DDEB500C5B221 /* MetadataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MetadataViewController.h; sourceTree = "<group>"; };
 		A01813CC1C2DDEB500C5B221 /* MetadataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MetadataViewController.m; sourceTree = "<group>"; };
 		A01813CE1C2DE6B500C5B221 /* TVShows-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TVShows-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -367,8 +366,14 @@
 		A0CE35121CB2323E00581409 /* LaunchAgent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LaunchAgent.h; sourceTree = "<group>"; };
 		A0CE35131CB2323E00581409 /* LaunchAgent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaunchAgent.m; sourceTree = "<group>"; };
 		A0CE35151CB2327C00581409 /* ServiceManagement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ServiceManagement.framework; path = System/Library/Frameworks/ServiceManagement.framework; sourceTree = SDKROOT; };
+		A0D39DB51CD44D6D00277935 /* SubscriptionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubscriptionViewController.h; sourceTree = "<group>"; };
+		A0D39DB61CD44D6D00277935 /* SubscriptionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubscriptionViewController.m; sourceTree = "<group>"; };
 		A0DD957C1CB616470016CF50 /* AdvancedPreferencesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdvancedPreferencesViewController.h; sourceTree = "<group>"; };
 		A0DD957D1CB616470016CF50 /* AdvancedPreferencesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdvancedPreferencesViewController.m; sourceTree = "<group>"; };
+		A0E02F711CD81003008BFAC2 /* GridViewSubscriptionItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GridViewSubscriptionItemCell.h; sourceTree = "<group>"; };
+		A0E02F721CD81003008BFAC2 /* GridViewSubscriptionItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GridViewSubscriptionItemCell.m; sourceTree = "<group>"; };
+		A0E02F741CD81828008BFAC2 /* GridViewCellIndicationLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GridViewCellIndicationLayer.h; sourceTree = "<group>"; };
+		A0E02F751CD81828008BFAC2 /* GridViewCellIndicationLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GridViewCellIndicationLayer.m; sourceTree = "<group>"; };
 		A0E4341D1B1AA1D7000AF57C /* NSManagedObject+Attributes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSManagedObject+Attributes.h"; path = "TVShows/Extensions/NSManagedObject+Attributes.h"; sourceTree = SOURCE_ROOT; };
 		A0E4341E1B1AA1D7000AF57C /* NSManagedObject+Attributes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSManagedObject+Attributes.m"; path = "TVShows/Extensions/NSManagedObject+Attributes.m"; sourceTree = SOURCE_ROOT; };
 		A0EE12121C54238900F4AB82 /* NSColor+OEAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSColor+OEAdditions.h"; sourceTree = "<group>"; };
@@ -424,6 +429,8 @@
 		A0F43D2F1C6A99F3005ABB35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A0F43D3D1C6A9C3E005ABB35 /* TVShowsHelper_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TVShowsHelper_Prefix.pch; sourceTree = SOURCE_ROOT; };
 		A0F43D3E1C6A9C80005ABB35 /* TVShowsHelper-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TVShowsHelper-Bridging-Header.h"; sourceTree = "<group>"; };
+		A0FA21D51CD7F73F00E0ED41 /* GridViewAddItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GridViewAddItemCell.h; sourceTree = "<group>"; };
+		A0FA21D61CD7F73F00E0ED41 /* GridViewAddItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GridViewAddItemCell.m; sourceTree = "<group>"; };
 		A0FC60821C55932500FD6044 /* GridViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GridViewController.h; sourceTree = "<group>"; };
 		A0FC60831C55932500FD6044 /* GridViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GridViewController.m; sourceTree = "<group>"; };
 		ABF2F5AAB1A6625BCB9B29BF /* Pods_TVShowsHelper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TVShowsHelper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -477,11 +484,6 @@
 			children = (
 				349FEE021183590500D24FC9 /* Images */,
 				34EA89D411E64370005C031A /* Localizations */,
-				571D4F7613A914BA00EBD5EA /* oauthAutoConfig.plist */,
-				344971561330671700D24D68 /* Uninstaller.app */,
-				34785D04119B9CE200A28449 /* Credits.rtf */,
-				3424120C11DC023600BC0742 /* Growl Registration Ticket.growlRegDict */,
-				34908BD0119B9C1C00BDFC01 /* SUPublicDSAKey.pem */,
 				34A8FF9C1187C17000DDD3DE /* LICENSE.txt */,
 				575C0D58136A487A005DE73D /* VERSION */,
 				A084A6331CB0BBFF00DB3790 /* Acknowledgments.rtf */,
@@ -518,15 +520,6 @@
 			name = BWToolkit;
 			path = Vendor;
 			sourceTree = SOURCE_ROOT;
-		};
-		3444F29011DD13F700BF3724 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				34463CD61331BC3F001453EB /* CRViewSubclass.h */,
-				34463CD71331BC40001453EB /* CRViewSubclass.m */,
-			);
-			name = Views;
-			sourceTree = "<group>";
 		};
 		344A203F11F5470B00026735 /* MBSliderButton */ = {
 			isa = PBXGroup;
@@ -722,7 +715,6 @@
 				A0CE35121CB2323E00581409 /* LaunchAgent.h */,
 				A0CE35131CB2323E00581409 /* LaunchAgent.m */,
 				A0EE124E1C54270B00F4AB82 /* MainWindow */,
-				A0AE546F1AEC461400D2C37B /* Subscription */,
 				A00468C81C56E65B00732FB5 /* Preferences Window */,
 				A00468D31C56F94600732FB5 /* About Window */,
 				A0432F201AD9649600C19189 /* Supporting Files */,
@@ -780,6 +772,16 @@
 				A0C190201B4081A90020ACD9 /* NSString+Extensions.m */,
 			);
 			name = Extensions;
+			sourceTree = "<group>";
+		};
+		A090AD341CCDA9BB003D4AD7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A01480621CCDB43F00B57CD2 /* MainWindowTitlebarBackgroundView.swift */,
+				34463CD61331BC3F001453EB /* CRViewSubclass.h */,
+				34463CD71331BC40001453EB /* CRViewSubclass.m */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 		A0A9DAA71C97BC0300C9299F /* TheTVDB */ = {
@@ -845,21 +847,6 @@
 			name = Networking;
 			sourceTree = "<group>";
 		};
-		A0AE546F1AEC461400D2C37B /* Subscription */ = {
-			isa = PBXGroup;
-			children = (
-				A00847C81AF5C0F900F5D2A3 /* SubscriptionWindowController.h */,
-				A00847C91AF5C0F900F5D2A3 /* SubscriptionWindowController.m */,
-				A00847CA1AF5C0F900F5D2A3 /* SubscriptionWindowController.xib */,
-				A01813CB1C2DDEB500C5B221 /* MetadataViewController.h */,
-				A01813CC1C2DDEB500C5B221 /* MetadataViewController.m */,
-				A0A8763B1CB8A7D900D479B5 /* EpisodesViewController.h */,
-				A0A8763C1CB8A7D900D479B5 /* EpisodesViewController.m */,
-				3444F29011DD13F700BF3724 /* Views */,
-			);
-			name = Subscription;
-			sourceTree = "<group>";
-		};
 		A0B918E71C86A637005A4527 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -878,6 +865,19 @@
 				A05A9C301C583BD600FBEF9A /* Extenstions */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		A0D39DB41CD44D5400277935 /* Subscription */ = {
+			isa = PBXGroup;
+			children = (
+				A0D39DB51CD44D6D00277935 /* SubscriptionViewController.h */,
+				A0D39DB61CD44D6D00277935 /* SubscriptionViewController.m */,
+				A01813CB1C2DDEB500C5B221 /* MetadataViewController.h */,
+				A01813CC1C2DDEB500C5B221 /* MetadataViewController.m */,
+				A0A8763B1CB8A7D900D479B5 /* EpisodesViewController.h */,
+				A0A8763C1CB8A7D900D479B5 /* EpisodesViewController.m */,
+			);
+			name = Subscription;
 			sourceTree = "<group>";
 		};
 		A0DD957F1CB6170F0016CF50 /* Preferences View Controllers */ = {
@@ -971,6 +971,9 @@
 				A07A51F61C543DCF00D40063 /* MainWindowController.m */,
 				A0FC60821C55932500FD6044 /* GridViewController.h */,
 				A0FC60831C55932500FD6044 /* GridViewController.m */,
+				A0D39DB41CD44D5400277935 /* Subscription */,
+				A0FA21D41CD7F70500E0ED41 /* GridView */,
+				A090AD341CCDA9BB003D4AD7 /* View */,
 			);
 			name = MainWindow;
 			sourceTree = "<group>";
@@ -1014,6 +1017,20 @@
 				A06D07F61CAB8628001E9511 /* RARBGTorrent.m */,
 			);
 			name = RARBG;
+			sourceTree = "<group>";
+		};
+		A0FA21D41CD7F70500E0ED41 /* GridView */ = {
+			isa = PBXGroup;
+			children = (
+				A01480641CCDC2F200B57CD2 /* GridViewAddItem.swift */,
+				A0FA21D51CD7F73F00E0ED41 /* GridViewAddItemCell.h */,
+				A0FA21D61CD7F73F00E0ED41 /* GridViewAddItemCell.m */,
+				A0E02F711CD81003008BFAC2 /* GridViewSubscriptionItemCell.h */,
+				A0E02F721CD81003008BFAC2 /* GridViewSubscriptionItemCell.m */,
+				A0E02F741CD81828008BFAC2 /* GridViewCellIndicationLayer.h */,
+				A0E02F751CD81828008BFAC2 /* GridViewCellIndicationLayer.m */,
+			);
+			name = GridView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1148,8 +1165,8 @@
 				A00468D21C56F94200732FB5 /* AboutWindowController.xib in Resources */,
 				A00B46211AEC7F1B0022BDBF /* posterArtPlaceholder.jpg in Resources */,
 				A0AA85B41CAFA9C400A1388C /* LICENSE.txt in Resources */,
+				A06D26DF1CCDC96B006A0672 /* arrow-this.png in Resources */,
 				A00468CA1C56E69500732FB5 /* Preferences.storyboard in Resources */,
-				A00847CC1AF5C0F900F5D2A3 /* SubscriptionWindowController.xib in Resources */,
 				A084A6341CB0BBFF00DB3790 /* Acknowledgments.rtf in Resources */,
 				A0432F2B1AD9649600C19189 /* MainMenu.xib in Resources */,
 			);
@@ -1286,8 +1303,10 @@
 				A05A9C381C583BD600FBEF9A /* _Serie.m in Sources */,
 				A0EE124A1C54238900F4AB82 /* OEThemeGradient.m in Sources */,
 				A0432F261AD9649600C19189 /* main.m in Sources */,
+				A0D39DB71CD44D6D00277935 /* SubscriptionViewController.m in Sources */,
 				A0A9DAC31C97BC1500C9299F /* MTLModel+JSONAdapter.m in Sources */,
 				A0F43D1D1C6A96C7005ABB35 /* TSAppDelegate.m in Sources */,
+				A01480631CCDB43F00B57CD2 /* MainWindowTitlebarBackgroundView.swift in Sources */,
 				A0A9DACD1C97BC1500C9299F /* TVDBEpisodesOperation.m in Sources */,
 				A0DD957E1CB616470016CF50 /* AdvancedPreferencesViewController.m in Sources */,
 				A0EE12481C54238900F4AB82 /* OETheme.m in Sources */,
@@ -1297,6 +1316,7 @@
 				A0EE12411C54238900F4AB82 /* OEBackgroundNoisePattern.m in Sources */,
 				A084A6411CB0DF7000DB3790 /* GeneralPreferencesViewController.m in Sources */,
 				A0CE35141CB2323E00581409 /* LaunchAgent.m in Sources */,
+				A01480651CCDC2F200B57CD2 /* GridViewAddItem.swift in Sources */,
 				A0FC60841C55932500FD6044 /* GridViewController.m in Sources */,
 				A07A51F71C543DCF00D40063 /* MainWindowController.m in Sources */,
 				A0EE124C1C54238900F4AB82 /* OEThemeObject.m in Sources */,
@@ -1306,6 +1326,7 @@
 				A05A9C3D1C583BD600FBEF9A /* Subscription.m in Sources */,
 				A0EF7F5E1AE9DB440081188C /* TVShowsUtilities.m in Sources */,
 				A00B46241AEC7FA30022BDBF /* CRViewSubclass.m in Sources */,
+				A0FA21D71CD7F73F00E0ED41 /* GridViewAddItemCell.m in Sources */,
 				A06F87711AE6904700CD66DC /* OEUtilities.m in Sources */,
 				A0EE123F1C54238900F4AB82 /* NSImage+DrawingAdditions.swift in Sources */,
 				A0A9DAD91C97BC1500C9299F /* TVDBSeriesOperation.m in Sources */,
@@ -1326,15 +1347,16 @@
 				A0A9DAD31C97BC1500C9299F /* TVDBRequestOperation.m in Sources */,
 				A084A6441CB0E01600DB3790 /* PreferencesTabViewController.m in Sources */,
 				A0EE124B1C54238900F4AB82 /* OEThemeImage.m in Sources */,
-				A00847CB1AF5C0F900F5D2A3 /* SubscriptionWindowController.m in Sources */,
 				A0C190211B4081A90020ACD9 /* NSString+Extensions.m in Sources */,
 				A05A9C391C583BD600FBEF9A /* _Subscription.m in Sources */,
 				A09521EA1AF6BDD4005AC0EF /* TVShows.xcdatamodeld in Sources */,
 				A0A9DAD71C97BC1500C9299F /* TVDBSerie.m in Sources */,
 				A0EE12471C54238900F4AB82 /* OEGridViewFieldEditor.m in Sources */,
 				A02F69431CB4BAC100AE9236 /* TorrentPreferencesViewController.m in Sources */,
+				A0E02F761CD81828008BFAC2 /* GridViewCellIndicationLayer.m in Sources */,
 				A0A9DAC51C97BC1500C9299F /* NSMutableURLRequestToken.m in Sources */,
 				A05A9C371C583BD600FBEF9A /* _Episode.m in Sources */,
+				A0E02F731CD81003008BFAC2 /* GridViewSubscriptionItemCell.m in Sources */,
 				A05A9C3A1C583BD600FBEF9A /* Episode.m in Sources */,
 				A01813CD1C2DDEB500C5B221 /* MetadataViewController.m in Sources */,
 				A0E4341F1B1AA1D7000AF57C /* NSManagedObject+Attributes.m in Sources */,
@@ -1661,8 +1683,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.TVShows.Helper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "TVShowsHelper/TVShowsHelper-Bridging-Header.h";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -1702,7 +1722,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.TVShows.Helper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "TVShowsHelper/TVShowsHelper-Bridging-Header.h";
 			};
 			name = Release;
 		};

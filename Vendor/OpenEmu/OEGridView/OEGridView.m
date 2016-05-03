@@ -31,6 +31,7 @@
 #import "OEThemeTextAttributes.h"
 
 #import "OEGridGameCell.h"
+#import "OEGridMediaItemCell.h"
 #import "OEGridViewFieldEditor.h"
 #import "OECoverGridDataSourceItem.h"
 
@@ -42,6 +43,8 @@
 #import "IKRenderer.h"
 #import "IKImageBrowserLayoutManager.h"
 #import "IKImageBrowserGridGroup.h"
+
+#import "GridViewAddItemCell.h"
 
 #pragma mark -
 NSSize const defaultGridSize = (NSSize){26+142, 143};
@@ -121,10 +124,10 @@ static IKImageWrapper *lightingImage;
     {
         [self setGroupThemeKey:@"grid_group"];
     }
-
-    [self registerForDraggedTypes:[NSArray arrayWithObjects:NSFilenamesPboardType, NSPasteboardTypePNG, NSPasteboardTypeTIFF, nil]];
+    
+    //[self registerForDraggedTypes:[NSArray arrayWithObjects:NSFilenamesPboardType, NSPasteboardTypePNG, NSPasteboardTypeTIFF, nil]];
     [self setAllowsReordering:NO];
-    [self setAllowsDroppingOnItems:YES];
+    //[self setAllowsDroppingOnItems:YES];
     [self setAnimates:NO];
 
     [self setClipsToBounds:NO];
@@ -160,7 +163,10 @@ static IKImageWrapper *lightingImage;
 #pragma mark - Cells
 - (IKImageBrowserCell *)newCellForRepresentedItem:(id) cell
 {
-    return [[[self cellClass] alloc] init];
+    if ([cell isKindOfClass:[GridViewAddItem class]])
+        return [[GridViewAddItemCell alloc] init];
+    else
+        return [[[self cellClass] alloc] init];
 }
 
 #pragma mark -
@@ -389,9 +395,7 @@ static IKImageWrapper *lightingImage;
         // If there are items being dragged, start a dragging session
         if([draggingItems count] > 0)
         {
-            _draggingSession = [self beginDraggingSessionWithItems:draggingItems event:theEvent source:self];
-            [_draggingSession setDraggingLeaderIndex:_draggingIndex];
-            [_draggingSession setDraggingFormation:NSDraggingFormationStack];
+            return;
         }
 
         _draggingIndex = NSNotFound;
@@ -453,7 +457,10 @@ static IKImageWrapper *lightingImage;
             break;
             
         case kVK_Return:
-            [self beginEditingWithSelectedItem:self];
+            if ([[self delegate] respondsToSelector:@selector(imageBrowser:cellWasDoubleClickedAtIndex:)]) {
+                NSUInteger selectedIndex = [[self selectionIndexes] firstIndex];
+                [[self delegate] imageBrowser:self cellWasDoubleClickedAtIndex:selectedIndex];
+            }
             break;
             
         default:
@@ -464,49 +471,25 @@ static IKImageWrapper *lightingImage;
 
 - (NSMenu *)menuForEvent:(NSEvent *)theEvent
 {
-    /*
     [[self window] makeFirstResponder:self];
-
+    
     NSPoint mouseLocationInWindow = [theEvent locationInWindow];
     NSPoint mouseLocationInView = [self convertPoint:mouseLocationInWindow fromView:nil];
-
+    
     NSInteger index = [self indexOfItemAtPoint:mouseLocationInView];
     if(index != NSNotFound && [[self dataSource] respondsToSelector:@selector(gridView:menuForItemsAtIndexes:)])
     {
-        BOOL            itemIsSelected      = [[self cellForItemAtIndex:index] isSelected];
-        NSIndexSet     *indexes             = itemIsSelected ? [self selectionIndexes] : [NSIndexSet indexSetWithIndex:index];
-
-        if(!itemIsSelected)
+        BOOL itemIsSelected = [[self cellForItemAtIndex:index] isSelected];
+        NSIndexSet *indexes = itemIsSelected ? [self selectionIndexes] : [NSIndexSet indexSetWithIndex:index];
+        
+        if (!itemIsSelected)
             [self setSelectionIndexes:indexes byExtendingSelection:NO];
-
+        
         NSMenu *contextMenu = [(id <OEGridViewMenuSource>)[self dataSource] gridView:self menuForItemsAtIndexes:indexes];
-        if(!contextMenu) return nil;
-
-        OEMenuStyle     style      = ([[NSUserDefaults standardUserDefaults] boolForKey:OEMenuOptionsStyleKey] ? OEMenuStyleLight : OEMenuStyleDark);
-        IKImageBrowserCell *itemCell   = [self cellForItemAtIndex:index];
-
-        NSRect          hitRect             = NSInsetRect([itemCell imageFrame], 5, 5);
-        //NSRect          hitRectOnView       = [itemCell convertRect:hitRect toLayer:self.layer];
-        NSRect          hitRectOnWindow     = [self convertRect:hitRect toView:nil];
-        NSRect          visibleRectOnWindow = [self convertRect:[self visibleRect] toView:nil];
-        NSRect          visibleItemRect     = NSIntersectionRect(hitRectOnWindow, visibleRectOnWindow);
-
-        // we enhance the calculated rect to get a visible gap between the item and the menu
-        NSRect enhancedVisibleItemRect = NSInsetRect(visibleItemRect, -3, -3);
-
-        const NSRect  targetRect = [[self window] convertRectToScreen:enhancedVisibleItemRect];
-        NSDictionary *options    = [NSDictionary dictionaryWithObjectsAndKeys:
-                                    [NSNumber numberWithUnsignedInteger:style], OEMenuOptionsStyleKey,
-                                    [NSNumber numberWithUnsignedInteger:OEMinXEdge], OEMenuOptionsArrowEdgeKey,
-                                    [NSValue valueWithRect:targetRect], OEMenuOptionsScreenRectKey,
-                                    nil];
-
-        // Display the menu
-        [[self window] makeFirstResponder:self];
-        [OEMenu openMenu:contextMenu withEvent:theEvent forView:self options:options];
-        return nil;
-     }
-     */
+        if (!contextMenu) return nil;
+        
+        return contextMenu;
+    }
     
     return [super menuForEvent:theEvent];
 }
@@ -514,7 +497,7 @@ static IKImageWrapper *lightingImage;
 #pragma mark - NSDraggingSource
 - (NSDragOperation)draggingSession:(NSDraggingSession *)session sourceOperationMaskForDraggingContext:(NSDraggingContext)context
 {
-    return NSDragOperationCopy;
+    return NSDragOperationNone;
 }
 
 - (void)draggingSession:(NSDraggingSession *)session endedAtPoint:(NSPoint)screenPoint operation:(NSDragOperation)operation
@@ -621,7 +604,7 @@ static IKImageWrapper *lightingImage;
 {
     if([[self selectionIndexes] count] != 1)
     {
-        //DLog(@"I can only rename a single game, sir.");
+        DDLogInfo(@"I can only rename a single game, sir.");
         return;
     }
 

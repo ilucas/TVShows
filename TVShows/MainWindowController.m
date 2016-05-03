@@ -1,20 +1,17 @@
-//
-//  MainWindowController.m
-//  TVShows
-//
-//  Created by Lucas casteletti on 1/23/16.
-//  Copyright © 2016 Lucas Casteletti. All rights reserved.
-//
+/*
+ *  This file is part of the TVShows source code.
+ *
+ *  TVShows is free software: you can redistribute it and/or modify
+ *  it under the terms of the GNU General Public License as published by
+ *  the Free Software Foundation, either version 3 of the License, or
+ *  (at your option) any later version.
+ *
+ *  You should have received a copy of the GNU General Public License
+ *  along with TVShows. If not, see <http://www.gnu.org/licenses/>.
+ */
 
 #import "MainWindowController.h"
-#import "SubscriptionWindowController.h"
 #import "GridViewController.h"
-
-@interface MainWindowController ()
-
-@property (nonatomic, strong) SubscriptionWindowController *subscriptionWindow;
-
-@end
 
 @implementation MainWindowController
 
@@ -23,8 +20,6 @@
 - (void)windowDidLoad {
     [super windowDidLoad];
     [self setUpWindow];
-    
-    self.subscriptionWindow = [[SubscriptionWindowController alloc] init];
 }
 
 #pragma mark - Override
@@ -36,41 +31,34 @@
 #pragma mark - NSWindowDelegate
 
 - (void)windowWillClose:(NSNotification *)notification {
-    
+
 }
 
-// Notifies the delegate that the window is about to open a sheet.
-- (void)windowWillBeginSheet:(NSNotification *)notification {
-
+- (NSRect)window:(NSWindow *)window willPositionSheet:(NSWindow *)sheet usingRect:(NSRect)rect {
+    rect.origin.y -= 37;
+    return rect;
 }
 
 // Tells the delegate that the window has closed a sheet.
 - (void)windowDidEndSheet:(NSNotification *)notification {
-    GridViewController __weak *gridView = (GridViewController *)[self contentViewController];
+    GridViewController *gridView = (GridViewController *)[self contentViewController];
     [gridView reloadData];
 }
 
-#pragma mark - IBAction
-
-- (IBAction)addAction:(id)sender {
-    [self.window beginSheet:self.subscriptionWindow.window completionHandler:nil];
-}
-
-#pragma mark - Private
-
 - (void)setUpWindow {
+    self.window.appearance = [NSAppearance appearanceNamed:NSAppearanceNameVibrantDark];
     self.window.titleVisibility = NSWindowTitleHidden;
+    self.window.titlebarAppearsTransparent  = YES;
+    self.window.movableByWindowBackground = YES;
+    self.window.styleMask |= NSFullSizeContentViewWindowMask;
+    
+    [self.window center];
     
     NSRect frame = self.window.frame;
-    frame.size.width = 700;
-    frame.size.height = 500;
+    frame.size.width = 900;
+    frame.size.height = 700;
     
     [self.window setFrame:frame display:NO];
-    
-//    self.window.titlebarAppearsTransparent  = YES;
-//    self.window.movableByWindowBackground = YES;
-//    self.window.backgroundColor = [NSColor colorWithCalibratedWhite:0.11 alpha:1.0];
-//    self.window.styleMask |= NSFullSizeContentViewWindowMask;
 }
 
 @end

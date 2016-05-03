@@ -46,10 +46,17 @@
     
     [[NSUserNotificationCenter defaultUserNotificationCenter] setDelegate:self];
     
-    [[NSDistributedNotificationCenter defaultCenter] addObserver:self
-                                                        selector:@selector(reloadTimer:)
-                                                            name:@"TSDelayChangedNotification"
-                                                          object:nil];
+    NSDistributedNotificationCenter *distributedCenter = [NSDistributedNotificationCenter defaultCenter];
+    
+    [distributedCenter addObserver:self
+                          selector:@selector(reloadTimer:)
+                              name:@"TVShows.Notification.DelayChanged"
+                            object:nil];
+    
+    [distributedCenter addObserver:self
+                          selector:@selector(checkShow:)
+                              name:@"TVShows.Notification.CheckNewEpisodes"
+                            object:nil];
     
     [[[NSWorkspace sharedWorkspace] notificationCenter] addObserver:self
                                                            selector:@selector(reloadTimer:)
@@ -105,6 +112,33 @@
     }
     
     [[self sharedUserDefaults] setObject:[NSDate date] forKey:@"lastCheckedForEpisodes"];
+}
+
+- (void)checkShow:(NSNotification *)notification {
+    NSArray<NSNumber *> *seriesID = notification.userInfo[@"serieID"];
+    
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"serie.serieID IN %@", seriesID];
+    NSArray *result = [Subscription findAllWithPredicate:predicate inContext:self.managedObjectContext];
+    
+    NSUserNotificationCenter *userNotificationCenter = [NSUserNotificationCenter defaultUserNotificationCenter];
+    
+    @autoreleasepool {
+        [result enumerateObjectsUsingBlock:^(Subscription *subscription, NSUInteger idx, BOOL *stop) {
+            SubscriptionManager *sm = [[SubscriptionManager alloc] initWithManagedObjectContext:self.managedObjectContext];
+            [sm checkSubscription:subscription];
+            
+            Serie *serie = subscription.serie;
+            
+            DDLogInfo(@"Checking for new episodes: %@ (%@)", serie.name, serie.serieID);
+            
+            NSUserNotification *notification = [NSUserNotification new];
+            notification.title = serie.name;
+            notification.subtitle = @"Checking for new episodes...";
+            notification.identifier = [@"TVShows.Helper.notification.checkShow." stringByAppendingString:serie.serieID.stringValue];
+            
+            [userNotificationCenter deliverNotification:notification];
+        }];
+    }
 }
 
 - (NSTimeInterval)userDelay {

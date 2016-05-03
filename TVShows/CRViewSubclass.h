@@ -12,24 +12,16 @@
  *
  */
 
-#import <Cocoa/Cocoa.h>
+@import Cocoa;
 
-
+IB_DESIGNABLE
 @interface CRViewSubclass : NSView
-{
-    NSColor *startingColor;
-    NSColor *endingColor;
-    int angle;
-    
-    NSColor *topBorderColor;
-    NSColor *bottomBorderColor;
-}
 
-@property (nonatomic, retain) NSColor *startingColor;
-@property (nonatomic, retain) NSColor *endingColor;
-@property (assign) int angle;
+@property (nonatomic, strong) NSColor *startingColor;
+@property (nonatomic, strong) NSColor *endingColor;
+@property (assign) CGFloat angle;
 
-@property (nonatomic, retain) NSColor *topBorderColor;
-@property (nonatomic, retain) NSColor *bottomBorderColor;
+@property (nonatomic, strong) NSColor *topBorderColor;
+@property (nonatomic, strong) NSColor *bottomBorderColor;
 
 @end

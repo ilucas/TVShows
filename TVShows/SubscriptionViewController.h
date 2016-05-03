@@ -19,7 +19,7 @@
 @class MetadataViewController;
 @class EpisodesViewController;
 
-@interface SubscriptionWindowController : NSWindowController <NSWindowDelegate, NSTableViewDelegate, NSTableViewDataSource>
+@interface SubscriptionViewController : NSViewController <NSTableViewDelegate, NSTableViewDataSource>
 
 #pragma mark - Show info
 @property (weak) IBOutlet MetadataViewController *metadataViewController;

@@ -12,13 +12,12 @@
 
 @import Cocoa;
 @import Quartz;
+@import CoreGraphics;
 
-#import "OEGridView.h"
+#import "OEGridCell.h"
 
-@interface GridViewController : NSViewController <OEGridViewMenuSource>
+@interface GridViewAddItemCell : OEGridCell
 
-@property (weak) IBOutlet OEGridView *gridView;
 
-- (void)reloadData;
 
 @end

@@ -10,15 +10,18 @@
  *  along with TVShows. If not, see <http://www.gnu.org/licenses/>.
  */
 
-@import Cocoa;
-@import Quartz;
+import Cocoa
 
-#import "OEGridView.h"
-
-@interface GridViewController : NSViewController <OEGridViewMenuSource>
-
-@property (weak) IBOutlet OEGridView *gridView;
-
-- (void)reloadData;
-
-@end
+@IBDesignable
+class MainWindowTitlebarBackgroundView: NSView {
+    
+    let gradientColor = NSColor(deviceWhite: 0.15, alpha: 1.0)
+    let gradientColor2 = NSColor(deviceWhite: 0.20, alpha: 1.0)
+    
+    override func drawRect(dirtyRect: NSRect) {
+        let gradient = NSGradient(startingColor: gradientColor, endingColor: gradientColor2)
+        
+        gradient?.drawInRect(self.bounds, angle: 90.0)
+    }
+    
+}
