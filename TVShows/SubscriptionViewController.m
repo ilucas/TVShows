@@ -226,6 +226,10 @@
 
     self.showList = [NSMutableArray array];
     self.managedObjectContext = [NSManagedObjectContext defaultContext];
+    
+    if (![[TVDBManager manager] token]) {
+        [[TVDBManager manager] requestToken];
+    }
 }
 
 @end

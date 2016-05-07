@@ -13,7 +13,7 @@
 #import "SubscriptionDataSource.h"
 #import "Serie.h"
 
-#import "OEGridViewCellIndicationLayer.h"
+#import "GridViewCellIndicationLayer.h"
 
 @import Quartz;
 @import MagicalRecord;
@@ -57,7 +57,7 @@
 }
 
 - (NSInteger)gridStatus {
-    return self.isEnabledValue ? OEGridViewCellIndicationTypeNone : OEGridViewCellIndicationTypeDropOn;
+    return self.isEnabledValue ? GridViewCellIndicationTypeNone : GridViewCellIndicationTypeDisabled;
 }
 
 - (NSUInteger)gridRating {

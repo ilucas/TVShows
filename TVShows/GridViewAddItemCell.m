@@ -78,27 +78,23 @@ static NSDictionary *disabledActions;
     return [self imageFrame];
 }
 
-- (NSRect)OE_relativeFrameFromFrame:(NSRect)rect
-{
+- (NSRect)relativeFrameFromFrame:(NSRect)rect {
     NSRect frame = [self frame];
     frame = NSMakeRect(rect.origin.x - frame.origin.x, rect.origin.y - frame.origin.y, rect.size.width, rect.size.height);
     
     return NSIntegralRectWithOptions(frame, NSAlignAllEdgesOutward);
 }
 
-- (NSRect)relativeImageFrame
-{
-    return [self OE_relativeFrameFromFrame:[self imageFrame]];
+- (NSRect)relativeImageFrame {
+    return [self relativeFrameFromFrame:[self imageFrame]];
 }
 
-- (NSRect)relativeTitleFrame
-{
-    return [self OE_relativeFrameFromFrame:[self titleFrame]];
+- (NSRect)relativeTitleFrame {
+    return [self relativeFrameFromFrame:[self titleFrame]];
 }
 
-- (NSRect)relativeSubtitleFrame
-{
-    return [self OE_relativeFrameFromFrame:[self subtitleFrame]];
+- (NSRect)relativeSubtitleFrame {
+    return [self relativeFrameFromFrame:[self subtitleFrame]];
 }
 
 #pragma mark - Layers & Images

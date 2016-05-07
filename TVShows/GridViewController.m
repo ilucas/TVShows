@@ -13,7 +13,8 @@
 #import "GridViewController.h"
 
 #import "OEGridView.h"
-#import "OEGridGameCell.h"
+//#import "OEGridGameCell.h"
+#import "GridViewSubscriptionItemCell.h"
 
 #import "Serie.h"
 #import "Subscription.h"
@@ -215,7 +216,7 @@
     [gridView setAllowsReordering:NO];
     [gridView setAnimates:YES];
     [gridView setDraggingDestinationDelegate:nil];
-    [gridView setCellClass:[OEGridGameCell class]];
+    [gridView setCellClass:[GridViewSubscriptionItemCell class]];
     [gridView setCellSize:defaultGridSize];
     [gridView reloadData];
 }
