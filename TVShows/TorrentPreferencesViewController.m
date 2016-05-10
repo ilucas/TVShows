@@ -22,7 +22,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.defaults = [[[NSApplication sharedApplication] delegate] sharedUserDefaults];
+    self.defaults = [[NSApp delegate] sharedUserDefaults];
     
     [self.torrentClient setMenu:[self torrentClientsMenu]];
 }

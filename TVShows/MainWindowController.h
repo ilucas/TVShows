@@ -16,4 +16,6 @@
 
 @property (weak) IBOutlet NSToolbar *toolBar;
 
+- (IBAction)helperAlert:(id)sender;
+
 @end

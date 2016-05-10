@@ -16,7 +16,7 @@
 @implementation TorrentClient
 
 + (BOOL)openTorrent:(NSString *)magnet {
-    NSUserDefaults *defaults = [[[NSApplication sharedApplication] delegate] sharedUserDefaults];
+    NSUserDefaults *defaults = [[NSApp delegate] sharedUserDefaults];
     NSString *identifier = [defaults objectForKey:@"torrentClient"][@"identifier"] ?: nil;
     
     return [[NSWorkspace sharedWorkspace] openURLs:@[[NSURL URLWithString:magnet]]

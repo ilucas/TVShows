@@ -14,6 +14,8 @@
 #import "RARBGTorrent.h"
 
 @import Mantle;
+@import libextobjc;
+@import CocoaLumberjack;
 
 @interface RARBGSearchOperation ()
 

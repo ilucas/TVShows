@@ -12,6 +12,8 @@
 
 #import "MainWindowController.h"
 #import "GridViewController.h"
+#import "AppDelegate.h"
+#import "LaunchAgent.h"
 
 @implementation MainWindowController
 
@@ -28,10 +30,29 @@
     [super showWindow:sender];
 }
 
+#pragma mark - Action
+
+- (void)helperAlert:(id)sender {
+    //NSAlert *alert = [[NSAlert alloc] init];
+    
+//    [alert beginSheetModalForWindow:self.window completionHandler:^(NSModalResponse returnCode) {
+//    }];
+}
+
 #pragma mark - NSWindowDelegate
 
-- (void)windowWillClose:(NSNotification *)notification {
+- (void)windowDidBecomeKey:(NSNotification *)notification {
+//    if (![LaunchAgent loginItemIsEnabled]) {
+//        if (self.toolBar.items.count < 3)
+//            [self.toolBar insertItemWithItemIdentifier:@"HelperToolbarItem" atIndex:2];
+//    } else if (self.toolBar.items.count > 2) {
+//        [self.toolBar removeItemAtIndex:2];
+//    }
+}
 
+- (NSSize)window:(NSWindow *)window willUseFullScreenContentSize:(NSSize)size {
+    //size.height -= 77;
+    return size;
 }
 
 - (NSRect)window:(NSWindow *)window willPositionSheet:(NSWindow *)sheet usingRect:(NSRect)rect {

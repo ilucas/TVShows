@@ -11,6 +11,8 @@
  */
 
 @import AFNetworkActivityLogger;
+@import CocoaLumberjack;
+@import MagicalRecord;
 @import LetsMove;
 
 #import "AppDelegate.h"
@@ -18,17 +20,13 @@
 
 @interface AppDelegate ()
 
-@property (strong) MainWindowController *mainWindowController;
-@property (nonatomic, strong) NSWindowController *preferencesWindowController;
-@property (nonatomic, strong) AboutWindowController *aboutWindowController;
+@property (weak) NSWindow *mainWindow;
 
 @end
 
 @implementation AppDelegate
 
-#pragma mark - NSApplicationDelegate
-
-- (void)applicationWillFinishLaunching:(NSNotification *)notification {
+- (void)awakeFromNib {
     // Log
     [self setupLogging];
     
@@ -37,18 +35,18 @@
     
     // Cache
     [self setupCache];
-    
+}
+
+#pragma mark - NSApplicationDelegate
+
+- (void)applicationWillFinishLaunching:(NSNotification *)notification {
     // Let's Move
     PFMoveToApplicationsFolderIfNecessary();
-    
-    // Main Window init
-    NSStoryboard *storyBoard = [NSStoryboard storyboardWithName:@"Main" bundle:nil];
-    self.mainWindowController = [storyBoard instantiateInitialController];
 }
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
-    [self.mainWindowController.window center];
-    [self.mainWindowController showWindow:self];
+    // Keep a reference to the main application window
+    self.mainWindow = NSApp.windows.lastObject;
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
@@ -56,44 +54,62 @@
 }
 
 - (BOOL)applicationShouldHandleReopen:(NSApplication *)sender hasVisibleWindows:(BOOL)hasVisibleWindows {
-    
     if (hasVisibleWindows) {
         // some window may not be visible, so let NSApplication do his thing.
         return true;
     }
     
     // If there's no window visible, show the main window.
-    [self.mainWindowController showWindow:sender];
+    [self.mainWindow makeKeyAndOrderFront:self];
     
     return false;
 }
 
-#pragma mark - Actions
+//TODO: move constants things to here.
 
-- (IBAction)showAboutWindow:(id)sender {
-    if (!self.aboutWindowController) {
-        self.aboutWindowController = [[AboutWindowController alloc] initWithWindowNibName:@"AboutWindowController"];
+- (NSApplicationTerminateReply)applicationShouldTerminate:(NSApplication *)sender {
+    NSManagedObjectContext *defaultContext = [NSManagedObjectContext defaultContext];
+    
+    if (![defaultContext commitEditing]) {
+        DDLogError(@"%@:%@ unable to commit editing to terminate", [self class], NSStringFromSelector(_cmd));
+        return NSTerminateCancel;
     }
     
-    [self.aboutWindowController.window center];
-    [self.aboutWindowController showWindow:nil];
-}
-
-- (IBAction)showPreferencesWindow:(id)sender {
-    if (!self.preferencesWindowController) {
-        NSStoryboard *storyBoard = [NSStoryboard storyboardWithName:@"Preferences" bundle:nil];
-        self.preferencesWindowController = [storyBoard instantiateInitialController];
+    if (defaultContext.hasChanges) {
+        [defaultContext MR_saveToPersistentStoreWithCompletion:^(BOOL contextDidSave, NSError *error) {
+            if (contextDidSave) {
+                [NSApp replyToApplicationShouldTerminate:YES];
+            } else {
+                NSAlert *alert = [[NSAlert alloc] init];
+                alert.messageText = NSLocalizedString(@"Could not save changes while quitting. Quit anyway?", @"Quit without saves error question message");
+                alert.informativeText = NSLocalizedString(@"Quitting now will lose any changes you have made since the last successful save", @"Quit without saves error question info");
+                [alert addButtonWithTitle:NSLocalizedString(@"Quit anyway", @"Quit anyway button title")];
+                [alert addButtonWithTitle:NSLocalizedString(@"Cancel", @"Cancel button title")];
+                [alert setAlertStyle:NSCriticalAlertStyle];
+                
+                if (sender.mainWindow) {
+                    [alert beginSheetModalForWindow:sender.mainWindow completionHandler:^(NSModalResponse returnCode) {
+                        [NSApp replyToApplicationShouldTerminate:(returnCode == NSAlertFirstButtonReturn)];
+                    }];
+                } else {
+                    NSModalResponse returnCode = [alert runModal];
+                    [NSApp replyToApplicationShouldTerminate:(returnCode == NSAlertFirstButtonReturn)];
+                }
+            }
+        }];
+        
+        return NSTerminateLater;
     }
     
-    [self.preferencesWindowController showWindow:nil];
+    return NSTerminateNow;
 }
 
 #pragma mark - Setup
 
 - (void)setupCache {
     NSURLCache *URLCache = [[NSURLCache alloc] initWithMemoryCapacity:1024*1024*1 // 1MB mem cache
-                                                         diskCapacity:1024*1024*15 // 15MB disk cache
-                                                             diskPath:applicationCacheDirectory()];
+                                                         diskCapacity:1024*1024*20 // 20MB disk cache
+                                                             diskPath:self.applicationCacheDirectory];
     [NSURLCache setSharedURLCache:URLCache];
 }
 

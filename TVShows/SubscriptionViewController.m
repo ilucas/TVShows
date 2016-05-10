@@ -18,6 +18,11 @@
 #import "Episode.h"
 #import "Subscription.h"
 
+#import "NSString+Extensions.h"
+
+@import MagicalRecord;
+@import ObjectiveSugar;
+
 @interface SubscriptionViewController ()
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @end
@@ -168,10 +173,10 @@
     } failure:^(NSError * _Nonnull error) {
         NSHTTPURLResponse *response = error.userInfo[AFNetworkingOperationFailingURLResponseErrorKey];
         
+        [self.showList removeAllObjects];
+        [self.showsTableView reloadData];
+        
         if (response.statusCode != 404) {
-            [self.showList removeAllObjects];
-            [self.showsTableView reloadData];
-            
             NSAlert *alert = [NSAlert alertWithError:error];
             [alert beginSheetModalForWindow:self.view.window completionHandler:nil];
             DDLogError(@"%s [Line %d]: %@", __PRETTY_FUNCTION__, __LINE__, error);

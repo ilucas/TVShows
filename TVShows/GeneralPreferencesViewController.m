@@ -24,7 +24,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    NSUserDefaults *defaults = [[[NSApplication sharedApplication] delegate] sharedUserDefaults];
+    NSUserDefaults *defaults = [[NSApp delegate] sharedUserDefaults];
     self.defaultsController = [[NSUserDefaultsController alloc] initWithDefaults:defaults initialValues:@{@"checkDelay" : @0}];
     
     // Bind swtich status to self.helperStatus.
@@ -54,14 +54,14 @@
 - (void)setHelperStatus:(BOOL)helperStatus {
     _helperStatus = helperStatus;
     
+    NSUserDefaults *userDefaults = [[NSApp delegate] sharedUserDefaults];
+    [userDefaults setBool:helperStatus forKey:@"helperStatus"];
+    
     if (helperStatus) {
         self.statusLabel.stringValue = @"TVShows is enabled";
     } else {
         self.statusLabel.stringValue = @"TVShows is disabled";
     }
 }
-
-#pragma mark - Private
-
 
 @end

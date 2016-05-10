@@ -12,14 +12,21 @@
 
 import Cocoa
 
-class AboutWindowController: NSWindowController {
+class LicenseViewController: NSViewController {
+
+    var content: String!
+    @IBOutlet var textView: NSTextView!
     
-    override func windowDidLoad() {
-        super.windowDidLoad()
+    override func viewDidLoad() {
+        super.viewDidLoad()
         
-        self.window?.titlebarAppearsTransparent = true
-        self.window?.movableByWindowBackground = true
-        self.window?.titleVisibility = NSWindowTitleVisibility.Hidden
+        let data = NSData.init(contentsOfFile: content!)
+        
+        do {
+            let astring = try NSAttributedString.init(data: data!, options: [:], documentAttributes: nil)
+            textView.textStorage?.setAttributedString(astring)
+        } catch {
+            
+        }
     }
-    
 }

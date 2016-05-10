@@ -14,6 +14,8 @@
 #import "TVDBRequestOperation.h"
 #import "NSMutableURLRequestToken.h"
 
+@import CocoaLumberjack;
+
 @interface TVDBRequestOperation ()
 
 @property (readwrite, nonatomic, strong) NSURLRequest *request;

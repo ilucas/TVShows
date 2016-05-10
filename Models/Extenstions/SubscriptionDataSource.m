@@ -11,6 +11,7 @@
  */
 
 #import "SubscriptionDataSource.h"
+#import "AppDelegate.h"
 #import "Serie.h"
 
 #import "GridViewCellIndicationLayer.h"
@@ -41,7 +42,7 @@
         return [NSImage imageNamed:@"posterArtPlaceholder"];
     }
     
-    NSString *cacheDir = applicationCacheDirectory();
+    NSString *cacheDir = [[NSApp delegate] applicationCacheDirectory];
     NSString *imageName = [[self.serie.poster lastPathComponent] stringByDeletingPathExtension];// Remove "/poster" and ".jpg"
     NSString *imagePath = [[cacheDir stringByAppendingPathComponent:imageName] stringByAppendingPathExtension:@"png"];
     

@@ -14,10 +14,9 @@
 
 #import "TSAppDelegate.h"
 
-@interface AppDelegate : TSAppDelegate <NSApplicationDelegate>
+@class MainWindowController;
 
-- (IBAction)showAboutWindow:(id)sender;
-- (IBAction)showPreferencesWindow:(id)sender;
+@interface AppDelegate : TSAppDelegate <NSApplicationDelegate>
 
 @end
 

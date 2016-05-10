@@ -14,6 +14,10 @@
 #import "Subscription.h"
 #import "Episode.h"
 
+#import "NSString+Extensions.h"
+
+@import CocoaLumberjack;
+
 @implementation Subscription
 
 - (NSString *)searchNameForEpisode:(Episode *)episode {

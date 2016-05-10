@@ -27,6 +27,9 @@
 #import "TVDBEpisode.h"
 #import "Serie.h"
 
+@import CocoaLumberjack;
+@import ObjectiveSugar;
+
 // Spec: https://api-beta.thetvdb.com/swagger#/
 static NSString * const kBaseURL = @"https://api-beta.thetvdb.com";
 

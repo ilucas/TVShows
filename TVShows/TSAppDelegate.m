@@ -1,14 +1,31 @@
-//
-//  TSAppDelegate.m
-//  TVShows
-//
-//  Created by Lucas Casteletti on 2/9/16.
-//  Copyright © 2016 Lucas Casteletti. All rights reserved.
-//
+/*
+ *  This file is part of the TVShows source code.
+ *
+ *  TVShows is free software: you can redistribute it and/or modify
+ *  it under the terms of the GNU General Public License as published by
+ *  the Free Software Foundation, either version 3 of the License, or
+ *  (at your option) any later version.
+ *
+ *  You should have received a copy of the GNU General Public License
+ *  along with TVShows. If not, see <http://www.gnu.org/licenses/>.
+ */
 
 #import "TSAppDelegate.h"
 
+@import MagicalRecord;
 @import AFNetworkActivityLogger;
+
+//DDLogLevel const ddLogLevel = DDLogLevelVerbose;
+
+NSString * const kApplicationName = @"TVShows";
+NSString * const kApplicationGroup = @"group.TVShows";
+
+@interface TSAppDelegate ()
+@property (nonatomic, readwrite) NSString *applicationSupportDirectory;
+@property (nonatomic, readwrite) NSString *applicationCacheDirectory;
+@property (nonatomic, readwrite) NSURL *persistentStoreURL;
+@property (nonatomic, readwrite) NSURL *groupContainerURL;
+@end
 
 @implementation TSAppDelegate
 
@@ -32,7 +49,7 @@
 }
 
 - (void)setupCoreData {
-    [MagicalRecord setupCoreDataStackWithAutoMigratingSqliteStoreAtURL:persistentStoreURL()];
+    [MagicalRecord setupCoreDataStackWithAutoMigratingSqliteStoreAtURL:self.persistentStoreURL];
     [MagicalRecord setLoggingLevel:MagicalRecordLoggingLevelAll];
     [MagicalRecord enableShorthandMethods];
 }
@@ -47,6 +64,49 @@
     }
     
     return shared;
+}
+
+#pragma mark - Properties
+
+- (NSString *)applicationSupportDirectory {
+    if (!_applicationSupportDirectory) {
+        //NSString *applicationName = [[[NSBundle mainBundle] infoDictionary] valueForKey:(NSString *)kCFBundleNameKey];
+        //NSString *applicationStorageDirectory = [NSSearchPathForDirectoriesInDomains(NSApplicationSupportDirectory, NSUserDomainMask, YES) lastObject];
+        
+        NSFileManager *fileManager = [NSFileManager defaultManager];
+        
+        NSURL *applicationStorageURL = [[fileManager URLsForDirectory:NSApplicationSupportDirectory inDomains:NSUserDomainMask] lastObject];
+        _applicationSupportDirectory = [[applicationStorageURL URLByAppendingPathComponent:kApplicationName] path];
+    }
+    
+    return _applicationSupportDirectory;
+}
+
+- (NSString *)applicationCacheDirectory {
+    if (!_applicationCacheDirectory) {
+        _applicationCacheDirectory = [self.applicationSupportDirectory stringByAppendingPathComponent:@"Cache"];
+    }
+    
+    return _applicationCacheDirectory;
+}
+
+- (NSURL *)persistentStoreURL {
+    if (!_persistentStoreURL) {
+        NSURL *appSupportURL = [[NSURL alloc] initFileURLWithPath:self.applicationSupportDirectory isDirectory:YES];
+        NSString *storeName = [kApplicationName stringByAppendingPathExtension:@"sqlite"];
+        
+        _persistentStoreURL = [appSupportURL URLByAppendingPathComponent:storeName];
+    }
+    
+    return _persistentStoreURL;
+}
+
+- (NSURL *)groupContainerURL {
+    if (!_groupContainerURL) {
+        _groupContainerURL = [[NSFileManager defaultManager] containerURLForSecurityApplicationGroupIdentifier:kApplicationGroup];
+    }
+    
+    return _groupContainerURL;
 }
 
 @end

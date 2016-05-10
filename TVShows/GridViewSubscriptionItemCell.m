@@ -121,6 +121,10 @@ static NSDictionary *disabledActions;
     return NSMakePoint(p.x - frame.origin.x, p.y - frame.origin.y);
 }
 
+- (NSImageAlignment)imageAlignment {
+    return NSImageAlignBottom;
+}
+
 #pragma mark - Layers & Images
 
 - (void)setupLayers {

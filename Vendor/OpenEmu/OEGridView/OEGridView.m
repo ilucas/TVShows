@@ -44,7 +44,9 @@
 #import "IKImageBrowserLayoutManager.h"
 #import "IKImageBrowserGridGroup.h"
 
+// TVShows custom cell
 #import "GridViewAddItemCell.h"
+#import "GridViewSubscriptionItemCell.h"
 
 #pragma mark -
 NSSize const defaultGridSize = (NSSize){26+142, 143};
@@ -336,9 +338,9 @@ static IKImageWrapper *lightingImage;
         {
             _draggingIndex = index;
         }
-        else if ([cell isKindOfClass:[OEGridGameCell class]])
+        else if ([cell isKindOfClass:[GridViewSubscriptionItemCell class]])
         {
-            OEGridGameCell *clickedCell = (OEGridGameCell*)cell;
+            GridViewSubscriptionItemCell *clickedCell = (GridViewSubscriptionItemCell*)cell;
             const NSRect ratingRect = NSInsetRect([clickedCell ratingFrame], -5, -1);
 
             // Check for rating layer interaction
@@ -404,7 +406,7 @@ static IKImageWrapper *lightingImage;
     }
     else if(_ratingTracking != NSNotFound)
     {
-        OEGridGameCell *clickedCell = (OEGridGameCell*)[self cellForItemAtIndex:_ratingTracking];
+        GridViewSubscriptionItemCell *clickedCell = (GridViewSubscriptionItemCell*)[self cellForItemAtIndex:_ratingTracking];
         NSRect ratingRect = NSInsetRect([clickedCell ratingFrame], -5, -1);
 
         [self OE_updateRatingForItemAtIndex:_ratingTracking withLocation:mouseLocationInView inRect:ratingRect];
@@ -591,7 +593,7 @@ static IKImageWrapper *lightingImage;
 
 - (void)setRating:(NSInteger)rating forGameAtIndex:(NSInteger)index
 {
-    OEGridGameCell *selectedCell = (OEGridGameCell *)[self cellForItemAtIndex:index];
+    GridViewSubscriptionItemCell *selectedCell = (GridViewSubscriptionItemCell *)[self cellForItemAtIndex:index];
     id <OECoverGridDataSourceItem> selectedGame = [selectedCell representedItem];
     [selectedGame setGridRating:rating];
 

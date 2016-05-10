@@ -13,6 +13,7 @@
 
 #import "TVDBImageOperation.h"
 #import "TVDBManager.h"
+#import "AppDelegate.h"
 
 @import Mantle;
 @import libextobjc;
@@ -58,7 +59,7 @@
 - (nullable NSImage *)cachedImage {
     // If the TVShows cache directory doesn't exist then create it.
     NSFileManager *fileManager = [NSFileManager defaultManager];
-    NSString *cacheDir = applicationCacheDirectory();
+    NSString *cacheDir = [[NSApp delegate] applicationCacheDirectory];
     
     NSError *error = nil;
     
@@ -93,7 +94,7 @@
         
         @strongify(self)
         NSString *imageName = [[self.imageName lastPathComponent] stringByDeletingPathExtension];// Remove "/poster" and ".jpg"
-        NSString *imagePath = [[applicationCacheDirectory() stringByAppendingPathComponent:imageName] stringByAppendingPathExtension:@"png"];
+        NSString *imagePath = [[[[NSApp delegate] applicationCacheDirectory] stringByAppendingPathComponent:imageName] stringByAppendingPathExtension:@"png"];
         
         // Convert and save the image in a background thread
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{

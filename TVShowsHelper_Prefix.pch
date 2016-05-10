@@ -1,28 +1,25 @@
-//
-//  TVShowsHelper_Prefix.pch
-//  TVShows
-//
-//  Created by Lucas casteletti on 2/9/16.
-//  Copyright © 2016 Lucas Casteletti. All rights reserved.
-//
+/*
+ *  This file is part of the TVShows source code.
+ *  http://github.com/ilucas/TVShows
+ *
+ *  TVShows is free software: you can redistribute it and/or modify
+ *  it under the terms of the GNU General Public License as published by
+ *  the Free Software Foundation, either version 3 of the License, or
+ *  (at your option) any later version.
+ *
+ *  You should have received a copy of the GNU General Public License
+ *  along with TVShows. If not, see <http://www.gnu.org/licenses/>.
+ */
 
 #ifndef TVShowsHelper_Prefix_pch
 #define TVShowsHelper_Prefix_pch
 
-@import Cocoa;
-@import libextobjc;
-@import CocoaLumberjack;
-@import MagicalRecord;
-@import ObjectiveSugar;
-
 // Swift bridge
 //#import "TVShowsHelper-Swift.h"
 
-#import "TVShowsUtilities.h"
-#import "AppInfoConstants.h"
+@import CocoaLumberjack;
 
-#import "NSString+Extensions.h"
-#import "NSDictionary+Extensions.h"
-#import "NSMutableDictionary+Extensions.h"
+// Define log level
+static const DDLogLevel ddLogLevel = DDLogLevelVerbose;
 
 #endif /* TVShowsHelper_Prefix_pch */

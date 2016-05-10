@@ -14,6 +14,7 @@
 #import "TVDBAuthenticationOperation.h"
 #import "TVDBManager.h"
 #import "NSMutableURLRequestToken.h"
+#import "AppSecretConstants.h"
 
 @import Mantle;
 @import libextobjc;
