@@ -26,9 +26,9 @@ class AboutViewController: NSViewController {
         appName.stringValue = bundle.objectForInfoDictionaryKey("CFBundleName") as! String
         
         // App version
-        let version = bundle.objectForInfoDictionaryKey("CFBundleVersion") as! String
-        let shortVersion = bundle.objectForInfoDictionaryKey("CFBundleShortVersionString") as! String
-        appVersion.stringValue = "Version \(version) (Build \(shortVersion))"
+        let version = bundle.objectForInfoDictionaryKey("CFBundleShortVersionString") as! String
+        let build = bundle.objectForInfoDictionaryKey("CFBundleVersion") as! String
+        appVersion.stringValue = "Version \(version) (\(build))"
     }
     
     override func prepareForSegue(segue: NSStoryboardSegue, sender: AnyObject?) {

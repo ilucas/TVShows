@@ -1028,6 +1028,7 @@
 				60A680B03A0ACD46F6D45767 /* Check Pods Manifest.lock */,
 				A0432F1A1AD9649600C19189 /* Sources */,
 				A0432F1B1AD9649600C19189 /* Frameworks */,
+				A0FB23F41CE2CD7A0078DE9C /* Update Build Version */,
 				A0432F1C1AD9649600C19189 /* Resources */,
 				8E670647DE0BC12CF99B7C67 /* Embed Pods Frameworks */,
 				D86E2571DB04E641D333C284 /* Copy Pods Resources */,
@@ -1050,6 +1051,7 @@
 				84C84FFF188E704B410D159F /* Check Pods Manifest.lock */,
 				A0F43D1E1C6A99F3005ABB35 /* Sources */,
 				A0F43D1F1C6A99F3005ABB35 /* Frameworks */,
+				A0FB23F51CE2D8760078DE9C /* Update Build Version */,
 				A0F43D201C6A99F3005ABB35 /* Resources */,
 				73B277D53DEE5B4D8B64B888 /* Embed Pods Frameworks */,
 				3B9399654A586B0CD4EA389B /* Copy Pods Resources */,
@@ -1256,6 +1258,34 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "mogenerator --v2 --model Models/TVShows.xcdatamodeld --output-dir Models";
+		};
+		A0FB23F41CE2CD7A0078DE9C /* Update Build Version */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Update Build Version";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "BUILD_VERSION=`git log --pretty=format:'' | wc -l | egrep '[0-9]{1,}' -o`\nBUILD_DATE=`git log -1 --pretty=format:'%cD' | awk '{print $3 \" \" $2 \", \" $4}'`\n#RELEASE_VERSION=`git describe --tags --always --abbrev=0`\nRELEASE_VERSION=`/usr/libexec/PlistBuddy -c \"Print CFBundleShortVersionString\" \"$INFOPLIST_FILE\"`\n\n/usr/libexec/PListBuddy -c \"Set CFBundleVersion $BUILD_VERSION\" \"${TARGET_BUILD_DIR}/${INFOPLIST_PATH}\"\n/usr/libexec/PListBuddy -c \"Set TSBundleBuildDate $BUILD_DATE\" \"${TARGET_BUILD_DIR}/${INFOPLIST_PATH}\"\n#/usr/libexec/PListBuddy -c \"Set CFBundleShortVersionString $RELEASE_VERSION\" \"${TARGET_BUILD_DIR}/${INFOPLIST_PATH}\"\necho \"$RELEASE_VERSION\" > VERSION";
+		};
+		A0FB23F51CE2D8760078DE9C /* Update Build Version */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Update Build Version";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "BUILD_VERSION=`git log --pretty=format:'' | wc -l | egrep '[0-9]{1,}' -o`\nBUILD_DATE=`git log -1 --pretty=format:'%cD' | awk '{print $3 \" \" $2 \", \" $4}'`\n\n/usr/libexec/PListBuddy -c \"Set CFBundleVersion $BUILD_VERSION\" \"${TARGET_BUILD_DIR}/${INFOPLIST_PATH}\"\n/usr/libexec/PListBuddy -c \"Set TSBundleBuildDate $BUILD_DATE\" \"${TARGET_BUILD_DIR}/${INFOPLIST_PATH}\"";
 		};
 		D86E2571DB04E641D333C284 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
