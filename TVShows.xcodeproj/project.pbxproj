@@ -31,8 +31,8 @@
 		A00B46241AEC7FA30022BDBF /* CRViewSubclass.m in Sources */ = {isa = PBXBuildFile; fileRef = 34463CD71331BC40001453EB /* CRViewSubclass.m */; };
 		A01480631CCDB43F00B57CD2 /* MainWindowTitlebarBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01480621CCDB43F00B57CD2 /* MainWindowTitlebarBackgroundView.swift */; };
 		A01480651CCDC2F200B57CD2 /* GridViewAddItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01480641CCDC2F200B57CD2 /* GridViewAddItem.swift */; };
+		A015F6231CE4FA2C00A3376A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A015F6221CE4FA2C00A3376A /* Assets.xcassets */; };
 		A01813CD1C2DDEB500C5B221 /* MetadataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A01813CC1C2DDEB500C5B221 /* MetadataViewController.m */; };
-		A0202B061CAF62020064F1B7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0432F271AD9649600C19189 /* Images.xcassets */; };
 		A02F332E1B1BC9BC004F2D4B /* NSMutableDictionary+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A02F332D1B1BC9BC004F2D4B /* NSMutableDictionary+Extensions.m */; };
 		A02F69431CB4BAC100AE9236 /* TorrentPreferencesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A02F69421CB4BAC100AE9236 /* TorrentPreferencesViewController.m */; };
 		A03A4E281CA51E6B002AB1F2 /* TVDBPosterOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = A03A4E271CA51E6B002AB1F2 /* TVDBPosterOperation.m */; };
@@ -270,6 +270,7 @@
 		A00746FF1C80EFFF007BF1AA /* RARBGClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RARBGClient.m; path = Providers/RARBG/RARBGClient.m; sourceTree = "<group>"; };
 		A01480621CCDB43F00B57CD2 /* MainWindowTitlebarBackgroundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainWindowTitlebarBackgroundView.swift; sourceTree = "<group>"; };
 		A01480641CCDC2F200B57CD2 /* GridViewAddItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridViewAddItem.swift; sourceTree = "<group>"; };
+		A015F6221CE4FA2C00A3376A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A01813CB1C2DDEB500C5B221 /* MetadataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MetadataViewController.h; sourceTree = "<group>"; };
 		A01813CC1C2DDEB500C5B221 /* MetadataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MetadataViewController.m; sourceTree = "<group>"; };
 		A01813CE1C2DE6B500C5B221 /* TVShows-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TVShows-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -982,6 +983,7 @@
 		A0F43D271C6A99F3005ABB35 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A015F6221CE4FA2C00A3376A /* Assets.xcassets */,
 				A0F43D2F1C6A99F3005ABB35 /* Info.plist */,
 				A0F43D281C6A99F3005ABB35 /* main.m */,
 				A0F43D3D1C6A9C3E005ABB35 /* TVShowsHelper_Prefix.pch */,
@@ -1028,8 +1030,8 @@
 				60A680B03A0ACD46F6D45767 /* Check Pods Manifest.lock */,
 				A0432F1A1AD9649600C19189 /* Sources */,
 				A0432F1B1AD9649600C19189 /* Frameworks */,
-				A0FB23F41CE2CD7A0078DE9C /* Update Build Version */,
 				A0432F1C1AD9649600C19189 /* Resources */,
+				A0FB23F41CE2CD7A0078DE9C /* Update Build Version */,
 				8E670647DE0BC12CF99B7C67 /* Embed Pods Frameworks */,
 				D86E2571DB04E641D333C284 /* Copy Pods Resources */,
 				A0D790BC1CB37C7D00C4D32D /* Copy Helper */,
@@ -1051,8 +1053,8 @@
 				84C84FFF188E704B410D159F /* Check Pods Manifest.lock */,
 				A0F43D1E1C6A99F3005ABB35 /* Sources */,
 				A0F43D1F1C6A99F3005ABB35 /* Frameworks */,
-				A0FB23F51CE2D8760078DE9C /* Update Build Version */,
 				A0F43D201C6A99F3005ABB35 /* Resources */,
+				A0FB23F51CE2D8760078DE9C /* Update Build Version */,
 				73B277D53DEE5B4D8B64B888 /* Embed Pods Frameworks */,
 				3B9399654A586B0CD4EA389B /* Copy Pods Resources */,
 			);
@@ -1162,8 +1164,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A015F6231CE4FA2C00A3376A /* Assets.xcassets in Resources */,
 				A0F43D2E1C6A99F3005ABB35 /* MainMenu.xib in Resources */,
-				A0202B061CAF62020064F1B7 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
