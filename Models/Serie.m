@@ -53,4 +53,18 @@
     }];
 }
 
+#pragma mark - Properties
+
+- (BOOL)airToday {
+    if (!self.airDay) return false;
+    
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    dateFormatter.locale = [NSLocale localeWithLocaleIdentifier:@"en-US"];
+    dateFormatter.dateFormat = @"EEEE";
+    
+    NSString *weekday = [dateFormatter stringFromDate:[NSDate date]];
+    
+    return [self.airDay caseInsensitiveCompare:weekday] == NSOrderedSame;
+}
+
 @end

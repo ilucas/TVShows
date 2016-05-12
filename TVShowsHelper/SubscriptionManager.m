@@ -43,8 +43,8 @@
     //Debug
     [self.managedObjectContext MR_setWorkingName:[NSString stringWithFormat:@"SubscriptionManager Context (Serie: %@)", serieID]];
     
-    // Check if lastDownload is longer than a week
-    if (subscription.lastDownloaded.timeIntervalSinceNow > 604800) {// 604800 seconds = 7 days
+    // Check if lastDownload is longer than a week or the serie air today.
+    if (subscription.lastDownloaded.timeIntervalSinceNow > 86400 || subscription.serie.airToday) {//86400 seconds = 1 day, 604800 seconds = 7 days
         // Update episodes.
         [[TVDBManager manager] episodes:serieID completionBlock:^(NSArray<TVDBEpisode *> *episodes) {
             [self performSelectorInQueue:@selector(updateEpisodes:) withObject:episodes];
@@ -98,6 +98,24 @@
     NSCompoundPredicate *predicate = [NSCompoundPredicate andPredicateWithSubpredicates:@[seriePredicate, notDownloaded]];
     
     NSArray<Episode *> *episodes = [Episode findAllWithPredicate:predicate inContext:self.managedObjectContext];
+    
+    if (episodes.count == 0) {
+        // Show notification
+        NSUserNotification *notification = [[NSUserNotification alloc] init];
+        notification.title = subscription.serie.name;
+        notification.identifier = [@"TVShows.Helper.notification.NoNewEpisode." stringByAppendingPathExtension:subscription.serie.serieID.stringValue];
+        
+        if (subscription.serie.airDay)
+            notification.subtitle = [@"No new episodes, Try again on "  stringByAppendingString:subscription.serie.airDay];
+        else
+            notification.subtitle = @"No new episodes";
+        
+        [[NSUserNotificationCenter defaultUserNotificationCenter] deliverNotification:notification];
+        
+        DDLogInfo(@"No new episodes: %@ (%@)", subscription.serie.name, subscription.serie.serieID);
+        
+        return;
+    }
     
     [episodes enumerateObjectsUsingBlock:^(Episode *episode, NSUInteger idx, BOOL *stop) {
         // Download the serie.

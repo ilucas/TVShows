@@ -19,6 +19,8 @@
 
 @interface Serie : _Serie
 
+@property (readonly) BOOL airToday;
+
 + (void)create:(NSDictionary *)data InContext:(NSManagedObjectContext *)context WithCompletion:(void(^)(SerieID *serieID))completion Error:(void(^)(NSError *error))error;
 
 @end
