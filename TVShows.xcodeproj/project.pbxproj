@@ -33,6 +33,7 @@
 		A01480651CCDC2F200B57CD2 /* GridViewAddItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01480641CCDC2F200B57CD2 /* GridViewAddItem.swift */; };
 		A015F6231CE4FA2C00A3376A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A015F6221CE4FA2C00A3376A /* Assets.xcassets */; };
 		A01813CD1C2DDEB500C5B221 /* MetadataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A01813CC1C2DDEB500C5B221 /* MetadataViewController.m */; };
+		A02DAF331CE7FD94003C2DA9 /* DelayOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = A02DAF321CE7FD94003C2DA9 /* DelayOperation.m */; };
 		A02F332E1B1BC9BC004F2D4B /* NSMutableDictionary+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A02F332D1B1BC9BC004F2D4B /* NSMutableDictionary+Extensions.m */; };
 		A02F69431CB4BAC100AE9236 /* TorrentPreferencesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A02F69421CB4BAC100AE9236 /* TorrentPreferencesViewController.m */; };
 		A03A4E281CA51E6B002AB1F2 /* TVDBPosterOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = A03A4E271CA51E6B002AB1F2 /* TVDBPosterOperation.m */; };
@@ -275,6 +276,8 @@
 		A01813CC1C2DDEB500C5B221 /* MetadataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MetadataViewController.m; sourceTree = "<group>"; };
 		A01813CE1C2DE6B500C5B221 /* TVShows-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TVShows-Bridging-Header.h"; sourceTree = "<group>"; };
 		A01D875B1CACAD6200627B63 /* RARBG.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RARBG.h; path = Providers/RARBG/RARBG.h; sourceTree = "<group>"; };
+		A02DAF311CE7FD94003C2DA9 /* DelayOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DelayOperation.h; path = Providers/RARBG/DelayOperation.h; sourceTree = "<group>"; };
+		A02DAF321CE7FD94003C2DA9 /* DelayOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DelayOperation.m; path = Providers/RARBG/DelayOperation.m; sourceTree = "<group>"; };
 		A02F332C1B1BC9BC004F2D4B /* NSMutableDictionary+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSMutableDictionary+Extensions.h"; path = "TVShows/Extensions/NSMutableDictionary+Extensions.h"; sourceTree = SOURCE_ROOT; };
 		A02F332D1B1BC9BC004F2D4B /* NSMutableDictionary+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSMutableDictionary+Extensions.m"; path = "TVShows/Extensions/NSMutableDictionary+Extensions.m"; sourceTree = SOURCE_ROOT; };
 		A02F69411CB4BAC100AE9236 /* TorrentPreferencesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TorrentPreferencesViewController.h; sourceTree = "<group>"; };
@@ -1002,6 +1005,8 @@
 				A08DE3D51C78E26D00040D78 /* RARBGSearchOperation.m */,
 				A06D07F51CAB8628001E9511 /* RARBGTorrent.h */,
 				A06D07F61CAB8628001E9511 /* RARBGTorrent.m */,
+				A02DAF311CE7FD94003C2DA9 /* DelayOperation.h */,
+				A02DAF321CE7FD94003C2DA9 /* DelayOperation.m */,
 			);
 			name = RARBG;
 			sourceTree = "<group>";
@@ -1403,6 +1408,7 @@
 				A0F43D361C6A9A3E005ABB35 /* Episode.m in Sources */,
 				A0A9DAD61C97BC1500C9299F /* TVDBSearchOperation.m in Sources */,
 				A04F1D641CA6514200F09BAA /* NSMutableDictionary+Extensions.m in Sources */,
+				A02DAF331CE7FD94003C2DA9 /* DelayOperation.m in Sources */,
 				A00747001C80EFFF007BF1AA /* RARBGClient.m in Sources */,
 				A0F43D371C6A9A41005ABB35 /* Serie.m in Sources */,
 				A0A9DADC1C97BC1500C9299F /* TVDBUpdatesOperation.m in Sources */,

@@ -12,6 +12,7 @@
 
 #import "RARBGClient.h"
 #import "RARBGSearchOperation.h"
+#import "DelayOperation.h"
 
 //Spec: https://torrentapi.org/apidocs_v2.txt
 static NSString * const kBaseURL = @"https://torrentapi.org/pubapi_v2.php";
@@ -93,7 +94,10 @@ static NSString * const kBaseURL = @"https://torrentapi.org/pubapi_v2.php";
         [self.operationQueue addOperation:adapter];
     }
     
-    [self.operationQueue addOperation:operation];
+    DelayOperation *delay = [DelayOperation new];
+    [delay addDependency:operation];
+    
+    [self.operationQueue addOperations:@[operation, delay] waitUntilFinished:NO];
 }
 
 - (AFHTTPRequestOperation *)tokenRequest {
@@ -130,6 +134,9 @@ static NSString * const kBaseURL = @"https://torrentapi.org/pubapi_v2.php";
     self = [super initWithBaseURL:[NSURL URLWithString:kBaseURL]];
     
     if (self) {
+        dispatch_queue_t underlyingQueue = dispatch_queue_create("TVShows.Providers.RARBG.UnderlyingQueue", DISPATCH_QUEUE_SERIAL);
+        
+        [self.operationQueue setUnderlyingQueue:underlyingQueue];
         [self.operationQueue setMaxConcurrentOperationCount:1];// The api has a 1req/2s limit.
         [self.operationQueue setName:@"TVShows.Providers.RARBG.Queue"];
     }
