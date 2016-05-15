@@ -27,7 +27,7 @@ static NSString * const kBaseURL = @"https://torrentapi.org/pubapi_v2.php";
 - (RARBGSearchOperation *)search:(NSString *)search {
     NSMutableURLRequest *request = [self searchRequestWithSearch:search];
     
-    RARBGSearchOperation __block *operation = [[RARBGSearchOperation alloc] initWithRequest:request];
+    RARBGSearchOperation *operation = [[RARBGSearchOperation alloc] initWithRequest:request];
     operation.responseSerializer = [AFJSONResponseSerializer serializer];
     operation.search = search;
     
@@ -71,6 +71,7 @@ static NSString * const kBaseURL = @"https://torrentapi.org/pubapi_v2.php";
         // If no token request found, create one.
         if (!tokenRequest) {
             tokenRequest = [self tokenRequest];
+            [self.operationQueue addOperation:tokenRequest];
         }
         
         // Create the adapter to set the token to operation.
@@ -89,7 +90,6 @@ static NSString * const kBaseURL = @"https://torrentapi.org/pubapi_v2.php";
         [adapter addDependency:tokenRequest];
         [operation addDependency:adapter];
         
-        [self.operationQueue addOperation:tokenRequest];
         [self.operationQueue addOperation:adapter];
     }
     
