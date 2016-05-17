@@ -139,6 +139,7 @@
 		A0F43D391C6A9A4B005ABB35 /* TVShows.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A06F88031AE6B92900CD66DC /* TVShows.xcdatamodeld */; };
 		A0F43D3A1C6A9A58005ABB35 /* TSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A0F43D1C1C6A96C7005ABB35 /* TSAppDelegate.m */; };
 		A0FA21D71CD7F73F00E0ED41 /* GridViewAddItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A0FA21D61CD7F73F00E0ED41 /* GridViewAddItemCell.m */; };
+		A0FBE7181CEAEE3A002C1ECF /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = A0FBE7171CEAEE3A002C1ECF /* dsa_pub.pem */; };
 		A0FC60841C55932500FD6044 /* GridViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0FC60831C55932500FD6044 /* GridViewController.m */; };
 		DAFB536FA931D36D07BBE652 /* Pods_TVShowsHelper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABF2F5AAB1A6625BCB9B29BF /* Pods_TVShowsHelper.framework */; };
 /* End PBXBuildFile section */
@@ -431,6 +432,7 @@
 		A0F43D3E1C6A9C80005ABB35 /* TVShowsHelper-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TVShowsHelper-Bridging-Header.h"; sourceTree = "<group>"; };
 		A0FA21D51CD7F73F00E0ED41 /* GridViewAddItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GridViewAddItemCell.h; sourceTree = "<group>"; };
 		A0FA21D61CD7F73F00E0ED41 /* GridViewAddItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GridViewAddItemCell.m; sourceTree = "<group>"; };
+		A0FBE7171CEAEE3A002C1ECF /* dsa_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = dsa_pub.pem; path = Resources/dsa_pub.pem; sourceTree = "<group>"; };
 		A0FC60821C55932500FD6044 /* GridViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GridViewController.h; sourceTree = "<group>"; };
 		A0FC60831C55932500FD6044 /* GridViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GridViewController.m; sourceTree = "<group>"; };
 		ABF2F5AAB1A6625BCB9B29BF /* Pods_TVShowsHelper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TVShowsHelper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -486,6 +488,7 @@
 				34A8FF9C1187C17000DDD3DE /* LICENSE.txt */,
 				575C0D58136A487A005DE73D /* VERSION */,
 				A084A6331CB0BBFF00DB3790 /* Acknowledgments.rtf */,
+				A0FBE7171CEAEE3A002C1ECF /* dsa_pub.pem */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -1158,6 +1161,7 @@
 				A07A51F01C54389C00D40063 /* Main.storyboard in Resources */,
 				A00B46211AEC7F1B0022BDBF /* posterArtPlaceholder.jpg in Resources */,
 				A0AA85B41CAFA9C400A1388C /* LICENSE.txt in Resources */,
+				A0FBE7181CEAEE3A002C1ECF /* dsa_pub.pem in Resources */,
 				A0E931D31CDFF82100B61C2A /* About.storyboard in Resources */,
 				A06D26DF1CCDC96B006A0672 /* arrow-this.png in Resources */,
 				A00468CA1C56E69500732FB5 /* Preferences.storyboard in Resources */,
@@ -1278,7 +1282,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "BUILD_VERSION=`git log --pretty=format:'' | wc -l | egrep '[0-9]{1,}' -o`\nBUILD_DATE=`git log -1 --pretty=format:'%cD' | awk '{print $3 \" \" $2 \", \" $4}'`\n#RELEASE_VERSION=`git describe --tags --always --abbrev=0`\nRELEASE_VERSION=`/usr/libexec/PlistBuddy -c \"Print CFBundleShortVersionString\" \"$INFOPLIST_FILE\"`\n\n/usr/libexec/PListBuddy -c \"Set CFBundleVersion $BUILD_VERSION\" \"${TARGET_BUILD_DIR}/${INFOPLIST_PATH}\"\n/usr/libexec/PListBuddy -c \"Set TSBundleBuildDate $BUILD_DATE\" \"${TARGET_BUILD_DIR}/${INFOPLIST_PATH}\"\n#/usr/libexec/PListBuddy -c \"Set CFBundleShortVersionString $RELEASE_VERSION\" \"${TARGET_BUILD_DIR}/${INFOPLIST_PATH}\"\necho \"$RELEASE_VERSION\" > VERSION";
+			shellScript = "BUILD_VERSION=`git log --pretty=format:'' | wc -l | egrep '[0-9]{1,}' -o`\nBUILD_DATE=`git log -1 --pretty=format:'%cD' | awk '{print $3 \" \" $2 \", \" $4}'`\n#RELEASE_VERSION=`git describe --tags --always --abbrev=0`\nRELEASE_VERSION=`/usr/libexec/PlistBuddy -c \"Print CFBundleShortVersionString\" \"$INFOPLIST_FILE\"`\n\n/usr/libexec/PListBuddy -c \"Set CFBundleVersion $BUILD_VERSION\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\"\n#/usr/libexec/PListBuddy -c \"Set CFBundleVersion $BUILD_VERSION\" \"${TARGET_BUILD_DIR}/${INFOPLIST_PATH}\"\n/usr/libexec/PListBuddy -c \"Set TSBundleBuildDate $BUILD_DATE\" \"${TARGET_BUILD_DIR}/${INFOPLIST_PATH}\"\n#/usr/libexec/PListBuddy -c \"Set CFBundleShortVersionString $RELEASE_VERSION\" \"${TARGET_BUILD_DIR}/${INFOPLIST_PATH}\"\necho \"$RELEASE_VERSION\" > VERSION";
 		};
 		A0FB23F51CE2D8760078DE9C /* Update Build Version */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1292,7 +1296,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "BUILD_VERSION=`git log --pretty=format:'' | wc -l | egrep '[0-9]{1,}' -o`\nBUILD_DATE=`git log -1 --pretty=format:'%cD' | awk '{print $3 \" \" $2 \", \" $4}'`\n\n/usr/libexec/PListBuddy -c \"Set CFBundleVersion $BUILD_VERSION\" \"${TARGET_BUILD_DIR}/${INFOPLIST_PATH}\"\n/usr/libexec/PListBuddy -c \"Set TSBundleBuildDate $BUILD_DATE\" \"${TARGET_BUILD_DIR}/${INFOPLIST_PATH}\"";
+			shellScript = "BUILD_VERSION=`git log --pretty=format:'' | wc -l | egrep '[0-9]{1,}' -o`\nBUILD_DATE=`git log -1 --pretty=format:'%cD' | awk '{print $3 \" \" $2 \", \" $4}'`\n\n/usr/libexec/PListBuddy -c \"Set CFBundleVersion $BUILD_VERSION\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\"\n#/usr/libexec/PListBuddy -c \"Set CFBundleVersion $BUILD_VERSION\" \"${TARGET_BUILD_DIR}/${INFOPLIST_PATH}\"\n/usr/libexec/PListBuddy -c \"Set TSBundleBuildDate $BUILD_DATE\" \"${TARGET_BUILD_DIR}/${INFOPLIST_PATH}\"";
 		};
 		D86E2571DB04E641D333C284 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;

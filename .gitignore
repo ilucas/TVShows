@@ -26,3 +26,11 @@ config/
 
 # Real "Secrets" configuration file
 Classes/AppSecretConstants.h
+
+# Update private certificate
+Resources/dsa_priv.pem
+
+Release/TVShows*
+Release/wc.dmg
+Release/template.dmg
+
