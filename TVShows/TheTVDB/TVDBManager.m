@@ -43,7 +43,7 @@ static NSString * const kBaseURL = @"https://api-beta.thetvdb.com";
     [op setCompletionBlockWithSuccess:^(TVDBAuthenticationOperation * _Nonnull operation, id  _Nonnull responseObject) {
         self.token = operation.token;
         self.tokenLife = operation.tokenLife;
-        DDLogDebug(@"Got a token: %@", self.token);
+        DDLogInfo(@"Got a token: %@", self.token);
     } failure:^(TVDBAuthenticationOperation * _Nonnull operation, NSError * _Nonnull error) {
         DDLogError(@"Erro: %@", error);
     }];

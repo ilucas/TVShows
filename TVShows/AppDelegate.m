@@ -13,7 +13,9 @@
 @import AFNetworkActivityLogger;
 @import CocoaLumberjack;
 @import MagicalRecord;
+@import Crashlytics;
 @import LetsMove;
+@import Fabric;
 
 #import "AppDelegate.h"
 #import "MainWindowController.h"
@@ -30,6 +32,9 @@
     // Log
     [self setupLogging];
     
+    // Crashlytics
+    [Fabric with:@[[Crashlytics class]]];
+    
     // Core Data
     [self setupCoreData];
     
@@ -40,6 +45,8 @@
 #pragma mark - NSApplicationDelegate
 
 - (void)applicationWillFinishLaunching:(NSNotification *)notification {
+    [[NSUserDefaults standardUserDefaults] registerDefaults:@{@"NSApplicationCrashOnExceptions": @YES}];
+    
     // Let's Move
     PFMoveToApplicationsFolderIfNecessary();
 }
@@ -64,8 +71,6 @@
     
     return false;
 }
-
-//TODO: move constants things to here.
 
 - (NSApplicationTerminateReply)applicationShouldTerminate:(NSApplication *)sender {
     NSManagedObjectContext *defaultContext = [NSManagedObjectContext defaultContext];

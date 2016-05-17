@@ -11,7 +11,9 @@
  */
 
 #import "TSAppDelegate.h"
+#import "CrashlyticsLogger.h"
 
+@import Crashlytics;
 @import MagicalRecord;
 @import AFNetworkActivityLogger;
 
@@ -34,6 +36,9 @@ NSString * const kApplicationGroup = @"group.TVShows";
 - (void)setupLogging {
     // Setup logging into XCode's console
     [DDLog addLogger:[DDTTYLogger sharedInstance]];
+    
+    // Setup Crashlytics log
+    [DDLog addLogger:[CrashlyticsLogger sharedInstance]];
     
     // Setup AFNetworking log
     AFNetworkActivityLogger *afLogger = [AFNetworkActivityLogger sharedLogger];

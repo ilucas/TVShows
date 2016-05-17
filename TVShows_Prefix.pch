@@ -18,5 +18,10 @@
     @import CocoaLumberjack;
 
     // Define log level
-    static const DDLogLevel ddLogLevel = DDLogLevelVerbose;
+    #if DEBUG
+        static DDLogLevel ddLogLevel = DDLogLevelVerbose;
+    #else
+        static DDLogLevel ddLogLevel = DDLogLevelInfo;
+    #endif
+
 #endif

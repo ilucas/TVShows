@@ -27,6 +27,8 @@ config/
 # Real "Secrets" configuration file
 Classes/AppSecretConstants.h
 
+Crashlytics.sh
+
 # Update private certificate
 Resources/dsa_priv.pem
 

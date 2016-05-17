@@ -31,6 +31,9 @@ PODS:
     - CocoaLumberjack/Core
   - CocoaLumberjack/Extensions (2.2.0):
     - CocoaLumberjack/Default
+  - Crashlytics (3.7.0):
+    - Fabric (~> 1.6.3)
+  - Fabric (1.6.7)
   - ITSwitch (1.0)
   - LetsMove (1.20)
   - libextobjc (0.4.1):
@@ -90,6 +93,8 @@ DEPENDENCIES:
   - AFNetworking (~> 2.6)
   - AFOnoResponseSerializer (~> 1.0)
   - CocoaLumberjack (~> 2.2)
+  - Crashlytics
+  - Fabric
   - ITSwitch (~> 1.0)
   - LetsMove
   - libextobjc
@@ -106,6 +111,8 @@ SPEC CHECKSUMS:
   AFNetworking: cb8d14a848e831097108418f5d49217339d4eb60
   AFOnoResponseSerializer: c02c8bef1d6742ac68f33ecaed41826c9657bc33
   CocoaLumberjack: 17fe8581f84914d5d7e6360f7c70022b173c3ae0
+  Crashlytics: c3a2333dea9e2733d2777f730910321fc9e25c0d
+  Fabric: caf7580c725e64db144f610ac65cd60956911dc7
   ITSwitch: 7ff745d6f2a6910e9194b23e4eab9a843258a478
   LetsMove: 40dda5f7a19bf9976e150ce304fa5765892bef8f
   libextobjc: a650fc1bf489a3d3a9bc2e621efa3e1006fc5471

@@ -26,6 +26,10 @@ def common
     # Objective-c stuff
     pod 'ObjectiveSugar'
     pod 'libextobjc'
+    
+    # Fabric
+    pod 'Fabric'
+    pod 'Crashlytics'
 end
 
 target 'TVShows' do

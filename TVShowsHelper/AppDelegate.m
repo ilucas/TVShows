@@ -19,6 +19,8 @@
 #import "SubscriptionManager.h"
 #import "TheTVDB.h"
 
+@import Fabric;
+@import Crashlytics;
 @import AFNetworking;
 @import MagicalRecord;
 
@@ -37,8 +39,13 @@
     // Log
     [self setupLogging];
     
+    // Crashlytics
+    [Fabric with:@[[Crashlytics class]]];
+    
     // Core Data
     [self setupCoreData];
+    
+    [[NSUserDefaults standardUserDefaults] registerDefaults:@{@"NSApplicationCrashOnExceptions": @YES}];
 }
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
