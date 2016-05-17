@@ -58,7 +58,6 @@
 		A05A9C3D1C583BD600FBEF9A /* Subscription.m in Sources */ = {isa = PBXBuildFile; fileRef = A05A9C361C583BD600FBEF9A /* Subscription.m */; };
 		A06B4B361CA6133800FB3C3B /* SubscriptionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A06B4B351CA6133800FB3C3B /* SubscriptionManager.m */; };
 		A06D07F71CAB8628001E9511 /* RARBGTorrent.m in Sources */ = {isa = PBXBuildFile; fileRef = A06D07F61CAB8628001E9511 /* RARBGTorrent.m */; };
-		A06D26DF1CCDC96B006A0672 /* arrow-this.png in Resources */ = {isa = PBXBuildFile; fileRef = 57EBC9F91482A6FA006E068F /* arrow-this.png */; };
 		A06F87711AE6904700CD66DC /* OEUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = A06F87591AE6904700CD66DC /* OEUtilities.m */; };
 		A07A51F01C54389C00D40063 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A07A51EF1C54389C00D40063 /* Main.storyboard */; };
 		A07A51F71C543DCF00D40063 /* MainWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = A07A51F61C543DCF00D40063 /* MainWindowController.m */; };
@@ -187,7 +186,6 @@
 		3424AF2811EF6453009C49DD /* sv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = sv; path = Resources/sv.lproj/Localizable.strings; sourceTree = "<group>"; };
 		342A5428132D4CB800FB526F /* BWInsetTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BWInsetTextField.h; path = BWToolkit/BWInsetTextField.h; sourceTree = "<group>"; };
 		342A5429132D4CB800FB526F /* BWInsetTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BWInsetTextField.m; path = BWToolkit/BWInsetTextField.m; sourceTree = "<group>"; };
-		342FEC8411E1864000E21FC0 /* hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hd.png; sourceTree = "<group>"; };
 		34463CCE1331B424001453EB /* NSColor+BWAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSColor+BWAdditions.h"; path = "BWToolkit/NSColor+BWAdditions.h"; sourceTree = "<group>"; };
 		34463CCF1331B424001453EB /* NSColor+BWAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSColor+BWAdditions.m"; path = "BWToolkit/NSColor+BWAdditions.m"; sourceTree = "<group>"; };
 		34463CD61331BC3F001453EB /* CRViewSubclass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRViewSubclass.h; sourceTree = "<group>"; };
@@ -195,8 +193,6 @@
 		3447183A9BB6C01A14888407 /* Pods-TVShows.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TVShows.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TVShows/Pods-TVShows.debug.xcconfig"; sourceTree = "<group>"; };
 		344A204011F5470B00026735 /* MBSliderButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBSliderButton.h; sourceTree = "<group>"; };
 		344A204111F5470B00026735 /* MBSliderButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBSliderButton.m; sourceTree = "<group>"; };
-		344A205811F5485900026735 /* Toggle-Knob.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Toggle-Knob.png"; sourceTree = "<group>"; };
-		344A205911F5485900026735 /* Toggle-Slider.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Toggle-Slider.png"; sourceTree = "<group>"; };
 		344A637213330E960076FC2F /* LCLLogFileConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCLLogFileConfig.h; path = LCLLogFile/LCLLogFileConfig.h; sourceTree = "<group>"; };
 		345BE412119344E10016EA2D /* en */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = en; path = Resources/en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		346C5BDF11FF6056003830CC /* de */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = de; path = Resources/de.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -207,7 +203,6 @@
 		349FEE051183590500D24FC9 /* TVShows-Off-Large.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = "TVShows-Off-Large.icns"; sourceTree = "<group>"; };
 		349FEE071183590500D24FC9 /* TVShows-On-Large.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = "TVShows-On-Large.icns"; sourceTree = "<group>"; };
 		34A8FF9C1187C17000DDD3DE /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
-		34B6914011D9F1A9001E2518 /* get.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = get.png; sourceTree = "<group>"; };
 		34CBF76E1204B41300524936 /* et */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = et; path = Resources/et.lproj/Localizable.strings; sourceTree = "<group>"; };
 		34EA89D111E6434E005C031A /* en */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = en; path = Resources/en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		34F6EA39119BCAD100F8AD4C /* TVShows_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TVShows_Prefix.pch; sourceTree = SOURCE_ROOT; };
@@ -237,7 +232,6 @@
 		5793D8171369560000BFF6B0 /* gl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = gl; path = Resources/gl.lproj/Localizable.strings; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.simpleColoring; };
 		5793D8191369569F00BFF6B0 /* el */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = el; path = Resources/el.lproj/Localizable.strings; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.simpleColoring; };
 		579CAD5413AB8471006743B4 /* AppSecretConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppSecretConstants.h; sourceTree = "<group>"; };
-		579CAD5713AB9234006743B4 /* Miso-Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Miso-Logo.png"; sourceTree = "<group>"; };
 		57A9248713AFE5600038C76C /* af */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = af; path = Resources/af.lproj/Localizable.strings; sourceTree = "<group>"; };
 		57A9248813AFE5780038C76C /* eu */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = eu; path = Resources/eu.lproj/Localizable.strings; sourceTree = "<group>"; };
 		57A9248913AFE5830038C76C /* de-CH */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = "de-CH"; path = "Resources/de-CH.lproj/Localizable.strings"; sourceTree = "<group>"; };
@@ -254,17 +248,10 @@
 		57D19A1813AEF44A00BDE873 /* LRFilterButtonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRFilterButtonCell.m; sourceTree = "<group>"; };
 		57D19A1D13AEF44A00BDE873 /* LROverflowButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LROverflowButton.h; sourceTree = "<group>"; };
 		57D19A1E13AEF44A00BDE873 /* LROverflowButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LROverflowButton.m; sourceTree = "<group>"; };
-		57D19A2513AEF48700BDE873 /* FilterBarBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FilterBarBackground.png; sourceTree = "<group>"; };
-		57D19A2613AEF48700BDE873 /* OverflowButton.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = OverflowButton.tif; sourceTree = "<group>"; };
-		57D19A2713AEF48700BDE873 /* OverflowButtonPressed.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = OverflowButtonPressed.tif; sourceTree = "<group>"; };
-		57D19A2813AEF48700BDE873 /* OverflowDivider.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = OverflowDivider.png; sourceTree = "<group>"; };
 		57DCE07713695336001569D9 /* zh-Hans */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "Resources/zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.simpleColoring; };
 		57DCE0791369533B001569D9 /* pl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = pl; path = Resources/pl.lproj/Localizable.strings; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.simpleColoring; };
 		57E4EB3E136B9A23003E59E5 /* pt-PT */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = "pt-PT"; path = "Resources/pt-PT.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		57E4EB3F136B9A32003E59E5 /* pt-BR */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "Resources/pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
-		57EBC9F91482A6FA006E068F /* arrow-this.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow-this.png"; sourceTree = "<group>"; };
-		57F7062913AF32E5002A83E4 /* Cover-DVD.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Cover-DVD.png"; sourceTree = "<group>"; };
-		57F7062C13AF3798002A83E4 /* Cover-Bluray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Cover-Bluray.png"; sourceTree = "<group>"; };
 		7307200C2F9DC475536C0BA6 /* Pods-TVShowsHelper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TVShowsHelper.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TVShowsHelper/Pods-TVShowsHelper.debug.xcconfig"; sourceTree = "<group>"; };
 		A00468C91C56E69500732FB5 /* Preferences.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Preferences.storyboard; sourceTree = "<group>"; };
 		A00468CF1C56F94200732FB5 /* AboutWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutWindowController.swift; sourceTree = "<group>"; };
@@ -560,20 +547,8 @@
 		349FEE021183590500D24FC9 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				57EBC9F91482A6FA006E068F /* arrow-this.png */,
-				57F7062C13AF3798002A83E4 /* Cover-Bluray.png */,
-				57F7062913AF32E5002A83E4 /* Cover-DVD.png */,
-				57D19A2513AEF48700BDE873 /* FilterBarBackground.png */,
-				34B6914011D9F1A9001E2518 /* get.png */,
-				342FEC8411E1864000E21FC0 /* hd.png */,
-				579CAD5713AB9234006743B4 /* Miso-Logo.png */,
-				57D19A2613AEF48700BDE873 /* OverflowButton.tif */,
-				57D19A2713AEF48700BDE873 /* OverflowButtonPressed.tif */,
-				57D19A2813AEF48700BDE873 /* OverflowDivider.png */,
 				340A20B011AF0E15004351EB /* posterArtPlaceholder.jpg */,
 				571C60E2139905320072D921 /* ribbon.png */,
-				344A205811F5485900026735 /* Toggle-Knob.png */,
-				344A205911F5485900026735 /* Toggle-Slider.png */,
 				349FEE031183590500D24FC9 /* TVShows-Beta-Large.icns */,
 				5755750E136DC9E5006D1FC9 /* TVShows-Menu-Icon-Black.png */,
 				574499A81825AFEB00F0481E /* TVShows-Menu-Icon-Black@2x.png */,
@@ -1163,7 +1138,6 @@
 				A0AA85B41CAFA9C400A1388C /* LICENSE.txt in Resources */,
 				A0FBE7181CEAEE3A002C1ECF /* dsa_pub.pem in Resources */,
 				A0E931D31CDFF82100B61C2A /* About.storyboard in Resources */,
-				A06D26DF1CCDC96B006A0672 /* arrow-this.png in Resources */,
 				A00468CA1C56E69500732FB5 /* Preferences.storyboard in Resources */,
 				A084A6341CB0BBFF00DB3790 /* Acknowledgments.rtf in Resources */,
 			);
