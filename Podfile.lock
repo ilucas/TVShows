@@ -1,0 +1,126 @@
+PODS:
+  - AFNetworkActivityLogger (2.0.4):
+    - AFNetworking/NSURLConnection (~> 2.0)
+    - AFNetworking/NSURLSession (~> 2.0)
+  - AFNetworking (2.6.3):
+    - AFNetworking/NSURLConnection (= 2.6.3)
+    - AFNetworking/NSURLSession (= 2.6.3)
+    - AFNetworking/Reachability (= 2.6.3)
+    - AFNetworking/Security (= 2.6.3)
+    - AFNetworking/Serialization (= 2.6.3)
+    - AFNetworking/UIKit (= 2.6.3)
+  - AFNetworking/NSURLConnection (2.6.3):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/NSURLSession (2.6.3):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (2.6.3)
+  - AFNetworking/Security (2.6.3)
+  - AFNetworking/Serialization (2.6.3)
+  - AFOnoResponseSerializer (1.0.0):
+    - AFNetworking (~> 2.2)
+    - Ono (~> 1.0)
+  - CocoaLumberjack (2.2.0):
+    - CocoaLumberjack/Default (= 2.2.0)
+    - CocoaLumberjack/Extensions (= 2.2.0)
+  - CocoaLumberjack/Core (2.2.0)
+  - CocoaLumberjack/Default (2.2.0):
+    - CocoaLumberjack/Core
+  - CocoaLumberjack/Extensions (2.2.0):
+    - CocoaLumberjack/Default
+  - Crashlytics (3.7.0):
+    - Fabric (~> 1.6.3)
+  - Fabric (1.6.7)
+  - ITSwitch (1.0)
+  - LetsMove (1.20)
+  - libextobjc (0.4.1):
+    - libextobjc/EXTADT (= 0.4.1)
+    - libextobjc/EXTConcreteProtocol (= 0.4.1)
+    - libextobjc/EXTKeyPathCoding (= 0.4.1)
+    - libextobjc/EXTNil (= 0.4.1)
+    - libextobjc/EXTSafeCategory (= 0.4.1)
+    - libextobjc/EXTScope (= 0.4.1)
+    - libextobjc/EXTSelectorChecking (= 0.4.1)
+    - libextobjc/EXTSynthesize (= 0.4.1)
+    - libextobjc/NSInvocation+EXT (= 0.4.1)
+    - libextobjc/NSMethodSignature+EXT (= 0.4.1)
+    - libextobjc/RuntimeExtensions (= 0.4.1)
+    - libextobjc/UmbrellaHeader (= 0.4.1)
+  - libextobjc/EXTADT (0.4.1):
+    - libextobjc/RuntimeExtensions
+  - libextobjc/EXTConcreteProtocol (0.4.1):
+    - libextobjc/RuntimeExtensions
+  - libextobjc/EXTKeyPathCoding (0.4.1):
+    - libextobjc/RuntimeExtensions
+  - libextobjc/EXTNil (0.4.1):
+    - libextobjc/RuntimeExtensions
+  - libextobjc/EXTSafeCategory (0.4.1):
+    - libextobjc/RuntimeExtensions
+  - libextobjc/EXTScope (0.4.1):
+    - libextobjc/RuntimeExtensions
+  - libextobjc/EXTSelectorChecking (0.4.1):
+    - libextobjc/RuntimeExtensions
+  - libextobjc/EXTSynthesize (0.4.1):
+    - libextobjc/RuntimeExtensions
+  - libextobjc/NSInvocation+EXT (0.4.1):
+    - libextobjc/RuntimeExtensions
+  - libextobjc/NSMethodSignature+EXT (0.4.1):
+    - libextobjc/RuntimeExtensions
+  - libextobjc/RuntimeExtensions (0.4.1)
+  - libextobjc/UmbrellaHeader (0.4.1)
+  - MagicalRecord/CocoaLumberjack (2.3.2):
+    - CocoaLumberjack (~> 2.0)
+    - MagicalRecord/Core
+  - MagicalRecord/Core (2.3.2)
+  - MagicalRecord/ShorthandMethodAliases (2.3.2)
+  - Mantle (2.0.6):
+    - Mantle/extobjc (= 2.0.6)
+  - Mantle/extobjc (2.0.6)
+  - MTLManagedObjectAdapter (1.0.2):
+    - Mantle (~> 2.0)
+    - MTLManagedObjectAdapter/extobjc (= 1.0.2)
+  - MTLManagedObjectAdapter/extobjc (1.0.2):
+    - Mantle (~> 2.0)
+  - ObjectiveSugar (1.1.0)
+  - Ono (1.2.2)
+  - Sparkle (1.14.0)
+
+DEPENDENCIES:
+  - AFNetworkActivityLogger (~> 2.0)
+  - AFNetworking (~> 2.6)
+  - AFOnoResponseSerializer (~> 1.0)
+  - CocoaLumberjack (~> 2.2)
+  - Crashlytics
+  - Fabric
+  - ITSwitch (~> 1.0)
+  - LetsMove
+  - libextobjc
+  - MagicalRecord/CocoaLumberjack (~> 2.3)
+  - MagicalRecord/ShorthandMethodAliases (~> 2.3)
+  - Mantle (~> 2.0)
+  - MTLManagedObjectAdapter (~> 1.0)
+  - ObjectiveSugar
+  - Ono (~> 1.2)
+  - Sparkle
+
+SPEC CHECKSUMS:
+  AFNetworkActivityLogger: 121486778117d53b3ab1c61d264b88081d0c3eee
+  AFNetworking: cb8d14a848e831097108418f5d49217339d4eb60
+  AFOnoResponseSerializer: c02c8bef1d6742ac68f33ecaed41826c9657bc33
+  CocoaLumberjack: 17fe8581f84914d5d7e6360f7c70022b173c3ae0
+  Crashlytics: c3a2333dea9e2733d2777f730910321fc9e25c0d
+  Fabric: caf7580c725e64db144f610ac65cd60956911dc7
+  ITSwitch: 7ff745d6f2a6910e9194b23e4eab9a843258a478
+  LetsMove: 40dda5f7a19bf9976e150ce304fa5765892bef8f
+  libextobjc: a650fc1bf489a3d3a9bc2e621efa3e1006fc5471
+  MagicalRecord: 53bed74b4323b930992a725be713e53b37d19755
+  Mantle: 299966b00759634931699f69cb6a30b9239b944d
+  MTLManagedObjectAdapter: 7e9bf033525c741129912b1a80bf36fb570b8286
+  ObjectiveSugar: a6a25f23d657c19df0a0b972466d5b5ca9f5295c
+  Ono: 80b1c686777d3f6d5d5ce6fcac8a74afef4ca197
+  Sparkle: ccd95233b12a3e3d4eeb55ff01dd4c8bb8188b07
+
+COCOAPODS: 0.39.0

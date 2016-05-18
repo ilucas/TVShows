@@ -1,64 +1,27 @@
 /*
- *	This file is part of the TVShows 2 ("Phoenix") source code.
- *	http://github.com/victorpimentel/TVShows/
+ *  This file is part of the TVShows source code.
+ *  http://github.com/ilucas/TVShows
  *
- *	TVShows is free software: you can redistribute it and/or modify
- *	it under the terms of the GNU General Public License as published by
- *	the Free Software Foundation, either version 3 of the License, or
- *	(at your option) any later version.
+ *  TVShows is free software: you can redistribute it and/or modify
+ *  it under the terms of the GNU General Public License as published by
+ *  the Free Software Foundation, either version 3 of the License, or
+ *  (at your option) any later version.
  *
- *	You should have received a copy of the GNU General Public License
- *	along with TVShows. If not, see <http://www.gnu.org/licenses/>.
- *
+ *  You should have received a copy of the GNU General Public License
+ *  along with TVShows. If not, see <http://www.gnu.org/licenses/>.
  */
 
 #ifdef __OBJC__
-    #import <Foundation/Foundation.h>
-    #import <AppKit/AppKit.h>
-    #import "LCLLogFile.h"
+    // Swift bridge
+    #import "TVShows-Swift.h"
+
+    @import CocoaLumberjack;
+
+    // Define log level
+    #if DEBUG
+        static DDLogLevel ddLogLevel = DDLogLevelVerbose;
+    #else
+        static DDLogLevel ddLogLevel = DDLogLevelInfo;
+    #endif
+
 #endif
-
-// Bundle version of the application
-#define TSBundleVersion [[[NSBundle bundleWithIdentifier: CurrentBundleDomain] infoDictionary] \
-                                             valueForKey:@"CFBundleVersion"]
-#define TSBundleShortVersionString [[[NSBundle bundleWithIdentifier: CurrentBundleDomain] infoDictionary] \
-                                                        valueForKey:@"CFBundleShortVersionString"]
-
-// TVShows uses parts of LibComponentLogging <http://0xc0.de/LibComponentLogging>.
-// Check out the full library for even more awesome power.
-#if HELPER_APP
-    #define LogIdentifier [NSString stringWithFormat:@"[%@ ~ Downloader]", TSBundleVersion]
-#else
-    #define LogIdentifier [NSString stringWithFormat:@"[%@ ~ Main App]", TSBundleVersion]
-#endif
-
-// Define the _ts_logger macro
-#define _ts_logger(_level, _format, ...) {                                     \
-    NSAutoreleasePool *_ts_logger_pool = [[NSAutoreleasePool alloc] init];     \
-    [LCLLogFile logWithIdentifier:[LogIdentifier UTF8String]                   \
-                            level:_level                                       \
-                             path:__FILE__                                     \
-                             line:__LINE__                                     \
-                         function:__PRETTY_FUNCTION__                          \
-                           format:_format,                                     \
-                               ## __VA_ARGS__];                                \
-    [_ts_logger_pool drain];                                                   \
-}
-
-// Define easy to remember logging macros
-#define LogCritical(...) //_ts_logger(1, __VA_ARGS__)
-#define LogError(...) //_ts_logger(2, __VA_ARGS__)
-#define LogWarning(...) //_ts_logger(3, __VA_ARGS__)
-#define LogInfo(...) //_ts_logger(4, __VA_ARGS__)
-
-#ifdef DEBUG
-    #define LogDebug(...) //_ts_logger(5, __VA_ARGS__)
-    #define LogTrace(...) //_ts_logger(6, __VA_ARGS__)
-#else
-    #define LogDebug(...) do { } while (0)
-    #define LogTrace(...) do { } while (0)
-#endif
-
-// I'm sure that this is entirely unorthodox, but let's make a custom
-// localization macro to save us from having to type all this crap in.
-#define TSLocalizeString(...) NSLocalizedStringFromTableInBundle(__VA_ARGS__, @"Localizable", [NSBundle bundleForClass:[self class]], nil)

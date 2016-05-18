@@ -1,0 +1,1 @@
+../../../MTLManagedObjectAdapter/MTLManagedObjectAdapter/extobjc/mtl_moa_metamacros.h

@@ -12,6 +12,7 @@ xcuserdata
 DerivedData
 *.hmap
 *.xcuserstate
+*.xcscmblueprint
 
 # OSX Noise
 .DS_Store
@@ -25,3 +26,13 @@ config/
 
 # Real "Secrets" configuration file
 Classes/AppSecretConstants.h
+
+Crashlytics.sh
+
+# Update private certificate
+Resources/dsa_priv.pem
+
+Release/TVShows*
+Release/wc.dmg
+Release/template.dmg
+

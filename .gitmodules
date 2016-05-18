@@ -1,6 +1,0 @@
-[submodule "Classes/FeedParser"]
-	path = Classes/FeedParser
-  url = https://github.com/victorpimentel/feedparser.git
-[submodule "Classes/RegexKitLite"]
-	path = Classes/RegexKitLite
-  url = https://github.com/victorpimentel/RegexKitLite.git

@@ -1,0 +1,6 @@
+framework module AFOnoResponseSerializer {
+  umbrella header "AFOnoResponseSerializer-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10171" systemVersion="15E65" minimumToolsVersion="Xcode 4.3">
+    <entity name="Episode" representedClassName="Episode" syncable="YES">
+        <attribute name="airDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="downloaded" optional="YES" attributeType="Boolean" defaultValueString="NO" indexed="YES" syncable="YES"/>
+        <attribute name="episode" attributeType="Integer 32" indexed="YES" syncable="YES"/>
+        <attribute name="episodeID" attributeType="Integer 32" indexed="YES" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="number" optional="YES" attributeType="Integer 32" syncable="YES"/>
+        <attribute name="overview" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="rating" optional="YES" attributeType="Float" minValueString="0" maxValueString="5" syncable="YES"/>
+        <attribute name="season" attributeType="Integer 32" indexed="YES" syncable="YES"/>
+        <relationship name="serie" maxCount="1" deletionRule="Nullify" destinationEntity="Serie" inverseName="episodes" inverseEntity="Serie" syncable="YES"/>
+    </entity>
+    <entity name="Serie" representedClassName="Serie" syncable="YES">
+        <attribute name="airDay" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="airTime" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="contentRating" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="firstAired" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="genre" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="imdb" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lastUpdated" optional="YES" attributeType="Integer 64" syncable="YES"/>
+        <attribute name="name" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="network" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="overview" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="poster" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="rating" optional="YES" attributeType="Float" minValueString="0" maxValueString="5" syncable="YES"/>
+        <attribute name="runtime" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="seasons" optional="YES" attributeType="Integer 16" syncable="YES"/>
+        <attribute name="serieID" attributeType="Integer 32" indexed="YES" syncable="YES"/>
+        <attribute name="status" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="episodes" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Episode" inverseName="serie" inverseEntity="Episode" syncable="YES"/>
+        <relationship name="subscription" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Subscription" inverseName="serie" inverseEntity="Subscription" syncable="YES"/>
+    </entity>
+    <entity name="Subscription" representedClassName="Subscription" syncable="YES">
+        <attribute name="filters" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="isEnabled" attributeType="Boolean" defaultValueString="YES" syncable="YES"/>
+        <attribute name="lastDownloaded" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="quality" attributeType="String" syncable="YES"/>
+        <relationship name="serie" maxCount="1" deletionRule="Nullify" destinationEntity="Serie" inverseName="subscription" inverseEntity="Serie" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Episode" positionX="63" positionY="54" width="128" height="195"/>
+        <element name="Serie" positionX="297" positionY="-81" width="128" height="315"/>
+        <element name="Subscription" positionX="502" positionY="126" width="128" height="120"/>
+    </elements>
+</model>

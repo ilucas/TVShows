@@ -1,0 +1,11 @@
+framework module MTLManagedObjectAdapter {
+  umbrella header "MTLManagedObjectAdapter-umbrella.h"
+
+  export *
+  module * { export * }
+
+  private header "mtl_moa_EXTKeyPathCoding.h"
+  private header "mtl_moa_EXTRuntimeExtensions.h"
+  private header "mtl_moa_EXTScope.h"
+  private header "mtl_moa_metamacros.h"
+}

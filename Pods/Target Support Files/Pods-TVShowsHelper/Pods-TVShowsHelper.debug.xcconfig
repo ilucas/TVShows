@@ -1,0 +1,9 @@
+CODE_SIGN_IDENTITY =
+FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Crashlytics/OSX" "${PODS_ROOT}/Fabric/OSX"
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+HEADER_SEARCH_PATHS = $(SDKROOT)/usr/include/libxml2 $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/Crashlytics" "${PODS_ROOT}/Headers/Public/Fabric" "${PODS_ROOT}/Headers/Public/Sparkle"
+LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/../Frameworks' '@loader_path/Frameworks'
+OTHER_CFLAGS = $(inherited) -iquote "$CONFIGURATION_BUILD_DIR/AFNetworkActivityLogger.framework/Headers" -iquote "$CONFIGURATION_BUILD_DIR/AFNetworking.framework/Headers" -iquote "$CONFIGURATION_BUILD_DIR/AFOnoResponseSerializer.framework/Headers" -iquote "$CONFIGURATION_BUILD_DIR/CocoaLumberjack.framework/Headers" -iquote "$CONFIGURATION_BUILD_DIR/MTLManagedObjectAdapter.framework/Headers" -iquote "$CONFIGURATION_BUILD_DIR/MagicalRecord.framework/Headers" -iquote "$CONFIGURATION_BUILD_DIR/Mantle.framework/Headers" -iquote "$CONFIGURATION_BUILD_DIR/ObjectiveSugar.framework/Headers" -iquote "$CONFIGURATION_BUILD_DIR/Ono.framework/Headers" -iquote "$CONFIGURATION_BUILD_DIR/libextobjc.framework/Headers" -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/Crashlytics" -isystem "${PODS_ROOT}/Headers/Public/Fabric" -isystem "${PODS_ROOT}/Headers/Public/Sparkle"
+OTHER_LDFLAGS = $(inherited) -ObjC -l"c++" -l"z" -framework "AFNetworkActivityLogger" -framework "AFNetworking" -framework "AFOnoResponseSerializer" -framework "CocoaLumberjack" -framework "Crashlytics" -framework "Fabric" -framework "MTLManagedObjectAdapter" -framework "MagicalRecord" -framework "Mantle" -framework "ObjectiveSugar" -framework "Ono" -framework "Security" -framework "SystemConfiguration" -framework "libextobjc"
+PODS_FRAMEWORK_BUILD_PATH = $(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Pods-TVShowsHelper
+PODS_ROOT = ${SRCROOT}/Pods
