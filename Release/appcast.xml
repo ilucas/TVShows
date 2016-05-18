@@ -5,5 +5,18 @@
     <link>https://raw.github.com/ilucas/TVShows/master/Release/appcast.xml</link>
     <description>Most recent changes with links to updates.</description>
     <language>en</language>
+    <item>
+      <title>Version 3.0.0-alpha.1</title>
+      <sparkle:minimumSystemVersion>10.10</sparkle:minimumSystemVersion>
+      <description>
+        <![CDATA[<ul><li> 
+<p>For a full list of changes, <a href="https://github.com/ilucas/TVShows/releases/tag/v3.0.0-alpha.1">Click here</a>.</p>
+</li></ul> 
+]]>
+      </description>
+      <pubDate>Wed, 18 May 2016 16:52:28 -0300</pubDate>
+      <enclosure type='application/octet-stream' sparkle:shortVersionString='3.0.0-alpha.1' sparkle:version='712' sparkle:dsaSignature='MC0CFFHxS5pRIb3xCDEcF0IRx5KBQEmLAhUAv4O70ykaVzp9IcJKhH5craXpYLE=
+' length='9425223' url='https://github.com/ilucas/TVShows/releases/download/v3.0.0-alpha.1/TVShows-3.0.0-alpha.1.dmg'/>
+    </item>
   </channel>
 </rss>
