@@ -33,21 +33,31 @@
 #pragma mark - Action
 
 - (void)helperAlert:(id)sender {
-    //NSAlert *alert = [[NSAlert alloc] init];
+    NSAlert *alert = [[NSAlert alloc] init];
+    [alert setMessageText:NSLocalizedString(@"TVShows Helper is not enabled.", @"TVShows Helper is not enabled.")];
+    [alert setInformativeText:NSLocalizedString(@"Do you want to enable TVShows Helper?", @"Do you want to enable TVShows Helper?")];
+    [alert addButtonWithTitle:NSLocalizedString(@"Enable Helper", @"Enable Helper")];
+    [alert addButtonWithTitle:NSLocalizedString(@"Cancel", @"Cancel button title")];
+    [alert addButtonWithTitle:NSLocalizedString(@"Open Preferences", @"Open Preferences")];
     
-//    [alert beginSheetModalForWindow:self.window completionHandler:^(NSModalResponse returnCode) {
-//    }];
+    [alert beginSheetModalForWindow:self.window completionHandler:^(NSModalResponse returnCode) {
+        if (returnCode == NSAlertFirstButtonReturn) {// Enable Helper
+            [LaunchAgent enabledLoginItem:YES];
+        } else if (returnCode == NSAlertThirdButtonReturn) {// Open Preferences
+            [[NSApp delegate] openPreferences];
+        }
+    }];
 }
 
 #pragma mark - NSWindowDelegate
 
 - (void)windowDidBecomeKey:(NSNotification *)notification {
-//    if (![LaunchAgent loginItemIsEnabled]) {
-//        if (self.toolBar.items.count < 3)
-//            [self.toolBar insertItemWithItemIdentifier:@"HelperToolbarItem" atIndex:2];
-//    } else if (self.toolBar.items.count > 2) {
-//        [self.toolBar removeItemAtIndex:2];
-//    }
+    if (![LaunchAgent loginItemIsEnabled]) {
+        if (self.toolBar.items.count < 3)
+            [self.toolBar insertItemWithItemIdentifier:@"HelperToolbarItem" atIndex:2];
+    } else if (self.toolBar.items.count > 2) {
+        [self.toolBar removeItemAtIndex:2];
+    }
 }
 
 - (NSSize)window:(NSWindow *)window willUseFullScreenContentSize:(NSSize)size {
