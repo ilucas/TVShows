@@ -104,8 +104,6 @@
 		A0D790BD1CB37C9100C4D32D /* TVShowsHelper.app in Copy Helper */ = {isa = PBXBuildFile; fileRef = A0F43D221C6A99F3005ABB35 /* TVShowsHelper.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		A0DD74461CEB9BE200492C55 /* CrashlyticsLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = A0DD74431CEB9BE200492C55 /* CrashlyticsLogger.m */; };
 		A0DD74471CEB9BE200492C55 /* CrashlyticsLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = A0DD74431CEB9BE200492C55 /* CrashlyticsLogger.m */; };
-		A0DD74531CEBA90000492C55 /* Crashlytics.sh in Resources */ = {isa = PBXBuildFile; fileRef = A0DD74521CEBA90000492C55 /* Crashlytics.sh */; };
-		A0DD74541CEBA90000492C55 /* Crashlytics.sh in Resources */ = {isa = PBXBuildFile; fileRef = A0DD74521CEBA90000492C55 /* Crashlytics.sh */; };
 		A0DD957E1CB616470016CF50 /* AdvancedPreferencesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0DD957D1CB616470016CF50 /* AdvancedPreferencesViewController.m */; };
 		A0E02F731CD81003008BFAC2 /* GridViewSubscriptionItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A0E02F721CD81003008BFAC2 /* GridViewSubscriptionItemCell.m */; };
 		A0E02F761CD81828008BFAC2 /* GridViewCellIndicationLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = A0E02F751CD81828008BFAC2 /* GridViewCellIndicationLayer.m */; };
@@ -1074,7 +1072,6 @@
 				A00B46211AEC7F1B0022BDBF /* posterArtPlaceholder.jpg in Resources */,
 				A0AA85B41CAFA9C400A1388C /* LICENSE.txt in Resources */,
 				A0FBE7181CEAEE3A002C1ECF /* dsa_pub.pem in Resources */,
-				A0DD74531CEBA90000492C55 /* Crashlytics.sh in Resources */,
 				A0E931D31CDFF82100B61C2A /* About.storyboard in Resources */,
 				A00468CA1C56E69500732FB5 /* Preferences.storyboard in Resources */,
 				A084A6341CB0BBFF00DB3790 /* Acknowledgments.rtf in Resources */,
@@ -1087,7 +1084,6 @@
 			files = (
 				A015F6231CE4FA2C00A3376A /* Assets.xcassets in Resources */,
 				A0F43D2E1C6A99F3005ABB35 /* MainMenu.xib in Resources */,
-				A0DD74541CEBA90000492C55 /* Crashlytics.sh in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
