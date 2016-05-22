@@ -220,13 +220,173 @@
             <objects>
                 <viewController title="Advanced" id="ORy-ZF-Diy" customClass="AdvancedPreferencesViewController" sceneMemberID="viewController">
                     <view key="view" id="JDo-qS-i4t">
-                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="163"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <userGuides>
+                            <userLayoutGuide location="225" affinity="minX"/>
+                        </userGuides>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0XV-K8-7Xl">
+                                <rect key="frame" x="161" y="126" width="66" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Log Level:" id="81Z-rs-V8N">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XRb-9e-5Xi">
+                                <rect key="frame" x="231" y="119" width="153" height="26"/>
+                                <popUpButtonCell key="cell" type="push" title="Item 1" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="dwU-OQ-EO1" id="Jbs-Hf-YaO">
+                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="menu"/>
+                                    <menu key="menu" id="bii-Da-aPA">
+                                        <items>
+                                            <menuItem title="Item 1" state="on" id="dwU-OQ-EO1"/>
+                                            <menuItem title="Item 2" id="n3s-5c-dOj"/>
+                                            <menuItem title="Item 3" id="1lG-Gk-JFA"/>
+                                        </items>
+                                    </menu>
+                                </popUpButtonCell>
+                                <connections>
+                                    <binding destination="VUl-Ll-CeH" name="selectedTag" keyPath="values.logLevel" id="yoy-iR-uL1"/>
+                                </connections>
+                            </popUpButton>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ild-8k-ARg">
+                                <rect key="frame" x="85" y="97" width="142" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Log Rolling Frequency:" id="gvE-zl-Uwo">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pdy-zU-k7V">
+                                <rect key="frame" x="81" y="69" width="146" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Maximum Log File Size:" id="8Yf-fg-E8a">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PF2-xi-Q2j">
+                                <rect key="frame" x="233" y="94" width="50" height="22"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="Lx2-q8-JL7">
+                                    <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="3" id="ZiS-Kg-hsz">
+                                        <real key="minimum" value="1"/>
+                                        <real key="maximum" value="100"/>
+                                    </numberFormatter>
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                                <connections>
+                                    <binding destination="VUl-Ll-CeH" name="value" keyPath="values.logRollingFrequency" id="sgI-ki-AJD"/>
+                                </connections>
+                            </textField>
+                            <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kvs-ZH-n8Q">
+                                <rect key="frame" x="281" y="92" width="19" height="27"/>
+                                <stepperCell key="cell" continuous="YES" alignment="left" minValue="1" maxValue="100" doubleValue="1" id="QBZ-nq-PNn"/>
+                                <connections>
+                                    <binding destination="VUl-Ll-CeH" name="value" keyPath="values.logRollingFrequency" id="vXg-Jq-eRd"/>
+                                </connections>
+                            </stepper>
+                            <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lFE-aW-70p">
+                                <rect key="frame" x="303" y="92" width="81" height="26"/>
+                                <popUpButtonCell key="cell" type="push" title="Weekly" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" tag="604800" imageScaling="proportionallyDown" inset="2" selectedItem="RiI-3X-RLZ" id="j7g-LK-1ur">
+                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="menu"/>
+                                    <menu key="menu" id="g6v-eA-ESf">
+                                        <items>
+                                            <menuItem title="Hourly" tag="3600" id="nwl-8e-nYq">
+                                                <modifierMask key="keyEquivalentModifierMask"/>
+                                            </menuItem>
+                                            <menuItem title="Daily" tag="86400" id="GaK-XN-4Ll">
+                                                <modifierMask key="keyEquivalentModifierMask"/>
+                                            </menuItem>
+                                            <menuItem title="Weekly" state="on" tag="604800" id="RiI-3X-RLZ">
+                                                <modifierMask key="keyEquivalentModifierMask"/>
+                                            </menuItem>
+                                            <menuItem title="Monthly" tag="2629800" id="Sfc-Rc-mHq">
+                                                <modifierMask key="keyEquivalentModifierMask"/>
+                                            </menuItem>
+                                        </items>
+                                    </menu>
+                                </popUpButtonCell>
+                                <connections>
+                                    <binding destination="VUl-Ll-CeH" name="selectedTag" keyPath="values.logRollingFrequencyUnity" id="CvH-sl-Xe0"/>
+                                </connections>
+                            </popUpButton>
+                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mrc-IO-ONS">
+                                <rect key="frame" x="233" y="66" width="50" height="22"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="YEt-xT-KKI">
+                                    <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="3" id="kNK-3S-hXy"/>
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                                <connections>
+                                    <binding destination="VUl-Ll-CeH" name="value" keyPath="values.maximumLogFileSize" id="fgE-W6-cth"/>
+                                </connections>
+                            </textField>
+                            <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9lt-R8-tAt">
+                                <rect key="frame" x="281" y="64" width="19" height="27"/>
+                                <stepperCell key="cell" continuous="YES" alignment="left" minValue="1" maxValue="100" doubleValue="1" id="KRP-Hn-rZ7"/>
+                                <connections>
+                                    <binding destination="VUl-Ll-CeH" name="value" keyPath="values.maximumLogFileSize" id="cQz-mQ-eQP"/>
+                                </connections>
+                            </stepper>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SnM-aP-xaH">
+                                <rect key="frame" x="33" y="39" width="194" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Maximum Number Of Log Files:" id="pdd-Qv-WS1">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QvW-Va-hkw">
+                                <rect key="frame" x="233" y="36" width="133" height="22"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="LG7-w0-wzL">
+                                    <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="3" id="scD-fm-kaD"/>
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                                <connections>
+                                    <binding destination="VUl-Ll-CeH" name="value" keyPath="values.maximumNumberOfLogFiles" id="dnb-hY-yM9"/>
+                                </connections>
+                            </textField>
+                            <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2eQ-K5-qlD">
+                                <rect key="frame" x="365" y="34" width="19" height="27"/>
+                                <stepperCell key="cell" continuous="YES" alignment="left" maxValue="100" id="YcO-Tv-syL"/>
+                                <connections>
+                                    <binding destination="VUl-Ll-CeH" name="value" keyPath="values.maximumNumberOfLogFiles" id="Mtd-5E-X4g"/>
+                                </connections>
+                            </stepper>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vQp-dv-DwI">
+                                <rect key="frame" x="303" y="68" width="35" height="19"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="MB" id="4w1-wz-RTk">
+                                    <font key="font" metaFont="system" size="15"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DGC-0C-RED">
+                                <rect key="frame" x="33" y="12" width="350" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="* Settings will be applied on the next launch." id="C8J-kU-E9c">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
                     </view>
+                    <connections>
+                        <outlet property="logLevelPopMenu" destination="XRb-9e-5Xi" id="53v-fx-VuA"/>
+                    </connections>
                 </viewController>
                 <customObject id="mWE-ZR-bCa" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <userDefaultsController id="VUl-Ll-CeH" customClass="UserDefaultsController"/>
             </objects>
-            <point key="canvasLocation" x="-417" y="250"/>
+            <point key="canvasLocation" x="-417" y="181.5"/>
         </scene>
     </scenes>
     <resources>

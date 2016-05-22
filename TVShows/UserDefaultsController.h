@@ -12,8 +12,6 @@
 
 @import Cocoa;
 
-@interface AdvancedPreferencesViewController : NSViewController
-
-@property (weak) IBOutlet NSPopUpButton *logLevelPopMenu;
+@interface UserDefaultsController : NSUserDefaultsController
 
 @end

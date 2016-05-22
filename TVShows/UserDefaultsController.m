@@ -10,10 +10,14 @@
  *  along with TVShows. If not, see <http://www.gnu.org/licenses/>.
  */
 
-@import Cocoa;
+#import "UserDefaultsController.h"
+#import "AppDelegate.h"
 
-@interface AdvancedPreferencesViewController : NSViewController
+@implementation UserDefaultsController
 
-@property (weak) IBOutlet NSPopUpButton *logLevelPopMenu;
+- (instancetype)initWithCoder:(NSCoder *)coder {
+    NSUserDefaults *defaults = [[NSApp delegate] sharedUserDefaults];
+    return [super initWithDefaults:defaults initialValues:@{}];
+}
 
 @end

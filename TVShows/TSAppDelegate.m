@@ -39,17 +39,27 @@ NSString * const kApplicationGroup = @"group.TVShows";
     
     // Setup Crashlytics log
     [DDLog addLogger:[CrashlyticsLogger sharedInstance]];
-    
+        
     // Setup AFNetworking log
     AFNetworkActivityLogger *afLogger = [AFNetworkActivityLogger sharedLogger];
     [afLogger setLevel:AFLoggerLevelInfo];
     [afLogger startLogging];
     
+    NSUserDefaults *defaults = [self sharedUserDefaults];
+    NSInteger logRollingFrequency = [defaults integerForKey:@"logRollingFrequency"];
+    NSInteger logRollingFrequencyUnity = [defaults integerForKey:@"logRollingFrequencyUnity"];
+    NSInteger maximumLogFileSize = [defaults integerForKey:@"maximumLogFileSize"];
+    NSInteger maximumNumberOfLogFiles = [defaults integerForKey:@"maximumNumberOfLogFiles"];
+    
+    // Change log Level.
+    //ddLogLevel = (DDLogLevel)[defaults integerForKey:@"logLevel"];
+    
     // Setup logging to rolling log files
     DDFileLogger *fileLogger = [[DDFileLogger alloc] init];
-    [fileLogger setRollingFrequency:60 * 60 * 24]; // Roll logs every day
-    [fileLogger setMaximumFileSize:1024 * 1024 * 2]; // max 2 mb
-    [fileLogger.logFileManager setMaximumNumberOfLogFiles:7]; // Keep 7 days only
+    fileLogger.rollingFrequency = (logRollingFrequency * logRollingFrequencyUnity);
+    fileLogger.maximumFileSize = (1024 * 1024 * maximumLogFileSize);
+    [fileLogger.logFileManager setMaximumNumberOfLogFiles:maximumNumberOfLogFiles];
+    
     [DDLog addLogger:fileLogger];
 }
 
@@ -65,7 +75,11 @@ NSString * const kApplicationGroup = @"group.TVShows";
     static NSUserDefaults *shared = nil;
     
     if (!shared) {
+        NSString *preferencesFile = [[NSBundle mainBundle] pathForResource:@"Preferences" ofType:@"plist"];
+        NSDictionary *preferences = [NSDictionary dictionaryWithContentsOfFile:preferencesFile];
+        
         shared = [[NSUserDefaults alloc] initWithSuiteName:kApplicationGroup];
+        [shared registerDefaults:preferences];
     }
     
     return shared;

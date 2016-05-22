@@ -69,6 +69,9 @@
 		A095178E1CA24FD600FBF76B /* TVDBImageOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = A095178D1CA24FD600FBF76B /* TVDBImageOperation.m */; };
 		A095178F1CA24FD600FBF76B /* TVDBImageOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = A095178D1CA24FD600FBF76B /* TVDBImageOperation.m */; };
 		A09521EA1AF6BDD4005AC0EF /* TVShows.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A06F88031AE6B92900CD66DC /* TVShows.xcdatamodeld */; };
+		A0A4C0301CF0E8C100A8966F /* UserDefaultsController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0A4C02F1CF0E8C100A8966F /* UserDefaultsController.m */; };
+		A0A4C0321CF1321300A8966F /* Preferences.plist in Resources */ = {isa = PBXBuildFile; fileRef = A0A4C0311CF1321300A8966F /* Preferences.plist */; };
+		A0A4C0331CF1321300A8966F /* Preferences.plist in Resources */ = {isa = PBXBuildFile; fileRef = A0A4C0311CF1321300A8966F /* Preferences.plist */; };
 		A0A8763D1CB8A7D900D479B5 /* EpisodesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0A8763C1CB8A7D900D479B5 /* EpisodesViewController.m */; };
 		A0A9DAC31C97BC1500C9299F /* MTLModel+JSONAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = A0A9DAA91C97BC1500C9299F /* MTLModel+JSONAdapter.m */; };
 		A0A9DAC41C97BC1500C9299F /* MTLModel+JSONAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = A0A9DAA91C97BC1500C9299F /* MTLModel+JSONAdapter.m */; };
@@ -297,6 +300,9 @@
 		A08DE3D51C78E26D00040D78 /* RARBGSearchOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RARBGSearchOperation.m; path = Providers/RARBG/RARBGSearchOperation.m; sourceTree = "<group>"; };
 		A095178C1CA24FD600FBF76B /* TVDBImageOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TVDBImageOperation.h; path = TVShows/TheTVDB/TVDBImageOperation.h; sourceTree = SOURCE_ROOT; };
 		A095178D1CA24FD600FBF76B /* TVDBImageOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TVDBImageOperation.m; path = TVShows/TheTVDB/TVDBImageOperation.m; sourceTree = SOURCE_ROOT; };
+		A0A4C02E1CF0E8C100A8966F /* UserDefaultsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDefaultsController.h; sourceTree = "<group>"; };
+		A0A4C02F1CF0E8C100A8966F /* UserDefaultsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDefaultsController.m; sourceTree = "<group>"; };
+		A0A4C0311CF1321300A8966F /* Preferences.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Preferences.plist; path = Resources/Preferences.plist; sourceTree = SOURCE_ROOT; };
 		A0A8763B1CB8A7D900D479B5 /* EpisodesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EpisodesViewController.h; sourceTree = "<group>"; };
 		A0A8763C1CB8A7D900D479B5 /* EpisodesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EpisodesViewController.m; sourceTree = "<group>"; };
 		A0A9DAA81C97BC1500C9299F /* MTLModel+JSONAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "MTLModel+JSONAdapter.h"; path = "TVShows/TheTVDB/MTLModel+JSONAdapter.h"; sourceTree = SOURCE_ROOT; };
@@ -527,6 +533,7 @@
 				A0F43D1B1C6A96C7005ABB35 /* TSAppDelegate.h */,
 				A0F43D1C1C6A96C7005ABB35 /* TSAppDelegate.m */,
 				A0DD74521CEBA90000492C55 /* Crashlytics.sh */,
+				A0A4C0311CF1321300A8966F /* Preferences.plist */,
 			);
 			name = "Shared Sources";
 			path = TVShows;
@@ -575,6 +582,8 @@
 				A0CE35131CB2323E00581409 /* LaunchAgent.m */,
 				A084A6421CB0E01600DB3790 /* PreferencesTabViewController.h */,
 				A084A6431CB0E01600DB3790 /* PreferencesTabViewController.m */,
+				A0A4C02E1CF0E8C100A8966F /* UserDefaultsController.h */,
+				A0A4C02F1CF0E8C100A8966F /* UserDefaultsController.m */,
 				A0DD957F1CB6170F0016CF50 /* Preferences View Controllers */,
 			);
 			name = "Preferences Window";
@@ -1072,6 +1081,7 @@
 				A00B46211AEC7F1B0022BDBF /* posterArtPlaceholder.jpg in Resources */,
 				A0AA85B41CAFA9C400A1388C /* LICENSE.txt in Resources */,
 				A0FBE7181CEAEE3A002C1ECF /* dsa_pub.pem in Resources */,
+				A0A4C0321CF1321300A8966F /* Preferences.plist in Resources */,
 				A0E931D31CDFF82100B61C2A /* About.storyboard in Resources */,
 				A00468CA1C56E69500732FB5 /* Preferences.storyboard in Resources */,
 				A084A6341CB0BBFF00DB3790 /* Acknowledgments.rtf in Resources */,
@@ -1084,6 +1094,7 @@
 			files = (
 				A015F6231CE4FA2C00A3376A /* Assets.xcassets in Resources */,
 				A0F43D2E1C6A99F3005ABB35 /* MainMenu.xib in Resources */,
+				A0A4C0331CF1321300A8966F /* Preferences.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1297,6 +1308,7 @@
 				A0EE12461C54238900F4AB82 /* OEGridViewCellIndicationLayer.m in Sources */,
 				A0EE124D1C54238900F4AB82 /* OEThemeTextAttributes.m in Sources */,
 				A0EE12431C54238900F4AB82 /* OEGridGameCell.m in Sources */,
+				A0A4C0301CF0E8C100A8966F /* UserDefaultsController.m in Sources */,
 				A0A9DACB1C97BC1500C9299F /* TVDBEpisodeOperation.m in Sources */,
 				A07C6FB31AFFFA6E00611B8D /* NSDictionary+Extensions.m in Sources */,
 				A00B46221AEC7F350022BDBF /* NSColor+BWAdditions.m in Sources */,
