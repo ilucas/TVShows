@@ -28,6 +28,10 @@
 
 - (IBAction)showWindow:(nullable id)sender {
     [super showWindow:sender];
+    
+    if (![LaunchAgent loginItemIsEnabled]) {
+        [self helperAlert:nil];
+    }
 }
 
 #pragma mark - Action
