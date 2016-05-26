@@ -1,6 +1,5 @@
 /*
  *  This file is part of the TVShows source code.
- *  http://github.com/ilucas/TVShows
  *
  *  TVShows is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -11,8 +10,14 @@
  *  along with TVShows. If not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifdef __OBJC__
-    // Swift bridge
-    #import "TVShows-Swift.h"
-    #import "LogLevel.h"
-#endif
+#import "UserDefaultsController.h"
+#import "AppDelegate.h"
+
+@implementation UserDefaultsController
+
+- (instancetype)initWithCoder:(NSCoder *)coder {
+    NSUserDefaults *defaults = [[NSApp delegate] sharedUserDefaults];
+    return [super initWithDefaults:defaults initialValues:@{}];
+}
+
+@end

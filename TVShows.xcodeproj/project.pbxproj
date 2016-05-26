@@ -42,6 +42,8 @@
 		A0432F241AD9649600C19189 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A0432F231AD9649600C19189 /* AppDelegate.m */; };
 		A0432F261AD9649600C19189 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A0432F251AD9649600C19189 /* main.m */; };
 		A0432F281AD9649600C19189 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0432F271AD9649600C19189 /* Images.xcassets */; };
+		A04C9DBB1CF67E1D000083DB /* LogLevel.m in Sources */ = {isa = PBXBuildFile; fileRef = A04C9DBA1CF67E1D000083DB /* LogLevel.m */; };
+		A04C9DBC1CF67E1D000083DB /* LogLevel.m in Sources */ = {isa = PBXBuildFile; fileRef = A04C9DBA1CF67E1D000083DB /* LogLevel.m */; };
 		A04F1D621CA6513200F09BAA /* NSDictionary+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A07C6FB21AFFFA6E00611B8D /* NSDictionary+Extensions.m */; };
 		A04F1D631CA6513600F09BAA /* NSManagedObject+Attributes.m in Sources */ = {isa = PBXBuildFile; fileRef = A0E4341E1B1AA1D7000AF57C /* NSManagedObject+Attributes.m */; };
 		A04F1D641CA6514200F09BAA /* NSMutableDictionary+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A02F332D1B1BC9BC004F2D4B /* NSMutableDictionary+Extensions.m */; };
@@ -69,6 +71,9 @@
 		A095178E1CA24FD600FBF76B /* TVDBImageOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = A095178D1CA24FD600FBF76B /* TVDBImageOperation.m */; };
 		A095178F1CA24FD600FBF76B /* TVDBImageOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = A095178D1CA24FD600FBF76B /* TVDBImageOperation.m */; };
 		A09521EA1AF6BDD4005AC0EF /* TVShows.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A06F88031AE6B92900CD66DC /* TVShows.xcdatamodeld */; };
+		A0A4C0301CF0E8C100A8966F /* UserDefaultsController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0A4C02F1CF0E8C100A8966F /* UserDefaultsController.m */; };
+		A0A4C0321CF1321300A8966F /* Preferences.plist in Resources */ = {isa = PBXBuildFile; fileRef = A0A4C0311CF1321300A8966F /* Preferences.plist */; };
+		A0A4C0331CF1321300A8966F /* Preferences.plist in Resources */ = {isa = PBXBuildFile; fileRef = A0A4C0311CF1321300A8966F /* Preferences.plist */; };
 		A0A8763D1CB8A7D900D479B5 /* EpisodesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0A8763C1CB8A7D900D479B5 /* EpisodesViewController.m */; };
 		A0A9DAC31C97BC1500C9299F /* MTLModel+JSONAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = A0A9DAA91C97BC1500C9299F /* MTLModel+JSONAdapter.m */; };
 		A0A9DAC41C97BC1500C9299F /* MTLModel+JSONAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = A0A9DAA91C97BC1500C9299F /* MTLModel+JSONAdapter.m */; };
@@ -104,8 +109,6 @@
 		A0D790BD1CB37C9100C4D32D /* TVShowsHelper.app in Copy Helper */ = {isa = PBXBuildFile; fileRef = A0F43D221C6A99F3005ABB35 /* TVShowsHelper.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		A0DD74461CEB9BE200492C55 /* CrashlyticsLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = A0DD74431CEB9BE200492C55 /* CrashlyticsLogger.m */; };
 		A0DD74471CEB9BE200492C55 /* CrashlyticsLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = A0DD74431CEB9BE200492C55 /* CrashlyticsLogger.m */; };
-		A0DD74531CEBA90000492C55 /* Crashlytics.sh in Resources */ = {isa = PBXBuildFile; fileRef = A0DD74521CEBA90000492C55 /* Crashlytics.sh */; };
-		A0DD74541CEBA90000492C55 /* Crashlytics.sh in Resources */ = {isa = PBXBuildFile; fileRef = A0DD74521CEBA90000492C55 /* Crashlytics.sh */; };
 		A0DD957E1CB616470016CF50 /* AdvancedPreferencesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0DD957D1CB616470016CF50 /* AdvancedPreferencesViewController.m */; };
 		A0E02F731CD81003008BFAC2 /* GridViewSubscriptionItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A0E02F721CD81003008BFAC2 /* GridViewSubscriptionItemCell.m */; };
 		A0E02F761CD81828008BFAC2 /* GridViewCellIndicationLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = A0E02F751CD81828008BFAC2 /* GridViewCellIndicationLayer.m */; };
@@ -260,6 +263,8 @@
 		A0432F231AD9649600C19189 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		A0432F251AD9649600C19189 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A0432F271AD9649600C19189 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ../Resources/Images.xcassets; sourceTree = "<group>"; };
+		A04C9DB91CF67E1D000083DB /* LogLevel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogLevel.h; sourceTree = "<group>"; };
+		A04C9DBA1CF67E1D000083DB /* LogLevel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogLevel.m; sourceTree = "<group>"; };
 		A05A9BF31C58337E00FBEF9A /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		A05A9BF51C58338700FBEF9A /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = System/Library/Frameworks/Quartz.framework; sourceTree = SDKROOT; };
 		A05A9BF71C5833D800FBEF9A /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
@@ -299,6 +304,9 @@
 		A08DE3D51C78E26D00040D78 /* RARBGSearchOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RARBGSearchOperation.m; path = Providers/RARBG/RARBGSearchOperation.m; sourceTree = "<group>"; };
 		A095178C1CA24FD600FBF76B /* TVDBImageOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TVDBImageOperation.h; path = TVShows/TheTVDB/TVDBImageOperation.h; sourceTree = SOURCE_ROOT; };
 		A095178D1CA24FD600FBF76B /* TVDBImageOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TVDBImageOperation.m; path = TVShows/TheTVDB/TVDBImageOperation.m; sourceTree = SOURCE_ROOT; };
+		A0A4C02E1CF0E8C100A8966F /* UserDefaultsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDefaultsController.h; sourceTree = "<group>"; };
+		A0A4C02F1CF0E8C100A8966F /* UserDefaultsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDefaultsController.m; sourceTree = "<group>"; };
+		A0A4C0311CF1321300A8966F /* Preferences.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Preferences.plist; path = Resources/Preferences.plist; sourceTree = SOURCE_ROOT; };
 		A0A8763B1CB8A7D900D479B5 /* EpisodesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EpisodesViewController.h; sourceTree = "<group>"; };
 		A0A8763C1CB8A7D900D479B5 /* EpisodesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EpisodesViewController.m; sourceTree = "<group>"; };
 		A0A9DAA81C97BC1500C9299F /* MTLModel+JSONAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "MTLModel+JSONAdapter.h"; path = "TVShows/TheTVDB/MTLModel+JSONAdapter.h"; sourceTree = SOURCE_ROOT; };
@@ -528,7 +536,10 @@
 				A0A9DAA71C97BC0300C9299F /* TheTVDB */,
 				A0F43D1B1C6A96C7005ABB35 /* TSAppDelegate.h */,
 				A0F43D1C1C6A96C7005ABB35 /* TSAppDelegate.m */,
+				A04C9DB91CF67E1D000083DB /* LogLevel.h */,
+				A04C9DBA1CF67E1D000083DB /* LogLevel.m */,
 				A0DD74521CEBA90000492C55 /* Crashlytics.sh */,
+				A0A4C0311CF1321300A8966F /* Preferences.plist */,
 			);
 			name = "Shared Sources";
 			path = TVShows;
@@ -577,6 +588,8 @@
 				A0CE35131CB2323E00581409 /* LaunchAgent.m */,
 				A084A6421CB0E01600DB3790 /* PreferencesTabViewController.h */,
 				A084A6431CB0E01600DB3790 /* PreferencesTabViewController.m */,
+				A0A4C02E1CF0E8C100A8966F /* UserDefaultsController.h */,
+				A0A4C02F1CF0E8C100A8966F /* UserDefaultsController.m */,
 				A0DD957F1CB6170F0016CF50 /* Preferences View Controllers */,
 			);
 			name = "Preferences Window";
@@ -1074,7 +1087,7 @@
 				A00B46211AEC7F1B0022BDBF /* posterArtPlaceholder.jpg in Resources */,
 				A0AA85B41CAFA9C400A1388C /* LICENSE.txt in Resources */,
 				A0FBE7181CEAEE3A002C1ECF /* dsa_pub.pem in Resources */,
-				A0DD74531CEBA90000492C55 /* Crashlytics.sh in Resources */,
+				A0A4C0321CF1321300A8966F /* Preferences.plist in Resources */,
 				A0E931D31CDFF82100B61C2A /* About.storyboard in Resources */,
 				A00468CA1C56E69500732FB5 /* Preferences.storyboard in Resources */,
 				A084A6341CB0BBFF00DB3790 /* Acknowledgments.rtf in Resources */,
@@ -1087,7 +1100,7 @@
 			files = (
 				A015F6231CE4FA2C00A3376A /* Assets.xcassets in Resources */,
 				A0F43D2E1C6A99F3005ABB35 /* MainMenu.xib in Resources */,
-				A0DD74541CEBA90000492C55 /* Crashlytics.sh in Resources */,
+				A0A4C0331CF1321300A8966F /* Preferences.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1301,6 +1314,7 @@
 				A0EE12461C54238900F4AB82 /* OEGridViewCellIndicationLayer.m in Sources */,
 				A0EE124D1C54238900F4AB82 /* OEThemeTextAttributes.m in Sources */,
 				A0EE12431C54238900F4AB82 /* OEGridGameCell.m in Sources */,
+				A0A4C0301CF0E8C100A8966F /* UserDefaultsController.m in Sources */,
 				A0A9DACB1C97BC1500C9299F /* TVDBEpisodeOperation.m in Sources */,
 				A07C6FB31AFFFA6E00611B8D /* NSDictionary+Extensions.m in Sources */,
 				A00B46221AEC7F350022BDBF /* NSColor+BWAdditions.m in Sources */,
@@ -1315,6 +1329,7 @@
 				A0E931D51CDFFB1400B61C2A /* AboutViewController.swift in Sources */,
 				A084A6441CB0E01600DB3790 /* PreferencesTabViewController.m in Sources */,
 				A0EE124B1C54238900F4AB82 /* OEThemeImage.m in Sources */,
+				A04C9DBB1CF67E1D000083DB /* LogLevel.m in Sources */,
 				A0C190211B4081A90020ACD9 /* NSString+Extensions.m in Sources */,
 				A05A9C391C583BD600FBEF9A /* _Subscription.m in Sources */,
 				A09521EA1AF6BDD4005AC0EF /* TVShows.xcdatamodeld in Sources */,
@@ -1347,6 +1362,7 @@
 				A0DD74471CEB9BE200492C55 /* CrashlyticsLogger.m in Sources */,
 				A0A9DAC41C97BC1500C9299F /* MTLModel+JSONAdapter.m in Sources */,
 				A04F1D621CA6513200F09BAA /* NSDictionary+Extensions.m in Sources */,
+				A04C9DBC1CF67E1D000083DB /* LogLevel.m in Sources */,
 				A03D5E4E1CCC84DB00E33DF9 /* TorrentClient.m in Sources */,
 				A0F43D341C6A9A37005ABB35 /* _Serie.m in Sources */,
 				A0A9DAD21C97BC1500C9299F /* TVDBManager.m in Sources */,

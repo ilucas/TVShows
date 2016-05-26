@@ -17,8 +17,6 @@
 @import MagicalRecord;
 @import AFNetworkActivityLogger;
 
-//DDLogLevel const ddLogLevel = DDLogLevelVerbose;
-
 NSString * const kApplicationName = @"TVShows";
 NSString * const kApplicationGroup = @"group.TVShows";
 
@@ -34,6 +32,12 @@ NSString * const kApplicationGroup = @"group.TVShows";
 #pragma mark - Setup
 
 - (void)setupLogging {
+    NSUserDefaults *defaults = [self sharedUserDefaults];
+    NSInteger logRollingFrequency = [defaults integerForKey:@"logRollingFrequency"];
+    NSInteger logRollingFrequencyUnity = [defaults integerForKey:@"logRollingFrequencyUnity"];
+    NSInteger maximumLogFileSize = [defaults integerForKey:@"maximumLogFileSize"];
+    NSInteger maximumNumberOfLogFiles = [defaults integerForKey:@"maximumNumberOfLogFiles"];
+    
     // Setup logging into XCode's console
     [DDLog addLogger:[DDTTYLogger sharedInstance]];
     
@@ -47,10 +51,17 @@ NSString * const kApplicationGroup = @"group.TVShows";
     
     // Setup logging to rolling log files
     DDFileLogger *fileLogger = [[DDFileLogger alloc] init];
-    [fileLogger setRollingFrequency:60 * 60 * 24]; // Roll logs every day
-    [fileLogger setMaximumFileSize:1024 * 1024 * 2]; // max 2 mb
-    [fileLogger.logFileManager setMaximumNumberOfLogFiles:7]; // Keep 7 days only
+    fileLogger.rollingFrequency = (logRollingFrequency * logRollingFrequencyUnity);
+    fileLogger.maximumFileSize = (1024 * 1024 * maximumLogFileSize);
+    [fileLogger.logFileManager setMaximumNumberOfLogFiles:maximumNumberOfLogFiles];
+    
     [DDLog addLogger:fileLogger];
+    
+    // Change log Level.
+    DDLogLevel logLevel = (DDLogLevel)[defaults integerForKey:@"logLevel"];
+    DDLogInfo(@"Log Level: %@", NSStringFromDDLogLevel(logLevel));
+    
+    [LogLevel ddSetLogLevel:logLevel];
 }
 
 - (void)setupCoreData {
@@ -65,7 +76,11 @@ NSString * const kApplicationGroup = @"group.TVShows";
     static NSUserDefaults *shared = nil;
     
     if (!shared) {
+        NSString *preferencesFile = [[NSBundle mainBundle] pathForResource:@"Preferences" ofType:@"plist"];
+        NSDictionary *preferences = [NSDictionary dictionaryWithContentsOfFile:preferencesFile];
+        
         shared = [[NSUserDefaults alloc] initWithSuiteName:kApplicationGroup];
+        [shared registerDefaults:preferences];
     }
     
     return shared;

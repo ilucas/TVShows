@@ -18,5 +18,7 @@
 
 @interface AppDelegate : TSAppDelegate <NSApplicationDelegate>
 
+- (void)openPreferences;
+
 @end
 

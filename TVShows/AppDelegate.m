@@ -118,4 +118,21 @@
     [NSURLCache setSharedURLCache:URLCache];
 }
 
+#pragma mark - Actions
+
+- (void)openPreferences {
+    NSEvent *event = [NSEvent keyEventWithType:NSKeyDown
+                                      location:NSZeroPoint
+                                 modifierFlags:NSCommandKeyMask
+                                     timestamp:[NSDate timeIntervalSinceReferenceDate]
+                                  windowNumber:[[NSApp mainWindow] windowNumber]
+                                       context:[NSGraphicsContext currentContext]
+                                    characters:@","
+                   charactersIgnoringModifiers:@","
+                                     isARepeat:NO
+                                       keyCode:0x37];// kVK_Command
+    
+    [[NSApp mainMenu] performKeyEquivalent:event];
+}
+
 @end

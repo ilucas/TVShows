@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>checkDelay</key>
+	<integer>1</integer>
+	<key>helperStatus</key>
+	<false/>
+	<key>lastCheckedForEpisodes</key>
+	<date>1970-01-01T00:00:00Z</date>
+	<key>torrentClient</key>
+	<dict>
+		<key>client</key>
+		<string>System default</string>
+		<key>identifier</key>
+		<string></string>
+	</dict>
+	<key>logLevel</key>
+	<integer>15</integer>
+	<key>logRollingFrequency</key>
+	<real>12</real>
+	<key>logRollingFrequencyUnity</key>
+	<real>604800</real>
+	<key>maximumLogFileSize</key>
+	<integer>2</integer>
+	<key>maximumNumberOfLogFiles</key>
+	<integer>7</integer>
+</dict>
+</plist>

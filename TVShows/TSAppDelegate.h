@@ -15,8 +15,6 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-//extern DDLogLevel const ddLogLevel;
-
 extern NSString * const kApplicationName;
 extern NSString * const kApplicationGroup;
 

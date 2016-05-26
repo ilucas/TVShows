@@ -14,4 +14,6 @@
 
 @interface AdvancedPreferencesViewController : NSViewController
 
+@property (weak) IBOutlet NSPopUpButton *logLevelPopMenu;
+
 @end
