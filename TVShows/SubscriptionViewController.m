@@ -109,7 +109,6 @@
         } failure:^(NSError * _Nonnull error) {
             DDLogError(@"%s [Line %d]: %@", __PRETTY_FUNCTION__, __LINE__, error);
             [self.metadataViewController toggleLoading:NO];
-            [self updateShowInfo:nil];
             
             NSAlert *alert = [NSAlert alertWithError:error];
             [alert beginSheetModalForWindow:self.view.window completionHandler:nil];
