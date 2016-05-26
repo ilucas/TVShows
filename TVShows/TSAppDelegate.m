@@ -17,8 +17,6 @@
 @import MagicalRecord;
 @import AFNetworkActivityLogger;
 
-//DDLogLevel const ddLogLevel = DDLogLevelVerbose;
-
 NSString * const kApplicationName = @"TVShows";
 NSString * const kApplicationGroup = @"group.TVShows";
 
@@ -34,25 +32,22 @@ NSString * const kApplicationGroup = @"group.TVShows";
 #pragma mark - Setup
 
 - (void)setupLogging {
-    // Setup logging into XCode's console
-    [DDLog addLogger:[DDTTYLogger sharedInstance]];
-    
-    // Setup Crashlytics log
-    [DDLog addLogger:[CrashlyticsLogger sharedInstance]];
-        
-    // Setup AFNetworking log
-    AFNetworkActivityLogger *afLogger = [AFNetworkActivityLogger sharedLogger];
-    [afLogger setLevel:AFLoggerLevelInfo];
-    [afLogger startLogging];
-    
     NSUserDefaults *defaults = [self sharedUserDefaults];
     NSInteger logRollingFrequency = [defaults integerForKey:@"logRollingFrequency"];
     NSInteger logRollingFrequencyUnity = [defaults integerForKey:@"logRollingFrequencyUnity"];
     NSInteger maximumLogFileSize = [defaults integerForKey:@"maximumLogFileSize"];
     NSInteger maximumNumberOfLogFiles = [defaults integerForKey:@"maximumNumberOfLogFiles"];
     
-    // Change log Level.
-    //ddLogLevel = (DDLogLevel)[defaults integerForKey:@"logLevel"];
+    // Setup logging into XCode's console
+    [DDLog addLogger:[DDTTYLogger sharedInstance]];
+    
+    // Setup Crashlytics log
+    [DDLog addLogger:[CrashlyticsLogger sharedInstance]];
+    
+    // Setup AFNetworking log
+    AFNetworkActivityLogger *afLogger = [AFNetworkActivityLogger sharedLogger];
+    [afLogger setLevel:AFLoggerLevelInfo];
+    [afLogger startLogging];
     
     // Setup logging to rolling log files
     DDFileLogger *fileLogger = [[DDFileLogger alloc] init];
@@ -61,6 +56,12 @@ NSString * const kApplicationGroup = @"group.TVShows";
     [fileLogger.logFileManager setMaximumNumberOfLogFiles:maximumNumberOfLogFiles];
     
     [DDLog addLogger:fileLogger];
+    
+    // Change log Level.
+    DDLogLevel logLevel = (DDLogLevel)[defaults integerForKey:@"logLevel"];
+    DDLogInfo(@"Log Level: %@", NSStringFromDDLogLevel(logLevel));
+    
+    [LogLevel ddSetLogLevel:logLevel];
 }
 
 - (void)setupCoreData {

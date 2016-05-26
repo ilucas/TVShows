@@ -17,9 +17,6 @@
 // Swift bridge
 //#import "TVShowsHelper-Swift.h"
 
-@import CocoaLumberjack;
-
-// Define log level
-static DDLogLevel ddLogLevel = DDLogLevelVerbose;
+#import "LogLevel.h"
 
 #endif /* TVShowsHelper_Prefix_pch */
